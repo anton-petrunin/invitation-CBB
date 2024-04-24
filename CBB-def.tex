@@ -1,0 +1,194 @@
+\chapter{CBB: definition}
+
+\section{Distances and geodesics}
+
+\parbf{Distances.}
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The latter notation is used if we need to emphasize 
+that the distance is taken in the space~${\spc{X}}$.
+The function $(x,y)\mapsto \dist{x}{y}{\spc{X}}$ is called \index{metric}\emph{metric};
+it has to meet the following conditions for any three points $x,y,z\in \spc{X}$:
+
+\begin{subthm}{metric>=0}
+$\dist{x}{y}{\spc{X}}\ge 0$,
+\end{subthm}
+
+\begin{subthm}{metric=0} $\dist{x}{y}{\spc{X}}= 0$ $\iff$ $x=y$,
+\end{subthm}
+
+\begin{subthm}{metric:sym} $\dist{x}{y}{\spc{X}}=\dist{y}{x}{\spc{X}}$,
+\end{subthm}
+
+\begin{subthm}{metric:triangle} $\dist{x}{y}{\spc{X}}+\dist{y}{z}{\spc{X}}\ge\dist{x}{z}{\spc{X}}$.
+\end{subthm}
+
+\parbf{Geodesics.}
+Let $\II$\index{$\II$} be a real interval. 
+A distance-preserving map $\gamma$ from $\II$ to a metric space $\spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+\footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
+Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
+in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
+\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+for any pair $s,t\in \II$.
+
+If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
+In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
+We may write $[p q]_{\spc{X}}$ 
+to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+
+In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique.  
+However, once we write $[p q]$ we assume that we have chosen such geodesic.
+
+\parbf{Geodesic path.}
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
+
+\parbf{Geodesic space.}
+A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
+
+\section{Baby Toponogov}
+
+Recall that \index{polyhedral space}\emph{polyhedral space} is a geodesic space that admits a finite triangulation such that each simplex is isometric to a simplex in a Euclidean space.
+If, in addition, it is homeomorphic to a surface (without boundary), then it is called a \index{polyhedral surface}\emph{polyhedral surface}.
+A point on a polyhedral surface with nonzero curvature is called an \index{essential vertex}\emph{essential vertex}.
+Any other point on the surface will be called \index{regular point}\emph{regular}.
+Note that \textit{any regular point has a neighborhood that is isometric to an open set in the Euclidean plane}.
+
+\begin{thm}{Exercise}\label{ex:poly+geod}
+Let $P$ be a non-negatively curved polyhedral surface.
+
+\begin{subthm}{}
+Show that a geodesic in $P$ cannot pass thru an essential vertex.
+\end{subthm}
+
+\begin{subthm}{}
+Show that if two geodesics in $P$ intersect at two points, 
+then these are the endpoints for both geodesics.
+\end{subthm}
+
+\end{thm}
+
+The next theorem gives a global geometric property of non-negatively curved polyhedral surfaces.
+
+Given a hinge $\hinge pxy$ in a non-negatively curved polyhedral surface $P$, denote by $\mangle\hinge pxy$ the minimal angle that the hinge cuts from $P$ at~$p$.
+(Soon we will give a more general definition of $\mangle\hinge pxy$; see \ref{sec:angles}.)
+
+\begin{thm}{Theorem}\label{thm:poly-cbb}
+Let $P$ be a polyhedral surface.
+Assume $P$ has non-negative curvature at each point (see \ref{sec:Alexandrov-existence}).
+Then 
+\[\mangle\hinge pxy\ge\angk pxy\]
+for any hinge $\hinge pxy$ in $P$.
+\end{thm}
+
+The following exercise will be used in the proof.
+
+\begin{thm}{Exercise}\label{ex:concave-loc}
+Let $f\:[0,\ell]\to\RR$ be a continuous function such that for any $t\in \left]0,\ell\right[$ there is a linear function $h$ that locally supports $f$ from above;
+that is, $h(t_0)=f(t_0)$, and there is $\eps>0$ such that $h(t)\ge f(t)$ if $|t-t_0|<\eps$.
+Show that $f$ is concave.
+\end{thm}
+
+
+\parit{Proof.}
+Let $[pxy]$ be a triangle in $P$ and let $[\tilde p\tilde x\tilde y]$ be the model triangle of $[pxy]$.
+Set $\ell=|x-y|_P=|\tilde x-\tilde y|_{\EE^2}$.
+
+Denote by $\gamma(t)$ and $\tilde \gamma(t)$ the geodesics $[xy]$ and $[\tilde x\tilde y]$ parametrized by length starting from $x$ and $\tilde x$, respectively.
+Observe that it is sufficient to show that 
+$$| p- \gamma(t)|\le|\tilde p-\tilde \gamma(t)| 
+\eqlbl{eq:comp-gamma}$$
+for any $t$ in $[0,\ell]$.
+
+We may assume that $p$ is a regular point;
+otherwise, move it slightly and apply approximation.
+
+
+From the cosine law, we get that the function 
+$$\tilde f(t)=|\tilde p-\tilde \gamma(t)|^2-t^2$$
+is linear.
+Consider the function
+$$f(t)=|p- \gamma(t)|^2-t^2.$$
+Note that $f(0)=\tilde f(0)$, $f(\ell)=\tilde f(\ell)$, and the inequality~\ref{eq:comp-gamma} is equivalent to
+$$f(t)\ge \tilde f(t).
+\eqlbl{eq:comp-f}$$
+By Jensen's inequality, \ref{eq:comp-f} holds if $f$ is concave.
+
+By \ref{ex:poly+geod}, 
+$\gamma(t_0)$ is regular.
+Since $p$ is regular,
+a geodesic $[p\gamma(t)]$ contains only regular points.
+Therefore for small $\eps>0$,
+ the $\eps$-neighborhood of $[p\gamma(t)]$, say $\Omega$, contains only regular points. 
+We may assume that $\Omega$ is homeomorphic to a disc;
+in this case, there is a locally distance-preserving embedding $\iota\:\Omega\to\EE^2$.
+Note the image $\iota[p\gamma(t)]$ is a line segment that 
+and $\iota(\Omega)$ is the $\eps$-neighborhood of $\iota[p\gamma(t)]$ in $\EE^2$;
+in particular, $\iota(\Omega)$ is convex.
+Thus $\iota(\Omega)$ contains a triangle with  base $\iota[\gamma(t_0-\eps)\ \gamma(t_0+\eps)]$  and vertex $\iota(p)$.
+
+Clearly, for any $t\in[t_0-\eps,t_0+\eps]$ 
+we have 
+$$|\iota(p)-\iota(\gamma(t))|\ge|p-\gamma(t)|.$$
+Note that
+the function
+$$h(t)= |\iota(p)-\iota(\gamma(t))|^2-t^2$$
+is linear.
+From above, $h$ supports $f$ locally  at $t_0$.
+It remains to apply~\ref{ex:concave-loc}.
+\qeds
+
+\section{Definition}
+
+\begin{thm}{Definition}\label{def:CBB}
+A metric space $\spc{X}$ has \index{$\CBB$}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$) if the inequality 
+\[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
+\le 
+2\cdot\pi
+\eqlbl{eq:CBB-comparison}\]
+holds for any quadruple $p,x,y,z\in\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
+
+The inequality \ref{eq:CBB-comparison} is called \index{$\CBB(0)$ comparison}\emph{$\CBB(0)$ comparison} for the quadruple $p,x,y,z$.
+If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
+$\CBB(1)$ and $\CBB(-1)$ comparisons.
+(Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+but for $\angk  pxy_{\SSS^2}$ we need in addition, $\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi$.)
+
+More generally, one may apply this definition to $\MM^2(\kappa)$ --- the model plane of curvature $\kappa$, defined as follows:
+$\MM(0)=\EE^2$,
+if $\kappa>0$, then $\MM(\kappa)$ is the sphere of radius $\tfrac{1}{\sqrt{\kappa}}$ and if $\kappa<0$, then it is Lobachevsky plane rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$.
+This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
+\end{thm}
+
+While this definition can be applied to any metric space,
+it is usually applied to geodesic spaces (or, at least, length spaces that will be defined later).
+
+\begin{thm}{Exercise}
+Show that Euclidean space $\EE^n$ is $\CBB(0)$.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:polyCBB}
+Show that a polyhedral surface is $\CBB(0)$ if and only if it has nonnegative curvature in the sense of \ref{sec:Alexandrov-existence}. 
+\end{thm}
+
+
+
+
+
+\section{Comments}
+
+The first synthetic description of curvature is due to Abraham Wald \cite{wald}; 
+it was given in a lone publication on a ``coordinateless description of Gauss surfaces'' published in 1936.
+In 1941, similar definitions were rediscovered by Alexandr Alexandrov \cite{alexandrov:def}.
+
+In Alexandrov's work, the first applications of this approach were given.
+Mainly: the main part of \ref{thm:alexandrov+pogorelov} \cite{alexandrov-1941,alexandrov-1941convex}
+and the {}\emph{gluing theorem} \cite{alexandrov-1946}, which gave a flexible tool to modify non-negatively curved metrics on a sphere.
+These two results together formed the foundation of the branch of geometry now called {}\emph{Alexandrov geometry};
+they gave  a very intuitive geometric tool to study embeddings and bending of surfaces in Euclidean space and changed the subject dramatically.
+
+In particular, the existence of bending of a large spherical dome (sphere with a small disc removed) easily follows from these two theorems; moreover, it provides an intuitive description of such bending that can be extended to a closed convex surface.
+
+
+
+

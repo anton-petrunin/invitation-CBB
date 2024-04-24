@@ -1,0 +1,237 @@
+\chapter{Boundary and doubling}
+
+
+We are going to jump over couple more technical results.
+It was proved by Grigory Perelman \cite{perelman1991}, 
+it was rewritten with more details by the second author \cite{kapovitch}.
+
+\begin{thm}{Theorem}
+A small sphere around point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$
+is homeomorphic to the space of directions $\Sigma_p$ at this point.
+\end{thm}
+
+\section{Morse theory}
+
+Let $f$ be a semiconcave function.
+A point $p\in \Dom f$ is called \emph{critical} point of $f$ if $\dd_pf\le 0$; 
+otherwise it is called \emph{regular}.
+
+The proof of the following statement is quite technical, we omit its proof.
+
+\begin{thm}{Theorem}
+Let $f$ be a semiconcave function on a finite-dimensional geodesic $\CBB(\kappa)$ space.
+Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
+Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
+
+\end{thm}
+
+Note that distance function $\distfun_p$ has no critical points in a neighborhood of $p$ and the level set $\distfun_p=\eps$ is compact for small $\eps>0$.
+Combining this observation with 
+
+Applying the theorem we get the following.
+
+\begin{thm}{Corollary}
+A small spherical neighborhood of any point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$ is homeomorphic to an open cone over small sphere around $p$.
+\end{thm}
+
+
+
+
+
+
+
+
+
+\section{Boundary}
+
+{\sloppy
+
+\begin{thm}{Exercise}
+Show that a 1-dimensional complete geodesic $\CBB(\kappa)$ space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
+\end{thm}
+
+}
+
+Suppose $\spc{L}$ is a 1-dimensional complete geodesic $\CBB(\kappa)$ space.
+Exercise allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
+
+Now let us use \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim} inductively to define the boundary of any finite-dimensional complete geodesic $\CBB(\kappa)$ space.
+Assume that the notion of boundary is already defined in dimensions $1,\dots,m-1$.
+Suppose  $\spc{L}$ is $m$-dimensional complete geodesic $\CBB(\kappa)$ space.
+We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
+$\partial\Sigma_p\ne\emptyset$.
+By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional complete geodesic $\CBB(1)$ space;
+therefore its boundary is already defined.
+
+
+
+\begin{thm}{Exercise}
+Show that for closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
+\end{thm}
+
+
+The following statements should agree with your intuition.
+We omit their proofs and they are not at all simple.
+
+\begin{thm}{Theorem}
+Boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
+\end{thm}
+
+Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
+Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
+Then we say that $\xi$ is in the \emph{space of directions} from $p$ to $X$; briefly $\xi\in\Sigma_pX$.
+
+Further, the cone $\T_pX=\Cone(\Sigma_pX)$ will be called \emph{tangent space} to $X$ at $p$.
+
+\begin{thm}{Theorem}\label{thm:partial-Sigma}
+For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
+\[\partial (\Sigma_p\spc{L})=\Sigma(\partial\spc{L})
+\quad\text{and}\quad
+\partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:partial-grad}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space with nonempty boundary.
+Suppose $p\in \spc{L}$ and $f\z=\tfrac12\cdot\distfun_p^2$.
+Then
+
+\begin{subthm}{}
+$\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{L}$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{L}$, then $\alpha(t)\in \partial \spc{L}$ for any $t$.
+\end{subthm}
+
+\end{thm}
+
+The first statement in the theorem above is quite easy.
+(Maybe I will add a proof later.)
+The second part is proved as Picard theorem with the use of the first part.
+Using the last statement for a sequence of points $x_n\to p$ one can get the following.
+
+\begin{thm}{Theorem}\label{thm:gexp}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
+For any $p\in \spc{L}$ there is a map $\gexp_p\:\T_p\to \spc{L}$  that meets the following conditions.
+
+\begin{subthm}{}
+If $\gamma_x$ is a geodesic path from $p$ to $x$, then $\gexp_p(\gamma^+(0))=x$, 
+\end{subthm}
+
+\begin{subthm}{}
+The map $\gexp_p\:\T_p\to \spc{L}$ is short.
+\end{subthm}
+
+\begin{subthm}{}
+If $v\in \partial\T_p$, then $\gexp_p(v)\in \partial  \spc{L}$.
+\end{subthm}
+
+\end{thm}
+
+The map $\gexp_p\:\T_p\to \spc{L}$ described in the theorem is called \emph{gradient exponent} at $p$.
+It provides an alternative for the exponential map for $\CBB$ spaces.
+Gradient exponent is defined on the whole $\T_p$ while
+the usual exponential map is defined on a relatively small set;
+say its complement might be dense in $\T_p$.
+
+
+
+\section{Doubling theorem}
+
+\begin{thm}{Theorem}\label{thm:doubling}
+Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
+Suppose $\partial \spc{L}\ne \emptyset$.
+Then 
+\begin{subthm}{thm:doubling:concave}
+$\distfun_{\partial \spc{L}}$ is a concave function, and
+\end{subthm}
+
+\begin{subthm}{}
+the doubling $\hat{\spc{L}}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(0)$ space.
+\end{subthm}
+
+\end{thm}
+
+
+\parit{Sketch.} 
+Let us apply induction on $m=\LinDim \spc{L}$.
+
+\begin{wrapfigure}{r}{30mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1305}
+\end{wrapfigure}
+
+Choose a geodesic $[pz]$; let $\gamma(0)=p$.
+Suppose $p\notin\partial \spc{L}$.
+Let $q\in \partial\spc{L}$ be a closest point to $p$ and $\alpha\df\mangle\hinge pzq$.
+
+By the definition of boundary points, 
+\[\partial \Sigma_q\z\ne\emptyset.\]
+Let $\xi=\dir qp$.
+Theorem~\ref{thm:partial-Sigma} implies that 
+\[\dist{\xi}{\zeta}{\Sigma_q}\ge \tfrac\pi2
+\eqlbl{eq:<>pi/2}\]
+for any $\zeta\in\partial\Sigma_q$.
+
+By \ref{thm:finite-space-of-directions}, $\Sigma_q$ is an $(m-1)$-dimensional geodesic $\CBB(1)$ space.
+Applying the induction hypothesis, we get that the doubling $\hat\Sigma_q$ of $\Sigma_q$ across $\partial \Sigma_q$ is an $(m-1)$-dimensional geodesic $\CBB(1)$ space.
+Denote by $\xi_1$ and $\xi_2$ the two directions in $\hat\Sigma_q$ that correspond to $\xi$.
+Note that \ref{eq:<>pi/2} implies that $\dist{\xi_1}{\xi_2}{\hat\Sigma_q}\ge \pi$.
+Applying the line splitting theorem (\ref{thm:splitting}), we can identify 
+$\Cone\hat\Sigma_q$ with $\RR\times \partial\Sigma_q$.
+It follows that 
+\[\T_q=[0,\infty)\oplus \partial\T_q;\]
+in particular, there is a natural projection $\proj\:\T_q\to \partial\T_q$.
+
+Given $x\in [pz]$, choose a geodesic $\gamma_x$ from $q$ to $x$.
+Let 
+\[y
+\df
+\gexp_q\circ\proj(\gamma^+_x(0)).\]
+By \ref{thm:gexp}, $y\in \partial\spc{L}$ and 
+\[\dist{x}{y}{}\le \dist{p}{q}{}+\dist{p}{x}{}\cdot \cos\alpha.\eqlbl{eq:|x-y|}\]
+The latter inequality uses in addition the $\CBB$ comparison for $[pqx]$ and it requires some work.
+
+Note that \ref{eq:|x-y|} implies that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}\setminus \partial \spc{L}$.
+If $\gamma(t)\in \partial \spc{L}$ for some $t$, then it is easy to see that $(f\circ\gamma)'(t)=0$.
+These two statements imply that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}$.
+
+Now, let us show that doubling $\hat{\spc{L}}$ is $\CBB(0)$.
+Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\hat{\spc{L}}$;
+further, let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
+
+\begin{wrapfigure}{r}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1315}
+\end{wrapfigure}
+
+Choose a geodesic $\gamma$ in $\hat{\spc{L}}$.
+Suppose $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$.
+The splitting argument as in \ref{SHORT.thm:doubling:concave} shows that the doubling of $\T_x\spc{L}$ splits in the direction $\gamma^\pm(t_1)$.
+Similarly, the doubling of $\T_y\spc{L}$ splits in the direction $\gamma^\pm(t_y)$.
+Note that the arc of $\gamma$ between $x$ and $y$ can be reflected across $\partial \spc{L}$ and the obtained curve is still a geodesic in $\hat{\spc{L}}$.
+Using these observations together with part \ref{SHORT.thm:doubling:concave}, one can show that either $\gamma$ lies in $\partial \spc{L}$ or it crosses $\partial \spc{L}$ at most once.
+
+Now choose a point $p$ in $\hat{\spc{L}}$;
+let $f\df\tfrac12\cdot\distfun_p^2$.
+Without loss of generality, we can assume that $p\in \spc{L}_0$.
+It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
+If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the comparison in $\spc{L}_0$.
+
+\begin{wrapfigure}{r}{45mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-1325}
+\end{wrapfigure}
+
+In the remaining case, if $\gamma(t)\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(t)\le 1$ follows from the comparison in $\spc{L}_0$.
+If $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$, then the proof of inequality reminds the argument in part \ref{SHORT.thm:doubling:concave}, but it is a bit more tricky.
+Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that 
+\[(f\circ\gamma)^+(t)+f\circ\gamma)^-(t)\le 0.\]
+These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
+\qeds
+
+

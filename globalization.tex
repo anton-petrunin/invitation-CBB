@@ -1,0 +1,280 @@
+\chapter{Globalization}
+
+\section{Globalization}
+
+A metric space $\spc{L}$ is \index{locally $\CBB(0)$}\emph{locally $\CBB(0)$} if any point $p\in\spc{L}$ admits a neighborhood $U\ni p$ such that the  $\CBB(0)$ comparison holds for any quadruple of points in $U$.
+
+\begin{thm}{Globalization theorem}\label{thm:glob} 
+Any locally $\CBB(0)$ compact geodesic space is $\CBB(0)$.
+\end{thm}
+
+\parit{Proof modulo the key lemma.}
+Let $\spc{L}$ be a locally $\CBB(0)$ compact geodesic space.
+Note that condition \ref{angle-b} holds in $\spc{L}$ (the proof is the same as for $\CBB(0)$ spaces).
+It remains to prove that \ref{angle-a} holds in $\spc{L}$;
+that is,
+\[\mangle\hinge x p y\ge\angk x p y.
+\eqlbl{eq:mod-angle-CBB-comp-glob}\]
+
+First note that \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
+this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\CBB(0)$ comparison.
+Since $\spc{L}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
+Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
+\qeds
+
+\begin{thm}{Key lemma}\label{key-lem:globalization} 
+Let $\spc{L}$ be a locally $\CBB(0)$ geodesic space. 
+Assume that the comparison
+\[\mangle\hinge x p q
+\ge\angk x p q\]
+holds for any hinge $\hinge x p q$ with 
+$\dist{x}{y}{}+\dist{x}{q}{}
+<
+\frac{2}{3}\cdot\ell$.
+Then the comparison
+\[\mangle\hinge x p q
+\ge\angk x p q\] 
+holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
+\end{thm}
+
+Let $\hinge x p q$ be a hinge in a metric space $\spc{L}$ with defined angle measure.
+Denote by $\side \hinge x p q$ its \index{model side}\emph{model side};
+this is the opposite side in a flat triangle with the same angle and two adjacent sides as in $\hinge x p q$.
+
+\begin{wrapfigure}{r}{44mm}
+\centering
+\includegraphics{mppics/pic-105}
+\end{wrapfigure}
+
+More precisely,
+consider the model hinge $\hinge {\tilde x} {\tilde p} {\tilde q}$ in $\EE^2$ that is defined by 
+\begin{align*}
+\mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{L}},
+\\
+\dist{\tilde x} {\tilde p}{\EE^2}&=\dist{x} {p}{\spc{L}},
+\\
+\dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{L}};
+\intertext{then}
+\side \hinge x p q_{\spc{L}}
+&\df
+\dist{\tilde p}{\tilde q}{\EE^2}.
+\end{align*}
+
+Note that 
+\[\side \hinge x p q \ge\dist{p}{q}{}
+\quad\Longleftrightarrow\quad
+\mangle\hinge x p q\ge \angk x p q.
+\]
+We will use it in the following proof.
+
+\parit{Proof.} 
+It is sufficient to prove the inequality
+\[\side \hinge x p q
+\ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\] 
+for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
+
+Consider a hinge $\hinge x p q$ such that 
+\[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
+First, let us construct a new smaller hinge $\hinge{x'}p q$ with
+\[
+\dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
+\eqlbl{eq:thm:=def-loc-fourstar}\]
+such that 
+\[\side \hinge x p q
+\ge\side \hinge{x'}p q.
+\eqlbl{eq:thm:=def-loc-fivestar}\]
+
+\parit{Construction.}
+Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise, switch the roles of $p$ and $q$ in the following construction.
+Take $x'\in [x q]$ such that 
+\[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
+=\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
+Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
+Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
+
+Further, note that 
+\begin{align*}
+\dist{p}{x}{}\z+\dist{x}{x'}{}&<\tfrac{2}{3}\cdot\ell,
+&
+\dist{p}{x'}{}\z+\dist{x'}{x}{}&<\tfrac{2}{3}\cdot\ell.
+\end{align*}
+In particular, 
+\[\mangle\hinge x p{x'}
+\ge\angk x p{x'}
+\quad \text{and}\quad 
+\mangle\hinge {x'}p x
+\ge\angk {x'}p x.
+\eqlbl{eq:thm:=def-loc-threestar}\]
+
+{
+
+\begin{wrapfigure}{r}{30 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-820}
+\vskip-4mm
+\end{wrapfigure}
+
+Now, let 
+$\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig(x x' p)$.
+Take $\tilde  q$ on the extension of $[\tilde  x\tilde  x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}{}\z=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
+By~\ref{eq:thm:=def-loc-threestar},
+\[\mangle\hinge x p q
+=\mangle\hinge  x p{x'}\ge\angk x p{x'}\quad \Rightarrow\quad 
+\side \hinge x q p\ge\dist{\tilde p}{\tilde q}{}.\]
+Hence
+\begin{align*}
+\mangle\hinge{\tilde x'}{\tilde p}{\tilde q}&= 
+\pi
+-\angk{x'}p x
+\ge
+\\
+&\ge
+\pi-\mangle\hinge{x'}p x
+=
+\\
+&=
+\mangle\hinge{x'}p q,
+\end{align*}
+and \ref{eq:thm:=def-loc-fivestar} follows.
+
+}
+
+\medskip
+
+Let us continue the proof.
+Set $x_0=x$.
+Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
+From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side \hinge{x_n}p q$ is nonincreasing.
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-825}
+\end{figure}
+
+The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
+In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\ge\dist{p}{q}{}$.
+Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
+
+Otherwise, the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
+Note that by construction, the distances
+$\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
+Indeed, since on each step, we move $x_n$ toward to the point $p$ or $q$ that is further away, the distances $\dist{x_n}{p}{}$ and $\dist{x_n}{q}{}$ become about the same.
+Namely, by \ref{3|xx'|}, we have that $\dist{p}{x_n}{}-\dist{x_n}{q}{}\le \tfrac29\cdot\ell$ for all large $n$.
+Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we have $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
+Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x_n}{x_{n+1}}{}>\tfrac\ell{100}$.
+
+
+Since the sequence $r_n$ is nonincreasing, it converges.
+In particular, $r_n-r_{n+1}\to 0$ as $n\to\infty$.
+It follows that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
+where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$.
+Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk{x_n}{p_n}{x_{n+1}}$, we have
+$\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
+
+It follows that
+\[r_n-s_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side \hinge{x_n}p q\to 0.\] 
+Together with the triangle inequality
+\[
+\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge\dist{p}{q}{}
+\]
+this yields
+\[\lim_{n\to\infty}\side \hinge{x_n}p q\ge \dist{p}{q}{}.\]
+Applying the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
+\qeds
+
+\section{On general curvature bound}
+
+The globalization theorem  can be generalized to $\CBB(\kappa)$ spaces for any real $\kappa$.
+The case $\kappa\le 0$ is proved the same way, but the case $\kappa>0$ requires minor modifications.
+
+\begin{thm}{Exercise}\label{ex:mono-mod-angle}
+Suppose $\kappa\le \Kappa$.
+Show that 
+\[\angk x y z_{\MM(\kappa)}\le \angk x y z_{\MM(\Kappa)}\]
+if the right-hand side is defined.
+
+Conclude that any $\CBB(\Kappa)$ space is locally $\CBB(\kappa)$.
+\end{thm}
+
+The exercise and the globalization theorem (here we need a more general version \ref{ex:noncomplete-globalization}) imply that \textit{any geodesic $\CBB(\Kappa)$ space is  $\CBB(\kappa)$}.
+Recall that $\CBB(\kappa)$ stands for \textit{curvature bounded below by $\kappa$}; so, for geodesic spaces it makes sense.
+However, as you can see from the following exercise, it does not make much sense in general.
+
+\begin{thm}{Exercise}\label{ex:CBB(1)notitCBB(0)}
+Let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
+\[\dist{p}{x_i}{}=\pi,\quad\dist{x_i}{x_j}{}=2\cdot\pi\]
+for all $i\ne j$.
+Show that $\spc{X}$ is $\CBB(1)$, but not $\CBB(0)$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:RisCBB(1)}
+Let $p$ and $q$ be points in a $\CBB(1)$ geodesic space $\spc{L}$.
+Suppose $\dist{p}{q}{}>\pi$.
+Denote by $m$ the midpoint of $[pq]$.
+Show that for any hinge $\hinge mxp$ we have
+either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
+Conclude that $\spc{L}$ is isometric to a real interval or a circle.
+
+\end{thm}
+
+
+\section{Remarks} 
+
+The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
+
+Recall that a metric space $\spc{X}$ is called \index{complete space}\emph{complete} if any Cauchy sequence of points in $\spc{X}$ converges.
+The compactness condition in our version of the theorem can be traded for completeness by using the following exercise.
+
+\begin{thm}{Exercise}\label{ex:alm-min}
+Let $\spc{X}$ be a complete metric space.
+Suppose $r\:\spc{X}\to \RR$ is a positive continuous function.
+Show that for any $\eps>0$ there is a point $p\in \spc{X}$ such that 
+\[r(x)> (1-\eps)\cdot r(p)\] 
+for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
+
+\end{thm}
+
+Let us mention two more general versions of the globalization theorem.
+
+Recall that a \index{length space}\emph{length space} is a metric space such that any two points $p$ and $q$ can be connected by a path with a length arbitrarily close to $|p-q|$.
+Note that any geodesic space is length, but not the other way around.
+The following theorem was already proved in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
+
+\begin{thm}{Theorem}
+Any complete locally $\Alex\kappa$ length space is $\Alex\kappa$.
+
+\end{thm}
+
+The next result is mine \cite{petrunin:globalization}.
+
+\begin{thm}{Theorem}\label{ex:noncomplete-globalization}
+Any locally $\Alex\kappa$ geodesic space is $\Alex\kappa$.
+
+\end{thm}
+
+In the two-dimensional case,
+the globalization theorem was proved by Paolo Pizzetti \cite{pizzetti};
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
+Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
+
+I took the proof from our book \cite{alexander-kapovitch-petrunin-2025} (with generality reduction).
+It uses simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
+The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
+Another simplified version was obtained by
+Katsuhiro Shiohama \cite{shiohama}.
+
+The question of whether \ref{angle-a} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
+in print, it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
+
+
+\begin{thm}{Open question}\label{open:hinge-}
+Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
+such that for any hinge $\hinge x p y$ in $\spc{L}$, 
+the angle $\mangle\hinge x p y$ is defined and 
+\[\mangle\hinge x p y\ge\angk x p y.\]
+Is it true that $\spc{L}$ is $\Alex{0}$?
+\end{thm}
+
+
+
+

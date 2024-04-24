@@ -1,0 +1,421 @@
+\chapter{Preliminaries}
+
+
+\section{Notations}
+
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The latter notation is used if we need to emphasize 
+that the distance is taken in the space~${\spc{X}}$.
+
+We will denote by $\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
+Euclidean space, and Lobachevsky space respectively.
+More generally, $\MM^n(\kappa)$ will denote the \emph{model $n$-space} of curvature $\kappa$;
+that is,
+\begin{itemize}
+\item if $\kappa>0$, then $\MM^n(\kappa)$ is the $n$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^n=\MM^n(1)$
+\item $\MM^n(0)=\EE^n$,
+\item if $\kappa<0$, then $\MM^n(\kappa)$ is the Lobachevsky $n$-space $\HH^n$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
+in particular $\MM^n(-1)=\HH^n$.
+\end{itemize}
+
+\section{Completion}
+
+Given a metric space $\spc{X}$, 
+consider the set $\spc{C}$ of all Cauchy sequences in $\spc{X}$.
+Note that for any two Cauchy sequences $(x_n)$ and $(y_n)$ the right-hand side in \ref{eq:cauchy-dist} is defined;
+moreover, it defines a semimetric on~$\spc{C}$
+\[\dist{(x_n)}{(y_n)}{\spc{C}}\df\lim_{n\to\infty}\dist{x_n}{y_n}{\spc{X}}.\eqlbl{eq:cauchy-dist}\]
+The corresponding metric space is called the \index{completion}\emph{completion} of $\spc{X}$;
+it will be denoted by $\bar{\spc{X}}$.
+
+It is straightforward to check that \textit{completion is complete.}
+  
+For each point $x\in\spc{X}$, one can consider a constant sequence $x_n=x$ which is Cauchy.
+It defines a natural inclusion map $\spc{X}\hookrightarrow \bar{\spc{X}}$.
+It is easy to check that this map is distance-preserving.
+In particular, we can (and will) consider $\spc{X}$ as a subset of $\bar{\spc{X}}$.
+Note that \textit{$\spc{X}$ is a dense subset in its completion $\bar{\spc{X}}$}.
+
+\section{Length and length spaces}\label{sec:length}
+
+The definitions stated in the previous section can be applied to any metric space.
+However, interesting things happen only for the so-called \textit{geodesic} or at least \textit{length spaces} that we  are going to define now.
+
+\parbf{Length.}
+A \index{curve}\emph{curve} is defined as a continuous map from a real interval $\II$ to a metric space.
+If $\II=[0,1]$, then the curve is called a \index{path}\emph{path}.
+
+\begin{thm}{Definition}
+Let $\spc{X}$ be a metric space and
+$\alpha\: \II\to \spc{X}$ be a curve.
+We define the \index{length}\emph{length} of $\alpha$ as 
+\[
+\length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha(t_{i-1})}{}.
+\]
+
+A curve $\alpha$ is called \index{rectifiable curve}\emph{rectifiable} if $\length \alpha<\infty$.
+\end{thm}
+
+The following theorem is assumed to be known;
+see \cite{petrunin2023pure,burago-burago-ivanov}.
+
+
+\begin{thm}{Theorem}\label{thm:length-semicont}
+Length is a lower semi-continuous with respect to the pointwise convergence of curves. 
+
+More precisely, assume that a sequence
+of curves $\gamma_n\:\II\to \spc{X}$ in a metric space $\spc{X}$ converges pointwise 
+to a curve $\gamma_\infty\:\II\to \spc{X}$;
+that is, for any fixed $t \in \II$ we have $\gamma_n(t)\z\to\gamma_\infty(t)$ as $n\to\infty$. 
+Then 
+$$\liminf_{n\to\infty} \length\gamma_n \ge \length\gamma_\infty.\eqlbl{eq:semicont-length}$$
+\end{thm}
+
+\begin{wrapfigure}{o}{20 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-100}
+\end{wrapfigure}
+
+Note that the inequality \ref{eq:semicont-length} might be strict.
+For example, the diagonal $\gamma_\infty$ of the unit square 
+can be  approximated by stairs-like
+polygonal curves $\gamma_n$
+with sides parallel to the sides of the square ($\gamma_6$ is on the picture).
+In this case
+\[\length\gamma_\infty=\sqrt{2}\quad
+\text{and}\quad \length\gamma_n=2\]
+for any $n$.
+
+\parbf{Length spaces.}
+Let $\spc{X}$ be a metric space.
+If for any $\eps>0$ and any pair of points $x,y\in\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
+\[\length\alpha< \dist{x}{y}{}+\eps,\]
+then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
+
+Evidently, any geodesic space is a length space.
+
+\begin{thm}{Exercise}\label{ex:compact-length}
+Show that any compact length space is geodesic.
+\end{thm}
+
+
+\parbf{Induced length metric.}
+Directly from the definition, it follows that if $\alpha\:[0,1]\to\spc{X}$ is a path from $x$ to $y$ 
+(that is, $\alpha(0)=x$ and $\alpha(1)=y$), then 
+\[\length\alpha\ge \dist{x}{y}{}.\]
+Set 
+\[\yetdist{x}{y}{}=\inf\{\,\length\alpha\,\}\]
+where the greatest lower bound is taken for all paths from $x$ to~$y$.
+It is straightforward to check that $(x,y)\mapsto \yetdist{x}{y}{}$ is an \emph{$\infty$-metric};
+that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$. 
+The metric $\yetdist{*}{*}{}$ is called the \index{induced length metric}\emph{induced length metric}.
+
+\begin{thm}{Exercise}\label{ex:compact+connceted}
+Let $\spc{X}$ be a complete length space.
+Show that for any compact subset $K\subset\spc{X}$
+there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:compact=>complete}
+Suppose $(\spc{X},\dist{*}{*}{})$ is a complete metric space.
+Show that $(\spc{X},\yetdist{*}{*}{})$ is complete.
+\end{thm}
+
+Let $A$ be a subset of a metric space $\spc{X}$.
+Given two points $x,y\in A$,
+consider the value
+\[\dist{x}{y}{A}=\inf_{\alpha}\{\,\length\alpha\,\},\]
+where the greatest lower bound is taken for all paths $\alpha$ from $x$ to $y$ in~$A$.
+In other words, $\dist{*}{*}{A}$ denotes the induced length metric on the subspace $A$.
+(The notation $\dist{*}{*}{A}$ conflicts with the previously defined notation for distance $\dist{x}{y}{\spc{X}}$ in a metric space $\spc{X}$.
+However, most of the time we will work with ambient length spaces where the meaning will be unambiguous.)
+
+\section{Geodesics and triangles}
+
+\parbf{Geodesics.}
+Let $\spc{X}$ be a metric space 
+and $\II$\index{$\II$} a real interval. 
+A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
+\footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
+Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
+in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
+\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+for any pair $s,t\in \II$.
+
+If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
+In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
+We may write $[p q]_{\spc{X}}$ 
+to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+
+In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique.  
+However, once we write $[p q]$ we assume that we have chosen such geodesic.
+
+A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
+
+A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
+
+\parbf{Triangles.}
+Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+
+Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
+Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
+If we write $\trig p q r$, it means that we have chosen such a triangle.
+
+\section{Menger's lemma}
+
+\begin{thm}{Lemma}\label{lem:mid>geod}
+Let $\spc{X}$ be a complete metric space.
+Assume that for any pair of points $x,y\in \spc{X}$, 
+there is a midpoint~$z$.
+Then $\spc{X}$ is a geodesic space.
+
+\end{thm}
+
+This lemma is due to Karl Menger \cite[Section 6]{menger}.
+
+\parit{Proof.}
+Choose $x,y\in \spc{X}$;
+set $\alpha(0)=x$, and $\alpha(1)=y$.
+
+Let $\alpha(\tfrac12)$ be a midpoint between $\alpha(0)$ and $\alpha(1)$.
+Further, let $\alpha(\frac14)$ 
+and $\alpha(\frac34)$ be midpoints between the pairs $(\alpha(0),\alpha(\tfrac12))$ 
+and $(\alpha(\tfrac12),\alpha(1))$ respectively.
+Applying the above procedure recursively,
+on the $n$-th step we define $\alpha(\tfrac{k}{2^n})$,
+for every odd integer $k$ such that $0<\tfrac k{2^n}<1$, 
+as a midpoint of the already defined
+$\alpha(\tfrac{k-1}{2^n})$ and $\alpha(\tfrac{k+1}{2^n})$.
+
+
+This way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
+Moreover, $\alpha$ has Lipschitz constant $\dist{x}{y}{}$.
+Since $\spc{X}$ is complete, the map $\alpha$ can be extended continuously to $[0,1]$.
+Moreover,
+\[\begin{aligned}
+\length\alpha&\le \dist{x}{y}{}.
+\end{aligned}
+\eqlbl{eq:eps-midpoint}
+\]
+\qedsf
+
+\section{Model triangles and angles}
+
+
+\parbf{Model triangles.}
+Given three points $p,q,r$ in a metric space $\spc{X}$,
+let us define its \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+(briefly, 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
+\index{$\modtrig$}) to be a triangle in the Euclidean plane $\EE^2$ such that
+\begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
+&
+\quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
+&
+\quad\dist{\tilde r}{\tilde p}{\EE^2}&=\dist{r}{p}{\spc{X}}.
+\end{align*}
+
+The same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
+in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
+In the latter case, the model triangle is said to be defined if in addition
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
+In this case, the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
+
+\parbf{Model angles.}
+If 
+$\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$ 
+and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
+the angle measure of 
+$\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
+will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
+$\angk p q r_{\EE^2}$%
+\index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
+
+The same way we define $\angk p q r_{\MM^2(\kappa)}$;
+in particular, $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$.
+We may use the notation $\angk p q r$ if it is evident which of the model spaces is meant.
+
+\begin{thm}{Exercise}\label{ex:k-><mono}
+Show that for any triple of point $p$, $q$, and $r$,
+the function
+\[\kappa\mapsto \angk p q r_{\MM^2(\kappa)}\]
+is nondecreasing in its domain of definition.
+\end{thm}
+
+
+\section{Hinges and their angle measure}\label{sec:angles}
+
+\parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
+A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
+$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+
+\parbf{Angles.}The angle measure of a hinge $\hinge p x y$ is defined as the following limit
+\[\mangle\hinge p x y=\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y},\]
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+
+Note that if $\mangle\hinge p x y$ is defined, then
+\[0\le \mangle\hinge p x y\le \pi.\]
+
+\begin{thm}{Exercise}
+Suppose that in the above definition, one uses spherical or hyperbolic model angles instead of Euclidean.
+Show that it does not change the value $\mangle\hinge p x y$.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:undefined-angle}
+Give an example of a hinge $\hinge p x y$ in a metric space with an undefined angle measure $\mangle\hinge p x y$.
+\end{thm}
+
+\section{Triangle inequality for angles}
+
+\begin{thm}{Proposition}
+\label{claim:angle-3angle-inq}
+Let  $[px_1]$, $[px_2]$, and $[px_3]$ be three geodesics in a metric space.
+Suppose all the angle measures $\alpha_{i j}=\mangle\hinge p {x_i}{x_j}$ are defined.
+Then 
+\[\alpha_{13}\le \alpha_{12}+\alpha_{23}.\]
+
+\end{thm}
+
+\parit{Proof.}
+Since $\alpha_{13}\le\pi$, we can assume that $\alpha_{12}+\alpha_{23}< \pi$.
+Denote by $\gamma_i$ the unit-speed parametrization of $[px_i]$ from $p$ to $x_i$.
+Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
+\begin{align*}
+\dist{\gamma_1(t)}{\gamma_3(\tau)}{}
+&\le 
+\dist{\gamma_1(t)}{\gamma_2(s)}{}+\dist{\gamma_2(s)}{\gamma_3(\tau)}{}<\\
+&<
+\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{12}+\eps)} +
+\\
+&\quad+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{23}+\eps)}\le
+\end{align*}
+
+\begin{wrapfigure}{o}{30 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-615}
+\vskip3mm
+\end{wrapfigure}
+
+Below we define 
+$s(t,\tau)$ so that for 
+$s=s(t,\tau)$, this chain of inequalities can be continued as follows:
+\[\le
+\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha_{12}+\alpha_{23}+2\cdot \eps)}.
+\]
+
+Thus for any $\eps>0$, 
+\[\alpha_{13}\le \alpha_{12}+\alpha_{23}+2\cdot \eps.\]
+Hence the result follows.
+
+To define $s(t,\tau)$, consider three half-lines $\tilde \gamma_1$, $\tilde \gamma_2$, $\tilde \gamma_3$ on a Euclidean plane starting at one point, such that
+$\mangle(\tilde \gamma_1,\tilde \gamma_2)\z=\alpha_{12}+\eps$,
+$\mangle(\tilde \gamma_2,\tilde \gamma_3)\z=\alpha_{23}+\eps$,
+and $\mangle(\tilde \gamma_1,\tilde \gamma_3)\z=\alpha_{12}\z+\alpha_{23}\z+2\cdot \eps$.
+We parametrize each half-line by the distance from the starting point.
+Given two positive numbers $t,\tau\in\RR_{\ge0}$, let $s=s(t,\tau)$ be 
+the number such that 
+$\tilde \gamma_2(s)\in[\tilde \gamma_1(t)\ \tilde \gamma_3(\tau)]$. 
+Clearly, $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
+\qeds 
+
+\begin{thm}{Exercise}\label{ex:adjacent-angles}
+Prove that the sum of adjacent angles is at least $\pi$.
+
+More precisely: suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
+that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ form a geodesic $[xy]$.
+Show that
+\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
+whenever  each angle on the left-hand side is defined.
+
+Give an example showing that the inequality can be strict.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:first-var}
+Assume that the angle measure of $\hinge q p x$ is defined.
+Let $\gamma$ be the unit speed parametrization of $[qx]$ from $q$ to $x$.
+Show that
+\[\dist{p}{\gamma(t)}{}
+\le
+\dist{q}{p}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
+
+\end{thm}
+
+\section{Gromov--Hausdorff convergence}
+
+In this section, we cook up a metric space out of all compact metric spaces.
+More precisely, we want to define the so-called  Gromov--Hausdorff metric on the set of \textit{isometry classes} of compact metric spaces.
+(Being isometric is an equivalence relation, 
+and an \index{isometry class}\emph{isometry class} is an equivalence class with respect to this relation.)
+
+The obtained metric space will be denoted by $\GH$.
+Given two metric spaces $\spc{X}$ and $\spc{Y}$,
+denote by $[\spc{X}]$ and $[\spc{Y}]$ their isometry classes;
+that is, $\spc{X}'\in [\spc{X}]$ if and only if $\spc{X}'\iso \spc{X}$.
+Pedantically, the Gromov--Hausdorff distance from $[\spc{X}]$ 
+to $[\spc{Y}]$ should be denoted as $|[\spc{X}]-[\spc{Y}]|_{\GH}$;
+but we will write it as $|\spc{X}\z-\spc{Y}|_{\GH}$ and say (not quite correctly) that 
+\textit{$|\spc{X}\z-\spc{Y}|_{\GH}$ is the Gromov--Hausdorff distance from  $\spc{X}$ 
+to  $\spc{Y}$}.
+In other words, from now on the term \textit{metric space} might also stand for its \textit{isometry class}.
+
+The metric on $\GH$ is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+Here is a formal definition:
+
+\begin{thm}{Definition}\label{def:GH}
+The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
+is defined by the following
+relation.
+ 
+Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$
+respectively such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
+(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:GH-is-a-metric}
+The set of isometry classes of compact metric spaces equipped with Gromov--Hausdorff metric forms a metric space (which is denoted by $\GH$).
+
+In other words, for arbitrary compact metric spaces $\spc{X}$, $\spc{Y}$, and $\spc{Z}$ the following conditions hold
+
+\begin{subthm}{GH-1} $|\spc{X}-\spc{Y}|_{\GH}\ge 0$;
+\end{subthm}
+
+\begin{subthm}{GH-2} $|\spc{X}-\spc{Y}|_{\GH}=0$ if and only if $\spc{X}$ is isometric to $\spc{Y}$;
+\end{subthm}
+
+\begin{subthm}{GH-3} $|\spc{X}-\spc{Y}|_{\GH}=|\spc{Y}-\spc{X}|_{\GH}$;
+\end{subthm}
+
+\begin{subthm}{GH-4} $|\spc{X}-\spc{Y}|_{\GH}+|\spc{Y}-\spc{Z}|_{\GH}\ge |\spc{X}-\spc{Z}|_{\GH}$.
+\end{subthm}
+\end{thm}
+
+Note that \ref{SHORT.GH-1}, \ref{SHORT.GH-3},
+and the if part of \ref{SHORT.GH-2} follow directly from \ref{def:GH}.
+Parts \ref{SHORT.GH-4} and the only-if part of \ref{SHORT.GH-2} are not hard but require some work.
+Complete proofs of these and the following statement  are given in \cite[Lecture 5
+]{petrunin2023pure}.
+
+\begin{thm}{Lemma}\label{lem:GH-complete}
+The space $\GH$ is complete.
+\end{thm}
+
+The Gromov--Hausdorff metric defines Gromov--Hausdorff \index{Gromov--Hausdorff convergence}\emph{convergence}.
+Namely, a sequence of compact metric spaces $\spc{X}_n$ converges to compact metric spaces $\spc{X}_\infty$ in the sense of Gromov--Hausdorff if 
+\[\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0\quad\text{as}\quad n\to\infty.\]
+
+This convergence is more important than the metric ---
+in all applications, we use only the topology on $\GH$
+and we do not care about the particular value of the Gromov--Hausdorff distance between spaces.
+
+\begin{thm}{Exercise}\label{ex:surface-covergence}
+Let $K_\infty,K_1,K_2,\dots$ be convex bodies in $\EE^3$ (compact convex sets with nonempty interiors).
+Denote by $S_n$ the surface of $K_n$ with induced length metric.
+Suppose $K_n\z\to K_\infty$ in the sense of Hausdorff.
+Show that $S_n\to S_\infty$ in the sense of Gromov--Hausdorff.
+\end{thm}

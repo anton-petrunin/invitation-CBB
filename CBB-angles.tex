@@ -1,0 +1,369 @@
+\chapter{Quotients}
+
+\section{Quotient space}
+
+Suppose that a group $G$ acts isometrically on a metric space $\spc{X}$.
+Note that
+\[\dist{G\cdot x}{G\cdot y}{\spc{X}/G}
+\df
+\inf
+\set{\dist{x}{g\cdot y}{\spc{X}}}{g\in G}\]
+defines a semimetric on the orbit space $\spc{X}/G$.
+Moreover, it is a genuine metric if the orbits of the action are closed.
+
+\begin{thm}{Theorem}\label{thm:CBB/G}
+Assume that group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$ and has closed orbits.
+Then the quotient space $\spc{L}/G$ is $\Alex0$.
+
+\end{thm}
+
+\parit{Proof.}
+Denote by $\sigma\:\spc{L}\to \spc{L}/G$ the quotient map.
+
+Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{L}/G$.
+Choose an arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
+Since $\spc{L}$ is proper, we can choose the points $\hat{x}_i\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{p}{x_i}{\spc{L}/G}
+=
+\dist{\hat{p}}{\hat{x}_i}{\spc{L}}\]
+for all $i$.
+
+Note that 
+\[\dist{x_i}{x_j}{\spc{L}/G}
+\le 
+\dist{\hat{x}_i}{\hat{x}_j}{\spc{L}}
+\]
+for all $i$ and $j$.
+Therefore 
+\[\angk p{x_i}{x_j}
+\le
+\angk {\hat{p}}{\hat{x}_i}{\hat{x}_j}
+\eqlbl{eq:angles-M-L}\]
+holds for all $i$ and $j$.
+
+By $\Alex0$ comparison in $\spc{L}$,
+we have
+\[\angk {\hat{p}}{\hat{x}_1}{\hat{x}_2}
++\angk {\hat{p}}{\hat{x}_2}{\hat{x}_3}
++\angk {\hat{p}}{\hat{x}_3}{\hat{x}_1}
+\le 
+2\cdot\pi.\]
+Applying  \ref{eq:angles-M-L}, 
+we get 
+\[\angk p{x_1}{x_2}
++\angk p{x_2}{x_3}
++\angk p{x_3}{x_1}< 2\cdot\pi;\]
+that is,
+the $\Alex0$ comparison holds for any quadruple in $\spc{L}/G$.
+\qeds
+
+\begin{thm}{Advanced exercise}
+Let $G$ be a compact Lie group with a bi-invariant Riemannian metric.
+Show that $G$ is isometric to a quotient of the Hilbert space by an isometric group action.
+
+Conclude that $G\in\CBB(0)$.
+\end{thm}
+
+\section{Generalizations}
+
+A map $\sigma\:\spc{X}\to\spc{Y}$ between the metric spaces $\spc{X}$ and $\spc{Y}$
+is called a \index{submetry}\emph{submetry} if 
+\[\sigma(\oBall(p,r)_\spc{X})=\oBall(\sigma(p),r)_{\spc{Y}}\]
+for any $p\in \spc{X}$ and $r\ge 0$.
+
+Suppose $G$ and $\spc{L}$ are as in \ref{thm:CBB/G}.
+Observe that the quotient map $\sigma\:\spc{L}\to \spc{L}/G$ is a submetry.
+The following two exercises show that this is not the only source of submetries. 
+
+\begin{thm}{Exercise}\label{ex:sumbetries(S^2)}
+Construct submetries
+\begin{subthm}{}
+$\sigma_1\:\mathbb{S}^2\to[0,\pi]$
+\end{subthm}
+\begin{subthm}{}
+$\sigma_2\:\mathbb{S}^2\to[0,\tfrac\pi2]$
+\end{subthm}
+\begin{subthm}{}
+$\sigma_n\:\mathbb{S}^2\to[0,\tfrac\pi n]$ (for integer $n\ge 1$)
+\end{subthm}
+such that the fibers $\sigma_n^{-1}\{x\}$ are connected and have an empty interior for any $x$.
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $\sigma\:\EE^2\to [0,\infty)$ be a submetry.
+Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set in $\EE^2$ and $\sigma(x)=\distfun_Kx$.
+\end{thm}
+
+The proof of \ref{thm:CBB/G} works for submetries.
+Therefore we get the following.
+
+\begin{thm}{Generalization}\label{thm:submetry-CBB}
+Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
+Suppose $\spc{L}$ is a $\Alex{0}$ space, then so is $\spc{M}$.
+\end{thm}
+
+Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to $\CBB(-1)$ spaces.
+In the $\CBB(1)$ case, the proof produces a slightly weaker statement ---  \textit{any open $\tfrac\pi2$-ball in the quotient of $\CBB(1)$ is $\CBB(1)$};
+in particular, the quotient space is \textit{locally} $\CBB(1)$.
+If the space is geodesic, then the globalization theorem implies that it is globally  $\CBB(1)$.
+The same holds for the targets of submetry from a  $\CBB(1)$ space.
+In other words, if $\spc{L}$ is a geodesic space, then analogs of \ref{thm:CBB/G} and \ref{thm:submetry-CBB} hold for $\CBB(\kappa)$ spaces with arbitrary $\kappa$.
+
+\section{Hopf's conjecture}
+
+Recall that Hopf's conjecture states that \textit{$\mathbb{S}^2\times\mathbb{S}^2$ does not admit a Riemannian metric with positive sectional curvature}.
+The following partial result was obtained by Wu-Yi Hsiang and Bruce Kleiner \cite{hsiang-kleiner}.
+
+\begin{thm}{Theorem}\label{thm:hsiang-kleiner}
+There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and a nontrivial isometric $\SSS^1$-action.
+\end{thm}
+
+We will give a ruf sketch that will use many statements and notions that are not yet introduced.
+Nevertheless, it should be possible to follow the proof with an intuitive understanding of the notions (boundary and dimension of a quotient space).
+The statements include 
+\begin{itemize}
+\item The \emph{Toponogov comparison theorem} and the \emph{globalization theorem}.
+The former says  that \textit{a complete Riemannian manifold has sectional curvature $\ge \kappa$ if and only if the corresponding metric space is $\CBB(\kappa)$}.
+The later says that \textit{a complete geodesic locally $\CBB(\kappa)$ space is $\CBB(\kappa)$}.
+\item \emph{Doubling theorem:} \textit{Doubling of a finite-dimensional geodesic $\CBB(\kappa)$ space is a geodesic $\CBB(\kappa)$ space}
+\item \emph{Splitting theorem:} \textit{A geodesic $\CBB(0)$ space that contains a line splits isometrically as $\RR\times \spc{X}$};
+here the \emph{line} is a both-sided infinite geodesic.
+\end{itemize}
+
+In addition, we will use the following exercise that will be proved latter:
+
+
+\begin{thm}{Exercise}\label{ex:S^3/S^1}
+Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points 
+and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
+Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with a factor $\tfrac12$.
+\end{thm}
+
+
+\parit{Sketch of \ref{thm:hsiang-kleiner}.}
+Assume $\spc{M}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
+By the Toponogov theorem, $\spc{M}$ is $\CBB(1)$.
+By \ref{thm:CBB/G}, the quotient space $\spc{L}\z=\spc{M}/\SSS^1$ is $\CBB(1)$;
+evidently, $\spc{L}$ is 3-dimensional.
+
+Denote by $F\subset \spc{M}$ the fixed point set of the $\SSS^1$-action.
+Each connected component of $F$ is either an isolated point or a 2-dimensional geodesic submanifold in $\spc{M}$;
+the latter has to have positive curvature and therefore it is either $\SSS^2$ or $\RP^2$.
+Notice that 
+\begin{itemize}
+ \item each isolated point contributes 1 to the Euler characteristic of~$\spc{M}$,
+ \item each sphere contributes 2 to the Euler characteristic of $\spc{M}$, and
+ \item each projective plane contributes 1 to the Euler characteristic of~$\spc{M}$.
+\end{itemize}
+Since $\chi(\spc{M})=4$, we are in one of the following three cases:
+\begin{itemize}
+ \item $F$ has exactly 4 isolated points,
+ \item $F$ has one 2-dimensional submanifold and at least 2 isolated points,
+ \item $F$ has at least two 2-dimensional submanifolds.
+\end{itemize}
+Each case is covered separately.
+
+\parit{Case 1.}
+Suppose $F$ has exactly 4 isolated points $x_1$, $x_2$, $x_3$, and $x_4$.
+Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{L}$.
+Note that $\Sigma_{y_i}\spc{L}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
+
+By \ref{ex:S^3/S^1}, each angle $\mangle\hinge{y_i}{y_j}{y_k}\le \tfrac\pi2$ for any three distinct points 
+$y_i$, $y_j$, $y_k$.
+In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
+By the comparison, the sum of angles in each triangle is strictly greater than $\pi$.
+
+Denote by $\sigma$ the sum of all 12 angles in 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
+From above,
+\[\sigma>4\cdot\pi.\]
+
+On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{L}$ has perimeter at most $\pi$.
+In particular, 
+\[\mangle\hinge{y_1}{y_2}{y_3}+\mangle\hinge{y_1}{y_3}{y_4}+\mangle\hinge{y_1}{y_4}{y_2}\le \pi.\]
+Apply the same argument in $\Sigma_{y_2}\spc{L}$, $\Sigma_{y_3}\spc{L}$, and $\Sigma_{y_4}\spc{L}$.
+Adding the results we get 
+\[\sigma\le 4\cdot\pi\]
+--- a contradiction.
+
+\parit{Case 2.}
+Let $F$ contain one surface $S$.
+Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L}$.
+Note that doubling $\hat {\spc{L}}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\hat {\spc{L}}$.
+
+By the \emph{Doubling theorem}, $\hat {\spc{L}}$ is a geodesic $\CBB(1)$ space.
+Therefore we arrive at a contradiction the same way as in the first case.
+
+\parit{Case 3.}
+Suppose $F$ contains at least two surfaces.
+Then $\partial\spc{L}$ has at least two connected components; choose two of them $A$ and $B$.
+Denote by $\gamma$ a geodesic that minimizes the distance from $A$ to $B$.
+
+Let 
+\[\dots,\spc{L}_{-1},\spc{L}_{0},\spc{L}_{1},\dots\]
+be a two-sided infinite sequence of copies on $\partial\spc{L}$.
+Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
+
+By the \emph{Doubling theorem}, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
+By the \emph{globalization theorem}, $\spc{N}$ is $\CBB(1)$.
+
+Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
+By the \emph{splitting theorem}, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
+The latter is impossible for a $\CBB(1)$ space --- a contradiction.
+(Here we used that the dimension of $\spc{N}$ is bigger than 1.
+According to our definitions, $\RR$ is $\CBB(1)$;
+it splits trivially, but such examples exist only in dimension~1.)
+\qeds
+
+
+\section{Erd\H{o}s' problem rediscovered}
+
+A point $p$ in a $\CBB(\kappa)$ space is called \emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
+
+\begin{thm}{Theorem}\label{thm:extr-point}
+Let $\spc{L}$ be a compact $m$-dimensional $\CBB(0)$ space.
+Then it has at most $2^m$ one-point extremal sets.
+\end{thm}
+
+
+The proof is a translation of the proof of a classical problem in discrete geometry to Alexandrov's language.
+
+\begin{thm}{Erd\H{o}s' problem}
+Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
+Then  $|F|\le2^m$.
+Moreover, if $|F|=2^m$ then $F$ consists of the vertexes of an $m$-dimensional rectangle.
+\end{thm}
+
+This problem was posed by Paul Erd\H{o}s  \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
+Grigori Perelman noticed that after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; so it proves \ref{thm:extr-point}.
+We will use the notion of volume;
+it is not defined so far and should be understood intuitively.
+
+\parit{Proof of \ref{thm:extr-point}.}
+Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{L}$.
+For each $p_i$ consider its open \emph{Voronoi domain} $V_i$; that is, 
+\[V_i=\set{x\in \spc{L}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
+Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
+
+Suppose  $0<\alpha\le 1$.
+Given a point $x\in\spc{L}$, choose a geodesic $[p_ix]$ and denote by $x_i$ the point on $[p_ix]$ such that $\dist{p_i}{x_i}{}=\alpha\cdot\dist{p_i}{x}{}$;
+let $\map_i\:x\to x_i$ be the corresponding map.
+By the comparison, 
+\[\dist{x_i}{y_i}{}\ge\alpha\cdot \dist{x}{y}{}\]
+for any $x$, $y$, and $i$.
+Therefore 
+\[\vol(\map_i \spc{L})\ge\alpha^m\cdot\vol \spc{L}.\]
+
+Suppose $\alpha<\tfrac12$.
+Then $x_i\in V_i$ for any $x\in \spc{L}$.
+Indeed, assume $x_i\notin V_i$,
+then threre is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
+Then from comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
+that is, $p_j$ does not form a one-point extremal set.
+It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{L}$
+for any $0<\alpha<\tfrac12$ and hence 
+\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{L}\]
+and hence 
+\[N\le 2^m.\]
+\qedsf
+
+\section{Crystallographic actions}
+
+
+An isometric action $\Gamma\acts \EE^m$ is called \emph{crystallographic} if it is 
+\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\in \EE^m$ there only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
+
+Let $F$ be a maximal finite subgroup of $\Gamma$;
+that is, if $H$ is a finite group $H$ such that $F<H<\Gamma$, then $F=H$.
+Denote by $\#(\Gamma)$ the number of maximal finite subgroups of $\Gamma$ up to conjugation.
+
+\begin{thm}{Open question}
+Let $\Gamma\acts \EE^m$ be a crystallographic action.
+Is it true that $\#(\Gamma)\le 2^m$?
+\end{thm}
+
+Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
+If $F$ is maximal, then $A_F$ completely describes $F$.
+Denote by $\#_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
+
+Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F \cdot g^{-1}$.
+Note that $A_{F'}=g\cdot A_F$.
+In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{L}=\EE^m/\Gamma$.
+It follows that to count subgroups up to conjugation, we need to count the images of their fixed set.
+Therefore, by the lemma below, $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{L}=\EE^m/\Gamma$.
+Combining this observation with \ref{thm:extr-point}, we get the following.
+
+\begin{thm}{Proposition}\label{prop:2m}
+Let $\Gamma\acts \EE^m$ be a crystallographic action.
+Then $\#_0(\Gamma)\le 2^m$.
+\end{thm}
+
+\begin{thm}{Lemma}
+Let $\Gamma\acts \EE^m$ be a crystallographic action and $F$ be a maximal finite subgroup of $\Gamma$ that fixes an isolated point $p$.
+Then the image of $p$ in the quotient space $\spc{L}=\EE^m/\Gamma$ is an extremal point.
+\end{thm}
+
+\parit{Proof.}
+Let $q$ be the image of $p$.
+Suppose $q$ is not extremal;
+that is, $\mangle \hinge q{y_1}{y_2}>\tfrac\pi2$ for some hinge $\hinge q{y_1}{y_2}$ in $\spc{L}$.
+
+Choose the inverse images $x_1,x_2\in \EE^m$ of $y_1,y_2\in \spc{L}$ such that $\dist{p}{x_i}{\EE^m}=\dist{q}{y_i}{\spc{L}}$.
+Note that $\mangle \hinge p{x_1}{x_2}\ge \mangle \hinge q{y_1}{y_2}>\tfrac\pi2$.
+Moreover, since $p$ is fixed by $F$, we have
+\[\mangle \hinge p{x_1}{g\cdot x_2}>\tfrac\pi2
+\eqlbl{eq:>pi/2}\]
+for any $g\in F$.
+
+Denote by $z$ the barycenter of the orbit $G\cdot x_2$.
+Note that $z$ is a fixed point of $F$.
+By \ref{eq:>pi/2}, $z\ne p$;
+so $F$ must fix the line $pz$.
+But $p$ is an isolated fixed point of $F$ --- a contradiction.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:number(m-1)}
+Let $\Gamma\acts \EE^m$ be a crystallographic action.
+Apply the theorems used in \ref{thm:hsiang-kleiner} to show that
+\begin{subthm}{ex:number(m-1):2}
+$\#_{m-1}(\Gamma)\le 2$, and
+\end{subthm}
+
+\begin{subthm}{ex:number(m-1):1}
+if $\#_{m-1}(\Gamma)=1$, then $\#_0(\Gamma)\le 2^{m-1}$.
+\end{subthm}
+
+Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1):2} and \ref{SHORT.ex:number(m-1):1}.
+\end{thm}
+
+\section{Remarks}
+
+It is expected that \textit{no geodesic $\CBB(1)$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
+so \ref{thm:hsiang-kleiner} holds for general $\CBB(1)$ space.
+The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{ex:S^3/S^1};
+see \cite{harvey-searle}.
+
+\begin{thm}{Conjecture}
+Let $\Sigma$ be a geodesic $\CBB(1)$ space homeomorphic to $\SSS^3$.
+Suppose $\SSS^1$ acts on $\Sigma$ isometrically.
+Then any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$.
+\end{thm}
+
+
+Compact geodesic $m$-dimensional $\CBB(0)$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
+(This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{L}=\TT^m/\ZZ_2$.)
+Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional geodesic $\CBB(0)$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
+
+Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{L}=\EE^m/\Gamma$.
+So, \ref{prop:2m} would follow from the next conjecture.
+
+\begin{thm}{Conjecture}
+Any $m$-dimensional compact geodesic $\CBB(0)$ space has at most $2^m$ primitive extremal subset.
+\end{thm}
+
+A closed subset $E$ in a $\CBB(\kappa)$ space is called 
+\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
+An extremal subset is called primitive if it contains no proper \emph{extremal} subsets.
+For example, the whole space and empty set are aslo extremal in any space.
+Also every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
+Vertices of the cube are the only its primitive extremal subsets.
+

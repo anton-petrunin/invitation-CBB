@@ -1,0 +1,184 @@
+\chapter{Definitions}
+
+The first synthetic description of curvature is due to Abraham Wald \cite{wald} published in 1936;
+it was his student work, written under the supervision of Karl Menger. 
+This publication was not noticed for about 50 years \cite{berestovskii}.
+In 1941, similar definitions were rediscovered by Alexandr Alexandrov \cite{alexandrov:def}.
+
+
+
+\section{Wald's approach}
+
+Abraham Wald noticed that given a \textit{typical} metric on the quadruple of points $\spc{X}\z=\{x_1,x_2,x_3,x_4\}$ there is a closed interval,
+say 
+\[[\kappa_{\min}(x_1,x_2,x_3,x_4),\kappa_{\max}(x_1,x_2,x_3,x_4)]\subset \RR\]
+such that there is a \emph{model configuration} in $\MM^3(\kappa)$;
+that is, $\tilde x_1$, $\tilde x_2$, $\tilde x_3$, $\tilde x_4\in\MM^3(\kappa)$ such that
+\[\dist{\tilde x_i}{\tilde x_j}{\MM^3(\kappa)}=\dist{x_i}{x_j}{\spc{X}}\]
+for all $i$ and $j$.
+
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-2mm
+\centering
+\includegraphics{mppics/pic-710}
+\end{wrapfigure}
+
+In $\MM^3(\kappa_{\min})$ and $\MM^3(\kappa_{\max})$, the points $\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4$ form degenerate tetrahedrons shown on the diagram (for $\kappa_{\min}$ it is a convex quadrangle and for $\kappa_{\max}$ --- a triangle with a point inside).
+In the interior of the interval, the tetrahedron is nondegenerate.
+
+Moreover, one can use $[-\infty,\infty)$ instead of $\RR$ 
+and let
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty\]
+if there is \textit{almost} model quadruple in
+$\MM^3(\kappa)$ for $\kappa\to -\infty$;
+that is, for any $\eps>0$ there is a quadruple
+$\tilde x_1,\tilde x_2,\tilde x_3,\tilde x_4\in\MM^3(\kappa)$
+such that $\kappa\le -\tfrac1\eps$, and
+\[\dist{\tilde x_i}{\tilde x_j}{\MM^3(\kappa)}\lege\dist{x_i}{x_j}{\spc{X}}\pm\eps\]
+for all $i$ and $j$.
+In this case the interval 
+\[[\kappa_{\min}(x_1,x_2,x_3,x_4),\kappa_{\max}(x_1,x_2,x_3,x_4)]\subset [-\infty,\infty)\]
+is defined for \textit{any} quadruple.
+
+\begin{thm}{Exercise}
+Let $x_1,x_2,x_3,x_4$ be a quadruple in a metric space such that $\kappa_{\min}(x_1,x_2,x_3,x_4)=-\infty$.
+Show that two maximal numbers from the following three are equal to each other.
+\begin{align*}
+a&=\dist{x_1}{x_2}{}+\dist{x_3}{x_4}{},
+\\
+b&=\dist{x_1}{x_3}{}+\dist{x_2}{x_4}{},
+\\
+c&=\dist{x_1}{x_4}{}+\dist{x_2}{x_3}{}.
+\end{align*}
+
+
+\end{thm}
+
+
+\begin{thm}{Exercise}
+Suppose that $x_1,x_2,x_3,x_4$ in a metric space
+such that
+\begin{align*}
+\dist{x_1}{x_2}{}=\dist{x_1}{x_3}{}=\dist{x_1}{x_4}{}&=1,
+\\
+\dist{x_2}{x_3}{}=\dist{x_3}{x_4}{}=\dist{x_4}{x_1}{}&=2.
+\end{align*}
+Show that 
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=-\infty.\]
+\end{thm}
+
+\begin{thm}{Exercise}
+Let $x_1,x_2,x_3,x_4$ be a quadruple in $\EE^2$.
+Suppose that $x_3$ lie on the line thru $x_1$ and $x_2$,
+but $x_4$ does not.
+Show that 
+\[\kappa_{\min}(x_1,x_2,x_3,x_4)=\kappa_{\max}(x_1,x_2,x_3,x_4)=0.\]
+\end{thm}
+
+\begin{thm}{Wald-style definition}
+Let $\kappa\in \RR$.
+A metric space $\spc{X}$ has curvature $\ge\kappa$ (or $\le\kappa$) 
+if for any quadruple $x_1,x_2,x_3,x_4\in \spc{X}$ we have 
+$\kappa_{\max}(x_1,x_2,x_3,x_4)\ge \kappa$ (or $\kappa_{\min}(x_1,x_2,x_3,x_4)\le \kappa$ respectively). 
+\end{thm}
+
+This definition is given for its historical value.
+It will not be used further in the sequel.
+We will use another definition that is very close, but not equivalent.
+
+\section{Substance}\label{sec:manifesto}
+
+Consider the space $\mathcal{M}_4$ of all isometry classes of 4-point metric spaces.
+Each element in $\mathcal{M}_4$ can be described by 6 numbers 
+ --- the distances between all 6 pairs of its points, say $\ell_{i,j}$ for $1\le i< j\le 4$ modulo permutations of the index set $(1,2,3,4)$.
+These 6 numbers are subject to 12 triangle inequalities; that is,
+\[\ell_{i,j}+\ell_{j,k}\ge \ell_{i,k}\]
+holds for all $i$, $j$ and $k$, where we assume that $\ell_{j,i}=\ell_{i,j}$, and $\ell_{i,i}=0$.
+
+{
+
+\begin{wrapfigure}{o}{33mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-700}
+\end{wrapfigure}
+
+The space $\mathcal{M}_4$ comes with topology.
+It can be defined as a quotient topology of the cone in $\RR^6$ by permutations of the 4 points of the space.
+
+Consider the subset $\mathcal{E}_4\subset \mathcal{M}_4$ of all isometry classes of 4-point metric spaces that admit isometric embeddings into Euclidean space.
+
+}
+
+\begin{thm}{Claim}\label{clm:two-components-of-M4}
+The complement $\mathcal{M}_4\setminus \mathcal{E}_4$ has two connected components.
+\end{thm}
+
+\begin{thm}{Exercise}
+Spend 10 minutes trying to prove the claim.
+\end{thm}
+
+
+The definition of Alexandrov spaces is based on the claim above.
+Let us denote one of the components by $\mathcal{P}_4$ and the other by~$\mathcal{N}_4$.
+Here $\mathcal{P}$ and $\mathcal{N}$ stand for {}\emph{positive} 
+and {}\emph{negative curvature} because spheres have no quadruples of type $\mathcal{N}_4$ and 
+hyperbolic space
+has no quadruples of type~$\mathcal{P}_4$.
+
+A metric space that has no quadruples of points of type $\mathcal{P}_4$ or $\mathcal{N}_4$
+respectively 
+is called an Alexandrov space with non-positive (briefly, $\CAT(0)$) or non-negative curvature (briefly, $\CBB(0)$).
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-710}
+\end{wrapfigure}
+
+Let us describe the subdivision into  $\mathcal{P}_4$, $\mathcal{E}_4$, and $\mathcal{N}_4$ intuitively.
+Imagine that you move out of $\mathcal{E}_4$ --- your path is a one-parameter family of 4-point metric spaces.
+The last thing you see in $\mathcal{E}_4$ is one of the two plane configurations shown on the diagram.
+If you see the right configuration then you move into $\mathcal{N}_4$;
+if it is the one on the left, then you move into $\mathcal{P}_4$.
+More degenerate pictures can be avoided; for example, a triangle with a point on a side.
+From such a configuration one may move in $\mathcal{N}_4$ and $\mathcal{P}_4$ (as well as come back to $\mathcal{E}_4$).
+
+Here is an exercise, solving which would force you to rebuild a considerable part of Alexandrov geometry.
+It is wise to spend some time thinking about this it before proceeding.
+
+\begin{thm}{Advanced exercise}\label{ex:convex-set}
+Assume $\spc{X}$ is a complete metric space with length metric (see Section~\ref{sec:length}), 
+containing only quadruples of type~$\mathcal{E}_4$.
+Show that $\spc{X}$ is isometric to a convex set in a Hilbert space.
+\end{thm}
+
+If in the definition above, we take $\MM^3(\kappa)$ instead of $\EE^3$.
+Then we will arrive at Wald's definition of curvature bounded below and above by $\kappa$.
+The parameter $\kappa$ has three interesting choices $-1$, $0$, and $1$;
+the rest can be obtained from these three applying rescaling.
+
+Again, the definition that we are going to use is not equivalent.
+
+
+\section{Embedding theorem}
+
+The following theorem is historically the first remarkable result in Alexandrov geometry.
+The main part of the following theorem is due to Alexandr Alexandrov~\cite{alexandrov-1948}.
+The last part is very difficult; it was proved by Aleksei Pogorelov~\cite{pogorelov}.
+
+\begin{thm}{Theorem}\label{thm:alexandrov+pogorelov}
+A metric space $\spc{X}$ is isometric to the surface of a convex body in the Euclidean space if and only if $\spc{X}$ is a geodesic $\CBB(0)$ space that is homeomorphic to $\SSS^2$.
+
+Moreover, $\spc{X}$ determines the convex body up to congruence.
+\end{thm}
+
+The convex body above is a compact convex subset in $\EE^3$;
+we assume that it does not lie in a line but might degenerate to a plane figure, say $F$.
+In the latter case, its surface is defined as two copies of $F$ glued along the boundary.
+For nondegenerate convex body $B$, its surface is its boundary $\partial B$ equipped with the induced length metric. 
+
+The only-if part of the theorem is the simplest; we will give a complete proof of it eventually.
+The if part will be sketched.
+We will not touch the last part.

@@ -1,0 +1,406 @@
+\chapter{Definitions}
+
+\section{Four-point comparison}
+
+Let $p,x,y,z$ be a quadruple of points in a metric space.
+If the inequality 
+\[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
+\le 
+2\cdot\pi
+\eqlbl{eq:CBB-comparison}\]
+holds, then we say that the quadruple meets \index{$\CBB$}\emph{$\CBB(0)$ comparison}.
+
+\begin{thm}{Definition}\label{def:CBB}
+A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$ if $\CBB(0)$ comparison
+holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
+\end{thm}
+
+If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
+$\CBB(1)$ and $\CBB(-1)$ comparisons.
+Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+but for $\angk  pxy_{\SSS^2}$ we need in addition, 
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
+if this inequality does not hold, than we assume that $\CBB(1)$ comparison holds for this quadruple.
+
+More generally, one may apply this definition to $\MM^2(\kappa)$.
+This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
+
+\begin{thm}{Exercise}
+Show that $\EE^n$ is $\CBB(0)$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:(3+1)-expanding}
+Show that a metric space $\spc{X}$ is $\Alex0$
+if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
+there is a quadruple of points $q,y_1,y_2,y_3\in\EE^3$
+such that 
+\[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
+\quad \text{and}\quad
+\dist{x_i}{x_j}{\spc{X}}\le\dist{y_i}{y_j}{\EE^2}\] 
+for all $i$ and $j$.
+\end{thm}
+
+\section{Alexandrov's lemma}
+
+Recall that $[xy]$ denotes a geodesic from $x$ to $y$;
+set  
+\[
+\left]x y\right]=[xy]\setminus\{x\},
+\quad
+\left[x y\right[=[xy]\setminus\{y\},
+\quad
+\left]x y\right[=[xy]\setminus\{x,y\}.\]
+
+\begin{thm}{Lemma}
+\index{Alexandrov's lemma}
+\label{lem:alex}  
+Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right[$.
+Then 
+the following expressions for the Euclidean model angles have the same sign:
+
+\begin{subthm}{lem-alex-difference}
+$\angk x p y
+-\angk x p z$,
+\end{subthm} 
+
+\begin{subthm}{lem-alex-angle}
+$\angk z p x
++\angk z p y -\pi$.
+\end{subthm}
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-730}
+\end{wrapfigure}
+
+The same holds for the hyperbolic and spherical model angles, 
+but in the latter case, one has to assume in addition that
+\[\dist{p}{z}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
+
+\end{thm}
+
+
+\parit{Proof.} 
+Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)$.
+Take 
+a point $\tilde y$ on the extension of 
+$[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$ (and therefore $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$). 
+
+\begin{wrapfigure}{r}{33mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-740}
+\end{wrapfigure}
+
+Since increasing the opposite side in a plane triangle increases the corresponding angle, 
+the following expressions have the same sign:
+\begin{enumerate}[(i)]
+\item $\mangle\hinge{\tilde x}{\tilde p}{\tilde y}-\angk{x}{p}{y}$,
+\item $\dist{\tilde p}{\tilde y}{}-\dist{p}{y}{}$,
+\item $\mangle\hinge{\tilde z}{\tilde p}{\tilde y}-\angk{z}{p}{y}$.
+\end{enumerate}
+Since 
+\[\mangle\hinge{\tilde x}{\tilde p}{\tilde y}=\mangle\hinge{\tilde x}{\tilde p}{\tilde z}=\angk{x}{p}{z}\]
+and
+\[ \mangle\hinge{\tilde z}{\tilde p}{\tilde y}
+=\pi-\mangle\hinge{\tilde z}{\tilde x}{\tilde p}
+=\pi-\angk{z}{x}{p},\]
+the statement follows.
+
+The spherical and hyperbolic cases can be proved the same way.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:alex-lemma-cat}
+Assume $p,x,y,z$ are as in Alexandrov's lemma.
+Show that
+\[\angk p x y
+\ge
+\angk p x z + \angk p z y,\]
+with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} vanish.
+\end{thm}
+
+Note that 
+\[p\in\left]x y\right[
+\quad\Longrightarrow\quad
+\angk pxy=\pi.
+\]
+Applying it with Alexandrov's lemma and $\CBB(0)$ comparison, we get the following claim and its corollary.
+
+\begin{thm}{Claim}\label{clm:angle-mono}
+If $p,x,y,z$ are points in a $\CBB(0)$ such that $p\in\left]x y\right[$, then 
+\[\angk xyz\le \angk xpz.\]
+\end{thm}
+
+\begin{wrapfigure}{r}{25mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-750}
+\end{wrapfigure}
+
+\begin{thm}{Exercise}\label{ex:noncreasing}
+Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
+Consider the function
+\[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+Show that $f$ is nonincreasing in each argument.
+\end{thm}
+
+Note that \ref{ex:noncreasing} implies the following.
+
+\begin{thm}{Claim}\label{clm:angle-defined}
+For any hinge $\hinge p x y$ in a $\CBB(0)$ space,
+the angle measure $\mangle\hinge p x y$ is defined, and
+\[\mangle\hinge p x y\ge \angk p x y.\]
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:0-angle}
+Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
+Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:pi-angle}
+Let $[xy]$ be a geodesic in a $\CBB(0)$ space.
+Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:adjacent-CBB}
+Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a $\CBB(0)$ space.
+Show that
+\[\mangle\hinge pxz+\mangle\hinge pyz= \pi.\]
+\end{thm}
+
+
+\begin{thm}{Exercise}
+\label{ex:pxyvw}
+Let 
+$p,x,y$ in a $\CBB(0)$ space
+and $v,w\in \left]xy\right[$.
+Show that  
+\[
+\angk xyp=\angk xvp
+\quad\Longleftrightarrow\quad
+\angk xyp=\angk xwp.
+\]
+
+\end{thm}
+
+\section{Hinge comparison}
+
+Let $\hinge pxy$ be a hinge in a $\CBB(0)$ space.
+By \ref{ex:0-angle}, the angle measure $\mangle\hinge pxy$ is defined and
+\[\mangle\hinge pxy\ge \angk pxy.\]
+
+Further, according to \ref{ex:adjacent-CBB}, we have 
+\[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
+for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in a $\CBB(0)$ space.
+
+The following theorem implies that a geodesic space is $\CBB(0)$ if
+the above conditions hold for all its hinges.
+
+\begin{thm}{Theorem}\label{thm:angle-cbb}
+A geodesic space $\spc{L}$ is $\CBB(0)$ if the following conditions hold.
+
+\begin{subthm}{angle-a}
+For any hinge $\hinge x p y$ in $\spc{L}$, the angle 
+$\mangle\hinge x p y$ is defined and 
+\[\mangle\hinge x p y\ge\angk x p y.\]
+\end{subthm}
+
+\begin{subthm}{angle-b}
+For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{L}$, we have
+\[\mangle\hinge pxz+\mangle\hinge pyz\le\pi.\]
+\end{subthm}
+
+\end{thm}
+
+\parit{Proof.}
+Consider a point  $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
+From \ref{SHORT.angle-b}, it follows that 
+\[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\quad \text{and}\quad \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
+
+\begin{wrapfigure}{o}{30 mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-805}
+\vskip4mm
+\end{wrapfigure}
+
+Since $\mangle\hinge w x y\le \mangle\hinge w x p +\mangle\hinge w y{p}$ (see \ref{claim:angle-3angle-inq}), we get 
+\[\mangle\hinge w x z+ \mangle\hinge w y z +\mangle\hinge w x y
+\le
+2\cdot\pi.\]
+Applying \ref{SHORT.angle-a}, 
+\[\angk w x z
++ \angk w y z 
++\angk w x y
+\le
+2\cdot\pi.\]
+Passing to the limits $w\to p$, we have
+\[\angk p x z 
++ \angk p y z 
++\angk p x y
+\le
+2\cdot\pi.\]
+\qedsf
+
+\section{Equivalent conditions}
+
+The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, \ref{thm:angle-cbb}.
+
+\begin{thm}{Theorem}\label{thm:defs_of_alex} 
+Let $\spc{L}$ be a geodesic space.
+Then the following conditions are equivalent.
+
+\begin{subthm}{cbb}
+$\spc{L}$ is $\CBB(0)$.
+\end{subthm}
+ 
+
+\begin{subthm}{2-sum} 
+(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{L}$, we have
+\[\angk z p x
++\angk z p y\le \pi.\]
+\end{subthm}
+
+\begin{subthm}{point-on-side}
+(\index{comparison!point-on-side comparison}point-on-side comparison)
+for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{L}$, we have
+\[\angk x p y\le\angk x p z.\]
+\end{subthm}
+
+\begin{subthm}{angle}(hinge comparison\index{comparison!hinge comparison})
+\index{hinge comparison}
+for any hinge $\hinge x p y$ in $\spc{L}$, the angle 
+$\mangle\hinge x p y$ is defined and 
+\[\mangle\hinge x p y\ge\angk x p y.\]
+Moreover, 
+\[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
+for any adjacent hinges $\hinge z p y$ and $\hinge z p x$.
+\end{subthm}
+
+Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Rightarrow$\ref{SHORT.point-on-side}$\Rightarrow$\ref{SHORT.angle} hold in any space, not necessarily geodesic.
+\end{thm}
+
+\begin{thm}{Advanced Exercise} \label{ex:urysohn}
+Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+\[\angk{z}{p}{x}+\angk{z}{p}{y}
+\le
+\pi.\]
+\end{thm}
+
+\section{Thin and fat trianles}
+
+Consider the  model triangle $\trig{\tilde x}{\tilde y}{\tilde z}\z=\modtrig{}({x}{y}{z})_{\EE^2}$ in the Euclidean plane.
+The \index{natural map}\emph{natural map} $\trig{\tilde x}{\tilde y}{\tilde z}\z\to \trig{x}{y}{z}$ 
+sends a point $\tilde p\in[\tilde x\tilde y]\cup[\tilde y\tilde z]\cup[\tilde z\tilde x]$ to the corresponding point $p\in[ x y]\cup[y z]\cup[ z x]$;
+that is, if $\tilde p$ lies on $[\tilde y\tilde z]$,
+then $p\in [y z]$ and $\dist{\tilde y}{\tilde p}{}=\dist{y}{p}{}$ (and therefore $\dist{\tilde z}{\tilde p}{}=\dist{z}{p}{}$).
+ 
+\begin{thm}{Definition}\label{def:k-thin-}
+A triangle $\trig{x}{y}{z}$ in the metric space $\spc{X}$ 
+is called \index{thin triangle}\emph{thin} (or \index{fat triangle}\emph{fat}) if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing (or respectively distance nondecreasing).
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:fat}
+Show that any triangle in a $\CBB(0)$ space is fat.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:normCBB}
+Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
+Suppose that 
+
+\begin{subthm}{}
+Any triangle in $\spc{W}$ is thin.
+\end{subthm}
+
+\begin{subthm}{}
+Any triangle in $\spc{W}$ is fat.
+\end{subthm}
+
+Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
+\end{thm}
+
+\section{Function comparison}\label{Function comparison}
+
+\parbf{Real-to-real functions.}
+Choose $\lambda\in \RR$.
+Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
+We say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} if $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
+
+Equivalently, \textit{$s$ is $\lambda$-concave if the function $h\:t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave}.
+Concavity can be defined via \index{Jensen inequality}\emph{Jensen inequality}; that is,
+\[h(s\cdot t_0+(1-s)\cdot t_1)\ge s\cdot h(t_0)+(1-s)\cdot h(t_1)\]
+for any $t_0,t_1\in \II$ and $s\in[0,1]$.
+It could be also defined via the existence of (local) upper \index{supporting function}\emph{support} at any point:
+\textit{for any $t_0\in \II$ there is a linear function $\ell$ that (locally) supports $h$ at $t_0$ from above;
+that is, $\ell(t_0)\z= h(t_0)$ and $\ell(t)\ge h(t)$ for any $t$ (in a neighborhood of $t_0$)}.
+
+The equivalence of these definitions is assumed to be known.
+We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
+
+\parbf{Functions on metric space.}
+A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined in an open subset of $\spc{L}$}.
+The domain of definition of a function $f$ will be denoted by $\Dom f$.
+
+Let $f$ be a function on a metric space~$\spc{L}$.
+We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
+for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
+the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
+
+The following proposition is conceptual ---
+it reformulates a global geometric condition into an infinitesimal condition on distance functions.
+
+\begin{thm}{Proposition}\label{comp-kappa}
+A geodesic space $\spc{L}$ is $\Alex{0}$ if and only if $f''\le 1$ for any function $f$ of the following type 
+\[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
+\end{thm} 
+
+\parit{Proof.}
+Choose a unit-speed geodesic $\gamma$ in $\spc{L}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
+Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}\z=\modtrig(p x y)$.
+Let $\tilde \gamma\:[t_0,t_1]\to\EE^2$ be the unit-speed parametrization of $[\tilde x \tilde y]$ from $\tilde x$ to $\tilde y$.
+
+Set
+\begin{align*} 
+\tilde r(t)&\df\dist{\tilde p}{\tilde\gamma(t)}{},
+& 
+r(t)&\df\dist{p}{\gamma(t)}{}.
+\end{align*}
+Clearly, $\tilde r(t_0)=r(t_0)$ and $\tilde r(t_1)=r(t_1)$.
+Note that the point-on-side comparison (\ref{point-on-side}) is equivalent to 
+\[t_0\le t\le t_1
+\qquad\Longrightarrow\qquad
+\tilde r(t)\le r(t)
+\eqlbl{eq:r=<r}\]
+for any $\gamma$ and $t_0<t_1$.
+
+Set
+\begin{align*} 
+\tilde h(t)&=\tfrac12\cdot \tilde r^2(t) - \tfrac12\cdot t^2,
+&
+h&=\tfrac12\cdot r^2(t) - \tfrac12\cdot t^2.
+\end{align*}
+Note that $\tilde h$ is linear,
+$\tilde h(t_0)=h(t_0)$ and $\tilde h(t_1)=h(t_1)$.
+Observe that the Jensen inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
+Hence the proposition follows.
+\qeds
+
+
+\section{Comments}
+
+All the discussed statements admit natural generalizations to $\CBB(\kappa)$ spaces.
+Most of the time the proof is the same with uglier formulas.
+
+For example, the function comparison of $\CBB(-1)$ states that 
+$f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
+Similarly, the function comparison of $\CBB(1)$ states that for any point $p$, we have
+$f''\le -f$ for the function $f=-\cos\circ\distfun_p$
+defined in $\oBall(p,\pi)$.
+The meaning of these inequalities is the same --- distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$.
+The inequality $f''\le \phi$ means that for any point $p$ in the domain of definition and any $\eps>0$, there is a neighborhood $U\ni p$ such that $f''\le \phi(p)+\eps$ in $U$.
+Here we assume that $f$ and $\phi$ are continuous and defined in open set.

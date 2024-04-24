@@ -1,0 +1,357 @@
+\chapter{Semiconcave functions}
+
+\section{Space of directions} 
+\label{sec:space+directions}
+
+Let $\spc{X}$ be a space with defined angles.
+Given $p\in \spc{X}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
+By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
+that is, $(\mathfrak{S}_p,\mangle)$ 
+forms a semimetric space.
+
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{direction!space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The elements of $\Sigma'_p$ are called \index{geodesic direction}\emph{geodesic directions} at $p$.
+Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
+for the equivalence relation 
+\[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0;\]
+the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{p}{q}$}
+(If $\spc{X}$ is $\CBB$, then by \ref{ex:0-angle}, $[px]\sim[py]$ if and only if $[px]\subset [py]$ or $[px]\supset[py]$.)
+
+
+The completion of $\Sigma'_p$ is called the \index{direction!space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
+The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
+
+\section{Tangent space}\label{sec: tangent space}
+
+Recall that \index{cone}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$ 
+over a metric space $\spc{X}$
+is defined as the metric space whose underlying set consists of
+equivalence classes in
+$[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
+and whose metric is given by the cosine rule
+\[
+\dist{(s,p)}{(t,q)}{\spc{V}} 
+=
+\sqrt{s^2+t^2-2\cdot s\cdot t\cdot \cos\theta},
+\]
+where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
+
+Note that \textit{$\Cone\SSS^n$ is isometric to $\EE^{n+1}$.}
+This is a leading example;
+further, we generalize several notions of Euclidean space to the Euclidean cones. 
+
+The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
+The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin of a  cone}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
+For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
+The \index{scalar product}\emph{scalar product} $\<v,w\>$
+of $v=s\cdot p$ and $w=t\cdot q$
+is defined by 
+\[\<v,w\>
+\df |v|\cdot|w|\cdot\cos\theta
+\]
+where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$; we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
+
+\parbf{Tangent space.}
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
+(despite the fact that $\T_p$ is only a cone --- not a vector space).
+The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
+
+\begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
+Tangent spaces of $\CBB(\kappa)$ space are $\CBB(0)$.
+\end{thm}
+
+\parit{Proof.}
+Consider the tangent space $\T_p=\Cone \Sigma_p$ of a $\CBB(\kappa)$ space $\spc{L}$ at a point $p$.
+We need to show that the $\CBB(0)$ comparison holds for a given quadruple $v_0$, $v_1$, $v_2$, $v_3\in \T_p$.
+
+Recall that the space of geodesic directions $\Sigma_p'$ is dense in $\Sigma_p$.
+It follows that the subcone $\T'_p=\Cone\Sigma_p'$ is dense in $\T_p$.
+Therefore, it is sufficient to consider the case $v_0$, $v_1$, $v_2$, $v_3\in \T'_p$.
+
+For each $i$, choose a geodesic $\gamma_i$ from $p$ in the direction of $v_i$;
+assume $\gamma_i$ has speed $|v_i|$ for each $i$.
+Since the angles are defined, we have
+\[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{L}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps)
+\eqlbl{eq:gamma-v}\]
+for $\eps>0$.
+The quadruple $\gamma_0(\eps)$, $\gamma_1(\eps)$, $\gamma_2(\eps)$, $\gamma_3(\eps)$ meets the $\CBB(\kappa)$ comparison.
+After rescaling all the distances by $\tfrac1\eps$, it becomes the $\CBB(\eps^2\cdot\kappa)$ comparison.
+Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\CBB(0)$ comparison for $v_0$, $v_1$, $v_2$, $v_3$.
+\qeds
+
+
+\section{Semiconcave functions} 
+
+Recall that $\lambda$-concave functions are defined in Section \ref{Function comparison}.
+
+Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of a $\CBB(0)$ space $\spc{L}$.
+We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
+the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
+Here we assume that $\phi$ is continuous and defined in $\Dom f$.
+
+If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index{semiconcave}\emph{semiconcave}.
+
+
+\begin{thm}{Exercise}\label{ex:distfun-semiconcave}
+Let $f$ be a distance function on a geodesic $\CBB(0)$ space $\spc{L}$;
+that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{L}$.
+Show that $f''\le \tfrac1f$.
+In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
+\end{thm}
+
+
+\section{Differential}\index{differential of a function}
+
+Let $\spc{X}$ be a space with defined angles.
+Let $f$ be a semiconcave function on $\spc{X}$ and $p\in \Dom f$.
+Choose a unit-speed geodesic $\gamma$ that starts at $p$;
+let $\xi\in\Sigma_p$ be its direction.
+Define 
+\[(\dd_pf)(\xi)\df(f\circ\gamma)^+(0),\]
+here $(f\circ\gamma)^+$ denotes the right derivative of $(f\circ\gamma)$;
+it is defined since $f$ is semiconcave.
+
+By the following exercise, the value $(\dd_pf)(\xi)$ is defined; that is, it does not depend on the choice of $\gamma$.
+Moreover, $\dd_pf$ is a Lipschitz function on $\Sigma'_p$.
+It follows that the function $\dd_pf\:\Sigma_p'\to\RR$ can be extended to a Lipschitz function $\dd_pf\:\Sigma_p\to\RR$.
+Further, we can extend it to the tangent space by setting 
+\[(\dd_pf)(r\cdot \xi)
+\df
+r\cdot (\dd_pf)(\xi)\]
+for any $r\ge 0$ and $\xi\in\Sigma_p$.
+The obtained function $\dd_pf\:\T_p\to\RR$ is Lipschitz;
+it is called the \index{differential}\emph{differential} of $f$ at $p$.
+
+\begin{thm}{Exercise}\label{ex:df(xi)}
+Let $f$ be a semiconcave function on a geodesic space $\spc{X}$ with defined angles.
+Suppose $\gamma_1$ and $\gamma_2$ are unit-speed geodesics that start at $p\in \Dom f$;
+denote by $\theta$ the angle between $\gamma_1$ and $\gamma_2$ at $p$.
+Show that 
+\[|(f\circ\gamma_1)^+(0)-(f\circ\gamma_2)^+(0)|\le L\cdot \theta,\]
+where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:d(distfun)}
+Let $p$ and $q$ be distinct points in a $\CBB(0)$ space.
+Denote by $\xi$ the direction of a geodesic $[pq]$ at $p$.
+Show that 
+\[\dd_p\distfun_q(v)\le -\langle\xi,v\rangle\]
+for any $v\in\T_p$.
+\end{thm}
+
+
+\section{Gradient}\label{sec:grad-def}
+
+\begin{thm}{Definition}\label{def:grad} 
+Let $f$ be a semiconcave function on a geodesic space $\spc{X}$ with defined angles.
+A tangent vector $g\in \T_p$ is called a 
+\index{gradient}\emph{gradient} of $f$ at $p$ 
+(briefly,  $g\z=\nabla_p f$\index{$\nabla$}) if
+\begin{subthm}{}
+$(\dd_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
+\end{subthm}
+
+\begin{subthm}{}
+$(\dd_p f)(g) = \<g,g\>.$
+\end{subthm}
+\end{thm}
+
+
+\begin{thm}{Proposition}\label{prop:grad-exist}
+Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in a $\CBB(\kappa)$ space.
+Then the gradient $\nabla_pf$ is uniquely defined.
+\end{thm}
+
+
+\begin{thm}{Key lemma}\label{lem:ohta} 
+Let $f$ be a $\lambda$-concave function that is defined in a neighborhood of a point $p$
+in a geodesic $\CBB(\kappa)$ space $\spc{L}$. 
+Then for any $u,v\in \T_p$, we have
+\[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
+\ge 
+(\dd_p f)(u)+(\dd_p f)(v),\]
+where
+\[s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}.\]
+
+\end{thm}
+
+Note that in Euclidean space we have
+\[|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.\]
+The right-hand side makes sense in any Euclidean cone,
+but the sum in the left-hand side does not.
+
+\parit{Proof.}
+We will assume $\kappa=0$;
+the general case requires only minor modifications.
+We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
+
+{
+
+\begin{wrapfigure}{r}{34 mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-1205}
+\vskip0mm
+\end{wrapfigure}
+
+Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde q$, $\tilde w\in\EE^2$ such that
+\begin{itemize}
+\item $\mangle\hinge{\tilde p}{\tilde u}{\tilde v}=\alpha$, 
+\item $\dist{\tilde p}{\tilde u}{}=|u|$, 
+\item $\dist{\tilde p}{\tilde v}{}=|v|$,
+\end{itemize}
+}
+\begin{itemize}
+\item $\tilde q$ lies on an extension of $[\tilde p\tilde v]$ so that $\tilde v$ is the midpoint of $[\tilde p\tilde q]$, 
+\item $\tilde w$ is the midpoint between $\tilde u$ and ${\tilde v}$.
+\end{itemize}
+Note that 
+\[\dist{\tilde p}{\tilde w}{}
+=
+\tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\eqlbl{eq:|p-w|=}\]
+
+We can assume that there are geodesics in the directions of $u$ and $v$;
+the latter follows since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$.
+Choose geodesics $\gamma_u$ and $\gamma_v$ in the direction in the directions of $u$ and $v$;
+let us assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
+For all small $t>0$, construct points $u_t,v_t,q_t,w_t\in \spc{L}$ as follows.
+\begin{itemize}
+\item $v_t=\gamma_v(t)$,\quad  $q_t=\gamma_v(2\cdot t)$
+\item $u_t=\gamma_u(t)$.
+\item $w_t$ is the midpoint of $[u_t v_t]$.
+\end{itemize}
+Clearly 
+\[\dist{p}{u_t}{}=t\cdot |u|,\qquad \dist{p}{v_t}{}=t\cdot|v|,\qquad \dist{p}{q_t}{}=2\cdot t\cdot|v|.\] 
+Since $\mangle(u,v)$ is defined, 
+we have 
+\[\dist{u_t}{v_t}{}=t\cdot\dist{\tilde u}{\tilde v}{}+o(t),
+\qquad
+\dist{u_t}{q_t}{}=t\cdot\dist{\tilde u}{\tilde q}{}+o(t).\]
+
+From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{angle}), we have
+\[\angk{v_t}p{w_t}
+\ge
+\angk{v_t}p{u_t}
+\ge
+\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\tfrac{o(t)}t\]
+and
+\[\angk{v_t}{q_t}{w_t}
+\ge
+\angk{v_t}{q_t}{u_t}
+\ge
+\mangle\hinge{\tilde v}{\tilde q}{\tilde u}+\tfrac{o(t)}t.\]
+Clearly, 
+$\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde q}{\tilde u}=\pi$. 
+From the adjacent angle comparison (\ref{2-sum}), 
+$\angk{v_t}p{u_t}\z+\angk{v_t}{u_t}{q_t}\le \pi$.
+Hence
+$\angk{v_t}p{w_t}
+\to
+\mangle\hinge{\tilde v}{\tilde p}{\tilde w}$ as $t\to0+$
+and thus 
+\[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).\]
+
+Without loss of generality, we can assume that $f(p)=0$.
+Since $f$ is $\lambda$-concave, we have 
+\begin{align*}
+2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
+\\
+&=t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
+\end{align*}
+ 
+Applying $\lambda$-concavity of $f$, we have
+\begin{align*}
+(\dd_p f)(\dir p{w_t})
+&\ge 
+\frac{f(w_t)-\tfrac\lambda2\cdot |p-w_t|^2}{|p-w_t|}
+\ge 
+\\
+&\ge
+\frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]
++o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}.
+\end{align*}
+By \ref{eq:|p-w|=}, the key lemma follows.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:first-var-CBB}
+Let $\hinge q p x$ be a hinge in  a $\CBB(0)$ space and $y\in \left]qp\right[$.
+Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
+Show that
+\[\dist{y}{\gamma(t)}{}
+=
+\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
+Conclude that 
+\[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
+for any $w\in \T_x$
+\end{thm}
+
+\parit{Proof of \ref{prop:grad-exist}; uniqueness.} 
+If $g,g'\in \T_p$ are two gradients of $f$,
+then 
+\begin{align*}
+\<g,g\>
+&=(\dd_p f)(g)\le \<g,g'\>,
+&
+\<g',g'\>
+&=(\dd_p f)(g')\le \<g,g'\>.
+\end{align*}
+Therefore,
+\[\dist[2]{g}{g'}{}=\<g,g\>-2\cdot\<g,g'\>+\<g',g'\>\le0.\] 
+It follows that $g=g'$.
+
+\parit{Existence.} 
+Note first that if $\dd_p f\le 0$, then one can take $\nabla_p f=\0$.
+
+Otherwise, if $s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
+it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that 
+\[
+(\dd_p f)\left(\overline{\xi}\right)=s.
+\eqlbl{overlinexi}
+\]
+Indeed, suppose $\overline{\xi}$ exists.
+Applying \ref{lem:ohta} for $u=\overline{\xi}$, $v=\eps\cdot w$ with $\eps\to0+$, 
+we get
+\[(\dd_p f)(w)\le \<w,s\cdot\overline{\xi}\>\] 
+for any $w\in\T_p$;
+that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
+
+Take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\dd_p f)(\xi_n)\to s$.
+Applying \ref{lem:ohta} for $u=\xi_n$ and $v=\xi_m$, we get
+\[s
+\ge
+\frac{(\dd_p f)(\xi_n)+(\dd_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
+Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
+that is, the sequence $\xi_n$ is Cauchy.
+Clearly, $\overline{\xi}=\lim_n\xi_n$ meets \ref{overlinexi}.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:convergence-grad}
+Let $f$ and $g$ be locally Lipschitz semiconcave functions defined in a neighborhood of a point $p$ in a $\CBB$ space.
+Show that 
+\[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
+\le 
+s\cdot(|\nabla_p f|+|\nabla_p g|),\]
+where
+\[s=\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
+
+Conclude that if the sequence of restrictions $\dd_p f_n|_{\Sigma_p}$ converges uniformly, then $\nabla_pf_n$ converges as $n\to\infty$.
+Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and locally Lipschitz. 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:semicontinuous-grad}
+Let $f$ be a locally Lipschitz $\lambda$-concave function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+
+\begin{subthm}{}
+Suppose $s\ge 0$.
+Show that $|\nabla_xf|> s$ if and only if for some point $y$ we have
+\[f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2,\]
+were $\ell=\dist{x}{y}{}$.
+\end{subthm}
+
+\begin{subthm}{} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
+that is, if $x_n\z\to x_\infty$, then
+\[|\nabla_{x_\infty}f|\le \liminf_{n\to\infty} |\nabla_{x_n}f|.\]
+\end{subthm}
+
+\end{thm}
