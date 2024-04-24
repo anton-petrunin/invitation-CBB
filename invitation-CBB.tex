@@ -4,9 +4,9 @@
 \newcommand{\spell}[2]{#2} %notes
 
 
-\def\thetitle{An invitation to Alexandrov geometry:
-\\ Curvature bounded below}
-\def\theauthors{Anton Petrunin, Vitali Kapovitch}
+\def\thetitle{An invitation to Alexandrov geometry:\\
+spaces with curvature bounded below}
+\def\theauthors{Vitali Kapovitch and Anton Petrunin}
 
 \usepackage{lectures}
 \usepackage[colorlinks=true,
@@ -28,6 +28,15 @@ pdfauthor={\theauthors}
 
 \begin{document}
 \spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}}{}
+
+\frontmatter
+\title{\thetitle}
+\author{\theauthors}
+\date{}
+\maketitle
+\thispagestyle{empty}
+\newpage
+\tableofcontents
 
 \include{prelim}
 
