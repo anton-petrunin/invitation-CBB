@@ -34,6 +34,58 @@ Show that
 \end{thm}
 
 
+\section{Volume}
+
+Fix a positive integer $m$.
+The $m$-dimensional Hausdorff measure of a Borel set $B$ in a metric space will be called its \index{volume}\emph{$m$-volume}; it will be denoted by $\vol_m B$.
+We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE^m$ has unit volume.
+
+This definition will be used mostly in $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces.
+In this case, we may write $\vol B$ instead of $\vol_m B$.
+
+
+\begin{thm}{Bishop--Gromov inequality}
+Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
+Suppose $\spc{L}=m<\infty$.
+Then 
+\[\vol \oBall(p,R)\le \omega_m\cdot R^m,\]
+where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
+Moreover, the function 
+\[R\mapsto \frac{\vol B(p,R)}{R^m}\]
+is nonincreasing.
+\end{thm}
+
+\parit{Proof.}
+Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
+Let $s\:\spc{L}\to \T_p$ be defined by $s\:x\mapsto \gamma_x^+(0)$.
+By comparison, $s$ is distance-noncontracting.
+Note that $s$ maps $\oBall(p,R)_{\spc{L}}$ to $\oBall(0,R)_{\T_p}$.
+
+If $\T_p\iso \EE^m$, then $\vol\oBall(0,R)_{\T_p}=\omega_m\cdot R^m$,
+and the first statement follows.
+Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
+If $\eps>\dist{p}{p'}{}$, then $\oBall(p,R)\subset \oBall(p',R+\eps)$.
+Therefore,
+\[\vol \oBall(p,R)\le \omega_m\cdot (R+\eps)^m\]
+for any $\eps>0$.
+Hence the first statement follows in the general case.
+
+For the second statement, choose $0<R_1<R_2$.
+Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {R_1}{R_2})$.
+By comparison,
+\[\dist{w(x)}{w(y)}{}\ge \tfrac {R_1}{R_2}\cdot \dist{x}{y}{}.\]
+It follows that 
+\[\vol B\ge (\tfrac {R_1}{R_2})^m\cdot\vol A\]
+if $B\supset w(A)$.
+Observe that 
+\[\oBall(p,R_1) \supset w[\oBall(p,R_2)]\]
+--- hence the result.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:diam-compact}
+Given a positive integer $m$, 
+show that any complete geodesic $m$-dimensional $\CBB(0)$ space with bounded diameter is compact.
+\end{thm}
 
 \section{Gromov's selection theorem}
 
@@ -113,4 +165,29 @@ in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of al
 $\vol_m\:\bm{K}\to \RR$ is continuous.}
 \end{thm}
 
+\section{Comments}
 
+Let us state a version of Bishop--Gromov inequality for curvature bound $\kappa=\pm1$.
+Its proof is more technical.
+A weaker inequality can be obtained by applying the same argument as above,
+and it is sufficient to extend the rest of the result in the lecture.
+
+\begin{thm}{Bishop--Gromov inequality}
+Given a point $p$ in a complete geodesic $m$-dimensional $\CBB(\pm1)$ space consider the function $v(R)\z=\vol_m\oBall(p,R)$;
+denote by $\tilde v(R)$ the volume of $R$ ball in the corresponding $m$-dimensional model space (the unit $m$-dimensional sphere or the $m$-dimensional Lobachevsky space).
+Then 
+\[v(R)\le \tilde v(R)\]
+and the function 
+\[R\mapsto \frac{v(R)}{\tilde v(R)}\] is nonincreasing;
+in the $\CBB(1)$ case, one has to assume that $R<\pi$.
+\end{thm}
+
+The same inequality holds for complete $m$-dimensional Riemannian manifolds with Ricci curvature $\ge (m-1)\cdot \kappa$.
+
+Gromov's selection theorem is the main source of applications of $\CBB$ spaces.
+The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) in the next lecture illustrates this technique.
+
+A version Gromov's selection theorem (as well as Bishop--Gromov inequality) holds for $m$-dimensional Riemannian manifolds with a lower bound on Ricci curvature.
+It motivates the study of the so-called $\mathrm{CD}(K,m)$ spaces; $\mathrm{CD}$ stands for curvature-dimension condition.
+This theory has serious applications in Alexandrov geometry;
+in particular, it provides a version of Liouville theorem about phase-space volume of geodesic flow in Alexandrov space \cite{brue-mondino-semola}.

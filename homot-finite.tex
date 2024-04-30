@@ -139,51 +139,9 @@ Therefore, $\spc{L}_n$ is homotopy equivalent to $\spc{N}$ for all large $n$ ---
 
 All the results in this lecture can be generalized to $\CBB(\kappa)$ spaces for any $\kappa$.
 
-All reasonable notions of dimension coincide for complete geodesic $\CBB$ spaces.
-In particular,
-\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}\]
-for any complete geodesic $\CBB$ space $\spc{L}$.
-Here $\HausDim$ stands for Hausdorff dimension.
-By the following exercise, $\CAT$ spaces are not that good.
-
-\begin{thm}{Exercise}
-Construct a $\CAT(0)$ space $\spc{T}$ such that 
-\[\TopDim \spc{T}=1
-\quad\text{and}\quad
-\HausDim \spc{T}=\infty.
-\]
-
-\end{thm}
-
-Let us state a version of Bishop--Gromov inequality for curvature bound $\kappa=\pm1$.
-Its proof is more technical.
-A weaker inequality can be obtained by applying the same argument as above,
-and it is sufficient to extend the rest of the result in the lecture.
-
-\begin{thm}{Bishop--Gromov inequality}
-Given a point $p$ in a complete geodesic $m$-dimensional $\CBB(\pm1)$ space consider the function $v(R)\z=\vol_m\oBall(p,R)$;
-denote by $\tilde v(R)$ the volume of $R$ ball in the corresponding $m$-dimensional model space (the unit $m$-dimensional sphere or the $m$-dimensional Lobachevsky space).
-Then 
-\[v(R)\le \tilde v(R)\]
-and the function 
-\[R\mapsto \frac{v(R)}{\tilde v(R)}\] is nonincreasing;
-in the $\CBB(1)$ case, one has to assume that $R<\pi$.
-\end{thm}
-
-The same inequality holds for complete $m$-dimensional Riemannian manifolds with Ricci curvature $\ge (m-1)\cdot \kappa$.
-
-Gromov's compactness theorem is the main source of applications of $\CBB$ spaces.
-It provides a converging sequence from a sequence of Riemannian manifolds, the limit is a $\CBB$ space that might fail to be Riemannian.
-Therefore, to prove something about Riemannian manifolds we need to consider $\CBB$ spaces.
-The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates this technique,
-but the same idea leads to stronger results; here is one example.
-
-\begin{thm}{Homeorphism-type finiteness}
-There are only finitely many homeorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with curvature $\ge \kappa$, and diameter $\le D$.
-\end{thm}
-
-In fact, this theorem implies diffeomorphism-type finiteness in all dimensions except 4.
-The following theorem can be also proved using this technique (altho Gromov's original proof \cite{gromov-1981} did not use Alexandrov geometry).
+Let us list some results that can be proved by applying Gromov's selection theorem
+in the same fashion as in the proof of homotopy-type finiteness theorem (\ref{thm:h-finiteness}).
+The following theorem can be proved using this technique, altho Gromov's original proof \cite{gromov-1981} did not use Alexandrov geometry directly.
 
 \begin{thm}{Betti-number theorem}
 There is a constant $\Const=\Const(m,D,\kappa)$ such that 
@@ -192,7 +150,7 @@ for any closed $m$-dimensional Riemannian manifold $M$ with curvature $\ge \kapp
 Here $\beta_i(M)$ denotes $i^\text{th}$ Betti number of $M$.
 \end{thm}
 
-The following result is mine, and it uses the same technique.
+The following result of the second author \cite{petrunin2008}, and it uses the same technique.
 
 \begin{thm}{Scalar curvature bound}
 There is a constant $\Const=\Const(m,D,\kappa)$ such that 
@@ -201,6 +159,20 @@ for any closed $m$-dimensional Riemannian manifold $M$ with curvature $\ge \kapp
 Here $\Sc$ denotes the scalar curvature.
 \end{thm}
 
-Gromov's compactness theorem holds for the closure in $\GH$ of $m$-dimensional Riemannian manifolds with a lower bound on Ricci curvature.
-It motivates the study of the so-called $\mathrm{CD}(K,m)$ spaces; $\mathrm{CD}$ stands for curvature-dimension condition.
-This theory has serious applications in Alexandrov geometry.
+The following theorem will play an important role in the following lecture.
+
+\begin{thm}{Stability theorem}\label{thm:stability}
+Let $\spc{R}_1,\spc{R}_2,\dots $ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvature at least $\kappa$.
+Suppose it converges to an $m$-dimensional $\CBB(\kappa)$ space $\spc{L}$.
+Then there are Hausdorff approximations $h_n\:\spc{L}\to \spc{R}_n$ such that for any $p\in\spc{L}$ and $r>0$, the restrictions of $h_n|_{\oBall(p,r)_{\spc{L}}}$ is an homeomorphism to its image for all sufficiently large $n$.  
+
+In particular, if $\spc{L}$ is compact then it is homeomorphic to $\spc{R}_n$ for all  sufficiently large $n$.
+\end{thm}
+
+The last statement in the theorem implies the following finiteness result.
+
+\begin{thm}{Homeorphism-type finiteness}
+There are only finitely many homeomorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with curvature $\ge \kappa$, and diameter $\le D$.
+\end{thm}
+
+In fact, this theorem implies diffeomorphism-type finiteness in all dimensions except 4.

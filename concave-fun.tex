@@ -133,11 +133,22 @@ where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:d(distfun)}
-Let $p$ and $q$ be distinct points in a $\CBB(0)$ space.
-Denote by $\xi$ the direction of a geodesic $[pq]$ at $p$.
-Show that 
+Let $p$ and $q$ be distinct points in a geodesic $\CBB(0)$ space $\spc{L}$.
+Show that
+
+\begin{subthm}{ex:d(distfun):<}
+If $\xi$ is the direction of a geodesic $[pq]$ at $p$, then
 \[\dd_p\distfun_q(v)\le -\langle\xi,v\rangle\]
 for any $v\in\T_p$.
+\end{subthm}
+
+\begin{subthm}{ex:d(distfun):=}
+Suppose $\spc{L}$ is proper.
+Let $\Xi$ be the set of all direction of a geodesics from $q$ to $p$.
+Then
+\[\dd_p\distfun_q(v)=-\max_{xi\in\Xi}\langle\xi,v\rangle\]
+for any $v\in\T_p$.
+\end{subthm}
 \end{thm}
 
 
@@ -157,10 +168,28 @@ $(\dd_p f)(g) = \<g,g\>.$
 \end{subthm}
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:monotonicity}
+Let $f$ be a $\lambda$-concave function on a geodesci $\CBB(\kappa)$ space.
+Suppose that gradients $\nabla_xf$ and $\nabla_yf$ are defined.
+Show that 
+\[\<\dir{x}{y},\nabla_{x}f\>
++
+\<\dir{y}{x},\nabla_{y}f\>
++
+\lambda\cdot\dist{x}{y}{}\ge 0.\]
+\end{thm}
+
+
 
 \begin{thm}{Proposition}\label{prop:grad-exist}
 Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in a $\CBB(\kappa)$ space.
 Then the gradient $\nabla_pf$ is uniquely defined.
+
+Moreover, if $\dd_pf\le 0$, then we have $\nabla_pf=0$;
+otherwise, $\nabla_pf=s\cdot \overline{\xi}$, where 
+$s= \dd_pf(\overline{\xi})$
+and
+$\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\xi)$ for $\xi\in \Sigma_p$.
 \end{thm}
 
 

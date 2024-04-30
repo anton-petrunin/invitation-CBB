@@ -500,6 +500,10 @@ Suppose $\LinDim\spc{L}=m<\infty$.
 Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}$.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:dim=1}
+Show that a 1-dimensional complete geodesic $\CBB(\kappa)$ space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:resporka}
 Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
@@ -523,17 +527,25 @@ Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space.
 Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic $\CBB(1)$ space.
 \end{thm}
 
-Note that the theorem also implies that $\T_p$ is a proper geodesic $\CBB(\kappa)$ space.
-It follows from the definition of tangent space; see Section~\ref{sec: tangent space}.
+
+\begin{thm}{Exercise}
+Prove the following in the assumptions of \ref{thm:finite-space-of-directions}.
+\begin{subthm}{}
+The tangent space $\T_p$ is proper.
+\end{subthm}
+
+\begin{subthm}{ex:finite-space-of-directions-dim}
+$\dim\Sigma_p=\dim\spc{L}-1$.
+\end{subthm}
+
+\begin{subthm}{}
+If $\dim \spc{L}>1$, then $\Sigma_p$ is geodesic.
+\end{subthm}
 
 
-\begin{thm}{Exercise}\label{ex:finite-space-of-directions-dim}
-Let $\spc{L}$ be an $m$-dimensional complete geodesic $\CBB(\kappa)$ space;
-suppose $m<\infty$.
-Show that for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is $(m-1)$-dimensional.
 \end{thm}
 
-Using this exercise, one can prove results for all finite-dimensional complete geodesic $\CBB(\kappa)$ spaces via induction on its dimension.
+Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional complete geodesic $\CBB(\kappa)$ spaces via induction on its dimension.
 Such proofs will be indicated below.
 
 \parit{Proof.}
@@ -606,63 +618,18 @@ It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as r
 
 Notice that $\CBB$ comparison gives lower bounds on $\mangle\hinge pxz$ and $\mangle\hinge pyz$, but in the proof we needed upper bounds which were obtained by from the definition of angle measure and compactness of space of directions.
 
-\section{Volume}
-
-Fix a positive integer $m$.
-The $m$-dimensional Hausdorff measure of a Borel set $B$ in a metric space will be called its \index{volume}\emph{$m$-volume}; it will be denoted by $\vol_m B$.
-We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE^m$ has unit volume.
-
-This definition will be used mostly in $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces.
-In this case, we may write $\vol B$ instead of $\vol_m B$.
-
-
-\begin{thm}{Bishop--Gromov inequality}
-Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
-Suppose $\spc{L}=m<\infty$.
-Then 
-\[\vol \oBall(p,R)\le \omega_m\cdot R^m,\]
-where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
-Moreover, the function 
-\[R\mapsto \frac{\vol B(p,R)}{R^m}\]
-is nonincreasing.
+\begin{thm}{Exercise}
+Let $p$ be a point in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Show that $(\lambda\cdot \spc{L},p)\to (\T_p,0)$ in the sense of pointed Gromov--Hausdorff convergence.
 \end{thm}
-
-\parit{Proof.}
-Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Let $s\:\spc{L}\to \T_p$ be defined by $s\:x\mapsto \gamma_x^+(0)$.
-By comparison, $s$ is distance-noncontracting.
-Note that $s$ maps $\oBall(p,R)_{\spc{L}}$ to $\oBall(0,R)_{\T_p}$.
-
-If $\T_p\iso \EE^m$, then $\vol\oBall(0,R)_{\T_p}=\omega_m\cdot R^m$,
-and the first statement follows.
-Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
-If $\eps>\dist{p}{p'}{}$, then $\oBall(p,R)\subset \oBall(p',R+\eps)$.
-Therefore,
-\[\vol \oBall(p,R)\le \omega_m\cdot (R+\eps)^m\]
-for any $\eps>0$.
-Hence the first statement follows in the general case.
-
-For the second statement, choose $0<R_1<R_2$.
-Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {R_1}{R_2})$.
-By comparison,
-\[\dist{w(x)}{w(y)}{}\ge \tfrac {R_1}{R_2}\cdot \dist{x}{y}{}.\]
-It follows that 
-\[\vol B\ge (\tfrac {R_1}{R_2})^m\cdot\vol A\]
-if $B\supset w(A)$.
-Observe that 
-\[\oBall(p,R_1) \supset w[\oBall(p,R_2)]\]
---- hence the result.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:diam-compact}
-Given a positive integer $m$, 
-show that any complete geodesic $m$-dimensional $\CBB(0)$ space with bounded diameter is compact.
-\end{thm}
-
 
 \section{Comments}
 
 Corollary \ref{cor:euclid-subcone} is the key to the following result: \textit{all reasonable definitions of dimension give the same result on complete geodesic $\CBB$ spaces}.
+In particular,
+\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}\]
+for any complete geodesic $\CBB$ space $\spc{L}$.
+Here $\TopDim$ and $\HausDim$ stands for \emph{Lebesgue coverning dimension} and \emph{Hausdorff dimension}, respectively.
 
 \begin{thm}{Open question}
 Let $p$ be a point in a geodesic $\CBB$ space $\spc{L}$.
@@ -676,4 +643,3 @@ Halbeisen's example \cite{alexander-kapovitch-petrunin-2025,halbeisen} shows tha
 Let $\spc{L}$ be a proper length $\Alex\kappa$ space.
 Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
 \end{thm}
-
