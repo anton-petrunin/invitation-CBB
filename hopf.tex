@@ -49,88 +49,82 @@ In this case, we say that $U$ has a \emph{conic neighborhood} of $x$.
 Any two conic neighborhoods of a given point in a metric space are homeomorphic.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:conic}
-
-\begin{subthm}{ex:conic:conic}
+\begin{thm}{Advanced exercise}\label{ex:conic}
 Prove the uniqueness of conic neighborhood
-\end{subthm}
+\end{thm}
 
-\begin{subthm}{ex:conic:tangent}
+\begin{thm}{Exercise}\label{ex:conic-tangent}
 Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$.
+
+\begin{subthm}{ex:conic-tangen:tangent}
 Show that $\T_x$ is homeomorphic to $\T_{x'}$ for any $x$.
 \end{subthm}
 
-\end{thm}
+\begin{subthm}{ex:conic-tangen:dir}
+Show that $\Susp\Sigma_x$ is homeomorphic to $\Susp\Sigma_{x'}$ for any $x$.
+\end{subthm}
 
+\begin{subthm}{ex:conic-tangen:example}
+Give an example of $x\in\spc{L}$ and $x\in\spc{L}'$
+such that $\Sigma_x$ is not homeomorphic to $\Sigma_{x'}$.
+\end{subthm}
 
-\section{Morse theory}
-
-Let $f$ be a semiconcave function.
-A point $p\in \Dom f$ is called \emph{critical} point of $f$ if $\dd_pf\le 0$; 
-otherwise it is called \emph{regular}.
-
-The proof of the following statement is quite technical, we omit its proof.
-
-\begin{thm}{Theorem}
-Let $f$ be a semiconcave function on a finite-dimensional geodesic $\CBB(\kappa)$ space.
-Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
-Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 
 \end{thm}
 
-Note that distance function $\distfun_p$ has no critical points in a neighborhood of $p$ and the level set $\distfun_p=\eps$ is compact for small $\eps>0$.
-Combining this observation with 
-
-Applying the theorem we get the following.
-
-\begin{thm}{Corollary}
-A small spherical neighborhood of any point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$ is homeomorphic to an open cone over small sphere around $p$.
-\end{thm}
 
 
 \section{Topology}
 
 \begin{thm}{Theorem}
-Suppose $x\mapsto x'$ is a homeomorphism $\spc{L}\to\spc{L}'$ between finite-dimensional geodesic $\CBB(\kappa)$ spaces.
-Then $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
-
-In particular, $\spc{L}$ has nonempty boundary if and only if so does $\spc{L}'$.
+Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional geodesic $\CBB(\kappa)$ spaces.
+Then $\dim \spc{L}=\dim\spc{L}'$ and
+\[\partial\spc{L}\ne \emptyset
+\quad\iff\quad
+\partial\spc{L}'\ne \emptyset
+\]
 \end{thm}
 
 Let $\spc{L}$ be an $m$-dimensional geodesic $\CBB(\kappa)$ space.
-Define \emph{rank} of $\spc{L}$ (briefly, $\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}\iso\RR^{m-k}\times \spc{N}$,
-where $\spc{N}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
+Define \emph{rank} of $\spc{L}$ (briefly, $\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}\iso\RR^{m-k}\times \spc{K}$,
+where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
 
 In the following proof we will apply induction on the rank of space.
 
 \parit{Proof.}
-Suppose we have a counterexample, $x\in \partial \spc{L}$, but $x'\notin \partial \spc{L}'$.
+The first statement follows from .
 
-Note that $k\df\rank \spc{L}>1$ or $k'\df\rank \spc{L}'>1$.
+Suppose we have a counterexample, say $\partial \spc{L}\ne \emptyset$, but $\partial \spc{L}'=\emptyset$.
+Let $k\df\rank \spc{L}$ and $k'\df\rank \spc{L}'$.
+
+Note that $k>1$ or $k'>1$.
 Otherwise, by \ref{ex:dim=1}, both $\spc{L}$ and $\spc{L}'$ are topological manifolds
 and the statement follows since homeomorphism between topological manifolds respects their boundary.
 
-Assume we have a counterexample, say $x\in \partial \spc{L}$, but $x'\notin \partial \spc{L}'$.
-Note that $\rank \T_x\ge \rank \spc{L}$ and $\rank \T_{x'}\ge \rank \spc{L}'$.
-By \ref{ex:conic:tangent} $\T_x$ is homeomorphic to $\T_{x'}$.
-So we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones with tips at $x$ and $x'$ respectively.
-
 We can assume that the pair of ranks $(k,k')$ is minimal in the lexicographic order.
+Choose a homeomorphism $x\mapsto x'$ from $\spc{L}$ to $\spc{L}'$ 
+and $x\in \partial \spc{L}$.
+Since $\partial \spc{L}'=\emptyset$, we have $x'\notin \partial \spc{L}'$.
+Note that 
+\[\rank \T_x\le k
+\quad\text{and}\quad
+\rank \T_{x'}\le k',
+\]
+By \ref{ex:conic-tangen:tangent}, $\T_x$ is homeomorphic to $\T_{x'}$.
+Therefore, we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones with tips at $x$ and $x'$ respectively.
+
+
 Suppose $k>1$ and $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional geodesic $\CBB(0)$ cone.
 Note that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the tip of $\spc{C}$.
+
 Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
-Choose $y$ that projects to $z$.
-Applying \ref{ex:conic:tangent} again, we get a homeomorphism $\T_z\to \T_{z'}$.
-Observe that $0\in\partial  \T_z$ and $\partial \T_{z'}=\emptyset$.
-From above $\rank \T_z<k$ --- a contradiction.
+Choose $y$ that projects to $z$, so $\rank\T_y<\rank\spc{L}$.
+Applying \ref{ex:conic-tangen:tangent} again, we get that $\T_y$ is homeomorphic to $\T_{y'}$,
+$\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$ which contradicts minimality of $k$.
 
-Summarizing, if there is a counterexample, such that $x\in \partial \spc{L}$, but $x'\notin \partial \spc{L}'$,
-then we can assume that $k=\rank \spc{L}\le 1$ and both spaces $\spc{L}$ and $\spc{L}'$ are Euclidean cones with tips at $x$ and $x'$ respectively.
-In particular, $\spc{L}\iso \RR^{m-1}\times \RR_{\ge0}$;
-therefore, 
-$\partial\spc{L}= \RR^{m-1}\times \{0\}$
+Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$ and $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 
-Now assume $k'\rank \spc{L}'> 1$.
+Now assume $k'> 1$.
 Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional geodesic $\CBB(0)$ cone.
 Since $\partial\spc{L}$ is $(m-1)$-dimensional,
 the projection of its image in $\spc{L}'$ to $\spc{C}'$
@@ -147,155 +141,16 @@ Therfore, $\T_y$ is homeomorphic to $\T_{y'}$,
 --- a contradiction.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:bry2bry}
+Let $x\mapsto x'$ be a homeomorphism $\Omega\to\Omega'$
+between open subsets in finte-dimensional complete geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$.
 
+Show that $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
 
-
-By \ref{thm:spherical-nbhd}, a spherical neighborhood of $x$ is homeomorphic to the tangent cone $\T_x$.
-Further, there is a neighborhood $U'\subset \spc{L}'$ of $x'$ hat is homeomorphic to the tangent cone $\T_x$.
-On the other hand, a spherical neighborhood of $x'$ is homeomorphic to $\T_{x'}$.
-Applying Kwun's lemma (\ref{lem:kwun}), we get that $\T_x$ is homeomorphic to $\T_{x'}$.
-
-
-Note that $\rank \T_x\ge \rank \spc{L}$ and $\rank \T_{x'}\ge \rank \spc{L}'$.
-We can assume that $\rank \spc{L}$ takes minimal possible value.
-In this case $\rank \T_x= \rank \spc{L}$.
-Moreover, the same argument as above shows that 
-\[\rank \T_v\T_x=\rank \T_x\]
-for any $v\in \partial\T_x$.
-
-The latter is possible only if $k=1$, where $k\df \rank \T_x$;
-in other words, $\T_x\iso \RR^{m-1}\times \RR_{\ge0}$.
-Indeed, $\rank \T_x\ne 0$;
-otherwise $\T_x$ is a Eucliedan space and therefore $\partial \T_x=\emptyset$.
-Further, suppose $\rank \T_x=k\ge 2$, and $\T_x\iso \RR^{m-k}\times \spc{C}$.
-Then we can choose $v\in \partial \T_x$ that projects to a nonzero vector in $\spc{C}$.
-In this case $\rank \T_v\T_x<\rank \T_x$ --- a contradiction.
-
-Summarizing, in the example above, we can assume that $\rank \spc{L}=1$.
-We can also assume that $\rank \spc{L}'$ takes minimal possible value.
-Suppose 
-
-
-
-
-
-
-
-Let us show that $\rank \spc{L}=1$.
-Now assume $k=\rank \spc{L}>1$ and $\spc{L}=\RR^{m-k}\times \spc{N}$.
-The tangent space at $x$ splits as $\RR^{m-k}\times \T_{y}\spc{N}$, where $y$ is the projection of $x$ to $\spc{N}$.
-Note that $\partial\Sigma_y\ne\emptyset$;
-choose a direction $\xi\in\partial\Sigma_y$.
-
-
-
-We may assume that $\spc{L}\iso\RR^m\times \spc{N}$ and $\spc{L}\iso\RR^n\times \spc{N}'$
-for some integers $m$ and $n$ and $\dim \spc{N}+\dim \spc{N}'$ takes minimal possible value.
-Let us 
-
-Assume contrary; that is, $x\in \partial \spc{L}$, but $x'\notin \partial \spc{L}'$.
-Let $m=\dim \spc{L}$; by??? $m=\dim\spc{L}'$.
-
-\qeds
-
-
-
-
-The following statements should agree with your intuition.
-
-\begin{thm}{Theorem}\label{thm:bry-closed}
-Boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
 \end{thm}
 
-The proof is based on the following topologcal lemma.
-
-\begin{thm}{Key lemma}\label{lem:bry-closed:key}
-Let $\spc{V}$ and $\spc{W}$ be geodesic Euclidean cones.
-Assume $\spc{V}$ and $\spc{W}$ are finite-dimesional $\CBB(0)$ spaces
-and $\RR^{m}\times \spc{V}$ is homeomorphic to $\RR^{n}\times \spc{W}$ for some $m$ and $n$.
-Then $\spc{V}$ has boundary if and only if $\spc{W}$ does.
-\end{thm}
-
-\parit{Proof of the key lemma \ref{lem:bry-closed:key}.}
-Suppose $\spc{V}$ has boundary, but $\spc{W}$ does not.
-We can assume that the pair $(\dim \spc{V},\dim \spc{W})$ is minimal in the lexicographic order.
-Let us show that $\dim \spc{V}=\dim \spc{W}=1$.
-
-First assume that $\dim \spc{V}>1$.
-Choose $v\ne 0$ in $\partial\spc{V}$.
-By \ref{thm:spherical-nbhd}, a spherical neighborhood of $v$ is homeomorphic to $\RR\times \spc{V}'$, where $\spc{V}'$ is a geodesic $\CBB(0)$ Eulidean cone and $\dim \spc{V}'=\dim \spc{V}-1$.
-Therefore a neighborhood of $(0, v)\in \RR^n\times \spc{V}$ is homeomorphic to $\RR^{n+1}\times \spc{V}'$.
-Let $(x,w)$ be the corresponding point in $\RR^m\times \spc{W}$;
-it has a conic neighborhood homeomorphic to $\RR^{n+1}\times \spc{V}'$.
-
-By Kwun's lemma, $(x,w)$ has conic neighborhood.
-Let $F(x) \in \RR^{m_2}\times \{z\}$.
-Suppose $z$ is the tip of $\Cone \Sigma_2$.
-Then, by Kwun's lemma, $\RR^{m_1+1}\times \Cone\Sigma_\xi$ is homeomorphic to $\RR^{m_2}\times \Cone \Sigma_2$;
-so $k_1$ is not minimal --- a contradition.
-Now suppose $z$ is not the tip of $\Cone \Sigma_2$.
-Then a conical neighborhood of $z$ is homeomorphic to $\RR^{m_2+1}\times \Cone\Sigma_\zeta\Sigma_2$.
-Since $\Sigma_\zeta$ has no boundary, we arrive at a contradiction again.
-
-
-
-Choose a homeomorphism $h\:\RR^{m_1}\times \Cone \Sigma_1\to \RR^{m_2}\times \Cone \Sigma_2$.
-Suppose $\Sigma_1$ has boundary, but $\Sigma_2$ does not.
-
-We can assume that $k_1$ takes minimal possible value; let us show that $k_1=1$.
-If $k_1>1$, then we can choose $\xi\in \partial \Sigma_1$, so $\Sigma_\xi\Sigma_1$ has nonempty boundary.
-Note that $\Cone \Sigma_1$ contains a point with conical neighborhood homeomorphic to $\RR\times \Cone\Sigma_\xi$.
-By ??? $\dim\Sigma_\xi=\dim\Sigma_1-1$.
-
-Therefore $\RR^{m_1}\times \Cone \Sigma_1$ contains a point, say $x$ with conical neighborhood homeomorphic to $\RR^{m_1+1}\times \Cone\Sigma_\xi$.
-By Kwun's lemma, the corresponding point $F(x)$ in $\RR^{m_2}\times \Cone \Sigma_2$ has homeomorphic conic neighborhood.
-Let $F(x) \in \RR^{m_2}\times \{z\}$.
-Suppose $z$ is the tip of $\Cone \Sigma_2$.
-Then, by Kwun's lemma, $\RR^{m_1+1}\times \Cone\Sigma_\xi$ is homeomorphic to $\RR^{m_2}\times \Cone \Sigma_2$;
-so $k_1$ is not minimal --- a contradition.
-Now suppose $z$ is not the tip of $\Cone \Sigma_2$.
-Then a conical neighborhood of $z$ is homeomorphic to $\RR^{m_2+1}\times \Cone\Sigma_\zeta\Sigma_2$.
-Since $\Sigma_\zeta$ has no boundary, we arrive at a contradiction again.
-
-
-Let us show that  $k_1\ge k_2$;
-moreover, $F(\RR^{m_1}\times \{0_1\})=\RR^{m_2}\times \{0_2\}$, where $0_i$ denotes the tip of $\Cone \Sigma_i$.
-
-Indeed, if 
-
-Assume $k_1 = 1$.
-Then $\Sigma_1$ is a closed interval, say $\II$.
-Let us apply induction on $k_2$.
-
-If $k_2=1$, then $\Sigma_2$ is either circle or a closed interval.
-The former is impossible since $\RR^{m_2+2}\cong\RR^{m_2}\times \Cone(\SSS^1)$ is not homeomorphic to the half-space $\RR^{m_1+1}\times \RR_\ge\cong\RR^{m_1}\times \Cone(\II)$.
-
-Now suppose $k_2 > 1$ and we have already proved the statement for smaller values of $\dim \Sigma_2$.
-Choose a homeomorphism $F\:\RR^{m_1}\times \Cone\Sigma_1\to\RR^{m_2}\times \Cone\Sigma_2$.
-Suppose $\Sigma_2$ has no boundary.
-
-Note that we necessarily have that $m_1 + k_1 = m_2 + k_2$.
-Therefore $m_1>m_2$.
-Hence 
-\qeds
-
-
-\parit{Proof of \ref{thm:bry-closed}.}
-\qeds
-
-
-Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
-Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
-Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
-Then we say that $\xi$ is in the \emph{space of directions} from $p$ to $X$; briefly $\xi\in\Sigma_pX$.
-
-Further, the cone $\T_pX=\Cone(\Sigma_pX)$ will be called \emph{tangent space} to $X$ at $p$.
-
-\begin{thm}{Theorem}\label{thm:partial-Sigma}
-For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
-\[\partial (\Sigma_p\spc{L})=\Sigma(\partial\spc{L})
-\quad\text{and}\quad
-\partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
+\begin{thm}{Exercise}\label{ex:bry-closed}
+Show that boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
 \end{thm}
 
 \begin{thm}{Exercise}
@@ -310,7 +165,45 @@ Show that $f$ is an embedding.
 Moreover, if $\partial\spc{L}_2=\emptyset$, then $f(\Omega_1)$ is open in $\spc{L}_2$.  
 \end{thm}
 
+\section{Tangent space}
 
+Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
+Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
+Then we say that $\xi$ is in the \emph{space of directions} from $p$ to $X$; briefly $\xi\in\Sigma_pX$.
+
+Further, the cone $\T_pX=\Cone(\Sigma_pX)$ will be called \emph{tangent space} to $X$ at $p$.
+
+\begin{thm}{Theorem}\label{thm:partial-Sigma}
+For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
+\[\partial (\Sigma_p\spc{L})=\Sigma_p(\partial\spc{L})
+\quad\text{and}\quad
+\partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
+\end{thm}
+
+\parit{Proof}
+Given $x\in\spc{L}$ choose a geodesic path $\gamma$ from $p$ to $x$
+and let $\log_px=\gamma^+(0)$.
+This way we defined a map $\log_p\:\spc{L}\to \T_p$.
+
+Recall that $\lambda\cdot \spc{L}\GHto \T_p$; see ???.
+Moreover, the map $f_\lambda\:x\mapsto \lambda\cdot\log_px$ defines Hausdorff approximations $\lambda\cdot \spc{L}\GHto \T_p$.
+
+The stability theorem implies that $f_\lambda$ can be approximated by homeomorphisms.
+More precisely, there is a family of maps $h_\lambda\:\lambda\spc{L}\to \T_p$
+that defined an open embedding of open ball $\oBall(p,r)$ for any fixed $r>0$ and all large $\lambda$
+and such that $\sup_{???}\dist{f_\lambda(x)}{h_\lambda(x)}\to 0$ as $\lambda\to\infty$.
+By \ref{ex:bry2bry}, $h_\lambda(\partial \spc{L}\cap \oBall(p,r))\subset \partial\T_p$. 
+
+Choose a sequence $x_n\to p$;
+let $\lambda_n=\tfrac1{\dist{p}{x_n}{}}$.
+Suppose $\lambda_n\cdot \log_px\to v\in\T_p$.
+
+
+
+Note that $\lambda_n\cdot [p x_n]\subset \lambda\spc{L}$ converge to a ge
+
+\qeds
 
 \section{Geometry}
 
@@ -492,3 +385,26 @@ These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
 \qeds
 
 
+\section{Morse theory}
+
+Let $f$ be a semiconcave function.
+A point $p\in \Dom f$ is called \emph{critical} point of $f$ if $\dd_pf\le 0$; 
+otherwise it is called \emph{regular}.
+
+The proof of the following statement is quite technical, we omit its proof.
+
+\begin{thm}{Theorem}
+Let $f$ be a semiconcave function on a finite-dimensional geodesic $\CBB(\kappa)$ space.
+Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
+Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
+
+\end{thm}
+
+Note that distance function $\distfun_p$ has no critical points in a neighborhood of $p$ and the level set $\distfun_p=\eps$ is compact for small $\eps>0$.
+Combining this observation with 
+
+Applying the theorem we get the following.
+
+\begin{thm}{Corollary}
+A small spherical neighborhood of any point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$ is homeomorphic to an open cone over small sphere around $p$.
+\end{thm}

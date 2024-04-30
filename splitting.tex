@@ -219,7 +219,7 @@ Show that
 
 
 If $\T_p$ were geodesic, then the lemma would follow from the existence  of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$ which is concave.
-However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin-2025}.
+However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin2024}.
 
 
 Applying the above lemma for $u=v$, we have the following statement.
@@ -625,11 +625,14 @@ Show that $(\lambda\cdot \spc{L},p)\to (\T_p,0)$ in the sense of pointed Gromov-
 
 \section{Comments}
 
-Corollary \ref{cor:euclid-subcone} is the key to the following result: \textit{all reasonable definitions of dimension give the same result on complete geodesic $\CBB$ spaces}.
-In particular,
-\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}\]
-for any complete geodesic $\CBB$ space $\spc{L}$.
-Here $\TopDim$ and $\HausDim$ stands for \emph{Lebesgue coverning dimension} and \emph{Hausdorff dimension}, respectively.
+Corollary \ref{cor:euclid-subcone} is the key to the proof that \textit{all reasonable definitions of dimension give the same result on complete geodesic $\CBB$ spaces}.
+More precisely, we have the following theorem \cite[15.16]{alexander-kapovitch-petrunin2024}.
+
+\begin{thm}{Theorem}\label{thm:dim=dim}
+For any complete length $\CBB(\kappa)$ space $\spc{L}$, we have
+\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L},\]
+where $\TopDim$ and $\HausDim$ stands for \emph{Lebesgue coverning dimension} and \emph{Hausdorff dimension}, respectively.
+\end{thm}
 
 \begin{thm}{Open question}
 Let $p$ be a point in a geodesic $\CBB$ space $\spc{L}$.
@@ -637,7 +640,7 @@ Suppose that $0\ne v\in \Lin_p$
 Is it true that the tangent space $\T_p$ splits in the direction of $v$?
 \end{thm}
 
-Halbeisen's example \cite{alexander-kapovitch-petrunin-2025,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
 
 \begin{thm}{Open question}\label{open:Halb-proper}
 Let $\spc{L}$ be a proper length $\Alex\kappa$ space.

@@ -11,7 +11,9 @@ If the inequality
 holds, then we say that the quadruple meets \index{$\CBB$}\emph{$\CBB(0)$ comparison}.
 
 \begin{thm}{Definition}\label{def:CBB}
-A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov (briefly, $\spc{X}\in\CBB(0)$ if $\CBB(0)$ comparison
+A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov
+(briefly, $\spc{X}\in\CBB(0)$)
+if $\CBB(0)$ comparison
 holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
 \end{thm}
 
@@ -24,6 +26,8 @@ if this inequality does not hold, than we assume that $\CBB(1)$ comparison holds
 
 More generally, one may apply this definition to $\MM^2(\kappa)$.
 This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
+However, if you see $\CBB(\kappa)$ comparison, it is usually safe to assume that $\kappa=-1$, $0$, or $1$
+(applying rescaling, the $\CBB(\kappa)$ comparison can be reduced to these three cases).
 
 \begin{thm}{Exercise}
 Show that $\EE^n$ is $\CBB(0)$.
@@ -56,7 +60,7 @@ set
 \label{lem:alex}  
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right[$.
 Then 
-the following expressions for the Euclidean model angles have the same sign:
+the following expressions have the same sign:
 
 \begin{subthm}{lem-alex-difference}
 $\angk x p y
@@ -125,7 +129,7 @@ Note that
 \quad\Longrightarrow\quad
 \angk pxy=\pi.
 \]
-Applying it with Alexandrov's lemma and $\CBB(0)$ comparison, we get the following claim and its corollary.
+Applying it with Alexandrov's lemma and $\CBB(0)$ comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
 If $p,x,y,z$ are points in a $\CBB(0)$ such that $p\in\left]x y\right[$, then 
@@ -165,6 +169,7 @@ Let $[xy]$ be a geodesic in a $\CBB(0)$ space.
 Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
 \end{thm}
 
+Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
 
 \begin{thm}{Exercise}\label{ex:adjacent-CBB}
 Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a $\CBB(0)$ space.
@@ -175,16 +180,15 @@ Show that
 
 \begin{thm}{Exercise}
 \label{ex:pxyvw}
-Let 
-$p,x,y$ in a $\CBB(0)$ space
-and $v,w\in \left]xy\right[$.
 Show that  
 \[
 \angk xyp=\angk xvp
 \quad\Longleftrightarrow\quad
-\angk xyp=\angk xwp.
+\angk xyp=\angk xwp
 \]
-
+if 
+$p,x,y,v,w$ are points in a $\CBB(0)$ space
+such that $v,w\in \left]xy\right[$.
 \end{thm}
 
 \section{Hinge comparison}
@@ -285,7 +289,7 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced Exercise} \label{ex:urysohn}
-Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condition: for any 3 points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
@@ -296,11 +300,11 @@ Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condi
 Consider the  model triangle $\trig{\tilde x}{\tilde y}{\tilde z}\z=\modtrig{}({x}{y}{z})_{\EE^2}$ in the Euclidean plane.
 The \index{natural map}\emph{natural map} $\trig{\tilde x}{\tilde y}{\tilde z}\z\to \trig{x}{y}{z}$ 
 sends a point $\tilde p\in[\tilde x\tilde y]\cup[\tilde y\tilde z]\cup[\tilde z\tilde x]$ to the corresponding point $p\in[ x y]\cup[y z]\cup[ z x]$;
-that is, if $\tilde p$ lies on $[\tilde y\tilde z]$,
+for instance, if $\tilde p$ lies on $[\tilde y\tilde z]$,
 then $p\in [y z]$ and $\dist{\tilde y}{\tilde p}{}=\dist{y}{p}{}$ (and therefore $\dist{\tilde z}{\tilde p}{}=\dist{z}{p}{}$).
  
 \begin{thm}{Definition}\label{def:k-thin-}
-A triangle $\trig{x}{y}{z}$ in the metric space $\spc{X}$ 
+A triangle $\trig{x}{y}{z}$ in a metric space
 is called \index{thin triangle}\emph{thin} (or \index{fat triangle}\emph{fat}) if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing (or respectively distance nondecreasing).
 
 \end{thm}
@@ -329,17 +333,20 @@ Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \parbf{Real-to-real functions.}
 Choose $\lambda\in \RR$.
 Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
-We say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} if $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
-
-Equivalently, \textit{$s$ is $\lambda$-concave if the function $h\:t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave}.
-Concavity can be defined via \index{Jensen inequality}\emph{Jensen inequality}; that is,
-\[h(s\cdot t_0+(1-s)\cdot t_1)\ge s\cdot h(t_0)+(1-s)\cdot h(t_1)\]
-for any $t_0,t_1\in \II$ and $s\in[0,1]$.
-It could be also defined via the existence of (local) upper \index{supporting function}\emph{support} at any point:
-\textit{for any $t_0\in \II$ there is a linear function $\ell$ that (locally) supports $h$ at $t_0$ from above;
-that is, $\ell(t_0)\z= h(t_0)$ and $\ell(t)\ge h(t)$ for any $t$ (in a neighborhood of $t_0$)}.
+The following statement are equivalent;
+if one (and therefore any) of them hold for $s$, then we say that $s$ is \emph{$\lambda$-concave}.
+\begin{itemize}
+\item We have inequality $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
+\item The function $t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave.
+\item The \index{Jensen inequality}\emph{Jensen inequality}
+\[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
+holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
+\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ that (locally) supports $s$ at $t_0$ from above;
+that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
+\end{itemize}
 
 The equivalence of these definitions is assumed to be known.
+
 We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
 
 \parbf{Functions on metric space.}
@@ -351,7 +358,7 @@ We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (b
 for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
-The following proposition is conceptual ---
+The following proposition is simple, but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
@@ -394,13 +401,18 @@ Hence the proposition follows.
 \section{Comments}
 
 All the discussed statements admit natural generalizations to $\CBB(\kappa)$ spaces.
-Most of the time the proof is the same with uglier formulas.
+The proof are nearly the same, but the formulas are getting more complicated.
+It is common practce in Alexandrov geometry to write proofs in $\CBB(0)$ case and 
+leave its generalization to $\CBB(\kappa)$ case as an exercise.
+Sometime theses exercises are nontrivial. 
 
 For example, the function comparison of $\CBB(-1)$ states that 
 $f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
 Similarly, the function comparison of $\CBB(1)$ states that for any point $p$, we have
 $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
-The meaning of these inequalities is the same --- distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$.
-The inequality $f''\le \phi$ means that for any point $p$ in the domain of definition and any $\eps>0$, there is a neighborhood $U\ni p$ such that $f''\le \phi(p)+\eps$ in $U$.
+The geometric meaning of these inequalities remains the same:
+\textit{distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$}.
+
+The inequality $f''\le \phi$ above means that for any point $p$ in the domain of definition and any $\eps>0$, there is a neighborhood $U\ni p$ such that $f''\le \phi(p)+\eps$ in $U$.
 Here we assume that $f$ and $\phi$ are continuous and defined in open set.

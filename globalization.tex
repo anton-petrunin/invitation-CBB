@@ -75,7 +75,7 @@ for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
 
 Consider a hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell.\]
-First, let us construct a new smaller hinge $\hinge{x'}p q$ with
+First, let us construct a new hinge $\hinge{x'}p q$ with
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
 \eqlbl{eq:thm:=def-loc-fourstar}\]
@@ -85,13 +85,12 @@ such that
 \eqlbl{eq:thm:=def-loc-fivestar}\]
 
 \parit{Construction.}
-Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise, switch the roles of $p$ and $q$ in the following construction.
+Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise, switch the roles of $p$ and $q$.
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
 Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
-Then \ref{eq:thm:=def-loc-fourstar} follows from the triangle inequality.
-
+The triangle inequality implies \ref{eq:thm:=def-loc-fourstar}.
 Further, note that 
 \begin{align*}
 \dist{p}{x}{}\z+\dist{x}{x'}{}&<\tfrac{2}{3}\cdot\ell,
@@ -109,7 +108,7 @@ In particular,
 {
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-820}
 \vskip-4mm
@@ -179,7 +178,7 @@ Together with the triangle inequality
 \]
 this yields
 \[\lim_{n\to\infty}\side \hinge{x_n}p q\ge \dist{p}{q}{}.\]
-Applying the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$, we obtain \ref{eq:thm:=def-loc*}.
+Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \ref{eq:thm:=def-loc*}.
 \qeds
 
 \section{On general curvature bound}
@@ -218,12 +217,32 @@ Conclude that $\spc{L}$ is isometric to a real interval or a circle.
 \end{thm}
 
 
-\section{Remarks} 
+\section{Remarks}
+
+The following question about \ref{angle-a} is a long-standing open problem (possibly dating back to Alexandrov);
+it was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov} but is much much older.
+
+\begin{thm}{Open question}\label{open:hinge-}
+Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
+such that for any hinge $\hinge x p y$ in $\spc{L}$, 
+the angle $\mangle\hinge x p y$ is defined and 
+\[\mangle\hinge x p y\ge\angk x p y.\]
+Is it true that $\spc{L}$ is $\Alex{0}$?
+\end{thm}
 
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
+Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
+Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 
-Recall that a metric space $\spc{X}$ is called \index{complete space}\emph{complete} if any Cauchy sequence of points in $\spc{X}$ converges.
-The compactness condition in our version of the theorem can be traded for completeness by using the following exercise.
+We took the proof from our book \cite{alexander-kapovitch-petrunin2024} and reduced generality.
+This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
+The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
+Another proof was obtained by
+Katsuhiro Shiohama \cite{shiohama}.
+
+The compactness condition in our version of the theorem can be traded for completeness.
+The proof uses the following statement where $r(x)$ measures the size of a neighborhood of $x$ where the comparison holds.
 
 \begin{thm}{Exercise}\label{ex:alm-min}
 Let $\spc{X}$ be a complete metric space.
@@ -234,45 +253,19 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 \end{thm}
 
-Let us mention two more general versions of the globalization theorem.
-
-Recall that a \index{length space}\emph{length space} is a metric space such that any two points $p$ and $q$ can be connected by a path with a length arbitrarily close to $|p-q|$.
-Note that any geodesic space is length, but not the other way around.
-The following theorem was already proved in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
+Let us mention more general versions of the globalization theorem.
+The first one was already proved in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
+The second one was proved by the second author \cite{petrunin:globalization}.
+Their assumptions overlap, but non of them include the other.
 
 \begin{thm}{Theorem}
 Any complete locally $\Alex\kappa$ length space is $\Alex\kappa$.
 
 \end{thm}
 
-The next result is mine \cite{petrunin:globalization}.
-
 \begin{thm}{Theorem}\label{ex:noncomplete-globalization}
 Any locally $\Alex\kappa$ geodesic space is $\Alex\kappa$.
 
-\end{thm}
-
-In the two-dimensional case,
-the globalization theorem was proved by Paolo Pizzetti \cite{pizzetti};
-later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
-Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
-
-I took the proof from our book \cite{alexander-kapovitch-petrunin-2025} (with generality reduction).
-It uses simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
-The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
-Another simplified version was obtained by
-Katsuhiro Shiohama \cite{shiohama}.
-
-The question of whether \ref{angle-a} suffices to conclude that $\spc{L}$ is $\Alex\kappa$ is a long-standing open problem (possibly dating back to Alexandrov);
-in print, it was first stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}.
-
-
-\begin{thm}{Open question}\label{open:hinge-}
-Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
-such that for any hinge $\hinge x p y$ in $\spc{L}$, 
-the angle $\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
-Is it true that $\spc{L}$ is $\Alex{0}$?
 \end{thm}
 
 
