@@ -1,29 +1,49 @@
-\chapter{Semiconcave functions}
+\chapter{First derivatives}
 
 \section{Space of directions} 
 \label{sec:space+directions}
 
-Let $\spc{X}$ be a space with defined angles.
-Given $p\in \spc{X}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
+By \ref{clm:angle-defined}, angle measure a hinge in a $\CBB(\kappa)$ space $\spc{L}$ is defined.
+Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a semimetric space.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{direction!space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{X}$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{direction!space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{L}$.
 The elements of $\Sigma'_p$ are called \index{geodesic direction}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
 \[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0;\]
 the direction of $[px]$ is denoted by $\dir px $.\index{$\dir{p}{q}$}
-(If $\spc{X}$ is $\CBB$, then by \ref{ex:0-angle}, $[px]\sim[py]$ if and only if $[px]\subset [py]$ or $[px]\supset[py]$.)
-
-
-The completion of $\Sigma'_p$ is called the \index{direction!space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{X}$.
+By \ref{ex:0-angle}, 
+\[[px]\sim[py]
+\quad\iff\quad
+[px]\subset [py]
+\quad\text{or}\quad
+[px]\supset[py].
+\]
+ 
+The completion of $\Sigma'_p$ is called the \index{direction!space of directions}\emph{space of directions} at $p$ and is denoted by $\Sigma_p$ or $\Sigma_p\spc{L}$.
 The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
+
+\begin{thm}{Exercise}\label{ex:dir-compact}
+Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
+Assume that a sequence of unit-speed geodesics $\gamma_n\:[0,1]\to \spc{L}$ converges pointwise to a geodesic $\gamma_\infty\:[0,1]\to \spc{L}$ and all the geodesics start at one point $p$.
+
+\begin{subthm}{ex:dir-compact:compact}
+Show that if $\Sigma_p$ is compact then $\gamma_n^+(0)\to \gamma_\infty^+(0)$ as $n\to\infty$.
+\end{subthm}
+
+\begin{subthm}{ex:dir-compact:}
+Give an example showing that without compactness, part \ref{SHORT.ex:dir-compact:compact} does not hold.
+\end{subthm}
+
+\end{thm}
+
 
 \section{Tangent space}\label{sec: tangent space}
 
-Recall that \index{cone}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$ 
+The \index{cone}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$ 
 over a metric space $\spc{X}$
 is defined as the metric space whose underlying set consists of
 equivalence classes in
@@ -36,25 +56,42 @@ and whose metric is given by the cosine rule
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
-Note that \textit{$\Cone\SSS^n$ is isometric to $\EE^{n+1}$.}
-This is a leading example;
-further, we generalize several notions of Euclidean space to the Euclidean cones. 
+Note that \textit{$\Cone\SSS^n$ is isometric to $\EE^{n+1}$} --- this is a leading example.
+Next, we need to generalize several notions from Euclidean space to the Euclidean cones. 
 
 The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin of a  cone}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
-For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the norm of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
+For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the \emph{norm} of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 The \index{scalar product}\emph{scalar product} $\<v,w\>$
 of $v=s\cdot p$ and $w=t\cdot q$
 is defined by 
 \[\<v,w\>
 \df |v|\cdot|w|\cdot\cos\theta
 \]
-where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$; we set $\<v,w\>\df0$ if $v=\0$ or $w=\0$.
+where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
+The value $\theta$ is undefined if $v=\0$ or $w=\0$;
+in this cases we assume that $\<v,w\>\df0$.
+
+\begin{thm}{Exercise}
+Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \emph{$\pi$-geodesic};
+that is any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can be joined by a geodesic in $\spc{X}$.
+\end{thm}
+
+Recall that according our definition the real line $\RR$ is a $\CBB(1)$ space.
+However most of geodesic $\CBB(1)$ spaces have diameter at most $\pi$;
+see \ref{ex:RisCBB(1)}.
+
+\begin{thm}{Exercise}
+Suppose $\spc{X}$ is a complete geodesic space.
+Show that $\Cone\spc{X}$ is $\CBB(0)$ if and only if $\spc{X}$ is $\CBB(1)$ and $\diam\spc{X}\le \pi$.
+\end{thm}
+
+
 
 \parbf{Tangent space.}
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{X}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{L}$ if we need to emphasise that $p$ is a point of space $\spc{L}$.
 The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
-(despite the fact that $\T_p$ is only a cone --- not a vector space).
+(despite that $\T_p$ is only a cone --- not a vector space).
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
 
 \begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
@@ -81,9 +118,10 @@ Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\
 \qeds
 
 
-\section{Semiconcave functions} 
+\section{Semiconcave functions}\label{sec:Semiconcave functions}
 
-Recall that $\lambda$-concave functions are defined in Section \ref{Function comparison}.
+The $\lambda$-concave functions were defined in Section \ref{Function comparison};
+recall that we assume that these functions are locally Lipschitz and defined in an open domain.
 
 Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of a $\CBB(0)$ space $\spc{L}$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
@@ -146,7 +184,7 @@ for any $v\in\T_p$.
 Suppose $\spc{L}$ is proper.
 Let $\Xi$ be the set of all direction of a geodesics from $q$ to $p$.
 Then
-\[\dd_p\distfun_q(v)=-\max_{xi\in\Xi}\langle\xi,v\rangle\]
+\[\dd_p\distfun_q(v)=-\max_{\xi\in\Xi}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
 \end{subthm}
 \end{thm}
@@ -155,7 +193,7 @@ for any $v\in\T_p$.
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition}\label{def:grad} 
-Let $f$ be a semiconcave function on a geodesic space $\spc{X}$ with defined angles.
+Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa$ space.
 A tangent vector $g\in \T_p$ is called a 
 \index{gradient}\emph{gradient} of $f$ at $p$ 
 (briefly,  $g\z=\nabla_p f$\index{$\nabla$}) if
@@ -167,6 +205,8 @@ $(\dd_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
 $(\dd_p f)(g) = \<g,g\>.$
 \end{subthm}
 \end{thm}
+
+The following exercise provides a key property of gradient field that will be important latter.
 
 \begin{thm}{Exercise}\label{ex:monotonicity}
 Let $f$ be a $\lambda$-concave function on a geodesci $\CBB(\kappa)$ space.
@@ -186,7 +226,7 @@ Suppose that a semiconcave function $f$ is defined in a neighborhood of a point 
 Then the gradient $\nabla_pf$ is uniquely defined.
 
 Moreover, if $\dd_pf\le 0$, then we have $\nabla_pf=0$;
-otherwise, $\nabla_pf=s\cdot \overline{\xi}$, where 
+otherwise, $\nabla_pf\z=s\cdot \overline{\xi}$, where 
 $s= \dd_pf(\overline{\xi})$
 and
 $\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\xi)$ for $\xi\in \Sigma_p$.
@@ -205,12 +245,27 @@ where
 
 \end{thm}
 
-Note that in Euclidean space we have
-\[|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.\]
-The right-hand side makes sense in any Euclidean cone,
-but the sum in the left-hand side does not.
+Note that if $\T_p\iso\EE^m$ and $\dd_p f$ is a concave function,
+then $2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v)$.
+The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
+In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not have much sense.
+The key lemma however says  that in certain sense $\dd_p f$ behaves as a concave function.
 
-\parit{Proof.}
+It is instructive to solve the following exercise before reading the proof of the key lemma.
+
+\begin{thm}{Exercise}\label{ex:first-var-CBB}
+Let $\hinge q p x$ be a hinge in  a $\CBB(0)$ space and $y\in \left]qp\right[$.
+Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
+Show that
+\[\dist{y}{\gamma(t)}{}
+=
+\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
+Conclude that 
+\[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
+for any $w\in \T_x$
+\end{thm}
+
+\parit{Proof of \ref{lem:ohta}.}
 We will assume $\kappa=0$;
 the general case requires only minor modifications.
 We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
@@ -224,7 +279,7 @@ We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, t
 \vskip0mm
 \end{wrapfigure}
 
-Prepare a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde q$, $\tilde w\in\EE^2$ such that
+Consider a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde q$, $\tilde w\in\EE^2$ such that
 \begin{itemize}
 \item $\mangle\hinge{\tilde p}{\tilde u}{\tilde v}=\alpha$, 
 \item $\dist{\tilde p}{\tilde u}{}=|u|$, 
@@ -240,11 +295,10 @@ Note that
 =
 \tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\eqlbl{eq:|p-w|=}\]
 
-We can assume that there are geodesics in the directions of $u$ and $v$;
-the latter follows since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$.
-Choose geodesics $\gamma_u$ and $\gamma_v$ in the direction in the directions of $u$ and $v$;
-let us assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
-For all small $t>0$, construct points $u_t,v_t,q_t,w_t\in \spc{L}$ as follows.
+Since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$,
+we can assume that there are geodesics in the directions of $u$ and $v$.
+Choose such geodesics $\gamma_u$ and $\gamma_v$ and assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
+For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{L}$ such that
 \begin{itemize}
 \item $v_t=\gamma_v(t)$,\quad  $q_t=\gamma_v(2\cdot t)$
 \item $u_t=\gamma_u(t)$.
@@ -302,18 +356,6 @@ Applying $\lambda$-concavity of $f$, we have
 \end{align*}
 By \ref{eq:|p-w|=}, the key lemma follows.
 \qeds
-
-\begin{thm}{Exercise}\label{ex:first-var-CBB}
-Let $\hinge q p x$ be a hinge in  a $\CBB(0)$ space and $y\in \left]qp\right[$.
-Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
-Show that
-\[\dist{y}{\gamma(t)}{}
-=
-\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
-Conclude that 
-\[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
-for any $w\in \T_x$
-\end{thm}
 
 \parit{Proof of \ref{prop:grad-exist}; uniqueness.} 
 If $g,g'\in \T_p$ are two gradients of $f$,

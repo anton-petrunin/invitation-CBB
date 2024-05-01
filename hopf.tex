@@ -90,6 +90,12 @@ Define \emph{rank} of $\spc{L}$ (briefly, $\rank\spc{L}$) as the minimal value $
 where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
 
 In the following proof we will apply induction on the rank of space.
+Before reading this proof, it is instructive to solve the following exercise.
+
+\begin{thm}{Exercise}
+Construct two plane subsets $K_1$ and $K_2$ such that $K_1\ncong K_2$,
+but $\RR\times K_1\cong \RR\times K_2$.
+\end{thm}
 
 \parit{Proof.}
 The first statement follows from .
@@ -154,11 +160,6 @@ Show that boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ spac
 \end{thm}
 
 \begin{thm}{Exercise}
-Construct two plane subsets $K_1$ and $K_2$ such that $K_1\ncong K_2$,
-but $\RR\times K_1\cong \RR\times K_2$.
-\end{thm}
-
-\begin{thm}{Exercise}
 Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional geodesic $\CBB(\kappa)$ spaces; $m$ is finite.
 Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
 Show that $f$ is an embedding.
@@ -181,19 +182,36 @@ For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we 
 \partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
 \end{thm}
 
-\parit{Proof}
-Given $x\in\spc{L}$ choose a geodesic path $\gamma$ from $p$ to $x$
-and let $\log_px=\gamma^+(0)$.
-This way we defined a map $\log_p\:\spc{L}\to \T_p$.
+\parit{Proof.}
+Choose a sequence $x_n\to p$.
+Suppose $\dir{p}{x_n}\to\xi$ as $n\to\infty$.
+
+We can assume that $x_n\ne p$ for any $n$.
+Let $\spc{L}_n\df \tfrac1{\dist{p}{x_n}{}}\cdot\spc{L}$.
+Let us keep the same notation $x_n$ for the corresponding point in $\spc{L}_n$;
+denote by $p_n\in \spc{L}_n$ the point that corresponds to $p$ in  $\spc{L}_n$.
+Note that all spaces $\T_{p_n}\spc{L_n}$ can be identified with $\T_p\spc{L}$.
+
+Given $y_n\in \spc{L}_n$ choose a geodesic path $\gamma$ from $p_n$ to $y_n$
+and let $\log_{p_n}y_n=\gamma^+(0)$.
+This way we defined a map $\log_{p_n}\:\spc{L}_n\to \T_p$.
+Observe that $\log_{p_n}$ are a Hausdorff approximations for the Gromov--Hausdorff convergence 
+$(\spc{L}_n,p_n)\GHto \T_p$.
+Moreover $\log_{p_n}x_n\to \xi$ as $n\to \infty$.
+
+The stability theorem implies that $\log_{p_n}$ can be approximated by homeomorphisms $h_n$.
+More precisely, there is a sequence of maps $h_n\:\spc{L}_n\to \T_p$
+that defined an open embedding of open ball $\oBall(p,r)$ for any fixed $r>0$ and all large $n$
+and for any $r>0$ we have $\sup_{\dist{p_n}{y_n}{\spc{L}_n}<r}\{\dist{\log_{p_n}y_n}{h_n(y_n)}\to 0$ as $n\to\infty$.
+
+Suppose $x_n\in \partial\spc{L}_n$.
+By \ref{ex:bry2bry}, $h_n(x_n)\in\partial \T_p$.
+Since in $\T_p$
 
 Recall that $\lambda\cdot \spc{L}\GHto \T_p$; see ???.
 Moreover, the map $f_\lambda\:x\mapsto \lambda\cdot\log_px$ defines Hausdorff approximations $\lambda\cdot \spc{L}\GHto \T_p$.
 
-The stability theorem implies that $f_\lambda$ can be approximated by homeomorphisms.
-More precisely, there is a family of maps $h_\lambda\:\lambda\spc{L}\to \T_p$
-that defined an open embedding of open ball $\oBall(p,r)$ for any fixed $r>0$ and all large $\lambda$
-and such that $\sup_{???}\dist{f_\lambda(x)}{h_\lambda(x)}\to 0$ as $\lambda\to\infty$.
-By \ref{ex:bry2bry}, $h_\lambda(\partial \spc{L}\cap \oBall(p,r))\subset \partial\T_p$. 
+ 
 
 Choose a sequence $x_n\to p$;
 let $\lambda_n=\tfrac1{\dist{p}{x_n}{}}$.
@@ -205,11 +223,20 @@ Note that $\lambda_n\cdot [p x_n]\subset \lambda\spc{L}$ converge to a ge
 
 \qeds
 
-\section{Geometry}
+\section{Doubling}
 
-\begin{thm}{Theorem}\label{thm:partial-grad}
+Let $A$ be a closed subset $A$ in a metric space $\spc{X}$.
+The doubling $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
+more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and it has minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
+
+The metric on $\spc{W}$ can be defined explicitly by
+\[\dist{(x,0)}{(y,1)}{\spc{W}}=\inf\set{\dist{x}{a}{\spc{X}}+\dist{y}{a}{\spc{X}}}{a\in A}.\]
+
+The last part of the following statement includes the so-called doubling theorem.
+
+\begin{thm}{Theorem}\label{thm:doubling}
 Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space with nonempty boundary.
-Suppose $p\in \spc{L}$ and $f\z=\tfrac12\cdot\distfun_p^2$.
+Suppose $f\z=\tfrac12\cdot\distfun_p^2$.
 Then
 
 \begin{subthm}{thm:partial-grad:grad}
@@ -220,14 +247,33 @@ $\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{L}$.
 If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{L}$, then $\alpha(t)\in \partial \spc{L}$ for any $t$.
 \end{subthm}
 
+\begin{subthm}{thm:doubling:concave}
+$\distfun_{\partial \spc{L}}$ is a concave function, and
+\end{subthm}
+
+\begin{subthm}{thm:doubling:doubling}
+the doubling $\hat{\spc{L}}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(0)$ space.
+\end{subthm}
+
 \end{thm}
+
+The proof will be given by induction on the dimension of the space.
+
 
 \parit{Proof;} \ref{SHORT.thm:partial-grad:grad}.
 We can assume that $s=\nabla_xf\ne 0$.
-By ???, $\nabla_xf\ne 0=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximize $\dd_xf(\overline{\xi})$.
+By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximize $\dd_xf(\overline{\xi})$.
 
 Let $\zeta\in \partial\Sigma_x$ be a direction that nimimize the angle $\mangle(\overline{\xi},\zeta)$.
 It is sufficient to show that $\zeta=\overline{\xi}$.
+
+Assume $\zeta\ne \overline{\xi}$.
+Since $\mangle(\overline{\xi},\zeta)=\dist{\overline{\xi}}{\zeta}{\Sigma_x}$
+is minimal, we have
+$\mangle(\dir{\xi}{\overline{\xi}}},\theta)\ge \tfrac\pi2$
+for any $\theta\in\partial(\Sigma_\xi\Sigma_x)$.
+By 
+
  
 Consider function $\phi\:\Sigma_x\to\RR$ defined by $\phi(\xi)\df\dd_xf(\xi)$.
 By ??? $\mangle \hinge{\zeta}{\overline{\xi}}{\xi}_{\Sigma_x}\le \tfrac\pi 2$ for any $\xi\in\Sigma_x$.
