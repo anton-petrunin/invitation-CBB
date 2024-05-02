@@ -52,7 +52,7 @@ Applying  \ref{eq:angles-M-L},
 we get 
 \[\angk p{x_1}{x_2}
 +\angk p{x_2}{x_3}
-+\angk p{x_3}{x_1}< 2\cdot\pi;\]
++\angk p{x_3}{x_1}\le 2\cdot\pi;\]
 that is,
 the $\Alex0$ comparison holds for any quadruple in $\spc{L}/G$.
 \qeds
@@ -86,7 +86,7 @@ $\sigma_2\:\mathbb{S}^2\to[0,\tfrac\pi2]$
 \begin{subthm}{}
 $\sigma_n\:\mathbb{S}^2\to[0,\tfrac\pi n]$ (for integer $n\ge 1$)
 \end{subthm}
-such that the fibers $\sigma_n^{-1}\{x\}$ are connected and have an empty interior for any $x$.
+such that the fibers $\sigma_n^{-1}\{x\}$ are connected for any $x$.
 \end{thm}
 
 \begin{thm}{Exercise}
@@ -107,33 +107,30 @@ In the $\CBB(1)$ case, the proof produces a slightly weaker statement ---  \text
 in particular, the quotient space is \textit{locally} $\CBB(1)$.
 If the space is geodesic, then the globalization theorem implies that it is globally  $\CBB(1)$.
 The same holds for the targets of submetry from a  $\CBB(1)$ space.
-In other words, if $\spc{L}$ is a geodesic space, then analogs of \ref{thm:CBB/G} and \ref{thm:submetry-CBB} hold for $\CBB(\kappa)$ spaces with arbitrary $\kappa$.
+In other words, we have the following two statements.
+
+\begin{thm}{Theorem}\label{thm:submetry-CBB-1}
+Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
+Suppose $\spc{L}$ is $\Alex{-1}$ space, then so is $\spc{M}$.
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:submetry-CBB1}
+Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
+Suppose $\spc{L}$ is a geodesic $\Alex{1}$ space, then so is $\spc{M}$.
+\end{thm}
 
 \section{Hopf's conjecture}
 
-Recall that Hopf's conjecture states that \textit{$\mathbb{S}^2\times\mathbb{S}^2$ does not admit a Riemannian metric with positive sectional curvature}.
+Recall that Hopf's conjecture asks \textit{does $\mathbb{S}^2\times\mathbb{S}^2$ admit a Riemannian metric with positive sectional curvature?}
 The following partial result was obtained by Wu-Yi Hsiang and Bruce Kleiner \cite{hsiang-kleiner}.
 
 \begin{thm}{Theorem}\label{thm:hsiang-kleiner}
 There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and a nontrivial isometric $\SSS^1$-action.
 \end{thm}
 
-We will give a ruf sketch that will use many statements and notions that are not yet introduced.
-Nevertheless, it should be possible to follow the proof with an intuitive understanding of the notions (boundary and dimension of a quotient space).
-The statements include 
-\begin{itemize}
-\item The \emph{Toponogov comparison theorem} and the \emph{globalization theorem}.
-The former says  that \textit{a complete Riemannian manifold has sectional curvature $\ge \kappa$ if and only if the corresponding metric space is $\CBB(\kappa)$}.
-The later says that \textit{a complete geodesic locally $\CBB(\kappa)$ space is $\CBB(\kappa)$}.
-\item \emph{Doubling theorem:} \textit{Doubling of a finite-dimensional geodesic $\CBB(\kappa)$ space is a geodesic $\CBB(\kappa)$ space}
-\item \emph{Splitting theorem:} \textit{A geodesic $\CBB(0)$ space that contains a line splits isometrically as $\RR\times \spc{X}$};
-here the \emph{line} is a both-sided infinite geodesic.
-\end{itemize}
+We will use the following exercise.
 
-In addition, we will use the following exercise that will be proved latter:
-
-
-\begin{thm}{Exercise}\label{ex:S^3/S^1}
+\begin{thm}{Advanced exercise}\label{ex:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points 
 and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
 Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with a factor $\tfrac12$.
@@ -221,11 +218,10 @@ A point $p$ in a $\CBB(\kappa)$ space is called \emph{extremal} if $\mangle\hing
 
 \begin{thm}{Theorem}\label{thm:extr-point}
 Let $\spc{L}$ be a compact $m$-dimensional $\CBB(0)$ space.
-Then it has at most $2^m$ one-point extremal sets.
+Then it has at most $2^m$ extremal points.
 \end{thm}
 
-
-The proof is a translation of the proof of a classical problem in discrete geometry to Alexandrov's language.
+The proof is a translation of the proof of the following classical problem in discrete geometry to Alexandrov's language.
 
 \begin{thm}{Erd\H{o}s' problem}
 Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
@@ -235,8 +231,6 @@ Moreover, if $|F|=2^m$ then $F$ consists of the vertexes of an $m$-dimensional r
 
 This problem was posed by Paul Erd\H{o}s  \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
 Grigori Perelman noticed that after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; so it proves \ref{thm:extr-point}.
-We will use the notion of volume;
-it is not defined so far and should be understood intuitively.
 
 \parit{Proof of \ref{thm:extr-point}.}
 Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{L}$.
@@ -260,17 +254,15 @@ then threre is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
 Then from comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ does not form a one-point extremal set.
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{L}$
-for any $0<\alpha<\tfrac12$ and hence 
-\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{L}\]
-and hence 
-\[N\le 2^m.\]
+for any $0<\alpha<\tfrac12$; hence 
+\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{L}\quad\text{and}\quad N\le 2^m.\]
 \qedsf
 
 \section{Crystallographic actions}
 
 
 An isometric action $\Gamma\acts \EE^m$ is called \emph{crystallographic} if it is 
-\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\in \EE^m$ there only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
+\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $H$ is a finite group $H$ such that $F<H<\Gamma$, then $F=H$.
@@ -283,12 +275,15 @@ Is it true that $\#(\Gamma)\le 2^m$?
 
 Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
 If $F$ is maximal, then $A_F$ completely describes $F$.
+Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ has to be finite.
+This subgroup must contain $F$, but since $F$ is maximal, it must coinside with $F$. 
+
 Denote by $\#_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
 
 Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F \cdot g^{-1}$.
 Note that $A_{F'}=g\cdot A_F$.
 In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{L}=\EE^m/\Gamma$.
-It follows that to count subgroups up to conjugation, we need to count the images of their fixed set.
+Therefore, to count subgroups up to conjugation, we need to count the images of their fixed set.
 Therefore, by the lemma below, $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{L}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
@@ -323,7 +318,7 @@ But $p$ is an isolated fixed point of $F$ --- a contradiction.
 
 \begin{thm}{Exercise}\label{ex:number(m-1)}
 Let $\Gamma\acts \EE^m$ be a crystallographic action.
-Apply the theorems used in \ref{thm:hsiang-kleiner} to show that
+Show that
 \begin{subthm}{ex:number(m-1):2}
 $\#_{m-1}(\Gamma)\le 2$, and
 \end{subthm}
@@ -361,7 +356,7 @@ Any $m$-dimensional compact geodesic $\CBB(0)$ space has at most $2^m$ primitive
 \end{thm}
 
 A closed subset $E$ in a $\CBB(\kappa)$ space is called 
-\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
+\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
 An extremal subset is called primitive if it contains no proper \emph{extremal} subsets.
 For example, the whole space and empty set are aslo extremal in any space.
 Also every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
