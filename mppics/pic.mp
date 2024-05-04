@@ -1625,6 +1625,74 @@ label.ulft(btex $\gamma$ etex, .8[z.a,z.b]);
 label.rt(btex $p$ etex, z.p);
 endfig;
 
+beginfig(1402)
+save u,p;
+path p[];
+u:=.7cm;
+
+z0=(-1.5,.5)*u;
+z1=(0,-.2)*u;
+z2=(0,1.2)*u;
+z3=(1.3,.5)*u;
+z4=(2.3,-.7)*u;
+z5=(2.3,1.7)*u;
+z6=(3.6,.5)*u;
+
+z.shift=(7.5,0)*u;
+
+
+p0=circle(z0,1*u);
+p1=circle(z1,1*u);
+p2=circle(z2,1*u);
+p3=circle(z3,1*u);
+p4=circle(z4,1*u);
+p5=circle(z5,1*u);
+p6=circle(z6,1*u);
+
+draw p0;
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+draw p6;
+
+hatchfill p0 withcolor (30, 1mm, -.5bp);
+hatchfill p1 withcolor (100, 1mm, -.5bp);
+hatchfill p2 withcolor (-30, 1mm, -.5bp);
+hatchfill p3 withcolor (30, 1mm, -.5bp);
+hatchfill p4 withcolor (100, 1mm, -.5bp);
+hatchfill p5 withcolor (-30, 1mm, -.5bp);
+hatchfill p6 withcolor (30, 1mm, -.5bp);
+
+hatchfill  (z1--z2--z0--cycle) shifted z.shift withcolor (30, 1mm, -.5bp);
+hatchfill  (z1--z2--z3--cycle) shifted z.shift withcolor (-100, 1mm, -.5bp);
+
+draw (z1--z2--z0--z1--z3--z4--z6--z5--z3--z2) shifted z.shift;
+
+dOt z0+z.shift,z1+z.shift,z2+z.shift,z3+z.shift,z4+z.shift,z5+z.shift,z6+z.shift;
+
+whitelabel (btex $\Omega_1$ etex, z0);
+whitelabel.bot (btex $\Omega_2$ etex, z1);
+whitelabel.top (btex $\Omega_3$ etex, z2);
+whitelabel (btex $\Omega_4$ etex, z3);
+whitelabel (btex $\Omega_5$ etex, z4);
+whitelabel (btex $\Omega_6$ etex, z5);
+whitelabel (btex $\Omega_7$ etex, z6);
+
+label.lft (btex $v_1$ etex, z0+z.shift);
+label.bot (btex $v_2$ etex, z1+z.shift);
+label.top (btex $v_3$ etex, z2+z.shift);
+label.rt (btex $v_4$ etex, z3+z.shift+(1,0));
+label.bot (btex $v_5$ etex, z4+z.shift);
+label.top (btex $v_6$ etex, z5+z.shift);
+label.rt (btex $v_7$ etex, z6+z.shift);
+
+label.bot (btex covering etex, (1.6,-1.7)*u);
+label.bot (btex nerve etex, (1.6,-1.7)*u+z.shift);
+endfig;
+
+
 beginfig(3005) 
 save u,p;
 path p[];

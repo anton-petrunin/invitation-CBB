@@ -4,12 +4,12 @@
 
 While $\CBB$ spaces have plenty of semiconcave functions (for example $\distfun_p^2$), 
 it is not at all easy to construct a strictly concave one. 
-The following construction was given by Perelman \cite{perelman1993,perelman1994}.
+The following construction was found by Grigori Perelman \cite{perelman1993,perelman1994}.
 
 
 \begin{thm}{Theorem}
 \label{thm:strictly-concave}
-Let $\spc{L}$ be a complete finite-dimensional geodesic $\Alex{0}$ space.
+Let $\spc{L}$ be a complete finite-dimensional geodesic $\Alex{\kappa}$ space.
 Then for any point $p\in \spc{L}$, there is  a strictly concave function $f$ defined in an
 open neighborhood of $p$.
 
@@ -68,10 +68,16 @@ and $f|_{\partial\Omega}=0$.
 
 \section{Liftings}
 
-Suppose that $\dist{\spc{L}}{\spc{L}'}{\GH}<\eps$, so we may think that both spaces $\spc{L}$ and $\spc{L}'$ lie on Haudorff distance $<\eps$ in an ambient metric space $\spc{W}$.
-In particular, for any point $p\in \spc{L}$, we can choose a point $p'\in \spc{L}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
-the point $p'$ will be called a \emph{lifting} of $p$ in $\spc{L}'$.
-Note that the lifting is not uniquely defined, and it depends on many things: the choice of $\spc{W}$ and the choice of inclusions $\spc{L},\spc{L}'\hookrightarrow\spc{W}$.
+Suppose that the Gromov--Haudorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficienlty small, so we may think that both spaces $\spc{L}$ and $\spc{L}'$ lie on small Haudorff distance in an ambient metric space $\spc{W}$.
+In particular, for any point $p\in \spc{L}$, we can choose a point $p'\in \spc{L}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$ for small $\eps>0$;
+the point $p'$ will be called an \emph{lifting} (or \emph{$\eps$-lifting}) of $p$ in $\spc{L}'$.
+We may choose a lifting $p'\in\spc{L}'$ for every point $p\in\spc{L}$, 
+in this case the map $p\mapsto p'$ is called a \emph{($\eps$-)lifting map}.
+
+Note that the lifting is not uniquely defined.
+The lifting maps is not assumed to be continuous.
+When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{L},\spc{L}'\hookrightarrow\spc{W}$,
+as well as $\spc{W}$ are chosen.
 
 
 Choose a compact geodesic $m$-dimensional $\CBB(\kappa)$ space $\spc{L}$.
@@ -81,52 +87,101 @@ can be repeated in $\spc{L}'$ for the liftings of all points and the same functi
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
 The result of this and related constructions will be called \emph{liftings},
-say we can talk about a lifting of a strictly concave function constructed in the proof of \ref{thm:strictly-concave} and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
-(Note that here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction.)
+say we can talk about a lifting from $\spc{L}$ to $\spc{L}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is small, then these liftings are stricly concave)
+and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
+Here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction, but it is straightforward.
+
+\section{Nerves}
+
+Let $\{\Omega_1,\dots,\Omega_k\}$ be a finite open cover of a compact metric space $\spc{X}$.
+Consider an abstract simplicial complex $\spc{N}$, with one vertex $v_i$ for each set $\Omega_i$ such that a simplex with vertices $v_{i_1},\dots, v_{i_m}$ is included in $\spc{N}$ if 
+the intersection $\Omega_{i_1}\cap\dots\cap \Omega_{i_m}$ is nonempty.
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1402}
+\end{figure}
+The obtained simplicial complex $\spc{N}$ is called the \index{nerve}\emph{nerve} of the covering $\{\Omega_i\}$.
+Evidently $\spc{N}$ is a finite simplicial complex ---
+it is a subcomplex of a simplex with the vertices $\{v_1,\dots,v_k\}$.
+Recall that $\Star_{v_i}$ denotes the union of all simplexes in $\spc{N}$ that shares vertex $v_i$.
+
+The next statement follows from \cite[4G.3]{hatcher}.
 
 
-\section{Finiteness of homotopy types}
+\begin{thm}{Nerve theorem}
+Let $\{\Omega_1,\dots,\Omega_k\}$ be an open cover of a compact metric space $\spc{X}$
+and let $\spc{N}$ be the corresponging nerve with vertices $\{v_1,\dots,v_k\}$.
+Suppose that every nonempty finite intersection $\Omega_{\alpha_1}\cap\z\dots\cap\Omega_{\alpha_k}$ is contractible.
+Then $\spc{X}$ is homotopy equivalent to the nerve $\spc{N}$ of the cover.
+
+Moreover homotopy equivalences  $a\:\spc{X}\to \spc{N}$ and $b\:\spc{N}\to\spc{X}$ can be chosen so that 
+if $x\in \Omega_i$, then $a(x)\in \Star_{v_i}$,
+and if $y\in\spc{N}$ lies in the simplex with vertices $v_{i_1},\dots, v_{i_m}$, then $b(y)\in \Omega_{i_1}\cup\dots\cup \Omega_{i_m}$.
+\end{thm}
+
+%???Вить, посмотри на это утверждение --- оно мне не сильно нравится.
+
+
+\section{Homotopy stability}
+
+\begin{thm}{Theorem}\label{thm:h-stability}
+Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces and $m<\infty$.
+Suppose $\spc{L}_n\GHto \spc{L}_\infty$ as $n\to \infty$.
+Then there is a $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $n$.
+
+Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
+\end{thm}
+
+Applying this theorem with the Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:pack-vol}, we get the following.
+
 
 \begin{thm}{Theorem}\label{thm:h-finiteness}
 There are only finitely many homotopy types of $m$-dimensional $\CBB(\kappa)$ spaces with diameter $\le D$ and volume $\ge v_0$;
-here we assume that $m$ is an integer, and $v_0>0$.
+here we assume that an integer $m$, and $v_0,D\in\RR$ such that $v_0>0$ are given.
 \end{thm}
 
-Recall that nerve is defined in Section~\ref{sec:dim-CAT}.
-Further, we will use the following theorem,
-a proof is given in \cite[4G.3]{hatcher}.
-
-\begin{thm}{Nerve theorem}
-If $\{\Omega_\alpha\}$ is an open cover of a paracompact space $\spc{X}$ such that every
-nonempty finite intersection $\Omega_{\alpha_1}\cap\dots\cap\Omega_{\alpha_k}$ is contractible, then $\spc{X}$ is homotopy equivalent to the nerve of the cover.
-\end{thm}
-
-
-\parit{Sketch of \ref{thm:h-finiteness}.}
+\parit{Proof of \ref{thm:h-finiteness} modulo \ref{thm:h-stability}.}
 Assume the contrary, then we can choose a sequence of spaces $\spc{L}_1,\spc{L}_2,\dots$ that have different homotopy types and satisfy the assumptions of the theorem.
 By Gromov's compactness theorem, we can assume that $\spc{L}_n$ converges to say $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
 
-
 By \ref{ex:pack-vol}, $\LinDim \spc{L}_\infty=m$.
-Since $\spc{L}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find an open cover of $\spc{L}_\infty$  by convex open sets $\Omega_1,\dots, \Omega_k$ such that 
+It remains to apply \ref{thm:h-stability}.
+\qeds
+
+\parit{Proof of \ref{thm:h-stability}.}
+Since $\spc{L}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find a finite open cover of $\spc{L}_\infty$ by convex open sets $\Omega_1,\dots, \Omega_k$ such that 
 for each $\Omega_i$ there is a strictly concave function $f_i$ that is defined in a neighborhood of $\bar \Omega_i$ and such that $f_i|_{\partial \Omega_i}=0$.
+
+Subtracting from functions $f_i$ some small value $\eps>0$,
+we can ensure that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bigcap_{i\in S}\bar\Omega_{i}\ne \emptyset$.
 
 Suppose that $W=\bigcap_{i\in S}\Omega_{i}\ne \emptyset$.
 Then $W$ is contractible.
 Indeed the function 
 \[f_S\df\min_{i\in S} f_i\]
 is strictly concave and it vanished on the boundary of $W$.
-Therefore gradient flow for $f_S$ defines a homotopy of $W$ to the (necessarily unique) maximum point of $f_S$.
-That is, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem.
+The $f_S$-gradient flow $(t,x)\mapsto \GF_{f_S}^t(x)$ defines a homotopy
+$[0,\infty)\times W\to W$.
+Note that $\GF_{f_S}^t(x)$ converges to the (necessarily unique) maximum point of $f_S$ as $t\to\infty$.
+Therefore, in the obtained homotoly we can parametrize $[0,\infty)$ by $[0,1)$ and extend the homotopy by continiously to $[0,1]$;
+this way we get that $W$ is contractible.
+In other words, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem.
 Therefore $\spc{L}_\infty$ is homotopy equivalent to the nerve $\spc{N}$ of the cover.
 
 The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{L}_n$ keeping its properties for all large $n$. 
 More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{L}_n$ which are strictly concave for all large $n$ and such that $\bar\Omega_{i,n}=\set{x\in \spc{L}_n}{f_{i,n}(x)\ge 0}$ is a compact convex set and $\Omega_{i,n}\z=\set{x\in \spc{L}_n}{f_{i,n}(x)> 0}$ is an open convex set for each $i$.
 
-It is not hard to check that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{L}_n$ for all large $n$.
-Moreover, if $n$ is large, then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{L}_n$ 
+Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{L}_n$ for all large $n$.
+Indeed suppose we have $p_n\in \spc{L}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrary large $n$.
+Since $\spc{L}_\infty$ is compact, there is a limit point $p_\infty\in \spc{L}_\infty$ for a subsequnce of $p_n$.
+But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrary large $n$ --- a contradiction.
+
+In a similar fashion, we can show that if $n$ is large, then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{L}_n$ 
 if and only if $\{\Omega_{i}\}_{i\in S}$ has a common point in $\spc{L}_\infty$.
-It follows that for any large $n$ the following two covers are the same nerve
+Here we have to use that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bigcap_{i\in S}\bar\Omega_{i}\ne \emptyset$.
+
+It follows that for any large $n$ the following two covers the same nerve
 \begin{itemize}
 \item $\{\Omega_{1},\dots,\Omega_{k}\}$ of $\spc{L}_\infty$ and 
 \item $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ of $\spc{L}_n$.
@@ -136,8 +191,6 @@ Therefore, $\spc{L}_n$ is homotopy equivalent to $\spc{N}$ for all large $n$ ---
 
 
 \section{Comments}
-
-All the results in this lecture can be generalized to $\CBB(\kappa)$ spaces for any $\kappa$.
 
 Let us list some results that can be proved by applying Gromov's selection theorem
 in the same fashion as in the proof of homotopy-type finiteness theorem (\ref{thm:h-finiteness}).
@@ -159,15 +212,21 @@ for any closed $m$-dimensional Riemannian manifold $M$ with curvature $\ge \kapp
 Here $\Sc$ denotes the scalar curvature.
 \end{thm}
 
-The following theorem will play an important role in the following lecture.
+The following theorem is a more exact version of \ref{thm:h-stability}.
+It will play an important role in the following lecture.
 
 \begin{thm}{Stability theorem}\label{thm:stability}
-Let $\spc{R}_1,\spc{R}_2,\dots $ be a sequence of $m$-dimensional Riemannian manifolds with sectional curvature at least $\kappa$.
-Suppose it converges to an $m$-dimensional $\CBB(\kappa)$ space $\spc{L}$.
-Then there are Hausdorff approximations $h_n\:\spc{L}\to \spc{R}_n$ such that for any $p\in\spc{L}$ and $r>0$, the restrictions of $h_n|_{\oBall(p,r)_{\spc{L}}}$ is an homeomorphism to its image for all sufficiently large $n$.  
+Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces and $m<\infty$.
+Suppose $\spc{L}_n\GHto \spc{L}_\infty$ as $n\to \infty$.
+Then there is a $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $n$.
 
-In particular, if $\spc{L}$ is compact then it is homeomorphic to $\spc{R}_n$ for all  sufficiently large $n$.
+Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homeomorphisms and $\eps$-liftings for all large $n$.
 \end{thm}
+
+This theorem was proved by Grigori Perelman \cite{perelman1991};
+the proof was rewritten with more details by the first author \cite{kapovitch}.
+Around the same time, he made informal annoncemnt that the homeomorphisms in the theorem can be made bi-Lipschitz with constants that depend on $\spc{L}_\infty$;
+but the proof was not written and it save to consider it as a conjecture.
 
 The last statement in the theorem implies the following finiteness result.
 
@@ -176,3 +235,5 @@ There are only finitely many homeomorphism types of closed $m$-dimensional manif
 \end{thm}
 
 In fact, this theorem implies diffeomorphism-type finiteness in all dimensions except 4.
+
+

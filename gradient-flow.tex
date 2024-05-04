@@ -2,7 +2,7 @@
 
 \section{Velocity of curve}
 
-Let $\alpha$ be a curve in a geodesic $\Alex\kappa$ space $\spc{L}$;
+Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$;
 choose $p=\alpha(t_0)$.
 If for any choice of geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
@@ -11,7 +11,7 @@ In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
-Let $\alpha$ be a curve in a geodesic $\Alex\kappa$ space $\spc{L}$.
+Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$.
 Suppose $f$ a semiconcave Lipschitz function
 defined in a neighborhood of $p\z=\alpha(0)$,
 and $\alpha^+(0)$ is defined.
@@ -24,7 +24,6 @@ Then
 \parit{Proof.}
 Without loss of generality, we can assume that $f(p)=0$.
 Suppose $f$ and therefore $\dd_pf$ are $L$-Lipschitz.
-Further, we will always assume that $\eps>0$.
 
 Choose a constant-speed geodesic $\gamma$ that starts from $p$,
 such that the distance
@@ -35,7 +34,8 @@ Observe that by the definition of differential,
 
 By comparison and the definition of $\alpha^+$,
 \[\dist{\alpha(\eps)}{\gamma(\eps)}{\spc{L}}\le s\cdot\eps+o(\eps)\]
-Therefore
+for $\eps>0$.
+Therefore,
 \[|f\circ\alpha(\eps)-f\circ\gamma(\eps)|\le L\cdot s\cdot\eps+o(\eps).\]
 
 Suppose $(f\circ\alpha)^+(0)$ is defined.
@@ -46,15 +46,16 @@ Since $\dd_pf$ is $L$-Lipschitz, we also get
 It follows that the needed identity holds up to error $2\cdot L\cdot s$.
 The statement follows since $s>0$ can be chosen arbitrarily.
 
-Finally, even if $(f\circ\alpha)^+(0)$ is undefined, we can arrive to the same conclusion
-using all partial limits $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ for $\eps_n\to 0+$ in the place of $(f\circ\alpha)^+(0)$.
+The same argument is applicable if in the place of $(f\circ\alpha)^+(0)$
+we use any limit of $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ as $\eps_n\to 0+$.
+It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is defined and equals to $(\dd_pf)(\alpha^+(0))$.
 \qeds
 
 
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on a complete geodesic $\Alex\kappa$ space
+Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on a complete geodesic $\CBB(\kappa)$ space
 $\spc{L}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient curve}\emph{$f$-gradient curve} if
@@ -64,7 +65,7 @@ $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
 A complete proof of the following theorem takes about 5 pages \cite{alexander-kapovitch-petrunin2024}; 
-it mimics the standard Picard theorem on the existence and uniqueness of solutions of ordinary differential equations.
+it mimics the proof of the standard Picard theorem on the existence and uniqueness of solutions of ordinary differential equations.
 We omit the proof of existence;
 the uniqueness will be proved in the next section.
 
@@ -74,7 +75,7 @@ Let $f\:\spc{L}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function
 Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ with $\alpha(0)=p$ such that any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
-Note that the theorem only says that the future of a gradient curve is determined by its present, but it says nothing about its past.
+Note that the theorem says that the future of a gradient curve is determined by its present, but it says nothing about its past.
 
 Here is an example showing that the past is not determined by the present.
 Consider the function $f\:x\mapsto -|x|$ on the real line $\RR$.
@@ -95,7 +96,6 @@ then $\alpha(t)=0$ for any $t\ge |x|$.
 
 Here is a slightly more interesting example;
 it shows that gradient curves can merge even in the region where $|\nabla f|\z\ne 0$. 
-Hence their \textit{past} cannot be uniquely determined from their \textit{present}.
 
 
 \begin{wrapfigure}[8]{r}{34 mm}
@@ -128,9 +128,9 @@ Then
 \section{Distance estimates}
 
 \begin{thm}{Observation}\label{eq:fist-var-inq+}
-Let $\alpha$ is a gradient curve of a $\lambda$-concave function $f$ 
+Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$ 
 defined on a complete geodesic $\CBB$ space.
-Choose point $p$; let $\ell(t)\df\distfun_p\circ\alpha(t)$ and $q=\alpha(t_0)$.
+Choose a point $p$; let $\ell(t)\df\distfun_p\circ\alpha(t)$ and $q=\alpha(t_0)$.
 Then 
 \[
 \ell^+(t_0)\le -\left({f(p)}-{f(q)}-\tfrac\lambda2\cdot\ell^2(t_0)\right)/\ell(t_0)
@@ -191,13 +191,11 @@ The following exercise describes a global geometric property of a gradient curve
 It uses the notion of \textit{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, and St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
 
 \begin{thm}{Exercise}\label{ex:elf-contracting}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on a complete geodesic $\Alex\kappa$ space
+Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on a complete geodesic $\CBB(\kappa)$ space
 $\spc{L}$.
 Then 
-\[t_1\le t_2\le t_3
-\quad\Longrightarrow\quad
-\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{L}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{L}}.\]
-for any $f$-gradient curve $\alpha$.
+\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{L}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{L}}.\]
+for any $f$-gradient curve $\alpha$ and $t_1\le t_2\le t_3$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:mayer}
@@ -219,7 +217,7 @@ Assume $|f-g|<\eps$; let $\ell\:t\mapsto\dist{\alpha(t)}{\beta(t)}{}$.
 Show that
 \[\ell^+\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}.\]
 
-Conclude that  $\alpha(0)=\beta(0)$ and $t_{\max}<\infty$ then
+Conclude that if $\alpha(0)=\beta(0)$ and $t_{\max}<\infty$, then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le
 \Const\cdot\sqrt{\eps\cdot t}\]
@@ -235,8 +233,8 @@ then we will write
 \[\GF^t_f(x)=y.\]
 The partially defined map $\GF^t_f$ from $\spc{L}$ to itself is called the \index{gradient flow}\emph{$f$-gradient flow} for time $t$.
 Note that
-\[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2};\]
-in other words, gradient flow is given by an action of the semigroup $(\RR_{\ge0},+)$.
+\[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}.\]
+In other words, one may think that gradient flow is an action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
  
 From the first distance estimate \ref{thm:dist-est}, 
 it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{L}$.
@@ -244,9 +242,8 @@ In some cases, it is globally defined.
 For example, if $f$ is a $\lambda$-concave function defined on the whole space $\spc{L}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{L}$ and $t\ge0$;
 see \cite[16.19]{alexander-kapovitch-petrunin2024}.
 
-
 Now let us reformulate statements obtained earlier using this new terminology.
-Again, from the first distance estimate, we have the following.
+From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
 Let $\spc{L}$ be a complete geodesic $\CBB(\kappa)$ space 
@@ -259,11 +256,64 @@ Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Li
 The next proposition follows from \ref{lem:fg-dist-est}.
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
-Let $\spc{L}$ be a complete geodesic $\Alex\kappa$ space.
+Let $\spc{L}$ be complete geodesic $\CBB(\kappa)$ space.
 Suppose $f_n\:\spc{L}\to\RR$ is a sequence of
 $\lambda$-concave functions 
-that converges to $f_\infty\:\spc{L}_\infty\to \RR$. 
+that converges to $f_\infty\:\spc{L}\to \RR$. 
 Then for any $x\in \spc{L}$ and $t\ge 0$, we have
 \[\GF_{f_n}^t(x)\to \GF_{f_\infty}^t(x)\]
-as $n\to \infty$
+as $n\to \infty$.
 \end{thm}
+
+%??? do we need GH-limit version???
+
+\section{Gradient exponent}\label{gexp}
+
+One of the technical difficulties in Alexandrov's geometry comes from
+nonextendability of geodesics. 
+In particular, the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined the usual way, can
+be undefined in an arbitrary small neighborhood of the origin. 
+
+We construct its analog, the \emph{gradient exponential map} 
+\[\gexp_p\:\T_p\to\spc{L},\]
+which practically solves this problem. 
+It shares many properties with the ordinary exponential map, and better in certain respects,
+even in the Riemannian universe.
+
+Let $\spc{L}$ be Alexandrov's space and $p\in \spc{L}$, consider the function $f\z=\distfun_p^2/2$.
+Suppose $i_{\lambda}\:\lambda\cdot \spc{L}\to \spc{L}$ sends a point in the rescaled copy $\lambda\cdot\spc{L}$ to the corresponding point in $\spc{L}$.
+Consider the one parameter family of maps
+$$\Phi^t_{f}\circ i_{e^t}\:e^t{\cdot} \spc{L}\to \spc{L}$$
+where $\Phi^t_{f}$ denotes gradient flow. 
+Note that $(e^t{\cdot} \spc{L},p)\GHto (\T_p,o_p)$ as $t\to\infty$.
+Let us define the \textit{gradient exponential map} as the limit
+\[\gexp_p=\lim_{t\to\infty}\Phi^t_{f}\circ i_{e^t}.\]
+
+\begin{thm}{Proposition}
+Let $\spc{L}$ be a proper geodesic $\CBB(0)$ space.
+Then for any $p\in \spc{L}$ the gradient exponent $\gexp_p\:\T_p\to\spc{L}$ is defined.
+Moreover, $\gexp_p$ is a short map and 
+\[\gexp_p(\gamma^+(0))=\gamma(1)\]
+for any geodesic path $\gamma$ that starts at $p$.
+\end{thm}
+
+The last statement in the proposition says that it is appropriate to use term \textit{exponent} for $\gexp$.
+
+
+\parit{Proof.} 
+Note that $f''\le 1$.
+By the first distance estimate, we have that $\Phi^t_{f}$ is an $e^t$-Lipschitz.
+Therefore, the compositions $\Phi^t_{f}\circ i_{e^t}\:e^t{\cdot} \spc{L}\to \spc{L}$ are short. 
+Hence a partial limit $\gexp_p\:\T_p
+\spc{L}\to \spc{L}$ exists, and it is a short map.
+
+Clearly for any partial limit we have
+\[\Phi^t_f\circ\gexp_p(v)=\gexp_p(e^t\cdot v).\]
+Since $\Phi^t$ is $e^t$-Lipschitz, it follows that $\gexp_p$ is uniquely
+defined.
+\qeds
+
+\section{Remarks}
+
+??? gradient exponent for $\kappa\ne 0$
+and for nonproper.
