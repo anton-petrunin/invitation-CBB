@@ -230,7 +230,7 @@ Let $A$ be a closed subset $A$ in a metric space $\spc{X}$.
 The doubling $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and it has minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
-The metric on $\spc{W}$ can be defined explicitly by
+The metric on $\spc{W}$ can be also defined explicitly by
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
 \dist{x}{y}{\spc{X}}&\text{if}\quad i= j.
@@ -267,20 +267,22 @@ the doubling $\hat{\spc{L}}$ of $\spc{L}$ across $\partial \spc{L}$ is a complet
 
 \end{thm}
 
-The proof will be given by induction on the dimension of the space.
-
-
 \parit{Proof.}
 We will denote by 
 \ref{SHORT.thm:doubling:concave}$_m,\dots$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{L}$.
+
 The proof goes by induction on $m$.
+Note that \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base of induction.
+The step of induction is a combination of several implications listed below.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:concave}$_m$.}
-If $m=2$, then $\Sigma_x$ is isometric to a line segment $[0,\ell]$;
+If $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
+By \ref{ex:dim=1}, $\Sigma_x$ isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
-Suppose $\ell>\pi$, then $\T_x=\Cone\Sigma_x$ has several different lines.
-It follows that $\T_x$ is isometric to the Euclidean plane;
+Suppose $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
+Recall that $\T_x$ is a complete geodesic $\CBB(0)$ space; see \ref{ex:finite-tan}.
+By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
 the latter contradicts that $\Sigma_x$ is a line segment.
 
 Suppose $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
@@ -291,7 +293,7 @@ Observe that $\dist{\xi_0}{\xi_1}{\spc{W}}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
 
 Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\spc{W}}=\pi$.
-Therefore the tangent space $\Cone \spc{W}$ contains a line in directions of $\xi_0$ and $\xi_1$;
+Therefore $\Cone \spc{W}$ contains a line in directions of $\xi_0$ and $\xi_1$;
 in other words, $\spc{W}$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\spc{W}$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\spc{W}\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
@@ -309,12 +311,13 @@ let $\eta=\dir\zeta{\overline{\xi}}$.
 By \ref{SHORT.thm:doubling:concave}$_m$, $\mangle(\overline{\xi},\zeta)\le \tfrac\pi2$ and
 \ref{SHORT.thm:doubling:concave}$_{m-1}$ implies that 
 \[\mangle(\eta,\nu)\le \tfrac\pi2\eqlbl{eq:<pi/2}\]
-for any $\nu\in \Sigma_\zeta\Sigma_x$.
+for any $\nu\in \Sigma_\zeta\Sigma_x$; if $m=2$, then the statement is trivial. 
 
 Consider function $\phi\:\Sigma_x\to\RR$ defined by $\phi(\xi)\df\dd_xf(\xi)$.
 Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_\xi\phi(\eta)\le 0$.
-If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi}\le 0$ --- a contradiction.
-If $\phi(\zeta)> 0$, then $\phi(\overline{\xi}<\phi(\zeta)$ --- a contradiction again.
+Since $\dd_xf$ is convex, we have that $\phi''+\phi\le 0$.
+If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction.
+If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
 Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial L}\alpha(t)$.
@@ -340,7 +343,9 @@ In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
 By \ref{ex:bry-closed}, the statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
-Now, let us show that doubling $\hat{\spc{L}}$ is $\CBB(0)$.
+We will consider the case $\kappa=0$;
+other cases acan be done the same way, but formulas getting more complicated.
+
 Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\hat{\spc{L}}$;
 let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
 
@@ -352,6 +357,7 @@ let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_
 
 Choose a geodesic $\gamma$ in $\hat{\spc{L}}$.
 Suppose $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$.
+Assume $x$ nor $y$ is not an endpoint of $\gamma$.
 The splitting argument as in \ref{SHORT.thm:doubling:concave} shows that the doubling of $\T_x\spc{L}$ splits in the direction $\gamma^\pm(t_1)$.
 Similarly, the doubling of $\T_y\spc{L}$ splits in the direction $\gamma^\pm(t_y)$.
 Note that the arc of $\gamma$ between $x$ and $y$ can be reflected across $\partial \spc{L}$ and the obtained curve is still a geodesic in $\hat{\spc{L}}$.
@@ -374,4 +380,43 @@ If $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$, then the proof of inequalit
 Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that 
 \[(f\circ\gamma)^+(t)+(f\circ\gamma)^-(t)\le 0.\]
 These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
+
+Summarizing, we get that $(f\cirs\gamma)''\le 1$ if $\gamma$ lies entirely in $\spc{L}_0$ or $\spc{L}_1$.
+If $\gamma$ crosses $\partila \spc{L}$, then we know that it happens only once and at the crossing moment $t_0$ 
+we have $f\cirs\gamma^+(t_0)+f\cirs\gamma^-(t_0)\le 0$.
+All this implies that $(f\cirs\gamma)''\le 1$.
 \qeds
+
+\begin{thm}{Exercise}
+Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(0)$ space with nonempty boundary $\partial\spc{L}$.
+Show that the distance function to the boundary
+\[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
+is concave.
+\end{thm}
+
+\begin{thm}{Exercise}
+Suppose $\gamma$ is a geodesic in the length metric of boundary of a complete finite-dimensional geodesic $\CBB(0)$ space.
+Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
+\end{thm}
+
+
+\section{Remarks}
+
+Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \emph{extremal}.
+More precisely, a subset $E$ in a complete geodesic $\CBB$ space is called extremal if for any $x\in E$
+and $f$-gradient curve that starts in $E$ remains in $E$;
+here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.
+
+Extremal subsets have many equivalent definitions.
+They play an important role in Alexandrov geometry and its applications;
+in particular they will pop up in the next lecture.
+
+The following conjecture is one of the oldest questions in Alexandrov geometry that remains open.
+
+\begin{thm}{Conjecture}
+Let $S$ be a component of the boundary of a complete geodesic finite-dimensional $\CBB(\kappa)$ space.
+Then $S$ equipped with the induced length metric is $\CBB(\kappa)$.
+\end{thm}
+
+
+
