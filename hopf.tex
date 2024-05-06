@@ -381,11 +381,17 @@ Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that
 \[(f\circ\gamma)^+(t)+(f\circ\gamma)^-(t)\le 0.\]
 These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
 
-Summarizing, we get that $(f\cirs\gamma)''\le 1$ if $\gamma$ lies entirely in $\spc{L}_0$ or $\spc{L}_1$.
-If $\gamma$ crosses $\partila \spc{L}$, then we know that it happens only once and at the crossing moment $t_0$ 
-we have $f\cirs\gamma^+(t_0)+f\cirs\gamma^-(t_0)\le 0$.
-All this implies that $(f\cirs\gamma)''\le 1$.
+Summarizing, we get that $(f\circ\gamma)''\le 1$ if $\gamma$ lies entirely in $\spc{L}_0$ or $\spc{L}_1$.
+If $\gamma$ crosses $\partial \spc{L}$, then we know that it happens only once and at the crossing moment $t_0$ 
+we have $f\circ\gamma^+(t_0)+f\circ\gamma^-(t_0)\le 0$.
+All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
+
+\begin{thm}{Exercise}
+Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(1)$ space with nonempty boundary $\partial\spc{L}$.
+Show that $\partial\spc{L}$ is connected.
+\end{thm}
+
 
 \begin{thm}{Exercise}
 Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(0)$ space with nonempty boundary $\partial\spc{L}$.
@@ -399,8 +405,9 @@ Suppose $\gamma$ is a geodesic in the length metric of boundary of a complete fi
 Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
 \end{thm}
 
-
 \section{Remarks}
+
+Morse theory, stratification, ???
 
 Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \emph{extremal}.
 More precisely, a subset $E$ in a complete geodesic $\CBB$ space is called extremal if for any $x\in E$
