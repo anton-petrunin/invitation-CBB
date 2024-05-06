@@ -38,6 +38,10 @@ pdfauthor={\theauthors}
 \newpage
 \tableofcontents
 
+\mainmatter
+
+\include{preface}
+
 \include{prelim}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -56,14 +60,13 @@ pdfauthor={\theauthors}
 %\include{CBB-def}
 
 
-
+\include{surface-if}
 
 \appendix
 
-\include{surface-if}
 \include{embedding-theorem}
 
-%\include{sols}
+\include{sols}
 
 {
 \input{invitation-CBB.ind}

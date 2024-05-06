@@ -1,4 +1,4 @@
-\chapter{Alexandrov embedding theorem}
+\chapter{Alexandrov embedding theorem}\label{chap:alex-embedding}
 
 We will prove the Cauchy theorem, and then modify it to prove the Alexandrov uniqueness theorem.
 Further, we sketch a proof of the Alexandrov embedding theorem.
@@ -200,11 +200,14 @@ let $a'=a'_0$ and $b'=a'_n$.
 \end{wrapfigure}
 
 Since each marked edge passing thru $a_i$ has a $(+)$ on it or nothing, 
-we have $$\measuredangle a_i\le\measuredangle a'_i$$
+we have 
+$$\measuredangle a_i\le\measuredangle a'_i$$
 for each $i$.
-\begin{thm}{Exercise}
+
+\begin{thm}{Exercise}\label{ex:a<a}
 Prove the last statement. 
 \end{thm}
+
 By the construction we have $|a_i-a_{i-1}|=|a'_i-a'_{i-1}|$ for all $i$.
 By the arm lemma (\ref{lem:arm}), 
 we get 
@@ -280,10 +283,12 @@ that is, one can get from any vertex to any other vertex by walking along edges.
 
 Denote by $k$ and $l$ the number of vertices and edges in $\Gamma$.
 Denote by $m$ the number of \textit{regions} that $\Gamma$ cuts from $P$.
-Since $\Gamma$ is connected, each region is homeomorphic to an open disc.%
-\begin{thm}{Exercise}
+Since $\Gamma$ is connected, each region is homeomorphic to an open disc.
+
+\begin{thm}{Exercise}\label{ex:disc}
 Prove the last statement.
 \end{thm}
+
 Now we can apply Euler's formula
 $$k-l+m=2.
 \eqlbl{eq:cauchy:euler}$$

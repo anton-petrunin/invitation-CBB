@@ -1,4 +1,4 @@
-\chapter{Boundary}
+\chapter{Boundary}\label{chap:bry}
 
 \section{Definition}
 
@@ -15,11 +15,11 @@ therefore its boundary is already defined.
 
 Let us emphasize, that the boundary is defined only for finitely-dimensional spaces.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:bry-convex}
 Show that for closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:bry-product}
 Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
 Suppose $\spc{L}\iso\spc{L}_1\times\spc{L}_2$.
 Show that 
@@ -93,7 +93,7 @@ where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
 In the following proof we will apply induction on the rank of space.
 Before reading this proof, it is instructive to solve the following exercise.
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:nonstability}
 Construct two plane subsets $K_1$ and $K_2$ such that $K_1\ncong K_2$,
 but $\RR\times K_1\cong \RR\times K_2$.
 \end{thm}
@@ -158,13 +158,6 @@ Show that $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
 
 \begin{thm}{Exercise}\label{ex:bry-closed}
 Show that boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
-\end{thm}
-
-\begin{thm}{Exercise}
-Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional geodesic $\CBB(\kappa)$ spaces; $m$ is finite.
-Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
-Show that $f$ is an embedding.
-Moreover, if $\partial\spc{L}_2=\emptyset$, then $f(\Omega_1)$ is open in $\spc{L}_2$.  
 \end{thm}
 
 \section{Tangent space}
@@ -387,27 +380,33 @@ we have $f\circ\gamma^+(t_0)+f\circ\gamma^-(t_0)\le 0$.
 All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:bry-connected}
 Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(1)$ space with nonempty boundary $\partial\spc{L}$.
 Show that $\partial\spc{L}$ is connected.
 \end{thm}
 
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:dist-to-bry}
 Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(0)$ space with nonempty boundary $\partial\spc{L}$.
 Show that the distance function to the boundary
 \[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
 is concave.
 \end{thm}
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:liberman}
 Suppose $\gamma$ is a geodesic in the length metric of boundary of a complete finite-dimensional geodesic $\CBB(0)$ space.
 Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
 \end{thm}
 
 \section{Remarks}
 
-Morse theory, stratification, ???
+Morse theory, stratification, Grove--Petersen lemma ???
+
+\begin{thm}{Domain invariance theorem}
+Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional geodesic $\CBB(\kappa)$ spaces with empty boundary; $m$ is finite.
+Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
+Then $f(\Omega_1)$ is open in $\spc{L}_2$.
+\end{thm}
 
 Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \emph{extremal}.
 More precisely, a subset $E$ in a complete geodesic $\CBB$ space is called extremal if for any $x\in E$

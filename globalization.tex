@@ -1,4 +1,4 @@
-\chapter{Globalization}
+\chapter{Globalization}\label{chap:globalization}
 
 \section{Globalization}
 
@@ -195,7 +195,12 @@ if the right-hand side is defined.
 Conclude that any $\CBB(\Kappa)$ space is locally $\CBB(\kappa)$.
 \end{thm}
 
-The exercise and the globalization theorem (here we need a more general version \ref{ex:noncomplete-globalization}) imply that \textit{any geodesic $\CBB(\Kappa)$ space is  $\CBB(\kappa)$}.
+The exercise and the globalization theorem (here we need a more general version \ref{ex:noncomplete-globalization}) imply the following.
+
+\begin{thm}{Claim}\label{clm:K>k}
+Suppose $\Kappa>\kappa$, then any geodesic $\CBB(\Kappa)$ space is  $\CBB(\kappa)$.
+\end{thm}
+
 Recall that $\CBB(\kappa)$ stands for \textit{curvature bounded below by $\kappa$}; so, for geodesic spaces it makes sense.
 However, as you can see from the following exercise, it does not make much sense in general.
 
@@ -212,8 +217,17 @@ Suppose $\dist{p}{q}{}>\pi$.
 Denote by $m$ the midpoint of $[pq]$.
 Show that for any hinge $\hinge mxp$ we have
 either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
-Conclude that $\spc{L}$ is isometric to a real interval or a circle.
+Conclude that $\spc{L}$ is isometric to a line interval or a circle.
 
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:perim-k>0}
+Suppose  
+$\spc{L}$ is a complete geodesic $\Alex1$ space
+and $\diam \spc{L}\le \pi$.
+Show that 
+\[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
+for any triple of points $x,y,z\in \spc{L}$.
 \end{thm}
 
 

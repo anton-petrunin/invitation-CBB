@@ -1,7 +1,10 @@
 \mainmatter
 
-\chapter{Preliminaries}
+\chapter{Preliminaries}\label{chap:prelim}
 
+We will assume that the reader is familiar with metric spaces as well as with their 
+compactness and completeness,
+including the completion.
 
 \section{Notations}
 
@@ -19,26 +22,6 @@ that is,
 \item if $\kappa<0$, then $\MM^n(\kappa)$ is the Lobachevsky $n$-space $\HH^n$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
 in particular $\MM^n(-1)=\HH^n$.
 \end{itemize}
-
-\section{Complete}
-
-A metric space $\spc{X}$ is called \index{complete space}\emph{complete} if any Cauchy sequence of points in $\spc{X}$ converges.
-
-Given a metric space $\spc{X}$, 
-consider the set $\spc{C}$ of all Cauchy sequences in $\spc{X}$.
-Note that for any two Cauchy sequences $(x_n)$ and $(y_n)$ the right-hand side in \ref{eq:cauchy-dist} is defined;
-moreover, it defines a semimetric on~$\spc{C}$
-\[\dist{(x_n)}{(y_n)}{\spc{C}}\df\lim_{n\to\infty}\dist{x_n}{y_n}{\spc{X}}.\eqlbl{eq:cauchy-dist}\]
-The corresponding metric space is called the \index{completion}\emph{completion} of $\spc{X}$;
-it will be denoted by $\bar{\spc{X}}$.
-
-It is straightforward to check that \textit{completion is complete.}
-  
-For each point $x\in\spc{X}$, one can consider a constant sequence $x_n=x$ which is Cauchy.
-It defines a natural inclusion map $\spc{X}\hookrightarrow \bar{\spc{X}}$.
-It is easy to check that this map is distance-preserving.
-In particular, we can (and will) consider $\spc{X}$ as a subset of $\bar{\spc{X}}$.
-Note that \textit{$\spc{X}$ is a dense subset in its completion $\bar{\spc{X}}$}.
 
 \section{Length and length spaces}\label{sec:length}
 
@@ -143,7 +126,7 @@ and $\II$\index{$\II$} a real interval.
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
 Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
-in other words, $\gamma\:\II\to \spc{X}$ is a geodesic if 
+in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
 for any pair $s,t\in \II$.
 
@@ -263,7 +246,7 @@ where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 Note that if $\mangle\hinge p x y$ is defined, then
 \[0\le \mangle\hinge p x y\le \pi.\]
 
-\begin{thm}{Exercise}
+\begin{thm}{Exercise}\label{ex:angkK}
 Suppose that in the above definition, one uses spherical or hyperbolic model angles instead of Euclidean.
 Show that it does not change the value $\mangle\hinge p x y$.
 \end{thm}
@@ -275,8 +258,7 @@ Give an example of a hinge $\hinge p x y$ in a metric space with an undefined an
 
 \section{Triangle inequality for angles}
 
-\begin{thm}{Proposition}
-\label{claim:angle-3angle-inq}
+\begin{thm}{Proposition}\label{claim:angle-3angle-inq}
 Let  $[px_1]$, $[px_2]$, and $[px_3]$ be three geodesics in a metric space.
 Suppose all the angle measures $\alpha_{i j}=\mangle\hinge p {x_i}{x_j}$ are defined.
 Then 
@@ -302,7 +284,7 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
 \vskip-6mm
 \centering
 \includegraphics{mppics/pic-615}
-\vskip3mm
+\vskip6mm
 \end{wrapfigure}
 
 Below we define 

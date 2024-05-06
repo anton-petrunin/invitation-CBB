@@ -1,0 +1,359 @@
+\chapter{Semisolutions}
+
+\parbf{\ref{ex:compact-length}.}
+
+\parbf{\ref{ex:compact+connceted}.}
+
+\parbf{\ref{ex:compact=>complete}.}
+
+\parbf{\ref{ex:k-><mono}.}
+
+\parbf{\ref{ex:angkK}.}
+
+\parbf{\ref{ex:undefined-angle}.}
+
+\parbf{\ref{ex:adjacent-angles}.}
+Assume $\mangle\hinge pxz+\mangle\hinge pyz<\pi$.
+By \ref{claim:angle-3angle-inq}, $\mangle\hinge pxy<\pi$.
+Therefore,
+$\angk p{\bar x}{\bar y}<\pi$
+for some $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$.
+Hence 
+\[\dist p{\bar x}{}+\dist {\bar y}p{}<\dist {\bar x}{\bar y}{}\]
+--- a contradiction.
+
+\parbf{\ref{ex:first-var}.}
+
+\parbf{\ref{ex:surface-covergence}.}
+
+\parbf{\ref{ex:Euclid-is-CBB}.}
+The definition of $\CBB$ spaces (\ref{def:CBB}) reduces our question to the following.
+\textit{Any spherical triangle has perimeter at most $2\cdot\pi$.}
+Choose a spherical triangle $[xyz]$.
+Let $x'$ be the antipode of $x$; that is $x'=-x$.
+The spherical triangle inequality implies that
+\[\dist{x}{z}{\mathbb{S}^2}\le \dist{y}{x'}{\mathbb{S}^2}+\dist{x'}{z}{\mathbb{S}^2}.\]
+Observe that 
+\[
+\dist{x}{y}{\mathbb{S}^2}+\dist{y}{x'}{\mathbb{S}^2}=\pi,
+\quad\text{and}\quad
+\dist{x}{z}{\mathbb{S}^2}+\dist{z}{x'}{\mathbb{S}^2}=\pi.
+\]
+Hence
+\[\dist{x}{y}{\mathbb{S}^2}+\dist{x}{z}{\mathbb{S}^2}+\dist{y}{z}{\mathbb{S}^2}\le2\cdot \pi.\]
+
+\parbf{\ref{ex:(3+1)-expanding}.} For the only-if part consider the following two cases.
+
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_y)$ that lie on the opposite sides of $[qy_2]$.
+By comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
+Therefore the obtained configuration meets all the conditions.
+
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]=\modtrig(px_1x_2)$
+and take $y_3$ on the extension of $[y_1q]$ behind $q$ such that $\dist{q}{y_3}{}=\dist{p}{x_3}{}$.
+Then $\mangle \hinge q{y_2}{y_3}\ge \angk p{x_2}{x_3}$, therefore $\dist{y_2}{y_3}{}\ge \dist{x_2}{x_3}{}$.
+Further, $\dist{y_2}{y_3}{}=\dist{x_2}{p}{}+\dist{p}{x_3}{} \ge \dist{x_2}{x_3}{}$,
+and again, the obtained configuration meets all the conditions.
+
+To prove the if part, choose a configuration $q,y_1,y_2,y_3$ that meets all the conditions and maximize the sum
+\[\dist{y_1}{y_2}{}+\dist{y_2}{y_3}{}+\dist{y_3}{y_1}{}.\]
+Show that that $q$ lies in the solid triangle $y_1y_2y_3$;
+in particular 
+\[\mangle \hinge q{y_1}{y_2}+\mangle \hinge q{y_2}{y_3}+ \mangle \hinge q{y_3}{y_1}=2\cdot\pi.\]
+Moreover, $\dist{q}{y_i}{}=\dist{p}{x_i}{}$ for each $i$.
+Applying that increasing the opposite side in a plane triangle increases the corresponding angle, we get 
+\[\angk  p{x_1}{x_2}+\angk p{x_2}{x_3}+\angk p{x_3}{x_1}
+\le 
+2\cdot\pi.
+\]
+
+\parbf{\ref{ex:alex-lemma-cat}.}
+Consider model triangles $[\tilde p\tilde x\tilde z]=\modtrig(pxz)$ and $[\tilde p\tilde y\tilde z]=\modtrig(pyz)$
+that share side $[\tilde p\tilde z]$ and lie on its opposite sides.
+Note that 
+\begin{align*}
+\dist{\tilde x}{\tilde y}{\EE^2}
+&\ge \dist{\tilde x}{\tilde y}{\EE^2}+\dist{\tilde x}{\tilde y}{\EE^2}=
+\\
+&=\dist{x}{z}{\spc{X}}+\dist{z}{y}{\spc{X}}=
+\\
+&=\dist{x}{y}{\spc{X}},
+\end{align*}
+where $\spc{X}$ is our metric space.
+It remains to apply the monotonicity of angle in a triangle with respect to its opposite side. 
+
+
+\parbf{\ref{ex:noncreasing}.}
+Apply \ref{clm:angle-mono}.
+
+\parbf{\ref{ex:0-angle}.}
+Without loss of generality, we can assume that $\dist{p}{x}{}\le \dist{p}{y}{}$.
+Choose $\bar x\in [px]$;
+let $\bar y\in [px]$ be such that $\dist{p}{\bar x}{}=\dist{p}{\bar y}{}$.
+Apply \ref{clm:angle-mono} to show that $\bar x=\bar y$.
+Conclude that $[px]\subset [py]$.
+
+\parbf{\ref{ex:pi-angle}.}
+Assume that there are two distinct geodesics from $z$ to $x$.
+Then we can choose distinct points $p$ and $q$ one these geodesics such that $\dist{z}{p}{}=\dist{z}{q}{}$.
+Observe that $\angk zpq>0$.
+By triangle inequality, we get 
+\[\dist{x}{p}{}+\dist{p}{y}{}\le \dist{x}{p}{}+\dist{p}{z}{}+\dist{z}{y}{}=\dist{x}{z}{}+\dist{z}{y}{}\]
+Observe that $\angk zxy=\pi$.
+Therefore $\mangle\hinge zxy=\pi$ for any geodesic $[zx]$.
+
+\parbf{\ref{ex:adjacent-CBB}.}
+By \ref{ex:adjacent-angles}, we have
+\[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi.\]
+Since $z\in \left]xy\right[$ we have 
+\[\angk z{\bar x}{\bar y}=\pi\]
+for any $\bar x\in \left[xz\right[$ and $\bar y\in \left]zy\right]$.
+By comparison, we have that 
+\[\angk z{\bar x}{\bar p}+\angk z{\bar p}{\bar y}\le\pi\]
+for any $\bar p\in \left]zp\right]$.
+Passing to the limit as
+$\dist{z}{\bar x}{}\to 0$,
+$\dist{z}{\bar y}{}\to 0$, and
+$\dist{z}{\bar p}{}\to 0$,
+we get the statement.
+
+\parbf{\ref{ex:pxyvw}.} 
+Without loss of generality, we can assume that $x$, $v$, $w$, and $y$ appear on 
+$[xy]$ in this order.
+By \ref{clm:angle-mono},
+\[
+\angk xyp\ge \angk xwp \ge\angk xvp.
+\]
+Hence, $\Rightarrow$ follows.
+
+By Alexandrov's lemma,
+\begin{align*}
+\angk xyp=\angk xvp
+\quad&\Longleftrightarrow\quad
+\angk yxp=\angk yvp,
+\\
+\angk xyp=\angk xwp
+\quad&\Longleftrightarrow\quad
+\angk yxp=\angk ywp.
+\end{align*}
+Whence, $\Leftarrow$ follows.
+
+\parbf{\ref{ex:urysohn}.}
+The Urysohn space provides an example;
+see for example \cite[Lecture 2]{petrunin2023pure}.
+
+\parbf{\ref{ex:fat}.}
+The natural map will be denoted by $\tilde p\mapsto p$.
+Apply \ref{clm:angle-defined} twice 
+to show that 
+$\dist{\tilde p}{\tilde q}{}\le \dist pq{}$
+for any
+$\tilde p\in[\tilde x\tilde y]$ 
+and
+$\tilde q\in[\tilde x\tilde z]$.
+Conclude that $[xyz]$ is fat.
+
+\parbf{\ref{ex:normCBB}}; \ref{SHORT.ex:normCBB:thin}.
+Choose a triangle $[0vw]$.
+Note that $m=\tfrac12(v+w)$ is the midpoint of $[vw]$.
+
+Since $[0vw]$ is thin, we get
+\[2\cdot |\tfrac12(v+w)|^2+2\cdot |\tfrac12(v-w)|^2\le |v|^2+|w|^2.\]
+
+Note this inequality implies the opposite one;
+it follows if we rewrite it via $x=\tfrac12(v+w)$ and $y=\tfrac12(v-w)$.
+Hence we have 
+\[2\cdot |\tfrac12(v+w)|^2+2\cdot |\tfrac12(v-w)|^2= |v|^2+|w|^2\]
+for any $v,w$.
+That is the norm is quadratic and the statement follows.
+
+\parit{\ref{SHORT.ex:normCBB:fat}.}
+Apply the same argument changing the signs of inequalities. 
+
+\parbf{\ref{ex:mono-mod-angle}.}
+
+\parbf{\ref{ex:CBB(1)notitCBB(0)}.}
+Note that $\spc{X}$ has no defined sphericlal model angles;
+therefore it is $\CBB(1)$.
+
+However, $\spc{X}$ is not $\CBB(0)$ since
+\[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
+
+\parbf{\ref{ex:RisCBB(1)}.}
+Suppose $\mangle\hinge mxp\ne 0$ and $\mangle\hinge mxp\ne\pi$, or equivalently $\mangle\hinge mxq\ne0$.
+
+We can assume that $\dist pq{}$ only slightly exceeds $\pi$,
+so $\dist pm{}<\pi$ and $\dist qm{}<\pi$.
+We can also assume that $\dist xm{}<\pi$.
+Use the comparison to show that 
+\[\dist px{}+\dist qx{} < \dist pq,\]
+and arrive at a contradiction with the triangle inequality.
+
+Extend $[pq]$ to a maximal local geodesic $\gamma$.
+It might be a closed or a line segment.
+Argue as above to show that any point lies on $\gamma$ and make a conclusion.
+
+\parbf{\ref{ex:perim-k>0}.}
+Arguing by contradiction, suppose 
+\[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\pi\eqlbl{eq:perimeter-of-triange<2pi}\] 
+for $p,q,r\in \spc{L}$. 
+Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
+but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
+By \ref{clm:K>k},
+after rescaling $\spc{L}$ is still $\Alex1$.
+
+Take $z_0\in [q r]$ on maximal distance from $p$.
+Consider the following model configuration:
+two geodesics $[\tilde p\tilde z_0]$, $[\tilde q\tilde r]$ in $\mathbb{S}^2$ such that 
+\begin{align*}
+\dist{\tilde p}{\tilde z_0}{}&=\dist{p}{z_0}{},
+&  
+\dist{\tilde q}{\tilde r}{}&=\dist{q}{r}{},
+\\ 
+\dist{\tilde z_0}{\tilde q}{}&=\dist{z_0}{q}{},
+&  
+\dist{\tilde z_0}{\tilde r}{}&=\dist{z_0}{q}{},
+\end{align*}
+and 
+\[\mangle\hinge{\tilde z_0}{\tilde q}{\tilde p}
+=\mangle\hinge{\tilde z_0}{\tilde r}{\tilde p}
+=\tfrac\pi2.\]
+
+Let $\tilde z\in [\tilde q\tilde r]$,
+and let $z\in [q r]$ be the corresponding point.
+By comparison, $\dist pz{}\le\dist {\tilde p}{\tilde z}{}$ for points $z$ near $z_0$.
+Moreover, this inequality holds as far as 
+\[\dist{\tilde p}{\tilde z_0}{}+\dist{\tilde z_0}{\tilde z}{}+\dist{\tilde p}{\tilde z}{}<2\cdot\pi.\]
+But this inequality holds for all $\tilde z$ since  $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
+Hence we get $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
+The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
+
+\parbf{\ref{ex:alm-min}.}
+Suppose such point does not exists;
+that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
+Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
+Show that this sequence is Cauchy; denote its limit by $p_\infty$.
+Arrive at a contradiction by showing that $r(p_\infty)\le0$.
+
+\parbf{\ref{ex:dir-compact}.} \ref{SHORT.ex:dir-compact:compact}, \ref{SHORT.ex:dir-compact:}
+
+\parbf{\ref{ex:geodesic-cone}.}
+
+\parbf{\ref{ex:cone-CBB}.}
+
+\parbf{\ref{ex:distfun-semiconcave}.}
+
+\parbf{\ref{ex:df(xi)}.}
+
+\parbf{\ref{ex:d(distfun)}.}
+
+\parbf{\ref{ex:monotonicity}.}
+
+\parbf{\ref{ex:first-var-CBB}.}
+
+\parbf{\ref{ex:convergence-grad}.}
+
+\parbf{\ref{ex:semicontinuous-grad}.}
+
+\parbf{\ref{ex:elf-contracting}.}
+
+\parbf{\ref{ex:mayer}.}
+
+\parbf{\ref{lem:fg-dist-est}.}
+
+\parbf{\ref{ex:|antisum|}.}
+
+\parbf{\ref{prop:two-opp}.}
+
+\parbf{\ref{ex:3<,>=0}.}
+
+\parbf{\ref{ex:-u}.}
+
+\parbf{\ref{ex:grad-dist}.}
+\ref{SHORT.ex:grad-dist:G-delta}
+\ref{SHORT.ex:grad-dist:lin}
+\ref{SHORT.ex:grad-dist:|grad|=1}
+
+\parbf{\ref{ex:tangent=Em}.}
+
+\parbf{\ref{ex:dim=1}.}
+
+\parbf{\ref{ex:resporka}.}
+
+\parbf{\ref{ex:finite-tan}.}
+
+\parbf{\ref{ex:GHto-tangent}.}
+
+\parbf{\ref{ex:geod-closed}.}
+
+\parbf{\ref{ex:dim-lim}.}
+
+\parbf{\ref{ex:diam-compact}.}
+
+\parbf{\ref{ex:pack-net}.}
+
+\parbf{\ref{ex:pack-vol}.}
+
+\parbf{\ref{ex:bry-convex}.}
+
+\parbf{\ref{ex:bry-product}.}
+
+\parbf{\ref{ex:conic}.}
+
+\parbf{\ref{ex:conic-tangent}.}
+\ref{SHORT.ex:conic-tangen:tangent}
+\ref{SHORT.ex:conic-tangen:dir}
+\ref{SHORT.ex:conic-tangen:example}
+
+\parbf{\ref{ex:nonstability}.}
+
+\parbf{\ref{ex:bry2bry}.}
+
+\parbf{\ref{ex:bry-closed}.}
+
+\parbf{\ref{ex:bry-connected}.}
+
+\parbf{\ref{ex:dist-to-bry}.}
+
+\parbf{\ref{ex:liberman}.}
+
+\parbf{\ref{ex:Hilbert/G}.}
+
+\parbf{\ref{ex:sumbetries(S^2)}.}
+
+\parbf{\ref{ex:sumbetries(E^2)}.}
+
+\parbf{\ref{ex:S^3/S^1}.}
+
+\parbf{\ref{ex:number(m-1)}.}
+\ref{SHORT.ex:number(m-1):2}
+\ref{SHORT.ex:number(m-1):1}
+
+\parbf{\ref{ex:surf-S2}.}
+
+\parbf{\ref{ex:angle-triangle}.}
+
+\parbf{\ref{ex:vertex-essential-vertex}.}
+
+\parbf{\ref{ex:geodesic-vertex}.}
+
+\parbf{\ref{pr:tetrahedron}.}
+
+\parbf{\ref{ex:poly-CBB}.}
+
+\parbf{\ref{ex:GH-doubling}.}
+
+\parbf{\ref{ex:arm-nonconvex}.}
+
+\parbf{\ref{ex:cauchy}.}
+
+\parbf{\ref{ex:a<a}.}
+
+\parbf{\ref{ex:disc-bend}.}
+
+\parbf{\ref{ex:octahedron}.}
+
+\parbf{\ref{ex:disc}.}
+
+\parbf{\ref{pr:K-P-simmetry}.}
+
+%\parbf{\ref{}.}
