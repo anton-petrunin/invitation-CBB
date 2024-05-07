@@ -28,14 +28,16 @@ The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 \begin{thm}{Exercise}\label{ex:dir-compact}
 Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
-Assume that a sequence of unit-speed geodesics $\gamma_n\:[0,1]\to \spc{L}$ converges pointwise to a geodesic $\gamma_\infty\:[0,1]\to \spc{L}$ and all the geodesics start at one point $p$.
+Assume that a sequence of geodesics $[px_n]$ converge to a geodesic $[px_\infty]$ in the sense of Hausdorff,
+and $x_\infty\ne p$.
 
 \begin{subthm}{ex:dir-compact:compact}
-Show that if $\Sigma_p$ is compact then $\gamma_n^+(0)\to \gamma_\infty^+(0)$ as $n\to\infty$.
+Suppose $\Sigma_p$ is compact.
+Show that $\dir p{x_n}\to\dir p{x_\infty}$ as $n\to\infty$.
 \end{subthm}
 
 \begin{subthm}{ex:dir-compact:}
-Give an example showing that without compactness, part \ref{SHORT.ex:dir-compact:compact} does not hold.
+Give an example showing that without compactness of $\Sigma_p$, part \ref{SHORT.ex:dir-compact:compact} does not hold.
 \end{subthm}
 
 \end{thm}
@@ -76,18 +78,6 @@ in this cases we assume that $\<v,w\>\df0$.
 Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \emph{$\pi$-geodesic};
 that is any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can be joined by a geodesic in $\spc{X}$.
 \end{thm}
-
-Recall that according our definition the real line $\RR$ is a $\CBB(1)$ space.
-However most of geodesic $\CBB(1)$ spaces have diameter at most $\pi$;
-see \ref{ex:RisCBB(1)}.
-
-\begin{thm}{Exercise}\label{ex:cone-CBB}
-Suppose $\spc{X}$ is a complete geodesic space.
-Show that $\Cone\spc{X}$ is $\CBB(0)$ if and only if $\spc{X}$ is $\CBB(1)$ and $\diam\spc{X}\le \pi$.
-???
-\end{thm}
-
-
 
 \parbf{Tangent space.}
 The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{L}$ if we need to emphasise that $p$ is a point of space $\spc{L}$.
@@ -163,8 +153,8 @@ The obtained function $\dd_pf\:\T_p\to\RR$ is Lipschitz;
 it is called the \index{differential}\emph{differential} of $f$ at $p$.
 
 \begin{thm}{Exercise}\label{ex:df(xi)}
-Let $f$ be a semiconcave function on a geodesic space $\spc{X}$ with defined angles.
-Suppose $\gamma_1$ and $\gamma_2$ are unit-speed geodesics that start at $p\in \Dom f$;
+Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa)$ space.
+Suppose $\gamma_1$ and $\gamma_2$ are unit-speed geodesics that start at $p\z\in \Dom f$;
 denote by $\theta$ the angle between $\gamma_1$ and $\gamma_2$ at $p$.
 Show that 
 \[|(f\circ\gamma_1)^+(0)-(f\circ\gamma_2)^+(0)|\le L\cdot \theta,\]
@@ -415,14 +405,14 @@ Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and locally
 \begin{thm}{Exercise}\label{ex:semicontinuous-grad}
 Let $f$ be a locally Lipschitz $\lambda$-concave function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
 
-\begin{subthm}{}
+\begin{subthm}{ex:semicontinuous-grad:>s}
 Suppose $s\ge 0$.
 Show that $|\nabla_xf|> s$ if and only if for some point $y$ we have
 \[f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2,\]
 were $\ell=\dist{x}{y}{}$.
 \end{subthm}
 
-\begin{subthm}{} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
+\begin{subthm}{ex:semicontinuous-grad:lim} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
 that is, if $x_n\z\to x_\infty$, then
 \[|\nabla_{x_\infty}f|\le \liminf_{n\to\infty} |\nabla_{x_n}f|.\]
 \end{subthm}

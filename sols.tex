@@ -137,6 +137,8 @@ By Alexandrov's lemma,
 \end{align*}
 Whence, $\Leftarrow$ follows.
 
+\parbf{\ref{ex:angle-lim}.}
+
 \parbf{\ref{ex:urysohn}.}
 The Urysohn space provides an example;
 see for example \cite[Lecture 2]{petrunin2023pure}.
@@ -234,15 +236,68 @@ Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~
 Show that this sequence is Cauchy; denote its limit by $p_\infty$.
 Arrive at a contradiction by showing that $r(p_\infty)\le0$.
 
-\parbf{\ref{ex:dir-compact}.} \ref{SHORT.ex:dir-compact:compact}, \ref{SHORT.ex:dir-compact:}
+\parbf{\ref{ex:dir-compact}}; \ref{SHORT.ex:dir-compact:compact}.
+Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
+Since $\Sigma_p$ is compact we may pass to a converging subsequence of $\dir p{x_n}$;
+denote by $\xi$ its limit.
+We may assume that $\mangle (\dir p{x_\infty},\xi)>0$.
+
+Denote by $\gamma_n$ and $\gamma_\infty$ the arc-length parametrization of $[px_n]$ and $[px_\infty]$ from $p$.
+Choose a geodesic $\alpha$ that starts from $p$ and goes in a direction sufficiently close to $\xi$.
+By comparison we can choose $\alpha$ so that
+\[\dist{\alpha(t)}{\gamma_n(t)}{}<\eps\cdot t\]
+for all large $n$ and all sufficiently small $t$.
+Moreover, we can assume that
+\[\dist{\alpha(t)}{\gamma_\infty(t)}{}>a\cdot t\]
+for some fixed $a>0$ and all small $t$.
+These two inequalities imply 
+that 
+\[\dist{\gamma_n(t)}{\gamma_\infty(t)}{}>\tfrac a2\cdot t\]
+for all small $t$ and all large $n$.
+On the other hand, by assumption, $\dist{\gamma_n(t)}{\gamma_\infty(t)}{}\to0$ as $n\to\infty$ --- a contradiction.
+
+\parit{\ref{SHORT.ex:dir-compact:}} ???
 
 \parbf{\ref{ex:geodesic-cone}.}
-
-\parbf{\ref{ex:cone-CBB}.}
+Note that any point of $\Cone \spc{X}$ can be connected to the origin by a geodesic.
+???
 
 \parbf{\ref{ex:distfun-semiconcave}.}
+Since angles are defined, it follows that 
+\[\dist{\gamma_1(t)}{\gamma_2(t)}{}\le \theta\cdot t\]
+for all small $t>0$.
+Since $f$ is $L$-Lipschitz, we get 
+\[|f(\gamma_1(t))-f(\gamma_2(t))|\le L\theta\cdot t,\]
+hence the statement.
 
-\parbf{\ref{ex:df(xi)}.}
+\parbf{\ref{ex:df(xi)}}; \ref{SHORT.ex:d(distfun):<}
+Note that we can assume that there is a geodesic in the direction of $v$, and apply \ref{ex:first-var}.
+
+\parit{\ref{SHORT.ex:d(distfun):=}.}
+By \ref{SHORT.ex:d(distfun):<} we have an $\le$ inequality.
+Suppose this inequalities is strict for some $v$.
+We can assume that $|v|=1$ and there is a geodesic, say $\gamma$ in the direction of $v$.
+Suppose ...
+Let $\alpha=???$.
+
+The function $f=\distfun_q\circ\gamma$ is Lipschitz;
+By Rademacher's theorem it is differentaible almost everywhere;
+moreover, 
+\[f(t)-f(0)=\int_0^t f'(t)\cdot dt.\]
+Suppose $f'(t)$ is defined.
+Use \ref{SHORT.ex:d(distfun):<} to show that 
+$f'(t)=-\cos\alpha(t)$, where $\alpha(t)$ is the angle between $\gamma$ and a geodesic from $\gamma(t)$ to $q$.
+Note that we can choose a sequence $t_n\to 0$ such that 
+\[\lim_{n\to\infty}\alpha(t_n) \le \alpha.\]
+Consider a sequence of geodsics $[p\gamma(t_n)]$.
+Since the space is proper, we can pass to its convergent subsequence.
+Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
+Observe that $[pq]$ makes angle at most $\alpha$ with $\gamma$ --- a contradiction.
+
+
+
+
+
 
 \parbf{\ref{ex:d(distfun)}.}
 
@@ -255,25 +310,73 @@ Arrive at a contradiction by showing that $r(p_\infty)\le0$.
 \parbf{\ref{ex:semicontinuous-grad}.}
 
 \parbf{\ref{ex:elf-contracting}.}
+Note that $f\circ\alpha$ is a nondecreasing function.
+Apply \ref{ex:d(distfun):<} and the definition of gradient to show that
+\[
+-\dd_{\alpha(t)}\distfun_{\alpha(t_3)}(\nabla_{\alpha(t)}f)
+\ge
+\langle \nabla_{\alpha(t)},\dir{\alpha(t)}{\alpha(t_3)}\rangle
+\ge
+\dd_{\alpha(t)}(\dir{\alpha(t)}{\alpha(t_3)})
+\ge0
+\]
+for any $t<t_3$.
+Conclude that the function 
+$t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is noncreasing for $t\le t_3$.
+
 
 \parbf{\ref{ex:mayer}.}
 
 \parbf{\ref{lem:fg-dist-est}.}
 
+\parbf{\ref{ex:busemann-CBB}.} Apply \ref{ex:distfun-semiconcave}.
+
+\parbf{\ref{ex:bus+bus}.} By the triangle inequality, 
+\[\dist{\gamma(-t)}{x}{}+\dist{\gamma(t)}{x}{}-2\cdot t\ge 0\]
+for any $t\ge 0$.
+Passing to the limit as $t\to\infty$, we get the result.
+
+\parbf{\ref{ex:cone-CBB}.}
+
 \parbf{\ref{ex:|antisum|}.}
+Observe that
+\begin{align*}
+\langle u,u\rangle+\langle v,u\rangle+\langle w,u\rangle &\ge 0,
+\\
+\langle u,v\rangle+\langle v,v\rangle+\langle w,v\rangle &\ge 0,
+\\
+\langle u,w\rangle+\langle v,w\rangle+\langle w,w\rangle &= 0.
+\end{align*}
+Add the first two inequalities and subtract the last identity.
 
 \parbf{\ref{prop:two-opp}.}
 
-\parbf{\ref{ex:3<,>=0}.}
+\parbf{\ref{ex:3<,>=0}.} Show and use that
+\[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle \ge 0\]
+and
+\[\langle u,-x\rangle +\langle v,-x\rangle +\langle w,-x\rangle \ge 0.\]
 
-\parbf{\ref{ex:-u}.}
+\parbf{\ref{ex:-u}.} Part $\Rightarrow$ is evident.
+To prove part $\Leftarrow$, observe that 
+\[\langle u^*,u^*\rangle =-\langle u,u^*\rangle\le \langle u,u\rangle\]
+and since $|u|=|u^*|$, we have equality.
 
-\parbf{\ref{ex:grad-dist}.}
-\ref{SHORT.ex:grad-dist:G-delta}
-\ref{SHORT.ex:grad-dist:lin}
-\ref{SHORT.ex:grad-dist:|grad|=1}
+\parbf{\ref{ex:grad-dist}};
+\ref{SHORT.ex:grad-dist:G-delta}.
+Let $S_n\subset \spc{L}$ be defined by inequality $|\nabla_xf|>1-\tfrac1n$.
+Apply \ref{ex:semicontinuous-grad:>s} to show that $S_n$ is open.
+Choose a point $q\ne p$, observe that $|\nabla_xf|=1$ for any point $x\in\left]pq\right[$.
+Conclude that $S_n$ is dense in $\spc{L}$.
+Observe and use that $S=\bigcap_nS_n$.
+
+\parit{\ref{SHORT.ex:grad-dist:lin}+\ref{SHORT.ex:grad-dist:|grad|=1}.}
+Apply \ref{ex:-u}.
 
 \parbf{\ref{ex:tangent=Em}.}
+Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dots,p_n$ there is a G-delta dense set of points $x$ such that $\Lin_x\ni \dir x{p_i}$ for every $i$.
+???
+
+
 
 \parbf{\ref{ex:dim=1}.}
 

@@ -34,9 +34,7 @@ The last statement follows since
 $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
 \qeds
 
-Note that \ref{ex:distfun-semiconcave} implies the following.
-
-\begin{thm}{Observation}\label{ex:busemann-CBB}
+\begin{thm}{Exercise}\label{ex:busemann-CBB}
 Any Busemann function on a geodesic $\Alex{0}$ space is concave.
 \end{thm}
 
@@ -45,6 +43,13 @@ Any Busemann function on a geodesic $\Alex{0}$ space is concave.
 A \index{line}\emph{line} is a distance-preserving map
 from $\RR$ to a metric space.
 In other words, a line is a geodesic defined on the real line $\RR$.
+
+\begin{thm}{Exercise}\label{ex:bus+bus}
+Let $\gamma$ be a line in a metric space $\spc{X}$.
+Show that for any point $x$ we have
+\[\bus_+(x)+\bus_-(x)\ge 0\]
+where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lines $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$ respectively.
+\end{thm}
 
 
 Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
@@ -131,9 +136,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 According to \ref{ex:busemann-CBB}, 
 both functions $\bus_\pm$ are concave.
 
-Fix $x\in \spc{L}$.
-Since $\gamma$ is a line, we have 
-$\bus_+(x)+\bus_-(x)\ge0$.
+By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{L}$.
 On the other hand, by \ref{comp-kappa}, 
 $f(t)=\distfun_x^2\circ\gamma(t)$ 
 is $2$-concave.
@@ -186,6 +189,21 @@ Consider the map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto 
 Note that $h$ is onto.
 Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
+
+Recall that according our definition the real line $\RR$ is a $\CBB(1)$ space.
+However most of geodesic $\CBB(1)$ spaces have diameter at most $\pi$;
+see \ref{ex:RisCBB(1)}.
+
+\begin{thm}{Exercise}\label{ex:cone-CBB}
+Suppose $\spc{X}$ is a complete geodesic space.
+Show that $\Cone\spc{X}$ is $\CBB(0)$ if and only if $\spc{X}\iso\Susp^k\spc{Y}$
+for some integer $k\ge 0$ and a geodesic $\CBB(1)$ space $\spc{Y}$ such that $\dist{x}{y}{}<\pi$ for any $x,y\in\spc{Y}$.
+
+???
+
+(For example, if $\spc{Y}=\emptyset$, then $\spc{X}\iso \mathbb{S}^k$;
+if $\spc{Y}$ is a one-point space, then $\spc{X}$ is a hemisphere.)
+\end{thm}
 
 \section{Comments}
 
@@ -244,9 +262,6 @@ For $p=0$, the tangent space $\T_p$ can be canonically identified with $\spc{L}$
 If $y>0$, then $u=(x,y)\in \T_p$ has many polar vectors;
 it includes $u^*=(-x,0)$ which is provided by \ref{cor:polar},
 but the vector $w=(-x,y)$ is polar as well.
-
-In this case, $w$ is the only polar vector with the same magnitude.
-If the dimension is finite, then Milka's lemma guarantees the existence of such a polar vector.
 \end{thm}
 
 \parit{Proof of \ref{lem:minus-sum}.}
