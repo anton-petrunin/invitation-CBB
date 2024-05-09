@@ -541,20 +541,63 @@ More generally, if a sequence of geodesic $\CBB(\kappa)$ spaces $\spc{L}_1,\spc{
 then $\partial \spc{L}_n$ equipped with induced length metric converge to  $\partial \spc{L}_\infty$.
 This statement is a partial case of theorem about extremal subsets \cite[1.2]{petrunin1997}.
 
-\parbf{\ref{ex:GH-doubling}.}
+\parbf{\ref{ex:liberman+milka}}; \ref{SHORT.ex:liberman+milka:liberman}.
+By \ref{ex:liberman}, the function $f_p\:t\mapsto \distfun_p\circ\gamma(t)$ is semiconcave for any $p\in K$.
+In particular, one-sided derivatives $f_p^+(t)$ are defined for every $t$.
 
-\parbf{\ref{ex:arm-nonconvex}.}
+Given $x=\gamma(t)$, choose three points $p_1,p_2,p_3\in K$ in general position;
+that is, the four points $x,p_1,p_2,p_3$ do not lie in one plane.
+Observe that distance functions $\distfun_{p_i}$ give smooth coordinates in a neighborhood of $x$.
+From above the functions $f_{p_i}$ have one-sided derivatives at $t$.
+Since the coordinates are smooth we get that $\gamma^+(t)$ is defined as well.
 
-\parbf{\ref{ex:cauchy}.}
+\parit{\ref{SHORT.ex:liberman+milka:milka}.}
+If the plane $py_1y_2$ supports $K$, then 
+$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_\Sigma$.
+In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
 
-\parbf{\ref{ex:a<a}.}
+Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
+Choose a geodesic $[y_1y_2]_W$;
+note that it contains a point of $K$, say $z$.
+Now consider one parameter family of points 
+$y_i(t)\df \gamma(t)+\gamma^+(t)\cdot (1-t)\cdot \dist{p}{x_i}{\Sigma}$.
+Note that this family is not continuous.
 
-\parbf{\ref{ex:disc-bend}.}
+Show that for any point $p\in K$ the function $t\mapsto \dist{p}{\gamma_i(t)}{\EE^3}$ is nonincreasing.
+Conclude that the function $t\mapsto \dist{p}{\gamma_i(t)}{W}$ is nonincreasing for any $p\in\Sigma$.
+Therefore, 
+\begin{align*}
+\dist{y_1}{y_2}{W}
+&=\dist{y_1(0)}{y_2(0)}{W}=
+\\
+&=\dist{y_1(0)}{z}{W}+\dist{y_2(0)}{z}{W}\ge
+\\
+&\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge 
+\\
+&\ge\dist{x_1}{x_2}{\Sigma}.
+\end{align*}
+The last inequality follows since the closest point projection $W\to\Sigma$ is short.
 
-\parbf{\ref{ex:octahedron}.}
+It remains to consider the case when the plane $py_1y_2$ does not support $K$,
+and $[y_1y_2]_{\EE^3}$ does not intersect $K$.
+In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that lies in the solid triangle 
+$py_1y_2$ and contains its vertex $p$.
 
-\parbf{\ref{ex:disc}.}
+Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches $F$.
+Denote by $x_1'\in [px_1]_{\Sigma}$ and $x_2'\in [px_2]_{\Sigma}$ the corresponding points;
+that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}\Sigma$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}\Sigma$.
+From above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}\Sigma$;
+in other words, 
+\[\angk p{y_1'}{y_2'}\ge \angk p{x_1'}{x_2'};\]
+here we think that $[p{y_1'}{y_2'}]$ is a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ is a triangle in $\Sigma$.
+Note that 
+\[\angk p{y_1'}{y_2'}=\angk p{y_1}{y_2}
+\quad\text{and}\quad
+\angk p{x_1}{x_2}\le \angk p{x_1'}{x_2'};
+\]
+the second inequality follows from \ref{ex:noncreasing}.
+Hence the remaining case follows.
 
-\parbf{\ref{pr:K-P-simmetry}.}
+\parit{Comments.} Part~\ref{SHORT.ex:liberman+milka:liberman} was originally proved by Joseph Liberman \cite{liberman}; the proof of \ref{ex:liberman} is a generalized version of the so-called Liberman lemma --- the main tools in studying geodesics on convex surfaces.
 
-%\parbf{\ref{}.}
+Part~\ref{SHORT.ex:liberman+milka:milka} is a result of Anatolii Milka \cite[Theorem 2]{milka1982}.

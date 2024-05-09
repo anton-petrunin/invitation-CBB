@@ -1,6 +1,69 @@
 \chapter{Limit spaces}\label{chap:lim}
 
+\section{Hausdorff convergence}
+
+\begin{thm}{Definition}\label{def:gen-Haus-conv}
+Let $A_1,A_2,\dots$ be a sequence of closed sets in a metric space $\spc{X}$.
+We say that the sequence $A_n$ \emph{converges} to a closed set $A_\infty$ in the \emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
+$\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
+\end{thm}
+
+For example, suppose $\spc{X}$ is the Euclidean plane and $A_n$ is the circle with radius $n$ and center at the point $(0,n)$; it converges to the $x$-axis.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-415}
+\end{figure}
+
+Further, consider the sequence of one-point sets $B_n=\{(n,0)\}$ in the Euclidean plane.
+It converges to the empty set;
+indeed, for any point $x$ we have $\distfun_{B_n}(x)\to\infty$ as $n\to \infty$ and $\distfun_{\emptyset}(x)= \infty$ for any~$x$.
+
+The following exercise is an extension of the so-called Blaschke selection theorem to our version of Hausdorff convergence.
+
+\begin{thm}{Exercise}\label{ex:generalized-selection}
+Let $\spc{X}$ be a proper metric space
+and $A_1,A_2,\dots$ be a sequence of closed sets in~$\spc{X}$.
+Show that the sequence  $A_1,A_2,\dots$ has a convergent subsequence in the sense of Hausdorff.
+\end{thm}
+
 \section{Gromov--Hausdorff convergence}
+
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Suppose that there is a metric on the disjoint union 
+\[\bm{X}=\bigsqcup_{n\in \NN\cup\{\infty\}} \spc{X}_n\] 
+that satisfies the following property:
+
+\begin{thm}{Property}\label{propery:GH}
+The restriction of metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, 
+and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
+\end{thm}
+
+In this case we say that the metric on $\bm{X}$ \textit{defines} a \emph{convergence} $\spc{X}_n\z\GHto \spc{X}_\infty$ in the \emph{sense of Gromov--Hausdorff}.
+This metric makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
+
+A limit space for this convergence is not uniquely defined.
+For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
+The first convergence is evident and the second could be guessed from the diagram.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-500}
+\end{figure}
+
+Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $\spc{X}_n\Hto \spc{X}_\infty$ and $p_n\to p_\infty$.
+For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, while $(\spc{X}_n,p_n)=(\RR_+,n)$ converges to $(\RR,0)$.
+
+The pointed convergence works nicely for proper metric spaces;
+the following theorem is an analog of Gromov's selection theorem for this convergence.
+
+\begin{thm}{Theorem}\label{thm:pointed-gromov-compactness}%
+Let $\bm{Q}$ be a set of isometry classes of pointed proper metric spaces.
+Assume that for any $R>0$, the $R$-balls in the spaces centered at the marked points form a uniformly totally bounded family of spaces.
+Then $\bm{Q}$ is precompact with respect to the pointed Gromov--Hausdorff convergence. 
+\end{thm}
 
 In this section, we cook up a metric space out of all compact metric spaces.
 More precisely, we want to define the so-called  Gromov--Hausdorff metric on the set of \textit{isometry classes} of compact metric spaces.
@@ -76,7 +139,8 @@ Show that geodesic spaces form a closed subset in~$\GH$.
 
 \begin{thm}{Exercise}\label{ex:GHto-tangent}
 Let $p$ be a point in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
-Show that $(\lambda\cdot \spc{L},p)\to (\T_p,0)$ in the sense of pointed Gromov--Hausdorff convergence.
+Show that there is a covergence $(\lambda\cdot \spc{L},p)\z\GHto (\T_p,0)$ as $\lambda\to\infty$.
+Moreover, ???
 \end{thm}
 
 \section{Survival of curvature bounds}

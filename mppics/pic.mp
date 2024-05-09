@@ -325,6 +325,36 @@ label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector
 label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
 endfig;
 
+beginfig(415)
+save u,p;
+path p[];
+u:=1cm;
+
+p1=circle((0,1)*u,1*u);
+p2=circle((0,2)*u,2*u) cutafter ((4,2)*u--(-4,2)*u);
+p3=circle((0,3)*u,3*u) cutafter ((4,2)*u--(-4,2)*u);
+p4=circle((0,4)*u,4*u) cutafter ((4,2)*u--(-4,2)*u);
+p5=circle((0,5)*u,5*u) cutafter ((5,2)*u--(-5,2)*u);
+
+draw p1;
+draw p2;
+draw p3;
+draw p4;
+draw p5;
+
+draw (-10,0)*u--(10,0)*u;
+
+clip currentpicture to (-4,-.5)*u--(4,-.5)*u--(4,2)*u--(-4,2)*u--cycle;
+
+whitelabel(btex $A_1$ etex, point 1 of p1);
+whitelabel(btex $A_2$ etex, point 4 of p2);
+whitelabel(btex $A_3$ etex, point 4 of p3);
+whitelabel(btex $A_4$ etex, point 4 of p4);
+whitelabel(btex $A_5$ etex, point 4 of p5);
+label.rt(btex $A_\infty$ etex, (4,0)*u);
+endfig;
+
+
 beginfig(500) 
 
 save u,v,n;

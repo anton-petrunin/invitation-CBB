@@ -10,8 +10,10 @@ We assume that the reader is familiar with the following topics in metric geomet
 recall that a metric space is \emph{proper} if all its closed balls (with finite radius) are compact.
 \item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
+\item Hausdorff and Gromov--Hausdorff convergence.
+These are defined in Lecture \ref{chap:lim}, but it is better to have prior acquaintance with these convergences.
 \end{itemize}
-An introductory part in \cite{burago-burago-ivanov} or \cite{petrunin2023pure} is more than sufficient.
+These topics are treated in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 Occasionally, we use some topology; any introductory text in algebraic topology should be sufficient.
 
 \section{Notations}
@@ -48,12 +50,11 @@ If for any $\eps>0$ and any pair of points $x,y\in\spc{X}$, there is a path $\al
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
 then $\spc{X}$ is called a \index{length space}\emph{length space} and the metric on $\spc{X}$ is called a \index{length metric}\emph{length metric}.\label{page:length metric}
 
-Evidently, any geodesic space is a length space.
-
-\begin{thm}{Exercise}\label{ex:compact-length}
-Show that any proper length space is geodesic.
+\begin{thm}{Exercise}\label{ex:compact+connceted}
+Let $\spc{X}$ be a complete length space.
+Show that for any compact subset $K\subset\spc{X}$
+there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
 \end{thm}
-
 
 \parbf{Induced length metric.}
 Directly from the definition, it follows that if $\alpha\:[0,1]\to\spc{X}$ is a path from $x$ to $y$ 
@@ -104,10 +105,10 @@ A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed pa
 
 A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 
-\begin{thm}{Exercise}\label{ex:compact+connceted}
-Let $\spc{X}$ be a complete length space.
-Show that for any compact subset $K\subset\spc{X}$
-there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
+Evidently, any geodesic space is a length space.
+
+\begin{thm}{Exercise}\label{ex:compact-length}
+Show that any proper length space is geodesic.
 \end{thm}
 
 \section{Menger's lemma}
