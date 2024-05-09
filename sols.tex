@@ -6,6 +6,8 @@
 
 \parbf{\ref{ex:compact=>complete}.}
 
+\parbf{\ref{ex:menger}.}
+
 \parbf{\ref{ex:k-><mono}.}
 
 \parbf{\ref{ex:angkK}.}
@@ -23,8 +25,6 @@ Hence
 --- a contradiction.
 
 \parbf{\ref{ex:first-var}.}
-
-\parbf{\ref{ex:surface-covergence}.}
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
 The definition of $\CBB$ spaces (\ref{def:CBB}) reduces our question to the following.
@@ -442,6 +442,49 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 \parbf{\ref{pr:tetrahedron}.}
 
 \parbf{\ref{ex:poly-CBB}.}
+
+\parbf{\ref{ex:surface-covergence}.}
+We will use that the closest-point projection form the Euclidean space to a convex body is \index{short map}\emph{short};
+that is, distance-nonexpanding \cite[13.3]{petrunin-zamora}.
+
+Assume $K_\infty$ is nondegenerate.
+Without loss of generality, we may assume that 
+\[\cBall(0,r)\subset K_\infty\subset\cBall(0,1)\]
+for some $r>0$.
+Note that there is a sequence $\eps_n\to 0$ such that 
+\[ K_n\subset(1+\eps_n)\cdot K_\infty
+\quad\text{and}\quad
+K_\infty\subset(1+\eps_n)\cdot K_n\]
+for each large $n$.
+
+Given $x\in K_n$, denote by $g_n(x)$ the closest-point projection of $(1+\eps_n)\cdot x$ to $K_\infty$.
+Similarly, given $x\in K_\infty$, denote by $h_n(x)$ the closest point projection of $(1+\eps_n)\cdot x$ to $K_n$.
+Note that 
+\begin{align*}
+\dist{g_n(x)}{g_n(y)}{}&\le (1+\eps_n)\cdot\dist{x}{y}{}
+\intertext{and}
+\dist{h_n(x)}{h_n(y)}{}&\le (1+\eps_n)\cdot\dist{x}{y}{}.
+\end{align*}
+
+Denote by $\Sigma_\infty$ and $\Sigma_n$ the surface of $K_\infty$ and $K_n$ respectively. 
+The above inequlities imply 
+\begin{align*}
+\dist{g_n(x)}{g_n(y)}{\Sigma_\infty}&\le (1+\eps_n)\cdot\dist{x}{y}{\Sigma_n}
+\intertext{for any $x,y\in \Sigma_n$, and}
+\dist{h_n(x)}{h_n(y)}{\Sigma_n}&\le (1+\eps_n)\cdot\dist{x}{y}{\Sigma_\infty}.
+\end{align*}
+for any $x,y\in \Sigma_\infty$.
+
+Since the closest-point projection cannot increase the length of curve, we also get
+\begin{align*}
+\dist{x}{h_n\circ g_n(x)}{\Sigma_\infty}&\le 10\cdot \eps_n
+\\
+\dist{y}{g_n\circ h_n(y)}{\Sigma_n}&\le 10\cdot \eps_n.
+\end{align*}
+for all large $n$.
+Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
+
+??? degenerate case???
 
 \parbf{\ref{ex:GH-doubling}.}
 

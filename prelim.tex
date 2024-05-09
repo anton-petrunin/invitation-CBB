@@ -2,9 +2,16 @@
 
 \chapter{Preliminaries}\label{chap:prelim}
 
-We will assume that the reader is familiar with metric spaces as well as with their 
-compactness and completeness,
+\section{Prerequisite}
+
+We assume that the reader is familiar with the following topics in metric geometry:
+\begin{itemize}
+\item Compactness and completeness, 
 including the completion.
+\item Curves, semicontinuity of length and rectifiability.
+\end{itemize}
+An introductory part in \cite{burago-burago-ivanov} or \cite{petrunin2023pure} is more than sufficient.
+Occasionally, we use some topology; any introductory text in algebraic topology should be sufficient.
 
 \section{Notations}
 
@@ -23,58 +30,8 @@ that is,
 in particular $\MM^n(-1)=\HH^n$.
 \end{itemize}
 
-\section{Length and length spaces}\label{sec:length}
+\section{Length spaces}\label{sec:length}
 
-The definitions stated in the previous section can be applied to any metric space.
-However, interesting things happen only for the so-called \textit{geodesic} or at least \textit{length spaces} that we  are going to define now.
-
-\parbf{Length.}
-A \index{curve}\emph{curve} is defined as a continuous map from a real interval $\II$ to a metric space.
-If $\II=[0,1]$, then the curve is called a \index{path}\emph{path}.
-
-\begin{thm}{Definition}
-Let $\spc{X}$ be a metric space and
-$\alpha\: \II\to \spc{X}$ be a curve.
-We define the \index{length}\emph{length} of $\alpha$ as 
-\[
-\length \alpha \df \sup_{t_0\le t_1\le\ldots\le t_n}\sum_i \dist{\alpha(t_i)}{\alpha(t_{i-1})}{}.
-\]
-
-A curve $\alpha$ is called \index{rectifiable curve}\emph{rectifiable} if $\length \alpha<\infty$.
-\end{thm}
-
-The following theorem is assumed to be known;
-see \cite{petrunin2023pure,burago-burago-ivanov}.
-
-
-\begin{thm}{Theorem}\label{thm:length-semicont}
-Length is a lower semi-continuous with respect to the pointwise convergence of curves. 
-
-More precisely, assume that a sequence
-of curves $\gamma_n\:\II\to \spc{X}$ in a metric space $\spc{X}$ converges pointwise 
-to a curve $\gamma_\infty\:\II\to \spc{X}$;
-that is, for any fixed $t \in \II$ we have $\gamma_n(t)\z\to\gamma_\infty(t)$ as $n\to\infty$. 
-Then 
-$$\liminf_{n\to\infty} \length\gamma_n \ge \length\gamma_\infty.\eqlbl{eq:semicont-length}$$
-\end{thm}
-
-\begin{wrapfigure}{o}{20 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-100}
-\end{wrapfigure}
-
-Note that the inequality \ref{eq:semicont-length} might be strict.
-For example, the diagonal $\gamma_\infty$ of the unit square 
-can be  approximated by stairs-like
-polygonal curves $\gamma_n$
-with sides parallel to the sides of the square ($\gamma_6$ is on the picture).
-In this case
-\[\length\gamma_\infty=\sqrt{2}\quad
-\text{and}\quad \length\gamma_n=2\]
-for any $n$.
-
-\parbf{Length spaces.}
 Let $\spc{X}$ be a metric space.
 If for any $\eps>0$ and any pair of points $x,y\in\spc{X}$, there is a path $\alpha$ connecting $x$ to $y$ such that
 \[\length\alpha< \dist{x}{y}{}+\eps,\]
@@ -98,15 +55,10 @@ It is straightforward to check that $(x,y)\mapsto \yetdist{x}{y}{}$ is an \emph{
 that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$. 
 The metric $\yetdist{*}{*}{}$ is called the \index{induced length metric}\emph{induced length metric}.
 
-\begin{thm}{Exercise}\label{ex:compact+connceted}
-Let $\spc{X}$ be a complete length space.
-Show that for any compact subset $K\subset\spc{X}$
-there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:compact=>complete}
 Suppose $(\spc{X},\dist{*}{*}{})$ is a complete metric space.
-Show that $(\spc{X},\yetdist{*}{*}{})$ is complete.
+Show that $(\spc{X},\yetdist{*}{*}{})$ is complete;
+that is, any Cauchy sequence of points in $(\spc{X},\yetdist{*}{*}{})$ converges in $(\spc{X},\yetdist{*}{*}{})$.
 \end{thm}
 
 Let $A$ be a subset of a metric space $\spc{X}$.
@@ -118,9 +70,8 @@ In other words, $\dist{*}{*}{A}$ denotes the induced length metric on the subspa
 (The notation $\dist{*}{*}{A}$ conflicts with the previously defined notation for distance $\dist{x}{y}{\spc{X}}$ in a metric space $\spc{X}$.
 However, most of the time we will work with ambient length spaces where the meaning will be unambiguous.)
 
-\section{Geodesics and triangles}
+\section{Geodesics}
 
-\parbf{Geodesics.}
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$} a real interval. 
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
@@ -142,14 +93,11 @@ A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed pa
 
 A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 
-\parbf{Triangles.}
-Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
-$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
-
-Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
-$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
-Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
-If we write $\trig p q r$, it means that we have chosen such a triangle.
+\begin{thm}{Exercise}\label{ex:compact+connceted}
+Let $\spc{X}$ be a complete length space.
+Show that for any compact subset $K\subset\spc{X}$
+there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
+\end{thm}
 
 \section{Menger's lemma}
 
@@ -177,19 +125,37 @@ for every odd integer $k$ such that $0<\tfrac k{2^n}<1$,
 as a midpoint of the already defined
 $\alpha(\tfrac{k-1}{2^n})$ and $\alpha(\tfrac{k+1}{2^n})$.
 
-
 This way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
 Moreover, $\alpha$ has Lipschitz constant $\dist{x}{y}{}$.
 Since $\spc{X}$ is complete, the map $\alpha$ can be extended continuously to $[0,1]$.
 Moreover,
-\[\begin{aligned}
-\length\alpha&\le \dist{x}{y}{}.
-\end{aligned}
-\eqlbl{eq:eps-midpoint}
+\[
+\length\alpha\le \dist{x}{y}{}.
 \]
 \qedsf
 
-\section{Model triangles and angles}
+\begin{thm}{Exercise}\label{ex:menger}
+Let $\spc{X}$ be a complete metric space.
+Assume that for any pair of points $x,y\in \spc{X}$, 
+there is an \emph{almost midpoint};
+that is, given $\eps>0$, there is a point $z$ such that 
+\[\dist{x}{z}{}<\tfrac12\cdot\dist{x}{y}{}+\eps 
+\quad\text{and}\quad
+\dist{y}{z}{}<\tfrac12\cdot\dist{x}{y}{}+\eps.\]
+Show that $\spc{X}$ is a length space.
+\end{thm}
+
+
+\section{Triangles and model tangles}
+
+\parbf{Triangles.}
+Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+
+Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+$\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
+Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
+If we write $\trig p q r$, it means that we have chosen such a triangle.
 
 
 \parbf{Model triangles.}
@@ -331,79 +297,4 @@ Show that
 
 \end{thm}
 
-\section{Gromov--Hausdorff convergence}
 
-In this section, we cook up a metric space out of all compact metric spaces.
-More precisely, we want to define the so-called  Gromov--Hausdorff metric on the set of \textit{isometry classes} of compact metric spaces.
-(Being isometric is an equivalence relation, 
-and an \index{isometry class}\emph{isometry class} is an equivalence class with respect to this relation.)
-
-The obtained metric space will be denoted by $\GH$.
-Given two metric spaces $\spc{X}$ and $\spc{Y}$,
-denote by $[\spc{X}]$ and $[\spc{Y}]$ their isometry classes;
-that is, $\spc{X}'\in [\spc{X}]$ if and only if $\spc{X}'\iso \spc{X}$.
-Pedantically, the Gromov--Hausdorff distance from $[\spc{X}]$ 
-to $[\spc{Y}]$ should be denoted as $|[\spc{X}]-[\spc{Y}]|_{\GH}$;
-but we will write it as $|\spc{X}\z-\spc{Y}|_{\GH}$ and say (not quite correctly) that 
-\textit{$|\spc{X}\z-\spc{Y}|_{\GH}$ is the Gromov--Hausdorff distance from  $\spc{X}$ 
-to  $\spc{Y}$}.
-In other words, from now on the term \textit{metric space} might also stand for its \textit{isometry class}.
-
-The metric on $\GH$ is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
-Here is a formal definition:
-
-\begin{thm}{Definition}\label{def:GH}
-The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
-is defined by the following
-relation.
- 
-Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
-space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$
-respectively such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
-(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
-\end{thm}
-
-\begin{thm}{Theorem}\label{thm:GH-is-a-metric}
-The set of isometry classes of compact metric spaces equipped with Gromov--Hausdorff metric forms a metric space (which is denoted by $\GH$).
-
-In other words, for arbitrary compact metric spaces $\spc{X}$, $\spc{Y}$, and $\spc{Z}$ the following conditions hold
-
-\begin{subthm}{GH-1} $|\spc{X}-\spc{Y}|_{\GH}\ge 0$;
-\end{subthm}
-
-\begin{subthm}{GH-2} $|\spc{X}-\spc{Y}|_{\GH}=0$ if and only if $\spc{X}$ is isometric to $\spc{Y}$;
-\end{subthm}
-
-\begin{subthm}{GH-3} $|\spc{X}-\spc{Y}|_{\GH}=|\spc{Y}-\spc{X}|_{\GH}$;
-\end{subthm}
-
-\begin{subthm}{GH-4} $|\spc{X}-\spc{Y}|_{\GH}+|\spc{Y}-\spc{Z}|_{\GH}\ge |\spc{X}-\spc{Z}|_{\GH}$.
-\end{subthm}
-\end{thm}
-
-Note that \ref{SHORT.GH-1}, \ref{SHORT.GH-3},
-and the if part of \ref{SHORT.GH-2} follow directly from \ref{def:GH}.
-Parts \ref{SHORT.GH-4} and the only-if part of \ref{SHORT.GH-2} are not hard but require some work.
-Complete proofs of these and the following statement  are given in \cite[Lecture 5
-]{petrunin2023pure}.
-
-\begin{thm}{Lemma}\label{lem:GH-complete}
-The space $\GH$ is complete.
-\end{thm}
-
-The Gromov--Hausdorff metric defines Gromov--Hausdorff \index{Gromov--Hausdorff convergence}\emph{convergence}.
-Namely, a sequence of compact metric spaces $\spc{X}_n$ converges to compact metric spaces $\spc{X}_\infty$ in the sense of Gromov--Hausdorff if 
-\[\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0\quad\text{as}\quad n\to\infty.\]
-
-This convergence is more important than the metric ---
-in all applications, we use only the topology on $\GH$
-and we do not care about the particular value of the Gromov--Hausdorff distance between spaces.
-
-\begin{thm}{Exercise}\label{ex:surface-covergence}
-Let $K_\infty,K_1,K_2,\dots$ be convex bodies in $\EE^3$ (compact convex sets with nonempty interiors).
-Denote by $S_n$ the surface of $K_n$ with induced length metric.
-Suppose $K_n\z\to K_\infty$ in the sense of Hausdorff.
-Show that $S_n\to S_\infty$ in the sense of Gromov--Hausdorff.
-\end{thm}
-
-+ ??? noncomact case + hausdorff approximations.

@@ -1,6 +1,6 @@
 \chapter{Surface of convex body}\label{chap:convex-body}
 
-Recall that (for us) a \emph{convex body} is a compact convex subset in $\EE^3$;
+Let us define a \emph{convex body} as a compact convex subset in $\EE^3$;
 we assume that it does not lie in a line but it might degenerate to a plane figure.
 
 Suppose $B$ is a nondegenerate convex body; that is, it has nonempty interior.
@@ -8,21 +8,22 @@ Then the \emph{surface} of $B$ is defined as its boundary $\partial B$ equipped 
 
 If a convex body degenerates to a plane convex figure, say $F$, then its surface is defined as a \emph{doubling} of $F$ along its boundary;
 that is, two copies of $F$ glued along the boundary $\partial F$.
-Intuitively, one can regard these copies as different sides of $F$ --- we live on its surface and to get from one side to the other one has to cross the boundary.
+Intuitively, one can regard these copies as different sides of $F$ --- we live on $F$ and to get from one side to the other one has to cross the boundary.
 
 \begin{thm}{Exercise}\label{ex:surf-S2}
 Show that surface of a convex body is homeomorphic to $\SSS^2$.
 \end{thm}
 
 In this lecture, we will prove that \textit{surface of a convex body is $\CBB(0)$.}
-The latter, together with the exercise, gives the only-if part in the main part of the embedding theorem (\ref{thm:alexandrov+pogorelov}). 
 
 
 
-\section{Convex polyhedra}
+\section{Surface of convex polyhedra}
 
-Recall that a \emph{convex polyhedron} is a convex hull of a finite set of points.
-Extremal points of a convex polyhedron are called its \emph{vertices}.
+Recall that a \emph{convex polyhedron} $P$ is a convex hull of a finite set of points
+that called its \emph{vertices}.
+We always assume that the vertices are extremal points of polyhedron;
+in other words the set of vertices of $P$ is the minimal set of points such that its convex hull is $P$.
 As for convex bodies, our convex polyhedra might degenerate to a plane polygon, but we assume that it does not belong to a line.
 
 Observe that a surface, say $\Sigma$, of a convex polyhedron $P$ admits a triangulation such that each triangle is isometric to a plane triangle.
@@ -46,9 +47,12 @@ Then, the total angle around a vertex in $\Sigma$ cannot exceed $2\cdot\pi$.
 \end{thm} 
 
 
-In the proof, we will use the following exercise which is the triangle inequality for angles (or the spherical triangle inequality); it easily follows from \ref{claim:angle-3angle-inq}.
+In the proof, we will need the triangle inequality for angles (or the spherical triangle inequality).
+A proof of this statement is given in the classical geometry textbook by Andrei Kiselyov \cite[§ 47]{kiselev-stereo-en},
+it also follows from \ref{claim:angle-3angle-inq}.
+(In fact our proof of \ref{claim:angle-3angle-inq} is a straightforward generalization of the argument in \cite[§ 47]{kiselev-stereo-en}.)
 
-\begin{thm}{Exercise}\label{ex:angle-triangle}
+\begin{thm}{Spherical triangle inequality}\label{ex:angle-triangle}
 Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
 Denote by $\theta_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
 Show that
@@ -56,11 +60,11 @@ $$\theta_{1,3}\le \theta_{1,2}+\theta_{2,3}$$
 and in case of equality, the vectors $w_1,w_2,w_3$ lie in a plane.
 \end{thm}
 
-\parit{Proof.}
+\parit{Proof of \ref{clm:total-angle}.}
 Consider the intersection of $P$ with a small sphere centered at~$p$;
 it is a convex spherical polygon, say $F$.
 Applying rescaling we may assume that the sphere has unit radius.
-We need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
+Then we need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
 
 Note that $F$ lies in a hemisphere, say $H$.
 Moreover, there is a decreasing sequence 
@@ -86,7 +90,7 @@ that is, the inequality in the claim is strict.
 Show that geodesics on a surface of convex polyhedron do not pass thru its essential vertices.
 \end{thm}
 
-\section{Surface of convex polyhedron}
+\section{Curvature}
 
 Let $p$ be a vertex of a polyhedron.
 If $\theta_p$ is the total angle around $p$, then the value $2\cdot \pi -\theta_p$ is called the \emph{curvature} of the polyhedral surface at $p$;
@@ -125,7 +129,8 @@ Further, by \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not conta
 Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
 Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
 Therefore a small neighborhood of $U\supset [px]$ can be unfolded on a plane;
-denote this map by $z\mapsto \tilde z$.
+that is, there is an injective length-preserving map $z\mapsto \tilde z$
+of $U$ into the Euclidean plane.
 Note that this way we map part of $\gamma$ in $U$ to a line segment.
 Let 
 \[\tilde f(t)\df\tfrac12\cdot\distfun_{\tilde p}^2\circ\tilde \gamma(t).\]
@@ -144,106 +149,31 @@ that is, show that if a poyhedral surface is $\CBB(0)$, then it has nonnegative 
 
 \section{Surface of convex body}
 
-\begin{thm}{Lemma}\label{lem:H>GH}
-Let $K_1,K_2,\dots$ be a sequence of convex bodies that converges to $K_\infty$ in the sense of Hausdorff.
-Assume $K_\infty$ is nondegenerate.
-Then the surface of $K_n$ converges to the surface of $K_\infty$ in the sense of Gromov--Hausdorff.
+\begin{thm}{Advanced exercise}\label{ex:surface-covergence}
+Let $K_\infty,K_1,K_2,\dots$ be convex bodies in $\EE^3$.
+Denote by $S_n$ the surface of $K_n$ with induced length metric.
+Suppose $K_n\z\to K_\infty$ in the sense of Hausdorff.
+Show that $S_n\to S_\infty$ in the sense of Gromov--Hausdorff.
 \end{thm}
-
-In the following proof we use that the closest-point projection form the Euclidean space to a convex body is \index{short map}\emph{short};
-that is, distance-nonexpanding \cite[12.3]{petrunin-zamora}.
-
-\parit{Proof.}
-Without loss of generality, we may assume that 
-\[\cBall(0,r)\subset K_\infty\subset\cBall(0,1)\]
-for some $r>0$.
-Note that there is a sequence $\eps_n\to 0$ such that 
-\[ K_n\subset(1+\eps_n)\cdot K_\infty
-\quad\text{and}\quad
-K_\infty\subset(1+\eps_n)\cdot K_n\]
-for each $n$.
-
-Given $x\in K_n$, denote by $g_n(x)$ the closest-point projection of $(1+\eps_n)\cdot x$ to $K_\infty$.
-Similarly, given $x\in K_\infty$, denote by $h_n(x)$ the closest point projection of $(1+\eps_n)\cdot x$ to $K_n$.
-Note that 
-\begin{align*}
-\dist{g_n(x)}{g_n(y)}{}&\le (1+\eps_n)\cdot\dist{x}{y}{}
-\intertext{and}
-\dist{h_n(x)}{h_n(y)}{}&\le (1+\eps_n)\cdot\dist{x}{y}{}.
-\end{align*}
-
-Denote by $\Sigma_\infty$ and $\Sigma_n$ the surface of $K_\infty$ and $K_n$ respectively. 
-The above inequlities imply 
-\begin{align*}
-\dist{g_n(x)}{g_n(y)}{\Sigma_\infty}&\le (1+\eps_n)\cdot\dist{x}{y}{\Sigma_n}
-\intertext{for any $x,y\in \Sigma_n$, and}
-\dist{h_n(x)}{h_n(y)}{\Sigma_n}&\le (1+\eps_n)\cdot\dist{x}{y}{\Sigma_\infty}.
-\end{align*}
-for any $x,y\in \Sigma_\infty$.
-Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
-\qeds
 
 \begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
 The surface of a nondegenerate convex body is $\CBB(0)$.
 \end{thm}
 
 Note that any convex body is a Hausdorff limit of a sequence of convex polyhedra.
-Therefore, the proposition follows from \ref{prop:poly-CBB}, \ref{lem:H>GH}, and the following claim.
+Therefore, the proposition follows from \ref{prop:poly-CBB}, \ref{ex:surface-covergence}, and \ref{thm:CBB-closed}.
 
-\begin{thm}{Claim}
-A Gromov--Hausdorff limit of $\CBB(0)$ spaces is $\CBB(0)$.
+\section{Comments}
 
-\end{thm}
+Note that \ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that surface of convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
+The selbrated theorem of Alexandrov states that the converse also holds;
+that is any geodesic $\CBB(0)$ metric on the sphere is isometric to a surface of convex body.
+Moreover this convex body is unique up to congruence.
+The last result is due to Alexei Pogorelov \cite{pogorelov}.
 
-Despite its simplicity, this claim is the main source of applications of Alexandrov geometry.
+Originally, Alexandrov proved the statement for polyhedral metrics on the sphere
+and then used \ref{ex:surface-covergence} to extend the result to arbitrary geodesic $\CBB(0)$ metric on the sphere.
 
-
-\parit{Proof.}
-Let $\spc{L}_\infty$ be Gromov--Hausdorff limit of $\CBB(0)$ spaces $\spc{L}_1,\spc{L}_2,\dots$
-
-Choose a quadruple of points $p,x,y,z$ in $\spc{L}_\infty$.
-From convergence we may choose a sequence of quadruples $p_n,x_n,y_n,z_n$ in $\spc{L}_n$
-that converge to $p,x,y,z$;
-in particular, each of six distances between pairs of $p_n,x_n,y_n,z_n$
-converges to the corresponding distance between the pair of $p,x,y,z$.
-By $\CBB(0)$ comparison in $\spc{L}_n$, 
-\[\angk{p_n}{x_n}{y_n}
-+\angk{p_n}{y_n}{z_n}
-+\angk{p_n}{z_n}{x_n}
-\le 
-2\cdot\pi.\]
-Passing to the limit we get
-\[\angk{p}{x}{y}
-+\angk{p}{y}{z}
-+\angk{p}{z}{x}
-\le 
-2\cdot\pi.\]
-\qedsf
-
-Recall that surface of a degenerate convex body is defined as its doubling.
-More precisely, suppose $F$ is a convex plane figure.
-Consider product space $F\times\{0,1\}$ with semimetric defined by
-\[
-\dist{(x,i)}{(y,j)}{}=
-\begin{cases}
-\dist{x}{y}{}&\text{if}\ i=j
-\\
-\inf\set{\dist{x}{z}{}+\dist{y}{z}{}}{z\in\partial F}&\text{if}\ i\ne j
-\end{cases}
-\]
-Then the corresponding metric space is the doubling of $F$ along its boundary.
-
-
-\begin{thm}{Exercise}\label{ex:GH-doubling}
-Suppose $F_1,F_2,\dots$ is a sequence of convex plane figures that converges to $F_\infty$ in the sense of Hausdorff.
-Show that doublings of $F_n$ converge to the doubling of $F_\infty$ in the sense of Gromov--Hausdorff.
-
-Conclude that surfaces of degenerate convex bodies are $\CAT(0)$.
-\end{thm}
-
-Note that \ref{prop:conv-surf-CBB(0)} and \ref{ex:GH-doubling} imply that
-\textit{surface of a convex body is $\CBB(0)$;}
-so the only-if part in the main part of the embedding theorem (\ref{thm:alexandrov+pogorelov}) is proved.
 
 \begin{thm}{Advanced exercise}\label{ex:mklka}
 Let $\Sigma$ be the surface of a nondegenerate convex body $K\subset\EE^3$;

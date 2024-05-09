@@ -2,13 +2,17 @@
 
 \section{Velocity of curve}
 
-Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$;
-choose $p=\alpha(t_0)$.
-If for any choice of geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
+Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$.
+If for any choice of 
+geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
 converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right derivative}\emph{right derivative} of $\alpha$ at $t_0$; it will be denoted by $\alpha^+(t_0)$.
 In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
+
+The tangent vector $\dist px{}\cdot\dir px$ can be called \emph{logarithm} of $x$ at $p$;
+it is a tangent vector at $p$ of a geodesic path from $p$ to $x$.
+
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
 Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$.
@@ -29,7 +33,7 @@ Choose a constant-speed geodesic $\gamma$ that starts from $p$,
 such that the distance
 $s=\dist{\alpha^+(0)}{\gamma^+(0)}{\T_p}$
 is small.
-Observe that by the definition of differential,
+By the definition of differential,
 \[(f\circ\gamma)^+(0)=\dd_pf(\gamma^+(0)).\]
 
 By comparison and the definition of $\alpha^+$,
@@ -47,7 +51,7 @@ It follows that the needed identity holds up to error $2\cdot L\cdot s$.
 The statement follows since $s>0$ can be chosen arbitrarily.
 
 The same argument is applicable if in the place of $(f\circ\alpha)^+(0)$
-we use any limit of $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ as $\eps_n\to 0+$.
+we use any limit of $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ for a sequence $\eps_n\to 0+$.
 It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is defined and equals to $(\dd_pf)(\alpha^+(0))$.
 \qeds
 

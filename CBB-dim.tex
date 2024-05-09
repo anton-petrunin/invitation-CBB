@@ -1,10 +1,88 @@
 \chapter{Limit spaces}\label{chap:lim}
 
+\section{Gromov--Hausdorff convergence}
+
+In this section, we cook up a metric space out of all compact metric spaces.
+More precisely, we want to define the so-called  Gromov--Hausdorff metric on the set of \textit{isometry classes} of compact metric spaces.
+(Being isometric is an equivalence relation, 
+and an \index{isometry class}\emph{isometry class} is an equivalence class with respect to this relation.)
+
+The obtained metric space will be denoted by $\GH$.
+Given two metric spaces $\spc{X}$ and $\spc{Y}$,
+denote by $[\spc{X}]$ and $[\spc{Y}]$ their isometry classes;
+that is, $\spc{X}'\in [\spc{X}]$ if and only if $\spc{X}'\iso \spc{X}$.
+Pedantically, the Gromov--Hausdorff distance from $[\spc{X}]$ 
+to $[\spc{Y}]$ should be denoted as $|[\spc{X}]-[\spc{Y}]|_{\GH}$;
+but we will write it as $|\spc{X}\z-\spc{Y}|_{\GH}$ and say (not quite correctly) that 
+\textit{$|\spc{X}\z-\spc{Y}|_{\GH}$ is the Gromov--Hausdorff distance from  $\spc{X}$ 
+to  $\spc{Y}$}.
+In other words, from now on the term \textit{metric space} might also stand for its \textit{isometry class}.
+
+The metric on $\GH$ is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+Here is a formal definition:
+
+\begin{thm}{Definition}\label{def:GH}
+The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
+is defined by the following
+relation.
+ 
+Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$
+respectively such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
+(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:GH-is-a-metric}
+The set of isometry classes of compact metric spaces equipped with Gromov--Hausdorff metric forms a metric space (which is denoted by $\GH$).
+
+In other words, for arbitrary compact metric spaces $\spc{X}$, $\spc{Y}$, and $\spc{Z}$ the following conditions hold
+
+\begin{subthm}{GH-1} $|\spc{X}-\spc{Y}|_{\GH}\ge 0$;
+\end{subthm}
+
+\begin{subthm}{GH-2} $|\spc{X}-\spc{Y}|_{\GH}=0$ if and only if $\spc{X}$ is isometric to $\spc{Y}$;
+\end{subthm}
+
+\begin{subthm}{GH-3} $|\spc{X}-\spc{Y}|_{\GH}=|\spc{Y}-\spc{X}|_{\GH}$;
+\end{subthm}
+
+\begin{subthm}{GH-4} $|\spc{X}-\spc{Y}|_{\GH}+|\spc{Y}-\spc{Z}|_{\GH}\ge |\spc{X}-\spc{Z}|_{\GH}$.
+\end{subthm}
+\end{thm}
+
+Note that \ref{SHORT.GH-1}, \ref{SHORT.GH-3},
+and the if part of \ref{SHORT.GH-2} follow directly from \ref{def:GH}.
+Parts \ref{SHORT.GH-4} and the only-if part of \ref{SHORT.GH-2} are not hard but require some work.
+Complete proofs of these and the following statement  are given in \cite[Lecture 5
+]{petrunin2023pure}.
+
+\begin{thm}{Lemma}\label{lem:GH-complete}
+The space $\GH$ is complete.
+\end{thm}
+
+The Gromov--Hausdorff metric defines Gromov--Hausdorff \index{Gromov--Hausdorff convergence}\emph{convergence}.
+Namely, a sequence of compact metric spaces $\spc{X}_n$ converges to compact metric spaces $\spc{X}_\infty$ in the sense of Gromov--Hausdorff if 
+\[\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0\quad\text{as}\quad n\to\infty.\]
+
+This convergence is more important than the metric ---
+in all applications, we use only the topology on $\GH$
+and we do not care about the particular value of the Gromov--Hausdorff distance between spaces.
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Show that geodesic spaces form a closed subset in~$\GH$.
+\end{thm}
+
++ ??? noncomact case + hausdorff approximations.
+
+\begin{thm}{Exercise}\label{ex:GHto-tangent}
+Let $p$ be a point in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Show that $(\lambda\cdot \spc{L},p)\to (\T_p,0)$ in the sense of pointed Gromov--Hausdorff convergence.
+\end{thm}
 
 \section{Survival of curvature bounds}
 
 \begin{thm}{Theorem}\label{thm:CBB-closed}
-For any $\kappa\in\RR$, the $\CBB(\kappa)$ (and $\CAT(\kappa)$) spaces form a closed subset in $\GH$.
+For any $\kappa\in\RR$, the $\CBB(\kappa)$ spaces form a closed subset in $\GH$.
 \end{thm}
 
 \parit{Proof}.
@@ -15,14 +93,7 @@ By the definition of Gromov--Hausdorff convergence, we can choose a quadruple $p
 
 By the assumption, $\CBB(\kappa)$ comparison holds for each $p_n$, $x_n$, $y_n$, $z_n$.
 Passing to the limit, we get the $\CBB(\kappa)$ comparison for $p_\infty$,  $x_\infty$, $y_\infty$, $z_\infty$.
-
-The $\CAT(\kappa)$ case is nearly identical.
 \qeds
-
-\begin{thm}{Exercise}\label{ex:geod-closed}
-Show that geodesic spaces form a closed subset in~$\GH$.
-\end{thm}
-
 
 \begin{thm}{Exercise}\label{ex:dim-lim}
 Suppose that a sequence $\spc{L}_1,\spc{L}_2,\dots$ of compact geodesic $\CBB(0)$ space converges to $\spc{L}_\infty$.
@@ -41,7 +112,7 @@ This definition will be used mostly in $m$-dimensional complete geodesic $\CBB(\
 In this case, we may write $\vol B$ instead of $\vol_m B$.
 
 
-\begin{thm}{Bishop--Gromov inequality}
+\begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
 Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
 Suppose $\spc{L}=m<\infty$.
 Then 
@@ -54,9 +125,9 @@ is nonincreasing.
 
 \parit{Proof.}
 Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Let $s\:\spc{L}\to \T_p$ be defined by $s\:x\mapsto \gamma_x^+(0)$.
-By comparison, $s$ is distance-noncontracting.
-Note that $s$ maps $\oBall(p,R)_{\spc{L}}$ to $\oBall(0,R)_{\T_p}$.
+Let $\log_p\:\spc{L}\to \T_p$ be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
+By comparison, $\log_p$ is distance-noncontracting.
+Note that $\log_p$ maps $\oBall(p,R)_{\spc{L}}$ to $\oBall(0,R)_{\T_p}$.
 
 If $\T_p\iso \EE^m$, then $\vol\oBall(0,R)_{\T_p}=\omega_m\cdot R^m$,
 and the first statement follows.
@@ -78,6 +149,11 @@ Observe that
 \[\oBall(p,R_1) \supset w[\oBall(p,R_2)]\]
 --- hence the result.
 \qeds
+
+\begin{thm}{Exercise}\label{ex:BG}
+Let 
+\end{thm}
+
 
 \begin{thm}{Exercise}\label{ex:diam-compact}
 Given a positive integer $m$, 
@@ -139,8 +215,8 @@ that is,
 \[\pack_\eps\spc{L}\le  N(\eps)\df(\tfrac{2\cdot D}\eps)^m\]
 for all small $\eps>0$.
 
-Choose a maximal $\eps$-packing $x_1,\dots,x_n\in \spc{L}$.
-By \ref{ex:pack-net}, $\spc{F}_\eps\z\df\{x_1,\dots,x_n\}$ is an $\eps$-net of $\spc{L}$.
+Choose a maximal $\eps$-packing $x_1,\z\dots,x_n\in \spc{L}$.
+By \ref{ex:pack-net}, $\spc{F}_\eps\z\df\{x_1,\z\dots,x_n\}$ is an $\eps$-net of $\spc{L}$.
 Observe that $\dist{\spc{F}_\eps}{\spc{L}}{\GH}\le \eps$.
 Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $\le D$ and at most $N(\eps)$ points forms a compact subset in $\GH$.
 
