@@ -31,7 +31,9 @@ pdfauthor={\theauthors}
 
 \frontmatter
 \title{\thetitle}
-\author{\theauthors}
+\author{\theauthors\\
+with with an appendix by\\
+Nina Lebedeva and Anton Petrunin}
 \date{}
 \maketitle
 \thispagestyle{empty}
@@ -62,9 +64,15 @@ pdfauthor={\theauthors}
 
 \include{surface-if}
 
-\include{embedding-theorem}
-
 \appendix
+
+\include{alexandrov-theorem-en}
+
+%\include{embedding-theorem}
+
+
+
+\backmatter
 
 \include{sols}
 

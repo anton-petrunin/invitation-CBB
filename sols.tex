@@ -1,18 +1,54 @@
 \chapter{Semisolutions}
 
 \parbf{\ref{ex:compact-length}.}
-
-\parbf{\ref{ex:compact+connceted}.}
+Given a pair of points $p$ and $q$, choose a sequence of paths $\gamma_n$ from $p$ to $q$ such that
+\[\length\gamma_n\to \dist pq{}
+\quad\text{as}\quad
+n\to\infty;\]
+it exists since we are in a length space.
+Note that we can assume that each $\gamma_n$ is parametrized proportional to the arc length;
+in particular, $\gamma_n$ are equicontinuous.
+Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ for some $r<\infty$.
+Since the space is proper, $\cBall[p,r]$ is compact.
+By Arzelà--Ascoli theorem, we can pass to a converging subsequence of $\gamma_n$.
+Show that its limit is a geodesic path from $p$ to $q$.
 
 \parbf{\ref{ex:compact=>complete}.}
+Choose a Cauchy sequence $x_n$ in $(\spc{X},\|*\z-*\|)$; it is sufficient to show that a subsequence of $x_n$ converges.
+
+Observe that the sequence $x_n$ is Cauchy in $(\spc{X},|*-*|)$;
+denote its limit by $x_\infty$.
+
+Passing to a subsequence, we can assume that $\|x_n-x_{n+1}\|\z<\tfrac1{2^n}$.
+It follows that there is a 1-Lipschitz path $\gamma$ in $(\spc{X},\|*-*\|)$ such that $x_n=\gamma(\tfrac1{2^n})$ for each $n$ and $x_\infty=\gamma(0)$.
+Therefore,
+\begin{align*}
+\|x_\infty-x_n\|&\le \length\gamma|_{[0,\frac1{2^n}]}\le \tfrac1{2^n}.
+\end{align*}
+In particular, $x_n$ converges to $x_\infty$ in $(\spc{X},\|*\z-*\|)$.
+
+\parit{Source:} \cite[Corollary]{hu-kirk}; see also \cite[Lemma 2.3]{petrunin-stadler}.
+
+\parbf{\ref{ex:compact+connceted}.}
+Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
+We can assume that $\eps_0>\diam K$, and $N_0$ is a one-point set.
+If $\dist{x}{y}{}<\eps_k$ for some $x\in N_{k+1}$ and $y\in N_{k}$, then connect them by a curve of length at most $\eps_k$.
+
+Let $K'$ be the union of all these curves and $K$.
+Show that $K'$ is compact and path-connected.
+
+\parit{Source:} This problem is due to Eugene Bilokopytov \cite{bilokopytov}.
 
 \parbf{\ref{ex:menger}.}
+Choose a sequence $\eps_n>0$ that converges to zero very fast, say such that $\sum_n10^n\cdot \eps_n$ is small.
+Follow the argument in the proof of Menger's lemma, taking $\eps_n$-midpoints at the $n^{\text{th}}$ stage.
 
 \parbf{\ref{ex:k-><mono}.}
 
 \parbf{\ref{ex:angkK}.}
 
 \parbf{\ref{ex:undefined-angle}.}
+Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by $\ell^\infty$-norm.
 
 \parbf{\ref{ex:adjacent-angles}.}
 Assume $\mangle\hinge pxz+\mangle\hinge pyz<\pi$.
@@ -25,6 +61,20 @@ Hence
 --- a contradiction.
 
 \parbf{\ref{ex:first-var}.}
+Denote by $\alpha$ the arc-length parametrization of $[qp]$ from $q$ to $p$.
+Choose $\eps>0$.
+Observe that 
+\[\dist[2]{\gamma(t)}{\alpha(\tfrac1\eps\cdot t)}{}\le t^2\cdot(1-\tfrac2\eps\cdot\cos\phi+\tfrac1{\eps^2})+o(t^2),\]
+where $\phi=\mangle\hinge q p x$.
+By the triangle  inequality
+\[\dist{p}{\gamma(t)}{}\le \dist{\gamma(t)}{\alpha(\tfrac1\eps\cdot t)}{}+\dist{q}{p}{}-\tfrac1\eps\cdot t.\]
+Conclude that
+\[\dist{p}{\gamma(t)}{}
+\le
+\dist{q}{p}{}-t\cdot \cos \phi+\delta(\eps)\cdot t+o(t),\]
+where $\delta(\eps)\to 0$ as $\eps\to0$.
+The statement follows since $\eps>0$ is arbitrary.
+
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
 The definition of $\CBB$ spaces (\ref{def:CBB}) reduces our question to the following.
@@ -44,7 +94,7 @@ Hence
 
 \parbf{\ref{ex:(3+1)-expanding}.} For the only-if part consider the following two cases.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_y)$ that lie on the opposite sides of $[qy_2]$.
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_y)$ that lie on the opposite sides of $[qy_2]$.
 By comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
 Therefore the obtained configuration meets all the conditions.
 
@@ -485,6 +535,11 @@ for all large $n$.
 Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
 
 ??? degenerate case???
+
+\parit{Comments.}
+More generally, if a sequence of geodesic $\CBB(\kappa)$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_n=\dim \spc{L}_infty<\infty$ for any $n$,
+then $\partial \spc{L}_n$ equipped with induced length metric converge to  $\partial \spc{L}_\infty$.
+This statement is a partial case of theorem about extremal subsets \cite[1.2]{petrunin1997}.
 
 \parbf{\ref{ex:GH-doubling}.}
 
