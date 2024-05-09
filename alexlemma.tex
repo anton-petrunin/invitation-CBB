@@ -112,7 +112,7 @@ and
 =\pi-\angk{z}{x}{p},\]
 the statement follows.
 
-The spherical and hyperbolic cases can be proved  ин the same way.
+The spherical and hyperbolic cases can be proved  in the same way.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:alex-lemma-cat}
@@ -295,7 +295,7 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced Exercise}\label{ex:urysohn}
-Construct a geodesic space $\spc{X}\notin\CBB(0)$ that meets the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+Construct a geodesic space $\spc{X}$ that is not $\CBB(0)$ and satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
@@ -312,7 +312,7 @@ then $p\in [y z]$ and $\dist{\tilde y}{\tilde p}{}=\dist{y}{p}{}$ (and therefore
 \begin{thm}{Definition}\label{def:k-thin-}
 A triangle $\trig{x}{y}{z}$ in a metric space
 is called \index{thin triangle}\emph{thin} (or \index{fat triangle}\emph{fat}) if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing (or respectively distance nondecreasing).
-
+\footnote{ \color{red}  V: why do we need to define thin triangles in this book? I think they are only used in Exercise \ref{ex:normCBB} }
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:fat}
@@ -352,11 +352,12 @@ that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborh
 \end{itemize}
 
 The equivalence of these definitions is assumed to be known.
+\footnote{\red V: I was asked by several people for references to this. }
 
 We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
 
 \parbf{Functions on metric space.}
-A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined in an open subset of $\spc{L}$}.
+A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{L}$}.
 The domain of definition of a function $f$ will be denoted by $\Dom f$.
 
 Let $f$ be a function on a metric space~$\spc{L}$.
@@ -421,3 +422,5 @@ $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
 The geometric meaning of these inequalities remains the same:
 \textit{distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$}.
+
+\footnote{\red V: perhaps say something about CAT spaces here?}
