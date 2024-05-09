@@ -6,8 +6,9 @@
 
 We assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
-\item Compactness and completeness, 
-including the completion.
+\item Compactness and proper metric spaces;
+recall that a metric space is \emph{proper} if all its closed balls (with finite radius) are compact.
+\item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
 \end{itemize}
 An introductory part in \cite{burago-burago-ivanov} or \cite{petrunin2023pure} is more than sufficient.
@@ -18,6 +19,16 @@ Occasionally, we use some topology; any introductory text in algebraic topology 
 The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
 The latter notation is used if we need to emphasize 
 that the distance is taken in the space~${\spc{X}}$.
+
+Given radius $r\in[0,\infty]$ and center $x\in \spc{X}$, the sets
+\begin{align*}
+\oBall(x,r)&=\set{y\in \spc{X}}{\dist{x}{y}{}<r},
+\\
+\cBall[x,r]&=\set{y\in \spc{X}}{\dist{x}{y}{}\le r}
+\end{align*}
+are called, respectively, the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}.
+The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
+might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
 We will denote by $\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
 Euclidean space, and Lobachevsky space respectively.
@@ -40,7 +51,7 @@ then $\spc{X}$ is called a \index{length space}\emph{length space} and the metri
 Evidently, any geodesic space is a length space.
 
 \begin{thm}{Exercise}\label{ex:compact-length}
-Show that any compact length space is geodesic.
+Show that any proper length space is geodesic.
 \end{thm}
 
 

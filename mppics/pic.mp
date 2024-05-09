@@ -107,6 +107,31 @@ draw k*z1--z4--k*z2--z5--k*z3--z1--k*z4--z2--k*z5--z3--cycle;
 
 endfig;
 
+beginfig(15) 
+save u;
+u:=1cm;
+
+path p[];
+
+z.a=origin;
+z.b=(2,0)*u;
+z.d=(0,1)*u;
+z.c=z.b+z.d;
+
+fill z.a--z.b--z.c--z.d--cycle withcolor .8;
+draw z.a--z.b--z.c--z.d--cycle;
+draw .5[z.a,z.b]--.5[z.b,z.c]--.5[z.c,z.d]--.5[z.d,z.a]--cycle dashed evenly;
+draw .5[z.a,z.b]--.5[z.c,z.d] dashed evenly;
+
+Dot z.a,z.b,z.c,z.d,.5[z.a,z.b],.5[z.b,z.c],.5[z.c,z.d],.5[z.d,z.a];
+
+drawdblarrow (.25[z.a,z.b]{down}..tension 1.4..(.75)[z.a,z.b]{up}) shifted (0,-3);
+drawdblarrow (.25[z.b,z.c]{right}..tension 1.4..(.75)[z.b,z.c]{left}) shifted (3,0);
+drawdblarrow (.25[z.c,z.d]{up}..tension 1.4..(.75)[z.c,z.d]{down}) shifted (0,3);
+drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-3,0);
+
+endfig;
+
 beginfig(20) 
 save u;
 u:=.05cm;
