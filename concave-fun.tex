@@ -1,9 +1,11 @@
+%%!TEX root = the-concave-fun.tex
+
 \chapter{Calculus}\label{chap:derivative}
 
 \section{Space of directions} 
 \label{sec:space+directions}
 
-By \ref{clm:angle-defined}, angle measure a hinge in a $\CBB(\kappa)$ space $\spc{L}$ is defined.
+By \ref{clm:angle-defined}, angle measure of a hinge in a $\CBB(\kappa)$ space $\spc{L}$ is defined.
 Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
@@ -59,7 +61,7 @@ and whose metric is given by the cosine rule
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
 Note that \textit{$\Cone\SSS^n$ is isometric to $\EE^{n+1}$} --- this is a leading example.
-Next, we need to generalize several notions from Euclidean space to the Euclidean cones. 
+Next, we need to generalize several notions from Euclidean space to Euclidean cones. 
 
 The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin of a  cone}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
@@ -111,8 +113,8 @@ Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\
 
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
 
-The $\lambda$-concave functions were defined in Section \ref{Function comparison};
-recall that we assume that these functions are locally Lipschitz and defined in an open domain.
+ Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison};
+also recall that we assume that these functions are locally Lipschitz and defined on an open domain.
 
 Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of a $\CBB(0)$ space $\spc{L}$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
@@ -175,7 +177,7 @@ for any $v\in\T_p$.
 
 \begin{subthm}{ex:d(distfun):=}
 Suppose $\spc{L}$ is proper.
-Let $\Xi$ be the set of all direction of a geodesics from $q$ to $p$.
+Let $\Xi$ be the set of all direction of  geodesics from $q$ to $p$.
 Then
 \[\dd_p\distfun_q(v)=-\max_{\xi\in\Xi}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
@@ -186,7 +188,7 @@ for any $v\in\T_p$.
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition}\label{def:grad} 
-Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa$ space.
+Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa)$ space.
 A tangent vector $g\in \T_p$ is called a 
 \index{gradient}\emph{gradient} of $f$ at $p$ 
 (briefly,  $g\z=\nabla_p f$\index{$\nabla$}) if
@@ -199,7 +201,7 @@ $(\dd_p f)(g) = \<g,g\>.$
 \end{subthm}
 \end{thm}
 
-The following exercise provides a key property of gradient field that will be important latter;
+The following exercise provides a key property of gradients that will be important latter;
 see the first distance estimate (\ref{thm:dist-est}).
 
 \begin{thm}{Exercise}\label{ex:monotonicity}
@@ -242,8 +244,8 @@ where
 Note that if $\T_p\iso\EE^m$ and $\dd_p f$ is a concave function,
 then $2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v)$.
 The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
-In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not have much sense.
-The key lemma however says  that in certain sense $\dd_p f$ behaves as a concave function.
+In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
+The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
 
 It is instructive to solve the following exercise before reading the proof of the key lemma.
 
