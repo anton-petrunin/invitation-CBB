@@ -7,7 +7,7 @@
 We assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
 \item Compactness and proper metric spaces;
-recall that a metric space is \emph{proper} if all its closed balls (with finite radius) are compact.
+recall that a metric space is \index{proper space}\emph{proper} if all its closed balls (with finite radius) are compact.
 \item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
 \item Hausdorff and Gromov--Hausdorff convergence.
@@ -28,7 +28,7 @@ Given radius $r\in[0,\infty]$ and center $x\in \spc{X}$, the sets
 \\
 \cBall[x,r]&=\set{y\in \spc{X}}{\dist{x}{y}{}\le r}
 \end{align*}
-are called, respectively, the  \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}.
+are called, respectively, the \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}.
 The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
 might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
@@ -149,7 +149,7 @@ Moreover,
 \begin{thm}{Exercise}\label{ex:menger}
 Let $\spc{X}$ be a complete metric space.
 Assume that for any pair of points $x,y\in \spc{X}$, 
-there is an \emph{almost midpoint};
+there is an \index{almost midpoint}\emph{almost midpoint};
 that is, given $\eps>0$, there is a point $z$ such that 
 \[\dist{x}{z}{}<\tfrac12\cdot\dist{x}{y}{}+\eps 
 \quad\text{and}\quad
@@ -217,7 +217,8 @@ is nondecreasing in its domain of definition.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
 $\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
 
-\parbf{Angles.}The angle measure of a hinge $\hinge p x y$ is defined as the following limit
+\parbf{Angles.}
+The angle measure of a hinge $\hinge p x y$ is defined as the following limit
 \[\mangle\hinge p x y=\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 

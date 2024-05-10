@@ -4,7 +4,7 @@
 
 \begin{thm}{Definition}\label{def:gen-Haus-conv}
 Let $A_1,A_2,\dots$ be a sequence of closed sets in a metric space $\spc{X}$.
-We say that the sequence $A_n$ \emph{converges} to a closed set $A_\infty$ in the \emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
+We say that the sequence $A_n$ \index{Hausdorff limit}\emph{converges} to a closed set $A_\infty$ in the {}\emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
 $\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
 \end{thm}
 
@@ -40,8 +40,8 @@ The restriction of metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides wit
 and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
 \end{thm}
 
-In this case we say that the metric on $\bm{X}$ \textit{defines} a \emph{convergence} $\spc{X}_n\z\GHto \spc{X}_\infty$ in the \emph{sense of Gromov--Hausdorff}.
-This metric makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
+In this case we say that the metric on $\bm{X}$ \textit{defines} a \index{Gromov--Hausdorff limit}\emph{convergence} $\spc{X}_n\z\to \spc{X}_\infty$ in the {}\emph{sense of Gromov--Hausdorff}.
+The space $\bm{X}$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
 
 A limit space for this convergence is not uniquely defined.
 For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
@@ -53,95 +53,61 @@ The first convergence is evident and the second could be guessed from the diagra
 \includegraphics{mppics/pic-500}
 \end{figure}
 
-Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $\spc{X}_n\Hto \spc{X}_\infty$ and $p_n\to p_\infty$.
+The following exercise states that if limit compact, then it is unique up to isometry. 
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are limit spaces for some Gromov--Hausdorff convergences of $\spc{X}_n$.
+Assume $\spc{X}_\infty$ is compact, show that it is isometric to $\spc{X}_\infty'$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
+Suppose $\spc{X}_n\to \spc{X}_\infty$ is a convergence in the sense of Gromov--Hausdorff.
+Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
+\end{thm}
+
+\parbf{Compact case.}
+The Gromov--Hausdorff convergence defines a metrizable topology of the set of isometry classes of compact metric spaces; this space will be denoted by $\GH$.
+
+For two metric spaces $\spc{X}$ and $\spc{Y}$,
+we write $\spc{X}\le \spc{Y}+\eps$ if
+there is a map $f\:\spc{X}\to \spc{Y}$ such that 
+\[\dist{x}{x'}{\spc{X}}\le \dist{f(x)}{f(x')}{\spc{Y}}+\eps\]
+for any $x,x'\in \spc{X}$.
+
+\begin{thm}{Exercise}\label{ex:GH-po}
+Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ are compact metric spaces.
+Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
+we have 
+\[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
+\end{thm}
+
+\parbf{Pointed convergence.}
+Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
 For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, while $(\spc{X}_n,p_n)=(\RR_+,n)$ converges to $(\RR,0)$.
 
 The pointed convergence works nicely for proper metric spaces;
 the following theorem is an analog of Gromov's selection theorem for this convergence.
 
-\begin{thm}{Theorem}\label{thm:pointed-gromov-compactness}%
-Let $\bm{Q}$ be a set of isometry classes of pointed proper metric spaces.
-Assume that for any $R>0$, the $R$-balls in the spaces centered at the marked points form a uniformly totally bounded family of spaces.
-Then $\bm{Q}$ is precompact with respect to the pointed Gromov--Hausdorff convergence. 
+\begin{thm}{Theorem}\label{thm:pointed-gromov-compactness}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of proper metric spaces with marked points $p_n\in\spc{X}_n$.
+Assume that for any $R>0$, the balls $\cBall[p_n,R]_{\spc{X}_n}$ are \index{uniformly totally bounded sets}\emph{uniformly totally bounded};
+that is, for each $R$ and $\eps>0$ there is $N$ such that $\cBall[p_n,R]_{\spc{X}_n}$ can be covered by at most $N$ $\eps$-balls.
+Then there is a pointed Gromov--Hausdorff convergence $(\spc{X}_n,p_n)\to (\spc{X}_\infty,p_\infty$ such that $\spc{X}_\infty$ is proper.
+
+Moreover, the space with marked point $(\spc{X}_\infty,p_\infty)$ is uniquely defined up to isometry that respects the marked point.
 \end{thm}
-
-In this section, we cook up a metric space out of all compact metric spaces.
-More precisely, we want to define the so-called  Gromov--Hausdorff metric on the set of \textit{isometry classes} of compact metric spaces.
-(Being isometric is an equivalence relation, 
-and an \index{isometry class}\emph{isometry class} is an equivalence class with respect to this relation.)
-
-The obtained metric space will be denoted by $\GH$.
-Given two metric spaces $\spc{X}$ and $\spc{Y}$,
-denote by $[\spc{X}]$ and $[\spc{Y}]$ their isometry classes;
-that is, $\spc{X}'\in [\spc{X}]$ if and only if $\spc{X}'\iso \spc{X}$.
-Pedantically, the Gromov--Hausdorff distance from $[\spc{X}]$ 
-to $[\spc{Y}]$ should be denoted as $|[\spc{X}]-[\spc{Y}]|_{\GH}$;
-but we will write it as $|\spc{X}\z-\spc{Y}|_{\GH}$ and say (not quite correctly) that 
-\textit{$|\spc{X}\z-\spc{Y}|_{\GH}$ is the Gromov--Hausdorff distance from  $\spc{X}$ 
-to  $\spc{Y}$}.
-In other words, from now on the term \textit{metric space} might also stand for its \textit{isometry class}.
-
-The metric on $\GH$ is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
-Here is a formal definition:
-
-\begin{thm}{Definition}\label{def:GH}
-The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
-is defined by the following
-relation.
- 
-Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
-space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$
-respectively such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
-(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
-\end{thm}
-
-\begin{thm}{Theorem}\label{thm:GH-is-a-metric}
-The set of isometry classes of compact metric spaces equipped with Gromov--Hausdorff metric forms a metric space (which is denoted by $\GH$).
-
-In other words, for arbitrary compact metric spaces $\spc{X}$, $\spc{Y}$, and $\spc{Z}$ the following conditions hold
-
-\begin{subthm}{GH-1} $|\spc{X}-\spc{Y}|_{\GH}\ge 0$;
-\end{subthm}
-
-\begin{subthm}{GH-2} $|\spc{X}-\spc{Y}|_{\GH}=0$ if and only if $\spc{X}$ is isometric to $\spc{Y}$;
-\end{subthm}
-
-\begin{subthm}{GH-3} $|\spc{X}-\spc{Y}|_{\GH}=|\spc{Y}-\spc{X}|_{\GH}$;
-\end{subthm}
-
-\begin{subthm}{GH-4} $|\spc{X}-\spc{Y}|_{\GH}+|\spc{Y}-\spc{Z}|_{\GH}\ge |\spc{X}-\spc{Z}|_{\GH}$.
-\end{subthm}
-\end{thm}
-
-Note that \ref{SHORT.GH-1}, \ref{SHORT.GH-3},
-and the if part of \ref{SHORT.GH-2} follow directly from \ref{def:GH}.
-Parts \ref{SHORT.GH-4} and the only-if part of \ref{SHORT.GH-2} are not hard but require some work.
-Complete proofs of these and the following statement  are given in \cite[Lecture 5
-]{petrunin2023pure}.
-
-\begin{thm}{Lemma}\label{lem:GH-complete}
-The space $\GH$ is complete.
-\end{thm}
-
-The Gromov--Hausdorff metric defines Gromov--Hausdorff \index{Gromov--Hausdorff convergence}\emph{convergence}.
-Namely, a sequence of compact metric spaces $\spc{X}_n$ converges to compact metric spaces $\spc{X}_\infty$ in the sense of Gromov--Hausdorff if 
-\[\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0\quad\text{as}\quad n\to\infty.\]
-
-This convergence is more important than the metric ---
-in all applications, we use only the topology on $\GH$
-and we do not care about the particular value of the Gromov--Hausdorff distance between spaces.
-
-\begin{thm}{Exercise}\label{ex:geod-closed}
-Show that geodesic spaces form a closed subset in~$\GH$.
-\end{thm}
-
-+ ??? noncomact case + hausdorff approximations.
 
 \begin{thm}{Exercise}\label{ex:GHto-tangent}
-Let $p$ be a point in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
-Show that there is a covergence $(\lambda\cdot \spc{L},p)\z\GHto (\T_p,0)$ as $\lambda\to\infty$.
-Moreover, ???
+Let $p$ be a point in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$,
+and let $\lambda_n\to\infty$.
+Show that there is a pointed Gromov--Hausdorff convergence $(\lambda\cdot \spc{L},p)\z\to (\T_p,0)$ in the sense of Gromov--Hausdorff.
+Moreover, the convergence can be chosen so that  
+\[\lambda_n\cdot \gamma(t/\lambda_n)\to t\cdot \gamma^+(0)\]
+for any geodesic $\gamma$ that starts at $p$. 
 \end{thm}
+
 
 \section{Survival of curvature bounds}
 
@@ -236,7 +202,7 @@ from any sequence of spaces from the described set.
 
 
 Let $X$ be a subset of a metric space $\spc{W}$.
-Recall that a set $Z\subset \spc{W}$ is called \emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
+Recall that a set $Z\subset \spc{W}$ is called \index{$\eps$-net}\emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
 
 We will use the following characterization of compact sets: \textit{a closed subset $X$ of a complete metric space is compact if and only if $X$ admits a finite $\eps$-net for any $\eps>0$}.
 The following statement is slightly more general.
@@ -258,7 +224,7 @@ If $n=\pack_\eps\spc{X}<\infty$, then
 the collection of points $x_1,\dots,x_n$ is called a \index{maximal packing}\emph{maximal $\eps$-packing}.
 
 \begin{thm}{Exercise}\label{ex:pack-net}
-Show that any maximal $\eps$-packing $x_1,\dots,x_n$ is an \emph{$\eps$-net}.
+Show that any maximal $\eps$-packing $x_1,\dots,x_n$ is an $\eps$-net.
 Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack_\eps\spc{X}\z<\infty$ for any $\eps>0$.
 \end{thm}
 

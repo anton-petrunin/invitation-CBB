@@ -187,7 +187,7 @@ Let $F$ contain one surface $S$.
 Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L}$.
 Note that doubling $\hat {\spc{L}}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\hat {\spc{L}}$.
 
-By the \emph{Doubling theorem}, $\hat {\spc{L}}$ is a geodesic $\CBB(1)$ space.
+By the doubling theorem, $\hat {\spc{L}}$ is a geodesic $\CBB(1)$ space.
 Therefore we arrive at a contradiction the same way as in the first case.
 
 \parit{Case 3.}
@@ -200,17 +200,17 @@ Let
 be a two-sided infinite sequence of copies on $\partial\spc{L}$.
 Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
 
-By the \emph{Doubling theorem}, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
-By the \emph{globalization theorem}, $\spc{N}$ is $\CBB(1)$.
+By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
+By the globalization theorem, $\spc{N}$ is $\CBB(1)$.
 
 Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
-By the \emph{splitting theorem}, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
+By the splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
 Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi$ --- a contradiction.
 \qeds
 
 \section{Erd\H{o}s' problem rediscovered}
 
-A point $p$ in a $\CBB(\kappa)$ space is called \emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
+A point $p$ in a $\CBB(\kappa)$ space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
 
 \begin{thm}{Theorem}\label{thm:extr-point}
 Let $\spc{L}$ be a compact $m$-dimensional $\CBB(0)$ space.
@@ -230,7 +230,7 @@ Grigori Perelman noticed that after proper definitions, the same proof works in 
 
 \parit{Proof of \ref{thm:extr-point}.}
 Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{L}$.
-For each $p_i$ consider its open \emph{Voronoi domain} $V_i$; that is, 
+For each $p_i$ consider its open \index{Voronoi domain}\emph{Voronoi domain} $V_i$; that is, 
 \[V_i=\set{x\in \spc{L}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
 Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
 
@@ -257,8 +257,8 @@ for any $0<\alpha<\tfrac12$; hence
 \section{Crystallographic actions}
 
 
-An isometric action $\Gamma\acts \EE^m$ is called \emph{crystallographic} if it is 
-\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
+An isometric action $\Gamma\acts \EE^m$ is called \index{crystallographic action}\emph{crystallographic} if it is 
+\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $H$ is a finite group $H$ such that $F<H<\Gamma$, then $F=H$.
@@ -359,8 +359,8 @@ Any $m$-dimensional compact geodesic $\CBB(0)$ space has at most $2^m$ primitive
 \end{thm}
 
 A closed subset $E$ in a $\CBB(\kappa)$ space is called 
-\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
-An extremal subset is called primitive if it contains no proper \emph{extremal} subsets.
+\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
+An extremal subset is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets.
 For example, the whole space and empty set are aslo extremal in any space.
 Also every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
 Vertices of the cube are the only its primitive extremal subsets.

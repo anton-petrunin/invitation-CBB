@@ -9,7 +9,7 @@ If the inequality
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
-holds, then we say that the quadruple meets \index{$\CBB$}\emph{$\CBB(0)$ comparison}.
+holds, then we say that the quadruple meets \index{$\CBB$ comparison}\emph{$\CBB(0)$ comparison}.
 
 \begin{thm}{Definition}\label{def:CBB}
 A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov
@@ -195,7 +195,7 @@ such that $v,w\in \left]xy\right[$.
 Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in a $\CBB(0)$ space converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
 that is geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
-\[\limsup_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
+\[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
 
 \section{Hinge comparison}
@@ -341,7 +341,7 @@ Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 Choose $\lambda\in \RR$.
 Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
 The following statement are equivalent;
-if one (and therefore any) of them hold for $s$, then we say that $s$ is \emph{$\lambda$-concave}.
+if one (and therefore any) of them hold for $s$, then we say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave}.
 \begin{itemize}
 \item We have inequality $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
 \item The function $t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave.
@@ -405,8 +405,14 @@ Observe that the Jensen inequality for the function $h$ is equivalent to \ref{eq
 Hence the proposition follows.
 \qeds
 
-
 \section{Comments}
+
+The $\CBB$ comparison is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
+this is the subject of out previous invitation \cite{alexander-kapovitch-petrunin-2019}.
+
+In both comparisons we check certain condition on 6 distances between every pair of a 4-point subset.
+Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested to consider other conditions of that type for $n$-point subsets;
+see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for development of this idea.
 
 All the discussed statements admit natural generalizations to $\CBB(\kappa)$ spaces.
 The proof are nearly the same, but the formulas are getting more complicated.
@@ -424,4 +430,4 @@ defined in $\oBall(p,\pi)$.
 The geometric meaning of these inequalities remains the same:
 \textit{distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$}.
 
-\footnote{\red V: perhaps say something about CAT spaces here?}
+%done:\footnote{\red V: perhaps say something about CAT spaces here?}

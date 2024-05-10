@@ -44,8 +44,24 @@ Choose a sequence $\eps_n>0$ that converges to zero very fast, say such that $\s
 Follow the argument in the proof of Menger's lemma, taking $\eps_n$-midpoints at the $n^{\text{th}}$ stage.
 
 \parbf{\ref{ex:k-><mono}.}
+Let us write the Riemannian metric on $\MM(\kappa)$ in the polar coordinates $(\theta,r)$;
+it has form 
+$(\begin{smallmatrix}
+h^2&0
+\\
+0&1
+\end{smallmatrix})$, where $h=h(\kappa,r)$.
+Calculate $h(\kappa,r)$.
+Show that for fixed $r$, the function $r\mapsto h(\kappa,r)$ is nonincreasing in the domain of definition.
+Suppose $\kappa<\Kappa$, consider the map $\MM(\kappa)\to\MM(\Kappa)$ that sends a point to the point with the same polar coordinates.
+Show that this map is short in the domain of definition.
+Use it to prove the statement in the exercise.
 
-\parbf{\ref{ex:angkK}.}
+
+\parbf{\ref{ex:angkK}.} Show and use that 
+$\angk p{x}{y}_{\SSS^2}-\angk p{x}{y}_{\EE^2}=O(\dist[2]{p}{x}{}+\dist[2]{p}{y}{})$
+and 
+$\angk p{x}{y}_{\EE^2}-\angk p{x}{y}_{\HH^2}=O(\dist[2]{p}{x}{}+\dist[2]{p}{y}{})$.
 
 \parbf{\ref{ex:undefined-angle}.}
 Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by $\ell^\infty$-norm.
@@ -187,7 +203,14 @@ By Alexandrov's lemma,
 \end{align*}
 Whence, $\Leftarrow$ follows.
 
-\parbf{\ref{ex:angle-lim}.}
+\parbf{\ref{ex:angle-lim}.} Suppose $\mangle \hinge {x_\infty}{y_\infty}{z_\infty}>\alpha$.
+Then we can choose $\bar y_\infty\in\left]x_\infty y_\infty\right]$
+and $\bar z_\infty\in\left]x_\infty z_\infty\right]$ such that 
+$\angk{x_\infty}{\bar y_\infty}{\bar z_\infty}>\alpha$.
+Now choose $\bar y_n\in\left]x_n y_n\right]$ and $\bar y_n\in\left]x_n z_n\right]$ such that $\bar y_n\to \bar y_\infty$ and $\bar z_n\to \bar z_\infty$.
+Observe that 
+\[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge\liminf_{n\to\infty}\angk{x_n}{\bar y_n}{\bar z_n} \ge \alpha,\]
+hence the result.
 
 \parbf{\ref{ex:urysohn}.}
 The Urysohn space provides an example;
@@ -310,17 +333,31 @@ On the other hand, by assumption, $\dist{\gamma_n(t)}{\gamma_\infty(t)}{}\to0$ a
 
 \parbf{\ref{ex:geodesic-cone}.}
 Note that any point of $\Cone \spc{X}$ can be connected to the origin by a geodesic.
-???
+Given a nonzero element $v\in\Cone \spc{X}$, denote by $v'$ its projection in $\spc{X}$.
 
-\parbf{\ref{ex:distfun-semiconcave}.}
+Suppose $\spc{X}$ is $\pi$-geodesic.
+Choose two nonzero elements $v,w\in\Cone \spc{X}$; let $\alpha=\mangle(v,w)=\dist{v'}{w'}{\spc{X}}$.
+If $\alpha\ge \pi$, then the product of geodesics $[v0]\cup [0w]$ forms a geodesic $[vw]$.
+If $\alpha<\pi$, there is a geodesic $\gamma\:[0,\alpha]\to \spc{X}$ from $v'$ to $w'$.
+Consider hinge $\hinge {\tilde o}{\tilde v}{\tilde w}$ in the plane 
+such that $\mangle\hinge {\tilde o}{\tilde v}{\tilde w}=\alpha$, $\dist{\tilde o}{\tilde v}{}=|v|$, and $\dist{\tilde o}{\tilde w}{}=|w|$.
+Let $t\mapsto (\phi(t),r(t))$ be geodesic $[\tilde v\tilde w]$ written in the polar coordinates with origin $\tilde o$, so that $\phi(0)=0$.
+Show that $t\mapsto r(t)\cdot\gamma\circ\phi(t)$ is a geodesic from $v$ to $w$;
+here we identify $\spc{X}$ with the unit sphere in $\Cone \spc{X}$.
+
+To prove the converse, try to revert the steps in the argument above.
+
+\parbf{\ref{ex:distfun-semiconcave}.} From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
+
+\parbf{\ref{ex:df(xi)}.}
 Since angles are defined, it follows that 
 \[\dist{\gamma_1(t)}{\gamma_2(t)}{}\le \theta\cdot t\]
 for all small $t>0$.
 Since $f$ is $L$-Lipschitz, we get 
-\[|f(\gamma_1(t))-f(\gamma_2(t))|\le L\theta\cdot t,\]
+\[|f(\gamma_1(t))-f(\gamma_2(t))|\le L\cdot \theta\cdot t,\]
 hence the statement.
 
-\parbf{\ref{ex:df(xi)}}; \ref{SHORT.ex:d(distfun):<}
+\parbf{\ref{ex:d(distfun)}}; \ref{SHORT.ex:d(distfun):<}
 Note that we can assume that there is a geodesic in the direction of $v$, and apply \ref{ex:first-var}.
 
 \parit{\ref{SHORT.ex:d(distfun):=}.}
@@ -345,13 +382,20 @@ Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
 Observe that $[pq]$ makes angle at most $\alpha$ with $\gamma$ --- a contradiction.
 
 
-
-
-
-
-\parbf{\ref{ex:d(distfun)}.}
-
 \parbf{\ref{ex:monotonicity}.}
+Let $\gamma\:[0,\ell]\to \spc{L}$ be the geodesic $[xy]$ paramentrized from $x$ to $y$,
+and let $\phi=f\circ\gamma$.
+Observe that 
+\[\phi'(0)=\dd_xf(\dir xy)\le \<\dir{x}{y},\nabla_{x}f\>.\]
+The same way we get $-\phi'(\ell)\le \<\dir{y}{x},\nabla_{y}f\>$.
+Since $f$ is $\lambda$-concave, we have
+\begin{align*}
+f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
+\\
+f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
+\end{align*}
+Hence the statement follows.
+
 
 \parbf{\ref{ex:first-var-CBB}.}
 
