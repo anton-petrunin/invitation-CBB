@@ -470,17 +470,17 @@ Apply \ref{ex:-u}.
 Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dots,p_n$ there is a G-delta dense set of points $x$ such that $\Lin_x\ni \dir x{p_i}$ for every $i$.
 ???
 
-
-
 \parbf{\ref{ex:dim=1}.}
 
 \parbf{\ref{ex:resporka}.}
 
 \parbf{\ref{ex:finite-tan}.}
 
-\parbf{\ref{ex:GHto-tangent}.}
+
 
 \parbf{\ref{ex:geod-closed}.}
+
+\parbf{\ref{ex:GHto-tangent}.}
 
 \parbf{\ref{ex:dim-lim}.}
 
@@ -520,22 +520,107 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 \parbf{\ref{ex:sumbetries(E^2)}.}
 
 \parbf{\ref{ex:S^3/S^1}.}
+Show that $\SSS^3$ can be identified with the unit sphere in $\CC^2$
+so that the the $\SSS^1$-action is given by matrices
+$\left(
+\begin{smallmatrix}
+u^p&0\\
+0& u^q
+\end{smallmatrix}
+\right)$
+where $u$ is a unit complex number and $(p,q)$ is a pair of relatively prime integers.
+Since the action has no fixed points, we also have that $p\ne0$ and $q\ne 0$.
 
-\parbf{\ref{ex:number(m-1)}.}
-\ref{SHORT.ex:number(m-1):2}
-\ref{SHORT.ex:number(m-1):1}
+The quotient $\SSS^3/\SSS^1$ is a homeomorphic to the 2-sphere and it has $\SSS^1$ symmetry.
+The metric on the space is completely defined by the length of $\ell(r)$ of a circle with radius $r$ centered at one pole
+
+If $p=q=1$, then this actions defines the Hopf fibration.
+In this case the quotient is the round 2-spere or radius $\tfrac12$.
+
+Suppose 
+
+can be extended to the standard action of torus,
+which is induced by multiplication of diagonal matrix 
+$\left(
+\begin{smallmatrix}
+e^{i\cdot u}&0\\
+0&e^{i\cdot v}
+\end{smallmatrix}
+\right)$
+on a unit sphere $\SSS^3$ in $\CC^2$.
+
+Conclude that the quotient $\SSS^3/\SSS^1$ has $\SSS^1$-simmetry.
+It is can be described by a Riemannian on $\SSS^2$ with two singularities at the poles.
+In polar coordinates $(\theta,r)$ this Riemannian metric can be written as $\left(
+\begin{smallmatrix}
+h^2&0\\
+0&1
+\end{smallmatrix}
+\right)$,
+where $h=h(r)$.
+For Hopf's $\SSS^1$-action; that is, if it is given by
+$\left(
+\begin{smallmatrix}
+e^{i\cdot t}&0\\
+0&e^{i\cdot t}
+\end{smallmatrix}
+\right)$
+we have $h=\sin (2\cdot r)$.
+We need to show that for any other action $h(r)\le\sin (2\cdot r)$.
+???
+
+\parbf{\ref{ex:number(m-1)}};
+\ref{SHORT.ex:number(m-1):2}.
+Suppose $\#_{m-1}(\Gamma)\ge 3$;
+that is $\spc{L}=\EE^m/\Gamma$ has at least 3 boundary components.
+Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{L}$ using two of these components.
+Show that the obtained space splits and arrive at a contradiction.
+
+(Alternatively, apply a similar construction to all components of the boundary.
+Show that obtained space has {}\emph{exponential volume growth};
+that is, there is $a>1$ such that $\vol \oBall(p,r)>a^r$ for all large~$r$.
+Arrive at a contradiction with Bishop--Gromov inequality.)
+
+\parit{\ref{SHORT.ex:number(m-1):1}.}
+Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
 
 \parbf{\ref{ex:surf-S2}.}
-
-\parbf{\ref{ex:angle-triangle}.}
+We can assume that the origin lies in the interior of the convex body.
+Consider the central projection from the surface, say $\Sigma$ to the sphere $\SSS^2$ centered at the origin.
+Show that this projection $\Sigma\to \SSS^2$ is a homeomorphism.
 
 \parbf{\ref{ex:vertex-essential-vertex}.}
+Follow the argument in \ref{clm:total-angle}.
+Show that the inequality is strict if and only if $F$ has opposite points.
 
-\parbf{\ref{ex:geodesic-vertex}.}
 
-\parbf{\ref{pr:tetrahedron}.}
+\parbf{\ref{ex:geodesic-vertex}.} Suppose a geodesic $\gamma$ pass thru a vertex $v$.
+Denote by $\alpha$ and $\beta$ the angles that $\gamma$ cuts at $v$.
+Since $v$ is essential, $\alpha+\beta<2\cdot\pi$.
+Therefore $\alpha<\pi$ or $\beta<\pi$.
+Arrive at a contradiction by showing that $\gamma$ is not length-minimizing.
+
+\parbf{\ref{pr:tetrahedron}}; \ref{SHORT.pr:tetrahedron:=}.
+Cut the surface of $T$ along three edges coming from one vertex $v_1$ and unfold the obtained surface on the plane.
+Show that this way we get a triangle, the three vertices correspond to $v_1$ and the midpoints of sides correspond to the remaining three vertices.
+Make a conclusion.
+
+\parit{\ref{SHORT.pr:tetrahedron:perp}}.
+Suppose that $0,v_1,v_2,v_3\in\RR^3$ are the vertices of $T$.
+From \ref{SHORT.pr:tetrahedron:=}, we have that 
+\[|v_1|=|v_2-v_3|,\quad |v_2|=|v_3-v_1|,\quad|v_3|=|v_1-v_1|.\]
+Use it to show that $\langle v_1,v_2+v_3-v_1\rangle=0$.
+Make a conclusion.
 
 \parbf{\ref{ex:poly-CBB}.}
+We need to show that if a polyhedral surface is $\CBB(0)$, then the total angle $\theta$ of any of its vertex $p$ it at most $2\cdot\pi$.
+
+Assume that $\theta>2\cdot\pi$,
+let $\phi=\max\{\,\pi,\tfrac13\cdot\theta\,\}$.
+Note that we can choose three points $x_1$, $x_2$, and $x_3$ close to $p$ such that 
+$\mangle \hinge p{x_i}{x_j}=\phi$ for $i\ne j$.
+Since the points $x_i$ are close to $p$, we have $\mangle \hinge p{x_i}{x_j}=\angk p{x_i}{x_j}$.
+The latter contradicts $\CBB(0)$ comparison. 
 
 \parbf{\ref{ex:surface-covergence}.}
 We will use that the closest-point projection form the Euclidean space to a convex body is \index{short map}\emph{short};
@@ -569,7 +654,10 @@ The above inequlities imply
 \end{align*}
 for any $x,y\in \Sigma_\infty$.
 
-Since the closest-point projection cannot increase the length of curve, we also get
+Note that the maps $g_n$ and $h_n$ are onto.
+Apply \ref{ex:GH-po} to finish the proof.
+
+Alternatively, since the closest-point projection cannot increase the length of curve, we also get
 \begin{align*}
 \dist{x}{h_n\circ g_n(x)}{\Sigma_\infty}&\le 10\cdot \eps_n
 \\
@@ -578,12 +666,10 @@ Since the closest-point projection cannot increase the length of curve, we also 
 for all large $n$.
 Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
 
-??? degenerate case???
-
 \parit{Comments.}
-More generally, if a sequence of geodesic $\CBB(\kappa)$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_n=\dim \spc{L}_infty<\infty$ for any $n$,
+More generally, if a sequence of geodesic $\CBB(\kappa)$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_n=\dim \spc{L}_\infty<\infty$ for any $n$,
 then $\partial \spc{L}_n$ equipped with induced length metric converge to  $\partial \spc{L}_\infty$.
-This statement is a partial case of theorem about extremal subsets \cite[1.2]{petrunin1997}.
+This statement is a partial case of the theorem about extremal subsets proved by the second author \cite[1.2]{petrunin1997}.
 
 \parbf{\ref{ex:liberman+milka}}; \ref{SHORT.ex:liberman+milka:liberman}.
 By \ref{ex:liberman}, the function $f_p\:t\mapsto \distfun_p\circ\gamma(t)$ is semiconcave for any $p\in K$.
