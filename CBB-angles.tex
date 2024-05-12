@@ -128,14 +128,71 @@ The following partial result was obtained by Wu-Yi Hsiang and Bruce Kleiner \cit
 There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and a nontrivial isometric $\SSS^1$-action.
 \end{thm}
 
-We will use the following exercise.
 
-\begin{thm}{Advanced exercise}\label{ex:S^3/S^1}
+\begin{thm}{Key lemma}\label{lem:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points 
 and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
 Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with a factor $\tfrac12$.
 \end{thm}
 
+The proof of the lemma is done mostly by calculations;
+we present it in the form of guided exercise.
+
+\begin{thm}{Exercise}\label{ex:S^3/S^1}
+Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points.
+Let us think that $\SSS^3$ is the unit sphere in $\RR^4$.
+
+\begin{subthm}{ex:S^3/S^1:pq}
+Show that one can identify $\RR^4$ with $\CC^2$ so that the action
+is given by matrix multiplication
+\[\left(\begin{matrix}
+u^p&0\\
+0& u^q
+\end{matrix}
+\right),\]
+where $(p,q)$ is a pair of relatively prime positive integers and $u\in \SSS^1=\set{z\in\CC}{|z|=1}$.
+In particular, our $\SSS^1$ is a subgroup in the torus that acts by
+matrix multiplication
+\[\left(\begin{matrix}
+v&0\\
+0& w
+\end{matrix}
+\right),\]
+where  $v,w\in \SSS^1=\set{z\in\CC}{|z|=1}$.
+\end{subthm}
+
+\noindent Fix $p$ and $q$ as above.
+Let $\Sigma_{p,q}=\SSS^3/\SSS^1$ be the quotient space.
+
+\begin{subthm}{ex:S^3/S^1:sphere}
+Show that the $\Sigma_{p,q}=\SSS^3/\SSS^1$ is a topological sphere with $\SSS^1$-symmetry.
+This symmetry has two fixed points, north pole and south pole, that correspond to the orbits of $(1,0)$ and $(0,1)$ in $\SSS^3$.
+\end{subthm}
+
+\noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
+
+\begin{subthm}{ex:S^3/S^1:a}
+Show that the inverse image $T(r)$ of $S(r)$ in $\SSS^3$ is also an orbit of the torus action.
+Conclude that $a(r)=\pi^2\cdot\sin r\cdot \cos r$,
+where $a(r)$ is the area $T(r)$.
+\end{subthm}
+
+\begin{subthm}{ex:S^3/S^1:b}
+Let $b_{p,q}(r)$ be the length of the $\SSS^1$-orbit in $\SSS^3$ that corresponds to a point on $S(r)$. 
+Show that $b_{p,q}=\pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}$.
+\end{subthm}
+
+\begin{subthm}{ex:S^3/S^1:c}
+Let $c_{p,q}(r)$ be the length of $S(r)$.
+Show that $a(r)=c_{p,q}(r)\cdot b_{p,q}(r)$.
+\end{subthm}
+
+\begin{subthm}{ex:S^3/S^1:cc}
+Show that $c_{p,q}(r)\le c_{1,1}(r)$ for any pair $(p,q)$ of relatively prime positive integers.
+Use it to show construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot \SSS^2\iso\Sigma_{1,1}$.
+\end{subthm}
+
+\end{thm}
 
 \parit{Sketch of \ref{thm:hsiang-kleiner}.}
 Assume $\spc{M}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
@@ -330,13 +387,14 @@ Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1)
 
 It is expected that \textit{no geodesic $\CBB(1)$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
 so \ref{thm:hsiang-kleiner} holds for general $\CBB(1)$ space.
-The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{ex:S^3/S^1};
+The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{lem:S^3/S^1};
 see \cite{harvey-searle}.
 
 \begin{thm}{Conjecture}
 Let $\Sigma$ be a geodesic $\CBB(1)$ space homeomorphic to $\SSS^3$.
-Suppose $\SSS^1$ acts on $\Sigma$ isometrically.
+Suppose $\SSS^1$ acts on $\Sigma$ isometrically and without fixed points.
 Then any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$.
+(Maybe even there is distance-noncontracting map $\Sigma/\SSS^1\to \tfrac12\cdot\SSS^2$.)
 \end{thm}
 
 
