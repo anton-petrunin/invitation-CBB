@@ -2,18 +2,19 @@
 
 \section{Definition}
 
-Suppose $\spc{L}$ is a 1-dimensional complete geodesic $\CBB(\kappa)$ space.
-Exercise \ref{ex:dim=1} allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
+Let us give an inductive definition the boundary for finite-dimensional complete geodesic $\CBB(\kappa)$ space.
 
-Now let us use \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim} to give an iductive definition the boundary for finite-dimensional complete geodesic $\CBB(\kappa)$ space.
-Assume that the notion of boundary is already defined in dimensions $1,\dots,m-1$.
+Suppose $\spc{L}$ is a 1-dimensional complete geodesic $\CBB(\kappa)$ space.
+By Exercise \ref{ex:dim=1},
+$\spc{L}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
+It allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
+
+Now assume that the notion of boundary is already defined in dimensions $1,\dots,m-1$.
 Suppose  $\spc{L}$ is $m$-dimensional complete geodesic $\CBB(\kappa)$ space.
 We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
 $\partial\Sigma_p\ne\emptyset$.
 By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional complete geodesic $\CBB(1)$ space;
 therefore its boundary is already defined.
-
-Let us emphasize, that the boundary is defined only for finitely-dimensional spaces.
 
 \begin{thm}{Exercise}\label{ex:bry-convex}
 Show that for closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
@@ -29,47 +30,52 @@ Show that
 
 \section{Conic neighborhoods}
 
-
-The following statement is close relative of Perelman's stability theorem \ref{thm:stability};
-its proof is nearly as hard, but slightly simpler.
+The following statement is close relative of Perelman's stability theorem \ref{thm:stability}, but its proof is slightly simpler \cite{perelman:morse}.
 We are going to use this result without proof.
 
+Recall that logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
 Any point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$
-admits a neighborhood that is homeomorphic to the tangent space $\T_p$ at this point.
+and all sufficiently small $\eps>0$
+there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{L}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
+
+Moreover, we may assume that 
+\[
+\sup_{x\in \oBall(p,\eps)}\{\,\tfrac1\eps\cdot\dist{\log_px}{h_\eps(x)}{\T_p}\,\}\to 0
+\quad\text{as}\quad
+\eps\to 0.\]
 \end{thm}
 
 This statement is often used together with \textit{uniqueness of conic neighborhood} stated below.
 
 Suppose that a neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
-admits a homeomorphism to cone $\Cone\Sigma$ such that $x$ maps to the tip of the cone.
-In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of $x$.
+admits a homeomorphism to $\Cone\Sigma$ such that $x$ maps to the origin of the cone.
+In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
 
 \begin{thm}{Uniqueness of conic neighborhood}\label{lem:kwun}
-Any two conic neighborhoods of a given point in a metric space are homeomorphic.
+Any two conic neighborhoods of a given point in a metric space are \index{pointed homeomorphic}\emph{pointed homeomorphic}; that is, there is a homeomorphism between neighborhoods that maps the origin of the cone to the origin.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:conic}
-Prove the uniqueness of conic neighborhood or read the original proof by Kyung Whan Kwun \cite{kwun1964}.
+Prove \ref{lem:kwun} or read the original proof by Kyung Whan Kwun \cite{kwun1964}.
 \end{thm}
 
+
 \begin{thm}{Exercise}\label{ex:conic-tangent}
-Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$.
+Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
-Show that $\T_x$ is homeomorphic to $\T_{x'}$ for any $x$.
+$\T_x\cong \T_{x'}$,
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:dir}
-Show that $\Susp\Sigma_x$ is homeomorphic to $\Susp\Sigma_{x'}$ for any $x$.
+$\Susp\Sigma_x\cong \Susp\Sigma_{x'}$.
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:example}
-Give an example of $x\in\spc{L}$ and $x\in\spc{L}'$
-such that $\Sigma_x$ is not homeomorphic to $\Sigma_{x'}$.
+but in general $\Sigma_x\not\cong\Sigma_{x'}$.
 \end{subthm}
-
 
 \end{thm}
 
@@ -77,7 +83,10 @@ such that $\Sigma_x$ is not homeomorphic to $\Sigma_{x'}$.
 
 \section{Topology}
 
-\begin{thm}{Theorem}
+The following theorem states that boundary is a topological property
+despite our definition used geometry.
+
+\begin{thm}{Theorem}\label{thm:top-bry}
 Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional geodesic $\CBB(\kappa)$ spaces.
 Then $\dim \spc{L}=\dim\spc{L}'$ and
 \[\partial\spc{L}\ne \emptyset
@@ -86,72 +95,82 @@ Then $\dim \spc{L}=\dim\spc{L}'$ and
 \]
 \end{thm}
 
-Let $\spc{L}$ be an $m$-dimensional geodesic $\CBB(\kappa)$ space.
-Define \index{rank}\emph{rank} of $\spc{L}$ (briefly, $\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}\iso\RR^{m-k}\times \spc{K}$,
-where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
 
-In the following proof we will apply induction on the rank of space.
-Before reading this proof, it is instructive to solve the following exercise.
+Before diving into the proof, it is instructive to solve the following exercise.
 
 \begin{thm}{Exercise}\label{ex:nonstability}
 Construct two plane subsets $K_1$ and $K_2$ such that $K_1\ncong K_2$,
 but $\RR\times K_1\cong \RR\times K_2$.
 \end{thm}
 
+Let $\spc{L}$ be an $m$-dimensional geodesic $\CBB(\kappa)$ space and $m<\infty$.
+Define \index{rank}\emph{rank} of $\spc{L}$ (briefly, \index{$\rank\spc{L}$ (rank)}$\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}\iso\RR^{m-k}\times \spc{K}$,
+where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
+
+In the following proof we will apply induction on the rank of space.
+
+
 \parit{Proof.}
-The first statement follows from .
+The first statement follows from \ref{thm:dim=dim}.
 
 Suppose we have a counterexample, say $\partial \spc{L}\ne \emptyset$, but $\partial \spc{L}'=\emptyset$.
 Let $k\df\rank \spc{L}$ and $k'\df\rank \spc{L}'$.
+We can assume that the pair $(k,k')$ is minimal in the lexicographic order;
+in particular, $k$ is minimal.
+Let $x\mapsto x'$ be a homeomorphism from $\spc{L}$ to $\spc{L}'$.
 
-Note that $k>1$ or $k'>1$.
-Otherwise, by \ref{ex:dim=1}, both $\spc{L}$ and $\spc{L}'$ are topological manifolds
-and the statement follows since homeomorphism between topological manifolds respects their boundary.
-
-We can assume that the pair of ranks $(k,k')$ is minimal in the lexicographic order.
-Choose a homeomorphism $x\mapsto x'$ from $\spc{L}$ to $\spc{L}'$ 
-and $x\in \partial \spc{L}$.
+Choose $x\in \partial \spc{L}$.
 Since $\partial \spc{L}'=\emptyset$, we have $x'\notin \partial \spc{L}'$.
 Note that 
 \[\rank \T_x\le k
 \quad\text{and}\quad
 \rank \T_{x'}\le k',
 \]
-By \ref{ex:conic-tangen:tangent}, $\T_x$ is homeomorphic to $\T_{x'}$.
-Therefore, we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones with tips at $x$ and $x'$ respectively.
+By \ref{ex:conic-tangen:tangent}, $\T_x\cong\T_{x'}$.
+Note that $\partial \T_x\ne\emptyset$ and $\partial \T_{x'}=\emptyset$.
+Therefore, we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones
+and the homeomorphism sends the origin to the origin.
+The remaining part of the proof is divided in three cases.
 
-
-Suppose $k>1$ and $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional geodesic $\CBB(0)$ cone.
-Note that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the tip of $\spc{C}$.
+\parit{Case 1.}
+Suppose $k>1$.
+Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional geodesic $\CBB(0)$ cone.
+Note that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
 Choose $y$ that projects to $z$, so $\rank\T_y<\rank\spc{L}$.
-Applying \ref{ex:conic-tangen:tangent} again, we get that $\T_y$ is homeomorphic to $\T_{y'}$,
-$\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$ which contradicts minimality of $k$.
+By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
+$\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
+The latter contradicts contradicts minimality of $k$.
 
+\parit{Case 2.} Suppose $k\le1$ and $k'>1$.
 Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$ and $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 
-Now assume $k'> 1$.
 Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional geodesic $\CBB(0)$ cone.
-Since $\partial\spc{L}$ is $(m-1)$-dimensional,
-the projection of its image in $\spc{L}'$ to $\spc{C}'$
-cannot be its tip.
+Since $\partial\spc{L}\cong\RR^{m-1}$,
+the image of $\partial\spc{L}$ in $\spc{L}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
 In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has nonzero projection in $\spc{C}'$.
-Therfore, $\T_y$ is homeomorphic to $\T_{y'}$, 
-\[\rank\T_y\le k=1,
+Observe that $\T_y\cong\T_{y'}$,
+\[
+\rank\T_y\le k=1,
 \quad
 \rank\T_{y'}< k',
 \quad
-0\in \partial \T_y,
+\partial \T_y=\emptyset,
 \quad\text{and}\quad
 \partial \T_{y'}\ne \emptyset\]
 --- a contradiction.
+
+\parit{Case 3.}
+Suppose $k\le 1$ and $k'\le 1$.
+Since $\partial \spc{L}\ne \emptyset$, $k=1$.
+By \ref{ex:dim=1}, $\spc{L}\cong \RR_{\ge0}$.
+Therefore, $\spc{L}'\cong\RR$, and $\spc{L}\not\cong\spc{L}'$ --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry2bry}
 Let $x\mapsto x'$ be a homeomorphism $\Omega\to\Omega'$
 between open subsets in finte-dimensional complete geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$.
-
 Show that $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
 
 \end{thm}
@@ -165,9 +184,11 @@ Show that boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ spac
 Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
 Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
-Then we say that $\xi$ is in the \index{space of directions!of a subset}\emph{space of directions} from $p$ to $X$; briefly $\xi\in\Sigma_pX$.
+Then we say that $\xi$ is in the \index{space of directions!of a subset}\emph{space of directions} from $p$ to $X$;
+briefly \index{$\Sigma_pX$ (space of directions)}$\xi\in\Sigma_pX$.
 
-Further, the cone $\T_pX=\Cone(\Sigma_pX)$ will be called \index{tangent space!of a subset}\emph{tangent space} to $X$ at $p$.
+Further, the cone $\Cone(\Sigma_pX)$ will be called \index{tangent space!of a subset}\emph{tangent space} to $X$ at $p$;
+it will be denoted by \index{$\T_pX$ (tangent space)}$\T_pX$.
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
@@ -177,50 +198,31 @@ For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we 
 \end{thm}
 
 \parit{Proof.}
-Choose a sequence $x_n\to p$.
-Suppose $\dir{p}{x_n}\to\xi$ as $n\to\infty$.
+Choose a sequence $x_n\in \partial \spc{L}$ such that $x_n\to p$ and $\dir p{x_n}\to\xi$.
 
-We can assume that $x_n\ne p$ for any $n$.
-Let $\spc{L}_n\df \tfrac1{\dist{p}{x_n}{}}\cdot\spc{L}$.
-Let us keep the same notation $x_n$ for the corresponding point in $\spc{L}_n$;
-denote by $p_n\in \spc{L}_n$ the point that corresponds to $p$ in  $\spc{L}_n$.
-Note that all spaces $\T_{p_n}\spc{L_n}$ can be identified with $\T_p\spc{L}$.
+Let $\eps_n=2\cdot \dist{p}{x_n}{}$,
+and let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{L}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd};
+in particular, $\tfrac2{\eps_n}\cdot h_{\eps_n}(x_n)\to \xi$ as $n\to\infty$.
+By \ref{ex:bry2bry}, $h_{\eps_n}(x_n)\in \partial \T_p$.
+By \ref{ex:bry-closed}, $\xi\in \partial \T_p$.
+Therefore,
+\[\partial (\Sigma_p\spc{L})\supset\Sigma_p(\partial\spc{L})
+\quad\text{and}\quad
+\partial(\T_p\spc{L})\supset\T_p(\partial\spc{L}).\]
 
-Given $y_n\in \spc{L}_n$ choose a geodesic path $\gamma$ from $p_n$ to $y_n$
-and let $\log_{p_n}y_n=\gamma^+(0)$.
-This way we defined a map $\log_{p_n}\:\spc{L}_n\to \T_p$.
-Observe that $\log_{p_n}$ are a Hausdorff approximations for the Gromov--Hausdorff convergence 
-$(\spc{L}_n,p_n)\GHto \T_p$.
-Moreover $\log_{p_n}x_n\to \xi$ as $n\to \infty$.
-
-The stability theorem implies that $\log_{p_n}$ can be approximated by homeomorphisms $h_n$.
-More precisely, there is a sequence of maps $h_n\:\spc{L}_n\to \T_p$
-that defined an open embedding of open ball $\oBall(p,r)$ for any fixed $r>0$ and all large $n$
-and for any $r>0$ we have $\sup_{\dist{p_n}{y_n}{\spc{L}_n}<r}\{\dist{\log_{p_n}y_n}{h_n(y_n)}\to 0$ as $n\to\infty$.
-
-Suppose $x_n\in \partial\spc{L}_n$.
-By \ref{ex:bry2bry}, $h_n(x_n)\in\partial \T_p$.
-Since in $\T_p$
-
-Recall that $\lambda\cdot \spc{L}\GHto \T_p$; see ???.
-Moreover, the map $f_\lambda\:x\mapsto \lambda\cdot\log_px$ defines Hausdorff approximations $\lambda\cdot \spc{L}\GHto \T_p$.
-
- 
-
-Choose a sequence $x_n\to p$;
-let $\lambda_n=\tfrac1{\dist{p}{x_n}{}}$.
-Suppose $\lambda_n\cdot \log_px\to v\in\T_p$.
-
-
-
-Note that $\lambda_n\cdot [p x_n]\subset \lambda\spc{L}$ converge to a ge
-
-\qeds
+Similarly, choose $\xi\in\partial\Sigma_p$.
+Let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{L}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd} for a sequence $\eps_n\to 0$ as $n\to\infty$.
+By \ref{ex:bry2bry}, $x_n=h_{\eps_n}^{-1}(\tfrac{\eps_n}2\cdot\xi)\in \partial \T_p$.
+By \ref{thm:spherical-nbhd}, $\dir p{x_n}\to \xi$.
+Hence
+\[\partial (\Sigma_p\spc{L})\subset\Sigma_p(\partial\spc{L})
+\quad\text{and}\quad\partial(\T_p\spc{L})\subset\T_p(\partial\spc{L}).\]
+\qedsf
 
 \section{Doubling}
 
-Let $A$ be a closed subset $A$ in a metric space $\spc{X}$.
-The doubling $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
+Let $A$ be a closed subset in a metric space $\spc{X}$.
+The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and it has minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 The metric on $\spc{W}$ can be also defined explicitly by
@@ -236,11 +238,11 @@ The last part of the following statement is the so-called \index{doubling theore
 
 \begin{thm}{Theorem}\label{thm:doubling}
 Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space with nonempty boundary.
-Suppose $f\z=\tfrac12\cdot\distfun_p^2$.
+Suppose $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{L}$.
 Then
 
 \begin{subthm}{thm:doubling:concave}
-Suppose $\dim \spc{L}\ge 2$, then
+If $\dim \spc{L}\ge 2$, then
 $\distfun_{\partial \Sigma_x}(\xi)\le \tfrac\pi2$ for any $x\in\partial \spc{L}$ and $\xi\in \Sigma_x$.
 Moreover, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\mangle(\xi,\zeta)\le\tfrac\pi2$ for any $\zeta\in \Sigma_x$. 
 \end{subthm}
@@ -251,18 +253,18 @@ $\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{L}$.
 
 \begin{subthm}{thm:partial-grad:flow}
 If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{L}$, then $\alpha(t)\in \partial \spc{L}$ for any $t$.
-Moreover, $\gexp_p(v)\in \partial \spc{L}$ for any $v\in\partial\T_p$.
+Moreover, if $p\in \partial \spc{L}$, then $\gexp_p(v)\in \partial \spc{L}$ for any $v\in\partial\T_p$.
 \end{subthm}
 
 \begin{subthm}{thm:doubling:doubling}
-the doubling $\hat{\spc{L}}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(\kappa)$ space.
+The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(\kappa)$ space.
 \end{subthm}
 
 \end{thm}
 
 \parit{Proof.}
 We will denote by 
-\ref{SHORT.thm:doubling:concave}$_m,\dots$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{L}$.
+\ref{SHORT.thm:doubling:concave}$_m,\dots,$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{L}$.
 
 The proof goes by induction on $m$.
 Note that \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base of induction.
@@ -278,18 +280,18 @@ Recall that $\T_x$ is a complete geodesic $\CBB(0)$ space; see \ref{ex:finite-ta
 By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
 the latter contradicts that $\Sigma_x$ is a line segment.
 
-Suppose $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
+Let $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
 Suppose $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\spc{W}$ of $\Sigma_x$ is a geodesic $\CBB(\kappa)$ space.
-Denote by $\xi_0$ and $\xi_1$ the points in $\spc{W}$ that correspond to $\xi$.
-Observe that $\dist{\xi_0}{\xi_1}{\spc{W}}>\pi$.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is a geodesic $\CBB(\kappa)$ space.
+Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
+Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
 
-Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\spc{W}}=\pi$.
-Therefore $\Cone \spc{W}$ contains a line in directions of $\xi_0$ and $\xi_1$;
-in other words, $\spc{W}$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
-In particular, every point of $\spc{W}$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
-The natural projection $\spc{W}\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
+Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
+Therefore $\Cone \Xi$ contains a line in directions of $\xi_0$ and $\xi_1$;
+in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
+In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
+The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
 Therefore, the second statement follows.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
@@ -304,7 +306,7 @@ let $\eta=\dir\zeta{\overline{\xi}}$.
 By \ref{SHORT.thm:doubling:concave}$_m$, $\mangle(\overline{\xi},\zeta)\le \tfrac\pi2$ and
 \ref{SHORT.thm:doubling:concave}$_{m-1}$ implies that 
 \[\mangle(\eta,\nu)\le \tfrac\pi2\eqlbl{eq:<pi/2}\]
-for any $\nu\in \Sigma_\zeta\Sigma_x$; if $m=2$, then the statement is trivial. 
+for any $\nu\in \Sigma_\zeta\Sigma_x$; if $m=2$, then the last statement is evident. 
 
 Consider function $\phi\:\Sigma_x\to\RR$ defined by $\phi(\xi)\df\dd_xf(\xi)$.
 Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_\xi\phi(\eta)\le 0$.
@@ -314,8 +316,7 @@ If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
 Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial L}\alpha(t)$.
-Note that $\ell$ is a Lipschitz function;
-in particular it is differentiable almost everywhere.
+Note that $\ell$ is a Lipschitz function.
 
 Choose $t$;
 let $x=\alpha(t)$ and $y\in \partial\spc{L}$ be a closest point to $x$.
@@ -326,21 +327,28 @@ In particular,
 \[\langle \dir yx,\nabla_y f\rangle\le 0\]
 Applying Exercise~\ref{ex:monotonicity} to $x$ and $y$, 
 we get
-\[\ell^+(t)\le \ell(t)\]
+\[\ell'(t)\le \ell(t)\]
 if the left-hand side is defined.
-Since $\ell$ is Lipschitz, $\ell^+$ is defined almost everywhere.
+Since $\ell$ is Lipschitz, $\ell'$ is defined almost everywhere.
 Integrating the inequality, we get 
 \[\ell(t)\le e^t\cdot\ell(0)\]
 for any $t\ge 0$.
 In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
-By \ref{ex:bry-closed}, the statement follows.
+Since $\partial\spc{L}$ is closed (\ref{ex:bry-closed}), the statement follows.
 
-\parit{\ref{SHORT.thm:partial-grad:flow}$_{m}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
+\parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
 other cases acan be done the same way, but formulas getting more complicated.
 
-Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\hat{\spc{L}}$;
+Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
+Next claim says that any geodesic in $\spc{W}$ either lies in $\partial \spc{L}$ or it crosses $\partial \spc{L}$ at most once.
+
+\begin{clm}{}
+Let $\gamma$ be a geodesic in $\spc{W}$.
+Then either $\gamma$ has at most one interior point in $\partial \spc{L}$ or
+$\gamma\subset \partial \spc{L}$.
+\end{clm}
 
 \begin{wrapfigure}{r}{45mm}
 \vskip-2mm
@@ -348,15 +356,19 @@ let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_
 \includegraphics{mppics/pic-1315}
 \end{wrapfigure}
 
-Choose a geodesic $\gamma$ in $\hat{\spc{L}}$.
-Suppose $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$.
-Assume $x$ nor $y$ is not an endpoint of $\gamma$.
-The splitting argument as in \ref{SHORT.thm:doubling:concave} shows that the doubling of $\T_x\spc{L}$ splits in the direction $\gamma^\pm(t_1)$.
-Similarly, the doubling of $\T_y\spc{L}$ splits in the direction $\gamma^\pm(t_y)$.
-Note that the arc of $\gamma$ between $x$ and $y$ can be reflected across $\partial \spc{L}$ and the obtained curve is still a geodesic in $\hat{\spc{L}}$.
-Using these observations together with part \ref{SHORT.thm:doubling:concave}, one can show that either $\gamma$ lies in $\partial \spc{L}$ or it crosses $\partial \spc{L}$ at most once.
+Assume $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$ and these are not endpoints of $\gamma$.
+Let us exchange $\gamma\cap \spc{L}_1$ to its reflection in $\spc{L}_0$;
+denote the obtained curve by $\hat\gamma$.
 
-Now choose a point $p$ in $\hat{\spc{L}}$;
+Note that any arc of $\hat\gamma$ with endpoint at $x$ or $y$ is a geodesic in $\spc{L}_0$.
+Moreover, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
+By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{L}$.
+
+Now choose a point $z$ on this arc, so $z\in \partial\spc{L}$.
+Applying the same argument, we get that the arc of $\hat\gamma$ before $y$ lies in $\partial\spc{L}$.
+Hence the claim follows.\claimqeds
+
+Choose a point $p$ in $\spc{W}$;
 let $f\df\tfrac12\cdot\distfun_p^2$.
 Without loss of generality, we can assume that $p\in \spc{L}_0$.
 It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
@@ -368,8 +380,40 @@ If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the co
 \includegraphics{mppics/pic-1325}
 \end{wrapfigure}
 
-In the remaining case, if $\gamma(t)\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(t)\le 1$ follows from the comparison in $\spc{L}_0$.
-If $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$, then the proof of inequality reminds the argument in part \ref{SHORT.thm:doubling:concave}, but it is a bit more tricky.
+If $\gamma(t)\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(t)\le 1$ follows from the comparison in $\spc{L}_0$.
+
+Assume $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$.
+Suppose $[p\gamma(t)]$ crosses $\partial L$ at $x$.
+Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$
+and let $\Xi$ be its doubling.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is a geodesic $\CBB(1)$ space.
+Note that $\dir x{\gamma(t)}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
+$\dist{\dir x{\gamma(t)}}{\dir xp}{}\ge \pi$.
+Otherwise we could choose a direction $\xi\in\partial\Sigma$ such that
+\[\dist{\dir x{\gamma(t)}}{\xi}{}+\dist{\xi}{\dir xp}{}<\pi.\]
+Consider the radial curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
+By \ref{SHORT.thm:partial-grad:flow}$_m$, $\alpha$ lies in $\partial L$.
+By \ref{prop:gexp}
+\[\dist{p}{\alpha(s)}{\spc{L}_0}
++\dist{\gamma(t)}{\alpha(s)}{\spc{L}_1}
+<\dist{p}{\gamma(t)}{\spc{W}}\]
+for small values $s>0$
+--- a contradition.
+
+Note that $\Cone \Xi$ contains a line with directions $\dir x{\gamma(t)}$ and $\dir xp$.
+By splitting theorem $\Cone \Xi$ split in these directions;
+in particular, 
+\[\dist{\dir x{\gamma(t)}}{\xi}{}+\dist{\xi}{\dir xp}{}=\pi.\]
+for any $\xi\in\Xi$.
+It follows that for any $\xi\in\Xi$ there is $\xi'\in\partial\Sigma_x$ such that 
+$\xi$ and $\xi'$ lie on a geodesic $[\dir x{\gamma(t)} \dir xp]_\Xi$.
+
+Choose $\xi'$ for $\xi=\dir x{\gamma(t+???}$.
+Let $\alpha(s)\df=\gexp_x(s\cdot\xi')$.
+Applying ??? we get that for sutably chosen parameter $s$ we 
+\[\]
+
+the proof of inequality reminds the argument in part \ref{SHORT.thm:doubling:concave}, but it is a bit more tricky.
 Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that 
 \[(f\circ\gamma)^+(t)+(f\circ\gamma)^-(t)\le 0.\]
 These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
@@ -400,14 +444,56 @@ Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-c
 
 \section{Remarks}
 
-Topology of 
+Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
 
-Morse theory, stratification, Grove--Petersen lemma ???
+\begin{thm}{Topological stratification}
+Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into subsets topological manifolds $S_0,\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
+Moreover,
+\begin{subthm}{}
+closure of $S_{m-1}$ is the boundary of the space, and
+\end{subthm}
 
-\begin{thm}{Domain invariance theorem}
+\begin{subthm}{}
+$S_{m-2}=\emptyset$.
+\end{subthm}
+
+\end{thm}
+
+Let us mention that this statement does not imply that (compact) finite-dimensional Alexandrov space is homeomorphic to CW-complex ???
+
+Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
+This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary;
+so the following tools become available.
+
+\begin{thm}{Fundamental-class lemma}
+Let $\spc{L}$ be a compact $m$-dimensional Alexandrov space, and $m<\infty$.
+Then $\spc{L}$ has a fundamental class in Alexander--Spanier cohomology with $\ZZ/2$ coefficients; 
+that is, 
+\[H^n(\spc{L},\ZZ/2)=\ZZ/2.\]
+
+\end{thm}
+
+This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen};
+It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
+It is also used in the proof of a generalized domain invariance theorem stated below. 
+
+\begin{thm}{Domain invariance}
 Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional geodesic $\CBB(\kappa)$ spaces with empty boundary; $m$ is finite.
 Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
 Then $f(\Omega_1)$ is open in $\spc{L}_2$.
+\end{thm}
+
+Let $f$ be a semiconcave function.
+A point $p\in \Dom f$ is called \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$; 
+otherwise it is called \index{regular point}\emph{regular}.
+
+The following statement plays technical role in the proof of stability theorem,
+but this is also a useful technical tool.
+
+\begin{thm}{Morse lemma}
+Let $f$ be a semiconcave function on a finite-dimensional geodesic $\CBB(\kappa)$ space without boundary.
+Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
+Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
 Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \index{extremal subset}\emph{extremal}.

@@ -1653,6 +1653,7 @@ dOt z.x,z.y;
 label.top(btex $x$ etex, z.x);
 label.top(btex $y$ etex, z.y);
 label.top(btex $\gamma$ etex, point 1.5 of p1);
+label.bot(btex $\hat\gamma$ etex, (point 1.5 of p1) yscaled -1);
 label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
 
 endfig;

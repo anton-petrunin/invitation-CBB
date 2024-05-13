@@ -10,8 +10,8 @@ converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right 
 In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
-The tangent vector $\dist px{}\cdot\dir px$ can be called \index{logarithm}\emph{logarithm} of $x$ at $p$;
-it is a tangent vector at $p$ of a geodesic path from $p$ to $x$.
+The tangent vector $v=\dist px{}\cdot\dir px$ can be called \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$v=\log_p x$ (logarithm)}$\log_p x$);
+it is a tangent vector at $p$ of a geodesic path from $p$ to $x$.\label{page:log}
 
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
@@ -293,7 +293,7 @@ Note that $(e^t{\cdot} \spc{L},p)\GHto (\T_p,o_p)$ as $t\to\infty$.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p=\lim_{t\to\infty}\Phi^t_{f}\circ i_{e^t}.\]
 
-\begin{thm}{Proposition}
+\begin{thm}{Proposition}\label{prop:gexp}
 Let $\spc{L}$ be a proper geodesic $\CBB(0)$ space.
 Then for any $p\in \spc{L}$ the gradient exponent $\gexp_p\:\T_p\to\spc{L}$ is defined.
 Moreover, $\gexp_p$ is a short map and 
