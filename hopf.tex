@@ -338,7 +338,7 @@ Since $\partial\spc{L}$ is closed (\ref{ex:bry-closed}), the statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
-other cases acan be done the same way, but formulas getting more complicated.
+other cases can be done the same way, but formulas getting more complicated.
 
 Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
@@ -357,7 +357,8 @@ $\gamma\subset \partial \spc{L}$.
 \end{wrapfigure}
 
 Assume $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$ and these are not endpoints of $\gamma$.
-Let us exchange $\gamma\cap \spc{L}_1$ to its reflection in $\spc{L}_0$;
+Remove from $\gamma$ the set $\gamma\cap \spc{L}_1$
+and exchange it to its reflection across $\spc{L}_0$;
 denote the obtained curve by $\hat\gamma$.
 
 Note that any arc of $\hat\gamma$ with endpoint at $x$ or $y$ is a geodesic in $\spc{L}_0$.
@@ -370,9 +371,11 @@ Hence the claim follows.\claimqeds
 
 Choose a point $p$ in $\spc{W}$;
 let $f\df\tfrac12\cdot\distfun_p^2$.
-Without loss of generality, we can assume that $p\in \spc{L}_0$.
 It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
-If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the comparison in $\spc{L}_0$.
+If $p\in \partial\spc{L}$, then the statement follows from function comparison in $\spc{L}_0$ and $\spc{L}_1$.
+So, we can assume that $p\in \spc{L}_0\setminus \partial\spc{L}$.
+
+If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the comparison in~$\spc{L}_0$.
 
 \begin{wrapfigure}{r}{45mm}
 \vskip-2mm
@@ -380,43 +383,52 @@ If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the co
 \includegraphics{mppics/pic-1325}
 \end{wrapfigure}
 
-If $\gamma(t)\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(t)\le 1$ follows from the comparison in $\spc{L}_0$.
+Choose $y=\gamma(t_0)$; without loss of generality we can assume that $t_0=0$.
 
-Assume $\gamma(t)\in \spc{L}_1\setminus\partial\spc{L}$.
-Suppose $[p\gamma(t)]$ crosses $\partial L$ at $x$.
+If $y\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\circ\gamma)''(0)\le 1$ in the barrier sense;
+it follows from the comparison in $\spc{L}_0$.
+
+Assume $y\in \spc{L}_1\setminus\partial\spc{L}$.
+Suppose $[py]$ crosses $\partial L$ at $x$.
 Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$
 and let $\Xi$ be its doubling.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is a geodesic $\CBB(1)$ space.
-Note that $\dir x{\gamma(t)}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
-$\dist{\dir x{\gamma(t)}}{\dir xp}{}\ge \pi$.
-Otherwise we could choose a direction $\xi\in\partial\Sigma$ such that
-\[\dist{\dir x{\gamma(t)}}{\xi}{}+\dist{\xi}{\dir xp}{}<\pi.\]
+
+Note that $\dir x{y}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
+\[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
+Otherwise, choose a direction $\xi\in\partial\Sigma$ such that
+\[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi,\]
 Consider the radial curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
 By \ref{SHORT.thm:partial-grad:flow}$_m$, $\alpha$ lies in $\partial L$.
 By \ref{prop:gexp}
 \[\dist{p}{\alpha(s)}{\spc{L}_0}
-+\dist{\gamma(t)}{\alpha(s)}{\spc{L}_1}
-<\dist{p}{\gamma(t)}{\spc{W}}\]
++\dist{y}{\alpha(s)}{\spc{L}_1}
+<\dist{p}{y}{\spc{W}}\]
 for small values $s>0$
 --- a contradition.
 
-Note that $\Cone \Xi$ contains a line with directions $\dir x{\gamma(t)}$ and $\dir xp$.
+Note that $\Cone \Xi$ contains a line with directions $\dir x{y}$ and $\dir xp$.
 By splitting theorem $\Cone \Xi$ split in these directions;
 in particular, 
-\[\dist{\dir x{\gamma(t)}}{\xi}{}+\dist{\xi}{\dir xp}{}=\pi.\]
+\[\dist{\dir x{y}}{\xi}{}+\dist{\xi}{\dir xp}{}=\pi.\]
 for any $\xi\in\Xi$.
 It follows that for any $\xi\in\Xi$ there is $\xi'\in\partial\Sigma_x$ such that 
-$\xi$ and $\xi'$ lie on a geodesic $[\dir x{\gamma(t)} \dir xp]_\Xi$.
+$\xi$ and $\xi'$ lie on some geodesic $[\dir x{y} \dir xp]_\Xi$.
 
-Choose $\xi'$ for $\xi=\dir x{\gamma(t+???}$.
-Let $\alpha(s)\df=\gexp_x(s\cdot\xi')$.
-Applying ??? we get that for sutably chosen parameter $s$ we 
-\[\]
+Choose such $\xi'(t)$ for $\xi(t)=\dir x{\gamma(t}$, where $t\approx 0$.
+Consider the radial curve $\alpha_t(s)\df\gexp_x(s\cdot\xi'(t))$.
+Applying the comparison and \ref{prop:gexp}, we get that 
+\begin{align*}
+\dist{p}{\gamma(t)}{\spc{W}}
+&\le \dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{\gamma(t)}{\spc{L}_1}\le
+\\
+&\le \side\hinge yp{\gamma(t)}.
+\end{align*}
+for suitably chosen parameter $s$. 
+Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
-the proof of inequality reminds the argument in part \ref{SHORT.thm:doubling:concave}, but it is a bit more tricky.
-Finally if $\gamma(t)\in\partial\spc{L}$, then splitting argument shows that 
-\[(f\circ\gamma)^+(t)+(f\circ\gamma)^-(t)\le 0.\]
-These three statements imply that $(f\circ\gamma)''(t)\le 1$ for any $t$.
+Finally if $\gamma(0)\in\partial\spc{L}$, then splitting argument shows that 
+\[(f\circ\gamma)^+(0)+(f\circ\gamma)^-(0)\le 0.\]
 
 Summarizing, we get that $(f\circ\gamma)''\le 1$ if $\gamma$ lies entirely in $\spc{L}_0$ or $\spc{L}_1$.
 If $\gamma$ crosses $\partial \spc{L}$, then we know that it happens only once and at the crossing moment $t_0$ 

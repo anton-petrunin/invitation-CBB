@@ -1665,20 +1665,25 @@ u:=1cm;
 
 z.x=(-1,0)*u;
 z.y=-z.x;
-z.p=(-.2,1)*u;
-z.a=(0,-1)*u;
-z.b=(1,1)*u;
+z.p=(-.2,-1)*u;
+z.a=(0,1)*u;
+z.b=(1.4,-1)*u;
+z.yy=.2[z.a,z.b];
+z.xx=whatever[z.p,z.yy]=whatever[z.x,z.y];
 
 draw z.a--z.b;
+draw z.p--z.yy;
 draw ddline (z.x,z.y)(.4,.4) pensemibold;
-dOt z.p;
+dOt z.p,z.yy,z.xx;
 
 
 label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
-label(btex $\spc{L}_0$ etex, 1.3*z.x+(0,1)*u);
-label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,-1)*u);
-label.ulft(btex $\gamma$ etex, .8[z.a,z.b]);
+label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,1)*u);
+label(btex $\spc{L}_0$ etex, 1.3*z.x+(0,-1)*u);
+label.urt(btex $\gamma$ etex, .8[z.a,z.b]);
 label.rt(btex $p$ etex, z.p);
+label.rt(btex $y$ etex, z.yy);
+label.ulft(btex $x$ etex, z.xx);
 endfig;
 
 beginfig(1402)
