@@ -2,7 +2,7 @@
 
 \section{Velocity of curve}
 
-Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $\alpha$ be a curve in an Alexandrov space $\spc{L}$.
 If for any choice of 
 geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
@@ -15,7 +15,7 @@ it is a tangent vector at $p$ of a geodesic path from $p$ to $x$.\label{page:log
 
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
-Let $\alpha$ be a curve in a geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $\alpha$ be a curve in an Alexandrov space $\spc{L}$.
 Suppose $f$ a semiconcave Lipschitz function
 defined in a neighborhood of $p\z=\alpha(0)$,
 and $\alpha^+(0)$ is defined.
@@ -59,7 +59,7 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on a complete geodesic $\CBB(\kappa)$ space
+Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on an Alexandrov space
 $\spc{L}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient curve}\emph{$f$-gradient curve} if
@@ -75,7 +75,7 @@ the uniqueness will be proved in the next section.
 
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
-Let $f\:\spc{L}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $f\:\spc{L}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{L}$.
 Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ with $\alpha(0)=p$ such that any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
@@ -133,7 +133,7 @@ Then
 
 \begin{thm}{Observation}\label{eq:fist-var-inq+}
 Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$ 
-defined on a complete geodesic $\CBB$ space.
+defined on an Alexandrov space.
 Choose a point $p$; let $\ell(t)\df\distfun_p\circ\alpha(t)$ and $q=\alpha(t_0)$.
 Then 
 \[
@@ -166,7 +166,7 @@ and concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 Note that the following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $f$ be a $\lambda$-concave locally Lipschitz function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $f$ be a $\lambda$-concave locally Lipschitz function on an Alexandrov space $\spc{L}$.
 Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
@@ -195,7 +195,7 @@ The following exercise describes a global geometric property of a gradient curve
 It uses the notion of \textit{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, and St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
 
 \begin{thm}{Exercise}\label{ex:elf-contracting}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on a complete geodesic $\CBB(\kappa)$ space
+Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on an Alexandrov space
 $\spc{L}$.
 Then 
 \[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{L}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{L}}.\]
@@ -203,7 +203,7 @@ for any $f$-gradient curve $\alpha$ and $t_1\le t_2\le t_3$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:mayer}
-Let $f$ be a locally Lipschitz concave function defined on a $\CBB(\kappa)$ space $\spc{L}$.
+Let $f$ be a locally Lipschitz concave function defined on an Alexandrov space $\spc{L}$.
 Suppose $\hat\alpha\:[0,\ell]\to\spc{L}$ is an arc-length reparametrization of an $f$-gradient curve.
 Show that $(f\circ\hat\alpha)$ is concave.
 \end{thm}
@@ -214,7 +214,7 @@ Show that $(f\circ\hat\alpha)$ is concave.
 The following exercise implies that gradient curves for a uniformly converging sequence of $\lambda$-concave functions converge to the gradient curves of the limit function.
 
 \begin{thm}{Exercise}\label{lem:fg-dist-est}
-Let $f$ and $g$ be $\lambda$-concave locally Lipschitz functions on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $f$ and $g$ be $\lambda$-concave locally Lipschitz functions on an Alexandrov space $\spc{L}$.
 Suppose
 $\alpha,\beta\:[0,t_{\max})\to \spc{L}$ are respectively $f$- and $g$-gradient curves.
 Assume $|f-g|<\eps$; let $\ell\:t\mapsto\dist{\alpha(t)}{\beta(t)}{}$.
@@ -230,7 +230,7 @@ for some constant $\Const=\Const(t_{\max},\lambda)$.
 
 \section{Gradient flow}
 
-Let $\spc{L}$ be a complete geodesic $\CBB(\kappa)$ space 
+Let $\spc{L}$ be an Alexandrov space 
 and $f$ be a locally Lipschitz semiconcave function defined on an open set of $\spc{L}$.
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
@@ -250,7 +250,7 @@ Now let us reformulate statements obtained earlier using this new terminology.
 From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $\spc{L}$ be a complete geodesic $\CBB(\kappa)$ space 
+Let $\spc{L}$ be an Alexandrov space 
 and $f\:\spc{L}\to \RR$ be a semiconcave function.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
@@ -260,7 +260,7 @@ Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Li
 The next proposition follows from \ref{lem:fg-dist-est}.
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
-Let $\spc{L}$ be complete geodesic $\CBB(\kappa)$ space.
+Let $\spc{L}$ be an Alexandrov space.
 Suppose $f_n\:\spc{L}\to\RR$ is a sequence of
 $\lambda$-concave functions 
 that converges to $f_\infty\:\spc{L}\to \RR$. 
@@ -294,7 +294,7 @@ Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p=\lim_{t\to\infty}\Phi^t_{f}\circ i_{e^t}.\]
 
 \begin{thm}{Proposition}\label{prop:gexp}
-Let $\spc{L}$ be a proper geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be a proper Alexandrov space with nonnegative curvature.
 Then for any $p\in \spc{L}$ the gradient exponent $\gexp_p\:\T_p\to\spc{L}$ is defined.
 Moreover, $\gexp_p$ is a short map and 
 \[\gexp_p(\gamma^+(0))=\gamma(1)\]

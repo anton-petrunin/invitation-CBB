@@ -5,7 +5,7 @@
 \section{Space of directions} 
 \label{sec:space+directions}
 
-By \ref{clm:angle-defined}, angle measure of a hinge in a $\CBB(\kappa)$ space $\spc{L}$ is defined.
+By \ref{clm:angle-defined}, angle measure of a hinge in an Alecandrov space $\spc{L}$ is defined.
 Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
@@ -29,7 +29,7 @@ The completion of $\Sigma'_p$ is called the \index{space of directions}\emph{spa
 The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 \begin{thm}{Exercise}\label{ex:dir-compact}
-Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be an Alexandrov space.
 Assume that a sequence of geodesics $[px_n]$ converge to a geodesic $[px_\infty]$ in the sense of Hausdorff,
 and $x_\infty\ne p$.
 
@@ -88,12 +88,12 @@ The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
 
 \begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
-Tangent spaces of $\CBB(\kappa)$ space are $\CBB(0)$.
+Tangent spaces of an Alexandrov space are spaces with nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
 \parit{Proof.}
-Consider the tangent space $\T_p=\Cone \Sigma_p$ of a $\CBB(\kappa)$ space $\spc{L}$ at a point $p$.
-We need to show that the $\CBB(0)$ comparison holds for a given quadruple $v_0$, $v_1$, $v_2$, $v_3\in \T_p$.
+Consider the tangent space $\T_p=\Cone \Sigma_p$ of an Alexandrov space $\spc{L}$ at a point $p$.
+We need to show that the $\EE^2$-comparison holds for a given quadruple $v_0$, $v_1$, $v_2$, $v_3\in \T_p$.
 
 Recall that the space of geodesic directions $\Sigma_p'$ is dense in $\Sigma_p$.
 It follows that the subcone $\T'_p=\Cone\Sigma_p'$ is dense in $\T_p$.
@@ -105,9 +105,9 @@ Since the angles are defined, we have
 \[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{L}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps)
 \eqlbl{eq:gamma-v}\]
 for $\eps>0$.
-The quadruple $\gamma_0(\eps)$, $\gamma_1(\eps)$, $\gamma_2(\eps)$, $\gamma_3(\eps)$ meets the $\CBB(\kappa)$ comparison.
-After rescaling all the distances by $\tfrac1\eps$, it becomes the $\CBB(\eps^2\cdot\kappa)$ comparison.
-Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\CBB(0)$ comparison for $v_0$, $v_1$, $v_2$, $v_3$.
+The quadruple $\gamma_0(\eps)$, $\gamma_1(\eps)$, $\gamma_2(\eps)$, $\gamma_3(\eps)$ meets the $\MM^2(\kappa)$-comparison.
+After rescaling all the distances by $\tfrac1\eps$, it becomes the $\MM^2(\eps^2\cdot\kappa)$-comparison.
+Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\EE^2$-comparison for $v_0$, $v_1$, $v_2$, $v_3$.
 \qeds
 
 
@@ -116,7 +116,7 @@ Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\
  Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison};
 also recall that we assume that these functions are locally Lipschitz and defined on an open domain.
 
-Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of a $\CBB(0)$ space $\spc{L}$.
+Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{L}$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
 the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
 Here we assume that $\phi$ is continuous and defined in $\Dom f$.
@@ -125,7 +125,7 @@ If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index
 
 
 \begin{thm}{Exercise}\label{ex:distfun-semiconcave}
-Let $f$ be a distance function on a geodesic $\CBB(0)$ space $\spc{L}$;
+Let $f$ be a \emph{distance function} on an Alexandrov space $\spc{L}$ with nonnegative curvature;
 that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{L}$.
 Show that $f''\le \tfrac1f$.
 In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
@@ -157,7 +157,7 @@ The obtained function $\dd_pf\:\T_p\to\RR$ is Lipschitz;
 it is called the \index{differential}\emph{differential} of $f$ at $p$.
 
 \begin{thm}{Exercise}\label{ex:df(xi)}
-Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa)$ space.
+Let $f$ be a semiconcave function on an Alexandrov space.
 Suppose $\gamma_1$ and $\gamma_2$ are unit-speed geodesics that start at $p\z\in \Dom f$;
 denote by $\theta$ the angle between $\gamma_1$ and $\gamma_2$ at $p$.
 Show that 
@@ -166,7 +166,7 @@ where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:d(distfun)}
-Let $p$ and $q$ be distinct points in a geodesic $\CBB(0)$ space $\spc{L}$.
+Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{L}$.
 Show that
 
 \begin{subthm}{ex:d(distfun):<}
@@ -188,7 +188,7 @@ for any $v\in\T_p$.
 \section{Gradient}\label{sec:grad-def}
 
 \begin{thm}{Definition}\label{def:grad} 
-Let $f$ be a semiconcave function on a geodesic $\CBB(\kappa)$ space.
+Let $f$ be a semiconcave function on an Alexandrov space.
 A tangent vector $g\in \T_p$ is called a 
 \index{gradient}\emph{gradient} of $f$ at $p$ 
 (briefly,  $g\z=\nabla_p f$\index{$\nabla$}) if
@@ -205,7 +205,7 @@ The following exercise provides a key property of gradients that will be importa
 see the first distance estimate (\ref{thm:dist-est}).
 
 \begin{thm}{Exercise}\label{ex:monotonicity}
-Let $f$ be a $\lambda$-concave function on a geodesci $\CBB(\kappa)$ space.
+Let $f$ be a $\lambda$-concave function on an Alexandrov space.
 Suppose that gradients $\nabla_xf$ and $\nabla_yf$ are defined.
 Show that 
 \[\<\dir{x}{y},\nabla_{x}f\>
@@ -218,7 +218,7 @@ Show that
 
 
 \begin{thm}{Proposition}\label{prop:grad-exist}
-Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in a $\CBB(\kappa)$ space.
+Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in an Alexandrov space.
 Then the gradient $\nabla_pf$ is uniquely defined.
 
 Moreover, if $\dd_pf\le 0$, then we have $\nabla_pf=0$;
@@ -231,7 +231,7 @@ $\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\x
 
 \begin{thm}{Key lemma}\label{lem:ohta} 
 Let $f$ be a $\lambda$-concave function that is defined in a neighborhood of a point $p$
-in a geodesic $\CBB(\kappa)$ space $\spc{L}$. 
+in an Alexandrov space $\spc{L}$. 
 Then for any $u,v\in \T_p$, we have
 \[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \ge 
@@ -250,7 +250,7 @@ The key lemma however says  that in a certain sense $\dd_p f$ behaves as a conca
 It is instructive to solve the following exercise before reading the proof of the key lemma.
 
 \begin{thm}{Exercise}\label{ex:first-var-CBB}
-Let $\hinge q p x$ be a hinge in  a $\CBB(0)$ space and $y\in \left]qp\right[$.
+Let $\hinge q p x$ be a hinge in an Alexandrov space and $y\in \left]qp\right[$.
 Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
 Show that
 \[\dist{y}{\gamma(t)}{}
@@ -394,7 +394,7 @@ Clearly, $\overline{\xi}=\lim_n\xi_n$ meets \ref{overlinexi}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:convergence-grad}
-Let $f$ and $g$ be locally Lipschitz semiconcave functions defined in a neighborhood of a point $p$ in a $\CBB$ space.
+Let $f$ and $g$ be locally Lipschitz semiconcave functions defined in a neighborhood of a point $p$ in an Alexandrov space.
 Show that 
 \[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
 \le 
@@ -407,7 +407,7 @@ Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and locally
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:semicontinuous-grad}
-Let $f$ be a locally Lipschitz $\lambda$-concave function on a complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $f$ be a locally Lipschitz $\lambda$-concave function on an Alexandrov space $\spc{L}$.
 
 \begin{subthm}{ex:semicontinuous-grad:>s}
 Suppose $s\ge 0$.

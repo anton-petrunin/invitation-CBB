@@ -2,18 +2,18 @@
 
 \section{Definition}
 
-Let us give an inductive definition the boundary for finite-dimensional complete geodesic $\CBB(\kappa)$ space.
+Let us give an inductive definition the boundary for finite-dimensional Alexandrov spaces.
 
-Suppose $\spc{L}$ is a 1-dimensional complete geodesic $\CBB(\kappa)$ space.
+Suppose $\spc{L}$ is a 1-dimensional Alexandrov space.
 By Exercise \ref{ex:dim=1},
 $\spc{L}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
 It allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
 
 Now assume that the notion of boundary is already defined in dimensions $1,\dots,m-1$.
-Suppose  $\spc{L}$ is $m$-dimensional complete geodesic $\CBB(\kappa)$ space.
+Suppose  $\spc{L}$ is $m$-dimensional Alexandrov space.
 We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
 $\partial\Sigma_p\ne\emptyset$.
-By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional complete geodesic $\CBB(1)$ space;
+By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional Alexandrov space;
 therefore its boundary is already defined.
 
 \begin{thm}{Exercise}\label{ex:bry-convex}
@@ -21,7 +21,7 @@ Show that for closed convex set $K\subset \EE^m$ with nonempty interior, the top
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:bry-product}
-Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be a finite-dimensional Alexandrov space.
 Suppose $\spc{L}\iso\spc{L}_1\times\spc{L}_2$.
 Show that 
 \[\partial \spc{L}=(\partial\spc{L}_1\times\spc{L}_2)\,\cup\,(\spc{L}_1\times\partial\spc{L}_2).\]
@@ -36,7 +36,7 @@ We are going to use this result without proof.
 Recall that logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
-Any point $p$ in a finite-dimensional geodesic $\CBB(\kappa)$ space $\spc{L}$
+Any point $p$ in a finite-dimensional Alexandrov space $\spc{L}$
 and all sufficiently small $\eps>0$
 there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{L}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
 
@@ -63,7 +63,7 @@ Prove \ref{lem:kwun} or read the original proof by Kyung Whan Kwun \cite{kwun196
 
 
 \begin{thm}{Exercise}\label{ex:conic-tangent}
-Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$. Show that 
+Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{L}$ and $\spc{L}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
 $\T_x\cong \T_{x'}$,
@@ -87,7 +87,7 @@ The following theorem states that boundary is a topological property
 despite our definition used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
-Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional geodesic $\CBB(\kappa)$ spaces.
+Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional Alexandrov spaces.
 Then $\dim \spc{L}=\dim\spc{L}'$ and
 \[\partial\spc{L}\ne \emptyset
 \quad\iff\quad
@@ -103,9 +103,9 @@ Construct two plane subsets $K_1$ and $K_2$ such that $K_1\ncong K_2$,
 but $\RR\times K_1\cong \RR\times K_2$.
 \end{thm}
 
-Let $\spc{L}$ be an $m$-dimensional geodesic $\CBB(\kappa)$ space and $m<\infty$.
+Let $\spc{L}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
 Define \index{rank}\emph{rank} of $\spc{L}$ (briefly, \index{$\rank\spc{L}$ (rank)}$\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}\iso\RR^{m-k}\times \spc{K}$,
-where $\spc{K}$ is a $k$-dimensional geodesic $\CBB(\kappa)$ space.
+where $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
 In the following proof we will apply induction on the rank of space.
 
@@ -134,7 +134,7 @@ The remaining part of the proof is divided in three cases.
 
 \parit{Case 1.}
 Suppose $k>1$.
-Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional geodesic $\CBB(0)$ cone.
+Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional Alexandrov cone with nonnegative curvature.
 Note that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
@@ -146,7 +146,7 @@ The latter contradicts contradicts minimality of $k$.
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
 Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$ and $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 
-Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional geodesic $\CBB(0)$ cone.
+Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional Alexandrov cone with nonnegative curvature.
 Since $\partial\spc{L}\cong\RR^{m-1}$,
 the image of $\partial\spc{L}$ in $\spc{L}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
 In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has nonzero projection in $\spc{C}'$.
@@ -170,18 +170,18 @@ Therefore, $\spc{L}'\cong\RR$, and $\spc{L}\not\cong\spc{L}'$ --- a contradictio
 
 \begin{thm}{Exercise}\label{ex:bry2bry}
 Let $x\mapsto x'$ be a homeomorphism $\Omega\to\Omega'$
-between open subsets in finte-dimensional complete geodesic $\CBB(\kappa)$ spaces $\spc{L}$ and $\spc{L}'$.
+between open subsets in finte-dimensional Alexandrov spaces $\spc{L}$ and $\spc{L}'$.
 Show that $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:bry-closed}
-Show that boundary of a finite-dimensional complete geodesic $\CBB(\kappa)$ space is a closed subset.
+Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
 \end{thm}
 
 \section{Tangent space}
 
-Let $X$ be a subset in a finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$.
+Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{L}$.
 Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
 Then we say that $\xi$ is in the \index{space of directions!of a subset}\emph{space of directions} from $p$ to $X$;
@@ -191,7 +191,7 @@ Further, the cone $\Cone(\Sigma_pX)$ will be called \index{tangent space!of a su
 it will be denoted by \index{$\T_pX$ (tangent space)}$\T_pX$.
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
-For any finite-dimensional complete geodesic $\CBB(\kappa)$ space $\spc{L}$, we have
+For any finite-dimensional Alexandrov space $\spc{L}$, we have
 \[\partial (\Sigma_p\spc{L})=\Sigma_p(\partial\spc{L})
 \quad\text{and}\quad
 \partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
@@ -237,7 +237,7 @@ The metric on $\spc{W}$ can be also defined explicitly by
 The last part of the following statement is the so-called \index{doubling theorem}\emph{doubling theorem}.
 
 \begin{thm}{Theorem}\label{thm:doubling}
-Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space with nonempty boundary.
+Let $\spc{L}$ be a finite-dimensional Alexandrov space with nonempty boundary.
 Suppose $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{L}$.
 Then
 
@@ -257,7 +257,7 @@ Moreover, if $p\in \partial \spc{L}$, then $\gexp_p(v)\in \partial \spc{L}$ for 
 \end{subthm}
 
 \begin{subthm}{thm:doubling:doubling}
-The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is a complete geodesic $\CBB(\kappa)$ space.
+The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is a Alexandrov space with the same curvature bound.
 \end{subthm}
 
 \end{thm}
@@ -276,13 +276,13 @@ By \ref{ex:dim=1}, $\Sigma_x$ isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
 Suppose $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
-Recall that $\T_x$ is a complete geodesic $\CBB(0)$ space; see \ref{ex:finite-tan}.
+Recall that $\T_x$ is a Alexandrov space; see \ref{ex:finite-tan}.
 By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
 the latter contradicts that $\Sigma_x$ is a line segment.
 
 Let $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
 Suppose $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is a geodesic $\CBB(\kappa)$ space.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is an Alexandrov space with curvature $\ge 1$.
 Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
 Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
@@ -392,7 +392,7 @@ Assume $y\in \spc{L}_1\setminus\partial\spc{L}$.
 Suppose $[py]$ crosses $\partial L$ at $x$.
 Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$
 and let $\Xi$ be its doubling.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is a geodesic $\CBB(1)$ space.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is an Alexandrov space with curvature $\ge1$.
 
 Note that $\dir x{y}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
 \[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
@@ -437,20 +437,21 @@ All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry-connected}
-Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(1)$ space with nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with curvature $\ge 1$ and nonempty boundary $\partial\spc{L}$.
 Show that $\partial\spc{L}$ is connected.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{L}$ be a complete finite-dimensional geodesic $\CBB(0)$ space with nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with nonnegative curvature and nonempty boundary $\partial\spc{L}$.
 Show that the distance function to the boundary
 \[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
 is concave.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:liberman}
-Suppose $\gamma$ is a geodesic in the length metric of boundary of a complete finite-dimensional geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with nonnegative curvature and nonempty boundary $\partial\spc{L}$.
+Suppose $\gamma$ is a geodesic in $\partial\spc{L}$ with the induced length metric.
 Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
 \end{thm}
 
@@ -490,7 +491,7 @@ It implies, for example, that gradient is an onto map  for functions of the foll
 It is also used in the proof of a generalized domain invariance theorem stated below. 
 
 \begin{thm}{Domain invariance}
-Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional geodesic $\CBB(\kappa)$ spaces with empty boundary; $m$ is finite.
+Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
 Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
 Then $f(\Omega_1)$ is open in $\spc{L}_2$.
 \end{thm}
@@ -503,13 +504,13 @@ The following statement plays technical role in the proof of stability theorem,
 but this is also a useful technical tool.
 
 \begin{thm}{Morse lemma}
-Let $f$ be a semiconcave function on a finite-dimensional geodesic $\CBB(\kappa)$ space without boundary.
+Let $f$ be a semiconcave function on a finite-dimensional Alexandrov space without boundary.
 Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
 Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \index{extremal subset}\emph{extremal}.
-More precisely, a subset $E$ in a complete geodesic $\CBB$ space is called extremal if for any $x\in E$
+More precisely, a subset $E$ in an Alexandrov space is called extremal if for any $x\in E$
 and $f$-gradient curve that starts in $E$ remains in $E$;
 here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.
 
@@ -520,8 +521,8 @@ in particular they will pop up in the next lecture.
 The following conjecture is one of the oldest questions in Alexandrov geometry that remains open.
 
 \begin{thm}{Conjecture}
-Let $S$ be a component of the boundary of a complete geodesic finite-dimensional $\CBB(\kappa)$ space.
-Then $S$ equipped with the induced length metric is $\CBB(\kappa)$.
+Let $S$ be a component of the boundary of a finite-dimensional Alexandrov space.
+Then $S$ equipped with the induced length metric is an Alexandrov space with the same curvature bound.
 \end{thm}
 
 

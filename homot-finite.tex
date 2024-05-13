@@ -2,14 +2,14 @@
 
 \section{Controlled concavity}
 
-While $\CBB$ spaces have plenty of semiconcave functions (for example $\distfun_p^2$), 
+While Alexandrov spaces have plenty of semiconcave functions (for example $\distfun_p^2$), 
 it is not at all easy to construct a strictly concave one. 
 The following construction was found by Grigori Perelman \cite{perelman1993,perelman-petrunin}.
 
 
 \begin{thm}{Theorem}
 \label{thm:strictly-concave}
-Let $\spc{L}$ be a complete finite-dimensional geodesic $\Alex{\kappa}$ space.
+Let $\spc{L}$ be a complete finite-dimensional Alexandrov  space.
 Then for any point $p\in \spc{L}$, there is  a strictly concave function $f$ defined in an
 open neighborhood of $p$.
 
@@ -46,7 +46,7 @@ To construct the needed collection $\{q_i\}$, note that for small $r>0$ one can
 choose $N\ge \Const/\delta^{(m-1)}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
 and $\angk p{q_j}{q_i}>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
 On the other hand, suppose $\gamma$ runs from $x$ to $y$.
-If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
+If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-point comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
 $N\le \Const(m)/\delta^{(m-2)}$. 
 Therefore, for small $\delta>0$ and yet smaller $\eps>0$, the set $\{q_i\}$ forms the needed collection.
 
@@ -62,7 +62,7 @@ Then the set $\Omega=\set{x\in\spc{L}}{f(x)\ge -\eps}$ forms an open convex neig
 
 
 \begin{thm}{Corollary}\label{cor:convex-nbhd}
-Any point $p$ of a complete finite-dimensional geodesic $\Alex{0}$ space admits an arbitrary small convex neighborhood $\Omega$ and a strictly concave function $f$ defined in a neighborhood of the closure $\bar\Omega$ such that $p$ is the maximum point of $f$
+Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrary small convex neighborhood $\Omega$ and a strictly concave function $f$ defined in a neighborhood of the closure $\bar\Omega$ such that $p$ is the maximum point of $f$
 and $f|_{\partial\Omega}=0$.
 \end{thm}
 
@@ -80,8 +80,8 @@ When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{L},\s
 as well as $\spc{W}$ are chosen.
 
 
-Choose a compact geodesic $m$-dimensional $\CBB(\kappa)$ space $\spc{L}$.
-Suppose $\spc{L}'$ is another compact geodesic $m$-dimensional $\CBB(\kappa)$ space such that $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{L})>0$.
+Choose a compact $m$-dimensional Alexandrov space $\spc{L}$.
+Suppose $\spc{L}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{L})>0$.
 Then the construction in $\spc{L}$ from the previous section  
 can be repeated in $\spc{L}'$ for the liftings of all points and the same function $\phi$.
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
@@ -126,8 +126,8 @@ and if $y\in\spc{N}$ lies in the simplex with vertices $v_{i_1},\dots, v_{i_m}$,
 \section{Homotopy stability}
 
 \begin{thm}{Theorem}\label{thm:h-stability}
-Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces and $m<\infty$.
-Suppose $\spc{L}_n\GHto \spc{L}_\infty$ as $n\to \infty$.
+Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional Alexandrov spaces with curvature $\ge \kappa$, and $m<\infty$.
+Suppose $\spc{L}_n\z\GHto \spc{L}_\infty$ as $n\to \infty$.
 Then there is a $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $n$.
 
 Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
@@ -137,7 +137,7 @@ Applying this theorem with the Gromov's selection theorem (\ref{thm:gromov-compa
 
 
 \begin{thm}{Theorem}\label{thm:h-finiteness}
-There are only finitely many homotopy types of $m$-dimensional $\CBB(\kappa)$ spaces with diameter $\le D$ and volume $\ge v_0$;
+There are only finitely many homotopy types of $m$-dimensional Alexandrov spaces with curvature $\ge\kappa$, diameter $\le D$, and volume $\ge v_0$;
 here we assume that an integer $m$, and $v_0,D\in\RR$ such that $v_0>0$ are given.
 \end{thm}
 
@@ -216,7 +216,7 @@ The following theorem is a more exact version of \ref{thm:h-stability}.
 It will play an important role in the following lecture.
 
 \begin{thm}{Stability theorem}\label{thm:stability}
-Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional complete geodesic $\CBB(\kappa)$ spaces and $m<\infty$.
+Let $\spc{L}_1,\spc{L}_2,\dots,\spc{L}_\infty$ be a sequence of $m$-dimensional Alexandrov spaces with curvature $\ge\kappa$, and $m<\infty$.
 Suppose $\spc{L}_n\GHto \spc{L}_\infty$ as $n\to \infty$.
 Then there is a $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $n$.
 

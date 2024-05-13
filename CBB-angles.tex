@@ -12,8 +12,8 @@ defines a semimetric on the orbit space $\spc{X}/G$.
 Moreover, it is a genuine metric if the orbits of the action are closed.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
-Assume that group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$ and has closed orbits.
-Then the quotient space $\spc{L}/G$ is $\Alex0$.
+Assume that group $G$ acts isometrically on a proper Alexandrov space $\spc{L}$ with nonnegative curvature and has closed orbits.
+Then the quotient space $\spc{L}/G$ is an Alexandrov space with nonnegative curvature.
 
 \end{thm}
 
@@ -41,7 +41,7 @@ Therefore
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
-By $\Alex0$ comparison in $\spc{L}$,
+By $\EE^2$-comparison in $\spc{L}$,
 we have
 \[\angk {\hat{p}}{\hat{x}_1}{\hat{x}_2}
 +\angk {\hat{p}}{\hat{x}_2}{\hat{x}_3}
@@ -54,14 +54,14 @@ we get
 +\angk p{x_2}{x_3}
 +\angk p{x_3}{x_1}\le 2\cdot\pi;\]
 that is,
-the $\Alex0$ comparison holds for any quadruple in $\spc{L}/G$.
+the $\EE^2$-comparison holds for any quadruple in $\spc{L}/G$.
 \qeds
 
 \begin{thm}{Advanced exercise}\label{ex:Hilbert/G}
 Let $G$ be a compact Lie group with a bi-invariant Riemannian metric.
 Show that $G$ is isometric to a quotient of the Hilbert space by an isometric group action.
 
-Conclude that $G\in\CBB(0)$.
+Conclude that $G$ is an Alexandrov space with nonnegative curvature.
 \end{thm}
 
 \section{Generalizations}
@@ -99,10 +99,10 @@ Therefore we get the following.
 
 \begin{thm}{Generalization}\label{thm:submetry-CBB}
 Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
-Suppose $\spc{L}$ is a $\Alex{0}$ space, then so is $\spc{M}$.
+Suppose $\spc{L}$ is an Alexandrov space with nonnegative curvature, then so is $\spc{M}$.
 \end{thm}
 
-Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to $\CBB(-1)$ spaces.
+Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to curvature $\ge-1$.
 In the $\CBB(1)$ case, the proof produces a slightly weaker statement ---  \textit{any open $\tfrac\pi2$-ball in the quotient of $\CBB(1)$ is $\CBB(1)$};
 in particular, the quotient space is \textit{locally} $\CBB(1)$.
 If the space is geodesic, then the globalization theorem implies that it is globally  $\CBB(1)$.
@@ -304,7 +304,7 @@ Suppose $\alpha<\tfrac12$.
 Then $x_i\in V_i$ for any $x\in \spc{L}$.
 Indeed, assume $x_i\notin V_i$,
 then threre is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
-Then from comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
+Then from the comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ does not form a one-point extremal set.
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{L}$
 for any $0<\alpha<\tfrac12$; hence 

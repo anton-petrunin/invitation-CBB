@@ -35,7 +35,7 @@ $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
-Any Busemann function on a geodesic $\Alex{0}$ space is concave.
+Any Busemann function on an Alexandrov space with nonnegative curvature is concave.
 \end{thm}
 
 \section{Splitting theorem}
@@ -72,8 +72,8 @@ the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\spc{L}$  be a complete geodesic $\Alex{0}$ space
-and $\gamma$ be a line in $\spc{L}$. 
+Let $\spc{L}$  be an Alexandrov space with nonnegative curvature
+and let $\gamma$ be a line in $\spc{L}$. 
 Then 
 \[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
 for some subset $\spc{L}'\subset \spc{L}$.
@@ -82,7 +82,7 @@ for some subset $\spc{L}'\subset \spc{L}$.
 Before going into the proof, let us state a corollary of the theorem.
 
 \begin{thm}{Corollary}\label{cor:splitting}
-Let $\spc{L}$ be a complete geodesic $\Alex{0}$ space. 
+Let $\spc{L}$ be an Alexandrov space with nonnegative curvature. 
 Then there is an isometric splitting
 \[
 \spc{L}=\spc{L}'\oplus H
@@ -93,7 +93,7 @@ where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'
 The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
-Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on a geodesic $\CBB(0)$ space $\spc{L}$.
+Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an Alexandrov space $\spc{L}$ with nonnegative curvature.
 Consider two $f$-gradient curves $\alpha$ and~$\beta$.
 Then for any $t, s\ge 0$ we have
 \begin{align*}
@@ -190,8 +190,8 @@ Note that $h$ is onto.
 Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
-Recall that according our definition the real line $\RR$ is a $\CBB(1)$ space.
-However most of geodesic $\CBB(1)$ spaces have diameter at most $\pi$;
+Recall that according our definition the real line $\RR$ has curvature $\ge 1$.
+However most of Alexandrov spaces with curvature $\ge 1$ have diameter at most $\pi$;
 see \ref{ex:RisCBB(1)}.
 
 \begin{thm}{Exercise}\label{ex:cone-CBB}
@@ -219,7 +219,7 @@ It will be used to prove basic properties of the tangent space.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
-Let $\spc{L}$ be a complete geodesic $\CBB$ space and $p\in \spc{L}$.
+Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$.
 
 Given two vectors $u,v\in \T_p$, there is a unique vector $w\in \T_p$ such that
 \[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle \ge 0\]
@@ -243,7 +243,7 @@ However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's ex
 Applying the above lemma for $u=v$, we have the following statement.
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
-Let $\spc{L}$ be a complete geodesic $\CBB$ space 
+Let $\spc{L}$ be an Alexandrov space 
 and $p\in \spc{L}$. 
 Given a vector $u\in \T_p$,  there is a unique vector $u^*\in\T_p$ such that $\langle u^*,u^*\rangle +\langle u,u^*\rangle = 0$ and
 $u^*$ is \index{polar vectors}\emph{polar} to $u$;
@@ -257,7 +257,7 @@ $|u^*|\le |u|$.
 \begin{thm}{Example}
 Let $\spc{L}$ be the upper half plane in $\EE^2$;
 that is, $\spc{L}\z=\{(x,y)\in \EE^2\mid y\ge 0\}$.
-It is a complete geodesic $\Alex{0}$ space.
+It is an Alexandrov space.
 For $p=0$, the tangent space $\T_p$ can be canonically identified with $\spc{L}$.
 If $y>0$, then $u=(x,y)\in \T_p$ has many polar vectors;
 it includes $u^*=(-x,0)$ which is provided by \ref{cor:polar},
@@ -317,7 +317,7 @@ By the definition of gradient,
 \section{Linear subspace of tangent space}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{L}$ be a complete geodesic $\Alex{\kappa}$ space, $p\in \spc{L}$ and $u,v\in\T_p$.
+Let $\spc{L}$ be an Alexandrov space, $p\in \spc{L}$ and $u,v\in\T_p$.
 We say that vectors $u$ and $v$ are \index{opposite vectors}\emph{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
 
 The subcone
@@ -326,7 +326,7 @@ will be called the \index{linear subspace}\emph{linear subspace} of $\T_p$.
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{L}$ be a complete geodesic $\CBB$ space and $p\in \spc{L}$.
+Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$.
 Given two vectors $u,v\in\T_p$, the following statements are equivalent:
 \begin{subthm}{opposite} $u+v=0$;
 \end{subthm}
@@ -344,14 +344,14 @@ The condition $u+v=0$ is equivalent to
 thus 
 \ref{SHORT.<x,u>}$\Rightarrow$\ref{SHORT.opposite}.
 
-Recall that $\T_p$ is $\CBB(0)$.
+Recall that $\T_p$ has nonnegative curvature.
 Note that the hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
 By \ref{ex:adjacent-CBB}, $\mangle\hinge 0ux+\mangle\hinge 0vx=0$;
 hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
 \begin{thm}{Exercise}\label{prop:two-opp}
-Let $\spc{L}$  be a complete geodesic $\CBB$ space and $p\in \spc{L}$.
+Let $\spc{L}$  be an Alexandrov space and $p\in \spc{L}$.
 Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$ then $v=w$.
 \end{thm}
 
@@ -372,7 +372,7 @@ for any $x\in \Lin_p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:-u}
-Let $\spc{L}$ be a complete geodesic $\CBB$ space,
+Let $\spc{L}$ be an Alexandrov space,
 $p\in \spc{L}$ and $u\in \T_p$.
 Suppose $u^*\in \T_p$ is provided by \ref{cor:polar};
 that is, 
@@ -387,7 +387,7 @@ Show that
 
 
 \begin{thm}{Theorem}\label{thm:lin-subcone}
-Let $p$ be a point in a complete geodesic $\Alex{\kappa}$. 
+Let $p$ be a point in an Alexandrov space. 
 Then $\Lin_p$ is isometric to a Hilbert space.
 \end{thm}
 
@@ -442,7 +442,7 @@ hence $w\in\Lin_p$.
 
 
 \begin{thm}{Exercise}\label{ex:grad-dist}
-Let $p$ be a point in a complete geodesic $\CBB(\kappa)$ space $\spc{L}$ and $f=\distfun_p$.
+Let $p$ be a point in an Alexandrov space $\spc{L}$ and $f\z=\distfun_p$.
 Denote by $S$ the subset of points $x\in\spc{L}$ such that $|\nabla_xf|=1$.
 
 \begin{subthm}{ex:grad-dist:G-delta}
@@ -467,7 +467,7 @@ Show that if $|\nabla_xf|=1$, then $\dd_xf(w)= \langle\nabla_xf,w\rangle$ for an
 Note that \ref{ex:grad-dist:lin} implies the following.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
-Given a countable set of points $X$ in a complete geodesic $\Alex{\kappa}$ space $\spc{L}$
+Given a countable set of points $X$ in an Alexandrov space $\spc{L}$
 there is a G-delta dense set $S\subset\spc{L}$
 such that 
 $\dir sx\in \Lin_s$
@@ -476,14 +476,13 @@ for any $s\in S$ and $x\in X$.
 
 \section{Linear dimension}
 
-
-Suppose $\spc{L}$ is a complete geodesic $\CBB(\kappa)$ space.
+Suppose $\spc{L}$ is an Alexandrov space.
 Let us define its \index{linear dimension}\emph{linear dimension} $\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{L}$ at some point $p\in \spc{L}$.
-If not stated otherwise, dimension of a $\CBB$ space is its linear dimension.
+If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 \begin{thm}{(\textit{n}+1)-comparison}
-Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be an Alexandrov space with nonnegative curvature.
 Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there is a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{L}}
@@ -510,18 +509,18 @@ Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
-Let $\spc{L}$ is a complete geodesic $\CBB(0)$ space.
-Suppose $\LinDim\spc{L}=m<\infty$.
+Let $\spc{L}$ is an Alexandrov space with nonnegative curvature.
+Suppose $\LinDim\spc{L}\z=m<\infty$.
 Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dim=1}
-Show that a 1-dimensional complete geodesic $\CBB(\kappa)$ space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
+Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:resporka}
-Let $\spc{L}$ be a complete geodesic $\CBB(0)$ space.
+Let $\spc{L}$ be an Alexandrov with nonnegative curvature.
 
 Show that $\LinDim \spc{L}\ge m$ if and only if for some $m+2$ points $p$, $x_0,\z\dots, x_{m}\in \spc{L}$
 we have
@@ -538,8 +537,8 @@ if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connecte
 Note that geodesic spaces are $\infty$-geodesic.
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
-Let $\spc{L}$ be a finite-dimensional complete geodesic $\CBB(\kappa)$ space.
-Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic $\CBB(1)$ space.
+Let $\spc{L}$ be a finite-dimensional Alexandrov space.
+Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space with curvature $\ge1$.
 \end{thm}
 
 
@@ -560,11 +559,11 @@ If $\dim \spc{L}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional complete geodesic $\CBB(\kappa)$ spaces via induction on its dimension.
+Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensiona Alexandrov spaces via induction on its dimension.
 Such proofs will be indicated below.
 
 \parit{Proof.}
-Note that \ref{prop:Tan-is-CBB(0)} and \ref{ex:cone+CBB} imply that $\Sigma_p$ is $\CBB(1)$.
+Note that \ref{prop:Tan-is-CBB(0)} and \ref{ex:cone+CBB} imply that $\Sigma_p$ has curvature $\ge1$.
 
 \parit{Compactness.}
 Choose $\eps>0$; suppose $\spc{L}$ is $m$-dimensional.
@@ -631,15 +630,15 @@ again, with arbitrary given error and all large $n$.
 It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as required.
 \qeds
 
-Notice that $\CBB$ comparison gives lower bounds on $\mangle\hinge pxz$ and $\mangle\hinge pyz$, but in the proof we needed upper bounds which were obtained by from the definition of angle measure and compactness of space of directions.
+Notice that the comparison gives lower bounds on $\mangle\hinge pxz$ and $\mangle\hinge pyz$, but in the proof we needed upper bounds which were obtained by from the definition of angle measure and compactness of space of directions.
 
 \section{Comments}
 
-Corollary \ref{cor:euclid-subcone} is the key to the proof that \textit{all reasonable definitions of dimension give the same result on complete geodesic $\CBB$ spaces}.
+Corollary \ref{cor:euclid-subcone} is the key to the proof that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem \cite[15.16]{alexander-kapovitch-petrunin2024}.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
-For any complete length $\CBB(\kappa)$ space $\spc{L}$, we have
+For any Alexandrov space $\spc{L}$, we have
 \[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L},\]
 where $\TopDim$ and $\HausDim$ stands for \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension} and \index{Hausdorff dimension}\emph{Hausdorff dimension}, respectively.
 \end{thm}
@@ -647,14 +646,14 @@ where $\TopDim$ and $\HausDim$ stands for \index{Lebesgue coverning dimension}\e
 %??? лучше доказать --- утверждение про топ.размерность используется в \ref{thm:top-bry}!!!
 
 \begin{thm}{Open question}
-Let $p$ be a point in a geodesic $\CBB$ space $\spc{L}$.
-Suppose that $0\ne v\in \Lin_p$
+Let $p$ be a point in an Alexandrov space $\spc{L}$.
+Suppose that $0\ne v\in \Lin_p$.
 Is it true that the tangent space $\T_p$ splits in the direction of $v$?
 \end{thm}
 
 Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
 
 \begin{thm}{Open question}\label{open:Halb-proper}
-Let $\spc{L}$ be a proper length $\Alex\kappa$ space.
+Let $\spc{L}$ be a proper Alexandrov space.
 Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
 \end{thm}

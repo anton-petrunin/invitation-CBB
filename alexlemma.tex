@@ -9,33 +9,35 @@ If the inequality
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
-holds, then we say that the quadruple meets \index{$\CBB$ comparison}\emph{$\CBB(0)$ comparison}.
-
-\begin{thm}{Definition}\label{def:CBB}
-A metric space $\spc{X}$ has {}\emph{nonnegative curvature} in the sense of Alexandrov
-(briefly, $\spc{X}\in\CBB(0)$)
-if $\CBB(0)$ comparison
-holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined. 
-\end{thm}
+holds, then we say that the quadruple meets \index{$\EE^2$-comparison}\emph{$\EE^2$-comparison}.
 
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
-$\CBB(1)$ and $\CBB(-1)$ comparisons.
+\index{$\SSS^2$-comparison}\index{$\HH^2$-comparison} $\SSS^2$- or $\HH^2$-comparisons.
 Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
 but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
-if this inequality does not hold, than we assume that $\CBB(1)$ comparison holds for this quadruple.
+if this inequality does not hold, than we assume that $\SSS^2$-comparison holds for this quadruple.
 
 More generally, one may apply this definition to $\MM^2(\kappa)$.
-This way we define $\CBB(\kappa)$ comparison for any real $\kappa$.
-However, if you see $\CBB(\kappa)$ comparison, it is usually safe to assume that $\kappa=-1$, $0$, or $1$
-(applying rescaling, the $\CBB(\kappa)$ comparison can be reduced to these three cases).
+This way we define \index{$\MM^2(\kappa)$-comparison}$\MM^2(\kappa)$-comparison for any real $\kappa$.
+However, if you see $\MM^2(\kappa)$-comparison, it is usually safe to assume that $\kappa=-1$, $0$, or $1$
+(applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases).
+
+\begin{thm}{Definition}\label{def:CBB}
+A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
+if $\MM^2(\kappa)$-comparison
+holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined.
+
+If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov for some $\kappa$, 
+then it will be called \index{Alexandrov space}\emph{Alexandrov space}.
+\end{thm}
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
-Show that $\EE^n$ is $\CBB(0)$.
+Show that $\EE^n$ has nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
-Show that a metric space $\spc{X}$ is $\Alex0$
+Show that a metric space $\spc{X}$ has nonnegative curvature in the sense of Alexandrov
 if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
 there is a quadruple of points $q,y_1,y_2,y_3\in\EE^3$
 such that 
@@ -130,10 +132,12 @@ Note that
 \quad\Longrightarrow\quad
 \angk pxy=\pi.
 \]
-Applying it with Alexandrov's lemma and $\CBB(0)$ comparison, we get the following.
+Applying it with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
-If $p,x,y,z$ are points in a $\CBB(0)$ such that $p\in\left]x y\right[$, then 
+If $p,x,y,z$ are points in a 
+space with nonnegative curvature in the sense of Alexandrov.
+Suppose $p\in\left]x y\right[$, then 
 \[\angk xyz\le \angk xpz.\]
 \end{thm}
 
@@ -144,7 +148,8 @@ If $p,x,y,z$ are points in a $\CBB(0)$ such that $p\in\left]x y\right[$, then
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:noncreasing}
-Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
+Let $\hinge p x y$ be a hinge in a 
+space with nonnegative curvature in the sense of Alexandrov.
 Consider the function
 \[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
@@ -154,65 +159,75 @@ Show that $f$ is nonincreasing in each argument.
 Note that \ref{ex:noncreasing} implies the following.
 
 \begin{thm}{Claim}\label{clm:angle-defined}
-For any hinge $\hinge p x y$ in a $\CBB(0)$ space,
+For any hinge $\hinge p x y$ in a 
+space with nonnegative curvature in the sense of Alexandrov,
 the angle measure $\mangle\hinge p x y$ is defined, and
 \[\mangle\hinge p x y\ge \angk p x y.\]
 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:0-angle}
-Let $\hinge p x y$ be a hinge in a $\CBB(0)$ space.
+Let $\hinge p x y$ be a hinge in a 
+space with nonnegative curvature in the sense of Alexandrov.
 Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:pi-angle}
-Let $[xy]$ be a geodesic in a $\CBB(0)$ space.
+Let $[xy]$ be a geodesic in a 
+space with nonnegative curvature in the sense of Alexandrov.
 Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
 \end{thm}
 
 Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
 
 \begin{thm}{Exercise}\label{ex:adjacent-CBB}
-Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a $\CBB(0)$ space.
+Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a 
+space with nonnegative curvature in the sense of Alexandrov.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz= \pi.\]
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:pxyvw}
+Let $\spc{L}$ be a 
+space with nonnegative curvature in the sense of Alexandrov.
 Show that  
 \[
 \angk xyp=\angk xvp
 \quad\Longleftrightarrow\quad
 \angk xyp=\angk xwp
 \]
-if 
-$p,x,y,v,w$ are points in a $\CBB(0)$ space
-such that $v,w\in \left]xy\right[$.
+for any points
+$p,x,y,v,w$ in $\spc{L}$ such that $v,w\in \left]xy\right[$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:angle-lim}
-Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in a $\CBB(0)$ space converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
+Let $\spc{L}$ be a 
+space with nonnegative curvature in the sense of Alexandrov.
+Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{L}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
 that is geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
 
+%def Hausdorff???!!!
+
 \section{Hinge comparison}
 
-Let $\hinge pxy$ be a hinge in a $\CBB(0)$ space.
+Let $\hinge pxy$ be a hinge in a 
+space $\spc{L}$ with nonnegative curvature in the sense of Alexandrov.
 By \ref{ex:0-angle}, the angle measure $\mangle\hinge pxy$ is defined and
 \[\mangle\hinge pxy\ge \angk pxy.\]
 
 Further, according to \ref{ex:adjacent-CBB}, we have 
 \[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
-for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in a $\CBB(0)$ space.
+for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{L}$.
 
-The following theorem implies that a geodesic space is $\CBB(0)$ if
+The following theorem implies that a geodesic space has nonnegative curvature in the sense of Alexandrov if
 the above conditions hold for all its hinges.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
-A geodesic space $\spc{L}$ is $\CBB(0)$ if the following conditions hold.
+A geodesic space $\spc{L}$ has nonnegative curvature in the sense of Alexandrov if the following conditions hold.
 
 \begin{subthm}{angle-a}
 For any hinge $\hinge x p y$ in $\spc{L}$, the angle 
@@ -266,7 +281,7 @@ Let $\spc{L}$ be a geodesic space.
 Then the following conditions are equivalent.
 
 \begin{subthm}{cbb}
-$\spc{L}$ is $\CBB(0)$.
+$\spc{L}$ has nonnegative curvature in the sense of Alexandrov.
 \end{subthm}
  
 
@@ -296,42 +311,15 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced Exercise}\label{ex:urysohn}
-Construct a geodesic space $\spc{X}$ that is not $\CBB(0)$ and satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+Construct a geodesic space $\spc{X}$ does not have nonnegative curvature in the sense of Alexandrov, but satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
 \end{thm}
 
-\section{Thin and fat trianles}
-
-Consider the  model triangle $\trig{\tilde x}{\tilde y}{\tilde z}\z=\modtrig{}({x}{y}{z})_{\EE^2}$ in the Euclidean plane.
-The \index{natural map}\emph{natural map} $\trig{\tilde x}{\tilde y}{\tilde z}\z\to \trig{x}{y}{z}$ 
-sends a point $\tilde p\in[\tilde x\tilde y]\cup[\tilde y\tilde z]\cup[\tilde z\tilde x]$ to the corresponding point $p\in[ x y]\cup[y z]\cup[ z x]$;
-for instance, if $\tilde p$ lies on $[\tilde y\tilde z]$,
-then $p\in [y z]$ and $\dist{\tilde y}{\tilde p}{}=\dist{y}{p}{}$ (and therefore $\dist{\tilde z}{\tilde p}{}=\dist{z}{p}{}$).
- 
-\begin{thm}{Definition}\label{def:k-thin-}
-A triangle $\trig{x}{y}{z}$ in a metric space
-is called \index{thin triangle}\emph{thin} (or \index{fat triangle}\emph{fat}) if the natural map $\modtrig{}({x}{y}{z})_{\EE^2}\to \trig{x}{y}{z}$ is distance nonincreasing (or respectively distance nondecreasing).
-\footnote{ \color{red}  V: why do we need to define thin triangles in this book? I think they are only used in Exercise \ref{ex:normCBB} }
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:fat}
-Show that any triangle in a $\CBB(0)$ space is fat.
-\end{thm}
-
 \begin{thm}{Exercise}\label{ex:normCBB}
 Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
-Suppose that 
-
-\begin{subthm}{ex:normCBB:thin}
-Any triangle in $\spc{W}$ is thin.
-\end{subthm}
-
-\begin{subthm}{ex:normCBB:fat}
-Any triangle in $\spc{W}$ is fat.
-\end{subthm}
-
+Suppose that $\spc{W}$ has nonnegative curvature in the sense of Alexandrov.
 Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \end{thm}
 
@@ -370,7 +358,7 @@ The following proposition is simple, but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
-A geodesic space $\spc{L}$ is $\Alex{0}$ if and only if $f''\le 1$ for any function $f$ of the following type 
+A geodesic space $\spc{L}$ has nonnegative curvature in the sense of Alexandrov if and only if $f''\le 1$ for any function $f$ of the following type 
 \[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
 \end{thm} 
 
@@ -407,27 +395,28 @@ Hence the proposition follows.
 
 \section{Comments}
 
-The $\CBB$ comparison is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
+The 4-point comparison is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
 this is the subject of out previous invitation \cite{alexander-kapovitch-petrunin-2019}.
 
 In both comparisons we check certain condition on 6 distances between every pair of a 4-point subset.
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested to consider other conditions of that type for $n$-point subsets;
 see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for development of this idea.
 
-All the discussed statements admit natural generalizations to $\CBB(\kappa)$ spaces.
+All the discussed statements admit natural generalizations to 
+spaces with curvature $\ge \kappa$ in the sense of Alexandrov.
 The proof are nearly the same, but the formulas are getting more complicated.
-It is common practce in Alexandrov geometry to write proofs in $\CBB(0)$ case and 
-leave its generalization to $\CBB(\kappa)$ case as an exercise.
+It is common practce in Alexandrov geometry to write proofs for nonnegative curvature and 
+leave the general curvature bound as an exercise.
 Sometime theses exercises are nontrivial. 
 
-For example, the function comparison of $\CBB(-1)$ states that 
+For example, the function comparison for curvature $\ge-1$ states that 
 $f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
 (The inequality used here will be defined in Section \ref{sec:Semiconcave functions}.)
 
-Similarly, the function comparison of $\CBB(1)$ states that for any point $p$, we have
+Similarly, the function comparison curvature $\ge1$ states that for any point $p$, we have
 $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
 The geometric meaning of these inequalities remains the same:
-\textit{distance functions in $\CBB(\kappa)$ are more concave than distance functions in $\MM(\kappa)$}.
+\textit{distance functions are more concave than distance functions in $\MM^2(\kappa)$}.
 
 %done:\footnote{\red V: perhaps say something about CAT spaces here?}
