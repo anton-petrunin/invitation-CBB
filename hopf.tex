@@ -1,3 +1,4 @@
+%%!TEX root = the-hopf.tex
 \chapter{Boundary}\label{chap:bry}
 
 \section{Definition}
@@ -457,9 +458,9 @@ Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-c
 
 \section{Remarks}
 
-Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
+Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. \footnote{\red V:  I would like to add some details here}
 
-\begin{thm}{Topological stratification}
+\begin{thm}{Topological stratification}\label{thm:top-stratification}
 Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into subsets topological manifolds $S_0,\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
 Moreover,
 \begin{subthm}{}
@@ -473,14 +474,15 @@ $S_{m-2}=\emptyset$.
 \end{thm}
 
 Let us mention that this statement does not imply that (compact) finite-dimensional Alexandrov space is homeomorphic to CW-complex ???
+\footnote{\red V: it does imply that the have homotopy type of CW complexes (this also follows from existence of covers by Perelman's convex sets). I don't think it's known whether or not every stratified manifold is homeomorphic to a CW complex}.
 
 Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
 This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary;
 so the following tools become available.
 
-\begin{thm}{Fundamental-class lemma}
+\begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
 Let $\spc{L}$ be a compact $m$-dimensional Alexandrov space, and $m<\infty$.
-Then $\spc{L}$ has a fundamental class in Alexander--Spanier cohomology with $\ZZ/2$ coefficients; 
+Then $\spc{L}$ has a fundamental class in Alexander--Spanier \footnote{\red V: for Alexandrov spaces  Alexander--Spanier  cohomology is the same as singular cohomology }cohomology with $\ZZ/2$ coefficients; 
 that is, 
 \[H^n(\spc{L},\ZZ/2)=\ZZ/2.\]
 
@@ -490,7 +492,7 @@ This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen};
 It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
 It is also used in the proof of a generalized domain invariance theorem stated below. 
 
-\begin{thm}{Domain invariance}
+\begin{thm}{Domain invariance}\label{thm-inv-domain}
 Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
 Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
 Then $f(\Omega_1)$ is open in $\spc{L}_2$.
@@ -525,5 +527,28 @@ Let $S$ be a component of the boundary of a finite-dimensional Alexandrov space.
 Then $S$ equipped with the induced length metric is an Alexandrov space with the same curvature bound.
 \end{thm}
 
+\section{Comments}
+
+Invariance of domain theorem holds in more generality for stratified spaces \cite[Theorem 3.2]{kapovitch-zhu}.
+
+Topological stratification theorem ~\ref{thm:top-stratification} can be sharpened as follows
+
+\begin{thm}{Chjaracterization of Boundary}\label{thm:boundary-kd}
+Let $\spc{L}$ an Alexandrov space of dimension $m$  and let $p \in \spc{L}$.
+Then the following are equivalent
+\begin{enumerate}
+\item \label{item-boundary} $p\in \partial \spc{L}$;
+\item\label{item-contractible} $\Sigma_p(\spc{L})$ is contractible;
+\item \label{item-space-dir-homology} $\tilde H_{m-1}(\Sigma_p \spc{L},\ZZ_2)= 0$;
+\item \label{item-local-homology} $H_m( \spc{L},\spc{L}\setminus \{p\},\ZZ_2)= 0$;
+\item \label{item-closure-top-strata}  $p\in \bar S_{m-1}$;
+
+
+
+\end{enumerate}
+\end{thm}
+
+
+This theorem can be used to show that gradient curves of semiconcave functions can be extended backwards at regular interior points.
 
 

@@ -1,3 +1,5 @@
+%%!TEX root = the-gradient-flow.tex
+
 \chapter{Gradient flow}\label{chap:GF}
 
 \section{Velocity of curve}
@@ -68,9 +70,9 @@ that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
-A complete proof of the following theorem takes about 5 pages \cite{alexander-kapovitch-petrunin2024}; 
-it mimics the proof of the standard Picard theorem on the existence and uniqueness of solutions of ordinary differential equations.
-We omit the proof of existence;
+A complete proof of the following theorem is given in \cite{alexander-kapovitch-petrunin2024}; 
+it mimics the proof of the standard Picard theorem on the existence  and uniqueness of solutions of ordinary differential equations.
+We omit the proof of existence as it is rather lengthy;
 the uniqueness will be proved in the next section.
 
 
@@ -231,7 +233,7 @@ for some constant $\Const=\Const(t_{\max},\lambda)$.
 \section{Gradient flow}
 
 Let $\spc{L}$ be an Alexandrov space 
-and $f$ be a locally Lipschitz semiconcave function defined on an open set of $\spc{L}$.
+and $f$ be a locally Lipschitz semiconcave function defined on an open subset of $\spc{L}$.
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
 \[\GF^t_f(x)=y.\]
@@ -246,7 +248,7 @@ In some cases, it is globally defined.
 For example, if $f$ is a $\lambda$-concave function defined on the whole space $\spc{L}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{L}$ and $t\ge0$;
 see \cite[16.19]{alexander-kapovitch-petrunin2024}.
 
-Now let us reformulate statements obtained earlier using this new terminology.
+Now let us reformulate the statements about gradient curves obtained earlier using this new terminology.
 From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
@@ -275,12 +277,12 @@ as $n\to \infty$.
 
 One of the technical difficulties in Alexandrov's geometry comes from
 nonextendability of geodesics. 
-In particular, the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined the usual way, can
+In particular, the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined in the usual way, can
 be undefined in an arbitrary small neighborhood of the origin. 
 
 We construct its analog, the \index{gradient exponential map}\emph{gradient exponential map} 
 \[\gexp_p\:\T_p\to\spc{L},\]
-which practically solves this problem. 
+which essentially solves this problem. 
 It shares many properties with the ordinary exponential map, and better in certain respects,
 even in the Riemannian universe.
 
@@ -321,5 +323,7 @@ defined.
 
 ??? gradient exponent for $\kappa\ne 0$
 and for nonproper.
+
+The gradient exponential map $\gexp_p$  for a point $p$ a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus of $p$ but \emph{is different } from the  Riemannian exponential outside it.
 
 quasigeodesics
