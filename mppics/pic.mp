@@ -301,6 +301,27 @@ draw (0,0)*u--(1,0)*u--(1,1)*u--(2,1)*u--(2,2)*u--(3,2)*u--(3,3)*u--(4,3)*u--(4,
 
 endfig;
 
+beginfig(104) 
+save u;
+u:=1.5cm;
+
+z.x=origin;
+z.y=(4,0)*u;
+z.xy=.5[z.x,z.y];
+z.xxy=.25[z.x,z.y];
+z.xyy=.75[z.x,z.y];
+
+draw z.x--z.y dashed evenly;
+
+dOt z.x,z.y,z.xy,z.xxy,z.xyy;
+
+label.bot(btex $x=\gamma(0)$ etex, z.x+(-8,0));
+label.bot(btex $\gamma(1)=y$ etex, z.y+(8,0));
+label.bot(btex $\gamma(\tfrac12)$ etex, z.xy);
+label.bot(btex $\gamma(\tfrac14)$ etex, z.xxy);
+label.bot(btex $\gamma(\tfrac34)$ etex, z.xyy);
+endfig;
+
 beginfig(105) 
 save u,p;
 path p[];
@@ -323,6 +344,28 @@ label(btex $=\mangle\hinge x p q$ etex rotated (angle(z.C-z.A)/2), z.A +32*unitv
 label(btex $\side\hinge x p q$ etex rotated angle(z.B-z.C), .5[z.B,z.C]+8*unitvector(z.B-z.C) zscaled (0,1));
 label(btex $\dist{x}{q}{}$ etex rotated angle(z.C-z.A), .5[z.A,z.C]+8*unitvector(z.C-z.A) zscaled (0,1));
 label.bot(btex $\dist{x}{p}{}$ etex, .5[z.A,z.B]);
+endfig;
+
+beginfig(109) 
+save u;
+u:=.7cm;
+
+z.p=origin;
+z.x1=(1,2)*u;
+z.x2=(-2,0)*u;
+z.x3=(1.4,-1.8)*u;
+
+draw z.p--z.x1;
+draw z.p--z.x2;
+draw z.p--z.x3;
+
+
+dOt z.p,z.x1,z.x2,z.x3;
+
+labelarcsprof(z.x1, z.p, z.x2, 10, 13, btex $\alpha^{12}$ etex);
+labelarcsprof(z.x2, z.p, z.x3, 8, 13, btex $\alpha^{23}$ etex);
+labelarcsprof(z.x1, z.p, z.x3, 9, 13, btex $\alpha^{13}$ etex);
+
 endfig;
 
 beginfig(415)

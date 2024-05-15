@@ -18,7 +18,7 @@ Occasionally, we use some topology; any introductory text in algebraic topology 
 
 \section{Notations}
 
-The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by $\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by \index{$\dist{x}{y}{}$ and $\dist{x}{y}{\spc{X}}$ (distance)}$\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.\label{page:|x-y|X}
 The latter notation is used if we need to emphasize 
 that the distance is taken in the space~${\spc{X}}$.
 
@@ -90,7 +90,7 @@ A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\
 \footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
 Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
 in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if 
-\[\dist{\gamma(s)}{\gamma(t)}{\spc{X}}=|s-t|\]
+\[\dist{\gamma(s)}{\gamma(t)}{}=|s-t|\]
 for any pair $s,t\in \II$.
 
 If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
@@ -98,8 +98,9 @@ In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$}, and
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
 
-In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique.  
-However, once we write $[p q]$ we assume that we have chosen such geodesic.
+In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique;
+for example, any meridian is a geodesic between poles on the sphere.
+However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 
 A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
 
@@ -123,27 +124,36 @@ Then $\spc{X}$ is a geodesic space.
 
 This lemma is due to Karl Menger \cite[Section 6]{menger}.
 
+%???+PIC!!!
+
 \parit{Proof.}
 Choose $x,y\in \spc{X}$;
-set $\alpha(0)=x$, and $\alpha(1)=y$.
+set $\gamma(0)=x$, and $\gamma(1)=y$.
 
-Let $\alpha(\tfrac12)$ be a midpoint between $\alpha(0)$ and $\alpha(1)$.
-Further, let $\alpha(\frac14)$ 
-and $\alpha(\frac34)$ be midpoints between the pairs $(\alpha(0),\alpha(\tfrac12))$ 
-and $(\alpha(\tfrac12),\alpha(1))$ respectively.
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-104}
+\end{figure}
+
+Let $\gamma(\tfrac12)$ be a midpoint between $\gamma(0)$ and $\gamma(1)$.
+Further, let $\gamma(\frac14)$ 
+and $\gamma(\frac34)$ be midpoints between the pairs $(\gamma(0),\gamma(\tfrac12))$ 
+and $(\gamma(\tfrac12),\gamma(1))$ respectively.
 Applying the above procedure recursively,
-on the $n$-th step we define $\alpha(\tfrac{k}{2^n})$,
+on the $n$-th step we define $\gamma(\tfrac{k}{2^n})$,
 for every odd integer $k$ such that $0<\tfrac k{2^n}<1$, 
 as a midpoint of the already defined
-$\alpha(\tfrac{k-1}{2^n})$ and $\alpha(\tfrac{k+1}{2^n})$.
+$\gamma(\tfrac{k-1}{2^n})$ and $\gamma(\tfrac{k+1}{2^n})$.
 
-This way we define $\alpha(t)$ for all dyadic rationals $t$ in $[0,1]$.
-Moreover, $\alpha$ has Lipschitz constant $\dist{x}{y}{}$.
-Since $\spc{X}$ is complete, the map $\alpha$ can be extended continuously to $[0,1]$.
+This way we define $\gamma(t)$ for all dyadic rationals $t$ in $[0,1]$.
+Moreover, $\gamma$ has Lipschitz constant $\dist{x}{y}{}$.
+Since $\spc{X}$ is complete, the map $\gamma$ can be extended continuously to $[0,1]$.
 Moreover,
 \[
-\length\alpha\le \dist{x}{y}{}.
+\length\gamma\le \dist{x}{y}{}.
 \]
+Therefore $\gamma$ is a geodesic path from $x$ to $y$.
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:menger}
@@ -161,7 +171,7 @@ Show that $\spc{X}$ is a length space.
 \section{Triangles and model tangles}
 
 \parbf{Triangles.}
-Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+Given a triple of distinct points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
 $\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
 
 Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
@@ -183,7 +193,7 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
 \quad\dist{\tilde r}{\tilde p}{\EE^2}&=\dist{r}{p}{\spc{X}}.
 \end{align*}
 
-The same way we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
+In the same way, we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
 in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
 In the latter case, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
@@ -197,7 +207,9 @@ the angle measure of
 $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
 will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
 $\angk p q r_{\EE^2}$%
-\index{$\tilde\measuredangle$!$\angk{{*}}{{*}}{{*}}$}.
+\index{$\angk{p}{q}{r}$ (model angle)}.\label{page:model-angle}
+
+For example, if $\dist{p}{q}{}=\dist{q}{r}{}=\dist{r}{p}{}$, then $\angk p q r_{\EE^2}=\tfrac\pi3$ regardless of existence and relative position of geodesics $[pq]$ and $[pr]$.
 
 The same way we define $\angk p q r_{\MM^2(\kappa)}$;
 in particular, $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$.
@@ -244,6 +256,8 @@ Then
 \[\alpha_{13}\le \alpha_{12}+\alpha_{23}.\]
 
 \end{thm}
+
+
 
 \parit{Proof.}
 Since $\alpha_{13}\le\pi$, we can assume that $\alpha_{12}+\alpha_{23}< \pi$.
