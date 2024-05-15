@@ -189,7 +189,7 @@ Show that any finite-dimensional Alexandrov space is proper.
 
 \begin{thm}{Theorem}\label{thm:gromov-compactness}
 Let $m$ be a positive integer.
-Then any sequence of $m$-dimensional Alexandrov spaces with curvature $\ge\kappa$ has a converging subsequence in the sense of Gromov--Hausdorff
+Then any sequence of $m$-dimensional $\Alex\kappa$ spaces has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
 The theorem implies that one can select a converging sequence 
@@ -225,7 +225,7 @@ Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack
 
 
 \parit{Proof of \ref{thm:gromov-compactness}.}
-Denote by $\bm{K}$ the set of isometry classes of Alexandrov spaces with curvature $\ge \kappa$, dimension $\le m$ and diameter $\le D$.
+Denote by $\bm{K}$ the set of isometry classes of $\Alex\kappa$ spaces with dimension $\le m$ and diameter $\le D$.
 By \ref{thm:CBB-closed}, \ref{ex:geod-closed}, and \ref{ex:resporka}, $\bm{K}$ is a closed subset of $\GH$.
 
 Choose a space $\spc{L}\in \bm{K}$;
@@ -250,39 +250,39 @@ It remains to apply \ref{lem:GH-complete} and \ref{clm:compact-net}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:pack-vol}
-Let $\spc{L}$ be an Alexandrov space with nonnegative curvature dimension $m$ and diameter $\le D$.
+Let $\spc{L}$ be an $\Alex0$ space with dimension $m$ and diameter $\le D$.
 Suppose $\vol\spc{L}\ge v_0>0$.
 Show that 
 \[\pack_\eps\spc{L}\ge \frac\Const{\eps^m}\]
 for some constant $\Const=\Const(m,D,v_0)>0$.
 
-Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional Alexandrov spaces with nonnegative curvature, diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it is defined) has dimension~$m$.%
+Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it is defined) has dimension~$m$.%
 \footnote{A stronger statement holds 
 \[\vol_m\spc{L}_\infty=\lim_{n\to\infty} \vol_m\spc{L}_n;\]
-in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact geodesic $\CBB(\kappa)$ spaces with dimension $\le m$, then the function
+in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.}
 \end{thm}
 
 \section{Comments}
 
-Let us state a version of Bishop--Gromov inequality for curvature bound $\kappa=\pm1$.
+Let us state a version of Bishop--Gromov inequality for $\Alex{\pm1}$ spaces.
 Its proof is more technical.
 A weaker inequality can be obtained by applying the same argument as above,
 and it is sufficient to extend the rest of the result in the lecture.
 
 \begin{thm}{Bishop--Gromov inequality}
-Given a point $p$ in a complete geodesic $m$-dimensional $\CBB(\pm1)$ space consider the function $v(R)\z=\vol_m\oBall(p,R)$;
+Given a point $p$ in an $m$-dimensional $\Alex{\pm1}$ space, consider the function $v(R)\z=\vol_m\oBall(p,R)$;
 denote by $\tilde v(R)$ the volume of $R$ ball in the corresponding $m$-dimensional model space (the unit $m$-dimensional sphere or the $m$-dimensional Lobachevsky space).
 Then 
 \[v(R)\le \tilde v(R)\]
 and the function 
 \[R\mapsto \frac{v(R)}{\tilde v(R)}\] is nonincreasing;
-in the $\CBB(1)$ case, one has to assume that $R<\pi$.
+in the $\Alex1$ case, one has to assume that $R<\pi$.
 \end{thm}
 
-The same inequality holds for complete $m$-dimensional Riemannian manifolds with Ricci curvature $\ge (m-1)\cdot \kappa$.
+The same inequality holds for complete $m$-dimensional Riemannian manifolds with Ricci curvature at least $(m-1)\cdot \kappa$.
 
-Gromov's selection theorem is the main source of applications of $\CBB$ spaces.
+Gromov's selection theorem is the main source of applications of Alexandrov spaces.
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) in the next lecture illustrates this technique.
 
 A version Gromov's selection theorem (as well as Bishop--Gromov inequality) holds for $m$-dimensional Riemannian manifolds with a lower bound on Ricci curvature.

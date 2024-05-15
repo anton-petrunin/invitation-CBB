@@ -35,7 +35,7 @@ $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
-Any Busemann function on an Alexandrov space with nonnegative curvature is concave.
+Any Busemann function on an $\Alex0$ space is concave.
 \end{thm}
 
 \section{Splitting theorem}
@@ -72,8 +72,7 @@ the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\spc{L}$  be an Alexandrov space with nonnegative curvature
-and let $\gamma$ be a line in $\spc{L}$. 
+Let $\gamma$ be a line in a $\Alex0$ space $\spc{L}$. 
 Then 
 \[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
 for some subset $\spc{L}'\subset \spc{L}$.
@@ -82,8 +81,7 @@ for some subset $\spc{L}'\subset \spc{L}$.
 Before going into the proof, let us state a corollary of the theorem.
 
 \begin{thm}{Corollary}\label{cor:splitting}
-Let $\spc{L}$ be an Alexandrov space with nonnegative curvature. 
-Then there is an isometric splitting
+Any $\Alex0$ space $\spc{L}$ splits isometrically as
 \[
 \spc{L}=\spc{L}'\oplus H
 \]
@@ -93,7 +91,7 @@ where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'
 The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
-Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an Alexandrov space $\spc{L}$ with nonnegative curvature.
+Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{L}$.
 Consider two $f$-gradient curves $\alpha$ and~$\beta$.
 Then for any $t, s\ge 0$ we have
 \begin{align*}
@@ -190,19 +188,13 @@ Note that $h$ is onto.
 Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
-Recall that according our definition the real line $\RR$ has curvature $\ge 1$.
-However most of Alexandrov spaces with curvature $\ge 1$ have diameter at most $\pi$;
+Recall that according our definition the real line $\RR$ is $\Alex1$.
+However most of $\Alex1$ spaces have diameter at most $\pi$;
 see \ref{ex:RisCBB(1)}.
 
 \begin{thm}{Exercise}\label{ex:cone-CBB}
 Suppose $\spc{X}$ is a complete geodesic space.
-Show that $\Cone\spc{X}$ is $\CBB(0)$ if and only if $\spc{X}\iso\Susp^k\spc{Y}$
-for some integer $k\ge 0$ and a geodesic $\CBB(1)$ space $\spc{Y}$ such that $\dist{x}{y}{}<\pi$ for any $x,y\in\spc{Y}$.
-
-???
-
-(For example, if $\spc{Y}=\emptyset$, then $\spc{X}\iso \mathbb{S}^k$;
-if $\spc{Y}$ is a one-point space, then $\spc{X}$ is a hemisphere.)
+Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le 1$.
 \end{thm}
 
 \section{Comments}
@@ -482,7 +474,7 @@ the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 \begin{thm}{(\textit{n}+1)-comparison}
-Let $\spc{L}$ be an Alexandrov space with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there is a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{L}}
@@ -509,7 +501,7 @@ Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
-Let $\spc{L}$ is an Alexandrov space with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 Suppose $\LinDim\spc{L}\z=m<\infty$.
 Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}$.
 \end{thm}
@@ -520,7 +512,7 @@ Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional ma
 
 
 \begin{thm}{Exercise}\label{ex:resporka}
-Let $\spc{L}$ be an Alexandrov with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 
 Show that $\LinDim \spc{L}\ge m$ if and only if for some $m+2$ points $p$, $x_0,\z\dots, x_{m}\in \spc{L}$
 we have

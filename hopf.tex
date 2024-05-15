@@ -135,7 +135,7 @@ The remaining part of the proof is divided in three cases.
 
 \parit{Case 1.}
 Suppose $k>1$.
-Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional Alexandrov cone with nonnegative curvature.
+Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional $\Alex0$ cone.
 Note that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
@@ -147,7 +147,7 @@ The latter contradicts contradicts minimality of $k$.
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
 Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$ and $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 
-Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional Alexandrov cone with nonnegative curvature.
+Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
 Since $\partial\spc{L}\cong\RR^{m-1}$,
 the image of $\partial\spc{L}$ in $\spc{L}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
 In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has nonzero projection in $\spc{C}'$.
@@ -283,7 +283,7 @@ the latter contradicts that $\Sigma_x$ is a line segment.
 
 Let $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
 Suppose $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is an Alexandrov space with curvature $\ge 1$.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is $\Alex1$.
 Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
 Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
@@ -393,7 +393,7 @@ Assume $y\in \spc{L}_1\setminus\partial\spc{L}$.
 Suppose $[py]$ crosses $\partial L$ at $x$.
 Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$
 and let $\Xi$ be its doubling.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is an Alexandrov space with curvature $\ge1$.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
 
 Note that $\dir x{y}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
 \[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
@@ -438,20 +438,20 @@ All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry-connected}
-Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with curvature $\ge 1$ and nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a complete finite-dimensional $\Alex1$ space with nonempty boundary $\partial\spc{L}$.
 Show that $\partial\spc{L}$ is connected.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with nonnegative curvature and nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a complete finite-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{L}$.
 Show that the distance function to the boundary
 \[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
 is concave.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:liberman}
-Let $\spc{L}$ be a complete finite-dimensional Alexandrov space with nonnegative curvature and nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a complete finite-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{L}$.
 Suppose $\gamma$ is a geodesic in $\partial\spc{L}$ with the induced length metric.
 Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
 \end{thm}
