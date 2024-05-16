@@ -23,14 +23,12 @@ indeed, for any point $x$ we have $\distfun_{B_n}(x)\to\infty$ as $n\to \infty$ 
 The following exercise is an extension of the so-called Blaschke selection theorem to our version of Hausdorff convergence.
 
 \begin{thm}{Exercise}\label{ex:generalized-selection}
-Let $\spc{X}$ be a proper metric space
-and $A_1,A_2,\dots$ be a sequence of closed sets in~$\spc{X}$.
-Show that the sequence  $A_1,A_2,\dots$ has a convergent subsequence in the sense of Hausdorff.
+Show that any sequence of closed sets in a proper metric space has a convergent subsequence in the sense of Hausdorff.
 \end{thm}
 
 \section{Gromov--Hausdorff convergence}
 
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be a sequence of complete metric spaces.
 Suppose that there is a metric on the disjoint union 
 \[\bm{X}=\bigsqcup_{n\in \NN\cup\{\infty\}} \spc{X}_n\] 
 that satisfies the following property:
@@ -41,9 +39,9 @@ and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdor
 \end{thm}
 
 In this case we say that the metric on $\bm{X}$ \textit{defines} a \index{Gromov--Hausdorff limit}\emph{convergence} $\spc{X}_n\z\to \spc{X}_\infty$ in the {}\emph{sense of Gromov--Hausdorff}.
-The space $\bm{X}$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
+The metric on  $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
 
-A limit space for this convergence is not uniquely defined.
+The limit space is not uniquely defined by the sequence.
 For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
 The first convergence is evident and the second could be guessed from the diagram.
 
@@ -56,19 +54,20 @@ The first convergence is evident and the second could be guessed from the diagra
 The following exercise states that if limit compact, then it is unique up to isometry. 
 
 \begin{thm}{Exercise}\label{ex:geod-closed}
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
-Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are limit spaces for some Gromov--Hausdorff convergences of $\spc{X}_n$.
-Assume $\spc{X}_\infty$ is compact, show that it is isometric to $\spc{X}_\infty'$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:geod-closed}
 Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
 Suppose $\spc{X}_n\to \spc{X}_\infty$ is a convergence in the sense of Gromov--Hausdorff.
 Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
 \end{thm}
 
 \parbf{Compact case.}
-The Gromov--Hausdorff convergence defines a metrizable topology of the set of isometry classes of compact metric spaces; this space will be denoted by $\GH$.
+The Gromov--Hausdorff convergence of compact spaces has specially nice properties.
+From the technical point of view they follow from the next statement that we formulate as an exercise.
+
+\begin{thm}{Exercise}\label{ex:non-contracting-map}
+Let $f$ be a distance noncontracting map from 
+a compact metric space $\spc{K}$ to itself.
+Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
+\end{thm}
 
 For two metric spaces $\spc{X}$ and $\spc{Y}$,
 we write $\spc{X}\le \spc{Y}+\eps$ if
@@ -83,21 +82,31 @@ we have
 \[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
 \end{thm}
 
+
+
+By the last exercise, there is a metric on the set of isometry classes of compact metric spaces
+such that $\dist{\spc{X}_n}{\spc{X}_\infty}{}\to0$ if and only if there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$.
+This metric space will be denoted by $\GH$. 
+Given two compact metric $\spc{X}$ and $\spc{Y}$, define
+\[\dist{\spc{X}}{\spc{Y}}{\GH}=\inf\set{\eps>0}{\spc{X}\le \spc{Y}+\eps
+\quad\text{and}\quad
+\spc{Y}\le \spc{X}+\eps}.\]
+This is not the standard Gromov--Hausdorff metric, but it defines the same topology.
+
+\begin{thm}{Exercise}\label{ex:complete}
+Show that $\GH$ is complete.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are limit spaces for some Gromov--Hausdorff convergences of $\spc{X}_n$.
+Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty'$.
+\end{thm}
+
 \parbf{Pointed convergence.}
 Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
 For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, while $(\spc{X}_n,p_n)=(\RR_+,n)$ converges to $(\RR,0)$.
-
-The pointed convergence works nicely for proper metric spaces;
-the following theorem is an analog of Gromov's selection theorem for this convergence.
-
-\begin{thm}{Theorem}\label{thm:pointed-gromov-compactness}
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of proper metric spaces with marked points $p_n\in\spc{X}_n$.
-Assume that for any $R>0$, the balls $\cBall[p_n,R]_{\spc{X}_n}$ are \index{uniformly totally bounded sets}\emph{uniformly totally bounded};
-that is, for each $R$ and $\eps>0$ there is $N$ such that $\cBall[p_n,R]_{\spc{X}_n}$ can be covered by at most $N$ $\eps$-balls.
-Then there is a pointed Gromov--Hausdorff convergence $(\spc{X}_n,p_n)\to (\spc{X}_\infty,p_\infty$ such that $\spc{X}_\infty$ is proper.
-
-Moreover, the space with marked point $(\spc{X}_\infty,p_\infty)$ is uniquely defined up to isometry that respects the marked point.
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:GHto-tangent}
 Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{L}$,
@@ -112,11 +121,12 @@ for any geodesic $\gamma$ that starts at $p$.
 \section{Survival of curvature bounds}
 
 \begin{thm}{Theorem}\label{thm:CBB-closed}
-For any $\kappa\in\RR$, the spaces with curvature $\ge\kappa$ in the sense of Alxanrov form a closed subset in $\GH$.
+Let $\spc{X}_n\z\to \spc{X}_\infty$ be a convergence in the sense of Gromov--Hausdorff.
+Suppose that each for each $n$, the space $\spc{X}_n$ has curvature $\ge\kappa$ in the sense of Alxanrov.
+Then the same holds for $\spc{X}_\infty$.
 \end{thm}
 
 \parit{Proof}.
-Suppose $\spc{X}_n\to\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
 Choose a quadruple of points $p_\infty, x_\infty,y_\infty,z_\infty\in \spc{X}_\infty$.
 
 By the definition of Gromov--Hausdorff convergence, we can choose a quadruple $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ such that each of 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
@@ -126,8 +136,8 @@ Passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim-lim}
-Suppose that a sequence $\spc{L}_1,\spc{L}_2,\dots$ of compact Alexandrov spaces converges to $\spc{L}_\infty$.
-Show that
+Suppose that a sequence $\spc{L}_1,\spc{L}_2,\dots$ of $\Alex\kappa$ spaces that converges to $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
+Show that $\spc{L}_\infty$ is $\Alex\kappa$ and
 \[\LinDim \spc{L}_\infty\le \liminf_{n\to\infty} \LinDim \spc{L}_n.\]
 \end{thm}
 
@@ -143,7 +153,7 @@ In this case, we may write $\vol B$ instead of $\vol_m B$.
 
 
 \begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
-Let $\spc{L}$ be an Alexandrov space.
+Let $\spc{L}$ be an $\Alex0$ space.
 Suppose $\spc{L}=m<\infty$.
 Then 
 \[\vol \oBall(p,R)\le \omega_m\cdot R^m,\]
@@ -170,31 +180,38 @@ Hence the first statement follows in the general case.
 
 For the second statement, choose $0<R_1<R_2$.
 Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {R_1}{R_2})$.
+(The map $w$ mimics the dilation with center at $p$ and coefficient $\tfrac {R_1}{R_2}$.)
 By comparison,
 \[\dist{w(x)}{w(y)}{}\ge \tfrac {R_1}{R_2}\cdot \dist{x}{y}{}.\]
-It follows that 
-\[\vol B\ge (\tfrac {R_1}{R_2})^m\cdot\vol A\]
-if $B\supset w(A)$.
-Observe that 
-\[\oBall(p,R_1) \supset w[\oBall(p,R_2)]\]
---- hence the result.
-\qeds
-
+Since $\oBall(p,R_1) \supset w[\oBall(p,R_2)]$, we get 
+\[\vol \oBall(p,R_1)\ge (\tfrac {R_1}{R_2})^m\cdot\vol \oBall(p,R_2)\]
+\qedsf
 
 \begin{thm}{Exercise}\label{ex:diam-compact}
 Show that any finite-dimensional Alexandrov space is proper.
 \end{thm}
 
+The following exercise generalizes the theorem to $\Alex{-1}$ case.
+This statement is sufficient for most applications, but a more exact statement is given in \ref{inq:BG+}.
+
+\begin{thm}{Exersice}\label{ex:BG}
+Let $\spc{L}$ be an $\Alex{-1}$ space.
+Suppose $\spc{L}=m<\infty$.
+Show that
+\[\vol \oBall(p,R)\le (\sinh R)^m,\]
+for a fixed constant $c$.
+Moreover, the function 
+\[R\mapsto \frac{\vol B(p,R)}{(\sinh R)^m}\]
+for a fixed positive function 
+\end{thm}
+
 \section{Gromov's selection theorem}
 
 \begin{thm}{Theorem}\label{thm:gromov-compactness}
-Let $m$ be a positive integer.
-Then any sequence of $m$-dimensional $\Alex\kappa$ spaces has a converging subsequence in the sense of Gromov--Hausdorff.
+Let $D,\kappa\in\RR$ and $m$ be a positive integer. 
+Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most $D$
+has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
-
-The theorem implies that one can select a converging sequence 
-from any sequence of spaces from the described set.
-
 
 Let $X$ be a subset of a metric space $\spc{W}$.
 Recall that a set $Z\subset \spc{W}$ is called \index{$\eps$-net}\emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
@@ -225,8 +242,8 @@ Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack
 
 
 \parit{Proof of \ref{thm:gromov-compactness}.}
-Denote by $\bm{K}$ the set of isometry classes of $\Alex\kappa$ spaces with dimension $\le m$ and diameter $\le D$.
-By \ref{thm:CBB-closed}, \ref{ex:geod-closed}, and \ref{ex:resporka}, $\bm{K}$ is a closed subset of $\GH$.
+Denote by $\bm{K}$ the set of isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
+By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.
 
 Choose a space $\spc{L}\in \bm{K}$;
 suppose $x_1,\dots,x_n\in \spc{L}$ is a collection of points such that $\dist{x_i}{x_j}{}\ge \eps$ for all $i\ne j$.
@@ -246,7 +263,10 @@ Observe that $\dist{\spc{F}_\eps}{\spc{L}}{\GH}\le \eps$.
 Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $\le D$ and at most $N(\eps)$ points forms a compact subset in $\GH$.
 
 Summarizing, for any $\eps>0$ we can find a compact $\eps$-net $\bm{F}_\eps\subset \GH$ of $\bm{K}$.
-It remains to apply \ref{lem:GH-complete} and \ref{clm:compact-net}.
+It remains to apply \ref{ex:complete} and \ref{clm:compact-net}.
+
+The $\Alex\kappa$ case follows from the $\Alex{-1}$ case.
+It can be proved applying \ref{ex:BG} instead of \ref{inq:BG}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:pack-vol}
@@ -257,27 +277,23 @@ Show that
 for some constant $\Const=\Const(m,D,v_0)>0$.
 
 Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it is defined) has dimension~$m$.%
-\footnote{A stronger statement holds 
-\[\vol_m\spc{L}_\infty=\lim_{n\to\infty} \vol_m\spc{L}_n;\]
-in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
-$\vol_m\:\bm{K}\to \RR$ is continuous.}
 \end{thm}
 
 \section{Comments}
 
-Let us state a version of Bishop--Gromov inequality for $\Alex{\pm1}$ spaces.
-Its proof is more technical.
-A weaker inequality can be obtained by applying the same argument as above,
-and it is sufficient to extend the rest of the result in the lecture.
+Let us state a version of Bishop--Gromov inequality for $\Alex\kappa$ spaces.
+The proof requires in addition the so-called \textit{coarea formula} for Alexandrov spaces. 
+A weaker inequality \ref{ex:BG} is sufficient for the sequel.
 
-\begin{thm}{Bishop--Gromov inequality}
-Given a point $p$ in an $m$-dimensional $\Alex{\pm1}$ space, consider the function $v(R)\z=\vol_m\oBall(p,R)$;
-denote by $\tilde v(R)$ the volume of $R$ ball in the corresponding $m$-dimensional model space (the unit $m$-dimensional sphere or the $m$-dimensional Lobachevsky space).
+\begin{thm}{Bishop--Gromov inequality}\label{inq:BG+}
+Let $p$ be a point in an $m$-dimensional $\Alex\kappa$ space.
+Consider the function $v(R)\z=\vol_m\oBall(p,R)$;
+denote by $\tilde v(R)$ the volume of $R$ ball in $\MM(\kappa)$.
 Then 
 \[v(R)\le \tilde v(R)\]
-and the function 
+for any $R>0$ and the function 
 \[R\mapsto \frac{v(R)}{\tilde v(R)}\] is nonincreasing;
-in the $\Alex1$ case, one has to assume that $R<\pi$.
+if $\kappa>0$, then one has to assume that $R<\tfrac\pi{\sqrt\kappa}$.
 \end{thm}
 
 The same inequality holds for complete $m$-dimensional Riemannian manifolds with Ricci curvature at least $(m-1)\cdot \kappa$.

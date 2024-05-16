@@ -504,6 +504,56 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 
 \parbf{\ref{ex:geod-closed}.}
 
+\parbf{\ref{ex:non-contracting-map}.}
+Given a pair of points $x_0,y_0\in \spc{K}$, 
+consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
+such that $x_{n+1}=f(x_n)$ and $y_{n+1}\z=f(y_n)$ for each $n$.
+
+Since $\spc{K}$ is compact, 
+we can choose an increasing sequence of integers $n_k$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both are Cauchy;
+that is,
+\[
+|x_{n_i}-x_{n_j}|_{\spc{K}}\to 0 
+\quad\text{and}\quad
+|y_{n_i}-y_{n_j}|_{\spc{K}}\to 0
+\]
+as $\min\{i,j\}\to\infty$.
+
+Since $f$ is distance-noncontracting, 
+\[
+|x_0-x_{|n_i-n_j|}|
+\le 
+|x_{n_i}-x_{n_j}|
+\]
+for any $i$ and $j$.
+Therefore, there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x_0\quad\text{and}\quad y_{m_i}\to y_0
+\leqno({*})\]
+as $i\to\infty$.
+
+Since $f$ is distance-noncontracting, the sequence $\ell_n=|x_n-y_n|_{\spc{K}}$ is nondecreasing.
+By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
+It follows that 
+\[\ell_0=\ell_1=\dots\]
+In particular, 
+\[|x_0-y_0|_{\spc{K}}=\ell_0=\ell_1=|f(x_0)-f(y_0)|_{\spc{K}}\]
+for any pair of points $(x_0,y_0)$ in $\spc{K}$.
+That is, the map $f$ is distance-preserving; hence $f$ is injective.
+From $({*})$, we also get that $f(\spc{K})$ is everywhere dense.
+Since $\spc{K}$ is compact $f\:\spc{K}\to \spc{K}$ is surjective --- hence the result.
+
+\parit{Remarks.}
+This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[see 7.3.30 in][]{burago-burago-ivanov}.
+The presented proof is not quite standard,
+I learned it from Travis Morrison, 
+a student in my MASS class at Penn State, Fall 2011.
+
+Note that this exercise implies that \textit{any surjective non-expanding map from a compact metric space to itself is an isometry}.
+
 \parbf{\ref{ex:GHto-tangent}.}
 
 \parbf{\ref{ex:dim-lim}.}
@@ -513,6 +563,12 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 \parbf{\ref{ex:pack-net}.}
 
 \parbf{\ref{ex:pack-vol}.}
+
+\parit{Comment.}
+A stronger statement holds 
+\[\vol_m\spc{L}_\infty=\lim_{n\to\infty} \vol_m\spc{L}_n;\]
+in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
+$\vol_m\:\bm{K}\to \RR$ is continuous.
 
 \parbf{\ref{ex:bry-convex}.}
 
@@ -536,6 +592,20 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 \parbf{\ref{ex:dist-to-bry}.}
 
 \parbf{\ref{ex:liberman}.}
+
+\parbf{\ref{ex:native}.}
+Choose a geodesic $\gamma$ in $\spc{W}$.
+Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
+that $\gamma$ can cross the common boundary of two halves $\spc{L}_0$ and $\spc{L}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
+
+In the later case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
+In the former case the convexity has to be checked only at the point of crossing;
+we may assume that it happens at $x=\gamma(0)$.
+Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{L}$ the $f$-gradient flows agree on $\spc{L}_0$ and $\spc{L}_1$.
+
+Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
+Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
+and arrive at a contradiction.
 
 \parbf{\ref{ex:Hilbert/G}.}
 
