@@ -2,10 +2,8 @@
 
 \section{Controlled concavity}
 
-While Alexandrov spaces have plenty of semiconcave functions (for example $\distfun_p^2$), 
+While Alexandrov spaces have plenty of semiconcave functions (for instance, square of distance function), 
 it is not at all easy to construct a strictly concave one. 
-The following construction was found by Grigori Perelman \cite{perelman1993,perelman-petrunin}.
-
 
 \begin{thm}{Theorem}
 \label{thm:strictly-concave}
@@ -17,34 +15,38 @@ Moreover, given $0\ne v\in T_p$, the differential, $\dd_p f$, can be chosen
 arbitrarily close to $x\mapsto -\<v,x\>$.
 \end{thm}
 
-
-
-\parit{Sketch.} 
-Consider the real-to-real function 
+\parit{Proof.} 
+Fix small $r>0$ and large $c$;
+consider the real-to-real function 
 $$\phi_{r,c}(x)=(x-r)- c{(x-r)^2}/r,$$
 so we have 
-$$\phi_{r,c}(r)=0,\ \ \phi_{r,c}'(r)=1\ \ \phi_{r,c}''(r)=- {2c}/{r}.$$ 
+$\phi_{r,c}(r)=0$,
+$\phi_{r,c}'(r)=1$,
+and $\phi_{r,c}''(r)=- {2c}/{r}$. 
 
 Let $\gamma$ be a unit-speed geodesic, fix a point $q$ and let 
 $$\alpha(t)=\mangle(\gamma^+(t),\dir{\gamma(t)}{q}).$$
-If $r>0$ is sufficiently small and $\dist q{\gamma(t)}{}$ is sufficiently close to
+If $\dist q{\gamma(t)}{}$ is sufficiently close to
 $r$, then direct calculations show that
 $$(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
 \le 
 \frac{3-c\cdot \cos^2[\alpha(t)]}{r}.$$
+(Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\gamma$ runs nearly perpendicular to the direction to $q$.) 
 
 Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for any $i$. 
 For a geodesic $\gamma$, set $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$. 
 Assume we have a collection $\{q_i\}$ such
 that for any geodesic $\gamma$ in $\oBall(p,\eps)$
 we have $\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0$. 
-Then taking in the above inequality $c>3N/\cos^2\eps$, we get that the function
+We can assume that $c>3N/\cos^2\eps$;
+then the inequality above implies that the function
 $$f=\sum_i \phi_{r,c}\circ\distfun_{q_i}$$
 is strictly concave in $\oBall(p,\eps')$ for some positive $\eps'<\eps$.
 
-To construct the needed collection $\{q_i\}$, note that for small $r>0$ one can
+To construct the needed collection $\{q_i\}$, note that for small $r>0$, one can
 choose $N\ge \Const/\delta^{(m-1)}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
 and $\angk p{q_j}{q_i}>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
+%???why!!!
 On the other hand, suppose $\gamma$ runs from $x$ to $y$.
 If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-point comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
 $N\le \Const(m)/\delta^{(m-2)}$. 
@@ -191,6 +193,8 @@ Therefore, $\spc{L}_n$ is homotopy equivalent to $\spc{N}$ for all large $n$ ---
 
 
 \section{Comments}
+
+The construction of strictly concave function is due to Grigori Perelman \cite{perelman1993,perelman-petrunin}.
 
 Let us list some results that can be proved by applying Gromov's selection theorem
 in the same fashion as in the proof of homotopy-type finiteness theorem (\ref{thm:h-finiteness}).
