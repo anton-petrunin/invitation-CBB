@@ -32,15 +32,8 @@ The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 Let $\spc{L}$ be an Alexandrov space.
 Assume that a sequence of geodesics $[px_n]$ converge to a geodesic $[px_\infty]$ in the sense of Hausdorff,
 and $x_\infty\ne p$.
-
-\begin{subthm}{ex:dir-compact:compact}
 Suppose $\Sigma_p$ is compact.
-Show that $\dir p{x_n}\to\dir p{x_\infty}$ as $n\to\infty$.
-\end{subthm}
-
-\begin{subthm}{ex:dir-compact:}
-Give an example showing that without compactness of $\Sigma_p$, part \ref{SHORT.ex:dir-compact:compact} does not hold.
-\end{subthm}
+Show that $\dir p{x_n}\z\to\dir p{x_\infty}$ as $n\to\infty$.
 
 \end{thm}
 
@@ -255,20 +248,6 @@ then $2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v)$.
 The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
 The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
-
-It is instructive to solve the following exercise before reading the proof of the key lemma.
-
-\begin{thm}{Exercise}\label{ex:first-var-CBB}
-Let $\hinge q p x$ be a hinge in an Alexandrov space and $y\in \left]qp\right[$.
-Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
-Show that
-\[\dist{y}{\gamma(t)}{}
-=
-\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
-Conclude that 
-\[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
-for any $w\in \T_x$
-\end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
 We will assume $\kappa=0$;
