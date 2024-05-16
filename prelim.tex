@@ -11,7 +11,7 @@ recall that a metric space is \index{proper space}\emph{proper} if all its close
 \item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
 \item Hausdorff and Gromov--Hausdorff convergence.
-These are defined in Lecture \ref{chap:lim}, but it is better to have prior acquaintance with these convergences.
+These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Gromov--Hausdorff-metric}, but it is better to have prior acquaintance with these convergences.
 \end{itemize}
 These topics are treated in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 Occasionally, we use some topology; any introductory text in algebraic topology should be sufficient.
@@ -324,4 +324,153 @@ Show that
 
 \end{thm}
 
+\section{Hausdorff convergence}\label{sec:Hausdorff convergence}
+
+\begin{thm}{Definition}\label{def:gen-Haus-conv}
+Let $A_1,A_2,\dots$ be a sequence of closed sets in a metric space $\spc{X}$.
+We say that the sequence $A_n$ \index{Hausdorff limit}\emph{converges} to a closed set $A_\infty$ in the {}\emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
+$\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
+\end{thm}
+
+For example, suppose $\spc{X}$ is the Euclidean plane and $A_n$ is the circle with radius $n$ and center at the point $(0,n)$; it converges to the $x$-axis.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-415}
+\end{figure}
+
+Further, consider the sequence of one-point sets $B_n=\{(n,0)\}$ in the Euclidean plane.
+It converges to the empty set;
+indeed, for any point $x$ we have $\distfun_{B_n}(x)\to\infty$ as $n\to \infty$ and $\distfun_{\emptyset}(x)= \infty$ for any~$x$.
+
+The following exercise is an extension of the so-called Blaschke selection theorem to our version of Hausdorff convergence.
+
+\begin{thm}{Exercise}\label{ex:generalized-selection}
+Show that any sequence of closed sets in a proper metric space has a convergent subsequence in the sense of Hausdorff.
+\end{thm}
+
+\section{Hausdorff metric}
+
+\begin{thm}{Definition}\label{def:hausdorff-convergence}
+Let $A$ and $B$ be two nonempty compact subsets of a metric space $\spc{X}$.
+Then the \index{Hausdorff distance}\emph{Hausdorff distance} between $A$ and $B$ is defined as 
+$$|A-B|_{\Haus\spc{X}}
+\df
+\sup_{x\in \spc{X}}\{\,|\distfun_A(x)-\distfun_B(x)|\,\}.
+$$
+
+\end{thm}
+
+The following observation gives a useful reformulation of the definition:
+
+\begin{thm}{Observation}\label{obs:Haus-nbhds}
+Suppose $A$ and $B$ be two compact subsets of a metric space $\spc{X}$.
+Then $|A-B|_{\Haus\spc{X}}< R$ if and only if and only if 
+$B$ lies in an $R$-neighborhood of $A$, 
+and 
+$A$ lies in an $R$-neighborhood of~$B$.
+\end{thm}
+
+The following exersice implies that for compact subsets the Hausdorff convergence is the convergence in Hausdorff metric.
+
+\begin{thm}{Exercise}\label{ex:Haus-conv}
+Let $A_1,A_2,\dots$ and $A_\infty$ be compact nonempty sets in a metric space $\spc{X}$.
+Show that $\dist{A_n}{A_\infty}{\Haus\spc{X}}\to 0$ as $n\to\infty$
+if and only if $A_n\to A_\infty$ in the sense of Hausdorff.
+\end{thm}
+
+\section{Gromov--Hausdorff convergence}\label{sec:Gromov--Hausdorff}
+
+Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ be a sequence of complete metric spaces.
+Suppose that there is a metric on the disjoint union 
+\[\bm{X}=\bigsqcup_{n\in \NN\cup\{\infty\}} \spc{X}_n\] 
+that satisfies the following property:
+
+\begin{thm}{Property}\label{propery:GH}
+The restriction of metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, 
+and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
+\end{thm}
+
+In this case we say that the metric on $\bm{X}$ \textit{defines} a \index{Gromov--Hausdorff limit}\emph{convergence} $\spc{X}_n\z\to \spc{X}_\infty$ in the {}\emph{sense of Gromov--Hausdorff}.
+The metric on  $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
+
+The limit space is not uniquely defined by the sequence.
+For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
+The first convergence is evident and the second could be guessed from the diagram.
+
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-500}
+\end{figure}
+
+The following exercise states that if limit compact, then it is unique up to isometry. 
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
+Suppose $\spc{X}_n\to \spc{X}_\infty$ is a convergence in the sense of Gromov--Hausdorff.
+Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:geod-closed}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are limit spaces for some Gromov--Hausdorff convergences of $\spc{X}_n$.
+Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty'$.
+\end{thm}
+
+\parbf{Pointed convergence.}
+Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
+For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, while $(\spc{X}_n,p_n)=(\RR_+,n)$ converges to $(\RR,0)$.
+
+\section{Gromov--Hausdorff metric}\label{sec:Gromov--Hausdorff-metric}
+
+In this section we cook up a metric space out of all compact nonempty metric spaces
+that defines the Gromov--Hausdorff convergence.
+We want to define the metric on the set of \textit{isometry classes} of compact metric spaces.
+Further, term \textit{metric space} might also stand for its \textit{isometry class}.
+
+The obtained metric is called Gromov--Hausdorff metric;
+the corresponding metric space will be denoted by $\GH$.
+This distance is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+Here is a formal definition.
+
+\begin{thm}{Definition}\label{def:GH}
+The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
+is defined by the following
+relation.
+ 
+Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
+respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
+(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
+\end{thm}
+
+For the proof of the following statement we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
+
+\begin{thm}{Proposition}\label{prop:complete}
+$\GH$ is complete metric space.
+\end{thm}
+
+The Gromov--Hausdorff convergence of compact spaces has specially nice properties.
+From the technical point of view they follow from the next statement that we formulate as an exercise.
+
+\begin{thm}{Exercise}\label{ex:non-contracting-map}
+Let $f$ be a distance noncontracting map from 
+a compact metric space $\spc{K}$ to itself.
+Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
+\end{thm}
+
+For two metric spaces $\spc{X}$ and $\spc{Y}$,
+we write $\spc{X}\le \spc{Y}+\eps$ if
+there is a map $f\:\spc{X}\to \spc{Y}$ such that 
+\[\dist{x}{x'}{\spc{X}}\le \dist{f(x)}{f(x')}{\spc{Y}}+\eps\]
+for any $x,x'\in \spc{X}$.
+
+\begin{thm}{Exercise}\label{ex:GH-po}
+Let $\spc{X}_1,\spc{X}_2,\dots$ and $\spc{X}_\infty$ are compact metric spaces.
+Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
+we have 
+\[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
+\end{thm}
 
