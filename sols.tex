@@ -429,8 +429,7 @@ Consider a sequence of geodsics $[p\gamma(t_n)]$.
 Since the space is proper, we can pass to its convergent subsequence.
 Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
 Observe that $[pq]$ makes angle at most $\alpha$ with $\gamma$ --- a contradiction.
-
-
+ 
 \parbf{\ref{ex:monotonicity}.}
 Let $\gamma\:[0,\ell]\to \spc{L}$ be the geodesic $[xy]$ paramentrized from $x$ to $y$,
 and let $\phi=f\circ\gamma$.
@@ -444,6 +443,13 @@ f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
 f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
 \end{align*}
 Hence the statement follows.
+
+\parbf{\ref{ex:d(distfun):==}.}
+If the space is proper, then the statement follows from \ref{SHORT.ex:d(distfun):=} and \ref{ex:pi-angle}.
+
+To do the general case argue by contradiction as in the proof of \ref{lem:ohta}.
+Note that we can assume that $|v|=1$ and it is a direction of a geodesic, say $\gamma$ from $p$.
+???
 
 \parbf{\ref{ex:convergence-grad}.}
 Note that
@@ -486,8 +492,6 @@ Since $f\circ\gamma$ is $\lambda$-concave, we have
 It follows that 
 \[\dd_x(\dir xy)=(f\circ\gamma)^+(0)>s,\]
 and by \ref{prop:grad-exist}, $|\nabla_x f|>s$.
-
-
 
 \parbf{\ref{ex:elf-contracting}.}
 Note that $f\circ\alpha$ is a nondecreasing function.
