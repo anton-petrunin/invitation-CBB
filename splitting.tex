@@ -199,8 +199,19 @@ Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\
 
 \section{Comments}
 
-The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line}.
-Our proof is based on the idea of Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
+The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
+he proved it for smooth $2$-dimensional surfaces.
+For Riemannian manifolds of higher dimensions 
+it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
+Then it was generalized by Anatoliy Milka \cite{milka-line}
+to Alexandrov spaces; nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
+
+Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
+This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
+Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
+
+The presented proof is close in spirit to the proof given in \cite{cheeger-gromoll-split};
+it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
 
 \chapter{Dimension}\label{chap:dim}
 
@@ -469,7 +480,7 @@ for any $s\in S$ and $x\in X$.
 \section{Linear dimension}
 
 Suppose $\spc{L}$ is an Alexandrov space.
-Let us define its \index{linear dimension}\emph{linear dimension} $\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
+Let us define its \index{linear dimension}\emph{linear dimension} $\LinDim \spc{L}$ or $\dim\spc{L}$  as the least upper bound on integers $m$ such that 
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{L}$ at some point $p\in \spc{L}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
@@ -633,10 +644,10 @@ Then the map $f\:\spc{L}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{}\]
 has a left inverse defined in a neighborhood of $f(p)$.
 
-Moreover, if $\LinDim\spc{L}=m$, then $f$ defines a bi-Lipschitz embedding of a small neighborhood of $p$.
+Moreover, if $\dim\spc{L}=m$, then $f$ defines a bi-Lipschitz embedding of a small neighborhood of $p$.
 \end{thm}
 
-If $\LinDim\spc{L}=m$, then the restriction of $f$ to a neighbohood provided by the second part of theorem is called \index{distance chart}\emph{distance chart} at $p$.
+If $\dim\spc{L}=m$, then the restriction of $f$ to a neighbohood provided by the second part of theorem is called \index{distance chart}\emph{distance chart} at $p$.
 The following exercise will guide you thru the proof.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
@@ -680,9 +691,9 @@ and finish the proof of the first statement in \ref{thm:right-inverse}.
 \begin{subthm}{ex:proof-right-inverse:dim}
 Show that there is $\eps>0$ such that one of the following $m$ inequalities hold
 \begin{align*}
-\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\quad\dots,\quad \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
+\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
 \\
-\mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\quad\dots,\quad\mangle\hinge yx{a_m}<\tfrac\pi2-\eps
+\mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps
 \end{align*}
 for any two points $x,y$ in a sufficiently small neighborhood of $p$.
 Use it to prove the second statement in \ref{thm:right-inverse}.
@@ -703,6 +714,12 @@ where $\TopDim$ and $\HausDim$ stands for \index{Lebesgue coverning dimension}\e
 %??? лучше доказать --- утверждение про топ.размерность используется в \ref{thm:top-bry}!!!
 
 \section{Comments}
+
+Theorem~\ref{thm:dim=dim}, was ssentially proved by Conrad Plaut \cite{plaut:dimension}.
+At that time, it was not known whether
+\[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty\]
+for any $\Alex\kappa$ space $\spc{L}$.
+The latter implication was proved by Grigory Perelman and the second author \cite{perelman-petrunin:qg}.
 
 \begin{thm}{Open question}
 Let $p$ be a point in an Alexandrov space $\spc{L}$.

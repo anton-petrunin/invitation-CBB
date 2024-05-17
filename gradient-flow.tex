@@ -321,9 +321,18 @@ defined.
 
 \section{Remarks}
 
-??? gradient exponent for $\kappa\ne 0$
-and for nonproper.
+For general curvature bound $\kappa$, the construction of gradient exponent has to be modified;
+it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}.
+
+For $\kappa=-1$ we have 
+and $\gexp_p(\gamma^+(0))=\gamma(1)$
+for any geodesic path $\gamma$ that starts at $p$
+and 
+$\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{L}}\le \side\hinge0vw_{\HH^2}$.
+
+Similarly, for $\kappa=1$ we have $\gexp_p(\gamma^+(0))=\gamma(1)$
+for any geodesic path $\gamma$ that starts at $p$ and $\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{L}}\le \side\hinge0vw_{\SSS^2}$, but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\pi$.
 
 The gradient exponential map $\gexp_p$  for a point $p$ a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus of $p$ but \emph{is different } from the  Riemannian exponential outside it.
 
-quasigeodesics
+The gradient flow was developed to prove the existence of quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}, but it turned out that gradient flow and gradient exponent is a more useful technical tool in Alexandrov geometry.
