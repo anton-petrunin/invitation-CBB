@@ -651,19 +651,21 @@ If $\dim\spc{L}=m$, then the restriction of $f$ to a neighbohood provided by the
 The following exercise will guide you thru the proof.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
-Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse} and $\eps>0$.
+Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse}.
+Assume $\eps>0$ is sufficiently small.
 Given $\bm{y}=(y_1,y_2,\dots,y_m)\in \RR^m$, 
 consider the function on $\spc{L}$ defined by
 \[f_{\bm{y}}(x)=\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
 
 \begin{subthm}{ex:proof-right-inverse:grad}
-Show that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$ for some $r>0$.
-Moreover,
+There is $r>0$ such that 
+Show that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$ for some $\lambda$ and
 \begin{enumerate}[(i)]
-\item\label{111} $(\dd_q\distfun_{a_i})(\nabla_q f_{\bm{y}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a_i}{q}{}>y_i$ and
-\item\label{222} $(\dd_q\distfun_{a_i})(\nabla_q f_{\bm{y}})>\tfrac{1}{10}\cdot\eps^2$ if 
-\[\dist{a_i}{q}{}-y_i=\min_j\{\dist{a_j}{q}{}\z-y_j\}<0.\]
+\item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
+\item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})>\tfrac{1}{10}\cdot\eps^2$ if 
+\[\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0.\]
 \end{enumerate}
+for any $x\in \oBall(p,r)$.
 
 \end{subthm}
 
@@ -684,8 +686,9 @@ $
 Set $t_0(\bm{y})=\tfrac{10}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-continuous in $\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^m$
-and finish the proof of the first statement in \ref{thm:right-inverse}.
+continuous in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^m$
+and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
+This finishes the proof of the first statement in \ref{thm:right-inverse}.
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:dim}

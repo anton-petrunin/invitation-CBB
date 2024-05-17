@@ -597,15 +597,21 @@ If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
 and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
 Conclude that $\dim\Lin_q\ge m$ in this case.
 
-\parbf{\ref{ex:finite-tan}.}
+\parbf{\ref{ex:finite-tan}.} 
+Apply \ref{ex:geod-closed}, \ref{ex:GHto-tangent}, and ???.
 
-\parbf{\ref{ex:proof-right-inverse}.}
+\parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
+
+\parit{\ref{SHORT.ex:proof-right-inverse:alpha}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:end}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:dim}}
 
 \parbf{\ref{ex:dim-lim}.} Apply \ref{ex:resporka}.
 
-\parbf{\ref{ex:diam-compact}.}
-
-\parbf{\ref{ex:pack-net}.}
+\parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
+Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 
 \parbf{\ref{ex:pack-vol}.}
 
@@ -615,16 +621,56 @@ A stronger statement holds
 in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.
 
+\parbf{\ref{ex:diam-compact}.}
+
 \parbf{\ref{ex:bry-convex}.}
 
 \parbf{\ref{ex:bry-product}.}
 
 \parbf{\ref{ex:conic}.}
+Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
+Without loss of generality, we may assume that $V\Subset W$;
+that is, the closure of $V$ lies in $W$.
 
-\parbf{\ref{ex:conic-tangent}.}
-\ref{SHORT.ex:conic-tangen:tangent}
-\ref{SHORT.ex:conic-tangen:dir}
-\ref{SHORT.ex:conic-tangen:example}
+Construct a sequence of embeddings $f_n\:V\to W$
+such that 
+\begin{itemize}
+\item 
+For any compact set $K\subset V$ 
+there is a positive integer $n=n_K$ such that 
+$f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
+\item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
+\end{itemize}
+
+Note that once such a sequence is constructed, $f\:V\to W$ defined by $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
+
+The sequence $f_n$ can be constructed recursively
+\[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
+where $\Phi_n\:V\to V$ 
+and $\Psi_n\:W\to W$ 
+are homeomorphisms
+of the form 
+\[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\star x,\]
+where $\phi_n\:V\to \RR_{\ge 0}$, $\psi_n\:W\to \RR_{\ge 0}$ are suitable continuous functions;
+``$\ast$'' and ``$\star$'' denote the multiplications in the cone structures of $V$ and $W$ respectively.
+
+\parit{Comment.} If it is hard to follow, read the original proof by Kyung Whan Kwun \cite{kwun1964}.
+
+\parbf{\ref{ex:conic-tangent}}; \ref{SHORT.ex:conic-tangen:tangent}. Apply \ref{thm:spherical-nbhd} and \ref{lem:kwun}.
+
+\parit{\ref{SHORT.ex:conic-tangen:dir}.} Apply \ref{SHORT.ex:conic-tangen:tangent}.
+
+\parit{\ref{SHORT.ex:conic-tangen:example}.} Recall the the Poincaré homology sphere can be obtained as a quotient space $\Sigma=\SSS^3/\Gamma$ by an isometric action of a finite group $\Gamma$ (the so-called binary icosahedral group).
+By the double suspension theorem, double spherical suspension $\Susp^2\Sigma$ is homeomorphic to $\SSS^5$.
+Note that $\Susp^2\Sigma$ is an Alexandrov space and it has a point with space of directions isometric to $\Susp\Sigma$.
+If $\Susp\Sigma$ is not homeomorphic to $\SSS^4$, then we get the needed example.
+
+Otherwise, $\Susp\Sigma$ is an Alexandrov space homeomorphic to $\SSS^4$ and it has a point with space of directions isometric to $\Sigma$,
+and we get the needed example anyway.
+
+\parit{Comment.}
+In fact $\Susp\Sigma$ is not homeomorphic to $\SSS^4$.
+
 
 \parbf{\ref{ex:nonstability}.}
 
