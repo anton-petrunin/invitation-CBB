@@ -12,8 +12,8 @@ defines a semimetric on the orbit space $\spc{X}/G$.
 Moreover, it is a genuine metric if the orbits of the action are closed.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
-Assume that group $G$ acts isometrically on a proper Alexandrov space $\spc{L}$ with nonnegative curvature and has closed orbits.
-Then the quotient space $\spc{L}/G$ is an Alexandrov space with nonnegative curvature.
+Assume that group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$, and $G$ has closed orbits.
+Then the quotient space $\spc{L}/G$ is $\Alex0$.
 
 \end{thm}
 
@@ -61,7 +61,7 @@ the $\EE^2$-comparison holds for any quadruple in $\spc{L}/G$.
 Let $G$ be a compact Lie group with a bi-invariant Riemannian metric.
 Show that $G$ is isometric to a quotient of the Hilbert space by an isometric group action.
 
-Conclude that $G$ is an Alexandrov space with nonnegative curvature.
+Conclude that $G$ is $\Alex0$.
 \end{thm}
 
 \section{Generalizations}
@@ -77,13 +77,13 @@ The following two exercises show that this is not the only source of submetries.
 
 \begin{thm}{Exercise}\label{ex:sumbetries(S^2)}
 Construct submetries
-\begin{subthm}{}
+\begin{subthm}{ex:sumbetries(S^2):1}
 $\sigma_1\:\mathbb{S}^2\to[0,\pi]$
 \end{subthm}
-\begin{subthm}{}
+\begin{subthm}{ex:sumbetries(S^2):2}
 $\sigma_2\:\mathbb{S}^2\to[0,\tfrac\pi2]$
 \end{subthm}
-\begin{subthm}{}
+\begin{subthm}{ex:sumbetries(S^2):n}
 $\sigma_n\:\mathbb{S}^2\to[0,\tfrac\pi n]$ (for integer $n\ge 1$)
 \end{subthm}
 such that the fibers $\sigma_n^{-1}\{x\}$ are connected for any $x$.
@@ -91,7 +91,7 @@ such that the fibers $\sigma_n^{-1}\{x\}$ are connected for any $x$.
 
 \begin{thm}{Exercise}\label{ex:sumbetries(E^2)}
 Let $\sigma\:\EE^2\to [0,\infty)$ be a submetry.
-Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set in $\EE^2$ and $\sigma(x)=\distfun_Kx$.
+Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points and $\sigma(x)\z=\distfun_Kx$.
 \end{thm}
 
 The proof of \ref{thm:CBB/G} works for submetries.
@@ -99,24 +99,19 @@ Therefore we get the following.
 
 \begin{thm}{Generalization}\label{thm:submetry-CBB}
 Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
-Suppose $\spc{L}$ is an Alexandrov space with nonnegative curvature, then so is $\spc{M}$.
+Suppose $\spc{L}$ is $\Alex0$, then so is $\spc{M}$.
 \end{thm}
 
-Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to curvature $\ge-1$.
-In the $\CBB(1)$ case, the proof produces a slightly weaker statement ---  \textit{any open $\tfrac\pi2$-ball in the quotient of $\CBB(1)$ is $\CBB(1)$};
-in particular, the quotient space is \textit{locally} $\CBB(1)$.
-If the space is geodesic, then the globalization theorem implies that it is globally  $\CBB(1)$.
-The same holds for the targets of submetry from a  $\CBB(1)$ space.
+Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to $\Alex{-1}$ case.
+In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{any open $\tfrac\pi2$-ball in the quotient of $\Alex1$ is $\Alex1$};
+in particular, the quotient space is \textit{locally} $\Alex1$.
+If the space is geodesic, then the globalization theorem implies that it is globally  $\Alex1$.
+The same holds for the targets of submetry from a  $\Alex1$ space.
 In other words, we have the following two statements.
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB-1}
 Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
-Suppose $\spc{L}$ is $\Alex{-1}$ space, then so is $\spc{M}$.
-\end{thm}
-
-\begin{thm}{Theorem}\label{thm:submetry-CBB1}
-Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
-Suppose $\spc{L}$ is a geodesic $\Alex{1}$ space, then so is $\spc{M}$.
+Suppose $\spc{L}$ is $\Alex{\kappa}$ space, then so is $\spc{M}$.
 \end{thm}
 
 \section{Hopf's conjecture}
@@ -196,13 +191,13 @@ Use it to show construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12
 
 \parit{Sketch of \ref{thm:hsiang-kleiner}.}
 Assume $\spc{M}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
-By the Toponogov theorem, $\spc{M}$ is $\CBB(1)$.
-By \ref{thm:CBB/G}, the quotient space $\spc{L}\z=\spc{M}/\SSS^1$ is $\CBB(1)$;
+By the Toponogov theorem, $\spc{M}$ is $\Alex1$.
+By \ref{thm:CBB/G}, the quotient space $\spc{L}\z=\spc{M}/\SSS^1$ is $\Alex1$;
 evidently, $\spc{L}$ is 3-dimensional.
 
 Denote by $F\subset \spc{M}$ the fixed point set of the $\SSS^1$-action.
 Each connected component of $F$ is either an isolated point or a 2-dimensional geodesic submanifold in $\spc{M}$;
-the latter has to have positive curvature and therefore it is either $\SSS^2$ or $\RP^2$.
+the latter has to have positive curvature, and therefore it is either $\SSS^2$ or $\RP^2$.
 Notice that 
 \begin{itemize}
  \item each isolated point contributes 1 to the Euler characteristic of~$\spc{M}$,
@@ -244,7 +239,7 @@ Let $F$ contain one surface $S$.
 Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L}$.
 Note that doubling $\hat {\spc{L}}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\hat {\spc{L}}$.
 
-By the doubling theorem, $\hat {\spc{L}}$ is a geodesic $\CBB(1)$ space.
+By the doubling theorem, $\hat {\spc{L}}$ is a $\Alex1$ space.
 Therefore we arrive at a contradiction the same way as in the first case.
 
 \parit{Case 3.}
@@ -258,7 +253,7 @@ be a two-sided infinite sequence of copies on $\partial\spc{L}$.
 Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
 
 By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
-By the globalization theorem, $\spc{N}$ is $\CBB(1)$.
+By the globalization theorem, $\spc{N}$ is $\Alex1$.
 
 Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
 By the splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
@@ -267,10 +262,10 @@ Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi
 
 \section{Erd\H{o}s' problem rediscovered}
 
-A point $p$ in a $\CBB(\kappa)$ space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
+A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
 
 \begin{thm}{Theorem}\label{thm:extr-point}
-Let $\spc{L}$ be a compact $m$-dimensional $\CBB(0)$ space.
+Let $\spc{L}$ be a compact $m$-dimensional $\Alex0$ space.
 Then it has at most $2^m$ extremal points.
 \end{thm}
 
@@ -385,13 +380,13 @@ Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1)
 
 \section{Remarks}
 
-It is expected that \textit{no geodesic $\CBB(1)$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
-so \ref{thm:hsiang-kleiner} holds for general $\CBB(1)$ space.
+It is expected that \textit{no $\Alex1$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
+so \ref{thm:hsiang-kleiner} holds for general $\Alex1$ space.
 The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{lem:S^3/S^1};
 see \cite{harvey-searle}.
 
 \begin{thm}{Open question}
-Let $\Sigma$ be a geodesic $\CBB(1)$ space homeomorphic to $\SSS^3$.
+Let $\Sigma$ be an $\Alex1$ space homeomorphic to $\SSS^3$.
 Suppose $\SSS^1$ acts on $\Sigma$ isometrically and without fixed points.
 Is it true that any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$?
 and, what about the existence of distance-noncontracting map $\Sigma/\SSS^1\to \tfrac12\cdot\SSS^2$?
@@ -399,24 +394,24 @@ and, what about the existence of distance-noncontracting map $\Sigma/\SSS^1\to \
 
 
 \begin{thm}{Advanced exercise}
-Suppose that closed local geodesic $\gamma$ is the fixed point of an isometric $\SSS^1$ action on a geodesic $\CBB(1)$ space that is homeomorphic to $\SSS^3$.
+Suppose that closed local geodesic $\gamma$ is the fixed point of an isometric $\SSS^1$ action on an $\Alex1$ space that is homeomorphic to $\SSS^3$.
 Show that $\length\gamma\le2\cdot\pi$.
 \end{thm}
 
 It seems that the same question for a $\ZZ_2$-action is open.
 
-Compact geodesic $m$-dimensional $\CBB(0)$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
+Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
 (This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{L}=\TT^m/\ZZ_2$.)
-Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional geodesic $\CBB(0)$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
+Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
 Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{L}=\EE^m/\Gamma$.
 So, \ref{prop:2m} would follow from the next conjecture.
 
 \begin{thm}{Conjecture}
-Any $m$-dimensional compact geodesic $\CBB(0)$ space has at most $2^m$ primitive extremal subset.
+Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ primitive extremal subset.
 \end{thm}
 
-A closed subset $E$ in a $\CBB(\kappa)$ space is called 
+A closed subset $E$ in a finite-dimensional Alexandrov space is called 
 \index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
 An extremal subset is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets.
 For example, the whole space and empty set are aslo extremal in any space.

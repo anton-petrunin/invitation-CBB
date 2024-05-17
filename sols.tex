@@ -1,17 +1,14 @@
 \chapter{Semisolutions}
 
-\parbf{\ref{ex:compact-length}.}
-Given a pair of points $p$ and $q$, choose a sequence of paths $\gamma_n$ from $p$ to $q$ such that
-\[\length\gamma_n\to \dist pq{}
-\quad\text{as}\quad
-n\to\infty;\]
-it exists since we are in a length space.
-Note that we can assume that each $\gamma_n$ is parametrized proportional to the arc length;
-in particular, $\gamma_n$ are equicontinuous.
-Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ for some $r<\infty$.
-Since the space is proper, $\cBall[p,r]$ is compact.
-By Arzelà--Ascoli theorem, we can pass to a converging subsequence of $\gamma_n$.
-Show that its limit is a geodesic path from $p$ to $q$.
+\parbf{\ref{ex:compact+connceted}.}
+Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
+We can assume that $\eps_0>\diam K$, and $N_0$ is a one-point set.
+If $\dist{x}{y}{}<\eps_k$ for some $x\in N_{k+1}$ and $y\in N_{k}$, then connect them by a curve of length at most $\eps_k$.
+
+Let $K'$ be the union of all these curves and $K$.
+Show that $K'$ is compact and path-connected.
+
+\parit{Source:} This problem is due to Eugene Bilokopytov \cite{bilokopytov}.
 
 \parbf{\ref{ex:compact=>complete}.}
 Choose a Cauchy sequence $x_n$ in $(\spc{X},\|*\z-*\|)$; it is sufficient to show that a subsequence of $x_n$ converges.
@@ -29,15 +26,18 @@ In particular, $x_n$ converges to $x_\infty$ in $(\spc{X},\|*\z-*\|)$.
 
 \parit{Source:} \cite[Corollary]{hu-kirk}; see also \cite[Lemma 2.3]{petrunin-stadler}.
 
-\parbf{\ref{ex:compact+connceted}.}
-Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
-We can assume that $\eps_0>\diam K$, and $N_0$ is a one-point set.
-If $\dist{x}{y}{}<\eps_k$ for some $x\in N_{k+1}$ and $y\in N_{k}$, then connect them by a curve of length at most $\eps_k$.
-
-Let $K'$ be the union of all these curves and $K$.
-Show that $K'$ is compact and path-connected.
-
-\parit{Source:} This problem is due to Eugene Bilokopytov \cite{bilokopytov}.
+\parbf{\ref{ex:compact-length}.}
+Given a pair of points $p$ and $q$, choose a sequence of paths $\gamma_n$ from $p$ to $q$ such that
+\[\length\gamma_n\to \dist pq{}
+\quad\text{as}\quad
+n\to\infty;\]
+it exists since we are in a length space.
+Note that we can assume that each $\gamma_n$ is parametrized proportional to the arc length;
+in particular, $\gamma_n$ are equicontinuous.
+Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ for some $r<\infty$.
+Since the space is proper, $\cBall[p,r]$ is compact.
+By Arzelà--Ascoli theorem, we can pass to a converging subsequence of $\gamma_n$.
+Show that its limit is a geodesic path from $p$ to $q$.
 
 \parbf{\ref{ex:menger}.}
 Choose a sequence $\eps_n>0$ that converges to zero very fast, say such that $\sum_n10^n\cdot \eps_n$ is small.
@@ -91,9 +91,68 @@ Conclude that
 where $\delta(\eps)\to 0$ as $\eps\to0$.
 The statement follows since $\eps>0$ is arbitrary.
 
+\parbf{\ref{ex:geod-closed}.}
+Given $x_\infty,y_\infty\in\spc{X}_\infty$, chose $x_n,y_n\in \spc{X}_n$ such that $x_n\to x_\infty$ and $y_n\to y_\infty$.
+Let $z_n$ be midpoint of $[x_ny_n]$.
+Since $\spc{X}_\infty$ is proper, we can choose a subsequence of $z_m$ that converges to a point, say $z\infty\in \spc{X}_\infty$.
+Note that $z\infty$ is a midpoint of $x_\infty$ and $y_\infty$ and apply Menger's lemma (\ref{lem:mid>geod}).
+
+\parbf{\ref{ex:non-contracting-map}.}
+Given a pair of points $x_0,y_0\in \spc{K}$, 
+consider two sequences $x_0,x_1,\dots$ and $y_0,y_1,\dots$
+such that $x_{n+1}=f(x_n)$ and $y_{n+1}\z=f(y_n)$ for each $n$.
+
+Since $\spc{K}$ is compact, 
+we can choose an increasing sequence of integers $n_k$
+such that both sequences $(x_{n_i})_{i=1}^\infty$ and $(y_{n_i})_{i=1}^\infty$
+converge.
+In particular, both are Cauchy;
+that is,
+\[
+|x_{n_i}-x_{n_j}|_{\spc{K}}\to 0 
+\quad\text{and}\quad
+|y_{n_i}-y_{n_j}|_{\spc{K}}\to 0
+\]
+as $\min\{i,j\}\to\infty$.
+
+Since $f$ is distance-noncontracting, 
+\[
+|x_0-x_{|n_i-n_j|}|
+\le 
+|x_{n_i}-x_{n_j}|
+\]
+for any $i$ and $j$.
+Therefore, there is a sequence $m_i\to\infty$ such that
+\[
+x_{m_i}\to x_0\quad\text{and}\quad y_{m_i}\to y_0
+\leqno({*})\]
+as $i\to\infty$.
+
+Since $f$ is distance-noncontracting, the sequence $\ell_n=|x_n-y_n|_{\spc{K}}$ is nondecreasing.
+By $({*})$,  $\ell_{m_i}\to\ell_0$ as $m_i\to\infty$.
+It follows that 
+\[\ell_0=\ell_1=\dots\]
+In particular, 
+\[|x_0-y_0|_{\spc{K}}=\ell_0=\ell_1=|f(x_0)-f(y_0)|_{\spc{K}}\]
+for any pair of points $(x_0,y_0)$ in $\spc{K}$.
+That is, the map $f$ is distance-preserving; hence $f$ is injective.
+From $({*})$, we also get that $f(\spc{K})$ is everywhere dense.
+Since $\spc{K}$ is compact $f\:\spc{K}\to \spc{K}$ is surjective --- hence the result.
+
+\parit{Remarks.}
+This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[see 7.3.30 in][]{burago-burago-ivanov}.
+The presented proof is not quite standard,
+I learned it from Travis Morrison, 
+a student in my MASS class at Penn State, Fall 2011.
+
+Note that this exercise implies that \textit{any surjective non-expanding map from a compact metric space to itself is an isometry}.
+
+\parbf{\ref{ex:GH-po}.}
+
+\parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
-The definition of $\CBB$ spaces (\ref{def:CBB}) reduces our question to the following.
+The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
 \textit{Any spherical triangle has perimeter at most $2\cdot\pi$.}
 Choose a spherical triangle $[xyz]$.
 Let $x'$ be the antipode of $x$; that is $x'=-x$.
@@ -232,9 +291,9 @@ That is the norm is quadratic and the statement follows.
 
 \parbf{\ref{ex:CBB(1)notitCBB(0)}.}
 Note that $\spc{X}$ has no defined sphericlal model angles;
-therefore it is $\CBB(1)$.
+therefore it has curvature $\ge 1$.
 
-However, $\spc{X}$ is not $\CBB(0)$ since
+However, $\spc{X}$ does not have curvature $\ge 0$ since
 \[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
 
 \parbf{\ref{ex:RisCBB(1)}.}
@@ -293,7 +352,7 @@ Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~
 Show that this sequence is Cauchy; denote its limit by $p_\infty$.
 Arrive at a contradiction by showing that $r(p_\infty)\le0$.
 
-\parbf{\ref{ex:dir-compact}}; \ref{SHORT.ex:dir-compact:compact}.
+\parbf{\ref{ex:dir-compact}.}
 Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
 Since $\Sigma_p$ is compact we may pass to a converging subsequence of $\dir p{x_n}$;
 denote by $\xi$ its limit.
@@ -313,7 +372,11 @@ that
 for all small $t$ and all large $n$.
 On the other hand, by assumption, $\dist{\gamma_n(t)}{\gamma_\infty(t)}{}\to0$ as $n\to\infty$ --- a contradiction.
 
-\parit{\ref{SHORT.ex:dir-compact:}} ???
+\parit{Comments.}
+The compactness of $\Sigma_p$ is necessary.
+An example can be built using iterated warped product of line segments and applying \cite[Theorem 1.2]{alexander-bishop2004}.
+The space $\spc{L}$ can be assumed to be compact.
+
 
 \parbf{\ref{ex:geodesic-cone}.}
 Note that any point of $\Cone \spc{X}$ can be connected to the origin by a geodesic.
@@ -330,6 +393,8 @@ Show that $t\mapsto r(t)\cdot\gamma\circ\phi(t)$ is a geodesic from $v$ to $w$;
 here we identify $\spc{X}$ with the unit sphere in $\Cone \spc{X}$.
 
 To prove the converse, try to revert the steps in the argument above.
+
+\parbf{\ref{ex:GHto-tangent}.}
 
 \parbf{\ref{ex:distfun-semiconcave}.} From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
 
@@ -379,9 +444,6 @@ f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
 f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
 \end{align*}
 Hence the statement follows.
-
-
-\parbf{\ref{ex:first-var-CBB}.}
 
 \parbf{\ref{ex:convergence-grad}.}
 Note that
@@ -442,10 +504,38 @@ for any $t<t_3$.
 Conclude that the function 
 $t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is noncreasing for $t\le t_3$.
 
-
 \parbf{\ref{ex:mayer}.}
+For any $s>s_0$,
+\begin{align*}
+(f\circ\hat\alpha)^+(s_0)&=|\nabla_{\hat\alpha(s_0)}f|
+\ge
+\\
+&\ge
+(d_{\hat\alpha(s_0)}f)(\dir{\hat\alpha(s_0)}{\hat\alpha(s)})
+\ge
+\\
+&\ge
+\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{\dist{\hat\alpha(s)}{\hat\alpha(s_0)}{}}.
+\end{align*} 
+Since $s-s_0\ge\dist{\hat\alpha(s)}{\hat\alpha(s_0)}{}$, for any $s>s_0$ we have 
+\[(f\circ\hat\alpha)^+(s_0)\ge
+\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0}.\]
 
 \parbf{\ref{lem:fg-dist-est}.}
+Fix $t$, and let $p=\alpha(t)$ and $q=\beta(t)$.
+Apply \ref{eq:fist-var-inq+} to get
+\begin{align*}
+ \ell^+
+&\le -\<\dir{p}{q},\nabla_{p}f\>
+-\<\dir{q}{p},\nabla_{q}g\>
+\le
+\\
+&\le -{\left({f(q)}-{f(p)}-\lambda\cdot\tfrac{\ell^2}2\right)}/{\ell}
+-{\left({g(p)}-{g(q)}-\lambda\cdot\tfrac{\ell^2}2\right)}/{\ell}\le
+\\
+&\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}.
+\end{align*}
+Integrating this inequality, we get the second statement.
 
 \parbf{\ref{ex:busemann-CBB}.} Apply \ref{ex:distfun-semiconcave}.
 
@@ -454,7 +544,8 @@ $t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is noncreasing for $t\le t_3$.
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
 
-\parbf{\ref{ex:cone-CBB}.}
+\parbf{\ref{ex:cone-CBB}.} Suppose $\Cone\spc{X}$ is $\Alex0$.
+Use 
 
 \parbf{\ref{ex:|antisum|}.}
 Observe that
@@ -468,6 +559,9 @@ Observe that
 Add the first two inequalities and subtract the last identity.
 
 \parbf{\ref{prop:two-opp}.}
+Apply \ref{prop:opposite} to show that 
+$\langle v,v\rangle =\langle v,w\rangle=\langle w,w\rangle$,
+and use it.
 
 \parbf{\ref{ex:3<,>=0}.} Show and use that
 \[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle \ge 0\]
@@ -496,23 +590,28 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 
 \parbf{\ref{ex:dim=1}.}
 
-\parbf{\ref{ex:resporka}.}
+\parbf{\ref{ex:resporka}.} The only-if part is trivial.
+Suppose the configuration $p$, $a_0,\z\dots, a_{m}\in \spc{L}$ meets the condition.
+By \ref{ex:grad-dist} the directions $\dir q{a_0},\z\dots,\dir q{a_m}\in \Lin_q$ for G-delta dense set of points $q\in \spc{L}$.
+If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
+and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
+Conclude that $\dim\Lin_q\ge m$ in this case.
 
 \parbf{\ref{ex:finite-tan}.}
 
-
-
-\parbf{\ref{ex:geod-closed}.}
-
-\parbf{\ref{ex:GHto-tangent}.}
-
-\parbf{\ref{ex:dim-lim}.}
+\parbf{\ref{ex:dim-lim}.} Apply \ref{ex:resporka}.
 
 \parbf{\ref{ex:diam-compact}.}
 
 \parbf{\ref{ex:pack-net}.}
 
 \parbf{\ref{ex:pack-vol}.}
+
+\parit{Comment.}
+A stronger statement holds 
+\[\vol_m\spc{L}_\infty=\lim_{n\to\infty} \vol_m\spc{L}_n;\]
+in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
+$\vol_m\:\bm{K}\to \RR$ is continuous.
 
 \parbf{\ref{ex:bry-convex}.}
 
@@ -537,9 +636,36 @@ Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dot
 
 \parbf{\ref{ex:liberman}.}
 
-\parbf{\ref{ex:Hilbert/G}.}
+\parbf{\ref{ex:native}.}
+Choose a geodesic $\gamma$ in $\spc{W}$.
+Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
+that $\gamma$ can cross the common boundary of two halves $\spc{L}_0$ and $\spc{L}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
 
-\parbf{\ref{ex:sumbetries(S^2)}.}
+In the later case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
+In the former case the convexity has to be checked only at the point of crossing;
+we may assume that it happens at $x=\gamma(0)$.
+Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{L}$ the $f$-gradient flows agree on $\spc{L}_0$ and $\spc{L}_1$.
+
+Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
+Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
+and arrive at a contradiction.
+
+\parbf{\ref{ex:Hilbert/G}.} Read Section 4  in \cite{terng-thorbergsson}.
+
+\parbf{\ref{ex:sumbetries(S^2)}}; \ref{SHORT.ex:sumbetries(S^2):1}.
+Choose an isometric $\SSS^1$-action on $\SSS^2$ that fixes poles of the sphere.
+Consider the projection to the quotient space $\sigma_1\:\SSS^2\z\to \SSS^2/\SSS^1=[0,\pi]$.
+
+\parit{\ref{SHORT.ex:sumbetries(S^2):2}.}
+Take a half-circle $\gamma$ on $\SSS^2$ and define 
+$\sigma_2(x)\df\distfun_\gamma(x)_{\SSS^2}$.
+
+\parit{\ref{SHORT.ex:sumbetries(S^2):n}.}
+Consider the subdivision of $\SSS^2$ into $\SSS^1$-orbits of the action from~\ref{SHORT.ex:sumbetries(S^2):1}.
+Cut $\SSS^2$ into two hemispheres by meridians rotate one hemisphere by angle $\alpha=\pi/n$ and glue it back.
+Observe that there is a submetry $\sigma_n$ such that the inverse image $\sigma_n^{-1}\{y\}$ is a union of the arcs from the original $\SSS^1$-orbits.
+
+Note that for $n=2$ we get the solution in \ref{SHORT.ex:sumbetries(S^2):2}.
 
 \parbf{\ref{ex:sumbetries(E^2)}.}
 
@@ -606,7 +732,7 @@ Use it to show that $\langle v_1,v_2+v_3-v_1\rangle=0$.
 Make a conclusion.
 
 \parbf{\ref{ex:poly-CBB}.}
-We need to show that if a polyhedral surface is $\CBB(0)$, then the total angle $\theta$ of any of its vertex $p$ it at most $2\cdot\pi$.
+We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ of any of its vertex $p$ it at most $2\cdot\pi$.
 
 Assume that $\theta>2\cdot\pi$,
 let $\phi=\max\{\,\pi,\tfrac13\cdot\theta\,\}$.
@@ -660,7 +786,7 @@ for all large $n$.
 Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
 
 \parit{Comments.}
-More generally, if a sequence of geodesic $\CBB(\kappa)$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_n=\dim \spc{L}_\infty<\infty$ for any $n$,
+More generally, if a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_\infty=m<\infty$,
 then $\partial \spc{L}_n$ equipped with induced length metric converge to  $\partial \spc{L}_\infty$.
 This statement is a partial case of the theorem about extremal subsets proved by the second author \cite[1.2]{petrunin1997}.
 
@@ -724,3 +850,4 @@ Hence the remaining case follows.
 \parit{Comments.} Part~\ref{SHORT.ex:liberman+milka:liberman} was originally proved by Joseph Liberman \cite{liberman}; the proof of \ref{ex:liberman} is a generalized version of the so-called Liberman lemma --- the main tools in studying geodesics on convex surfaces.
 
 Part~\ref{SHORT.ex:liberman+milka:milka} is a result of Anatolii Milka \cite[Theorem 2]{milka1982}.
+

@@ -9,7 +9,7 @@ Then the \index{surface}\emph{surface} of $B$ is defined as its boundary $\parti
 Show that surface of a convex body is homeomorphic to $\SSS^2$.
 \end{thm}
 
-In this lecture, we will prove that \textit{surface of a convex body is $\CBB(0)$.}
+In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$.}
 
 
 \section{Surface of convex polyhedra}
@@ -100,12 +100,12 @@ all faces of $T$ are congruent;
  
 \end{thm}
 
-Claim~\ref{clm:total-angle} says that \textit{surface of a convex polyhedron has nondegenerate curvature}.
+Claim~\ref{clm:total-angle} says that \textit{any vertex of a convex polyhedron has nonvanishing curvature}.
 However this definition works only for polyhedral surfaces.
-Now we show that it agrees with the $\CBB(0)$ definition.
+Now we show that it agrees with the 4-point comparison.
 
 \begin{thm}{Proposition}\label{prop:poly-CBB}
-A polyhedral surface with nonnegative curvature at each vertex is $\CBB(0)$.
+A polyhedral surface with nonnegative curvature at each vertex is $\Alex0$.
 \end{thm}
 
 \parit{Proof.}
@@ -135,7 +135,7 @@ It remains to apply \ref{comp-kappa}.
 
 \begin{thm}{Exercise}\label{ex:poly-CBB}
 Prove the converse to the proposition;
-that is, show that if a poyhedral surface is $\CBB(0)$, then it has nonnegative curvature at each vertex.
+that is, show that if a poyhedral surface is $\Alex0$, then it has nonnegative curvature at each vertex.
 \end{thm}
 
 \section{Surface of convex body}
@@ -148,7 +148,7 @@ Show that $S_n\to S_\infty$ in the sense of Gromov--Hausdorff.
 \end{thm}
 
 \begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
-The surface of a convex body is $\CBB(0)$.
+The surface of a convex body is $\Alex0$.
 \end{thm}
 
 Note that any convex body is a Hausdorff limit of a sequence of convex polyhedra.
@@ -159,12 +159,12 @@ Therefore, the proposition follows from \ref{prop:poly-CBB}, \ref{ex:surface-cov
 Note that \ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that surface of convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
 The selbrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
 the surface of a plane figure is defined as its doubling across the boundary.
-In other words, any geodesic $\CBB(0)$ metric on the sphere is isometric to a surface of convex body.
+In other words, any $\Alex0$ metric on the sphere is isometric to a surface of convex body.
 Moreover this convex body is unique up to congruence.
 The last result is due to Alexei Pogorelov \cite{pogorelov}.
 
 Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketced in the appendix.
-Then he used \ref{ex:surface-covergence} to extend the result to arbitrary geodesic $\CBB(0)$ metric on the sphere.
+Then he used \ref{ex:surface-covergence} to extend the result to arbitrary $\Alex0$ metric on the sphere.
 
 \begin{thm}{Advanced exercise}\label{ex:liberman+milka}
 Let $\Sigma$ be the surface of a nondegenerate convex body $K\subset\EE^3$;

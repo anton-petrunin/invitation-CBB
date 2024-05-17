@@ -32,15 +32,8 @@ The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 Let $\spc{L}$ be an Alexandrov space.
 Assume that a sequence of geodesics $[px_n]$ converge to a geodesic $[px_\infty]$ in the sense of Hausdorff,
 and $x_\infty\ne p$.
-
-\begin{subthm}{ex:dir-compact:compact}
 Suppose $\Sigma_p$ is compact.
-Show that $\dir p{x_n}\to\dir p{x_\infty}$ as $n\to\infty$.
-\end{subthm}
-
-\begin{subthm}{ex:dir-compact:}
-Give an example showing that without compactness of $\Sigma_p$, part \ref{SHORT.ex:dir-compact:compact} does not hold.
-\end{subthm}
+Show that $\dir p{x_n}\z\to\dir p{x_\infty}$ as $n\to\infty$.
 
 \end{thm}
 
@@ -88,7 +81,7 @@ The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
 
 \begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
-Tangent spaces of an Alexandrov space are spaces with nonnegative curvature in the sense of Alexandrov.
+Tangent spaces to an Alexandrov space have nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
 \parit{Proof.}
@@ -111,6 +104,15 @@ Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\
 \qeds
 
 
+\begin{thm}{Exercise}\label{ex:GHto-tangent}
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{L}$,
+and let $\lambda_n\to\infty$.
+Show that there is a pointed Gromov--Hausdorff convergence $(\lambda\cdot \spc{L},p)\z\to (\T_p,0)$ in the sense of Gromov--Hausdorff.
+Moreover, the convergence can be chosen so that  
+\[\lambda_n\cdot \gamma(t/\lambda_n)\to t\cdot \gamma^+(0)\]
+for any geodesic $\gamma$ that starts at $p$. 
+\end{thm}
+
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
 
  Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison};
@@ -125,7 +127,7 @@ If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index
 
 
 \begin{thm}{Exercise}\label{ex:distfun-semiconcave}
-Let $f$ be a \emph{distance function} on an Alexandrov space $\spc{L}$ with nonnegative curvature;
+Let $f$ be a \emph{distance function} on an $Alex0$ space $\spc{L}$;
 that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{L}$.
 Show that $f''\le \tfrac1f$.
 In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
@@ -246,20 +248,6 @@ then $2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v)$.
 The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
 The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
-
-It is instructive to solve the following exercise before reading the proof of the key lemma.
-
-\begin{thm}{Exercise}\label{ex:first-var-CBB}
-Let $\hinge q p x$ be a hinge in an Alexandrov space and $y\in \left]qp\right[$.
-Suppose that $\gamma$ is the unit speed parametrization of $[qx]$ from $q$ to $x$.
-Show that
-\[\dist{y}{\gamma(t)}{}
-=
-\dist{y}{q}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
-Conclude that 
-\[(\dd_q\distfun_y)(w)=-\langle\dir qp,w\rangle\]
-for any $w\in \T_x$
-\end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
 We will assume $\kappa=0$;

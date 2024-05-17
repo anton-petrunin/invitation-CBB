@@ -3,12 +3,10 @@
 
 \section{Globalization}
 
-A metric space $\spc{L}$ is \index{locally nonnegative curvature}\emph{locally nonnegative curvature} in the sense of Alexandrov if any point $p\in\spc{L}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
+A complete geodesic metric space $\spc{L}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{L}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
-Let $\spc{L}$ be a compact geodesic space.
-If $\spc{L}$ has locally nonnegative curvature in the sense of Alexandrov
-then it has nonnegative curvature in the sense of Alexandrov.
+Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
 \parit{Proof modulo the key lemma.}
@@ -25,7 +23,7 @@ Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
-Let $\spc{L}$ be a geodesic space with locally nonnegative curvature in the sense of Alexandrov. 
+Let $\spc{L}$ be locally $\Alex0$. 
 Assume that the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
@@ -193,11 +191,11 @@ most general statements are given in \ref{thm:globalization+} and
 By \ref{ex:k-><mono}, we have
 \[\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}\]
 if $\kappa\le \Kappa$ and the right-hand side is defined.
-It follows that a space with curvature $\ge \Kappa$ in the sense of Alexandrov space has curvature $\ge \kappa$, but  \textit{only locally}.
+It follows that a $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
 Therefore, the globalization theorem  imply the following.
 
 \begin{thm}{Claim}\label{clm:K>k}
-Suppose $\Kappa>\kappa$, then any geodesic space with curvature $\ge \Kappa$ in the sense of Alexandrov has curvature $\ge \kappa$ in the sense of Alexandrov.
+Suppose $\Kappa>\kappa$, then any $\Alex\Kappa$ space is $\Alex\kappa$.
 \end{thm}
 
 In other words expressin \textit{curvature bounded below by $\kappa$} makes sense for geodesic spaces.
@@ -211,8 +209,7 @@ Show that $\spc{X}$ has curvature $\ge 1$, but does not have curvature $\ge 0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:RisCBB(1)}
-Let $\spc{L}$ be a geodesic space with curvature $\ge 1$,
-and let $p$ and $q$ be points in $\spc{L}$.
+Let $p$ and $q$ be points in an $\Alex1$ space $\spc{L}$.
 Suppose $\dist{p}{q}{}>\pi$.
 Denote by $m$ the midpoint of $[pq]$.
 Show that for any hinge $\hinge mxp$ we have
@@ -223,7 +220,7 @@ Conclude that $\spc{L}$ is isometric to a line interval or a circle.
 
 \begin{thm}{Exercise}\label{ex:perim-k>0}
 Suppose  
-$\spc{L}$ is an Alexandrov space with curvature $\ge 1$
+$\spc{L}$ is an $\Alex1$
 and $\diam \spc{L}\le \pi$.
 Show that 
 \[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
@@ -267,21 +264,15 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 \end{thm}
 
-Let us mention two more general versions of the globalization theorem.
-The first one was  proved in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}.
-The second one was proved by the second author \cite{petrunin:globalization}.
-Their assumptions overlap, but neither implies the other.
+It implies the following general version of the globalization theorem.
 
 \begin{thm}{Theorem}\label{thm:globalization+}
-Any complete locally $\Alex\kappa$ length space is $\Alex\kappa$.
-
+Any locally $\Alex\kappa$ length space is $\Alex\kappa$.
 \end{thm}
 
-\begin{thm}{Theorem}\label{thm:noncomplete-globalization}
-Any locally $\Alex\kappa$ geodesic space is $\Alex\kappa$.
-
-\end{thm}
-
+Slightly more general versions were proved in the papers by Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}
+and by the second author \cite{petrunin:globalization}.
+Their assumptions overlap, but neither implies the other.
 
 
 

@@ -3,6 +3,8 @@
 
 \section{Four-point comparison}
 
+Recall that model angle $\angk  pxy$ is defined on pager \pageref{page:model-angle}.
+
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
 \[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
@@ -27,13 +29,17 @@ However, if you see $\MM^2(\kappa)$-comparison, it is usually safe to assume tha
 A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
 if $\MM^2(\kappa)$-comparison
 holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined.
-
-If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov for some $\kappa$, 
-then it will be called \index{Alexandrov space}\emph{Alexandrov space}.
 \end{thm}
 
+While this definition can be applied to any metric space,
+we will use it mostly for geodesic space that are complete (and often compact or proper). 
+If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov, 
+then it will be called $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
+An $\spc{X}$ is $\Alex\kappa$ space for some $\kappa$, then it will be called
+\index{Alexandrov space}\emph{Alexandrov space}.
+
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
-Show that $\EE^n$ has nonnegative curvature in the sense of Alexandrov.
+Show that $\EE^n$ is $\Alex0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
@@ -135,8 +141,7 @@ Note that
 Applying it with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
-If $p,x,y,z$ are points in a 
-space with nonnegative curvature in the sense of Alexandrov.
+If $p,x,y,z$ are points in an $\Alex0$ space.
 Suppose $p\in\left]x y\right[$, then 
 \[\angk xyz\le \angk xpz.\]
 \end{thm}
@@ -148,8 +153,7 @@ Suppose $p\in\left]x y\right[$, then
 \end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:noncreasing}
-Let $\hinge p x y$ be a hinge in a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $\hinge p x y$ be a hinge in an $\Alex0$ space.
 Consider the function
 \[f\:(\dist{p}{\bar x}{},\dist{p}{\bar y}{})\mapsto \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
@@ -159,38 +163,39 @@ Show that $f$ is nonincreasing in each argument.
 Note that \ref{ex:noncreasing} implies the following.
 
 \begin{thm}{Claim}\label{clm:angle-defined}
-For any hinge $\hinge p x y$ in a 
-space with nonnegative curvature in the sense of Alexandrov,
+For any hinge $\hinge p x y$ in an $\Alex0$ 
+space,
 the angle measure $\mangle\hinge p x y$ is defined, and
 \[\mangle\hinge p x y\ge \angk p x y.\]
 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:0-angle}
-Let $\hinge p x y$ be a hinge in a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $\hinge p x y$ be a hinge in an $\Alex0$ space.
 Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
+
+Conclude that geodesic in $\Alex0$ space cannot \emph{bifurcate};
+that is, if two geodesics $[px]$ and $[py]$ share a nontrivial arc with an end at $p$, then $[px]\subset [py]$ or $[py]\subset [px]$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:pi-angle}
-Let $[xy]$ be a geodesic in a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $[xy]$ be a geodesic in an $\Alex0$ space.
 Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
 \end{thm}
 
 Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
 
 \begin{thm}{Exercise}\label{ex:adjacent-CBB}
-Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $\hinge pxz$ and $\hinge pyz$ be adjacent hinges in an $\Alex0$ 
+space.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz= \pi.\]
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:pxyvw}
-Let $\spc{L}$ be a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $\spc{L}$ be an $\Alex0$ 
+space.
 Show that  
 \[
 \angk xyp=\angk xvp
@@ -202,8 +207,7 @@ $p,x,y,v,w$ in $\spc{L}$ such that $v,w\in \left]xy\right[$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:angle-lim}
-Let $\spc{L}$ be a 
-space with nonnegative curvature in the sense of Alexandrov.
+Let $\spc{L}$ be an $\Alex0$ space.
 Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{L}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
 that is geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
@@ -214,8 +218,7 @@ Show that
 
 \section{Hinge comparison}
 
-Let $\hinge pxy$ be a hinge in a 
-space $\spc{L}$ with nonnegative curvature in the sense of Alexandrov.
+Let $\hinge pxy$ be a hinge in an $\Alex0$ space $\spc{L}$.
 By \ref{ex:0-angle}, the angle measure $\mangle\hinge pxy$ is defined and
 \[\mangle\hinge pxy\ge \angk pxy.\]
 
@@ -227,7 +230,7 @@ The following theorem implies that a geodesic space has nonnegative curvature in
 the above conditions hold for all its hinges.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
-A geodesic space $\spc{L}$ has nonnegative curvature in the sense of Alexandrov if the following conditions hold.
+A complete geodesic space $\spc{L}$ is $\Alex0$ if the following conditions hold.
 
 \begin{subthm}{angle-a}
 For any hinge $\hinge x p y$ in $\spc{L}$, the angle 
@@ -277,11 +280,11 @@ Passing to the limits $w\to p$, we have
 The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, \ref{thm:angle-cbb}.
 
 \begin{thm}{Theorem}\label{thm:defs_of_alex} 
-Let $\spc{L}$ be a geodesic space.
+Let $\spc{L}$ be a complete geodesic space.
 Then the following conditions are equivalent.
 
 \begin{subthm}{cbb}
-$\spc{L}$ has nonnegative curvature in the sense of Alexandrov.
+$\spc{L}$ is $\Alex0$.
 \end{subthm}
  
 
@@ -311,7 +314,7 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced Exercise}\label{ex:urysohn}
-Construct a geodesic space $\spc{X}$ does not have nonnegative curvature in the sense of Alexandrov, but satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
@@ -319,7 +322,7 @@ Construct a geodesic space $\spc{X}$ does not have nonnegative curvature in the 
 
 \begin{thm}{Exercise}\label{ex:normCBB}
 Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
-Suppose that $\spc{W}$ has nonnegative curvature in the sense of Alexandrov.
+Suppose that $\spc{W}$ is $\Alex0$.
 Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \end{thm}
 
@@ -340,8 +343,8 @@ holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
 \end{itemize}
 
+To prove equivalence, one may pass to convolution of 
 The equivalence of these definitions is assumed to be known.
-\footnote{\red V: I was asked by several people for references to this. }
 
 We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
 
@@ -358,7 +361,7 @@ The following proposition is simple, but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
-A geodesic space $\spc{L}$ has nonnegative curvature in the sense of Alexandrov if and only if $f''\le 1$ for any function $f$ of the following type 
+A complete geodesic space $\spc{L}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the following type 
 \[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
 \end{thm} 
 
@@ -402,6 +405,14 @@ In both comparisons we check certain condition on 6 distances between every pair
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested to consider other conditions of that type for $n$-point subsets;
 see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for development of this idea.
 
+We have chosen complete geodesic spaces with curvature at least $\kappa$ as the main object of study --- $\Alex\kappa$ spaces.
+Instead, we could choose complete \textit{length} spaces with curvature at least $\kappa$.
+This option is slightly more general, but many statements can be reduced to geodesic case.
+in particular, \textit{any complete length spaces $\spc{L}$ with curvature $\ge \kappa$
+can be embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
+Also \textit{any point $p$ in $\spc{L}$ can be connected by geodesics to most other points} 
+\cite[8.11]{alexander-kapovitch-petrunin2024}.
+
 All the discussed statements admit natural generalizations to 
 spaces with curvature $\ge \kappa$ in the sense of Alexandrov.
 The proof are nearly the same, but the formulas are getting more complicated.
@@ -409,11 +420,11 @@ It is common practce in Alexandrov geometry to write proofs for nonnegative curv
 leave the general curvature bound as an exercise.
 Sometime theses exercises are nontrivial. 
 
-For example, the function comparison for curvature $\ge-1$ states that 
+For example, the function comparison for $\Alex{-1}$ spaces states that 
 $f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
 (The inequality used here will be defined in Section \ref{sec:Semiconcave functions}.)
 
-Similarly, the function comparison curvature $\ge1$ states that for any point $p$, we have
+Similarly, the function comparison for $\Alex1$ states that for any point $p$, we have
 $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
 The geometric meaning of these inequalities remains the same:

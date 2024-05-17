@@ -35,7 +35,7 @@ $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
-Any Busemann function on an Alexandrov space with nonnegative curvature is concave.
+Any Busemann function on an $\Alex0$ space is concave.
 \end{thm}
 
 \section{Splitting theorem}
@@ -72,8 +72,7 @@ the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\spc{L}$  be an Alexandrov space with nonnegative curvature
-and let $\gamma$ be a line in $\spc{L}$. 
+Let $\gamma$ be a line in a $\Alex0$ space $\spc{L}$. 
 Then 
 \[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
 for some subset $\spc{L}'\subset \spc{L}$.
@@ -82,8 +81,7 @@ for some subset $\spc{L}'\subset \spc{L}$.
 Before going into the proof, let us state a corollary of the theorem.
 
 \begin{thm}{Corollary}\label{cor:splitting}
-Let $\spc{L}$ be an Alexandrov space with nonnegative curvature. 
-Then there is an isometric splitting
+Any $\Alex0$ space $\spc{L}$ splits isometrically as
 \[
 \spc{L}=\spc{L}'\oplus H
 \]
@@ -93,7 +91,7 @@ where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'
 The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
-Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an Alexandrov space $\spc{L}$ with nonnegative curvature.
+Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{L}$.
 Consider two $f$-gradient curves $\alpha$ and~$\beta$.
 Then for any $t, s\ge 0$ we have
 \begin{align*}
@@ -190,19 +188,13 @@ Note that $h$ is onto.
 Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
-Recall that according our definition the real line $\RR$ has curvature $\ge 1$.
-However most of Alexandrov spaces with curvature $\ge 1$ have diameter at most $\pi$;
+Recall that according our definition the real line $\RR$ is $\Alex1$.
+However most of $\Alex1$ spaces have diameter at most $\pi$;
 see \ref{ex:RisCBB(1)}.
 
 \begin{thm}{Exercise}\label{ex:cone-CBB}
 Suppose $\spc{X}$ is a complete geodesic space.
-Show that $\Cone\spc{X}$ is $\CBB(0)$ if and only if $\spc{X}\iso\Susp^k\spc{Y}$
-for some integer $k\ge 0$ and a geodesic $\CBB(1)$ space $\spc{Y}$ such that $\dist{x}{y}{}<\pi$ for any $x,y\in\spc{Y}$.
-
-???
-
-(For example, if $\spc{Y}=\emptyset$, then $\spc{X}\iso \mathbb{S}^k$;
-if $\spc{Y}$ is a one-point space, then $\spc{X}$ is a hemisphere.)
+Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
 \end{thm}
 
 \section{Comments}
@@ -482,7 +474,7 @@ the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 \begin{thm}{(\textit{n}+1)-comparison}
-Let $\spc{L}$ be an Alexandrov space with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there is a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{L}}
@@ -509,7 +501,7 @@ Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
-Let $\spc{L}$ is an Alexandrov space with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 Suppose $\LinDim\spc{L}\z=m<\infty$.
 Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}$.
 \end{thm}
@@ -520,14 +512,12 @@ Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional ma
 
 
 \begin{thm}{Exercise}\label{ex:resporka}
-Let $\spc{L}$ be an Alexandrov with nonnegative curvature.
+Let $\spc{L}$ be an $\Alex0$ space.
 
-Show that $\LinDim \spc{L}\ge m$ if and only if for some $m+2$ points $p$, $x_0,\z\dots, x_{m}\in \spc{L}$
+Show that $\LinDim \spc{L}\ge m$ if and only if for some $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{L}$
 we have
-\[\angk p{x_i}{x_j}>\tfrac\pi2\]
-for any pair $i\ne j$.%
-\footnote{\textit{If $m=\LinDim \spc{L}$ then the map $q\mapsto (\dist{x_1}{q}{},\dots,\dist{x_m}{q}{})$ induces a bi-Lipschitz embedding of a neighborhood of $p$ to $\EE^m$.}
-(We mention it without proof, altho it is not hard to prove.)}
+\[\angk p{a_i}{a_j}>\tfrac\pi2\]
+for any pair $i\ne j$.
 \end{thm}
 
 \section{Space of directions}
@@ -543,7 +533,8 @@ Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compa
 
 
 \begin{thm}{Exercise}\label{ex:finite-tan}
-Prove the following in the assumptions of \ref{thm:finite-space-of-directions}.
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{L}$.
+Prove the following.
 \begin{subthm}{}
 The tangent space $\T_p$ is a proper geodesic space.
 \end{subthm}
@@ -563,7 +554,7 @@ Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all fin
 Such proofs will be indicated below.
 
 \parit{Proof.}
-Note that \ref{prop:Tan-is-CBB(0)} and \ref{ex:cone+CBB} imply that $\Sigma_p$ has curvature $\ge1$.
+Note that \ref{prop:Tan-is-CBB(0)}, \ref{ex:cone-CBB}, and ??? imply that $\Sigma_p$ has curvature $\ge1$.
 
 \parit{Compactness.}
 Choose $\eps>0$; suppose $\spc{L}$ is $m$-dimensional.
@@ -632,10 +623,76 @@ It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as r
 
 Notice that the comparison gives lower bounds on $\mangle\hinge pxz$ and $\mangle\hinge pyz$, but in the proof we needed upper bounds which were obtained by from the definition of angle measure and compactness of space of directions.
 
-\section{Comments}
+\section{Right-inverse theorem}
 
-Corollary \ref{cor:euclid-subcone} is the key to the proof that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
-More precisely, we have the following theorem \cite[15.16]{alexander-kapovitch-petrunin2024}.
+\begin{thm}{Theorem}\label{thm:right-inverse}
+Suppose $p,a_0,\dots,a_m$ be points in Alexandrov space $\spc{L}$ such
+\[\angk p{a_i}{a_j}>\tfrac\pi2\]
+for any $i\ne j$.
+Then the map $f\:\spc{L}\to\RR^m$ defined by
+\[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{}\]
+has a left inverse defined in a neighborhood of $f(p)$.
+
+Moreover, if $\LinDim\spc{L}=m$, then $f$ defines a bi-Lipschitz embedding of a small neighborhood of $p$.
+\end{thm}
+
+If $\LinDim\spc{L}=m$, then the restriction of $f$ to a neighbohood provided by the second part of theorem is called \index{distance chart}\emph{distance chart} at $p$.
+The following exercise will guide you thru the proof.
+
+\begin{thm}{Exercise}\label{ex:proof-right-inverse}
+Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse} and $\eps>0$.
+Given $\bm{y}=(y_1,y_2,\dots,y_m)\in \RR^m$, 
+consider the function on $\spc{L}$ defined by
+\[f_{\bm{y}}(x)=\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
+
+\begin{subthm}{ex:proof-right-inverse:grad}
+Show that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$ for some $r>0$.
+Moreover,
+\begin{enumerate}[(i)]
+\item\label{111} $(\dd_q\distfun_{a_i})(\nabla_q f_{\bm{y}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a_i}{q}{}>y_i$ and
+\item\label{222} $(\dd_q\distfun_{a_i})(\nabla_q f_{\bm{y}})>\tfrac{1}{10}\cdot\eps^2$ if 
+\[\dist{a_i}{q}{}-y_i=\min_j\{\dist{a_j}{q}{}\z-y_j\}<0.\]
+\end{enumerate}
+
+\end{subthm}
+
+\begin{subthm}{ex:proof-right-inverse:alpha}
+Let $\alpha_{\bm{y}}$ be $f_{\bm{y}}$-gradient curve that starts at $p$.
+Use \ref{SHORT.ex:proof-right-inverse:grad} to show that 
+if for some $\bm{y}\in\RR^m$ and $t_0\le\tfrac{r}{2}$ we have
+$|\distfun_{\bm{a}}{p}-\bm{y}|
+\le
+\tfrac{\eps^2}{10}\cdot t_0$, then 
+$
+\distfun_{\bm{a}}{[\alpha_{\bm{y}}(t_0)]}
+= 
+\bm{y}$.
+\end{subthm}
+
+\begin{subthm}{ex:proof-right-inverse:end}
+Set $t_0(\bm{y})=\tfrac{10}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
+Use \ref{lem:fg-dist-est} to show that the map
+\[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
+continuous in $\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^m$
+and finish the proof of the first statement in \ref{thm:right-inverse}.
+\end{subthm}
+
+\begin{subthm}{ex:proof-right-inverse:dim}
+Show that there is $\eps>0$ such that one of the following $m$ inequalities hold
+\begin{align*}
+\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\quad\dots,\quad \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
+\\
+\mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\quad\dots,\quad\mangle\hinge yx{a_m}<\tfrac\pi2-\eps
+\end{align*}
+for any two points $x,y$ in a sufficiently small neighborhood of $p$.
+Use it to prove the second statement in \ref{thm:right-inverse}.
+\end{subthm}
+
+
+\end{thm}
+
+Note that as a corollary of \ref{thm:right-inverse} we get that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
+More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{L}$, we have
@@ -644,6 +701,8 @@ where $\TopDim$ and $\HausDim$ stands for \index{Lebesgue coverning dimension}\e
 \end{thm}
 
 %??? лучше доказать --- утверждение про топ.размерность используется в \ref{thm:top-bry}!!!
+
+\section{Comments}
 
 \begin{thm}{Open question}
 Let $p$ be a point in an Alexandrov space $\spc{L}$.
