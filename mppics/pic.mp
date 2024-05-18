@@ -611,6 +611,35 @@ label.urt(btex $\gamma(b)$ etex, z.b);
 
 endfig;
 
+
+beginfig(803) 
+save u,p;
+u:=.7cm;
+path p[];
+
+z.p=(0,0)*u;
+z.r1=(0,-2)*u;
+z.r2=(0,-3)*u;
+z.x=(1.8,2)*u;
+z.xx=.66*z.x rotated -10;
+
+p0=z.p..z.xx..z.x;
+
+draw circle(z.p,z.r1);
+draw circle(z.p,z.r2);
+draw p0;
+
+dOt z.p,z.xx,z.x;
+
+
+label.lft(btex $p$ etex, z.p);
+label.lft(btex $x$ etex, z.x);
+label.lft(btex $w(x)$ etex, z.xx);
+label.lrt(btex $\gamma_x$ etex, point .3 of p0);
+label.top(btex $B(p,r_1)$ etex, z.r1);
+label.top(btex $B(p,r_2)$ etex, z.r2);
+endfig;
+
 beginfig(805) 
 save u,p;
 path p[];
