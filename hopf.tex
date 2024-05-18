@@ -420,7 +420,7 @@ $\xi$ and $\xi'$ lie on some geodesic $[\dir x{y} \dir xp]_\Xi$.
 Fix $t\approx 0$ such that $t\ne 0$; let $z=\gamma(t)$.
 Choose such $\xi'(t)$ for $\xi(t)=\dir xz$.
 Consider the radial curve $\alpha(s)\df\gexp_x(s\cdot\xi'(t))$.
-Applying the comparison and \ref{prop:gexp}, we get that 
+Let us show that 
 \begin{align*}
 \dist{p}{z}{\spc{W}}
 &\le \dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le
@@ -429,8 +429,13 @@ Applying the comparison and \ref{prop:gexp}, we get that
 \\
 &=\side\hinge yp{z}.
 \end{align*}
-for suitably chosen parameter $s$.
-The value $s$ is defined via the model configuration $\tilde p$, $\tilde x$, $\tilde y$, $\tilde w$, $\tilde z\in \EE^2$
+for suitable value $s$.
+The choice of $s$ comes from the model configuration $\tilde p$, $\tilde x$, $\tilde y$, $\tilde w$, $\tilde z\in \EE^2$
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1014}
+\end{figure}
 \begin{align*}
 \tilde x&\in [\tilde p\tilde y],
 &
@@ -449,12 +454,10 @@ The value $s$ is defined via the model configuration $\tilde p$, $\tilde x$, $\t
 s&=\dist{\tilde x}{\tilde w}{},
 \end{align*}
 where $\phi=\mangle\hinge{x}{y}{z}$ and $\psi=\mangle(\dir xp,\xi')$.
-
-\begin{figure}[ht!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1014}
-\end{figure}
+By \ref{prop:gexp}, we get 
+\[\dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le\dist{\tilde p}{\tilde z}{},\]
+and the comparison implies that 
+\[\dist{\tilde p}{\tilde z}{}\le \side\hinge yp{z}.\]
 
 Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
@@ -499,6 +502,28 @@ for any $x\in\partial \spc{L}$.
 
 \section{Remarks}
 
+Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
+This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary;
+so the following tools become available.
+
+\begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
+Any finite-dimensional Alexandrov space has a fundamental class cohomology with $\ZZ/2$ coefficients;
+that is, if $\spc{L}$ is a compact $m$-dimensional Alexandrov space, then $\spc{L}$
+\[H^m(\spc{L},\ZZ/2)=\ZZ/2.\]
+
+\end{thm}
+
+This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
+Originally it was proved for Alexander--Spanier, but for Alexandrov spaces it is the same as singular cohomology.
+It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
+It is also used in the proof of the following generalized domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
+
+\begin{thm}{Domain invariance}\label{thm-inv-domain}
+Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
+Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
+Then $f(\Omega_1)$ is open in $\spc{L}_2$.
+\end{thm}
+
 Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
 
 \begin{thm}{Topological stratification}\label{thm:top-stratification}
@@ -535,28 +560,6 @@ Then the following statements are equivalent.
 \begin{subthm}{item-local-homology} $H_m(\spc{L},\spc{L}\setminus \{p\},\ZZ/2)= 0$;
 \end{subthm}
 
-\end{thm}
-
-Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
-This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary;
-so the following tools become available.
-
-\begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
-Any finite-dimensional Alexandrov space has a fundamental class cohomology with $\ZZ/2$ coefficients;
-that is, if $\spc{L}$ is a compact $m$-dimensional Alexandrov space, then $\spc{L}$
-\[H^m(\spc{L},\ZZ/2)=\ZZ/2.\]
-
-\end{thm}
-
-This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
-Originally it was proved for Alexander--Spanier, but for Alexandrov spaces it is the same as singular cohomology.
-It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
-It is also used in the proof of the following generalized domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
-
-\begin{thm}{Domain invariance}\label{thm-inv-domain}
-Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
-Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
-Then $f(\Omega_1)$ is open in $\spc{L}_2$.
 \end{thm}
 
 Let $f$ be a semiconcave function.

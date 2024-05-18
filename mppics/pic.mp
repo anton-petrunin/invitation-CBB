@@ -1402,7 +1402,8 @@ z.z=(3.2,1)*u;
 z.w=.5[z.p,z.z];
 
 draw z.p--z.y--z.z--cycle;
-draw z.z--z.x--z.w;
+draw z.z--z.x;
+draw z.x--z.w penbold;
 
 labelarcsprof(z.p,z.x,z.w, 12, 10, btex $\psi$ etex);
 labelarcsprof(z.y,z.x,z.z, 12, 10, btex $\phi$ etex);
@@ -1418,6 +1419,7 @@ label.bot(btex $\tilde x$ etex, z.x);
 label.bot(btex $\tilde y$ etex, z.y);
 label.top(btex $\tilde z$ etex, z.z);
 label.top(btex $\tilde w$ etex, z.w);
+label.rt(btex $s$ etex, .5[z.x,z.w]);
 
 endfig;
 

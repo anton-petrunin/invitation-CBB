@@ -641,7 +641,7 @@ Suppose $p,a_0,\dots,a_m$ be points in Alexandrov space $\spc{L}$ such
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
 Then the map $f\:\spc{L}\to\RR^m$ defined by
-\[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{}\]
+\[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
 has a left inverse defined in a neighborhood of $f(p)$.
 
 Moreover, if $\dim\spc{L}=m$, then $f$ defines a bi-Lipschitz embedding of a small neighborhood of $p$.
@@ -705,16 +705,23 @@ Use it to prove the second statement in \ref{thm:right-inverse}.
 
 \end{thm}
 
+\section{Other dimensions}
+
 Note that as a corollary of \ref{thm:right-inverse} we get that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
 
+Note that the right inverse theorem implies that if $\LinDim\spc{L}\ge m$, then $\spc{L}$ contains a subset homeomorphic to an open ball in $\EE^m$.
+In particular $\TopDim\spc{L}\ge m$, where $\TopDim$ for the \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension}.
+By Szpilrajn's theorem \cite[theorems V 8 and VII 2]{hurewicz-wallman}, $\HausDim\spc{L}\ge\TopDim\spc{L}$,
+where $\HausDim$ stands for Hausdorff dimension.
+Finally, by the Bishop--Gromov inequality, we get that $\LinDim \spc{L}\ge \HausDim\spc{L}$.
+Therefore we get the following statement.
+
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{L}$, we have
-\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L},\]
-where $\TopDim$ and $\HausDim$ stands for \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension} and \index{Hausdorff dimension}\emph{Hausdorff dimension}, respectively.
-\end{thm}
+\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}.\]
 
-%??? лучше доказать --- утверждение про топ.размерность используется в \ref{thm:top-bry}!!!
+\end{thm}
 
 \section{Comments}
 
