@@ -184,6 +184,7 @@ Then
 \[\dd_p\distfun_q(v)=-\max_{\xi\in\Xi}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
 \end{subthm}
+
 \end{thm}
 
 
@@ -249,6 +250,17 @@ The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
 The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
 
+Solving the following exercise should help to find an approach to the key lemma.
+
+\begin{thm}{Exercise}\label{ex:d(distfun):==}
+Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{L}$.
+Suppose the geodesic $[pq]$ can be extended behind $q$.
+Show that
+\[\dd_p\distfun_q(v)\le -\langle\dir pq,v\rangle\]
+for any $v\in\T_p$.
+
+\end{thm}
+
 \parit{Proof of \ref{lem:ohta}.}
 We will assume $\kappa=0$;
 the general case requires only minor modifications.
@@ -257,7 +269,7 @@ We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, t
 {
 
 \begin{wrapfigure}{r}{34 mm}
-\vskip-6mm
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-1205}
 \vskip0mm

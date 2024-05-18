@@ -173,7 +173,7 @@ If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles
 By the comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
 Therefore the obtained configuration meets all the conditions.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]=\modtrig(px_1x_2)$
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$
 and take $y_3$ on the extension of $[y_1q]$ behind $q$ such that $\dist{q}{y_3}{}=\dist{p}{x_3}{}$.
 Then $\mangle \hinge q{y_2}{y_3}\ge \angk p{x_2}{x_3}$, therefore $\dist{y_2}{y_3}{}\ge \dist{x_2}{x_3}{}$.
 Further, $\dist{y_2}{y_3}{}=\dist{x_2}{p}{}+\dist{p}{x_3}{} \ge \dist{x_2}{x_3}{}$,
@@ -429,8 +429,7 @@ Consider a sequence of geodsics $[p\gamma(t_n)]$.
 Since the space is proper, we can pass to its convergent subsequence.
 Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
 Observe that $[pq]$ makes angle at most $\alpha$ with $\gamma$ --- a contradiction.
-
-
+ 
 \parbf{\ref{ex:monotonicity}.}
 Let $\gamma\:[0,\ell]\to \spc{L}$ be the geodesic $[xy]$ paramentrized from $x$ to $y$,
 and let $\phi=f\circ\gamma$.
@@ -444,6 +443,13 @@ f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
 f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
 \end{align*}
 Hence the statement follows.
+
+\parbf{\ref{ex:d(distfun):==}.}
+If the space is proper, then the statement follows from \ref{SHORT.ex:d(distfun):=} and \ref{ex:pi-angle}.
+
+To do the general case argue by contradiction as in the proof of \ref{lem:ohta}.
+Note that we can assume that $|v|=1$ and it is a direction of a geodesic, say $\gamma$ from $p$.
+???
 
 \parbf{\ref{ex:convergence-grad}.}
 Note that
@@ -486,8 +492,6 @@ Since $f\circ\gamma$ is $\lambda$-concave, we have
 It follows that 
 \[\dd_x(\dir xy)=(f\circ\gamma)^+(0)>s,\]
 and by \ref{prop:grad-exist}, $|\nabla_x f|>s$.
-
-
 
 \parbf{\ref{ex:elf-contracting}.}
 Note that $f\circ\alpha$ is a nondecreasing function.
@@ -597,13 +601,30 @@ If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
 and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
 Conclude that $\dim\Lin_q\ge m$ in this case.
 
-\parbf{\ref{ex:finite-tan}.}
+\parbf{\ref{ex:finite-tan}.} 
+Apply \ref{ex:geod-closed}, \ref{ex:GHto-tangent}, and ???.
+
+\parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
+
+\parit{\ref{SHORT.ex:proof-right-inverse:alpha}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:end}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:dim}}
 
 \parbf{\ref{ex:dim-lim}.} Apply \ref{ex:resporka}.
 
-\parbf{\ref{ex:diam-compact}.}
+\parbf{\ref{ex:BG}.} 
+You should follow the proof Bishop--Gromov inequality, plus prove the following two inequalities 
+\begin{align*}
+\sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{L}}
+\\
+\sinh r_2\cdot\dist{w(x)}{w(y)}{\spc{L}} &\ge \sinh r_1\cdot\dist{x}{y}{\spc{L}}
+\end{align*}
+for any $x,y\in\oBall(p,r)$.
 
-\parbf{\ref{ex:pack-net}.}
+\parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
+Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 
 \parbf{\ref{ex:pack-vol}.}
 
@@ -613,16 +634,47 @@ A stronger statement holds
 in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.
 
-\parbf{\ref{ex:bry-convex}.}
+\parbf{\ref{ex:diam-compact}.}
 
-\parbf{\ref{ex:bry-product}.}
 
 \parbf{\ref{ex:conic}.}
+Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
+Without loss of generality, we may assume that $V\Subset W$;
+that is, the closure of $V$ lies in $W$.
 
-\parbf{\ref{ex:conic-tangent}.}
-\ref{SHORT.ex:conic-tangen:tangent}
-\ref{SHORT.ex:conic-tangen:dir}
-\ref{SHORT.ex:conic-tangen:example}
+Construct a sequence of embeddings $f_n\:V\to W$
+such that 
+\begin{itemize}
+\item 
+For any compact set $K\subset V$ 
+there is a positive integer $n=n_K$ such that 
+$f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
+\item For any point $w\in W$ there is a point $v\in V$ such that $f_n(v)=w$ for all large $n$.
+\end{itemize}
+
+Note that once such a sequence is constructed, $f\:V\to W$ defined by $f(v)=f_n(v)$ for all large values of $n$ gives the needed homeomorphism.
+
+The sequence $f_n$ can be constructed recursively
+\[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
+where $\Phi_n\:V\to V$ 
+and $\Psi_n\:W\to W$ 
+are homeomorphisms
+of the form 
+\[\Phi_n(x)=\phi_n(x)\ast x\quad \text{and}\quad \Phi_n(x)=\psi_n(x)\star x,\]
+where $\phi_n\:V\to \RR_{\ge 0}$, $\psi_n\:W\to \RR_{\ge 0}$ are suitable continuous functions;
+``$\ast$'' and ``$\star$'' denote the multiplications in the cone structures of $V$ and $W$ respectively.
+
+\parit{Comment.} If it is hard to follow, read the original proof by Kyung Whan Kwun \cite{kwun1964}.
+
+\parbf{\ref{ex:conic-tangent}}; \ref{SHORT.ex:conic-tangen:tangent}. Apply \ref{thm:spherical-nbhd} and \ref{lem:kwun}.
+
+\parit{\ref{SHORT.ex:conic-tangen:dir}.} Apply \ref{SHORT.ex:conic-tangen:tangent}.
+
+\parit{\ref{SHORT.ex:conic-tangen:example}.} Recall the the Poincaré homology sphere can be obtained as a quotient space $\Sigma=\SSS^3/\Gamma$ by an isometric action of a finite group $\Gamma$  --- the so-called binary icosahedral group.
+By the double suspension theorem,  $\Susp^2\Sigma\cong\SSS^5$.
+Note that $\Susp^2\Sigma$ is an Alexandrov space and it has a point with space of directions isometric to $\Susp\Sigma$.
+Observe that $\Susp\Sigma$ is not a manifold; in particular $\Susp\Sigma\ncong\SSS^4$.
+Therefore pair $\Susp^2\Sigma$ and $\SSS^5$ provide the needed example.
 
 \parbf{\ref{ex:nonstability}.}
 
@@ -631,10 +683,42 @@ $\vol_m\:\bm{K}\to \RR$ is continuous.
 \parbf{\ref{ex:bry-closed}.}
 
 \parbf{\ref{ex:bry-connected}.}
+Assume $\spc{L}$ has at least two boundary components.
+Show and use that the universal cover of the doubling of $\spc{L}$ has infinite diameter.
 
-\parbf{\ref{ex:dist-to-bry}.}
+\parbf{\ref{ex:dist-to-bry}.} Choose $x$ on $\gamma$;
+we can assume that $x=\gamma(0)$.
+Let $y\in \partial \spc{L}$ be a closest point to $x$.
+Let $\alpha=\mangle(\dir xy,\gamma^+(0)$.
+
+Suppose $x\notin \partial \spc{L}$.
+Show that $\T_y=\RR_{\ge0}\times\T_y\partial \spc{L}$
+and $\dir yx\perp \T_y\partial \spc{L}$.
+
+Given a vector $v\in \T_y$ denotes by $\bar v$ its projection to $\T_y\partial \spc{L}$.
+Apply the comparison and \ref{prop:gexp} to show that 
+\[\dist{\gamma(t)}{\gexp_y(\overline{\log_x\gamma(t)})}{}\le \dist{x}{y}{}+t\cdot\cos\alpha.\]
+Conclude that $\gamma''(0)\le 0$ in the barrier sense.
+
 
 \parbf{\ref{ex:liberman}.}
+Suppose $\gamma$ is defined on the interval $[0,\ell]$.
+Assume that the function $\rho\:t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is not $1$-concave.
+Let $\bar\rho\:[0,\ell]\to\RR$ be minimal $1$-concave function such that $\bar\rho\ge \rho$.
+Note that $\bar\rho=\rho$ at the ends of $[0,\ell]$.
+
+Consider curve $\bar\gamma(t)\df \GF_f^{s(t)}\gamma(t)$;
+where $f=\tfrac12\cdot\distfun_p^2$ and $s(t)\z=\ln\circ\bar\rho(t)-\ln\circ\rho(t)$.
+Use the first distance estimate to show that $\length\bar\gamma<\length\gamma$ and arrive at a contradiction.
+
+\parit{Comment.}
+The statement was proved by Grigori Perelman and the second author \cite{perelman-petrunin};
+it generalizes a theorem of Joseph Liberman \cite{liberman} about geodesics on convex surfaces.
+The original Liberman's version of the following geometric statement.
+\textit{Suppose that $C$ over $\gamma$ with vertex at $p$,
+where $\gamma$ is a geodesic on a convex surface and $p$ is a point in the convex body bounded by the surface.
+Then after unfolding $C$ into plane, $\gamma$ becomes a locally convex curve.}
+It is instructive to check that this formulation is equivalent to ours for convex bodies.
 
 \parbf{\ref{ex:native}.}
 Choose a geodesic $\gamma$ in $\spc{W}$.
@@ -668,6 +752,12 @@ Observe that there is a submetry $\sigma_n$ such that the inverse image $\sigma_
 Note that for $n=2$ we get the solution in \ref{SHORT.ex:sumbetries(S^2):2}.
 
 \parbf{\ref{ex:sumbetries(E^2)}.}
+Show that for any $x\in\EE^2$ there is a half-line $H\ni x$ such that 
+the restriction $\sigma|_H$ is an isometry.
+Suppose such half-line $H$ starts at $p$ and passes thru $q$.
+Show that $\langle x-p,q-p \rangle\le 0$ for any $x\in \sigma^{-1}\{0\}$.
+Conclude that $\sigma^{-1}\{0\}$ is a convex closed set.
+Finally use the definition of submetry to show that  $\sigma^{-1}\{0\}$ has no interior points. 
 
 \parbf{\ref{ex:S^3/S^1}};
 \ref{SHORT.ex:S^3/S^1:pq}.

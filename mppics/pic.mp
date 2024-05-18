@@ -611,6 +611,35 @@ label.urt(btex $\gamma(b)$ etex, z.b);
 
 endfig;
 
+
+beginfig(803) 
+save u,p;
+u:=.7cm;
+path p[];
+
+z.p=(0,0)*u;
+z.r1=(0,-2)*u;
+z.r2=(0,-3)*u;
+z.x=(1.8,2)*u;
+z.xx=.66*z.x rotated -10;
+
+p0=z.p..z.xx..z.x;
+
+draw circle(z.p,z.r1);
+draw circle(z.p,z.r2);
+draw p0;
+
+dOt z.p,z.xx,z.x;
+
+
+label.lft(btex $p$ etex, z.p);
+label.lft(btex $x$ etex, z.x);
+label.lft(btex $w(x)$ etex, z.xx);
+label.lrt(btex $\gamma_x$ etex, point .3 of p0);
+label.top(btex $B(p,r_1)$ etex, z.r1);
+label.top(btex $B(p,r_2)$ etex, z.r2);
+endfig;
+
 beginfig(805) 
 save u,p;
 path p[];
@@ -1362,6 +1391,36 @@ drawdblarrow (.25[z.d,z.a]{left}..tension 1.4..(.75)[z.d,z.a]{right}) shifted (-
 
 endfig;
 
+beginfig(1014) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.y=(3,0)*u;
+z.x=.6[z.p,z.y];
+z.z=(3.2,1)*u;
+z.w=.5[z.p,z.z];
+
+draw z.p--z.y--z.z--cycle;
+draw z.z--z.x--z.w;
+
+labelarcsprof(z.p,z.x,z.w, 12, 10, btex $\psi$ etex);
+labelarcsprof(z.y,z.x,z.z, 12, 10, btex $\phi$ etex);
+
+dOt z.p,
+z.y,
+z.x,
+z.z,
+z.w;
+
+label.bot(btex $\tilde p$ etex, z.p);
+label.bot(btex $\tilde x$ etex, z.x);
+label.bot(btex $\tilde y$ etex, z.y);
+label.top(btex $\tilde z$ etex, z.z);
+label.top(btex $\tilde w$ etex, z.w);
+
+endfig;
+
 beginfig(1100) 
 save u,p;
 path p[];
@@ -1704,7 +1763,7 @@ endfig;
 beginfig(1325) 
 save u,p;
 path p[];
-u:=1cm;
+u:=1.4cm;
 
 z.x=(-1,0)*u;
 z.y=-z.x;
@@ -1719,6 +1778,7 @@ draw z.p--z.yy;
 draw ddline (z.x,z.y)(.4,.4) pensemibold;
 dOt z.p,z.yy,z.xx;
 
+labelarcsprof(z.p,z.yy,z.a, 14, 0, btex $\theta$ etex);
 
 label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
 label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,1)*u);
