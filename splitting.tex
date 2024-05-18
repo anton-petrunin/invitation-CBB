@@ -1,8 +1,9 @@
+%%!TEX root = the-splitting.tex
 \chapter{Line splitting}\label{chap:splitting}
 
 \section{Busemann function}
 
-A \index{half-line}\emph{half-line} is a distance-preserving map
+A \index{half-line}\emph{half-line} \footnote{\red V: we used half-line in the other book but I would still like to change this to "ray" which is the established term in literature} is a distance-preserving map
 from $\RR_{\ge0}=[0,\infty)$ 
 to a metric space.
 In other words, a half-line is a geodesic defined on the real half-line $\RR_{\ge0}$.
@@ -17,7 +18,7 @@ The Busemann function $\bus_\gamma$ mimics behavior of the distance function fro
 For any half-line $\gamma$ in a metric space $\spc{X}$,
 its Busemann function $\bus_\gamma\:\spc{X}\to \RR$ 
 is defined.
-Moreover, $\bus_\gamma$ is $1$-Lipschitz and $\bus_\gamma\circ\gamma(t)+t= 0$ for any $t$.
+Moreover, $\bus_\gamma$ is $1$-Lipschitz and $\bus_\gamma (\gamma(t))=-t$ for any $t$.
 
 \end{thm}
 
@@ -85,10 +86,10 @@ Any $\Alex0$ space $\spc{L}$ splits isometrically as
 \[
 \spc{L}=\spc{L}'\oplus H
 \]
-where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'\subset \spc{L}$ is a convex subset that contains no line. 
+where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'\subset \spc{L}$ is a convex subset that contains no lines. 
 \end{thm}
 
-The following lemma is closely relevant to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
+The following lemma is closely related to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
 Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{L}$.
@@ -138,8 +139,12 @@ By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{L}$.
 On the other hand, by \ref{comp-kappa}, 
 $f(t)=\distfun_x^2\circ\gamma(t)$ 
 is $2$-concave.
-In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$. 
-Passing to the limit as $t\to\pm\infty$, we have $\bus_+(x)+\bus_-(x)\le0$.
+In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$.  Therefore, for all large $t$
+\[
+\dist{\gamma( t)}{x}{}- t +\dist{\gamma(- t)}{x}{}- t\le \sqrt{ t^2+at+b}-t+\sqrt{ t^2-at+b}-t
+\]
+
+Passing to the limit as $t\to\infty$, we get that  $\bus_+(x)+\bus_-(x)\le 0$.
 Hence
 \[
 \bus_+(x)+\bus_-(x)= 0
@@ -349,7 +354,7 @@ thus
 
 Recall that $\T_p$ has nonnegative curvature.
 Note that the hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
-By \ref{ex:adjacent-CBB}, $\mangle\hinge 0ux+\mangle\hinge 0vx=0$;
+By \ref{ex:adjacent-CBB}, $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
 hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
@@ -463,11 +468,11 @@ in particular, $\dir xp\in \Lin_x$.
 \begin{subthm}{ex:grad-dist:|grad|=1}
 Show that if $|\nabla_xf|=1$, then $\dd_xf(w)= \langle\nabla_xf,w\rangle$ for any $w\in \T_x$.
 \end{subthm}
-
+\footnote{\red V: I don't like that this is left as an exercise. The statement a) is nontrivial. we give a proof in the other book. I think we should prove it here too}
 
 \end{thm}
 
-Note that \ref{ex:grad-dist:lin} implies the following.
+Note that \ref{ex:grad-dist} implies the following.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
 Given a countable set of points $X$ in an Alexandrov space $\spc{L}$
@@ -561,10 +566,10 @@ If $\dim \spc{L}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensiona Alexandrov spaces via induction on its dimension.
+Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite dimensional Alexandrov spaces via induction on  dimension.
 Such proofs will be indicated below.
 
-\parit{Proof.}
+\parit{Proof of \ref{thm:finite-space-of-directions}.}
 Note that \ref{prop:Tan-is-CBB(0)}, \ref{ex:cone-CBB}, and ??? imply that $\Sigma_p$ has curvature $\ge1$.
 
 \parit{Compactness.}
@@ -581,11 +586,13 @@ By comparison,
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
 Therefore $n\le \pack_\eps\SSS^{m-1}$.
 
+\footnote{\red V: $\pack_\eps$ is only defined in chapter 8. Give forward reference or move the definition here? }
+
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
 By the definition, the space of directions $\Sigma_p$ is complete. 
 Applying \ref{ex:pack-net}, we get that  $\Sigma_p$ is compact.
 
-\parit{Geodesicness.}
+\parit{Existence of geodesics.}
 Now we will show that \textit{if $\Sigma_p$ is compact, then it is $\pi$-geodesic};
 we will not use the finiteness of dimension directly.
 
@@ -593,7 +600,7 @@ Choose two geodesic directions $\xi=\dir px$ and $\zeta=\dir py$;
 let 
 \[\alpha\z=\tfrac12\cdot \mangle \hinge pxy=\tfrac12\cdot \dist{\xi}{\zeta}{\Sigma_p}.\]
 
-Suppose $\alpha<\pi$.
+Suppose $\alpha<\pi/2$.
 Let us show that it is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
 that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such that
 \[\mangle\hinge pxz\le \alpha+\eps
@@ -702,8 +709,10 @@ for any two points $x,y$ in a sufficiently small neighborhood of $p$.
 Use it to prove the second statement in \ref{thm:right-inverse}.
 \end{subthm}
 
-
 \end{thm}
+
+\footnote{\red V: I think that since this is used later it should be proved and not left as a reference
+A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.}
 
 \section{Other dimensions}
 
@@ -722,6 +731,7 @@ For any Alexandrov space $\spc{L}$, we have
 \[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}.\]
 
 \end{thm}
+
 
 \section{Comments}
 
