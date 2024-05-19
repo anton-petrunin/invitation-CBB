@@ -716,22 +716,32 @@ A: If we add a solution, then that is OK, is not it? in any case, the idea is mo
 
 \section{Other dimensions}
 
-Note that as a corollary of \ref{thm:right-inverse} we get that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
+Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
-
-Note that the right inverse theorem implies that if $\LinDim\spc{L}\ge m$, then $\spc{L}$ contains a subset homeomorphic to an open ball in $\EE^m$.
-In particular $\TopDim\spc{L}\ge m$, where $\TopDim$ for the \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension}.
-By Szpilrajn's theorem \cite[theorems V 8 and VII 2]{hurewicz-wallman}, $\HausDim\spc{L}\ge\TopDim\spc{L}$,
-where $\HausDim$ stands for Hausdorff dimension.
-Finally, by the Bishop--Gromov inequality, we get that $\LinDim \spc{L}\ge \HausDim\spc{L}$.
-Therefore we get the following statement.
+We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension} \index{$\TopDim$ (topological dimension)}$\TopDim$ and \index{Hausdorff dimension}\emph{Hausdorff dimension} \index{$\HausDim$ (Hausdorff dimension)}$\HausDim$.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{L}$, we have
 \[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}.\]
-
+Moreover, the same holds for any open subset in $\spc{L}$.
 \end{thm}
 
+\parit{Proof.}
+Suppose $\LinDim\spc{L}\ge m$.
+The right inverse theorem implies that $\spc{L}$ contains a subset homeomorphic to an open ball in $\EE^m$.
+It follows that
+\[\TopDim\spc{L}\ge \LinDim\spc{L}.\]
+
+By Szpilrajn's theorem \cite[theorems V 8 and VII 2]{hurewicz-wallman}, 
+\[\HausDim\spc{L}\ge\TopDim\spc{L}.\]
+
+Finally, by the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}), we get that 
+\[\LinDim \spc{L}\ge \HausDim\spc{L}.\]
+
+The second statement ???
+\qeds
+
+\footnote{\red A: We use here Bishop--Gromov that is proved in the next lecture... --- switching order does not seem to be a very good option. Maybe we can leave it as it is?}
 
 \section{Comments}
 
