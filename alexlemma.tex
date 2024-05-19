@@ -1,9 +1,9 @@
 %%!TEX root = the-alexlemma.tex
 \chapter{Definitions}\label{chap:defs}
 
-\section{Four-point comparison}
+\section{Four-point comparison}\label{sec:4-point}
 
-Recall that model angle $\angk  pxy$ is defined on pager \pageref{page:model-angle}.
+Recall that model angle $\angk  pxy$ is defined on page \pageref{page:model-angle}.
 
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
@@ -15,20 +15,20 @@ holds, then we say that the quadruple meets \index{$\EE^2$-comparison}\emph{$\EE
 
 If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
 \index{$\SSS^2$-comparison}\index{$\HH^2$-comparison} $\SSS^2$- or $\HH^2$-comparisons.
-Note that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+Recall that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
 but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
-if this inequality does not hold, than we assume that $\SSS^2$-comparison holds for this quadruple.
+if this does not hold for one of the angles, than we assume that $\SSS^2$-comparison holds for this quadruple.
 
 More generally, one may apply this definition to $\MM^2(\kappa)$.
 This way we define \index{$\MM^2(\kappa)$-comparison}$\MM^2(\kappa)$-comparison for any real $\kappa$.
-However, if you see $\MM^2(\kappa)$-comparison, it is usually safe to assume that $\kappa=-1$, $0$, or $1$
+However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$
 (applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases).
 
 \begin{thm}{Definition}\label{def:CBB}
 A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
 if $\MM^2(\kappa)$-comparison
-holds for any quadruple in $\spc{X}$ such that each model angle in \ref{eq:CBB-comparison} is defined.
+holds for any quadruple of points in $\spc{X}$.
 \end{thm}
 
 While this definition can be applied to any metric space,
@@ -37,6 +37,13 @@ If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandro
 then it will be called $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
 An $\spc{X}$ is $\Alex\kappa$ space for some $\kappa$, then it will be called
 \index{Alexandrov space}\emph{Alexandrov space}.
+
+It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
+leave the general curvature bound as an exercise.
+Sometime theses exercises are nontrivial;
+in this case we add a note.
+We often formulate statements of $\kappa=0$ despite that it admits a straightforward generalization to arbitrary curvature bound.
+
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
 Show that $\EE^n$ is $\Alex0$.
@@ -57,6 +64,7 @@ for all $i$ and $j$.
 
 Recall that $[xy]$ denotes a geodesic from $x$ to $y$;
 set  
+\index{$\left]x y\right]$, $\left[x y\right[$, $\left]x y\right[$}
 \[
 \left]x y\right]=[xy]\setminus\{x\},
 \quad
@@ -209,12 +217,10 @@ $p,x,y,v,w$ in $\spc{L}$ such that $v,w\in \left]xy\right[$.
 \begin{thm}{Exercise}\label{ex:angle-lim}
 Let $\spc{L}$ be an $\Alex0$ space.
 Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{L}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
-that is geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
+that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
-
-%def Hausdorff???!!!
 
 \section{Hinge comparison}
 
@@ -289,23 +295,24 @@ $\spc{L}$ is $\Alex0$.
  
 
 \begin{subthm}{2-sum} 
-(adjacent angle comparison\index{comparison!adjacent angle comparison}) for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{L}$, we have
+(adjacent angle comparison\index{comparison!adjacent angle comparison})
 \[\angk z p x
-+\angk z p y\le \pi.\]
++\angk z p y\le \pi\]
+for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{L}$.
 \end{subthm}
 
 \begin{subthm}{point-on-side}
 (\index{comparison!point-on-side comparison}point-on-side comparison)
-for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{L}$, we have
-\[\angk x p y\le\angk x p z.\]
+\[\angk x p y\le\angk x p z\]
+for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{L}$.
 \end{subthm}
 
 \begin{subthm}{angle}(hinge comparison\index{comparison!hinge comparison})
 \index{hinge comparison}
-for any hinge $\hinge x p y$ in $\spc{L}$, the angle 
-$\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
+the angle $\mangle\hinge x p y$ is defined for any hinge $\hinge x p y$ in $\spc{L}$.
 Moreover, 
+\[\mangle\hinge x p y\ge\angk x p y\]
+for any hinge $\hinge x p y$, and
 \[\mangle\hinge z p y + \mangle\hinge z p x\le\pi\]
 for any adjacent hinges $\hinge z p y$ and $\hinge z p x$.
 \end{subthm}
@@ -314,7 +321,9 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced Exercise}\label{ex:urysohn}
-Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following condition: for any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following weaker version of the adjacent angle comparison \ref{2-sum}.
+
+For any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
@@ -322,8 +331,7 @@ Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfie
 
 \begin{thm}{Exercise}\label{ex:normCBB}
 Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
-Suppose that $\spc{W}$ is $\Alex0$.
-Show that $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
+Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
 \end{thm}
 
 \section{Function comparison}\label{Function comparison}
@@ -339,7 +347,7 @@ if one (and therefore any) of them hold for $s$, then we say that $s$ is \index{
 \item The \index{Jensen inequality}\emph{Jensen inequality}
 \[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
 holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
-\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ that (locally) supports $s$ at $t_0$ from above;
+\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrie}\emph{barrier}) that (locally) supports $s$ at $t_0$ from above;
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
 \end{itemize}
 
@@ -353,7 +361,6 @@ We will also use that \textit{$\lambda$-concave functions are one-side different
 A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{L}$}.
 The domain of definition of a function $f$ will be denoted by $\Dom f$.
 
-Let $f$ be a function on a metric space~$\spc{L}$.
 We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
 for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
@@ -385,41 +392,31 @@ Note that the point-on-side comparison (\ref{point-on-side}) is equivalent to
 \eqlbl{eq:r=<r}\]
 for any $\gamma$ and $t_0<t_1$.
 
-Set
-\begin{align*} 
-\tilde h(t)&=\tfrac12\cdot \tilde r^2(t) - \tfrac12\cdot t^2,
-&
-h&=\tfrac12\cdot r^2(t) - \tfrac12\cdot t^2.
-\end{align*}
-Note that $\tilde h$ is linear,
-$\tilde h(t_0)=h(t_0)$ and $\tilde h(t_1)=h(t_1)$.
 Observe that the Jensen inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
 Hence the proposition follows.
 \qeds
 
 \section{Comments}
 
-The 4-point comparison is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
+Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
 this is the subject of out previous invitation \cite{alexander-kapovitch-petrunin-2019}.
 
-In both comparisons we check certain condition on 6 distances between every pair of a 4-point subset.
+In both comparisons we check certain condition on 6 distances between every pair of points in 4-point sets.
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested to consider other conditions of that type for $n$-point subsets;
-see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for development of this idea.
+see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for the development of this idea.
 
-We have chosen complete geodesic spaces with curvature at least $\kappa$ as the main object of study --- $\Alex\kappa$ spaces.
-Instead, we could choose complete \textit{length} spaces with curvature at least $\kappa$.
-This option is slightly more general, but many statements can be reduced to geodesic case.
-in particular, \textit{any complete length spaces $\spc{L}$ with curvature $\ge \kappa$
-can be embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
-Also \textit{any point $p$ in $\spc{L}$ can be connected by geodesics to most other points} 
+We have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
+Instead of \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
+This option is more natural and general, but many statements can be reduced to geodesic case.
+In particular, suppose $\spc{L}$ is a complete length spaces with curvature $\ge \kappa$,
+then 
+\textit{$\spc{L}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
+Also \textit{any point $p$ in $\spc{L}$ can be connected by geodesics to a G-delta dense set of points in $\spc{L}$} 
 \cite[8.11]{alexander-kapovitch-petrunin2024}.
 
 All the discussed statements admit natural generalizations to 
 spaces with curvature $\ge \kappa$ in the sense of Alexandrov.
 The proof are nearly the same, but the formulas are getting more complicated.
-It is common practce in Alexandrov geometry to write proofs for nonnegative curvature and 
-leave the general curvature bound as an exercise.
-Sometime theses exercises are nontrivial. 
 
 For example, the function comparison for $\Alex{-1}$ spaces states that 
 $f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
