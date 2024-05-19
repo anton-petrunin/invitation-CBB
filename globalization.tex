@@ -11,10 +11,11 @@ Any compact locally $\Alex0$ space is $\Alex0$.
 
 \parit{Proof modulo the key lemma.}
 Note that condition \ref{angle-b} holds in $\spc{L}$ (the proof is the same).
-It remains to prove that \ref{angle-a} holds in $\spc{L}$;
+It remains to check \ref{angle-a};
 that is,
-\[\mangle\hinge x p y\ge\angk x p y.
+\[\mangle\hinge x p y\ge\angk x p y
 \eqlbl{eq:mod-angle-CBB-comp-glob}\]
+for any hinge $\hinge x p y$ in $\spc{L}$.
 
 First note that \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
 this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\EE^2$-comparison.
@@ -37,7 +38,7 @@ Then the comparison
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{thm}
 
-Let $\hinge x p q$ be a hinge in a metric space $\spc{L}$ with defined angle measure.
+Let $\hinge x p q$ be a hinge in $\spc{L}$.
 Denote by $\side \hinge x p q$ its \index{model side}\emph{model side};
 this is the opposite side in a flat triangle with the same angle and two adjacent sides as in $\hinge x p q$.
 
@@ -181,77 +182,10 @@ this yields
 Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \ref{eq:thm:=def-loc*}.
 \qeds
 
-\section{On general curvature bound}
+\section{General case}
 
 The globalization theorem  can be generalized to any curvature bound $\kappa$.
-The case $\kappa\le 0$ is proved in the same way, but the case $\kappa>0$ requires modifications; 
-most general statements are given in \ref{thm:globalization+} and 
-\ref{thm:noncomplete-globalization}.
-
-By \ref{ex:k-><mono}, we have
-\[\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}\]
-if $\kappa\le \Kappa$ and the right-hand side is defined.
-It follows that a $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
-Therefore, the globalization theorem  imply the following.
-
-\begin{thm}{Claim}\label{clm:K>k}
-Suppose $\Kappa>\kappa$, then any $\Alex\Kappa$ space is $\Alex\kappa$.
-\end{thm}
-
-In other words expressin \textit{curvature bounded below by $\kappa$} makes sense for geodesic spaces.
-However, as you can see from the following exercise, it does not make much sense in general.
-
-\begin{thm}{Exercise}\label{ex:CBB(1)notitCBB(0)}
-Let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
-\[\dist{p}{x_i}{}=\pi,\quad\dist{x_i}{x_j}{}=2\cdot\pi\]
-for all $i\ne j$.
-Show that $\spc{X}$ has curvature $\ge 1$, but does not have curvature $\ge 0$.
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:RisCBB(1)}
-Let $p$ and $q$ be points in an $\Alex1$ space $\spc{L}$.
-Suppose $\dist{p}{q}{}>\pi$.
-Denote by $m$ the midpoint of $[pq]$.
-Show that for any hinge $\hinge mxp$ we have
-either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
-Conclude that $\spc{L}$ is isometric to a line interval or a circle.
-
-\end{thm}
-
-\begin{thm}{Exercise}\label{ex:perim-k>0}
-Suppose  
-$\spc{L}$ is an $\Alex1$
-and $\diam \spc{L}\le \pi$.
-Show that 
-\[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
-for any triple of points $x,y,z\in \spc{L}$.
-\end{thm}
-
-
-\section{Remarks}
-
-The following question about \ref{angle-a} is a long-standing open problem (possibly dating back to Alexandrov);
-it was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov} but is much much older.
-
-\begin{thm}{Open question}\label{open:hinge-}
-Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
-such that for any hinge $\hinge x p y$ in $\spc{L}$, 
-the angle $\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
-Is it true that $\spc{L}$ is an Alexandrov space?
-\end{thm}
-
-The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
-Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};
-later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
-Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
-For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
-
-We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality.
-This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
-The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
-Another proof was obtained by
-Katsuhiro Shiohama \cite{shiohama}.
+The case $\kappa\le 0$ is proved in the same way, but the case $\kappa>0$ requires modifications.
 
 The compactness condition in our version of the theorem can be traded for completeness.
 The proof uses the following statement where $r(x)$ measures the size of a neighborhood of $x$ where the comparison holds.
@@ -271,9 +205,73 @@ It implies the following general version of the globalization theorem.
 Any locally $\Alex\kappa$ length space is $\Alex\kappa$.
 \end{thm}
 
-Slightly more general versions were proved in the papers by Michael Gromov, Yuriy Burago, and Grigory Perelman~\cite{burago-gromov-perelman}
-and by the second author \cite{petrunin:globalization}.
-Their assumptions overlap, but neither implies the other.
+By \ref{ex:k-><mono}, we have
+\[\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}\]
+if $\kappa\le \Kappa$ and the right-hand side is defined.
+It follows that a $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
+Therefore, the globalization theorem  imply the following.
+
+\begin{thm}{Claim}\label{clm:K>k}
+Suppose $\Kappa>\kappa$, then any $\Alex\Kappa$ space is $\Alex\kappa$.
+\end{thm}
+
+In other words expressin \textit{curvature bounded below by $\kappa$} makes sense for geodesic spaces.
+However, by the following exercise, it does not make much sense in general.
+
+\begin{thm}{Exercise}\label{ex:CBB(1)notitCBB(0)}
+Let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
+\[\dist{p}{x_i}{}=\pi,\quad\dist{x_i}{x_j}{}=2\cdot\pi\]
+for all $i\ne j$.
+Show that $\spc{X}$ has curvature $\ge 1$, but does not have curvature $\ge 0$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:RisCBB(1)}
+Let $p$ and $q$ be points in an $\Alex1$ space $\spc{L}$.
+Suppose $\dist{p}{q}{}>\pi$.
+Denote by $m$ the midpoint of $[pq]$.
+Show that for any hinge $\hinge mxp$ we have
+either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
+
+Conclude that $\spc{L}$ is isometric to a line interval or a circle.
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:perim-k>0}
+Suppose  
+$\spc{L}$ is an $\Alex1$
+and $\diam \spc{L}\le \pi$.
+Show that 
+\[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
+for any triple of points $x,y,z\in \spc{L}$.
+\end{thm}
+
+
+\section{Remarks}
+
+The following question about \ref{angle-a} was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov} but this is a long-standing open problem (possibly dating back to Alexandrov).
+
+\begin{thm}{Open question}\label{open:hinge-}
+Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
+such that for any hinge $\hinge x p y$ in $\spc{L}$, 
+the angle $\mangle\hinge x p y$ is defined and 
+\[\mangle\hinge x p y\ge\angk x p y.\]
+Is it true that $\spc{L}$ is an Alexandrov space?
+\end{thm}
+
+The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
+Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};
+later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
+Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
+For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
+Their statement is slightly more general than \ref{thm:globalization+}; it is for complete length spaces.
+Another version for noncomplete, but geodesic spaces was proved by the second author \cite{petrunin:globalization}.
+
+
+We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality to compact nonnegatively curved spaces.
+This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
+The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
+Another simplified argument was found by Katsuhiro Shiohama \cite{shiohama}.
+
 
 
 
