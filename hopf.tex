@@ -421,15 +421,20 @@ Fix $t\approx 0$ such that $t\ne 0$; let $z=\gamma(t)$.
 Choose such $\xi'(t)$ for $\xi(t)=\dir xz$.
 Consider the radial curve $\alpha(s)\df\gexp_x(s\cdot\xi'(t))$.
 Let us show that 
-\begin{align*}
+\[
+\begin{aligned}
 \dist{p}{z}{\spc{W}}
 &\le \dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le
 \\
 &\le \sqrt{\dist[2]{p}{y}{\spc{W}}-2\cdot t\cdot \cos\theta+t^2} =
 \\
 &=\side\hinge yp{z}.
-\end{align*}
+\end{aligned}
+\eqlbl{eq:gamma''}
+\]
 for suitable value $s$.
+
+The first inequality in \ref{eq:gamma''} is evident.
 The choice of $s$ comes from the model configuration $\tilde p$, $\tilde x$, $\tilde y$, $\tilde w$, $\tilde z\in \EE^2$
 \begin{figure}[ht!]
 \vskip-0mm
@@ -455,9 +460,17 @@ s&=\dist{\tilde x}{\tilde w}{},
 \end{align*}
 where $\phi=\mangle\hinge{x}{y}{z}$ and $\psi=\mangle(\dir xp,\xi')$.
 By \ref{prop:gexp}, we get 
-\[\dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le\dist{\tilde p}{\tilde z}{},\]
-and the comparison implies that 
-\[\dist{\tilde p}{\tilde z}{}\le \side\hinge yp{z}.\]
+\begin{align*}
+\dist{p}{\alpha(s)}{\spc{L}_0}&\le \dist{\tilde p}{\tilde w}{},
+\\
+\dist{\alpha(s)}{z}{\spc{L}_1}\le\dist{\tilde w}{\tilde z}{}.
+\end{align*}
+Finally, the comparison implies that 
+\[\dist{\tilde p}{\tilde z}{}\le \side\hinge ypz;\]
+
+\begin{thm}{Exercise}\label{ex:pz<ypz}
+Prove the last inequality.
+\end{thm}
 
 Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
