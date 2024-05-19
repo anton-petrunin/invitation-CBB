@@ -5,11 +5,13 @@
 \section{Space of directions} 
 \label{sec:space+directions}
 
-By \ref{clm:angle-defined}, angle measure of a hinge in an Alecandrov space $\spc{L}$ is defined.
+Let $\spc{L}$ be an Alecandrov space.
+By \ref{clm:angle-defined}, angle measure of any hinge in is defined.
 Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
-forms a semimetric space.
+forms a \index{semimetric}\emph{semimetric} space;
+that is, $\mangle$ meets all conditions in the definition of metric except it might vanish for distinct elements. 
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{L}$.
 The elements of $\Sigma'_p$ are called \index{geodesic direction}\emph{geodesic directions} at $p$.
@@ -53,8 +55,10 @@ and whose metric is given by the cosine rule
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
-Note that \textit{$\Cone\SSS^n$ is isometric to $\EE^{n+1}$} --- this is a leading example.
-Next, we need to generalize several notions from Euclidean space to Euclidean cones. 
+The leading example is
+\[\Cone\SSS^n\iso\EE^{n+1};\]
+here ``$\iso$'' stands for ``isometric to''. 
+Now let us extend several notions from Euclidean space to Euclidean cones. 
 
 The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
@@ -75,14 +79,18 @@ that is any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can
 \end{thm}
 
 \parbf{Tangent space.}
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{L}$ if we need to emphasise that $p$ is a point of space $\spc{L}$.
-The elements of $\T_p\spc{X}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{L}$.
+The elements of $\T_p\spc{L}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
 (despite that $\T_p$ is only a cone --- not a vector space).
-The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$.
+The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$;
+that is, with the set $\set{v\in\T_p}{|v|=1}$.
 
 \begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
-Tangent spaces to an Alexandrov space have nonnegative curvature in the sense of Alexandrov.
+A tangent space to an Alexandrov space has nonnegative curvature in the sense of Alexandrov.
 \end{thm}
+
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that tangent space $\T_p$ to an Alexandrov space might fail to be geodesic;
+in this case $\T_p$ is \textit{not} $\Alex0$.
 
 \parit{Proof.}
 Consider the tangent space $\T_p=\Cone \Sigma_p$ of an Alexandrov space $\spc{L}$ at a point $p$.
@@ -115,19 +123,20 @@ for any geodesic $\gamma$ that starts at $p$.
 
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
 
- Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison};
-also recall that we assume that these functions are locally Lipschitz and defined on an open domain.
+Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison},
+and when we say \textit{function} we usually mean a \textit{locally Lipschitz function defined on an open domain}.
 
 Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{L}$.
+Suppose $\phi$ is a continuous function defined in $\Dom f$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
 the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
-Here we assume that $\phi$ is continuous and defined in $\Dom f$.
+
 
 If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index{semiconcave function}\emph{semiconcave}.
 
 
 \begin{thm}{Exercise}\label{ex:distfun-semiconcave}
-Let $f$ be a \emph{distance function} on an $Alex0$ space $\spc{L}$;
+Let $f$ be a \emph{distance function} on an $\Alex0$ space $\spc{L}$;
 that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{L}$.
 Show that $f''\le \tfrac1f$.
 In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
@@ -138,8 +147,8 @@ In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
 \index{differential of a function}
 
 
-Let $\spc{X}$ be a space with defined angles.
-Let $f$ be a semiconcave function on $\spc{X}$ and $p\in \Dom f$.
+Let $\spc{L}$ be an Alexandrov space.
+Let $f$ be a semiconcave function on $\spc{L}$ and $p\in \Dom f$.
 Choose a unit-speed geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
@@ -160,7 +169,7 @@ it is called the \index{differential}\emph{differential} of $f$ at $p$.
 
 \begin{thm}{Exercise}\label{ex:df(xi)}
 Let $f$ be a semiconcave function on an Alexandrov space.
-Suppose $\gamma_1$ and $\gamma_2$ are unit-speed geodesics that start at $p\z\in \Dom f$;
+Suppose $\gamma_1$ and $\gamma_2$ are geodesics that start at $p\z\in \Dom f$;
 denote by $\theta$ the angle between $\gamma_1$ and $\gamma_2$ at $p$.
 Show that 
 \[|(f\circ\gamma_1)^+(0)-(f\circ\gamma_2)^+(0)|\le L\cdot \theta,\]
@@ -168,20 +177,19 @@ where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:d(distfun)}
-Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{L}$.
-Show that
+Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{L}$.
+Show the following.
 
 \begin{subthm}{ex:d(distfun):<}
-If $\xi$ is the direction of a geodesic $[pq]$ at $p$, then
-\[\dd_p\distfun_q(v)\le -\langle\xi,v\rangle\]
+$\dd_p\distfun_q(v)\le -\langle\dir pq,v\rangle$
 for any $v\in\T_p$.
 \end{subthm}
 
 \begin{subthm}{ex:d(distfun):=}
 Suppose $\spc{L}$ is proper.
-Let $\Xi$ be the set of all direction of  geodesics from $q$ to $p$.
+Let $\Uparrow_p^q$ be the set of all direction of  geodesics from $p$ to $q$.
 Then
-\[\dd_p\distfun_q(v)=-\max_{\xi\in\Xi}\langle\xi,v\rangle\]
+\[\dd_p\distfun_q(v)=-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
 \end{subthm}
 
@@ -218,6 +226,10 @@ Show that
 \lambda\cdot\dist{x}{y}{}\ge 0.\]
 \end{thm}
 
+\begin{figure}[ht!]
+\centering
+\includegraphics{mppics/pic-409}
+\end{figure}
 
 
 \begin{thm}{Proposition}\label{prop:grad-exist}
@@ -233,7 +245,7 @@ $\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\x
 
 
 \begin{thm}{Key lemma}\label{lem:ohta} 
-Let $f$ be a $\lambda$-concave function that is defined in a neighborhood of a point $p$
+Let $f$ be a semiconcave function that is defined in a neighborhood of a point $p$
 in an Alexandrov space $\spc{L}$. 
 Then for any $u,v\in \T_p$, we have
 \[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
@@ -262,14 +274,14 @@ for any $v\in\T_p$.
 \end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
-We will assume $\kappa=0$;
+We will assume that $\spc{L}$ is $\Alex0$ and $f$ is concave;
 the general case requires only minor modifications.
 We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
 
 {
 
 \begin{wrapfigure}{r}{34 mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-1205}
 \vskip0mm
@@ -332,23 +344,22 @@ and thus
 \[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).\]
 
 Without loss of generality, we can assume that $f(p)=0$.
-Since $f$ is $\lambda$-concave, we have 
+Since $f$ is concave, we have 
 \begin{align*}
-2\cdot f(w_t)&\ge f(u_t)+f(v_t)+\tfrac\lambda4\cdot\dist[2]{u_t}{v_t}{}=
+2\cdot f(w_t)&\ge f(u_t)+f(v_t)=
 \\
 &=t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
 \end{align*}
  
-Applying $\lambda$-concavity of $f$, we have
+Applying concavity of $f$, we have
 \begin{align*}
 (\dd_p f)(\dir p{w_t})
 &\ge 
-\frac{f(w_t)-\tfrac\lambda2\cdot |p-w_t|^2}{|p-w_t|}
+\frac{f(w_t)}{\dist{p}{w_t}{}}
 \ge 
 \\
 &\ge
-\frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]
-+o(t)}{2\cdot t\cdot\dist[{{}}]{\tilde p}{\tilde w}{}+o(t)}.
+\frac{t\cdot[(\dd_p f)(u)+(\dd_p f)(v)]+o(t)}{2\cdot t\cdot\dist{\tilde p}{\tilde w}{}+o(t)}.
 \end{align*}
 By \ref{eq:|p-w|=}, the key lemma follows.
 \qeds
@@ -368,9 +379,9 @@ Therefore,
 It follows that $g=g'$.
 
 \parit{Existence.} 
-Note first that if $\dd_p f\le 0$, then one can take $\nabla_p f=\0$.
+If $\dd_p f\le 0$, then one can take $\nabla_p f=\0$.
 
-Otherwise, if $s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
+Suppose $s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
 it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that 
 \[
 (\dd_p f)\left(\overline{\xi}\right)=s.
@@ -389,7 +400,7 @@ Applying \ref{lem:ohta} for $u=\xi_n$ and $v=\xi_m$, we get
 \ge
 \frac{(\dd_p f)(\xi_n)+(\dd_p f)(\xi_m)}{\sqrt{2+2\cdot\cos\mangle(\xi_n,\xi_m)}}.\]
 Therefore $\mangle(\xi_n,\xi_m)\to0$ as $n,m\to\infty$;
-that is, the sequence $\xi_n$ is Cauchy.
+that is, $\xi_1,\xi_2,\dots$ is a Cauchy sequence.
 Clearly, $\overline{\xi}=\lim_n\xi_n$ meets \ref{overlinexi}.
 \qeds
 
@@ -422,3 +433,7 @@ that is, if $x_n\z\to x_\infty$, then
 \end{subthm}
 
 \end{thm}
+
+\section{Remarks}
+
+gradient for semicnvex functions on Euclidean space ??? 

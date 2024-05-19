@@ -368,6 +368,34 @@ labelarcsprof(z.x1, z.p, z.x3, 9, 13, btex $\alpha^{13}$ etex);
 
 endfig;
 
+beginfig(409)
+save u,p,k;
+path p[];
+u:=1cm;
+k:=.25;
+
+z.x=(0,0)*u;
+z.y=(4,0)*u;
+z.v=(-.2,1)*u;
+z.w=(.3,1.2)*u;
+
+draw z.x--z.y dashed evenly;
+drawarrow z.x--z.x+z.v;
+drawarrow z.y--z.y+z.w;
+drawarrow z.x-- k[z.x,z.y];
+drawarrow z.y--k[z.y,z.x];
+
+dOt z.x,z.y;
+
+label.llft(btex $x$ etex, z.x);
+label.lft(btex $\nabla_xf$ etex, z.x+z.v);
+label.bot(btex $\dir xy$ etex, k[z.x,z.y]);
+label.lrt(btex $y$ etex, z.y);
+label.rt(btex $\nabla_yf$ etex, z.y+z.w);
+label.bot(btex $\dir yx$ etex, k[z.y,z.x]);
+
+endfig;
+
 beginfig(415)
 save u,p;
 path p[];
@@ -1584,7 +1612,7 @@ z.p=origin;
 z.v=(1,0)*u;
 z.vv=2.2*z.v;
 z.u=(.6,1.1)*u;
-z.w=.4[z.v,z.u];
+z.w=.5[z.v,z.u];
 
 labelarcsprof(z.u,z.p,z.v, 17, 2, btex $\alpha$ etex);
 
