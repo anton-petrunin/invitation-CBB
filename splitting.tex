@@ -3,10 +3,13 @@
 
 \section{Busemann function}
 
-A \index{half-line}\emph{half-line} \footnote{\red V: we used half-line in the other book but I would still like to change this to "ray" which is the established term in literature} is a distance-preserving map
+A \index{half-line}\emph{half-line}
+\footnote{\red V: we used half-line in the other book but I would still like to change this to "ray" which is the established term in literature. A: Both terms are used, since we use line is bit more  natuaral to say half-line --- but will agree to change it if you want it.}
+is a distance-preserving map
 from $\RR_{\ge0}=[0,\infty)$ 
 to a metric space.
 In other words, a half-line is a geodesic defined on the real half-line $\RR_{\ge0}$.
+
 If $\gamma\:[0,\infty)\to \spc{X}$ is a half-line,
 then the limit 
 \[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
@@ -23,13 +26,12 @@ Moreover, $\bus_\gamma$ is $1$-Lipschitz and $\bus_\gamma (\gamma(t))=-t$ for an
 \end{thm}
 
 \parit{Proof.}
-By the triangle inequality, the function
+Since $t=\dist{\gamma(0)}{\gamma(t)}{}$, the triangle inequality implies that, the function
 \[t\mapsto\dist{\gamma(t)}{x}{}- t\] 
-is nonincreasing for any fixed $x$.  
-
-Since $t=\dist{\gamma(0)}{\gamma(t)}{}$, the triangle inequality implies that
-\[\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}.\]
-Thus the limit in \ref{eq:def:busemann*} is defined,
+is nonincreasing, and 
+\[\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}\]
+for any $x\in \spc{X}$.
+Therefore, the limit in \ref{eq:def:busemann*} is defined,
 and it is 1-Lipschitz as a limit of 1-Lipschitz functions.
 The last statement follows since 
 $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
@@ -68,18 +70,16 @@ Note that if
 then 
 \begin{itemize}
 \item $A$ intersects $B$ at a single point,
-\item both sets $A$ and $B$ are convex sets in $\spc{X}$;
+\item both sets $A$ and $B$ are \index{convex set}\emph{convex sets} in $\spc{X}$;
 the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or $B$). 
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\gamma$ be a line in a $\Alex0$ space $\spc{L}$. 
+Let $\gamma$ be a line in a $\Alex0$ space~$\spc{L}$. 
 Then 
 \[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
 for some subset $\spc{L}'\subset \spc{L}$.
 \end{thm}
-
-Before going into the proof, let us state a corollary of the theorem.
 
 \begin{thm}{Corollary}\label{cor:splitting}
 Any $\Alex0$ space $\spc{L}$ splits isometrically as
@@ -89,7 +89,9 @@ Any $\Alex0$ space $\spc{L}$ splits isometrically as
 where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'\subset \spc{L}$ is a convex subset that contains no lines. 
 \end{thm}
 
-The following lemma is closely related to the first distance estimate (\ref{thm:dist-est}); its proof goes along the same lines.
+The following lemma is closely related to the first distance estimate (\ref{thm:dist-est});
+it is also a limit case of \ref{prop:gexp}.
+The proof goes along the same lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
 Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{L}$.
@@ -133,7 +135,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \lim_{t\to\infty}\dist{\gamma(\pm t)}{x}{}- t.
 \]
 According to \ref{ex:busemann-CBB}, 
-both functions $\bus_\pm$ are concave.
+both $\bus_+$ and $\bus_-$ are concave.
 
 By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{L}$.
 On the other hand, by \ref{comp-kappa}, 
@@ -150,7 +152,7 @@ Hence
 \bus_+(x)+\bus_-(x)= 0
 \]
 for any $x\in \spc{L}$.
-In particular, the functions $\bus_\pm$ are \index{affine function}\emph{affine};
+In particular, the functions $\bus_+$ and $\bus_-$ are \index{affine function}\emph{affine};
 that is, they are convex and concave at the same time.
 
 Note that for any $x$,
@@ -182,7 +184,7 @@ that is,
 Setting
 \[\GF^t=\left[\begin{matrix}
 \GF_{\bus_+}^t&\hbox{if}\ t\ge0\\
-\GF_{\bus_-}^t&\hbox{if}\ t\le0
+\GF_{\bus_-}^{-t}&\hbox{if}\ t\le0
                \end{matrix}\right.\]
 defines an $\RR$-action on $\spc{L}$.
 
@@ -190,11 +192,11 @@ Consider the level set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
 it is a closed convex subset of $\spc{L}$, and therefore forms an Alexandrov space.
 Consider the map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
-Applying Lemma \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is short and non-contracting at the same time; that is, $h$ is an isometry.
+Applying \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is distance non-expanding and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
 Recall that according our definition the real line $\RR$ is $\Alex1$.
-However most of $\Alex1$ spaces have diameter at most $\pi$;
+However, most of $\Alex1$ spaces have diameter at most $\pi$;
 see \ref{ex:RisCBB(1)}.
 
 \begin{thm}{Exercise}\label{ex:cone-CBB}
@@ -205,17 +207,19 @@ Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\
 \section{Comments}
 
 The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
-he proved it for smooth $2$-dimensional surfaces.
+who proved its $2$-dimensional case.
 For Riemannian manifolds of higher dimensions 
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
-to Alexandrov spaces; nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
+to Alexandrov spaces;
+historically, it was the first result about Alexandrov spaces of dimension higher than 2.
+Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 
 Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
 Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
 
-The presented proof is close in spirit to the proof given in \cite{cheeger-gromoll-split};
+The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};
 it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
 
 \chapter{Dimension}\label{chap:dim}
