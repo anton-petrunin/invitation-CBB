@@ -717,8 +717,6 @@ Show that there is $\eps>0$ such that one of the following $m$ inequalities hold
 \end{align*}
 for any two points $x,y$ in a sufficiently small neighborhood of $p$.
 Use it to prove \ref{thm:dist-chart}.
-\end{subthm}
-
 \end{thm}
 
 \section{Other dimensions}
@@ -730,7 +728,6 @@ We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue coverning
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{L}$, we have
 \[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}.\]
-Moreover, the same holds for any open subset in $\spc{L}$.
 \end{thm}
 
 \parit{Proof.}
@@ -744,9 +741,13 @@ By Szpilrajn's theorem \cite[theorems V 8 and VII 2]{hurewicz-wallman},
 
 Finally, by the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}), we get that 
 \[\LinDim \spc{L}\ge \HausDim\spc{L}.\]
+\qedsf
 
-The second statement ???
-\qeds
+\begin{thm}{Exercise}\label{ex:dim=dim}
+Let $\Omega$ be an open subset of Alexandrov space $\spc{L}$.
+Show that 
+\[\LinDim \spc{L}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
+\end{thm}
 
 
 \footnote{\red A: We use here Bishop--Gromov that is proved in the next lecture... --- switching order does not seem to be a very good option. Maybe we can leave it as it is?}
