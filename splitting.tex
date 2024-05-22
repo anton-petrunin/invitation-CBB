@@ -727,7 +727,7 @@ Fix a positive integer $m$.
 The $m$-dimensional Hausdorff measure of a Borel set $B$ in a metric space will be called its \index{volume}\emph{$m$-volume}; it will be denoted by $\vol_m B$.
 We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE^m$ has unit volume.
 
-This definition will be used mostly in $m$-dimensional Alexandrov spaces.
+This definition will be applied mostly to subsets in $m$-dimensional Alexandrov spaces.
 In this case, we may write $\vol B$ instead of $\vol_m B$.
 
 
@@ -744,7 +744,7 @@ is nonincreasing.
 
 \parit{Proof.}
 Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Let $\log_p\:\spc{L}\to \T_p$ be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
+Recall that $\log_p\:\spc{L}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
 By comparison, $\log_p$ is distance-noncontracting.
 Note that $\log_p$ maps $\oBall(p,r)_{\spc{L}}$ to $\oBall(0,r)_{\T_p}$.
 
@@ -757,7 +757,8 @@ Note that $\log_p$ maps $\oBall(p,r)_{\spc{L}}$ to $\oBall(0,r)_{\T_p}$.
 
 If $\T_p\iso \EE^m$, then $\vol\oBall(0,r)_{\T_p}\z=\omega_m\cdot r^m$,
 and the first statement follows.
-Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
+
+If $\T_p$ is not isometric to $\EE^m$, then by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
 If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
@@ -775,7 +776,7 @@ Therefore,
 \qedsf
 
 The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
-This statement is sufficient for most applications, but a more exact statement is given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
+It is sufficient for most applications, but a more exact statement will be given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
 
 \begin{thm}{Exersice}\label{ex:BG}
 Let $\spc{L}$ be an $\Alex{-1}$ space.
@@ -827,7 +828,7 @@ The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 \begin{thm}{Bishop--Gromov inequality}\label{inq:BG+}
 Let $p$ be a point in an $m$-dimensional $\Alex\kappa$ space.
 Consider the function $v(r)\z=\vol_m\oBall(p,r)$;
-denote by $\tilde v(r)$ the volume of $r$ ball in $\MM(\kappa)$.
+denote by $\tilde v(r)$ the volume of $r$ ball in $\MM^m(\kappa)$.
 Then 
 \[v(r)\le \tilde v(r)\]
 for $r>0$ and the function 
