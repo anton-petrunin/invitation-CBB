@@ -14,8 +14,7 @@ Then the same holds for~$\spc{X}_\infty$.
 \parit{Proof}.
 Choose a quadruple of points $p_\infty, x_\infty,y_\infty,z_\infty\in \spc{X}_\infty$.
 
-By the definition of Gromov--Hausdorff convergence, we can choose a points $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ for each $n$ that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
-In particular, each of 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
+By the definition of Gromov--Hausdorff convergence, we can choose a quadruple $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ such that each of 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
 
 Since $\MM^2(\kappa)$-comparison holds for $p_n$, $x_n$, $y_n$, $z_n\z\in \spc{X}_n$,
 passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_\infty$, $y_\infty$, $z_\infty$.
@@ -25,75 +24,6 @@ passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_
 Suppose that a sequence $\spc{L}_1,\spc{L}_2,\dots$ of $\Alex\kappa$ spaces that converges to $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
 Show that $\spc{L}_\infty$ is $\Alex\kappa$ and
 \[\dim \spc{L}_\infty\le \liminf_{n\to\infty} \dim \spc{L}_n.\]
-\end{thm}
-
-
-\section{Volume}
-
-Fix a positive integer $m$.
-The $m$-dimensional Hausdorff measure of a Borel set $B$ in a metric space will be called its \index{volume}\emph{$m$-volume}; it will be denoted by $\vol_m B$.
-We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE^m$ has unit volume.
-
-This definition will be applied mostly to subsets in $m$-dimensional Alexandrov spaces.
-In this case, we may write $\vol B$ instead of $\vol_m B$.
-
-
-\begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
-Let $\spc{L}$ be an $\Alex0$ space.
-Suppose $\dim \spc{L}=m<\infty$.
-Then 
-\[\vol \oBall(p,r)\le \omega_m\cdot r^m,\]
-where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
-Moreover, the function 
-\[r\mapsto \frac{\vol B(p,r)}{r^m}\]
-is nonincreasing.
-\end{thm}
-
-\parit{Proof.}
-Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Recall that $\log_p\:\spc{L}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
-By comparison, $\log_p$ is distance-noncontracting.
-Note that $\log_p$ maps $\oBall(p,r)_{\spc{L}}$ to $\oBall(0,r)_{\T_p}$.
-
-\begin{wrapfigure}{r}{44 mm}
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-803}
-\vskip1mm
-\end{wrapfigure}
-
-If $\T_p\iso \EE^m$, then $\vol\oBall(0,r)_{\T_p}\z=\omega_m\cdot r^m$,
-and the first statement follows.
-
-If $\T_p$ is not isometric to $\EE^m$, then by \ref{ex:tangent=Em} we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
-If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\subset \oBall(p',r+\eps)$.
-Therefore,
-\[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
-for any $\eps>0$.
-Hence the first statement follows.
-
-Now, suppose $0<r_1<r_2$.
-Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
-(The map $w$ mimics the dilation with center at $p$ and coefficient $\tfrac {r_1}{r_2}$.)
-By comparison,
-\[\dist{w(x)}{w(y)}{}\ge \tfrac {r_1}{r_2}\cdot \dist{x}{y}{}.\]
-Observe that $\oBall(p,r_1) \supset w[\oBall(p,r_2)]$.
-Therefore, 
-\[\vol \oBall(p,r_1)\ge (\tfrac {r_1}{r_2})^m\cdot\vol \oBall(p,r_2).\]
-\qedsf
-
-The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
-This statement is sufficient for most applications, but a more exact statement is given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
-
-\begin{thm}{Exersice}\label{ex:BG}
-Let $\spc{L}$ be an $\Alex{-1}$ space.
-Suppose $\spc{L}=m<\infty$.
-Show that
-\[\vol \oBall(p,r)\le \omega_m\cdot(\sinh r)^m,\]
-where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
-Moreover, the function 
-\[r\mapsto \frac{\vol B(p,r)}{(\sinh r)^m}\]
-is nonincreasing.
 \end{thm}
 
 \section{Gromov's selection theorem}
@@ -181,26 +111,6 @@ Show that it contains a subsequence pointed-converging in the sense of Gromov--H
 \end{thm}
 
 \section{Comments}
-
-Let us state a version of Bishop--Gromov inequality for $\Alex\kappa$ spaces.
-Its proof requires additionally the so-called \textit{coarea formula} for Alexandrov spaces. 
-The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
-
-\begin{thm}{Bishop--Gromov inequality}\label{inq:BG+}
-Let $p$ be a point in an $m$-dimensional $\Alex\kappa$ space.
-Consider the function $v(r)\z=\vol_m\oBall(p,r)$;
-denote by $\tilde v(r)$ the volume of $r$ ball in $\MM(\kappa)$.
-Then 
-\[v(r)\le \tilde v(r)\]
-for $r>0$ and the function 
-\[r\mapsto \frac{v(r)}{\tilde v(r)}\] is nonincreasing.
-If $\kappa>0$, then one has to assume that $r<\tfrac\pi{\sqrt\kappa}$.
-\end{thm}
-
-This inequality was originally proved for Riemannian manifolds with lower Ricci curvature.
-The first part is also called \emph{Bishop's inequality}.
-It is due to Richard Bishop; see \cite{bishop1964} and \cite[Corollary 4, p. 256]{bishop-crittenden}.
-The second part is due to Michael Gromov \cite{gromov1981}.
 
 Gromov's selection theorem provides the main source of applications of Alexandrov spaces to Riemannian geometry.
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) in the next lecture illustrates this technique.

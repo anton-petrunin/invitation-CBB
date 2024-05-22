@@ -1140,6 +1140,29 @@ whitelabel.bot(btex $z_0$ etex, z.z0+(0,-2));
 
 endfig;
 
+beginfig(901) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.q=(0,0)*u;
+z.p=(-1,2)*u;
+z.pp=(-2,1)*u;
+
+draw z.p--z.q;
+drawarrow ddline(z.p,z.pp)(.3,.3) pensemibold;
+
+labelarcsprof(z.q,z.p,z.pp, 15, 15, btex $\alpha(t)$ etex);
+
+dOt z.q,z.p;
+
+
+label.rt(btex $q$ etex, z.q);
+label.ulft(btex $\gamma(t)$ etex, z.p);
+
+
+endfig;
+
 beginfig(910) 
 save u,p,n;
 path p[];

@@ -204,26 +204,6 @@ Suppose $\spc{X}$ is a complete geodesic space.
 Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
 \end{thm}
 
-\section{Comments}
-
-The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
-who proved its $2$-dimensional case.
-For Riemannian manifolds of higher dimensions 
-it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
-Then it was generalized by Anatoliy Milka \cite{milka-line}
-to Alexandrov spaces;
-historically, it was the first result about Alexandrov spaces of dimension higher than 2.
-Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
-
-Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
-This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
-Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
-
-The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};
-it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
-
-\chapter{Linear dimension}\label{chap:dim}
-
 \section{Anti-sum}
 
 Here we give a corollary of \ref{ex:convergence-grad}.
@@ -247,10 +227,8 @@ Show that
 
 \end{thm}
 
-
 If $\T_p$ were geodesic, then the lemma would follow from the existence  of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$ which is concave.
 However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin2024}.
-
 
 Applying the above lemma for $u=v$, we have the following statement.
 
@@ -302,17 +280,6 @@ By the definition of gradient,
 &=-\langle u,x\rangle -\langle v,x\rangle .
 \end{aligned}\]
 \qedsf
-
-
-
-
-
-
-
-
-
-
-
 
 \section{Linear subspace}
 
@@ -475,6 +442,41 @@ such that
 $\dir sx\in \Lin_s$
 for any $s\in S$ and $x\in X$.
 \end{thm}
+
+\section{Comments}
+
+The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
+who proved its $2$-dimensional case.
+For Riemannian manifolds of higher dimensions 
+it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
+Then it was generalized by Anatoliy Milka \cite{milka-line}
+to Alexandrov spaces;
+historically, it was the first result about Alexandrov spaces of dimension higher than 2.
+Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
+
+Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
+This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
+Jost-Hinrich Eschenburg obtained an analogous result for  Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
+
+The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};
+it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
+
+\begin{thm}{Open question}
+Let $p$ be a point in an Alexandrov space $\spc{L}$.
+Suppose that $0\ne v\in \Lin_p$.
+Is it true that the tangent space $\T_p$ splits in the direction of $v$?
+\end{thm}
+
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
+
+\begin{thm}{Open question}\label{open:Halb-proper}
+Let $\spc{L}$ be a proper Alexandrov space.
+Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
+\end{thm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\chapter{Dimension and volume}\label{chap:dim}
 
 \section{Linear dimension}
 
@@ -719,6 +721,73 @@ for any two points $x,y$ in a sufficiently small neighborhood of $p$.
 Use it to prove \ref{thm:dist-chart}.
 \end{thm}
 
+\section{Volume}
+
+Fix a positive integer $m$.
+The $m$-dimensional Hausdorff measure of a Borel set $B$ in a metric space will be called its \index{volume}\emph{$m$-volume}; it will be denoted by $\vol_m B$.
+We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE^m$ has unit volume.
+
+This definition will be used mostly in $m$-dimensional Alexandrov spaces.
+In this case, we may write $\vol B$ instead of $\vol_m B$.
+
+
+\begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
+Let $\spc{L}$ be an $\Alex0$ space.
+Suppose $\dim \spc{L}=m<\infty$.
+Then 
+\[\vol \oBall(p,r)\le \omega_m\cdot r^m,\]
+where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
+Moreover, the function 
+\[r\mapsto \frac{\vol B(p,r)}{r^m}\]
+is nonincreasing.
+\end{thm}
+
+\parit{Proof.}
+Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
+Let $\log_p\:\spc{L}\to \T_p$ be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
+By comparison, $\log_p$ is distance-noncontracting.
+Note that $\log_p$ maps $\oBall(p,r)_{\spc{L}}$ to $\oBall(0,r)_{\T_p}$.
+
+\begin{wrapfigure}{r}{44 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-803}
+\vskip1mm
+\end{wrapfigure}
+
+If $\T_p\iso \EE^m$, then $\vol\oBall(0,r)_{\T_p}\z=\omega_m\cdot r^m$,
+and the first statement follows.
+Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
+If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\subset \oBall(p',r+\eps)$.
+Therefore,
+\[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
+for any $\eps>0$.
+Hence the first statement follows.
+
+Now, suppose $0<r_1<r_2$.
+Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
+(The map $w$ mimics the dilation with center at $p$ and coefficient $\tfrac {r_1}{r_2}$.)
+By comparison,
+\[\dist{w(x)}{w(y)}{}\ge \tfrac {r_1}{r_2}\cdot \dist{x}{y}{}.\]
+Observe that $\oBall(p,r_1) \supset w[\oBall(p,r_2)]$.
+Therefore, 
+\[\vol \oBall(p,r_1)\ge (\tfrac {r_1}{r_2})^m\cdot\vol \oBall(p,r_2).\]
+\qedsf
+
+The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
+This statement is sufficient for most applications, but a more exact statement is given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
+
+\begin{thm}{Exersice}\label{ex:BG}
+Let $\spc{L}$ be an $\Alex{-1}$ space.
+Suppose $\spc{L}=m<\infty$.
+Show that
+\[\vol \oBall(p,r)\le \omega_m\cdot(\sinh r)^m,\]
+where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
+Moreover, the function 
+\[r\mapsto \frac{\vol B(p,r)}{(\sinh r)^m}\]
+is nonincreasing.
+\end{thm}
+
 \section{Other dimensions}
 
 Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
@@ -749,10 +818,27 @@ Show that
 \[\LinDim \spc{L}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
 \end{thm}
 
-
-\footnote{\red A: We use here Bishop--Gromov that is proved in the next lecture... --- switching order does not seem to be a very good option. Maybe we can leave it as it is?}
-
 \section{Comments}
+
+Let us state a version of Bishop--Gromov inequality for $\Alex\kappa$ spaces.
+Its proof requires additionally the so-called \textit{coarea formula} for Alexandrov spaces. 
+The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
+
+\begin{thm}{Bishop--Gromov inequality}\label{inq:BG+}
+Let $p$ be a point in an $m$-dimensional $\Alex\kappa$ space.
+Consider the function $v(r)\z=\vol_m\oBall(p,r)$;
+denote by $\tilde v(r)$ the volume of $r$ ball in $\MM(\kappa)$.
+Then 
+\[v(r)\le \tilde v(r)\]
+for $r>0$ and the function 
+\[r\mapsto \frac{v(r)}{\tilde v(r)}\] is nonincreasing.
+If $\kappa>0$, then one has to assume that $r<\tfrac\pi{\sqrt\kappa}$.
+\end{thm}
+
+This inequality was originally proved for Riemannian manifolds with lower Ricci curvature.
+The first part is also called \emph{Bishop's inequality}.
+It is due to Richard Bishop; see \cite{bishop1964} and \cite[Corollary 4, p. 256]{bishop-crittenden}.
+The second part is due to Michael Gromov \cite{gromov1981}.
 
 Theorem~\ref{thm:dim=dim}, was ssentially proved by Conrad Plaut \cite{plaut:dimension}.
 At that time, it was not known whether
@@ -760,15 +846,3 @@ At that time, it was not known whether
 for any Alexandrov space $\spc{L}$.
 The latter implication was proved by Grigory Perelman and the second author \cite{perelman-petrunin:qg}.
 
-\begin{thm}{Open question}
-Let $p$ be a point in an Alexandrov space $\spc{L}$.
-Suppose that $0\ne v\in \Lin_p$.
-Is it true that the tangent space $\T_p$ splits in the direction of $v$?
-\end{thm}
-
-Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
-
-\begin{thm}{Open question}\label{open:Halb-proper}
-Let $\spc{L}$ be a proper Alexandrov space.
-Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
-\end{thm}

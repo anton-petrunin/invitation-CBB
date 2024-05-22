@@ -25,6 +25,13 @@ $\phi_{r,c}(r)=0$,
 $\phi_{r,c}'(r)=1$,
 and $\phi_{r,c}''(r)=- {2c}/{r}$. 
 
+\begin{wrapfigure}{r}{44 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-901}
+\vskip1mm
+\end{wrapfigure}
+
 Let $\gamma$ be a unit-speed geodesic, fix a point $q$ and let 
 $$\alpha(t)=\mangle(\gamma^+(t),\dir{\gamma(t)}{q}).$$
 Recall that $r$ is small.
@@ -33,7 +40,7 @@ $r$, then direct calculations show that
 $$(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
 \le 
 \frac{3-c\cdot \cos^2[\alpha(t)]}{r}.$$
-(Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\alpha\approx\tfrac\pi2$.) 
+(Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\alpha(t)\approx\tfrac\pi2$.) 
 
 Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for any $i$. 
 For a geodesic $\gamma$, set $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$. 
@@ -47,11 +54,11 @@ $$f=\sum_i \phi_{r,c}\circ\distfun_{q_i}$$
 is strictly concave in $\oBall(p,\eps')$ for some positive $\eps'<\eps$.
 
 The same argument as in \ref{ex:pack-vol} shows that for small $r>0$, one can
-choose $N\ge \Const/\delta^{(m-1)}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
+choose $N\ge \Const/\delta^{m-1}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
 and $\angk p{q_j}{q_i}>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
-On the other hand, suppose $\gamma$ runs from $x$ to $y$.
+On the other hand, suppose $\gamma$ runs from $x$ to~$y$.
 If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-point comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
-$N\le \Const(m)/\delta^{(m-2)}$. 
+$N\le \Const(m)/\delta^{m-2}$. 
 Therefore, for small $\delta>0$ and yet smaller $\eps>0$, the set $\{q_i\}$ forms the needed collection.
 
 If $r$ is small, then points $q_i$ can be chosen so that all directions
