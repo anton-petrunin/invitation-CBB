@@ -8,7 +8,7 @@ Let us give an inductive definition the boundary for finite-dimensional Alexandr
 Suppose $\spc{L}$ is a 1-dimensional Alexandrov space.
 By Exercise \ref{ex:dim=1},
 $\spc{L}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
-It allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of a manifold.
+It allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
 Suppose  $\spc{L}$ is $m$-dimensional Alexandrov space.
@@ -51,7 +51,7 @@ Moreover, we may assume that
 This statement is often used together with \textit{uniqueness of conic neighborhood} stated below.
 
 Suppose that a neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
-admits a homeomorphism to $\Cone\Sigma$ such that $x$ maps to the origin of the cone.
+admits a homeomorphism to $\Cone\Sigma$ such that $x$ is mapped to the origin of the cone.
 In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
 
 \begin{thm}{Uniqueness of conic neighborhood}\label{lem:kwun}
@@ -59,7 +59,7 @@ Any two conic neighborhoods of a given point in a metric space are \index{pointe
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:conic}
-Prove \ref{lem:kwun} or read the original proof by Kyung Whan Kwun \cite{kwun1964}.
+Prove \ref{lem:kwun} or read the proof in \cite{kwun1964}.
 \end{thm}
 
 
@@ -84,7 +84,7 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 
 \section{Topology}
 
-The following theorem states that boundary is a topological property
+The following theorem states that the existence of boundary is a topological property
 despite our definition used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
@@ -146,7 +146,8 @@ $\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
 The latter contradicts contradicts minimality of $k$.
 
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
-Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$ and $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
+Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$;
+therefore, $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 
 Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
 Since $\partial\spc{L}\cong\RR^{m-1}$,
@@ -166,8 +167,8 @@ Observe that $\T_y\cong\T_{y'}$,
 \parit{Case 3.}
 Suppose $k\le 1$ and $k'\le 1$.
 Since $\partial \spc{L}\ne \emptyset$, $k=1$.
-By \ref{ex:dim=1}, $\spc{L}\cong \RR_{\ge0}$.
-Therefore, $\spc{L}'\cong\RR$, and $\spc{L}\ncong\spc{L}'$ --- a contradiction.
+By \ref{ex:dim=1}, $\spc{L}\cong \RR^{m-1}\times\RR_{\ge0}$.
+Therefore, $\spc{L}'\cong\RR^m$, and $\spc{L}\ncong\spc{L}'$ --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry2bry}
@@ -228,7 +229,7 @@ The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two cop
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{L}$ defined by $(x,i)\mapsto x$ is a short map. 
-The metric on $\spc{W}$ can be also defined explicitly by
+The metric on $\spc{W}$ can be also defined explicitly as
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
 \dist{x}{y}{\spc{X}}&\text{if}\quad i= j.
@@ -258,7 +259,7 @@ Moreover, if $p\in \partial \spc{L}$, then $\gexp_p(v)\in \partial \spc{L}$ for 
 \end{subthm}
 
 \begin{subthm}{thm:doubling:doubling}
-The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is a Alexandrov space with the same curvature bound.
+The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is an Alexandrov space with the same curvature bound.
 \end{subthm}
 
 \end{thm}
@@ -270,21 +271,21 @@ We will denote by
 \ref{SHORT.thm:doubling:concave}$_m,\dots,$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{L}$.
 
 The proof goes by induction on $m$.
-Note that \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base of induction.
-The step of induction is a combination of the implications below.
+Note that \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base.
+The step is a combination of the implications below.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:concave}$_m$.}
-If $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
+Suppose $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
 By \ref{ex:dim=1}, $\Sigma_x$ isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
-Suppose $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
-Recall that $\T_x$ is a Alexandrov space; see \ref{ex:finite-tan}.
+Assume $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
+Recall that $\T_x$ is an Alexandrov space; see \ref{ex:finite-tan}.
 By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
 the latter contradicts that $\Sigma_x$ is a line segment.
 
-Let $m=\dim \spc{L}>2$, so $\dim \Sigma_x>1$.
-Suppose $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
+Now suppose $m>2$, so $\dim \Sigma_x>1$.
+Assume $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is $\Alex1$.
 Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
 Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
@@ -299,19 +300,19 @@ Therefore, the second statement follows.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
 We can assume that $s=\nabla_xf\ne 0$.
-By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximize $\dd_xf(\overline{\xi})$.
+By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})>0$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximize $\dd_xf(\overline{\xi})$.
 
 Let $\zeta\in \partial\Sigma_x$ be a direction that minimize the angle $\mangle(\overline{\xi},\zeta)$.
 It is sufficient to show that $\zeta=\overline{\xi}$.
 
 Assume $\zeta\ne \overline{\xi}$;
-let $\eta=\dir\zeta{\overline{\xi}}$.
+let $\eta=\dir[\Sigma_x]\zeta{\overline{\xi}}$.
 By \ref{SHORT.thm:doubling:concave}$_m$, $\mangle(\overline{\xi},\zeta)\le \tfrac\pi2$ and
 \ref{SHORT.thm:doubling:concave}$_{m-1}$ implies that 
 \[\mangle(\eta,\nu)\le \tfrac\pi2\eqlbl{eq:<pi/2}\]
 for any $\nu\in \Sigma_\zeta\Sigma_x$ (if $m=2$, then the last statement is evident). 
 
-Consider the function $\phi\:\Sigma_x\to\RR$ defined by $\phi(\xi)\df\dd_xf(\xi)$.
+Let $\phi\:\Sigma_x\to\RR$ be restriction of $\dd_xf$ to $\Sigma_x$.
 Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_\xi\phi(\eta)\le 0$.
 Since $\dd_xf$ is convex, we have that $\phi''+\phi\le 0$.
 If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction.
@@ -319,7 +320,6 @@ If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
 Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial L}\alpha(t)$.
-Note that $\ell$ is a Lipschitz function.
 
 Choose $t$;
 let $x=\alpha(t)$ and $y\in \partial\spc{L}$ be a closest point to $x$.
@@ -363,8 +363,9 @@ Remove from $\gamma$ the set $\gamma\cap \spc{L}_1$
 and exchange it to its reflection across $\partial\spc{L}$;
 denote the obtained curve by $\hat\gamma$.
 
-Note that any arc of $\hat\gamma$ with endpoint at $x$ or $y$ is a geodesic in $\spc{L}_0$.
-Moreover, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
+Note that any arc of $\hat\gamma$ with one endpoint in $\partial \spc{L}$
+is a geodesic in $\spc{L}_0$.
+Since $x,y\in \partial \spc{L}$, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
 By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{L}$.
 
 Now choose a point $z$ on this arc, so $z\in \partial\spc{L}$.
@@ -394,13 +395,15 @@ Assume $y\in \spc{L}_1\setminus\partial\spc{L}$.
 Suppose $[py]$ crosses $\partial L$ at $x$.
 Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$,
 and let $\Xi$ be its doubling.
+As before, we denote by $\Sigma_0$ and $\Sigma_1$ two copies of $\Sigma_x$ in  $\Xi$
+and keep notation $\partial\Sigma_x$ for their common boundary.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
 
 Note that $\dir x{y}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
 \[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
-Otherwise, we can choose a direction $\xi\in\partial\Sigma$ such that
-\[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi,\]
-Consider the radial curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
+Otherwise, we could choose a direction $\xi\in\partial\Sigma$ such that
+\[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi.\]
+Furthermore, we could consider the radial curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
 By \ref{SHORT.thm:partial-grad:flow}$_m$, $\alpha$ lies in $\partial \spc{L}$.
 By \ref{prop:gexp}
 \[\dist{p}{\alpha(s)}{\spc{L}_0}
@@ -418,29 +421,23 @@ It follows that for any $\xi\in\Xi$ there is $\xi'\in\partial\Sigma_x$ such that
 $\xi$ and $\xi'$ lie on some geodesic $[\dir x{y} \dir xp]_\Xi$.
 
 Fix $t\approx 0$ such that $t\ne 0$; let $z=\gamma(t)$.
-Choose such $\xi'(t)$ for $\xi(t)=\dir xz$.
-Consider the radial curve $\alpha(s)\df\gexp_x(s\cdot\xi'(t))$.
+Choose such $\xi'$ for $\xi=\dir xz$.
+Consider the radial curve $\alpha(s)\df\gexp_x(s\cdot\xi')$.
 Let us show that 
 \[
 \begin{aligned}
 \dist{p}{z}{\spc{W}}
 &\le \dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le
 \\
-&\le \sqrt{\dist[2]{p}{y}{\spc{W}}-2\cdot t\cdot \cos\theta+t^2} =
-\\
-&=\side\hinge yp{z}.
+&\le\side\hinge yp{z}.
 \end{aligned}
 \eqlbl{eq:gamma''}
 \]
 for suitable value $s$.
 
 The first inequality in \ref{eq:gamma''} is evident.
-The choice of $s$ comes from the model configuration $\tilde p$, $\tilde x$, $\tilde y$, $\tilde w$, $\tilde z\in \EE^2$
-\begin{figure}[ht!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-1014}
-\end{figure}
+Set $\phi=\mangle\hinge{x}{y}{z}$ and $\psi=\mangle(\dir xp,\xi')$.
+The choice of $s$ comes from the model configuration $\tilde p$, $\tilde x$, $\tilde y$, $\tilde w$, $\tilde z\in \EE^2$ such that
 \begin{align*}
 \tilde x&\in [\tilde p\tilde y],
 &
@@ -456,17 +453,23 @@ The choice of $s$ comes from the model configuration $\tilde p$, $\tilde x$, $\t
 &
 \mangle\hinge{\tilde x}{\tilde p}{\tilde w}&=\psi, 
 &
-s&=\dist{\tilde x}{\tilde w}{},
+s&=\dist{\tilde x}{\tilde w}{}.
 \end{align*}
-where $\phi=\mangle\hinge{x}{y}{z}$ and $\psi=\mangle(\dir xp,\xi')$.
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1014}
+\end{figure}
+
+\noindent
 By \ref{prop:gexp}, we get 
 \begin{align*}
 \dist{p}{\alpha(s)}{\spc{L}_0}&\le \dist{\tilde p}{\tilde w}{},
 \\
-\dist{\alpha(s)}{z}{\spc{L}_1}\le\dist{\tilde w}{\tilde z}{}.
+\dist{\alpha(s)}{z}{\spc{L}_1}&\le\dist{\tilde w}{\tilde z}{};
 \end{align*}
-Finally, the comparison implies that 
-\[\dist{\tilde p}{\tilde z}{}\le \side\hinge ypz;\]
+by the comparison, 
+\[\dist{\tilde p}{\tilde z}{}\le \side\hinge ypz.\]
 
 \begin{thm}{Exercise}\label{ex:pz<ypz}
 Prove the last inequality.
@@ -490,7 +493,7 @@ Show that $\partial\spc{L}$ is connected.
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{L}$ be a $m$-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{L}$
+Let $\spc{L}$ be an $m$-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{L}$
 for $2\le m<\infty$.
 Show that the distance function to the boundary
 \[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
@@ -504,7 +507,7 @@ Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-c
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:native}
-Let $\spc{W}$ be doubling of a finite-dimensional Alexandrov space $\spc{L}$ across its boundary,
+Let $\spc{W}$ be a doubling of finite-dimensional Alexandrov space $\spc{L}$ across its boundary,
 and let $proj\:\spc{W}\to\spc{L}$ be the natural projection.
 Suppose $f\:\spc{L}\to\RR$ is a $\lambda$-concave function.
 Show that $f\circ\proj\:\spc{W}\to\RR$ is $\lambda$-concave if and only if $\nabla_xf\in \partial \T_x$ 
@@ -516,20 +519,20 @@ for any $x\in\partial \spc{L}$.
 \section{Remarks}
 
 Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
-This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary;
-so the following tools become available.
+This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary.
+For spaces without boundary following tools become available.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
-Any finite-dimensional Alexandrov space has a fundamental class cohomology with $\ZZ/2$ coefficients;
-that is, if $\spc{L}$ is a compact $m$-dimensional Alexandrov space, then $\spc{L}$
+Any compact finite-dimensional Alexandrov space $\spc{L}$ without boundary has a fundamental class cohomology with $\ZZ/2$ coefficients;
+that is, if $\spc{L}$ is $m$-dimensional, then
 \[H^m(\spc{L},\ZZ/2)=\ZZ/2.\]
 
 \end{thm}
 
 This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
 Originally it was proved for Alexander--Spanier, but for Alexandrov spaces it is the same as singular cohomology.
-It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
-It is also used in the proof of the following generalized domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
+It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\cdot\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
+It is also used in the proof of the following version of domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
 \begin{thm}{Domain invariance}\label{thm-inv-domain}
 Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
@@ -540,7 +543,7 @@ Then $f(\Omega_1)$ is open in $\spc{L}_2$.
 Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
 
 \begin{thm}{Topological stratification}\label{thm:top-stratification}
-Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into subsets topological manifolds $S_0,\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
+Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into topological manifolds $S_0,\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
 Moreover,
 \begin{subthm}{}
 closure of $S_{m-1}$ is the boundary of the space, and
@@ -564,10 +567,10 @@ Then the following statements are equivalent.
 \begin{subthm}{item-boundary} $p\in \partial \spc{L}$;
 \end{subthm}
 
-\begin{subthm}{item-contractible} $\Sigma_p(\spc{L})$ is contractible;
+\begin{subthm}{item-contractible} $\Sigma_p$ is contractible;
 \end{subthm}
 
-\begin{subthm}{item-space-dir-homology} $\tilde H_{m-1}(\Sigma_p \spc{L},\ZZ/2)= 0$;
+\begin{subthm}{item-space-dir-homology} $\tilde H_{m-1}(\Sigma_p,\ZZ/2)= 0$;
 \end{subthm}
 
 \begin{subthm}{item-local-homology} $H_m(\spc{L},\spc{L}\setminus \{p\},\ZZ/2)= 0$;
@@ -588,14 +591,13 @@ Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-Subsets that satisfy condition in \ref{thm:partial-grad:flow} are called \index{extremal subset}\emph{extremal}.
-More precisely, a subset $E$ in an Alexandrov space is called extremal if for any $x\in E$
+Subsets in Alexandrov spaces that satisfy condition in \ref{thm:partial-grad:flow} are called extremal.
+More precisely, a subset $E$ is \index{extremal subset}\emph{extremal} if for any $x\in E$
 and $f$-gradient curve that starts in $E$ remains in $E$;
 here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.
 
 Extremal subsets were introduced by Grigori Perelman and the second author \cite{perelman-petrunin}.
-They play an important role in Alexandrov geometry and its applications;
-in particular they will pop up in the next lecture.
+They will pop up in the next lecture.
 
 The following conjecture is one of the oldest questions in Alexandrov geometry that remains open.
 
