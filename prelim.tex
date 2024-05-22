@@ -1,3 +1,5 @@
+
+%%!TEX root = the-prelim.tex
 \mainmatter
 
 \chapter{Preliminaries}\label{chap:prelim}
@@ -444,10 +446,19 @@ respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 For the proof of the following statement we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 
 \begin{thm}{Proposition}\label{prop:complete}
-$\GH$ is complete metric space.
+$\GH$ is a complete metric space.
 \end{thm}
 
-The Gromov--Hausdorff convergence of compact spaces has specially nice properties.
+Note that this means in particular that if $X,Y$ are compact and $|\spc{X}-\spc{Y}|_{\GH}=0$ then $X$ and $Y$ are isometric.
+
+One can try to define Gromov-Hausdorff distance between complete metric spaces which are not necessarily compact. This is not usually done because the following phenomena can occur
+
+\begin{thm}{Exercise}\label{ex:GH-noncompact}
+Construct two complete geodesic metric spaces $X, Y$ such that $|\spc{X}-\spc{Y}|_{\GH}=0$ but $X$ is not isometric to $Y$.
+\end{thm}
+
+
+ Gromov--Hausdorff convergence of compact spaces has particularly nice properties.
 From the technical point of view they follow from the next statement that we formulate as an exercise.
 
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
