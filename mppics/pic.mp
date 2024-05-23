@@ -1500,6 +1500,31 @@ label.top(btex $\zeta$ etex, z.z);
 label.lft(btex $e$ etex, .5[z.x,z.z]);
 endfig;
 
+beginfig(1103) 
+save u,p;
+path p[];
+u:=1cm;
+
+z.o=origin;
+z.r=(1,0)*u;
+
+p0=circle (z.o,z.r);
+p1=z.r rotated 80 .. .6*z.r rotated (80+90).. z.r rotated (80+180); 
+p2=z.r rotated 170 .. .7*z.r rotated (170+90).. z.r rotated (170+180);
+p3=z.r rotated -111 .. .6*z.r rotated (-111+90) .. z.r rotated (-111+180);
+p4=z.r rotated -44 .. .5*z.r rotated (-44+90) .. z.r rotated (-4+180);
+
+draw p0;
+draw p1;
+draw p2 cutbefore p1;
+draw p3 cutbefore p2;
+draw p4 cutbefore p3 cutafter p1;
+
+hatchfill (p1 cutafter p2 cutbefore p4) -- (p2 cutbefore p1 cutafter p3) -- (p3 cutbefore p2 cutafter p4) -- (p4 cutbefore p3 cutafter p1) -- cycle withcolor (77, 1mm, -.5bp);
+
+whitelabel(btex $F$ etex, z.o);
+endfig;
+
 beginfig(1106) 
 save u,p,k;
 path p[];

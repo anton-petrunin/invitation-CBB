@@ -924,18 +924,18 @@ Since the coordinates are smooth we get that $\gamma^+(t)$ is defined as well.
 
 \parit{\ref{SHORT.ex:liberman+milka:milka}.}
 If the plane $py_1y_2$ supports $K$, then 
-$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_\Sigma$.
+$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_S$.
 In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
 
 Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
 Choose a geodesic $[y_1y_2]_W$;
 note that it contains a point of $K$, say $z$.
 Now consider one parameter family of points 
-$y_i(t)\df \gamma(t)+\gamma^+(t)\cdot (1-t)\cdot \dist{p}{x_i}{\Sigma}$.
+$y_i(t)\df \gamma(t)+\gamma^+(t)\cdot (1-t)\cdot \dist{p}{x_i}{S}$.
 Note that this family is not continuous.
 
 Show that for any point $p\in K$ the function $t\mapsto \dist{p}{\gamma_i(t)}{\EE^3}$ is nonincreasing.
-Conclude that the function $t\mapsto \dist{p}{\gamma_i(t)}{W}$ is nonincreasing for any $p\in\Sigma$.
+Conclude that the function $t\mapsto \dist{p}{\gamma_i(t)}{W}$ is nonincreasing for any $p\in S$.
 Therefore, 
 \begin{align*}
 \dist{y_1}{y_2}{W}
@@ -945,9 +945,9 @@ Therefore,
 \\
 &\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge 
 \\
-&\ge\dist{x_1}{x_2}{\Sigma}.
+&\ge\dist{x_1}{x_2}{S}.
 \end{align*}
-The last inequality follows since the closest point projection $W\to\Sigma$ is short.
+The last inequality follows since the closest point projection $W\to S$ is short.
 
 It remains to consider the case when the plane $py_1y_2$ does not support $K$,
 and $[y_1y_2]_{\EE^3}$ does not intersect $K$.
@@ -955,12 +955,12 @@ In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that l
 $py_1y_2$ and contains its vertex $p$.
 
 Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches $F$.
-Denote by $x_1'\in [px_1]_{\Sigma}$ and $x_2'\in [px_2]_{\Sigma}$ the corresponding points;
-that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}\Sigma$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}\Sigma$.
-From above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}\Sigma$;
+Denote by $x_1'\in [px_1]_{S}$ and $x_2'\in [px_2]_{S}$ the corresponding points;
+that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}S$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}S$.
+From above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}S$;
 in other words, 
 \[\angk p{y_1'}{y_2'}\ge \angk p{x_1'}{x_2'};\]
-here we think that $[p{y_1'}{y_2'}]$ is a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ is a triangle in $\Sigma$.
+here we think that $[p{y_1'}{y_2'}]$ is a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ is a triangle in $S$.
 Note that 
 \[\angk p{y_1'}{y_2'}=\angk p{y_1}{y_2}
 \quad\text{and}\quad
