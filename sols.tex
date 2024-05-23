@@ -148,6 +148,13 @@ a student in my MASS class at Penn State, Fall 2011.
 Note that this exercise implies that \textit{any surjective non-expanding map from a compact metric space to itself is an isometry}.
 
 \parbf{\ref{ex:GH-po}.}
+The only-if part is trivial. 
+Let us prove the if part.
+
+If $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\not\to 0$, then we can pass to a subsequence such that $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\ge\eps$ for some $\eps>0$.
+Show that we can pass to a subsequence again, so that $\spc{X}_n$ converges in the sense of Gromov--Hausdorff, say to $\spc{Y}$.
+Observe that $\spc{Y}\le \spc{X}_\infty$ and $\spc{X}_\infty\le\spc{Y}$.
+By \ref{ex:non-contracting-map}, $\spc{Y}\iso \spc{X}_\infty$ --- a contradiction.
 
 \parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$
 
@@ -447,9 +454,17 @@ Hence the statement follows.
 \parbf{\ref{ex:d(distfun):==}.}
 If the space is proper, then the statement follows from \ref{SHORT.ex:d(distfun):=} and \ref{ex:pi-angle}.
 
-To do the general case argue by contradiction as in the proof of \ref{lem:ohta}.
-Note that we can assume that $|v|=1$ and it is a direction of a geodesic, say $\gamma$ from $p$.
-???
+To do the general case argue by contradiction.
+Let $z$ be a point on the extension of $[pq]$ behind $q$;
+it exists by the assumption.
+Note that we can assume that $|v|=1$ and it is a direction of a geodesic, say $[px]$.
+
+Show that for there is a sequence $x_n\in \left]px\right]$ such that $\dist{p}{x_n}{}\to0$ ad
+$\mangle \hinge q{x_n}p>\eps$ for each $n$ and some fixed $\eps>0$.
+Observe that $\mangle\hinge q{x_n}z\z<\pi-\eps$; therefore
+\[\dist{z}{x_n}{}<\dist{x_n}{q}{}+\dist{q}z{}-\delta\]
+for each $n$ and some fixed $\delta>0$.
+Pass to the limit as $x_n\to p$ and arrive at a contradiction.
 
 \parbf{\ref{ex:convergence-grad}.}
 Note that
@@ -592,7 +607,7 @@ Apply \ref{ex:-u}.
 Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dots,p_n$ there is a G-delta dense set of points $x$ such that $\Lin_x\ni \dir x{p_i}$ for every $i$.
 ???
 
-\parbf{\ref{ex:dim=1}.}
+\parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
 
 \parbf{\ref{ex:resporka}.} The only-if part is trivial.
 Suppose the configuration $p$, $a_0,\z\dots, a_{m}\in \spc{L}$ meets the condition.
