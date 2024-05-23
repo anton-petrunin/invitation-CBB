@@ -376,8 +376,8 @@ k:=.25;
 
 z.x=(0,0)*u;
 z.y=(4,0)*u;
-z.v=(-.2,1)*u;
-z.w=(.3,1.2)*u;
+z.v=(.2,1)*u;
+z.w=(-.3,1.2)*u;
 
 draw z.x--z.y dashed evenly;
 drawarrow z.x--z.x+z.v;
@@ -1922,13 +1922,13 @@ p4=circle(z4,1*u);
 p5=circle(z5,1*u);
 p6=circle(z6,1*u);
 
-draw p0;
-draw p1;
-draw p2;
-draw p3;
-draw p4;
-draw p5;
-draw p6;
+draw p0 dashed evenly;
+draw p1 dashed evenly;
+draw p2 dashed evenly;
+draw p3 dashed evenly;
+draw p4 dashed evenly;
+draw p5 dashed evenly;
+draw p6 dashed evenly;
 
 hatchfill p0 withcolor (30, 1mm, -.5bp);
 hatchfill p1 withcolor (100, 1mm, -.5bp);

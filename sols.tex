@@ -620,10 +620,15 @@ Conclude that $\dim\Lin_q\ge m$ in this case.
 \ref{SHORT.ex:finite-tan:tan}. Apply \ref{ex:geodesic-cone}, \ref{prop:Tan-is-CBB(0)}, and \ref{thm:finite-space-of-directions}.
 
 \parit{\ref{SHORT.ex:finite-space-of-directions-dim}.}
+Apply \ref{ex:resporka} to show that $\LinDim\T_p=\LinDim\spc{L}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
 
 \parit{\ref{SHORT.ex:finite-tan:sigma}.}
+By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p$ such that $\dist{\xi}{\zeta}{\Sigma_p}<\pi$ there is a geodesic $[\xi\zeta]_{\Sigma_p}$.
+Suppose $\dist{\xi}{\zeta}{\Sigma_p}\ge\pi$, then $\T_p$ contains a line thru the origin in the directions $\xi$ and $\zeta$.
+By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:splitting}) to $\T_p$.
+We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
+Hence there $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
-Apply \ref{ex:geod-closed}, \ref{ex:GHto-tangent}, and ???.
 
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
 
@@ -632,10 +637,6 @@ Apply \ref{ex:geod-closed}, \ref{ex:GHto-tangent}, and ???.
 \parit{\ref{SHORT.ex:proof-right-inverse:end}}
 
 \parbf{\ref{ex:proof-dist-chart}.}
-
-\parbf{\ref{ex:dim=dim}.}
-
-\parbf{\ref{ex:dim-lim}.} Apply \ref{ex:resporka}.
 
 \parbf{\ref{ex:BG}.} 
 You should follow the proof Bishop--Gromov inequality, plus prove the following two inequalities 
@@ -646,8 +647,19 @@ You should follow the proof Bishop--Gromov inequality, plus prove the following 
 \end{align*}
 for any $x,y\in\oBall(p,r)$.
 
+\parbf{\ref{ex:dim=dim}.} 
+
+\parbf{\ref{ex:dim-lim}.} Apply \ref{ex:resporka}.
+
 \parbf{\ref{ex:net}};
-\ref{SHORT.ex:net:finite}
+\ref{SHORT.ex:net:finite}.
+Suppose $X$ is compact.
+Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls have a finite subcover.
+Note that the centers of these balls is an $\eps$-net of $X$.
+
+Suppose $X$ has finite $\eps$-net.
+Show that any sequence $x_n$ of points in $X$ has a subsequence such that all of its points lie in one $\eps$-ball.
+Apply the this statement for $\eps=\tfrac1n$ together with the diagonal procedure.
 
 \parit{\ref{SHORT.ex:net:compact}.}
 Let $Z$ be a compact $\eps$-net of $X$.
