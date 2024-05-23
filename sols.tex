@@ -667,8 +667,15 @@ A stronger statement holds
 in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.
 
-\parbf{\ref{ex:diam-compact}.}
+\parbf{\ref{ex:diam-compact}}; \ref{SHORT.ex:diam-compact:proper}
+Let $\spc{L}$ be an $m$-dimensional Alexandrov space.
+Argue as in \ref{thm:gromov-compactness} to show that for any $\eps>0$ and $R>0$ 
+there is a positive integer $N(\eps,R)$ such that 
+$\pack_\eps \cBall(p,R)$ admits an $\eps$-net with at most $N(\eps,R)$ points.
+Then apply \ref{ex:net:finite}.
 
+\parit{\ref{SHORT.ex:diam-compact:GH}.}
+Use \ref{SHORT.ex:diam-compact:proper} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{L}_n}$ for given $R>0$ and apply diagonal procedure to construct the needed convergence.
 
 \parbf{\ref{ex:conic}.}
 Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
@@ -711,11 +718,26 @@ Therefore pair $\Susp^2\Sigma$ and $\SSS^5$ provide the needed example.
 
 \parbf{\ref{ex:nonstability}.}
 
-\parbf{\ref{ex:bry2bry}.}
+\parbf{\ref{ex:bry2bry}.} Apply \ref{thm:spherical-nbhd}, \ref{lem:kwun}, and \ref{thm:top-bry}.
 
 \parbf{\ref{ex:bry-closed}.}
+Let $\spc{L}$ be a finute-dimensional Alexandrov space.
+Choose $x\in\spc{L}$.
+By \ref{thm:spherical-nbhd}, a neighborhood $U\ni x$ is homeomorphic to $\T_x$.
+Therefore \ref{ex:bry2bry}, implies that $U\cap\partial\spc{L}=\emptyset$ if and only if $x\notin \partial\spc{L}$;
+that is, the complement $\spc{L}\setminus\partial\spc{L}$ is open, and therefore, $\spc{L}$ is closed.
 
 \parbf{\ref{ex:pz<ypz}.}
+Consider model triangle $[\tilde x\tilde y\tilde z']=\modtrig(xyz)$.
+\begin{figure}[ht!]
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-1015}
+\end{figure}
+
+Show that 
+\[\dist{\tilde p}{\tilde z}{}\le \dist{\tilde p}{\tilde z'}{}\le\side\hinge yp{z}.\]
+
 
 \parbf{\ref{ex:bry-connected}.}
 Assume $\spc{L}$ has at least two boundary components, say $A$ and $B$.
@@ -781,7 +803,7 @@ Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
 Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
 and arrive at a contradiction.
 
-\parbf{\ref{ex:Hilbert/G}.} Read Section 4  in \cite{terng-thorbergsson}.
+\parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson}.
 
 \parbf{\ref{ex:sumbetries(S^2)}}; \ref{SHORT.ex:sumbetries(S^2):1}.
 Choose an isometric $\SSS^1$-action on $\SSS^2$ that fixes poles of the sphere.

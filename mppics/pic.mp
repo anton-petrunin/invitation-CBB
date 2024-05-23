@@ -1474,6 +1474,37 @@ label.rt(btex $s$ etex, .5[z.x,z.w]);
 
 endfig;
 
+beginfig(1015) 
+save u;
+u:=1.4cm;
+
+z.p=(0,0)*u;
+z.y=(3,0)*u;
+z.x=.6[z.p,z.y];
+z.z=(3.2,1)*u;
+z.zz=z.x+(z.z-z.x) rotated -15;
+z.w=.5[z.p,z.z];
+
+draw z.p--z.y--z.z--cycle;
+draw z.z--z.x;
+draw z.y--z.zz--z.x;
+draw z.p--z.zz;
+
+dOt z.p,
+z.y,
+z.x,
+z.z,
+z.zz;
+
+rimmark2(z.z--z.x,z.zz--z.x);
+
+label.bot(btex $\tilde p$ etex, z.p);
+label.bot(btex $\tilde x$ etex, z.x);
+label.bot(btex $\tilde y$ etex, z.y);
+label.top(btex $\tilde z$ etex, z.z);
+label.rt(btex $\tilde z'$ etex, z.zz);
+endfig;
+
 beginfig(1100) 
 save u,p;
 path p[];
