@@ -703,8 +703,20 @@ Therefore pair $\Susp^2\Sigma$ and $\SSS^5$ provide the needed example.
 \parbf{\ref{ex:pz<ypz}.}
 
 \parbf{\ref{ex:bry-connected}.}
-Assume $\spc{L}$ has at least two boundary components.
-Show and use that the universal cover of the doubling of $\spc{L}$ has infinite diameter.
+Assume $\spc{L}$ has at least two boundary components, say $A$ and $B$.
+Denote by $\gamma$ a geodesic that minimizes the distance from $A$ to $B$.
+
+Let 
+\[\dots,\spc{L}_{-1},\spc{L}_{0},\spc{L}_{1},\dots\]
+be a two-sided infinite sequence of copies on $\partial\spc{L}$.
+Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
+
+By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
+By the globalization theorem, $\spc{N}$ is $\Alex1$.
+
+Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
+By the splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
+Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi$ --- a contradiction.
 
 \parbf{\ref{ex:dist-to-bry}.} Choose $x$ on $\gamma$;
 we can assume that $x=\gamma(0)$.
