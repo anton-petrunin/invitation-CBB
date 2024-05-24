@@ -189,7 +189,7 @@ briefly \index{$\Sigma_pX$ (space of directions)}$\xi\in\Sigma_pX$.
 
 Further, $\Cone(\Sigma_pX)$ will be called \index{tangent space!of a subset}\emph{tangent space} to $X$ at $p$;
 it will be denoted by \index{$\T_pX$ (tangent space)}$\T_pX$.
-\footnote{\red V: tangent spaces have already been defined in chapter 4. also, I think we should state somewhere (in chapter 7?) the theorem the pointed rescaled  finite dimensional Alexandrov space converges to the tangent space. }
+\footnote{{\red V: tangent spaces have already been defined in chapter 4. also, I think we should state somewhere (in chapter 7?) the theorem the pointed rescaled  finite dimensional Alexandrov space converges to the tangent space.} A: see \ref{ex:GHto-tangent} + now it is tangent space to a subset...}
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{L}$, we have
@@ -518,6 +518,7 @@ for any $x\in\partial \spc{L}$.
 
 Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
+
 For spaces without boundary the following tools become available.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
@@ -529,7 +530,9 @@ that is, if $\spc{L}$ is $m$-dimensional, then
 
 This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
 Originally it was proved for Alexander--Spanier cohomology, but for Alexandrov spaces it is the same as singular cohomology.
-It implies, for example, that gradient is an onto map \footnote{\red ??? I don't understand what you wanted to say here. did you mean that gradient curves can be extended backwards?}  for functions of the following type $f=\tfrac12\cdot\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
+It implies, for example, that on finite-dimensional Alexandrov spaces without boundary 
+gradient flow for $\lambda$-concave finction is an onto map;
+in other words gradient curves can be extended into past.
 It is also used in the proof of the following version of domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
 \begin{thm}{Domain invariance}\label{thm-inv-domain}
@@ -592,7 +595,7 @@ Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f
 Subsets in Alexandrov spaces that satisfy condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal subset}\emph{extremal} if for any $x\in E$
 and $f$-gradient curve that starts in $E$ remains in $E$;
-here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.\footnote{ \red V: should we add the condition that $E$ is closed? }
+here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.\footnote{ {\red V: should we add the condition that $E$ is closed?} A: No it follows.}
 
 Extremal subsets were introduced by Grigori Perelman and the second author \cite{perelman-petrunin}.
 They will pop up in the next lecture.
