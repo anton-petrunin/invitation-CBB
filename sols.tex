@@ -596,8 +596,8 @@ and since $|u|=|u^*|$, we have equality.
 Apply \ref{ex:-u}.
 
 \parbf{\ref{ex:tangent=Em}.}
-Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dots,p_n$ there is a G-delta dense set of points $x$ such that $\Lin_x\ni \dir x{p_i}$ for every $i$.
-???
+By \ref{ex:diam-compact:proper}, $\spc{L}$ is \emph{separable}; that is, it contains a countable dense set of points.
+Apply \ref{cor:euclid-subcone} to this set.
 
 \parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
 
@@ -663,7 +663,12 @@ Since $\eps>0$ is arbitrary, we get the result.
 \parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
 Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 
-\parbf{\ref{ex:pack-vol}.}
+\parbf{\ref{ex:pack-vol}}; \ref{SHORT.ex:pack-vol:pack}
+Apply the Bishop--Gromov inequality (\ref{inq:BG}).
+
+\parit{\ref{SHORT.ex:pack-vol:dim}} By \ref{ex:dim-lim} $\dim\spc{L}_\infty\le m$.
+To show that $\dim\spc{L}_\infty\ge m$,
+apply \ref{cor:euclid-subcone} to a maximal packing and use the estimate in \ref{SHORT.ex:pack-vol:pack}.
 
 \parit{Comment.}
 A stronger statement holds 
