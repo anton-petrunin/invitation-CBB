@@ -15,7 +15,7 @@ Suppose  $\spc{L}$ is $m$-dimensional Alexandrov space.
 We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
 $\partial\Sigma_p\ne\emptyset$.
 By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional Alexandrov space;
-therefore its boundary is already defined.
+therefore its boundary is already defined and hence this inductive definition makes sense.
 
 It is instructive to check the following statements
 \begin{itemize}
@@ -23,7 +23,7 @@ It is instructive to check the following statements
 \item If $\spc{L}\iso\spc{L}_1\times\spc{L}_2$ is a finite-dimensional Alexandrov space,
 then
 \[\partial \spc{L}=(\partial\spc{L}_1\times\spc{L}_2)\,\cup\,(\spc{L}_1\times\partial\spc{L}_2)\]
-\item If $\Cone\Sigma$ is an $\Alex0$ space then
+\item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$  (this necessarily implies that   $\Cone\Sigma$  is  $\Alex1 $ then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
 where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
 \end{itemize}
@@ -31,7 +31,8 @@ where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma
 
 \section{Conic neighborhoods}
 
-The following statement is close relative of Perelman's stability theorem \ref{thm:stability}, but its proof is slightly simpler \cite{perelman:morse}.
+The following statement \cite{perelman:morse} is close relative of Perelman's stability theorem \ref{thm:stability}.
+% but its proof is  simpler .
 We are going to use this result without proof.
 
 Recall that logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
@@ -50,7 +51,8 @@ Moreover, we may assume that
 
 This statement is often used together with \textit{uniqueness of conic neighborhood} stated below.
 
-Suppose that a neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
+Suppose that an open  neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
+% openness is very important. it's false otherwise
 admits a homeomorphism to $\Cone\Sigma$ such that $x$ is mapped to the origin of the cone.
 In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
 
@@ -187,6 +189,7 @@ briefly \index{$\Sigma_pX$ (space of directions)}$\xi\in\Sigma_pX$.
 
 Further, $\Cone(\Sigma_pX)$ will be called \index{tangent space!of a subset}\emph{tangent space} to $X$ at $p$;
 it will be denoted by \index{$\T_pX$ (tangent space)}$\T_pX$.
+\footnote{\red V: tangent spaces have already been defined in chapter 4. also, I think we should state somewhere (in chapter 7?) the theorem the pointed rescaled  finite dimensional Alexandrov space converges to the tangent space. }
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{L}$, we have
@@ -336,7 +339,7 @@ Since $\partial\spc{L}$ is closed (\ref{ex:bry-closed}), the statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
-other cases can be done the same way, but formulas getting more complicated.
+other cases can be done in the same way, but formulas get more complicated.
 
 Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
@@ -482,7 +485,7 @@ All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry-connected}
-Let $\spc{L}$ be a finite-dimensional $\Alex1$ space with nonempty boundary $\partial\spc{L}$.
+Let $\spc{L}$ be a finite-dimensional $\Alex1$ space of dimension $\ge 2$ with nonempty boundary $\partial\spc{L}$.
 Show that $\partial\spc{L}$ is connected.
 \end{thm}
 
@@ -514,8 +517,8 @@ for any $x\in\partial \spc{L}$.
 \section{Remarks}
 
 Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
-This observation can be used to deduce a statemet about general finite-dimensional Alexandrov space to an Alexandrov space without boundary.
-For spaces without boundary following tools become available.
+This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
+For spaces without boundary the following tools become available.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
 Any compact finite-dimensional Alexandrov space $\spc{L}$ without boundary has a fundamental class cohomology with $\ZZ/2$ coefficients;
@@ -525,8 +528,8 @@ that is, if $\spc{L}$ is $m$-dimensional, then
 \end{thm}
 
 This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
-Originally it was proved for Alexander--Spanier, but for Alexandrov spaces it is the same as singular cohomology.
-It implies, for example, that gradient is an onto map  for functions of the following type $f=\tfrac12\cdot\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
+Originally it was proved for Alexander--Spanier cohomology, but for Alexandrov spaces it is the same as singular cohomology.
+It implies, for example, that gradient is an onto map \footnote{\red ??? I don't understand what you wanted to say here. did you mean that gradient curves can be extended backwards?}  for functions of the following type $f=\tfrac12\cdot\distfun_p$ is surjective on finite-dimensional Alexandrov spaces.
 It is also used in the proof of the following version of domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
 \begin{thm}{Domain invariance}\label{thm-inv-domain}
@@ -589,7 +592,7 @@ Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f
 Subsets in Alexandrov spaces that satisfy condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal subset}\emph{extremal} if for any $x\in E$
 and $f$-gradient curve that starts in $E$ remains in $E$;
-here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.
+here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.\footnote{ \red V: should we add the condition that $E$ is closed? }
 
 Extremal subsets were introduced by Grigori Perelman and the second author \cite{perelman-petrunin}.
 They will pop up in the next lecture.
