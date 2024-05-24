@@ -408,15 +408,27 @@ By \ref{ex:-u}, $w=-w^*$;
 hence $w\in\Lin_p$.
 \qeds
 
+\begin{thm}{Lemma}\label{ex:grad-dist:G-delta}
+Given a point $p$ in an Alexandrov space $\spc{L}$,
+let $f\z=\distfun_p$, and let $S$ be the subset of points $x\in\spc{L}$ such that $|\nabla_xf|=1$.
+Then $S$ is a dense G-delta set.
+
+\end{thm}
+
+\parit{Proof.}
+Let $S_n\subset \spc{L}$ be defined by inequality $|\nabla_xf|>1-\tfrac1n$.
+By \ref{ex:semicontinuous-grad:>s}, $S_n$ is open.
+
+Choose a point $q\ne p$.
+Observe that $|\nabla_xf|=1$ for any point $x\in\left]pq\right[$.
+It follows that $S_n$ is dense in $\spc{L}$.
+
+Since $S=\bigcap_nS_n$, the lemma follows.
+\qeds
 
 
 \begin{thm}{Exercise}\label{ex:grad-dist}
-Let $p$ be a point in an Alexandrov space $\spc{L}$ and $f\z=\distfun_p$.
-Denote by $S$ the subset of points $x\in\spc{L}$ such that $|\nabla_xf|=1$.
-
-\begin{subthm}{ex:grad-dist:G-delta}
-Show that $S$ is a dense G-delta set.
-\end{subthm}
+Let $p$, $f$, and $S$ be as in \ref{ex:grad-dist:G-delta}.
 
 \begin{subthm}{ex:grad-dist:lin}
 Show that 
@@ -429,8 +441,6 @@ in particular, $\dir xp\in \Lin_x$.
 \begin{subthm}{ex:grad-dist:|grad|=1}
 Show that if $|\nabla_xf|=1$, then $\dd_xf(w)= \langle\nabla_xf,w\rangle$ for any $w\in \T_x$.
 \end{subthm}
-\footnote{\red V: I don't like that this is left as an exercise. The statement a) is nontrivial. we give a proof in the other book. I think we should prove it here too}
-
 \end{thm}
 
 Note that \ref{ex:grad-dist} implies the following.
@@ -651,7 +661,10 @@ Then the map $f\:\spc{L}\to\RR^m$ defined by
 has a left inverse defined in a neighborhood of $f(p)$.
 \end{thm}
 
-The following exercise guides you to prove the theorem.
+In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
+The construction uses gradient flow for suitably chosen family of functions.
+The structure of the proof can be seen in the following exercise,
+more details are given in the hints.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
 Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse}.
@@ -696,8 +709,7 @@ This finishes the proof of \ref{thm:right-inverse}.
 
 \end{thm}
 
-\footnote{\red V: I think that since this is used later it should be proved and not left as a reference
-A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.}
+%??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.
 
 \section{Distance chart}
 
