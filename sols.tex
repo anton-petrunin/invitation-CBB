@@ -2,6 +2,7 @@
 
 \parbf{\ref{ex:compact+connceted}.}
 Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
+%???eps-net are not defined!!!
 We can assume that $\eps_0>\diam K$, and $N_0$ is a one-point set.
 If $\dist{x}{y}{}<\eps_k$ for some $x\in N_{k+1}$ and $y\in N_{k}$, then connect them by a curve of length at most $\eps_k$.
 
@@ -31,10 +32,10 @@ Given a pair of points $p$ and $q$, choose a sequence of paths $\gamma_n$ from $
 \[\length\gamma_n\to \dist pq{}
 \quad\text{as}\quad
 n\to\infty;\]
-it exists since we are in a length space.
+these paths exist since we are in a length space.
 Note that we can assume that each $\gamma_n$ is parametrized proportional to the arc length;
 in particular, $\gamma_n$ are equicontinuous.
-Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ for some $r<\infty$.
+Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ of some radius $r<\infty$.
 Since the space is proper, $\cBall[p,r]$ is compact.
 By Arzelà--Ascoli theorem, we can pass to a converging subsequence of $\gamma_n$.
 Show that its limit is a geodesic path from $p$ to $q$.
@@ -50,10 +51,10 @@ $(\begin{smallmatrix}
 h^2&0
 \\
 0&1
-\end{smallmatrix})$, where $h=h(\kappa,r)$.
+\end{smallmatrix})$, where $h=h(\kappa,r)\ge 0$.
 Calculate $h(\kappa,r)$.
 Show that for fixed $r$, the function $r\mapsto h(\kappa,r)$ is nonincreasing in the domain of definition.
-Suppose $\kappa<\Kappa$, consider the map $\MM^2(\kappa)\to\MM^2(\Kappa)$ that sends a point to the point with the same polar coordinates.
+Suppose $\kappa<\Kappa$, consider the partially defined map $\MM^2(\kappa)\to\MM^2(\Kappa)$ that sends a point to the point with the same polar coordinates.
 Show that this map is short in the domain of definition.
 Use it to prove the statement in the exercise.
 
@@ -64,7 +65,7 @@ and
 $\angk p{x}{y}_{\EE^2}-\angk p{x}{y}_{\HH^2}=O(\dist[2]{p}{x}{}+\dist[2]{p}{y}{})$.
 
 \parbf{\ref{ex:undefined-angle}.}
-Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by $\ell^\infty$-norm.
+Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by the $\ell^\infty$-norm.
 
 \parbf{\ref{ex:adjacent-angles}.}
 Assume $\mangle\hinge pxz+\mangle\hinge pyz<\pi$.
@@ -94,8 +95,8 @@ The statement follows since $\eps>0$ is arbitrary.
 \parbf{\ref{ex:geod-closed}.}
 Given $x_\infty,y_\infty\in\spc{X}_\infty$, chose $x_n,y_n\in \spc{X}_n$ such that $x_n\to x_\infty$ and $y_n\to y_\infty$.
 Let $z_n$ be midpoint of $[x_ny_n]$.
-Since $\spc{X}_\infty$ is proper, we can choose a subsequence of $z_m$ that converges to a point, say $z\infty\in \spc{X}_\infty$.
-Note that $z\infty$ is a midpoint of $x_\infty$ and $y_\infty$ and apply Menger's lemma (\ref{lem:mid>geod}).
+Since $\spc{X}_\infty$ is proper, we can choose a subsequence of $z_m$ that converges to a point, say $z_\infty\in \spc{X}_\infty$.
+Note that $z_\infty$ is a midpoint of $x_\infty$ and $y_\infty$ and apply Menger's lemma (\ref{lem:mid>geod}).
 
 \parbf{\ref{ex:non-contracting-map}.}
 Given a pair of points $x_0,y_0\in \spc{K}$, 
@@ -163,7 +164,7 @@ The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
 \textit{Any spherical triangle has perimeter at most $2\cdot\pi$.}
 Choose a spherical triangle $[xyz]$.
 Let $x'$ be the antipode of $x$; that is $x'=-x$.
-The spherical triangle inequality implies that
+The spherical triangle inequality (\ref{claim:angle-3angle-inq} or \ref{ex:angle-triangle}) implies that
 \[\dist{x}{z}{\mathbb{S}^2}\le \dist{y}{x'}{\mathbb{S}^2}+\dist{x'}{z}{\mathbb{S}^2}.\]
 Observe that 
 \[
