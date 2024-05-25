@@ -92,6 +92,10 @@ Conclude that
 where $\delta(\eps)\to 0$ as $\eps\to0$.
 The statement follows since $\eps>0$ is arbitrary.
 
+\parbf{\ref{ex:generalized-selection}.}
+
+\parbf{\ref{ex:Haus-conv}.}
+
 \parbf{\ref{ex:geod-closed}.}
 Given $x_\infty,y_\infty\in\spc{X}_\infty$, chose $x_n,y_n\in \spc{X}_n$ such that $x_n\to x_\infty$ and $y_n\to y_\infty$.
 Let $z_n$ be midpoint of $[x_ny_n]$.
@@ -157,7 +161,9 @@ Show that we can pass to a subsequence again, so that $\spc{X}_n$ converges in t
 Observe that $\spc{Y}\le \spc{X}_\infty$ and $\spc{X}_\infty\le\spc{Y}$.
 By \ref{ex:non-contracting-map}, $\spc{Y}\iso \spc{X}_\infty$ --- a contradiction.
 
-\parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$
+\parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$.
+
+\parbf{\ref{ex:GH-noncompact}.}
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
 The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
@@ -297,6 +303,13 @@ Hence we have
 for any $v,w$.
 That is the norm is quadratic and the statement follows.
 
+\parbf{\ref{ex:alm-min}.}
+Suppose such point does not exists;
+that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
+Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
+Show that this sequence is Cauchy; denote its limit by $p_\infty$.
+Arrive at a contradiction by showing that $r(p_\infty)\le0$.
+
 \parbf{\ref{ex:CBB(1)notitCBB(0)}.}
 Note that $\spc{X}$ has no defined sphericlal model angles;
 therefore it has curvature $\ge 1$.
@@ -352,13 +365,6 @@ Moreover, this inequality holds as far as
 But this inequality holds for all $\tilde z$ since  $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
 Hence we get $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
 The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
-
-\parbf{\ref{ex:alm-min}.}
-Suppose such point does not exists;
-that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
-Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
-Show that this sequence is Cauchy; denote its limit by $p_\infty$.
-Arrive at a contradiction by showing that $r(p_\infty)\le0$.
 
 \parbf{\ref{ex:dir-compact}.}
 Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
@@ -564,8 +570,7 @@ Integrating this inequality, we get the second statement.
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
 
-\parbf{\ref{ex:cone-CBB}.} Suppose $\Cone\spc{X}$ is $\Alex0$.
-Use 
+\parbf{\ref{ex:cone-CBB}.} 
 
 \parbf{\ref{ex:|antisum|}.}
 Observe that
@@ -872,6 +877,8 @@ Arrive at a contradiction with Bishop--Gromov inequality.)
 
 \parit{\ref{SHORT.ex:number(m-1):1}.}
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
+
+\parbf{\ref{ex:S1actsS3}.}
 
 \parbf{\ref{ex:surf-S2}.}
 We can assume that the origin lies in the interior of the convex body.
