@@ -4,7 +4,7 @@
 
 \chapter{Preliminaries}\label{chap:prelim}
 
-\section{Prerequisite}
+\section{Prerequisites}
 
 We assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
@@ -16,15 +16,15 @@ recall that a metric space is \index{proper space}\emph{proper} if all its close
 These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Gromov--Hausdorff-metric}, but it is better to have prior acquaintance with these convergences.
 \end{itemize}
 These topics are treated in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
-Occasionally we use Baire category theorem and Rademacher's theorem; these could be used as black boxes.
+Occasionally, we use the Baire category theorem and Rademacher's theorem; these could be used as black boxes.
 
 We use some topology. 
-Most of the time any introductory text in algebraic topology should be sufficient.
-For some examples, we use more advanced results, but these could be used as black boxes.
+Most of the time, any introductory text in algebraic topology should be sufficient.
+For some examples, we use more advanced results, but these could also be used as black boxes.
 
-Most of applications come from Riemannian geometry.
+Most of the applications come from Riemannian geometry.
 It is better to be familiar with the Toponogov comparison theorem.
-The classical book of Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains more than you will need.
+The classical book by Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains more than you will need.
 
 \section{Notations}
 
@@ -42,9 +42,9 @@ are called, respectively, the \index{open ball}\emph{open} and  the \index{close
 The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
 might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
-We will denote by $\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
+We will denote by \index{$\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$}$\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
 Euclidean space, and Lobachevsky space respectively.
-More generally, $\MM^n(\kappa)$ will denote the \emph{model $n$-space} of curvature $\kappa$;
+More generally, $\MM^n(\kappa)$ will denote the \index{model!space}\emph{model $n$-space} of curvature $\kappa$;
 that is,
 \begin{itemize}
 \item if $\kappa>0$, then $\MM^n(\kappa)$ is the $n$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^n=\MM^n(1)$
@@ -112,9 +112,9 @@ In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need 
 for example, any meridian is a geodesic between poles on the sphere.
 However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 
-A \index{geodesic path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
+A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
 
-A metric space is called \index{geodesic space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
+A metric space is called \index{geodesic!space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 
 Evidently, any geodesic space is a length space.
 
@@ -192,7 +192,7 @@ If we write $\trig p q r$, it means that we have chosen such a triangle.
 
 \parbf{Model triangles.}
 Given three points $p,q,r$ in a metric space $\spc{X}$,
-let us define its \index{model triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+let us define its \index{model!triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
 \index{$\modtrig$}) to be a triangle in the Euclidean plane $\EE^2$ such that
@@ -215,7 +215,7 @@ $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$
 and $\dist{p}{q}{},\dist{p}{r}{}>0$, 
 the angle measure of 
 $\trig{\tilde p}{\tilde q}{\tilde r}$ at $\tilde p$ 
-will be called the \index{model angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
+will be called the \index{model!angle}\emph{model angle} of the triple $p$, $q$, $r$ and will be denoted by
 $\angk p q r_{\EE^2}$%
 \index{$\angk{p}{q}{r}$ (model angle)}.\label{page:model-angle}
 
@@ -338,7 +338,7 @@ Show that
 
 \begin{thm}{Definition}\label{def:gen-Haus-conv}
 Let $A_1,A_2,\dots$ be a sequence of closed sets in a metric space $\spc{X}$.
-We say that the sequence $A_n$ \index{Hausdorff limit}\emph{converges} to a closed set $A_\infty$ in the {}\emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
+We say that the sequence $A_n$ \index{Hausdorff!limit}\emph{converges} to a closed set $A_\infty$ in the {}\emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
 $\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
 \end{thm}
 
@@ -364,7 +364,7 @@ Show that any sequence of closed sets in a proper metric space has a convergent 
 
 \begin{thm}{Definition}\label{def:hausdorff-convergence}
 Let $A$ and $B$ be two nonempty compact subsets of a metric space $\spc{X}$.
-Then the \index{Hausdorff distance}\emph{Hausdorff distance} between $A$ and $B$ is defined as 
+Then the \index{Hausdorff!distance}\emph{Hausdorff distance} between $A$ and $B$ is defined as 
 $$|A-B|_{\Haus\spc{X}}
 \df
 \sup_{x\in \spc{X}}\{\,|\distfun_A(x)-\distfun_B(x)|\,\}.
