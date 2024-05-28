@@ -18,7 +18,7 @@ $\SSS^2$- or $\HH^2$-comparisons.
 Recall that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
 but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
-if this does not hold for one of the angles, than we assume that $\SSS^2$-comparison holds for this quadruple.
+if this does not hold for one of the angles, then we assume that $\SSS^2$-comparison holds for this quadruple.
 
 More generally, one may apply this definition to $\MM^2(\kappa)$.
 This way we define $\MM^2(\kappa)$-comparison for any real $\kappa$.
@@ -34,9 +34,9 @@ holds for any quadruple of points in $\spc{X}$.
 While this definition can be applied to any metric space,
 we will use it mostly for geodesic space that are complete (and often compact or proper). 
 If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov, 
-then it will be called $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
+then it will be called an $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
 An $\spc{X}$ is $\Alex\kappa$ space for some $\kappa$, then it will be called
-\index{Alexandrov space}\emph{Alexandrov space}.
+an \index{Alexandrov space}\emph{Alexandrov space}.
 
 It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
 leave the general curvature bound as an exercise.
@@ -273,7 +273,7 @@ Applying \ref{SHORT.angle-a},
 +\angk w x y
 \le
 2\cdot\pi.\]
-Passing to the limits $w\to p$, we have
+Passing to the limits as $w\to p$, we have
 \[\angk p x z 
 + \angk p y z 
 +\angk p x y
@@ -283,7 +283,7 @@ Passing to the limits $w\to p$, we have
 
 \section{Equivalent conditions}
 
-The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, \ref{thm:angle-cbb}.
+The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, and \ref{thm:angle-cbb}.
 
 \begin{thm}{Theorem}\label{thm:defs_of_alex} 
 Let $\spc{L}$ be a complete geodesic space.
@@ -340,7 +340,7 @@ Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean
 Choose $\lambda\in \RR$.
 Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
 The following statement are equivalent;
-if one (and therefore any) of them hold for $s$, then we say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave}.
+if one (and therefore any) of them holds for $s$, then we say that $s$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave}.
 \begin{itemize}
 \item We have inequality $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
 \item The function $t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave.
@@ -355,9 +355,9 @@ To prove equivalence, approximate $f$ by smooth functions taking a convolutions 
 Note that all the conditions are equivalent for $f_n$;
 passing to the limit we get the same for $f$.
 
-We will also use that \textit{$\lambda$-concave functions are one-side differentiable}.
+We will also use that \textit{$\lambda$-concave functions are one-sided differentiable}.
 
-\parbf{Functions on metric space.}
+\parbf{Functions on metric spaces.}
 A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{L}$}.
 The domain of definition of a function $f$ will be denoted by $\Dom f$.
 
@@ -365,7 +365,7 @@ We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (b
 for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
-The following proposition is simple, but conceptual ---
+The following proposition is simple but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
@@ -399,16 +399,16 @@ Hence the proposition follows.
 \section{Comments}
 
 Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
-this is the subject of out previous invitation \cite{alexander-kapovitch-petrunin-2019}.
+this is the subject of our previous invitation \cite{alexander-kapovitch-petrunin-2019}.
 
-In both comparisons we check certain condition on 6 distances between every pair of points in 4-point sets.
-Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested to consider other conditions of that type for $n$-point subsets;
+In both comparisons we check certain conditions on the 6 distances between every pair of points in 4-point sets.
+Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested considering other conditions of that type for $n$-point subsets;
 see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for the development of this idea.
 
 We have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
-Instead of \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
-This option is more natural and general, but many statements can be reduced to geodesic case.
-In particular, suppose $\spc{L}$ is a complete length spaces with curvature $\ge \kappa$,
+Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
+This option is more natural and general, but many statements can be reduced to the geodesic case.
+In particular, suppose $\spc{L}$ is a complete length space with curvature $\ge \kappa$,
 then 
 \textit{$\spc{L}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
 Also, by Plaut's theorem, \textit{any point $p$ in $\spc{L}$ can be connected by geodesics to a G-delta dense set of points in $\spc{L}$} 
