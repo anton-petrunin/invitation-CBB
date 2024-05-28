@@ -5,13 +5,13 @@
 \section{Space of directions} 
 \label{sec:space+directions}
 
-Let $\spc{L}$ be an Alecandrov space.
-By \ref{clm:angle-defined}, angle measure of any hinge in is defined.
+Let $\spc{L}$ be an Alexandrov space.
+By \ref{clm:angle-defined}, the angle measure of any hinge in is defined.
 Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a \index{semimetric}\emph{semimetric} space;
-that is, $\mangle$ meets all conditions in the definition of metric except it might vanish for distinct elements. 
+that is, $\mangle$ behaves like a metric, but might vanish for distinct directions. 
 
 The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{L}$.
 The elements of $\Sigma'_p$ are called \index{geodesic!direction}\emph{geodesic directions} at $p$.
@@ -71,15 +71,15 @@ is defined by
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 The value $\theta$ is undefined if $v=\0$ or $w=\0$;
-in this cases we assume that $\<v,w\>\df0$.
+in these cases we assume that $\<v,w\>\df0$.
 
 \begin{thm}{Exercise}\label{ex:geodesic-cone}
 Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \index{$\pi$-geodesic space}\emph{$\pi$-geodesic};
-that is any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can be joined by a geodesic in $\spc{X}$.
+that is, any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can be joined by a geodesic in $\spc{X}$.
 \end{thm}
 
 \parbf{Tangent space.}
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and denoted by $\T_p$ or $\T_p\spc{L}$.
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and is denoted by $\T_p$ or $\T_p\spc{L}$.
 The elements of $\T_p\spc{L}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
 (despite that $\T_p$ is only a cone --- not a vector space).
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$;
@@ -89,7 +89,7 @@ that is, with the set $\set{v\in\T_p}{|v|=1}$.
 A tangent space to an Alexandrov space has nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
-Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that tangent space $\T_p$ to an Alexandrov space might fail to be geodesic;
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that the tangent space $\T_p$ at some point of Alexandrov space might fail to be geodesic;
 in this case $\T_p$ is \textit{not} $\Alex0$.
 
 \parit{Proof.}
@@ -126,7 +126,7 @@ for any geodesic $\gamma$ that starts at $p$.
 Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison},
 and when we say \textit{function} we usually mean a \textit{locally Lipschitz function defined on an open domain}.
 
-Let $f$ be locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{L}$.
+Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{L}$.
 Suppose $\phi$ is a continuous function defined in $\Dom f$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
 the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
@@ -197,9 +197,9 @@ for any $v\in\T_p$.
 
 \section{Gradient}\label{sec:grad-def}
 
-The following definition generalizes gradient to semiconcave functions on Alexandrov space.
+The following definition generalizes the gradient to semiconcave functions on Alexandrov space.
 This generalization is not trivial even for concave functions on Euclidean space;
-we suggest to keep this case in mind.
+we suggest keeping this case in mind.
 
 \begin{thm}{Definition}\label{def:grad} 
 Let $f$ be a semiconcave function on an Alexandrov space.
@@ -261,7 +261,7 @@ where
 Note that if $\T_p\iso\EE^m$ and $\dd_p f$ is a concave function,
 then $2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v)$.
 The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
-In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
+In general, $\T_p$ is not geodesic (and not even a length space), so the concavity of $\dd_p f$ does not make  sense.
 The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
 
 Solving the following exercise should help to find an approach to the key lemma.
