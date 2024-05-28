@@ -13,7 +13,8 @@ recall that a metric space is \index{proper space}\emph{proper} if all its close
 \item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
 \item Hausdorff and Gromov--Hausdorff convergence.
-These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Gromov--Hausdorff-metric}, but it is better to have prior acquaintance with these convergences.
+These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Gromov--Hausdorff-metric}.
+The definitions are there, but it would be hard to follow without prior experience with these convergences.
 \end{itemize}
 These topics are treated in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 Occasionally, we use the Baire category theorem and Rademacher's theorem; these could be used as black boxes.
@@ -382,7 +383,7 @@ and
 $A$ lies in an $R$-neighborhood of~$B$.
 \end{thm}
 
-The following exersice implies that for compact subsets the Hausdorff convergence is the convergence in Hausdorff metric.
+The following exercise implies that Hausdorff convergence of compact subsets is the convergence in Hausdorff metric.
 
 \begin{thm}{Exercise}\label{ex:Haus-conv}
 Let $A_1,A_2,\dots$ and $A_\infty$ be compact nonempty sets in a metric space $\spc{X}$.
@@ -398,7 +399,7 @@ Suppose that there is a metric on the disjoint union
 that satisfies the following property:
 
 \begin{thm}{Property}\label{propery:GH}
-The restriction of metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, 
+The restriction of the metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, 
 and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
 \end{thm}
 
@@ -415,8 +416,8 @@ The first convergence is evident and the second could be guessed from the diagra
 \includegraphics{mppics/pic-500}
 \end{figure}
 
-Note that for any sequence of spaces has an empty space as its limit for a Gromov--Hausdorff convergence.
-Exercise \ref{ex:compact-GH} states that if limit nonempty and compact, then it is unique up to isometry. 
+Note that any sequence of spaces has an empty space as its limit in some  Gromov--Hausdorff convergence.
+Exercise \ref{ex:compact-GH} states that if the limit is nonempty and compact, then it is unique up to isometry. 
 
 \begin{thm}{Exercise}\label{ex:geod-closed}
 Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
@@ -431,11 +432,11 @@ For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, 
 \section{Gromov--Hausdorff metric}\label{sec:Gromov--Hausdorff-metric}
 
 In this section we cook up a metric space out of all compact nonempty metric spaces
-that defines the Gromov--Hausdorff convergence.
+that defines Gromov--Hausdorff convergence.
 We want to define the metric on the set of \textit{isometry classes} of compact metric spaces.
-Further, term \textit{metric space} might also stand for its \textit{isometry class}.
+Further, the term \textit{metric space} might also stand for its \textit{isometry class}.
 
-The obtained metric is called Gromov--Hausdorff metric;
+The obtained metric is called the Gromov--Hausdorff metric;
 the corresponding metric space will be denoted by $\GH$.
 This distance is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
 Here is a formal definition.
@@ -445,7 +446,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X
 is defined by the following
 relation.
  
-Given  $r > 0$, we have that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+Given  $r > 0$, we have $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
 space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
 respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
 (Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
@@ -460,7 +461,7 @@ $\GH$ is a complete metric space.
 Note that this means in particular that if $X,Y$ are compact and $|\spc{X}-\spc{Y}|_{\GH}=0$ then $X$ and $Y$ are isometric.
 
 Gromov--Hausdorff convergence of compact spaces has particularly nice properties.
-From the technical point of view they follow from the next statement that we formulate as an exercise.
+From the technical point of view, they follow from the next statement, which we formulate as an exercise.
 
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
 Let $f$ be a distance noncontracting map from 
@@ -489,10 +490,10 @@ Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty
 
 \section{Comments}
 
-In principle, our definition of Gromov--Hausdorff distance works for complete metric spaces which are not necessarily compact.
-However, according to the following exercise, it only defines semimetric;
-by that reason it is not in use.
+In principle, our definition of Gromov--Hausdorff distance works for complete metric spaces that are not necessarily compact.
+However, according to the following exercise, it only defines a \emph{semimetric}; that is, zero Gromov--Hausdorff distance does not imply that the spaces are isometric.
+For that reason it is not in use.
 
 \begin{thm}{Exercise}\label{ex:GH-noncompact}
-Construct two nonisometric proper metric spaces with vanishing Gromov--Hausdorff distance.
+Construct two nonisometric proper (noncompact) metric spaces with vanishing Gromov--Hausdorff distance.
 \end{thm}
