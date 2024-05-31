@@ -496,17 +496,17 @@ Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length spa
 \section{Linear dimension}
 
 Let $\spc{L}$ be an Alexandrov space.
-Let us define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim \spc{L}$}$\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
+We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim \spc{L}$}$\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{L}$ at some point $p\in \spc{L}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 If not stated otherwise, dimension will mean linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that we will use \index{$\dim \spc{L}$}$\dim$ for $\LinDim$.
+after that, we will use \index{$\dim \spc{L}$}$\dim$ for $\LinDim$.
 
 \begin{thm}{(\textit{n}+1)-comparison}
 Let $\spc{L}$ be an $\Alex0$ space.
-Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there is a model configuration 
+Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there exists a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{L}}
 \quad\text{and}\quad
@@ -538,7 +538,7 @@ Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dim=1}
-Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
+Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional manifold, possibly with non-empty boundary.
 \end{thm}
 
 
@@ -581,12 +581,12 @@ If $\LinDim \spc{L}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite dimensional Alexandrov spaces via induction on  dimension.
+Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional Alexandrov spaces via induction on  dimension.
 Such proofs will be indicated below.
 
 \parit{Proof of \ref{thm:finite-space-of-directions}.}
 Choose $\eps>0$; suppose $\spc{L}$ is $m$-dimensional.
-Assume can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
+Assume we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
 Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{L}$ such that $\xi_i=\dir p{x_i}$.
 
@@ -596,7 +596,7 @@ By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such th
 Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ for any $i\ne j$.
 By comparison, 
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
-Therefore $n\le \pack_\eps\SSS^{m-1}$,
+Therefore, $n\le \pack_\eps\SSS^{m-1}$,
 where \index{$\pack_\eps\spc{X}$}$\pack_\eps\spc{X}$ is the exact upper bound on the number of points $x_1,\z\dots,x_k\in \spc{X}$ such that $\dist{x_i}{x_j}{}\ge\eps$ if $i\ne j$.
 
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
@@ -619,18 +619,18 @@ that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such t
 \[\mangle\hinge pxz\le \alpha+\eps
 \quad\text{and}\quad
 \mangle\hinge pyz\le \alpha+\eps.\]
-Indeed, once it is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$.
-After that Menger's lemma (\ref{lem:mid>geod}) will finish the proof.
+Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$.
+After that, Menger's lemma (\ref{lem:mid>geod}) will finish the proof.
 
 Choose a sequence of small positive numbers $r_n\to0$
-Consider sequnces $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
+Consider sequences $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
 Let $m_n$ be a midpoint of $[x_n\,y_n]$.
 %??? we use here that the directions $\xi=\dir px$ and $\zeta=\dir py$ are not opposite???
 
 Since $\Sigma_p$ is compact, we can pass to a sequence of $r_n$ such that 
 $\dir{p}{m_n}$ converges;
 denote its limit by $\mu$.
-Choose a geodesic $[pz]$ that runs at small angle from $\mu$.
+Choose a geodesic $[pz]$ that runs at a small angle from $\mu$.
 Let us show that $\dir pz$ is the needed almost midpoint.
 
 Evidently, $\angk p{x_n}{m_n}=\angk p{y_n}{m_n}$.
@@ -639,7 +639,7 @@ By \ref{ex:alex-lemma-cat}, we have
 
 Let $z_n\in [pz]$ be the point such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
 By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrary small given error.
-By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrary small for all large $n$.
+By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also have the following approximations
 \begin{align*}
 \angk p{x_n}{y_n}&\approx \mangle\hinge p{x_n}{y_n},
@@ -648,12 +648,12 @@ Applying this observation and the definition of angle measure, we also have the 
 \\
 \angk p{m_n}{y_n}\approx\angk p{z_n}{y_n}&\approx\mangle\hinge p{z_n}{y_n},
 \end{align*}
-again, with arbitrary given error and all large $n$.
+again, with arbitrary given error for all large $n$.
 It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as required.
 \qeds
 
 In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ have lower bounds by 
-the comparison, but we needed upper bounds that were extracted from the definition of angle measure and compactness of space of directions.
+the comparison, but we needed upper bounds that were extracted from the definition of angle measure and the compactness of space of directions.
 
 \section{Right-inverse theorem}
 
@@ -667,8 +667,8 @@ has a right inverse defined in a neighborhood of $f(p)$.
 \end{thm}
 
 In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
-The construction uses gradient flow for suitably chosen family of functions.
-The structure of the proof can be seen in the following exercise,
+The construction uses gradient flow for a suitably chosen family of functions.
+The structure of the proof can be seen in the following exercise;
 more details are given in the hints.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
@@ -799,7 +799,12 @@ Therefore,
 The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
 It is sufficient for most applications, but a more exact statement will be given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
 
-\begin{thm}{Exersice}\label{ex:BG}
+\begin{thm}{Exercise}\label{ex:diam-compact:proper}
+Show that any finite-dimensional Alexandrov space is proper.
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:BG}
 Let $\spc{L}$ be an $\Alex{-1}$ space.
 Suppose $\spc{L}=m<\infty$.
 Show that
@@ -814,7 +819,7 @@ is nonincreasing.
 
 Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
-We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue coverning dimension}\emph{Lebesgue coverning dimension} \index{$\TopDim$}$\TopDim$ and \index{Hausdorff!dimension}\emph{Hausdorff dimension}\index{$\HausDim$}$\HausDim$.
+We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} \index{$\TopDim$}$\TopDim$ and \index{Hausdorff!dimension}\emph{Hausdorff dimension} \index{$\HausDim$}$\HausDim$.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{L}$, we have
@@ -822,18 +827,24 @@ For any Alexandrov space $\spc{L}$, we have
 \end{thm}
 
 \parit{Proof.}
-Suppose $\LinDim\spc{L}\ge m$.
-The right inverse theorem implies that $\spc{L}$ contains a subset homeomorphic to an open ball in $\EE^m$.
-It follows that
-\[\TopDim\spc{L}\ge \LinDim\spc{L}.\]
+Suppose $\LinDim \spc{L}=\infty$.
+By the Right-inverse theorem (\ref{thm:right-inverse}), $\spc{L}$ contains a compact subset $K$ with an arbitrarily large $\TopDim K$.
+In particular,
+\[\TopDim\spc{L}=\infty.\] 
+By Szpilrajn's theorem,
+$\HausDim K\ge \TopDim K$.
+Thus we also have 
+\[\HausDim\spc{L}=\infty.\]
 
-By Szpilrajn's theorem \cite[theorems V 8 and VII 2]{hurewicz-wallman}, 
-\[\HausDim\spc{L}\ge\TopDim\spc{L}.\]
+Now suppose $\LinDim \spc{L}=m<\infty$.
+By the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}), 
+\[\HausDim\spc{L}\le m.\]
 
-Finally, by the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}), we get that 
-\[\LinDim \spc{L}\ge \HausDim\spc{L}.\]
-\footnote{\red V: either something should be said here about the infinite dimensional case (it is now only in the comments) or the finite dimensional assumption added.}
-\qedsf
+Since $\spc{L}$ is proper (\ref{ex:diam-compact:proper}),
+Szpilrajn's theorem, implies that
+\[\TopDim\spc{L}\le \HausDim\spc{L}\le m.\]
+Finally, \ref{thm:right-inverse} implies that $m\le\TopDim\spc{L}$.
+\qeds
 
 \begin{thm}{Exercise}\label{ex:dim=dim}
 Let $\Omega$ be an open subset of Alexandrov space $\spc{L}$.
@@ -843,7 +854,7 @@ Show that
 
 \section{Comments}
 
-Let us state a version of Bishop--Gromov inequality for $\Alex\kappa$ spaces.
+Let us state a version of the Bishop--Gromov inequality for $\Alex\kappa$ spaces.
 Its proof requires additionally the so-called \textit{coarea formula} for Alexandrov spaces. 
 The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 
@@ -863,7 +874,7 @@ The first part is also called \emph{Bishop's inequality}.
 It is due to Richard Bishop; see \cite{bishop1964} and \cite[Corollary 4, p. 256]{bishop-crittenden}.
 The second part is due to Michael Gromov \cite{gromov1981}.
 
-Theorem~\ref{thm:dim=dim}, was ssentially proved by Conrad Plaut \cite{plaut:dimension}.
+Theorem~\ref{thm:dim=dim}, was essentially proved by Conrad Plaut \cite{plaut:dimension}.
 At that time, it was not known whether
 \[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty\]
 for any Alexandrov space $\spc{L}$.
