@@ -93,6 +93,22 @@ where $\delta(\eps)\to 0$ as $\eps\to0$.
 The statement follows since $\eps>0$ is arbitrary.
 
 \parbf{\ref{ex:generalized-selection}.}
+Since space is proper, it is separable; 
+that is, we can choose an countable everywhere dense set $\{x_1,x_2,\dots\}$.
+
+Let $A_1,A_2,\dots$ be a sequence of closed set.
+Applying the diagonal procedure, we can pass to subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$;
+denote its limit by $f(x_i)$.
+
+Since $\distfun_{A_n}$ is $1$-Lipschitz for any $n$, we have 
+\[|f(x_i)-f(x_j)|\le \dist{x_i}{x_j}{}\]
+for all $i$ and $j$.
+Suppose $f(x_i)<\infty$ for some $i$, note that the same holds for any $i$.
+Therefore, the function $f$ can be extended to a continuous function defined on the whole ambient space.
+Show that $A_\infty=f^{-1}\{0\}$ is the limit of $A_n$ in the sense of Hausdorff.
+
+If $f(x_i)=\infty$ for some $i$, then the same holds for any $i$.
+Show that in this case $A_n\to\emptyset$ in the sense of Hausdorff.
 
 \parbf{\ref{ex:Haus-conv}.}
 

@@ -2,8 +2,8 @@
 \section{Controlled concavity}
 
 Alexandrov spaces have plenty of semiconcave functions;
-for instance, square of distance function. 
-The following theorem provides a source of strictly concave functions  defined in a small open sets of finite-dimensional Alexandrov spaces. 
+for instance, squared distance functions. 
+The following theorem provides a source of strictly concave functions  defined on small open sets of finite-dimensional Alexandrov spaces. 
 
 \begin{thm}{Theorem}
 \label{thm:strictly-concave}
@@ -72,25 +72,25 @@ Then the set $K=\set{x\in\spc{L}}{f(x)\ge -\eps}$ forms a closed convex neighbor
 
 
 \begin{thm}{Corollary}\label{cor:convex-nbhd}
-Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrary small convex closed neighborhood $K$ and a strictly concave function $f$ defined in a neighborhood of $K$ such that $p$ is the maximum point of $f$
+Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrarily small convex closed neighborhood $K$ and a strictly concave function $f$ defined in a neighborhood of $K$ such that $p$ is the maximum point of $f$
 and $f|_{\partial K}=0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:no-conc}
-Construct an Alexandrov space $\spc{L}$ such that there is no strictly concave function with open domain of definition in $\spc{L}$.
+Construct an Alexandrov space $\spc{L}$ such that there is no strictly concave function with an open domain of definition in $\spc{L}$.
 \end{thm}
 
 
 \section{Liftings}
 
-Suppose that the Gromov--Haudorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficienlty small, so we may think that both spaces $\spc{L}$ and $\spc{L}'$ lie at small Hausdorff distance in an ambient metric space $\spc{W}$.
+Suppose that the Gromov--Haudorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{L}$ and $\spc{L}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
 In particular, we may choose a small $\eps>0$, so that for any point $p\in \spc{L}$, there is a point $p'\in \spc{L}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
 the point $p'$ will be called a \index{lifting}\emph{lifting} (or \emph{$\eps$-lifting}) of $p$ in $\spc{L}'$.
 We may choose a lifting $p'\in\spc{L}'$ for every point $p\in\spc{L}$, 
 in this case the map $p\mapsto p'$ is called a {}\emph{($\eps$-)lifting map}.
 
 Note that the lifting is not uniquely defined.
-The lifting maps is not assumed to be continuous.
+The lifting map is not assumed to be continuous.
 When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{L},\spc{L}'\hookrightarrow\spc{W}$,
 as well as $\spc{W}$ are chosen.
 
@@ -116,9 +116,9 @@ the intersection $\Omega_{i_1}\cap\dots\cap \Omega_{i_m}$ is non-empty.
 \includegraphics{mppics/pic-1402}
 \end{figure}
 The obtained simplicial complex $\spc{N}$ is called the \index{nerve}\emph{nerve} of the covering $\{\Omega_i\}$.
-Evidently $\spc{N}$ is a finite simplicial complex ---
+Evidently, $\spc{N}$ is a finite simplicial complex ---
 it is a subcomplex of a simplex with the vertices $\{v_1,\dots,v_k\}$.
-Recall that $\Star_{v_i}$ denotes the union of all simplexes in $\spc{N}$ that shares vertex $v_i$.
+Recall that $\Star_{v_i}$ denotes the union of all simplices in $\spc{N}$ that shares vertex $v_i$.
 
 The next statement follows from \cite[4G.3]{hatcher}.
 
@@ -147,7 +147,7 @@ Then $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $
 Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
 \end{thm}
 
-Applying this theorem with the Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:pack-vol}, we get the following.
+Applying this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:pack-vol}, we get the following.
 
 
 \begin{thm}{Theorem}\label{thm:h-finiteness}
@@ -157,7 +157,7 @@ here we assume that an integer $m$, and $v_0>0$ and $D>0$ are given.
 
 \parit{Proof of \ref{thm:h-finiteness} modulo \ref{thm:h-stability}.}
 Assume the contrary, then we can choose a sequence of spaces $\spc{L}_1,\spc{L}_2,\dots$ that have different homotopy types and satisfy the assumptions of the theorem.
-By Gromov's compactness theorem, we can assume that $\spc{L}_n$ converges to say $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
+By Gromov's selection theorem, we can assume that $\spc{L}_n$ converges to say $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
 
 By \ref{ex:pack-vol}, $\dim \spc{L}_\infty=m$.
 It remains to apply \ref{thm:h-stability}.
@@ -172,13 +172,13 @@ we can ensure that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bi
 
 Suppose that $W=\bigcap_{i\in S}\Omega_{i}\ne \emptyset$.
 Then $W$ is contractible.
-Indeed the function 
+Indeed, the function 
 \[f_S\df\min_{i\in S} f_i\]
-is strictly concave and it vanished on the boundary of $W$.
+is strictly concave and it vanishes on the boundary of $W$.
 The $f_S$-gradient flow $(t,x)\mapsto \GF_{f_S}^t(x)$ defines a homotopy
 $[0,\infty)\times W\to W$.
 By the first distance estimate (\ref{thm:dist-est}), $\GF_{f_S}^t(x)$ converges to the (necessarily unique) maximum point of $f_S$ as $t\to\infty$.
-Therefore, in the obtained homotoly we can parametrize $[0,\infty)$ by $[0,1)$ and extend the homotopy by continiously to $[0,1]$;
+Therefore, in the obtained homotopy we can parametrize $[0,\infty)$ by $[0,1)$ and extend the homotopy continuously to $[0,1]$;
 thus we get that $W$ is contractible.
 In other words, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem (\ref{thm:nerve}).
 
@@ -210,10 +210,10 @@ The homotopy-type finiteness theorem (\ref{thm:h-finiteness})  illustrates this 
 
 Originally, Gromov's selection theorem was proved for Riemannian manifolds with a lower bound on Ricci curvature \cite{gromov1981}.
 It motivates the study of limits iof manifolds with lower Ricci curvature bounds and their synthetic generalizations, the so-called $\mathrm{CD}(K,m)$ spaces; $\mathrm{CD}$ stands for curvature-dimension condition.
-This theory has serious applications in Alexandrov geometry;
-in particular, it provides a version of Liouville theorem about phase-space volume of geodesic flow in Alexandrov space \cite{brue-mondino-semola}.
+This theory has significant applications in Alexandrov geometry;
+in particular, it provides a version of the Liouville theorem about phase-space volume of geodesic flow in Alexandrov space \cite{brue-mondino-semola}.
 
-The construction of strictly concave function is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
+The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
 
 Let us list some results that can be proved by applying Gromov's selection theorem
 in the same fashion as in the proof of homotopy-type finiteness theorem (\ref{thm:h-finiteness}).
@@ -227,7 +227,7 @@ Here $\beta_i(M)$ denotes $i^\text{th}$ Betti number of $M$.
 
 Gromov's original proof \cite{gromov-1981} of the Betti-number theorem did not use Alexandrov geometry directly;
 but it is quite natural to prove it via Gromov's selection theorem.
-The following result proved the second author \cite{petrunin2008}, and it uses the same technique.
+The following result was proved by the second author \cite{petrunin2008}, and it uses the same technique.
 
 \begin{thm}{Scalar curvature bound}
 There is a constant $\Const=\Const(m,D,\kappa)$ such that 

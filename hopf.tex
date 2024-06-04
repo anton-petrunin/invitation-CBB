@@ -3,23 +3,23 @@
 
 \section{Definition}
 
-Let us give an inductive definition the boundary for finite-dimensional Alexandrov spaces.
+Let us give an inductive definition of the boundary for finite-dimensional Alexandrov spaces.
 
 Suppose $\spc{L}$ is a 1-dimensional Alexandrov space.
 By Exercise~\ref{ex:dim=1},
 $\spc{L}$ is homeomorphic to a 1-dimensional manifold (possibly with non-empty boundary).
-It allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of the manifold.
+This  allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
 Suppose  $\spc{L}$ is $m$-dimensional Alexandrov space.
 We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
 $\partial\Sigma_p\ne\emptyset$.
-By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is $(m-1)$-dimensional Alexandrov space;
+By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is an $(m-1)$-dimensional Alexandrov space;
 therefore its boundary is already defined and hence this inductive definition makes sense.
 
 It is instructive to check the following statements
 \begin{itemize}
-\item For closed convex set $K\subset \EE^m$ with non-empty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
+\item For a closed convex set $K\subset \EE^m$ with non-empty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
 \item If $\spc{L}\iso\spc{L}_1\times\spc{L}_2$ is a finite-dimensional Alexandrov space,
 then
 \[\partial \spc{L}=(\partial\spc{L}_1\times\spc{L}_2)\,\cup\,(\spc{L}_1\times\partial\spc{L}_2)\]
@@ -31,11 +31,11 @@ where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma
 
 \section{Conic neighborhoods}
 
-The following statement \cite{perelman:morse} is close relative of Perelman's stability theorem \ref{thm:stability}.
+The following statement \cite{perelman:morse} is a close relative of Perelman's stability theorem \ref{thm:stability}.
 % but its proof is  simpler .
 We are going to use this result without proof.
 
-Recall that logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
+Recall that the logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
 For any point $p$ in a finite-dimensional Alexandrov space $\spc{L}$
@@ -49,15 +49,15 @@ Moreover, we may assume that
 \eps\to 0.\]
 \end{thm}
 
-This statement is often used together with \textit{uniqueness of conic neighborhood} stated below.
+This statement is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
 Suppose that an open  neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
 % openness is very important. it's false otherwise
 admits a homeomorphism to $\Cone\Sigma$ such that $x$ is mapped to the origin of the cone.
 In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
 
-\begin{thm}{Uniqueness of conic neighborhood}\label{lem:kwun}
-Any two conic neighborhoods of a given point in a metric space are \index{pointed homeomorphic}\emph{pointed homeomorphic}; that is, there is a homeomorphism between neighborhoods that maps the origin of the cone to the origin.
+\begin{thm}{Uniqueness of conic neighborhoods}\label{lem:kwun}
+Any two conic neighborhoods of a given point in a metric space are \index{pointed homeomorphic}\emph{pointed homeomorphic}; that is, there is a homeomorphism between neighborhoods that maps the origin of one cone to the origin of the other.
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:conic}
@@ -86,8 +86,7 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 
 \section{Topology}
 
-The following theorem states that the existence of boundary is a topological property
-despite our definition used geometry.
+The following theorem states that boundary is an object of topology, despite our definition have used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
 Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional Alexandrov spaces.
@@ -113,7 +112,7 @@ The first statement follows from \ref{thm:dim=dim}.
 
 Suppose we have a counterexample, say $\partial \spc{L}\ne \emptyset$, but $\partial \spc{L}'=\emptyset$.
 Let $k\df\rank \spc{L}$ and $k'\df\rank \spc{L}'$.
-We can assume that the pair $(k,k')$ is minimal in the lexicographic order;
+We can assume that the pair $(k,k')$ is minimal in lexicographic order;
 in particular, $k$ is minimal.
 Let $x\mapsto x'$ be a homeomorphism from $\spc{L}$ to $\spc{L}'$.
 
@@ -128,7 +127,7 @@ By \ref{ex:conic-tangen:tangent}, $\T_x\cong\T_{x'}$.
 Note that $\partial \T_x\ne\emptyset$ and $\partial \T_{x'}=\emptyset$.
 Therefore, we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones
 and the homeomorphism sends the origin to the origin.
-The remaining part of the proof is divided in three cases.
+The remaining part of the proof is divided into three cases.
 
 \parit{Case 1.}
 Suppose $k>1$.
@@ -140,7 +139,7 @@ Choose $y$ that projects to $z$;
 in particular, $\rank\T_y<\rank\spc{L}$.
 By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
 $\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
-The latter contradicts contradicts minimality of $k$.
+The latter contradicts the minimality of $k$.
 
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
 Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$;
@@ -149,7 +148,7 @@ therefore, $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
 Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
 Since $\partial\spc{L}\cong\RR^{m-1}$,
 the image of $\partial\spc{L}$ in $\spc{L}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
-In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has nonzero projection in $\spc{C}'$.
+In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has a nonzero projection in $\spc{C}'$.
 Observe that $\T_y\cong\T_{y'}$,
 \[
 \rank\T_y\le k=1,
@@ -227,7 +226,7 @@ The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two cop
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{L}$ defined by $(x,i)\mapsto x$ is a short map. 
-The metric on $\spc{W}$ can be also defined explicitly as
+The metric on $\spc{W}$ can also be defined explicitly as
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
 \dist{x}{y}{\spc{X}}&\text{if}\quad i= j.
@@ -290,7 +289,7 @@ Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
 
 Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
-Therefore $\Cone \Xi$ contains a line in directions of $\xi_0$ and $\xi_1$;
+Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
@@ -516,24 +515,24 @@ for any $x\in\partial \spc{L}$.
 
 \section{Remarks}
 
-Note that doubling of a finite-dimensional Alexandrov space across its boundary is an Alexandrov space without boundary.
+Note that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
 
 For spaces without boundary the following tools become available.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
-Any compact finite-dimensional Alexandrov space $\spc{L}$ without boundary has a fundamental class cohomology with $\ZZ/2$ coefficients;
+Any compact finite-dimensional Alexandrov space $\spc{L}$ without boundary has a fundamental class with $\ZZ/2$ coefficients;
 that is, if $\spc{L}$ is $m$-dimensional, then
 \[H^m(\spc{L},\ZZ/2)=\ZZ/2.\]
 
 \end{thm}
 
-This lemma was proved by Kartsen Grove and Peter Perersen \cite{grove-petersen}.
-Originally it was proved for Alexander--Spanier cohomology, but for Alexandrov spaces it is the same as singular cohomology.
+This lemma was proved by Karsten Grove and Peter Petersen \cite{grove-petersen}.
+Originally it was proved for Alexander--Spanier cohomology, but for Alexandrov spaces it is the same as singular cohomology.\footnote{\red A: Vitya, could you find a reference?}
 It implies, for example, that on finite-dimensional Alexandrov spaces without boundary 
-gradient flow for $\lambda$-concave finction is an onto map;
-in other words gradient curves can be extended into past.
-It is also used in the proof of the following version of domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
+the gradient flow for a $\lambda$-concave function is an onto map;
+in other words, gradient curves can be extended into the past.
+It is also used in the proof of the following version of the domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
 \begin{thm}{Domain invariance}\label{thm-inv-domain}
 Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
@@ -547,7 +546,7 @@ Theorem~\ref{thm:spherical-nbhd} can be used to prove the following.
 Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into topological manifolds $S_0,\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
 Moreover,
 \begin{subthm}{}
-closure of $S_{m-1}$ is the boundary of the space, and
+the closure of $S_{m-1}$ is the boundary of the space, and
 \end{subthm}
 
 \begin{subthm}{}
@@ -556,7 +555,7 @@ $S_{m-2}=\emptyset$.
 
 \end{thm}
 
-Let us mention that this statement implies that compact finite-dimensional Alexandrov space has homotopy type of a finite CW complex,
+Let us mention that this statement implies that a compact finite-dimensional Alexandrov space has the homotopy type of a finite CW complex,
 but it seems to be unknown if it has to be homeomorphic to a CW complex.
 
 The stratification theorem~\ref{thm:top-stratification} can be sharpened as follows.
@@ -583,19 +582,19 @@ Let $f$ be a semiconcave function.
 A point $p\in \Dom f$ is called \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$; 
 otherwise it is called \index{regular point}\emph{regular}.
 
-The following statement plays technical role in the proof of stability theorem,
-but this is also a useful technical tool.
+The following statement plays a technical role in the proof of stability theorem,
+but it is also a useful technical tool on its own.
 
 \begin{thm}{Morse lemma}
 Let $f$ be a semiconcave function on a finite-dimensional Alexandrov space without boundary.
 Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
-Then an open neighborhood $\Omega$ of $K$ admits homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
+Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-Subsets in Alexandrov spaces that satisfy condition in \ref{thm:partial-grad:flow} are called extremal.
+Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if for any $x\in E$
 and $f$-gradient curve that starts in $E$ remains in $E$;
-here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.\footnote{ {\red V: should we add the condition that $E$ is closed?} A: No it follows.}
+here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.\footnote{ {\red V: should we add the condition that $E$ is closed?} A: No, it follows.}
 
 Extremal subsets were introduced by Grigori Perelman and the second author \cite{perelman-petrunin}.
 They will pop up in the next lecture.
