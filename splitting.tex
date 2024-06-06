@@ -56,8 +56,9 @@ where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lin
 
 
 Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
-We will write 
-\[\spc{X}=A\oplus B\]\index{$A\oplus B$}
+A metric space $\spc{X}$ is a \index{direct sum}\emph{direct sum} of its two $A$ and $B$,
+or briefly,
+\[\spc{X}=A\oplus B\]\index{$A\oplus B$ (direct sum)}
 if there are projections $\proj_A\:\spc{X}\to A$ 
 and 
 $\proj_B\:\spc{X}\to B$
@@ -496,15 +497,15 @@ Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length spa
 \section{Linear dimension}
 
 Let $\spc{L}$ be an Alexandrov space.
-We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim \spc{L}$}$\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
+We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim$}$\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{L}$ at some point $p\in \spc{L}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 If not stated otherwise, dimension will mean linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that, we will use \index{$\dim \spc{L}$}$\dim$ for $\LinDim$.
+after that, we will use \index{$\dim$}$\dim\spc{L}$ for $\LinDim\spc{L}$.
 
-\begin{thm}{(\textit{n}+1)-comparison}
+\begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{L}$ be an $\Alex0$ space.
 Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there exists a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
@@ -674,44 +675,47 @@ more details are given in the hints.
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
 Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse}.
 Assume $\eps>0$ is sufficiently small.
-Given $\bm{y}=(y_1,y_2,\dots,y_m)\in \RR^m$, 
+Given $\bm{y}\z=(y_1,\z\dots,y_m)\in \RR^m$, 
 consider the function on $\spc{L}$ defined by
 \[f_{\bm{y}}(x)=\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
 
+
 \begin{subthm}{ex:proof-right-inverse:grad}
-There is $r>0$ such that 
-Show that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$ for some $\lambda$ and
+Show that for some fixed $r>0$ and $\lambda$, the function $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$,
 \begin{enumerate}[(i)]
-\item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})<-\tfrac{1}{10}\cdot\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
-\item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})>\tfrac{1}{10}\cdot\eps^2$ if 
+\item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})<-\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
+\item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})>\eps^2$ if 
 \[\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0.\]
 \end{enumerate}
-for any $x\in \oBall(p,r)$.
+at any $x\in \oBall(p,r)$.
 
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:alpha}
 Let $\alpha_{\bm{y}}$ be $f_{\bm{y}}$-gradient curve that starts at $p$.
 Use \ref{SHORT.ex:proof-right-inverse:grad} to show that 
-if for some $\bm{y}\in\RR^m$ and $t_0\le\tfrac{r}{2}$ we have
-$|\distfun_{\bm{a}}{p}-\bm{y}|
-\le
-\tfrac{\eps^2}{10}\cdot t_0$, then 
-$
+\[
 \distfun_{\bm{a}}{[\alpha_{\bm{y}}(t_0)]}
 = 
-\bm{y}$.
+\bm{y}\]
+if 
+$\tfrac1{\eps^2}\cdot|\distfun_{\bm{a}}{p}-\bm{y}|
+\le
+t_0
+\le
+\tfrac{r}{2}$.
+
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:end}
-Let $t_0(\bm{y})=\tfrac{10}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
+Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-continuous in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2\cdot r}{20} )\subset\RR^m$
+continuous in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
-This finishes the proof of \ref{thm:right-inverse}.
 \end{subthm}
 
+Note that this finishes the proof of \ref{thm:right-inverse}.
 \end{thm}
 
 %??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.

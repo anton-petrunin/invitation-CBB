@@ -681,13 +681,101 @@ Hence there $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
 
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
+By \ref{ex:distfun-semiconcave}, each function $\distfun_{a_i}$ is semiconcave in a small neighborhood of $p$.
+Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$.
+Choose $\alpha>0$ such that $\angk{x}{a_i}{a_j}>\tfrac\pi2+\alpha$ for all $i\ne j$;
+we may assume that $\alpha<\tfrac{1}{10}$.
+
+By the definition of gradient and \ref{ex:d(distfun):<}, we have
+\begin{align*}
+-(\dd_x\distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})
+&\ge
+\<\dir x{a_i},\nabla_x f_{\bm{y}}\>
+\ge
+\\
+&\ge
+(\dd_xf_{\bm{y}})(\dir x{a_i}).
+\end{align*}
+If $\dist{a_i}{x}{}>y_i$, then $\dd_xf_{\bm{y}}=\eps\cdot \dd_x\distfun_{a_0}$, or
+\[\dd_xf_{\bm{y}}
+=
+\min_{i\in S} \{\,\dd_x\distfun_{a_j}\,\}+\eps\cdot \dd_x\distfun_{a_0}\]
+for some nonempty subset $S\subset \{1,\dots,m\}\setminus\{i\}$.
+Furthermore, 
+\[(\dd_x\distfun_{a_j}{}{})(\dir{x}{a_i})
+\ge
+-\cos\angk{x}{a_i}{a_j}
+>
+\tfrac\alpha2\eqlbl{inq-a_j}\]
+for $j\ne i$.
+Hence (\ref{111}) holds for all sufficiently small $\eps>0$.
+
+Now assume that $\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0$.
+Then
+\[\dd_x f_{\bm{y}}\le \dd_x \distfun_{a_i}{}{}+\eps\cdot(\dd_p\distfun_{a_0}{}{}).\] 
+Applying \ref{inq-a_j}, we get
+\begin{align*}
+(\dd_x \distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})
+&\ge 
+\dd_xf_{\bm{y}}(\nabla_x f_{\bm{y}}) -\eps\cdot(\dd_x \distfun_{a_0}{}{})(\nabla_x f_{\bm{y}}) 
+\ge 
+\\
+&\ge
+\left[(\dd_xf_{\bm{y}})(\dir x{a_0})\right]^2-2\cdot \eps
+\ge
+\\
+&\ge
+\left[\tfrac\alpha2-\eps\right]^2-2\cdot \eps.
+\end{align*}
+Thus (\ref{222}) holds for all sufficiently small $\eps>0$. 
 
 \parit{\ref{SHORT.ex:proof-right-inverse:alpha}}
+Consider the following real-to-real functions:
+\[\begin{aligned}
+\phi(t)
+&\df
+\max_{i}\{\dist{a_i}{\alpha_{\bm{y}}(t)}{}-y_i\},
+\\
+\psi(t)
+&\df
+\min_{i}\{\dist{a_i}{\alpha_{\bm{y}}(t)}{}-y_i\}.
+\end{aligned}\eqlbl{eq:xy-def}\]
+Use \ref{SHORT.ex:proof-right-inverse:grad}, to show that for $t\in[0,t_0]$, we have $\phi^+(t)<-\tfrac{1}{10}\cdot\eps^2$ if $\phi(t)>0$
+and $\psi^+(t)>\tfrac{1}{10}\cdot\eps^2$ if $\psi(t)<0$.
+Conclude that $\phi(t_0)=\psi(t_0)=0$, hence the result.
 
-\parit{\ref{SHORT.ex:proof-right-inverse:end}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:end}} Straightforward application of \ref{lem:fg-dist-est} and a reformulation of \ref{SHORT.ex:proof-right-inverse:alpha}.
 
 \parbf{\ref{ex:proof-dist-chart}.}
+Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of the inequalities
+\[
+\mangle\hinge xy{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
+\]
+holds.
+Similarty, we get that at least one of the inequalities
+\[
+\mangle\hinge yx{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge yx{a_m}<\tfrac\pi2-\eps,
+\]
+holds.
 
+Suppose our statement does not hold for $x$ and $y$ in a sufficiently small neighborhood of $p$.
+It follows that 
+\[\mangle\hinge yx{a_0}<\tfrac\pi2-\eps
+\quad\text{and}\quad
+\mangle\hinge yx{a_0}<\tfrac\pi2-\eps.
+\eqlbl{eq:a0}
+\]
+Note that $\dist{x}{y}{}$ is small compared to $\dist{a_0}{x}{}$ and $\dist{a_0}{y}{}$.
+Therefore, the comparison contradicts \ref{eq:a0}. 
+
+By the construction, $f$ is Lipschitz.
+From above, we can choose $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ (if $\mangle\hinge yx{a_i}<\tfrac\pi2-\eps$, then swap $x$ and $y$).
+By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cdot \dist{x}{y}{}$.
+Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
+
+
+ 
 \parbf{\ref{ex:diam-compact:proper}.}
 Reuse the argument in the first part of the proof of Bishop--Gromov inequality.
 

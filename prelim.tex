@@ -1,6 +1,4 @@
-
 %%!TEX root = the-prelim.tex
-\mainmatter
 
 \chapter{Preliminaries}\label{chap:prelim}
 
@@ -29,7 +27,7 @@ The classical book by Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains m
 
 \section{Notations}
 
-The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by \index{$\dist{x}{y}{}$ and $\dist{x}{y}{\spc{X}}$ (distance)}$\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.\label{page:|x-y|X}
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by \index{$\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$ (distance)}$\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.\label{page:|x-y|X}
 The latter notation is used if we need to emphasize 
 that the distance is taken in the space~${\spc{X}}$.
 
@@ -96,7 +94,7 @@ However, most of the time we will work with ambient length spaces where the mean
 \section{Geodesics}
 
 Let $\spc{X}$ be a metric space 
-and $\II$\index{$\II$} a real interval. 
+and $\II$\index{$\II$ (real interval)} a real interval. 
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
 Also, note that the meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
@@ -105,7 +103,7 @@ in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if
 for any pair $s,t\in \II$.
 
 If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
-In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[{*}{*}]$}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
+In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[pq]$ (geodesic)}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
 
@@ -183,7 +181,7 @@ Show that $\spc{X}$ is a length space.
 
 \parbf{Triangles.}
 Given a triple of distinct points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
-$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig {{*}}{{*}}{{*}}$}.
+$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
 
 Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
@@ -196,7 +194,7 @@ Given three points $p,q,r$ in a metric space $\spc{X}$,
 let us define its \index{model!triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$}) to be a triangle in the Euclidean plane $\EE^2$ such that
+\index{$\modtrig$ (model triangle)}) to be a triangle in the Euclidean plane $\EE^2$ such that
 \begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
 &
 \quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
@@ -238,7 +236,7 @@ is nondecreasing in its domain of definition.
 
 \parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
 A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
-$\hinge p x y=([p x],[p y])$\index{$\hinge{{*}}{{*}}{{*}}$}.
+$\hinge p x y=([p x],[p y])$\index{$\hinge p x y$ (hinge)}.
 
 \parbf{Angles.}
 The angle measure of a hinge $\hinge p x y$ is defined as the following limit
