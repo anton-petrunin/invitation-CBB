@@ -111,6 +111,7 @@ If $f(x_i)=\infty$ for some $i$, then the same holds for any $i$.
 Show that in this case $A_n\to\emptyset$ in the sense of Hausdorff.
 
 \parbf{\ref{ex:Haus-conv}.}
+Apply the definition of Hausdorff distance (\ref{def:hausdorff-convergence}).
 
 \parbf{\ref{ex:geod-closed}.}
 Given $x_\infty,y_\infty\in\spc{X}_\infty$, chose $x_n,y_n\in \spc{X}_n$ such that $x_n\to x_\infty$ and $y_n\to y_\infty$.
@@ -592,7 +593,36 @@ Integrating this inequality, we get the second statement.
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
 
-\parbf{\ref{ex:cone-CBB}.} 
+\parbf{\ref{ex:cone-CBB}.}
+Suppose $\Cone\spc{X}$ is $\Alex0$.
+Observe that two half-lines in $\Cone\spc{X}$ that start from the origin and go into directions $x$ and $y\in\spc{X}$ form a line if and only if $\dist{x}{y}{\spc{X}}\ge \pi$.
+Apply the splitting theorem to show that for any $x\in \spc{X}$ there is at most one point $y$ such that $\dist{x}{y}{\spc{X}}\ge \pi$ and in this case we have equality.
+Conclude that $\diam \spc{X}\z\le \pi$.
+
+Now choose a quadruple of points $p,x_1,x_2,x_3\in \spc{X}$;
+we will identify $\spc{X}$ with the unit sphere in $\Cone\spc{X}$.
+Suppose $\dist{p}{x_i}{}<\tfrac\pi2$ for any $i$.
+Consider the following points in the cone: $y_i=\tfrac1{\cos \dist{p}{x_i}{\spc{X}}}\cdot x_i$, and $q=p$.
+Show that $\EE^2$-comparison for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$ implies $\SSS^2$-comparsion for $p,x_1,x_2,x_3$ in $\spc{X}$.
+Conclude that $\spc{X}$ is locally $\Alex1$. 
+Apply the globalization theorem (\ref{thm:globalization+}).
+
+Now assume $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
+By \ref{ex:perim-k>0}, perimeter of any triangle in $\spc{X}$ is at most $2\cdot\pi$.
+We need to check $\EE^2$-comparison for a given quadruple of points $q,y_1,y_2,y_3$ in $\Cone\spc{X}$.
+We can assume that non of these points is the origin, otherwise perturb them a bit.
+
+Set $x_i=y_i/|y_i|$ for each $i$ and $p=q/|q|$; we will assume that $p,x_1,x_2,x_3$ lie in $\spc{X}$, which is the unit sphere in $\Cone\spc{X}$.
+
+Assume the model triangles $\modtrig(px_1x_2)$, $\modtrig(px_2x_3)$, and $\modtrig(px_3x_1)$ are defined.
+Note that $\EE^3\iso\Cone\SSS^2$.
+Use this together with the $\SSS^2$-comparison for $p,x_1,x_2,x_3$ in $\spc{X}$ to show that $\EE^2$-comparison holds for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$.
+
+Finally if some of the model triangles is not defined, consider rescaling of $\spc{X}$ with a coefficient $\lambda$ slightly smaller than 1.
+Apply the argument above to show that the comparison holds for the corresponding points in $\Cone(\lambda\cdot\spc{X})$ and pass to the limit as $\lambda\to 1$.
+
+\parit{Comment.}
+The last part on the proof is close to the argument in \ref{thm:CBB-closed}.
 
 \parbf{\ref{ex:|antisum|}.}
 Observe that
@@ -838,7 +868,7 @@ Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
 Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
 and arrive at a contradiction.
 
-\parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson}.
+\parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson} and/or solution for ``Quotient of the Hilbert space'' in \cite{petrunin2020}.
 
 \parbf{\ref{ex:sumbetries(S^2)}}; \ref{SHORT.ex:sumbetries(S^2):1}.
 Choose an isometric $\SSS^1$-action on $\SSS^2$ that fixes poles of the sphere.
