@@ -682,9 +682,16 @@ Hence there $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
 By \ref{ex:distfun-semiconcave}, each function $\distfun_{a_i}$ is semiconcave in a small neighborhood of $p$.
-Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$.
+Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$; further we will assume that $r$ is sufficiently small.
 Choose $\alpha>0$ such that $\angk{x}{a_i}{a_j}>\tfrac\pi2+\alpha$ for all $i\ne j$;
-we may assume that $\alpha<\tfrac{1}{10}$.
+we may assume that $\alpha<\tfrac{1}{10}$;
+in particular,
+\[(\dd_x\distfun_{a_j}{}{})(\dir{x}{a_i})
+\ge
+-\cos\angk{x}{a_i}{a_j}
+>
+\tfrac\alpha2\eqlbl{inq-a_j}\]
+for $j\ne i$.
 
 By the definition of gradient and \ref{ex:d(distfun):<}, we have
 \begin{align*}
@@ -696,23 +703,26 @@ By the definition of gradient and \ref{ex:d(distfun):<}, we have
 &\ge
 (\dd_xf_{\bm{y}})(\dir x{a_i}).
 \end{align*}
-If $\dist{a_i}{x}{}>y_i$, then $\dd_xf_{\bm{y}}=\eps\cdot \dd_x\distfun_{a_0}$, or
-\[\dd_xf_{\bm{y}}
-=
-\min_{i\in S} \{\,\dd_x\distfun_{a_j}\,\}+\eps\cdot \dd_x\distfun_{a_0}\]
-for some nonempty subset $S\subset \{1,\dots,m\}\setminus\{i\}$.
-Furthermore, 
-\[(\dd_x\distfun_{a_j}{}{})(\dir{x}{a_i})
-\ge
--\cos\angk{x}{a_i}{a_j}
->
-\tfrac\alpha2\eqlbl{inq-a_j}\]
-for $j\ne i$.
+If $\dist{a_i}{x}{}>y_i$, then 
+\[\dd_xf_{\bm{y}}=\sigma+\eps\cdot \dd_x\distfun_{a_0},\]
+where $\sigma$ is a minimum of a subset of the following functions
+$0$, and $\dd_x\distfun_{a_j}$ for $0\ne j\ne i$.
+By \ref{inq-a_j}, 
+\[(\dd_x\distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})< -\tfrac\alpha2\cdot\eps.\]
 Hence (\ref{111}) holds for all sufficiently small $\eps>0$.
 
 Now assume that $\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0$.
 Then
-\[\dd_x f_{\bm{y}}\le \dd_x \distfun_{a_i}{}{}+\eps\cdot(\dd_p\distfun_{a_0}{}{}).\] 
+\begin{align*}
+\dd_x f_{\bm{y}}
+&=
+\min_{i\in S} \{\,\dd_x\distfun_{a_j}\,\}+\eps\cdot \dd_x\distfun_{a_0}
+\le
+\\
+&\le
+\dd_x \distfun_{a_i}{}{}+\eps\cdot(\dd_p\distfun_{a_0}{}{}),
+\end{align*}
+where $j\in S$ if and only if $\dist{a_i}{x}{}-y_i=\dist{a_j}{x}{}-y_j$.
 Applying \ref{inq-a_j}, we get
 \begin{align*}
 (\dd_x \distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})
@@ -727,7 +737,7 @@ Applying \ref{inq-a_j}, we get
 &\ge
 \left[\tfrac\alpha2-\eps\right]^2-2\cdot \eps.
 \end{align*}
-Thus (\ref{222}) holds for all sufficiently small $\eps>0$. 
+Thus, (\ref{222}) holds for all sufficiently small $\eps>0$. 
 
 \parit{\ref{SHORT.ex:proof-right-inverse:alpha}}
 Consider the following real-to-real functions:
