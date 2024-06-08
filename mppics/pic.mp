@@ -1553,7 +1553,7 @@ draw p4 cutbefore p3 cutafter p1;
 
 hatchfill (p1 cutafter p2 cutbefore p4) -- (p2 cutbefore p1 cutafter p3) -- (p3 cutbefore p2 cutafter p4) -- (p4 cutbefore p3 cutafter p1) -- cycle withcolor (77, 1mm, -.5bp);
 
-whitelabel(btex $F$ etex, z.o);
+whitelabel(btex $F$ etex, z.o+(0,-3));
 endfig;
 
 beginfig(1106) 

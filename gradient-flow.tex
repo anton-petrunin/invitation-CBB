@@ -12,7 +12,7 @@ converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right 
 In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
-The tangent vector $v=\dist px{}\cdot\dir px$ can be called \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$v=\log_p x$ (logarithm)}$\log_p x$);
+The tangent vector $v=\dist px{}\cdot\dir px$ can be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$\log_p x$);
 note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
 
@@ -64,7 +64,7 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on an Alexandrov space
 $\spc{L}$.
 
-A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient curve}\emph{$f$-gradient curve} if
+A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
 that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and 
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
@@ -158,7 +158,7 @@ Then
 \end{align*}
 The last two lines follow by
 the definition of differential,
-and concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
+and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 \qeds
 
 Note that the following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
@@ -190,7 +190,7 @@ Integrating, we get the result.
 
 
 The following exercise describes a global geometric property of a gradient curve without direct reference to its function.
-It is bases on the notion of \index{self-contracting curves}\emph{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, and St\'ephane Sabourau \cite{daniilidis-ley-sabourau}.
+It is based on the notion of \index{self-contracting curves}\emph{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, and Stéphane Sabourau \cite{daniilidis-ley-sabourau}.
 
 \begin{thm}{Exercise}\label{ex:elf-contracting}
 Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on an Alexandrov space
@@ -233,10 +233,10 @@ and $f$ be a locally Lipschitz semiconcave function defined on an open subset of
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
 \[\GF^t_f(x)=y.\]
-The partially defined map $\GF^t_f$ from $\spc{L}$ to itself is called the \index{gradient flow}\emph{$f$-gradient flow} for time $t$.
+The partially defined map $\GF^t_f$ from $\spc{L}$ to itself is called the \index{gradient!flow}\emph{$f$-gradient flow} for time $t$.
 Note that
 \[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}.\]
-In other words, one may think that gradient flow is a partial action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
+In other words, one may of that gradient flow as a partial action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
  
 From the first distance estimate \ref{thm:dist-est}, 
 it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{L}$.
@@ -267,22 +267,22 @@ Then for any $x\in \spc{L}$ and $t\ge 0$, we have
 as $n\to \infty$.
 \end{thm}
 
-There is a more general version of this proposition for a converging sequence $\spc{L}_n\to \spc{L}_\infty$ of spaces and converging sequence of functions $f_n\:\spc{L}_n\z\to\RR$; see \cite[16.21]{alexander-kapovitch-petrunin2024}.
+There is a more general version of this proposition for a converging sequence $\spc{L}_n\to \spc{L}_\infty$ of spaces and a converging sequence of functions $f_n\:\spc{L}_n\z\to\RR$; see \cite[16.21]{alexander-kapovitch-petrunin2024}.
 
 \section{Gradient exponent}\label{gexp}
 
-One of the technical difficulties in Alexandrov's geometry comes from
+One of the technical difficulties in Alexandrov geometry comes from
 nonextendability of geodesics. 
 In particular, the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined in the usual way, can
-be undefined in an arbitrary small neighborhood of the origin. 
+be undefined in an arbitrarily small neighborhood of the origin. 
 
-Next we construct the \index{gradient exponential map}\emph{gradient exponential map} 
+Next we construct the \index{gradient!exponential map}\emph{gradient exponential map} 
 \[\gexp_p\:\T_p\to\spc{L},\]
 which essentially solves this problem. 
-It shares many properties with the ordinary exponential map, and better in certain respects,
+It shares many properties with the ordinary exponential map and is even better in certain respects,
 even in the Riemannian universe.
 
-Let $\spc{L}$ be Alexandrov's space and $p\in \spc{L}$, consider the function $f\z=\distfun_p^2/2$.
+Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$, consider the function $f\z=\distfun_p^2/2$.
 Recall that $\Phi^t_{f}$ denotes the gradient flow.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p(v)=\lim_{n\to\infty}\Phi^{t_n}_{f}(x_n),\]
@@ -296,7 +296,7 @@ is short for any $t\ge 0$.
 If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{L},p)\to (\T_p,o_p)$,
 then $\gexp_p\:\T_p\to \spc{L}$ is the limit of $\Phi^{tn}_{f}\circ i_{e^{t_n}}$.
 This way we get that $\gexp_p$ is short as a limit of short maps.
-This observation generalized in the following proposition. 
+This observation is generalized in the following proposition. 
 
 
 \begin{thm}{Proposition}\label{prop:gexp}
@@ -319,18 +319,20 @@ Since the space is proper we can choose a limit in \ref{eq:gexp}.
 Let $\gamma$ be a geodesic that stats at $p$.
 Observe that $\gamma\circ\ln$ is an $f$-gradient curve.
 By the first distance estimate, we have that $\Phi^t_{f}$ is an $e^t$-Lipschitz.
-It implies any limit in \ref{eq:gexp} has the same value;
+This implies any limit in \ref{eq:gexp} has the same value;
 that is $\gexp_p$ is uniquely defined.
 
-Applying again the $\Phi^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is a short map
+Again, since $\Phi^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is a short map
 \qeds
 
 \section{Remarks}
 
-The gradient flow was developed to prove the existence of quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}, but it turned out that gradient flow and gradient exponent is a more useful technical tool in Alexandrov geometry.
+The idea to use gradient flow in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
+Originaly, the gradient flow was developed to construct quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}, but it turned out that gradient flow and gradient exponent are better tools.
+Very soon these tools found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
 
 
-For general curvature bound $\kappa$, the construction of gradient exponent has to be modified;
+For a general curvature bound $\kappa$, the construction of gradient exponent has to be modified;
 it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}.
 
 For $\kappa=-1$ we have 
@@ -342,12 +344,12 @@ and
 Similarly, for $\kappa=1$ we have $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
 \[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{L}}\le \side\hinge0vw_{\SSS^2},\]
-but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\pi$.
+but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
-The gradient exponential map $\gexp_p$  for a point $p$ a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus of $p$ but \emph{is different } from the  Riemannian exponential outside it.
-The following statement shows that this technique can prove something nontrivial even fro Riemannian manifolds.
+The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus of but \textit{is different} from the  Riemannian exponential after that.
+The following statement shows that this technique can prove something nontrivial even for Riemannian manifolds.
 
-\begin{thm}{Propbem}
+\begin{thm}{Problem}
 Let $(M,g)$ be a complete $m$-dimensional Riemannian with sectional curvature at least $1$.
 Assume $M$ is not homeomorphic to $\SSS^m$.
 Show that there is a short onto map $\SSS^m\to (M,g)$.

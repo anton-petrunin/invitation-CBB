@@ -27,7 +27,8 @@ pdfauthor={\theauthors}
 %\overfullrule=100mm
 \def\red{\color{red}}
 \begin{document}
-\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\renewcommand\emph[1]{#1}}{}
+
+\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\def\emph{\textit}\renewcommand\footnote[1]{\ (#1)}\renewcommand\z{}\renewcommand\section[1]{SECTION. {#1} SECTION.}}{}
 
 \frontmatter
 \title{\thetitle}

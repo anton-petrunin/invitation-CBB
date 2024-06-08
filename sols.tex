@@ -2,6 +2,7 @@
 
 \parbf{\ref{ex:compact+connceted}.}
 Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
+%???eps-net are not defined!!!
 We can assume that $\eps_0>\diam K$, and $N_0$ is a one-point set.
 If $\dist{x}{y}{}<\eps_k$ for some $x\in N_{k+1}$ and $y\in N_{k}$, then connect them by a curve of length at most $\eps_k$.
 
@@ -31,10 +32,10 @@ Given a pair of points $p$ and $q$, choose a sequence of paths $\gamma_n$ from $
 \[\length\gamma_n\to \dist pq{}
 \quad\text{as}\quad
 n\to\infty;\]
-it exists since we are in a length space.
+these paths exist since we are in a length space.
 Note that we can assume that each $\gamma_n$ is parametrized proportional to the arc length;
 in particular, $\gamma_n$ are equicontinuous.
-Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ for some $r<\infty$.
+Show that paths $\gamma_n$ lie in a closed ball, say $\cBall[p,r]$ of some radius $r<\infty$.
 Since the space is proper, $\cBall[p,r]$ is compact.
 By Arzelà--Ascoli theorem, we can pass to a converging subsequence of $\gamma_n$.
 Show that its limit is a geodesic path from $p$ to $q$.
@@ -50,10 +51,10 @@ $(\begin{smallmatrix}
 h^2&0
 \\
 0&1
-\end{smallmatrix})$, where $h=h(\kappa,r)$.
+\end{smallmatrix})$, where $h=h(\kappa,r)\ge 0$.
 Calculate $h(\kappa,r)$.
 Show that for fixed $r$, the function $r\mapsto h(\kappa,r)$ is nonincreasing in the domain of definition.
-Suppose $\kappa<\Kappa$, consider the map $\MM^2(\kappa)\to\MM^2(\Kappa)$ that sends a point to the point with the same polar coordinates.
+Suppose $\kappa<\Kappa$, consider the partially defined map $\MM^2(\kappa)\to\MM^2(\Kappa)$ that sends a point to the point with the same polar coordinates.
 Show that this map is short in the domain of definition.
 Use it to prove the statement in the exercise.
 
@@ -64,7 +65,7 @@ and
 $\angk p{x}{y}_{\EE^2}-\angk p{x}{y}_{\HH^2}=O(\dist[2]{p}{x}{}+\dist[2]{p}{y}{})$.
 
 \parbf{\ref{ex:undefined-angle}.}
-Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by $\ell^\infty$-norm.
+Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by the $\ell^\infty$-norm.
 
 \parbf{\ref{ex:adjacent-angles}.}
 Assume $\mangle\hinge pxz+\mangle\hinge pyz<\pi$.
@@ -91,11 +92,32 @@ Conclude that
 where $\delta(\eps)\to 0$ as $\eps\to0$.
 The statement follows since $\eps>0$ is arbitrary.
 
+\parbf{\ref{ex:generalized-selection}.}
+Since space is proper, it is separable; 
+that is, we can choose an countable everywhere dense set $\{x_1,x_2,\dots\}$.
+
+Let $A_1,A_2,\dots$ be a sequence of closed set.
+Applying the diagonal procedure, we can pass to subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$;
+denote its limit by $f(x_i)$.
+
+Since $\distfun_{A_n}$ is $1$-Lipschitz for any $n$, we have 
+\[|f(x_i)-f(x_j)|\le \dist{x_i}{x_j}{}\]
+for all $i$ and $j$.
+Suppose $f(x_i)<\infty$ for some $i$, note that the same holds for any $i$.
+Therefore, the function $f$ can be extended to a continuous function defined on the whole ambient space.
+Show that $A_\infty=f^{-1}\{0\}$ is the limit of $A_n$ in the sense of Hausdorff.
+
+If $f(x_i)=\infty$ for some $i$, then the same holds for any $i$.
+Show that in this case $A_n\to\emptyset$ in the sense of Hausdorff.
+
+\parbf{\ref{ex:Haus-conv}.}
+Apply the definition of Hausdorff distance (\ref{def:hausdorff-convergence}).
+
 \parbf{\ref{ex:geod-closed}.}
 Given $x_\infty,y_\infty\in\spc{X}_\infty$, chose $x_n,y_n\in \spc{X}_n$ such that $x_n\to x_\infty$ and $y_n\to y_\infty$.
 Let $z_n$ be midpoint of $[x_ny_n]$.
-Since $\spc{X}_\infty$ is proper, we can choose a subsequence of $z_m$ that converges to a point, say $z\infty\in \spc{X}_\infty$.
-Note that $z\infty$ is a midpoint of $x_\infty$ and $y_\infty$ and apply Menger's lemma (\ref{lem:mid>geod}).
+Since $\spc{X}_\infty$ is proper, we can choose a subsequence of $z_m$ that converges to a point, say $z_\infty\in \spc{X}_\infty$.
+Note that $z_\infty$ is a midpoint of $x_\infty$ and $y_\infty$ and apply Menger's lemma (\ref{lem:mid>geod}).
 
 \parbf{\ref{ex:non-contracting-map}.}
 Given a pair of points $x_0,y_0\in \spc{K}$, 
@@ -156,14 +178,22 @@ Show that we can pass to a subsequence again, so that $\spc{X}_n$ converges in t
 Observe that $\spc{Y}\le \spc{X}_\infty$ and $\spc{X}_\infty\le\spc{Y}$.
 By \ref{ex:non-contracting-map}, $\spc{Y}\iso \spc{X}_\infty$ --- a contradiction.
 
-\parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$
+\parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$.
+
+\parbf{\ref{ex:GH-noncompact}.}
+Consider graphs of the following functions with the induced metric from $\RR^2$.
+\[
+x\mapsto \cos x+\cos \tfrac x\pi
+\quad\text{and}\quad
+x\mapsto \cos x+\sin \tfrac x\pi.
+\]
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
 The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
 \textit{Any spherical triangle has perimeter at most $2\cdot\pi$.}
 Choose a spherical triangle $[xyz]$.
 Let $x'$ be the antipode of $x$; that is $x'=-x$.
-The spherical triangle inequality implies that
+The spherical triangle inequality (\ref{claim:angle-3angle-inq} or \ref{ex:angle-triangle}) implies that
 \[\dist{x}{z}{\mathbb{S}^2}\le \dist{y}{x'}{\mathbb{S}^2}+\dist{x'}{z}{\mathbb{S}^2}.\]
 Observe that 
 \[
@@ -296,6 +326,13 @@ Hence we have
 for any $v,w$.
 That is the norm is quadratic and the statement follows.
 
+\parbf{\ref{ex:alm-min}.}
+Suppose such point does not exists;
+that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
+Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
+Show that this sequence is Cauchy; denote its limit by $p_\infty$.
+Arrive at a contradiction by showing that $r(p_\infty)\le0$.
+
 \parbf{\ref{ex:CBB(1)notitCBB(0)}.}
 Note that $\spc{X}$ has no defined sphericlal model angles;
 therefore it has curvature $\ge 1$.
@@ -351,13 +388,6 @@ Moreover, this inequality holds as far as
 But this inequality holds for all $\tilde z$ since  $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
 Hence we get $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
 The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
-
-\parbf{\ref{ex:alm-min}.}
-Suppose such point does not exists;
-that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
-Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
-Show that this sequence is Cauchy; denote its limit by $p_\infty$.
-Arrive at a contradiction by showing that $r(p_\infty)\le0$.
 
 \parbf{\ref{ex:dir-compact}.}
 Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
@@ -563,8 +593,36 @@ Integrating this inequality, we get the second statement.
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
 
-\parbf{\ref{ex:cone-CBB}.} Suppose $\Cone\spc{X}$ is $\Alex0$.
-Use 
+\parbf{\ref{ex:cone-CBB}.}
+Suppose $\Cone\spc{X}$ is $\Alex0$.
+Observe that two half-lines in $\Cone\spc{X}$ that start from the origin and go into directions $x$ and $y\in\spc{X}$ form a line if and only if $\dist{x}{y}{\spc{X}}\ge \pi$.
+Apply the splitting theorem to show that for any $x\in \spc{X}$ there is at most one point $y$ such that $\dist{x}{y}{\spc{X}}\ge \pi$ and in this case we have equality.
+Conclude that $\diam \spc{X}\z\le \pi$.
+
+Now choose a quadruple of points $p,x_1,x_2,x_3\in \spc{X}$;
+we will identify $\spc{X}$ with the unit sphere in $\Cone\spc{X}$.
+Suppose $\dist{p}{x_i}{}<\tfrac\pi2$ for any $i$.
+Consider the following points in the cone: $y_i=\tfrac1{\cos \dist{p}{x_i}{\spc{X}}}\cdot x_i$, and $q=p$.
+Show that $\EE^2$-comparison for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$ implies $\SSS^2$-comparsion for $p,x_1,x_2,x_3$ in $\spc{X}$.
+Conclude that $\spc{X}$ is locally $\Alex1$. 
+Apply the globalization theorem (\ref{thm:globalization+}).
+
+Now assume $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
+By \ref{ex:perim-k>0}, perimeter of any triangle in $\spc{X}$ is at most $2\cdot\pi$.
+We need to check $\EE^2$-comparison for a given quadruple of points $q,y_1,y_2,y_3$ in $\Cone\spc{X}$.
+We can assume that non of these points is the origin, otherwise perturb them a bit.
+
+Set $x_i=y_i/|y_i|$ for each $i$ and $p=q/|q|$; we will assume that $p,x_1,x_2,x_3$ lie in $\spc{X}$, which is the unit sphere in $\Cone\spc{X}$.
+
+Assume the model triangles $\modtrig(px_1x_2)$, $\modtrig(px_2x_3)$, and $\modtrig(px_3x_1)$ are defined.
+Note that $\EE^3\iso\Cone\SSS^2$.
+Use this together with the $\SSS^2$-comparison for $p,x_1,x_2,x_3$ in $\spc{X}$ to show that $\EE^2$-comparison holds for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$.
+
+Finally if some of the model triangles is not defined, consider rescaling of $\spc{X}$ with a coefficient $\lambda$ slightly smaller than 1.
+Apply the argument above to show that the comparison holds for the corresponding points in $\Cone(\lambda\cdot\spc{X})$ and pass to the limit as $\lambda\to 1$.
+
+\parit{Comment.}
+The last part on the proof is close to the argument in \ref{thm:CBB-closed}.
 
 \parbf{\ref{ex:|antisum|}.}
 Observe that
@@ -596,8 +654,8 @@ and since $|u|=|u^*|$, we have equality.
 Apply \ref{ex:-u}.
 
 \parbf{\ref{ex:tangent=Em}.}
-Apply \ref{ex:grad-dist:lin} to show that for any finite set of points $p_1,\dots,p_n$ there is a G-delta dense set of points $x$ such that $\Lin_x\ni \dir x{p_i}$ for every $i$.
-???
+By \ref{ex:diam-compact:proper}, $\spc{L}$ is \emph{separable}; that is, it contains a countable dense set of points.
+Apply \ref{cor:euclid-subcone} to this set.
 
 \parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
 
@@ -623,12 +681,113 @@ Hence there $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
 
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
+By \ref{ex:distfun-semiconcave}, each function $\distfun_{a_i}$ is semiconcave in a small neighborhood of $p$.
+Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$; further we will assume that $r$ is sufficiently small.
+Choose $\alpha>0$ such that $\angk{x}{a_i}{a_j}>\tfrac\pi2+\alpha$ for all $i\ne j$;
+we may assume that $\alpha<\tfrac{1}{10}$;
+in particular,
+\[(\dd_x\distfun_{a_j}{}{})(\dir{x}{a_i})
+\ge
+-\cos\angk{x}{a_i}{a_j}
+>
+\tfrac\alpha2\eqlbl{inq-a_j}\]
+for $j\ne i$.
+
+By the definition of gradient and \ref{ex:d(distfun):<}, we have
+\begin{align*}
+-(\dd_x\distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})
+&\ge
+\<\dir x{a_i},\nabla_x f_{\bm{y}}\>
+\ge
+\\
+&\ge
+(\dd_xf_{\bm{y}})(\dir x{a_i}).
+\end{align*}
+If $\dist{a_i}{x}{}>y_i$, then 
+\[\dd_xf_{\bm{y}}=\sigma+\eps\cdot \dd_x\distfun_{a_0},\]
+where $\sigma$ is a minimum of a subset of the following functions
+$0$, and $\dd_x\distfun_{a_j}$ for $0\ne j\ne i$.
+By \ref{inq-a_j}, 
+\[(\dd_x\distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})< -\tfrac\alpha2\cdot\eps.\]
+Hence (\ref{111}) holds for all sufficiently small $\eps>0$.
+
+Now assume that $\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0$.
+Then
+\begin{align*}
+\dd_x f_{\bm{y}}
+&=
+\min_{i\in S} \{\,\dd_x\distfun_{a_j}\,\}+\eps\cdot \dd_x\distfun_{a_0}
+\le
+\\
+&\le
+\dd_x \distfun_{a_i}{}{}+\eps\cdot(\dd_p\distfun_{a_0}{}{}),
+\end{align*}
+where $j\in S$ if and only if $\dist{a_i}{x}{}-y_i=\dist{a_j}{x}{}-y_j$.
+Applying \ref{inq-a_j}, we get
+\begin{align*}
+(\dd_x \distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})
+&\ge 
+\dd_xf_{\bm{y}}(\nabla_x f_{\bm{y}}) -\eps\cdot(\dd_x \distfun_{a_0}{}{})(\nabla_x f_{\bm{y}}) 
+\ge 
+\\
+&\ge
+\left[(\dd_xf_{\bm{y}})(\dir x{a_0})\right]^2-2\cdot \eps
+\ge
+\\
+&\ge
+\left[\tfrac\alpha2-\eps\right]^2-2\cdot \eps.
+\end{align*}
+Thus, (\ref{222}) holds for all sufficiently small $\eps>0$. 
 
 \parit{\ref{SHORT.ex:proof-right-inverse:alpha}}
+Consider the following real-to-real functions:
+\[\begin{aligned}
+\phi(t)
+&\df
+\max_{i}\{\dist{a_i}{\alpha_{\bm{y}}(t)}{}-y_i\},
+\\
+\psi(t)
+&\df
+\min_{i}\{\dist{a_i}{\alpha_{\bm{y}}(t)}{}-y_i\}.
+\end{aligned}\eqlbl{eq:xy-def}\]
+Use \ref{SHORT.ex:proof-right-inverse:grad}, to show that for $t\in[0,t_0]$, we have $\phi^+(t)<-\tfrac{1}{10}\cdot\eps^2$ if $\phi(t)>0$
+and $\psi^+(t)>\tfrac{1}{10}\cdot\eps^2$ if $\psi(t)<0$.
+Conclude that $\phi(t_0)=\psi(t_0)=0$, hence the result.
 
-\parit{\ref{SHORT.ex:proof-right-inverse:end}}
+
+\parit{\ref{SHORT.ex:proof-right-inverse:end}} Straightforward application of \ref{lem:fg-dist-est} and a reformulation of \ref{SHORT.ex:proof-right-inverse:alpha}.
 
 \parbf{\ref{ex:proof-dist-chart}.}
+Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of the inequalities
+\[
+\mangle\hinge xy{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
+\]
+holds.
+Similarty, we get that at least one of the inequalities
+\[
+\mangle\hinge yx{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge yx{a_m}<\tfrac\pi2-\eps,
+\]
+holds.
+
+Suppose our statement does not hold for $x$ and $y$ in a sufficiently small neighborhood of $p$.
+It follows that 
+\[\mangle\hinge yx{a_0}<\tfrac\pi2-\eps
+\quad\text{and}\quad
+\mangle\hinge yx{a_0}<\tfrac\pi2-\eps.
+\eqlbl{eq:a0}
+\]
+Note that $\dist{x}{y}{}$ is small compared to $\dist{a_0}{x}{}$ and $\dist{a_0}{y}{}$.
+Therefore, the comparison contradicts \ref{eq:a0}. 
+
+By the construction, $f$ is Lipschitz.
+From above, we can choose $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ (if $\mangle\hinge yx{a_i}<\tfrac\pi2-\eps$, then swap $x$ and $y$).
+By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cdot \dist{x}{y}{}$.
+Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
+
+
+ 
+\parbf{\ref{ex:diam-compact:proper}.}
+Reuse the argument in the first part of the proof of Bishop--Gromov inequality.
 
 \parbf{\ref{ex:BG}.} 
 You should follow the proof Bishop--Gromov inequality, plus prove the following two inequalities 
@@ -663,7 +822,12 @@ Since $\eps>0$ is arbitrary, we get the result.
 \parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
 Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 
-\parbf{\ref{ex:pack-vol}.}
+\parbf{\ref{ex:pack-vol}}; \ref{SHORT.ex:pack-vol:pack}
+Apply the Bishop--Gromov inequality (\ref{inq:BG}).
+
+\parit{\ref{SHORT.ex:pack-vol:dim}} By \ref{ex:dim-lim} $\dim\spc{L}_\infty\le m$.
+To show that $\dim\spc{L}_\infty\ge m$,
+apply \ref{cor:euclid-subcone} to a maximal packing and use the estimate in \ref{SHORT.ex:pack-vol:pack}.
 
 \parit{Comment.}
 A stronger statement holds 
@@ -671,14 +835,8 @@ A stronger statement holds
 in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.
 
-\parbf{\ref{ex:diam-compact}}; \ref{SHORT.ex:diam-compact:proper}
-Let $\spc{L}$ be an $m$-dimensional Alexandrov space.
-Argue as in \ref{thm:gromov-compactness} to show that for any $\eps>0$ and $R>0$ 
-there is a positive integer $N(\eps,R)$ such that 
-$\pack_\eps \cBall(p,R)$ admits an $\eps$-net with at most $N(\eps,R)$ points.
-Then apply \ref{ex:net:finite}.
 
-\parit{\ref{SHORT.ex:diam-compact:GH}.}
+\parbf{\ref{ex:diam-compact:GH}.}
 Use \ref{SHORT.ex:diam-compact:proper} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{L}_n}$ for given $R>0$ and apply diagonal procedure to construct the needed convergence.
 
 \parbf{\ref{ex:no-conc}.}
@@ -808,7 +966,7 @@ Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
 Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
 and arrive at a contradiction.
 
-\parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson}.
+\parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson} and/or solution for ``Quotient of the Hilbert space'' in \cite{petrunin2020}.
 
 \parbf{\ref{ex:sumbetries(S^2)}}; \ref{SHORT.ex:sumbetries(S^2):1}.
 Choose an isometric $\SSS^1$-action on $\SSS^2$ that fixes poles of the sphere.
@@ -866,6 +1024,8 @@ Arrive at a contradiction with Bishop--Gromov inequality.)
 
 \parit{\ref{SHORT.ex:number(m-1):1}.}
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
+
+\parbf{\ref{ex:S1actsS3}.}
 
 \parbf{\ref{ex:surf-S2}.}
 We can assume that the origin lies in the interior of the convex body.
@@ -1013,5 +1173,5 @@ Hence the remaining case follows.
 
 \parit{Comments.} Part~\ref{SHORT.ex:liberman+milka:liberman} was originally proved by Joseph Liberman \cite{liberman}; the proof of \ref{ex:liberman} is a generalized version of the so-called Liberman lemma --- the main tools in studying geodesics on convex surfaces.
 
-Part~\ref{SHORT.ex:liberman+milka:milka} is a result of Anatolii Milka \cite[Theorem 2]{milka1982}.
+Part~\ref{SHORT.ex:liberman+milka:milka} is the result of Anatolii Milka \cite[Theorem 2]{milka1982}.
 

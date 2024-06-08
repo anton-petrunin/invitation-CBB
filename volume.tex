@@ -16,7 +16,7 @@ Choose a quadruple of points $p_\infty, x_\infty,y_\infty,z_\infty\in \spc{X}_\i
 
 By the definition of Gromov--Hausdorff convergence, we can choose points $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ for each $n$
 that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
-In particular, each of 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
+In particular, each of the 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
 
 Since $\MM^2(\kappa)$-comparison holds for $p_n$, $x_n$, $y_n$, $z_n\z\in \spc{X}_n$,
 passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_\infty$, $y_\infty$, $z_\infty$.
@@ -96,24 +96,23 @@ The latter can be proved the same way, using \ref{ex:BG} instead of \ref{inq:BG}
 \qeds
 
 \begin{thm}{Exercise}\label{ex:pack-vol}
+
+\begin{subthm}{ex:pack-vol:pack}
 Let $\spc{L}$ be an $m$-dimensional $\Alex0$ space with diameter $\le D$.
 Suppose $\vol\spc{L}\ge v_0>0$.
 Show that 
 \[\pack_\eps\spc{L}\ge \frac\Const{\eps^m}\]
 for some constant $\Const=\Const(m,D,v_0)>0$.
+\end{subthm}
 
-Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it exists) has dimension~$m$.%
+
+\begin{subthm}{ex:pack-vol:dim}
+Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it exists) has dimension~$m$.
+\end{subthm}
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:diam-compact}
-
-\begin{subthm}{ex:diam-compact:proper}
-Show that any finite-dimensional Alexandrov space is proper.
-\end{subthm}
-
-\begin{subthm}{ex:diam-compact:GH}
+\begin{thm}{Exercise}\label{ex:diam-compact:GH}
 Let $(\spc{L}_1,p_1),(\spc{L}_2,p_2),\dots$ be a sequence of $m$-dimensional $\Alex\kappa$ spcaes with marked points.
 Show that it contains a subsequence pointed-converging in the sense of Gromov--Hausdorff.
-\end{subthm}
 
 \end{thm}
