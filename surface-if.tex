@@ -4,7 +4,7 @@ Let us define a \index{convex body}\emph{convex body} as a compact convex subset
 The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
 
 \begin{thm}{Exercise}\label{ex:surf-S2}
-Show that surface of a convex body is homeomorphic to $\SSS^2$.
+Show that the surface of a convex body is homeomorphic to $\SSS^2$.
 \end{thm}
 
 In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$.}
@@ -12,12 +12,12 @@ In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$
 
 \section{Surface of convex polyhedra}
 
-\index{convex polyhedron}\emph{Convex polyhedron} is a convex body with finite number of extremal points that called its \index{vertex}\emph{vertices}.
+A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
 
-Observe that a surface, say $\Sigma$, of a convex polyhedron $P$ admits a triangulation such that each triangle is isometric to a plane triangle.
-In other words, $\Sigma$ is a \index{polyhedral surfaces}\emph{polyhedral surfaces};
-that is, it is a 2-dimensional manifold with length metric that admits a triangulation such that each triangle is isometric to a solid plane triangle.
-A \index{triangulation}\emph{triangulation} of polyhedral surface will be always assumed to satisfy this condition.
+Observe that the  surface, say $\Sigma$, of a convex polyhedron $P$ admits a triangulation such that each triangle is isometric to a plane triangle.
+In other words, $\Sigma$ is a \index{polyhedral surface}\emph{polyhedral surface};
+that is, it is a 2-dimensional manifold with a length metric that admits a triangulation such that each triangle is isometric to a solid plane triangle.
+A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
 
 The total angle around a vertex $v$ in $\Sigma$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
 
@@ -36,7 +36,7 @@ Then, the total angle around any point in $\Sigma$ cannot exceed $2\cdot\pi$.
 \end{thm} 
 
 In the proof, we will need the triangle inequality for angles (or the spherical triangle inequality).
-A proof of this statement is given in the classical geometry textbook by Andrei Kiselyov \cite[§ 47]{kiselev-stereo-en},
+A proof of this statement is given in the classical geometry textbook by Andrei Kiselyov \cite[§ 47]{kiselev-stereo-en};
 it also follows from \ref{claim:angle-3angle-inq}.
 (In fact our proof of \ref{claim:angle-3angle-inq} is a straightforward generalization of the argument in \cite[§ 47]{kiselev-stereo-en}.)
 
@@ -82,7 +82,7 @@ $v$ is an essential vertex of $\Sigma$.
 
 
 \begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on a surface of convex polyhedron do not pass thru its essential vertices.
+Show that geodesics on the surface of a convex polyhedron do not pass thru its essential vertices.
 \end{thm}
 
 \section{Curvature}
@@ -104,7 +104,7 @@ all faces of $T$ are congruent;
  
 \end{thm}
 
-Claim~\ref{clm:total-angle} says that \textit{any surface of convex polyhedron has nonnegative curvature} in the sense of the above definition.
+Claim~\ref{clm:total-angle} says that \textit{surfaces of convex polyhedra have nonnegative curvature} in the sense of the above definition.
 Now we show that this definition agrees with the 4-point comparison.
 
 \begin{thm}{Proposition}\label{prop:poly-CBB}
@@ -160,15 +160,15 @@ The surface of a convex body is $\Alex0$.
 
 \section{Comments}
 
-Note that \ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that surface of convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
-The selbrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
+Note that \ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that the surface of a convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
+The celebrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
 the surface of a plane figure is defined as its doubling across the boundary.
 In other words, any $\Alex0$ metric on the sphere is isometric to a surface of (possibly degenerate) convex body.
 Moreover this convex body is unique up to congruence.
 The last result is due to Alexei Pogorelov \cite{pogorelov}.
 
-Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketced in the appendix.
-Then he used \ref{ex:surface-covergence} to extend the result to arbitrary $\Alex0$ metric on the sphere.
+Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketched in the appendix.
+Then he used \ref{ex:surface-covergence} to extend the result to an arbitrary $\Alex0$ metric on the sphere.
 
 \begin{thm}{Advanced exercise}\label{ex:liberman+milka}
 Let $S$ be the surface of a nondegenerate convex body $K\subset\EE^3$;
