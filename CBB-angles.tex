@@ -12,7 +12,7 @@ defines a semimetric on the orbit space $\spc{X}/G$.
 Moreover, it is a genuine metric if the orbits of the action are closed.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
-Suppose that group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$, and $G$ has closed orbits.
+Suppose that a group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$, and $G$ has closed orbits.
 Then the quotient space $\spc{L}/G$ is $\Alex0$.
 
 \end{thm}
@@ -98,13 +98,13 @@ Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points 
 
 The proof of \ref{thm:CBB/G} works for submetries equally well;
 that is, \textit{if $\sigma\:\spc{L}\to\spc{M}$ is a submetry and $\spc{L}$ is $\Alex0$, then so is $\spc{M}$}.
-Theorems \ref{thm:CBB/G} and \ref{thm:submetry-CBB} admit straightforward generalizations to $\Alex{-1}$ case.
-In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds in any any open $\tfrac\pi2$-ball in the quotient of $\Alex1$};
+Theorems \ref{thm:CBB/G} admits straightforward generalizations to $\Alex{-1}$ case.
+In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds in any open $\tfrac\pi2$-ball in the quotient of $\Alex1$};
 in particular, the quotient space is \textit{locally} $\Alex1$.
 But since $\Alex1$ space is geodesic, then so is its quotient.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
-The same holds for the targets of submetry from a  $\Alex1$ space.
-With bit extra work one can extend the statement to nonproper spaces; see \cite[8.34]{alexander-kapovitch-petrunin2024}.
+The same holds for the targets of submetries from a  $\Alex1$ space.
+With a bit of extra work, one can extend the statement to nonproper spaces; see \cite[8.34]{alexander-kapovitch-petrunin2024}.
 Thus, we have the following two statements.
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB-1}
@@ -133,7 +133,7 @@ Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, wh
 \end{thm}
 
 The proof of the lemma is done mostly by calculations;
-we present it in the form of guided exercise.
+it is guided in the following exercise.
 
 \begin{thm}{Exercise}\label{ex:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points.
@@ -148,20 +148,22 @@ u^p&0\\
 \end{matrix}
 \right),\]
 where $(p,q)$ is a pair of relatively prime positive integers and $u\in \SSS^1=\set{z\in\CC}{|z|=1}$.
-In particular, our $\SSS^1$ is a subgroup in the torus that acts by
+In particular, our $\SSS^1$ is a subgroup of the torus that acts by
 matrix multiplication
 \[\left(\begin{matrix}
 v&0\\
 0& w
 \end{matrix}
 \right),\]
-where  $v,w\in \SSS^1=\set{z\in\CC}{|z|=1}$.
+where  $v,w\in \SSS^1$.
 \end{subthm}
 
 \smallskip
 
 \noindent Fix $p$ and $q$ as above.
 Let $\Sigma_{p,q}=\SSS^3/\SSS^1$ be the quotient space.
+
+\smallskip
 
 \begin{subthm}{ex:S^3/S^1:sphere}
 Show that the $\Sigma_{p,q}=\SSS^3/\SSS^1$ is a topological sphere with $\SSS^1$-symmetry.
@@ -195,7 +197,7 @@ Show that $a(r)=c_{p,q}(r)\cdot b_{p,q}(r)$.
 
 \begin{subthm}{ex:S^3/S^1:cc}
 Show that $c_{p,q}(r)\le c_{1,1}(r)$ for any pair $(p,q)$ of relatively prime positive integers.
-Use it to show construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot \SSS^2\iso\Sigma_{1,1}$.
+Use it to construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot \SSS^2\iso\Sigma_{1,1}$.
 \end{subthm}
 
 \end{thm}
@@ -233,7 +235,7 @@ $y_i$, $y_j$, $y_k$.
 In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
 By the comparison, the sum of angles in each triangle is strictly greater than $\pi$.
 
-Denote by $\sigma$ the sum of all 12 angles in 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
+Denote by $\sigma$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
 From above,
 \[\sigma>4\cdot\pi.\]
 
@@ -251,7 +253,7 @@ Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L
 Note that doubling $\spc{W}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\spc{W}$.
 
 By the doubling theorem, $\spc{W}$ is a $\Alex1$ space.
-Therefore we arrive at a contradiction the same way as in the first case.
+Therefore we arrive at a contradiction in the same way as in the first case.
 
 \parit{Case 3.} Impossible by \ref{ex:bry-connected}.
 \qeds
@@ -270,11 +272,11 @@ The proof is a translation of the proof of the following classical problem in di
 \begin{thm}{Problem}
 Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
 Then  $|F|\le2^m$.
-Moreover, if $|F|=2^m$, then $F$ consists of the vertexes of an $m$-dimensional rectangle.
+Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
 \end{thm}
 
 This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
-Grigori Perelman noticed that after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; so it proves \ref{thm:extr-point}.
+Grigori Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
 
 \parit{Proof of \ref{thm:extr-point}.}
 Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{L}$.
@@ -294,7 +296,7 @@ Therefore
 Suppose $\alpha<\tfrac12$.
 Then $x_i\in V_i$ for any $x\in \spc{L}$.
 Indeed, assume $x_i\notin V_i$,
-then threre is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
+then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
 Then from the comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ does not form a one-point extremal set.
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{L}$
@@ -327,7 +329,7 @@ Denote by $\#_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up t
 Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F \cdot g^{-1}$.
 Note that $A_{F'}=g\cdot A_F$.
 In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{L}=\EE^m/\Gamma$.
-Therefore, to count subgroups up to conjugation, we need to count the images of their fixed set.
+Therefore, to count subgroups up to conjugation, we need to count the images of their fixed sets.
 Therefore, by the lemma below (\ref{lem:extr/G}), $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{L}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
@@ -376,8 +378,8 @@ Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1)
 
 \section{Remarks}
 
-A more general form of theorem \ref{thm:hsiang-kleiner} was found Karsten Grove and Burkhard Wilking \cite{grove-wilking};
-it classifies isometric $\SSS^1$ actions on nonnegatively curved 4-mimensional manifolds with nonnegative sectional curvature.
+A more general form of Theorem \ref{thm:hsiang-kleiner} was found by Karsten Grove and Burkhard Wilking \cite{grove-wilking};
+it classifies isometric $\SSS^1$ actions on  4-dimensional manifolds with nonnegative sectional curvature.
 This proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
 
 It is expected that \textit{no $\Alex1$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
@@ -412,12 +414,12 @@ So, \ref{prop:2m} would follow from the next conjecture.
 Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ primitive extremal subset.
 \end{thm}
 
-Here is an equivalent definition of extremal subset.  
+Here is an equivalent definition of extremal sets.  
 A closed subset $E$ in a finite-dimensional Alexandrov space is called 
-\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes minimal value.
-An extremal subset is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets.
+\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes a minimal value.
+An extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets.
 
-For example, the whole space and empty set are aslo extremal in any space.
-Also every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
-Vertices of the cube are the only its primitive extremal subsets.
+For example, the whole space and the empty set are extremal.
+Also, every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
+Vertices of the cube are its only primitive extremal subsets.
 
