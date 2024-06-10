@@ -426,6 +426,102 @@ Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
 Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$, it is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence} --- we say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
 For example, the sequence $(\spc{X}_n,p_n)=(\RR_+,0)$ converges to $(\RR_+,0)$, while $(\spc{X}_n,p_n)=(\RR_+,n)$ converges to $(\RR,0)$.
 
+
+
+\begin{thm}{Definition}
+Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
+A map $f\:\spc{X}\to\spc{Y}$
+is called an \index{isometry!$\eps$-isometry}\emph{$\eps$-isometry}
+if the following two conditions hold:
+\begin{subthm}{}
+$\Im f$ is an $\eps$-net in $\spc{Y}$.
+\end{subthm}
+
+
+
+
+\begin{subthm}{}
+$\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any $x,x'\in\spc{X}$.
+\end{subthm}
+
+\end{thm}
+
+When dealing with Gromov-Hausdorff convergence the following Lemma is often useful as it allows to bypass constructing explicit metrics on the disjoint unions   $\bigsqcup \spc{X}_n$ 
+
+\begin{thm}{Lemma}\label{lem:almost-isom}
+Let $\spc{X}_1,\spc{X}_2,\dots$, let $\spc{X}_\infty$ be metric spaces, and let $\eps_n\to\0+$ as $n\to\infty$.
+Suppose that either 
+
+\begin{subthm}{lem:almost-isom-a}
+for each $n$ there is an $\eps_n$-isometry $f_n\:\spc{X}_n\to\spc{X}_\infty$, or
+\end{subthm}
+
+\begin{subthm}{lem:almost-isom-b}
+for each $n$ there is an $\eps_n$-isometry $h_n\:\spc{X}_\infty\to\spc{X}_n$.
+\end{subthm}
+
+Then there is a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
+
+Furthermore, the converse also holds, that is
+
+\begin{subthm}{lem:almost-isom-c}
+Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$. Then there exist $\eps_n\to\0+$ as $n\to\infty$ and  $\eps_n$-isometris   $f_n\:\spc{X}_n\to\spc{X}_\infty$  and $h_n\:\spc{X}_\infty\to\spc{X}_n$ 
+such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\GHto \spc{X}_\infty$ iff $f_n(x_n)\to x_\infty$ and iff $\dist{h_n(x_\infty) }{x_n}{\spc{X}_n}\to 0$ as $n\to\infty$.
+\end{subthm}
+\end{thm}
+
+
+\parit{Proof.}
+To prove part \ref{SHORT.lem:almost-isom-a} let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
+by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ that is defined the following way:
+\begin{align*}
+\rho(x_n,y_n)&=\dist{x_n}{y_n}{\spc{X}_n},\quad \rho(x_\infty,y_\infty)=\dist{x_\infty}{y_\infty}{\spc{X}_\infty},
+\\
+\rho(x_n,x_\infty)&=\inf\set{\dist{x_n}{y_n}{\spc{X}_n}+\eps_n+\dist{x_\infty}{f(y_n)}{\spc{X}_\infty}}{{y_n}\in \spc{X}_n},
+\\
+\rho(x_n,x_m)&=\inf\set{\rho(x_n,y_\infty)+\rho(x_m,y_\infty)}{y_\infty\in\spc{X}_\infty},
+\end{align*}
+where we assume that $x_m\in \spc{X}_m$, $x_n\in \spc{X}_n$, and $x_\infty\in \spc{X}_\infty$. 
+
+It remains to observe that $\rho$ is indeed a metric and 
+$\spc{X}_n\Hto \spc{X}_\infty$ in~$\bm{X}$.
+
+The proof of the second part is analogous; one only needs to change one line in the definition of $\rho$ to the following:
+\[\rho(x_n,x_\infty)=\inf\set{\dist{x_n}{h(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{{y_\infty}\in \spc{X}_\infty}.\]
+
+We leave part \ref{SHORT.lem:almost-isom-c} as an easy exercise for the reader.
+\qedsf
+
+
+Lemma ~\ref{lem:almost-isom} has a natural analogue for pointed convergence. For simplicity we only state part (a) of the Lemma. Parts (b) and (c) can be rephrased similarly.
+
+
+
+\begin{thm}{Lemma}\label{lem:almost-isom-pointed}
+Let $(\spc{X}_1, p_1),(\spc{X}_2,p_2) ,\dots$, let $(\spc{X}_\infty, p_\infty)$ be pointed metric spaces, and let $\eps(n|R)\to\0+$ as $n\to\infty$ for any fixed $R>0$.
+Suppose that for each $n$ there is a map $f_n\:\spc{X}_n\to\spc{X}_\infty$ such that
+
+
+\begin{subthm}{}
+$f_n(p_n)\to p_\infty$
+\end{subthm}
+
+\begin{subthm}{}
+$\bigl|\dist{f_n(x)}{f_n(x')}{\spc{X}_\infty }-\dist{x}{x'}{\spc{X}_n}\bigr|\le \eps(n,R)$ for any $x,x'\in \oBall(p_n,R)$.
+\end{subthm}
+
+\begin{subthm}{}
+For any $x \in \oBall(p_\infty,R)$ there is $x_n\in \oBall(p_n,R)$ such that $\dist{x}{f_n(x_n)}{}\le \eps(n|R)$
+\end{subthm}
+
+
+Then there is a pointed  Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
+
+
+\end{thm}
+The proof of Lemma \ref{lem:almost-isom-pointed} is analogous to the proof of Lemma ~\ref{lem:almost-isom}  and is left to the reader as an exercise.
+
+
 \section{Gromov--Hausdorff metric}\label{sec:Gromov--Hausdorff-metric}
 
 In this section we cook up a metric space out of all compact non-empty metric spaces
@@ -484,6 +580,8 @@ Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
 Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are non-empty limit spaces for some Gromov--Hausdorff convergences of $\spc{X}_n$.
 Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty'$.
 \end{thm}
+
+
 
 \section{Comments}
 
