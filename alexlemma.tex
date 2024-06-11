@@ -1,9 +1,12 @@
 %%!TEX root = the-alexlemma.tex
 \chapter{Definitions}\label{chap:defs}
 
+In this lecture we give several equivalent definitions of Alexandrov space.
+Alexandrov's lemma works a the main tool.
+
 \section{Four-point comparison}\label{sec:4-point}
 
-Recall that model angle $\angk  pxy$ is defined on page \pageref{page:model-angle}.
+Recall that $\angk  pxy$ denotes the model angle at $p$; see page \pageref{page:model-angle}.
 
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
@@ -138,7 +141,7 @@ Show that
 \[\angk p x y
 \ge
 \angk p x z + \angk p z y,\]
-with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} vanish.
+with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} in \ref{lem:alex} vanish.
 \end{thm}
 
 Note that 
@@ -171,10 +174,11 @@ Show that $f$ is nonincreasing in each argument.
 Note that \ref{ex:noncreasing} implies the following.
 
 \begin{thm}{Claim}\label{clm:angle-defined}
-For any hinge $\hinge p x y$ in an $\Alex0$ 
-space,
-the angle measure $\mangle\hinge p x y$ is defined, and
-\[\mangle\hinge p x y\ge \angk p x y.\]
+The angle measure of any hinge in an $\Alex0$ 
+space, is at least as large as the corresponding model angle;
+that is,
+\[\mangle\hinge p x y\ge \angk p x y\]
+for any hinge $\hinge p x y$ in an $\Alex0$.
 
 \end{thm}
 
@@ -347,11 +351,11 @@ if one (and therefore any) of them holds for $s$, then we say that $s$ is \index
 \item The \index{Jensen inequality}\emph{Jensen inequality}
 \[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
 holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
-\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that (locally) supports $s$ at $t_0$ from above;
+\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports (locally) $s$ at $t_0$ from above;
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
 \end{itemize}
 
-To prove equivalence, approximate $f$ by smooth functions taking a convolutions $f_n=f*k_n$ for suitable sequence of kernels $k_n$.
+To prove equivalence, approximate $f$ by smooth functions taking a convolutions $f_n=f*k_n$ for a suitable sequence of kernels $k_n$.
 Note that all the conditions are equivalent for $f_n$;
 passing to the limit we get the same for $f$.
 
@@ -359,7 +363,7 @@ We will also use that \textit{$\lambda$-concave functions are one-sided differen
 
 \parbf{Functions on metric spaces.}
 A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{L}$}.
-The domain of definition of a function $f$ will be denoted by $\Dom f$.
+The domain of a function $f$ will be denoted by $\Dom f$.
 
 We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
 for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
@@ -369,7 +373,7 @@ The following proposition is simple but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
-A complete geodesic space $\spc{L}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the following type 
+A complete geodesic space $\spc{L}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form 
 \[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
 \end{thm} 
 
@@ -392,7 +396,7 @@ Note that the point-on-side comparison (\ref{point-on-side}) is equivalent to
 \eqlbl{eq:r=<r}\]
 for any $\gamma$ and $t_0<t_1$.
 
-Observe that the Jensen inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
+Observe that Jensen's inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
 Hence the proposition follows.
 \qeds
 
@@ -411,7 +415,7 @@ This option is more natural and general, but many statements can be reduced to t
 In particular, suppose $\spc{L}$ is a complete length space with curvature $\ge \kappa$,
 then 
 \textit{$\spc{L}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
-Also, by Plaut's theorem, \textit{any point $p$ in $\spc{L}$ can be connected by geodesics to a G-delta dense set of points in $\spc{L}$} 
+Also, by Plaut's theorem, any point $p$ in $\spc{L}$ can be connected by geodesics to \textit{most} of points in $\spc{L}$
 \cite[8.11]{alexander-kapovitch-petrunin2024}; compare to \ref{ex:grad-dist:geod}.
 
 All the discussed statements admit natural generalizations to 
