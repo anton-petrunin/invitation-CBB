@@ -508,24 +508,22 @@ $\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any 
 When dealing with Gromov--Hausdorff convergence the following lemma is often useful as it allows to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be compact metric spaces, and let $\eps_n\to\0+$ as $n\to\infty$.
+Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be complete metric spaces,
+and let $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
-
 \begin{subthm}{lem:almost-isom-a}
 for each $n$ there is an $\eps_n$-isometry $f_n\:\spc{X}_n\to\spc{X}_\infty$, or
 \end{subthm}
-
 \begin{subthm}{lem:almost-isom-b}
 for each $n$ there is an $\eps_n$-isometry $h_n\:\spc{X}_\infty\to\spc{X}_n$.
 \end{subthm}
+Then there is a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$.
 
-Then there is a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$.
-
-Furthermore, the converse also holds, that is
+Furthermore, a partial converse also holds.
 
 \begin{subthm}{lem:almost-isom-c}
-Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\GHto \spc{X}_\infty$. Then there exist $\eps_n\to\0+$ as $n\to\infty$ and  $\eps_n$-isometris   $f_n\:\spc{X}_n\to\spc{X}_\infty$  and $h_n\:\spc{X}_\infty\to\spc{X}_n$ 
-such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\GHto \spc{X}_\infty$ iff $f_n(x_n)\to x_\infty$ and iff $\dist{h_n(x_\infty) }{x_n}{\spc{X}_n}\to 0$ as $n\to\infty$.
+Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ and $\spc{X}_\infty$ is compact. Then there exist $\eps_n\to\0+$ as $n\to\infty$ and  $\eps_n$-isometris $f_n\:\spc{X}_n\to\spc{X}_\infty$ (and $h_n\:\spc{X}_\infty\to\spc{X}_n$)
+such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty) }{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
 \end{subthm}
 \end{thm}
 
@@ -540,10 +538,10 @@ by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1
 \\
 \dist{x_n}{x_\infty}{\bm{X}}&=\inf\set{\dist{x_n}{y_n}{\spc{X}_n}+\eps_n+\dist{x_\infty}{f(y_n)}{\spc{X}_\infty}}{{y_n}\in \spc{X}_n},
 \\
-\dist{x_n}{x_m}{\bm{X}}&=\inf\set{\rho(x_n,y_\infty)+\rho(x_m,y_\infty)}{y_\infty\in\spc{X}_\infty},
+\dist{x_n}{x_m}{\bm{X}}&=\inf\set{\dist{x_n}{y_\infty}{\bm{X}}+\dist{x_m}{y_\infty}{\bm{X}}}{y_\infty\in\spc{X}_\infty},
 \end{align*}
 where we assume that $x_\infty,y_\infty\in \spc{X}_\infty$, and $x_n,y_n\in \spc{X}_n$ for each $n$. 
-It remains to observe that this indeed defines a metric on $\bm{X}$, and $\spc{X}_n\Hto \spc{X}_\infty$ in the sense of Hausdorff.
+It remains to observe that this indeed defines a metric on $\bm{X}$, and $\spc{X}_n\to \spc{X}_\infty$ in the sense of Hausdorff.
 
 The proof of the second part is analogous; one only needs to change one line in the definition of the metric to the following:
 \[\dist{x_n}{x_\infty}{\bm{X}}=\inf\set{\dist{x_n}{h(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{{y_\infty}\in \spc{X}_\infty}.\]
