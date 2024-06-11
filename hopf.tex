@@ -8,14 +8,14 @@ After discussing its properties, we prove the doubling theorem (\ref{thm:doublin
 
 Let us give an inductive definition of the boundary for finite-dimensional Alexandrov spaces.
 
-Suppose $\spc{L}$ is a 1-dimensional Alexandrov space.
+Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By Exercise~\ref{ex:dim=1},
-$\spc{L}$ is homeomorphic to a 1-dimensional manifold (possibly with non-empty boundary).
-This  allows us to define the boundary $\partial\spc{L}\subset \spc{L}$ as the boundary of the manifold.
+$\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with non-empty boundary).
+This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
-Suppose  $\spc{L}$ is $m$-dimensional Alexandrov space.
-We say that $p\in \spc{L}$ belongs to the boundary (briefly $p\in \partial \spc{L}$) if 
+Suppose  $\spc{A}$ is $m$-dimensional Alexandrov space.
+We say that $p\in \spc{A}$ belongs to the boundary (briefly $p\in \partial \spc{A}$) if 
 $\partial\Sigma_p\ne\emptyset$.
 By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is an $(m-1)$-dimensional Alexandrov space;
 therefore its boundary is already defined and hence this inductive definition makes sense.
@@ -23,9 +23,9 @@ therefore its boundary is already defined and hence this inductive definition ma
 It is instructive to check the following statements.
 \begin{itemize}
 \item For a closed convex set $K\subset \EE^m$ with non-empty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
-\item If $\spc{L}\iso\spc{L}_1\times\spc{L}_2$ is a finite-dimensional Alexandrov space,
+\item If $\spc{A}\iso\spc{A}_1\times\spc{A}_2$ is a finite-dimensional Alexandrov space,
 then
-\[\partial \spc{L}=(\partial\spc{L}_1\times\spc{L}_2)\,\cup\,(\spc{L}_1\times\partial\spc{L}_2)\]
+\[\partial \spc{A}=(\partial\spc{A}_1\times\spc{A}_2)\,\cup\,(\spc{A}_1\times\partial\spc{A}_2)\]
 \item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$  (this necessarily implies that   $\Cone\Sigma$  is  $\Alex1 $ then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
 where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
@@ -38,12 +38,12 @@ The following statement \cite{perelman1993} is a close relative of Perelman's st
 % but its proof is  simpler .
 We are going to use this result without proof.
 
-Recall that the logarithm $\log_px\:\spc{L}\to \T_p$ is defined on page \pageref{page:log}.
+Recall that the logarithm $\log_px\:\spc{A}\to \T_p$ is defined on page \pageref{page:log}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
-For any point $p$ in a finite-dimensional Alexandrov space $\spc{L}$
+For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$
 and all sufficiently small $\eps>0$
-there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{L}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
+there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{A}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
 
 Moreover, we may assume that 
 \[
@@ -69,7 +69,7 @@ Prove \ref{lem:kwun} or read the proof in \cite{kwun1964}.
 
 
 \begin{thm}{Exercise}\label{ex:conic-tangent}
-Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{L}$ and $\spc{L}'$. Show that 
+Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
 $\T_x\cong \T_{x'}$,
@@ -92,35 +92,35 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 The following theorem states that boundary is an object of topology, despite our definition have used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
-Let $\spc{L}$ and $\spc{L}'$ be homeomorphic finite-dimensional Alexandrov spaces.
-Then $\dim \spc{L}=\dim\spc{L}'$ and
-\[\partial\spc{L}\ne \emptyset
+Let $\spc{A}$ and $\spc{A}'$ be homeomorphic finite-dimensional Alexandrov spaces.
+Then $\dim \spc{A}=\dim\spc{A}'$ and
+\[\partial\spc{A}\ne \emptyset
 \quad\iff\quad
-\partial\spc{L}'\ne \emptyset
+\partial\spc{A}'\ne \emptyset
 \]
 \end{thm}
 
 While working on the proof, keep in mind that there are pairs of spaces $\spc{K}_1$ and $\spc{K}_2$ such that $\spc{K}_1\ncong \spc{K}_2$, but $\RR\times \spc{K}_1\cong \RR\times \spc{K}_2$.
 Suspension over the Poincaré homology sphere with $\SSS^4$ is one of the examples; compare to \ref{ex:conic-tangen:example}.
 
-Let $\spc{L}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
-Define \index{rank}\emph{rank} of $\spc{L}$ (briefly, \index{$\rank\spc{L}$}$\rank\spc{L}$) as the minimal value $k$ such that $\spc{L}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
+Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
+Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, \index{$\rank\spc{A}$}$\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
 note that here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
-In the following proof we will apply induction on the rank of $\spc{L}$.
+In the following proof we will apply induction on the rank of $\spc{A}$.
 
 
 \parit{Proof.}
 The first statement follows from \ref{thm:dim=dim}.
 
-Suppose we have a counterexample, say $\partial \spc{L}\ne \emptyset$, but $\partial \spc{L}'=\emptyset$.
-Let $k\df\rank \spc{L}$ and $k'\df\rank \spc{L}'$.
+Suppose we have a counterexample, say $\partial \spc{A}\ne \emptyset$, but $\partial \spc{A}'=\emptyset$.
+Let $k\df\rank \spc{A}$ and $k'\df\rank \spc{A}'$.
 We can assume that the pair $(k,k')$ is minimal in lexicographic order;
 in particular, $k$ is minimal.
-Let $x\mapsto x'$ be a homeomorphism from $\spc{L}$ to $\spc{L}'$.
+Let $x\mapsto x'$ be a homeomorphism from $\spc{A}$ to $\spc{A}'$.
 
-Choose $x\in \partial \spc{L}$.
-Since $\partial \spc{L}'=\emptyset$, we have $x'\notin \partial \spc{L}'$.
+Choose $x\in \partial \spc{A}$.
+Since $\partial \spc{A}'=\emptyset$, we have $x'\notin \partial \spc{A}'$.
 Note that 
 \[\rank \T_x\le k
 \quad\text{and}\quad
@@ -128,30 +128,30 @@ Note that
 \]
 By \ref{ex:conic-tangen:tangent}, $\T_x\cong\T_{x'}$.
 Note that $\partial \T_x\ne\emptyset$ and $\partial \T_{x'}=\emptyset$.
-Therefore, we may assume that $\spc{L}$ and $\spc{L}'$ are Euclidean cones
+Therefore, we may assume that $\spc{A}$ and $\spc{A}'$ are Euclidean cones
 and the homeomorphism sends the origin to the origin.
 The remaining part of the proof is divided into three cases.
 
 \parit{Case 1.}
 Suppose $k>1$.
-Let $\spc{L}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional $\Alex0$ cone.
-Observe that $\rank\T_y\le\rank\spc{L}$ for any $y\in\spc{L}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
+Let $\spc{A}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional $\Alex0$ cone.
+Observe that $\rank\T_y\le\rank\spc{A}$ for any $y\in\spc{A}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
 Choose $y$ that projects to $z$;
-in particular, $\rank\T_y<\rank\spc{L}$.
+in particular, $\rank\T_y<\rank\spc{A}$.
 By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
 $\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
 The latter contradicts the minimality of $k$.
 
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
-Since $\partial \spc{L}\ne \emptyset$, we get that $k=1$;
-therefore, $\spc{L}=\RR^{m-1}\times\RR_{\ge0}$.
+Since $\partial \spc{A}\ne \emptyset$, we get that $k=1$;
+therefore, $\spc{A}=\RR^{m-1}\times\RR_{\ge0}$.
 
-Let $\spc{L}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
-Since $\partial\spc{L}\cong\RR^{m-1}$,
-the image of $\partial\spc{L}$ in $\spc{L}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
-In other words, we can choose $y\in \partial \spc{L}$ such that its image $y'\in \spc{L}'$ has a nonzero projection in $\spc{C}'$.
+Let $\spc{A}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
+Since $\partial\spc{A}\cong\RR^{m-1}$,
+the image of $\partial\spc{A}$ in $\spc{A}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
+In other words, we can choose $y\in \partial \spc{A}$ such that its image $y'\in \spc{A}'$ has a nonzero projection in $\spc{C}'$.
 Observe that $\T_y\cong\T_{y'}$,
 \[
 \rank\T_y\le k=1,
@@ -165,15 +165,15 @@ Observe that $\T_y\cong\T_{y'}$,
 
 \parit{Case 3.}
 Suppose $k\le 1$ and $k'\le 1$.
-Since $\partial \spc{L}\ne \emptyset$, $k=1$.
-By \ref{ex:dim=1}, $\spc{L}\cong \RR^{m-1}\times\RR_{\ge0}$.
-Therefore, $\spc{L}'\cong\RR^m$, and $\spc{L}\ncong\spc{L}'$ --- a contradiction.
+Since $\partial \spc{A}\ne \emptyset$, $k=1$.
+By \ref{ex:dim=1}, $\spc{A}\cong \RR^{m-1}\times\RR_{\ge0}$.
+Therefore, $\spc{A}'\cong\RR^m$, and $\spc{A}\ncong\spc{A}'$ --- a contradiction.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry2bry}
 Let $x\mapsto x'$ be a homeomorphism $\Omega\to\Omega'$
-between open subsets in finite-dimensional Alexandrov spaces $\spc{L}$ and $\spc{L}'$.
-Show that $x\in \partial \spc{L}$ if and only if $x'\in \partial \spc{L}'$.
+between open subsets in finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$.
+Show that $x\in \partial \spc{A}$ if and only if $x'\in \partial \spc{A}'$.
 
 \end{thm}
 
@@ -183,8 +183,8 @@ Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
 
 \section{Tangent space}
 
-Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{L}$.
-Choose $p\in \spc{L}$ and $\xi\in \Sigma_p$.
+Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{A}$.
+Choose $p\in \spc{A}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
 Then we say that $\xi$ is in the \index{space of directions}\emph{space of directions} from $p$ to $X$;
 briefly \index{$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
@@ -194,32 +194,32 @@ it will be denoted by \index{$\T_p$ (tangent space)}$\T_pX$.
 \footnote{{\red V: tangent spaces have already been defined in chapter 4. also, I think we should state somewhere (in chapter 7?) the theorem the pointed rescaled  finite-dimensional Alexandrov space converges to the tangent space.} A: see \ref{ex:GHto-tangent} + now it is tangent space to a subset...}
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
-For any finite-dimensional Alexandrov space $\spc{L}$, we have
-\[\partial (\Sigma_p\spc{L})=\Sigma_p(\partial\spc{L})
+For any finite-dimensional Alexandrov space $\spc{A}$, we have
+\[\partial (\Sigma_p\spc{A})=\Sigma_p(\partial\spc{A})
 \quad\text{and}\quad
-\partial(\T_p\spc{L})=\T_p(\partial\spc{L}).\]
+\partial(\T_p\spc{A})=\T_p(\partial\spc{A}).\]
 \end{thm}
 
 \parit{Proof.}
-Choose a sequence $x_n\in \partial \spc{L}$ such that $x_n\to p$ and $\dir p{x_n}\to\xi$.
+Choose a sequence $x_n\in \partial \spc{A}$ such that $x_n\to p$ and $\dir p{x_n}\to\xi$.
 
 Let $\eps_n=2\cdot \dist{p}{x_n}{}$,
-and let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{L}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd};
+and let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{A}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd};
 in particular, $\tfrac2{\eps_n}\cdot h_{\eps_n}(x_n)\to \xi$ as $n\to\infty$.
 By \ref{ex:bry2bry}, $h_{\eps_n}(x_n)\in \partial \T_p$.
 By \ref{ex:bry-closed}, $\xi\in \partial \T_p$.
 Therefore,
-\[\partial (\Sigma_p\spc{L})\supset\Sigma_p(\partial\spc{L})
+\[\partial (\Sigma_p\spc{A})\supset\Sigma_p(\partial\spc{A})
 \quad\text{and}\quad
-\partial(\T_p\spc{L})\supset\T_p(\partial\spc{L}).\]
+\partial(\T_p\spc{A})\supset\T_p(\partial\spc{A}).\]
 
 Similarly, choose $\xi\in\partial\Sigma_p$.
-Let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{L}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd} for a sequence $\eps_n\to 0$ as $n\to\infty$.
-By \ref{ex:bry2bry}, $x_n=h_{\eps_n}^{-1}(\tfrac{\eps_n}2\cdot\xi)\in \partial \spc{L}$.
+Let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{A}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd} for a sequence $\eps_n\to 0$ as $n\to\infty$.
+By \ref{ex:bry2bry}, $x_n=h_{\eps_n}^{-1}(\tfrac{\eps_n}2\cdot\xi)\in \partial \spc{A}$.
 By \ref{thm:spherical-nbhd}, $\dir p{x_n}\to \xi$.
 Hence
-\[\partial (\Sigma_p\spc{L})\subset\Sigma_p(\partial\spc{L})
-\quad\text{and}\quad\partial(\T_p\spc{L})\subset\T_p(\partial\spc{L}).\]
+\[\partial (\Sigma_p\spc{A})\subset\Sigma_p(\partial\spc{A})
+\quad\text{and}\quad\partial(\T_p\spc{A})\subset\T_p(\partial\spc{A}).\]
 \qedsf
 
 \section{Doubling}
@@ -228,7 +228,7 @@ Let $A$ be a closed subset in a metric space $\spc{X}$.
 The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
-Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{L}$ defined by $(x,i)\mapsto x$ is a short map. 
+Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{A}$ defined by $(x,i)\mapsto x$ is a short map. 
 The metric on $\spc{W}$ can also be defined explicitly as
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
@@ -239,27 +239,27 @@ The metric on $\spc{W}$ can also be defined explicitly as
 \]
 
 \begin{thm}{Theorem}\label{thm:doubling}
-Let $\spc{L}$ be a finite-dimensional Alexandrov space with non-empty boundary.
-Suppose $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{L}$.
+Let $\spc{A}$ be a finite-dimensional Alexandrov space with non-empty boundary.
+Suppose $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{A}$.
 Then
 
 \begin{subthm}{thm:doubling:concave}
-If $\dim \spc{L}\ge 2$, then
-$\distfun_{\partial \Sigma_x}(\xi)\le \tfrac\pi2$ for any $x\in\partial \spc{L}$ and $\xi\in \Sigma_x$.
+If $\dim \spc{A}\ge 2$, then
+$\distfun_{\partial \Sigma_x}(\xi)\le \tfrac\pi2$ for any $x\in\partial \spc{A}$ and $\xi\in \Sigma_x$.
 Moreover, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\mangle(\xi,\zeta)\le\tfrac\pi2$ for any $\zeta\in \Sigma_x$. 
 \end{subthm}
 
 \begin{subthm}{thm:partial-grad:grad}
-$\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{L}$.
+$\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{A}$.
 \end{subthm}
 
 \begin{subthm}{thm:partial-grad:flow}
-If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{L}$, then $\alpha(t)\in \partial \spc{L}$ for any $t$.
-Moreover, if $p\in \partial \spc{L}$, then $\gexp_p(v)\in \partial \spc{L}$ for any $v\in\partial\T_p$.
+If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{A}$, then $\alpha(t)\in \partial \spc{A}$ for any $t$.
+Moreover, if $p\in \partial \spc{A}$, then $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
 \end{subthm}
 
 \begin{subthm}{thm:doubling:doubling}
-The doubling $\spc{W}$ of $\spc{L}$ across $\partial \spc{L}$ is an Alexandrov space with the same curvature bound.
+The doubling $\spc{W}$ of $\spc{A}$ across $\partial \spc{A}$ is an Alexandrov space with the same curvature bound.
 \end{subthm}
 
 \end{thm}
@@ -268,7 +268,7 @@ Part \ref{SHORT.thm:doubling:doubling} is called the \index{doubling theorem}\em
 
 \parit{Proof.}
 We will denote by 
-\ref{SHORT.thm:doubling:concave}$_m,\dots,$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{L}$.
+\ref{SHORT.thm:doubling:concave}$_m,\dots,$\ref{SHORT.thm:doubling:doubling}$_m$ the corresponding statement assuming $m=\dim\spc{A}$.
 
 The proof goes by induction on $m$.
 Note that \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base.
@@ -319,10 +319,10 @@ If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a co
 If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
-Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial \spc{L}}\alpha(t)$.
+Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial \spc{A}}\alpha(t)$.
 
 Choose $t$;
-let $x=\alpha(t)$ and $y\in \partial\spc{L}$ be a closest point to $x$.
+let $x=\alpha(t)$ and $y\in \partial\spc{A}$ be a closest point to $x$.
 By \ref{SHORT.thm:partial-grad:grad}$_m$, we have that $\nabla_y f\in\partial \T_y$.
 Since the distance $\dist{x}{y}{}$ is minimal, 
 we get $\langle \dir yx,v\rangle\le 0$ for any $v\in \partial \T_y$.
@@ -337,19 +337,19 @@ Integrating the inequality, we get
 \[\ell(t)\le e^t\cdot\ell(0)\]
 for any $t\ge 0$.
 In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
-Since $\partial\spc{L}$ is closed (\ref{ex:bry-closed}), the statement follows.
+Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
 other cases can be done in the same way, but formulas get more complicated.
 
-Denote by $\spc{L}_0$ and $\spc{L}_1$ the two copies of $\spc{L}$ in $\spc{W}$;
-let us keep the notation $\partial \spc{L}$ for the common boundary of $\spc{L}_0$ and $\spc{L}_1$.
+Denote by $\spc{A}_0$ and $\spc{A}_1$ the two copies of $\spc{A}$ in $\spc{W}$;
+let us keep the notation $\partial \spc{A}$ for the common boundary of $\spc{A}_0$ and $\spc{A}_1$.
 
 \begin{clm}{}
 Let $\gamma$ be a geodesic in $\spc{W}$.
-Then either $\gamma$ has at most one interior point in $\partial \spc{L}$ or
-$\gamma\subset \partial \spc{L}$.
+Then either $\gamma$ has at most one interior point in $\partial \spc{A}$ or
+$\gamma\subset \partial \spc{A}$.
 \end{clm}
 
 \begin{wrapfigure}{r}{45mm}
@@ -358,27 +358,27 @@ $\gamma\subset \partial \spc{L}$.
 \includegraphics{mppics/pic-1315}
 \end{wrapfigure}
 
-Indeed, assume $\gamma$ shares at least two points with $\partial \spc{L}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$ and these are not endpoints of $\gamma$.
-Remove from $\gamma$ the set $\gamma\cap \spc{L}_1$
-and exchange it to its reflection across $\partial\spc{L}$;
+Indeed, assume $\gamma$ shares at least two points with $\partial \spc{A}$, say $x=\gamma(t_1)$ and $y=\gamma(t_2)$ and these are not endpoints of $\gamma$.
+Remove from $\gamma$ the set $\gamma\cap \spc{A}_1$
+and exchange it to its reflection across $\partial\spc{A}$;
 denote the obtained curve by $\hat\gamma$.
 
-Note that any arc of $\hat\gamma$ with one endpoint in $\partial \spc{L}$
-is a geodesic in $\spc{L}_0$.
-Since $x,y\in \partial \spc{L}$, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
-By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{L}$.
+Note that any arc of $\hat\gamma$ with one endpoint in $\partial \spc{A}$
+is a geodesic in $\spc{A}_0$.
+Since $x,y\in \partial \spc{A}$, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
+By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{A}$.
 
-Now choose a point $z$ on this arc, so $z\in \partial\spc{L}$.
-Applying the same argument, we get that the arc of $\hat\gamma$ before $y$ lies in $\partial\spc{L}$.
+Now choose a point $z$ on this arc, so $z\in \partial\spc{A}$.
+Applying the same argument, we get that the arc of $\hat\gamma$ before $y$ lies in $\partial\spc{A}$.
 Hence the claim follows.\claimqeds
 
 Choose a point $p$ in $\spc{W}$;
 let $f\df\tfrac12\cdot\distfun_p^2$.
 It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
-If $p\in \partial\spc{L}$, then the statement follows from function comparison in $\spc{L}_0$ and $\spc{L}_1$.
-So, we can assume that $p\in \spc{L}_0\setminus \partial\spc{L}$.
+If $p\in \partial\spc{A}$, then the statement follows from function comparison in $\spc{A}_0$ and $\spc{A}_1$.
+So, we can assume that $p\in \spc{A}_0\setminus \partial\spc{A}$.
 
-If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the comparison in~$\spc{L}_0$.
+If $\gamma$ lies in $\partial \spc{A}$, then this inequality follows from the comparison in~$\spc{A}_0$.
 
 \begin{wrapfigure}{r}{55mm}
 \vskip-2mm
@@ -388,12 +388,12 @@ If $\gamma$ lies in $\partial \spc{L}$, then this inequality follows from the co
 
 Choose $y=\gamma(t_0)$; without loss of generality we can assume that $t_0=0$.
 
-If $y\z\in \spc{L}_0\setminus\partial\spc{L}$, then $(f\z\circ\gamma)''(0)\le 1$ in the barrier sense;
-it follows from the comparison in $\spc{L}_0$.
+If $y\z\in \spc{A}_0\setminus\partial\spc{A}$, then $(f\z\circ\gamma)''(0)\le 1$ in the barrier sense;
+it follows from the comparison in $\spc{A}_0$.
 
-Assume $y\in \spc{L}_1\setminus\partial\spc{L}$.
-Suppose $[py]$ crosses $\partial L$ at $x$.
-Let $\Sigma_x$ be the space of directions of $\spc{L}$ at $x$,
+Assume $y\in \spc{A}_1\setminus\partial\spc{A}$.
+Suppose $[py]$ crosses $\partial\spc{A}$ at $x$.
+Let $\Sigma_x$ be the space of directions of $\spc{A}$ at $x$,
 and let $\Xi$ be its doubling.
 As before, we denote by $\Sigma_0$ and $\Sigma_1$ two copies of $\Sigma_x$ in  $\Xi$
 and keep notation $\partial\Sigma_x$ for their common boundary.
@@ -404,10 +404,10 @@ Note that $\dir x{y}$ and $\dir xp$ lie in opposite sides of $\Xi$ and
 Otherwise, we could choose a direction $\xi\in\partial\Sigma$ such that
 \[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi.\]
 Furthermore, we could consider the radial curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
-By \ref{SHORT.thm:partial-grad:flow}$_m$, $\alpha$ lies in $\partial \spc{L}$.
+By \ref{SHORT.thm:partial-grad:flow}$_m$, $\alpha$ lies in $\partial \spc{A}$.
 By \ref{prop:gexp}
-\[\dist{p}{\alpha(s)}{\spc{L}_0}
-+\dist{y}{\alpha(s)}{\spc{L}_1}
+\[\dist{p}{\alpha(s)}{\spc{A}_0}
++\dist{y}{\alpha(s)}{\spc{A}_1}
 <\dist{p}{y}{\spc{W}}\]
 for small values $s>0$
 --- a contradition.
@@ -427,7 +427,7 @@ Let us show that
 \[
 \begin{aligned}
 \dist{p}{z}{\spc{W}}
-&\le \dist{p}{\alpha(s)}{\spc{L}_0}+ \dist{\alpha(s)}{z}{\spc{L}_1}\le
+&\le \dist{p}{\alpha(s)}{\spc{A}_0}+ \dist{\alpha(s)}{z}{\spc{A}_1}\le
 \\
 &\le\side\hinge yp{z}.
 \end{aligned}
@@ -464,9 +464,9 @@ s&=\dist{\tilde x}{\tilde w}{}.
 \noindent
 By \ref{prop:gexp}, we get 
 \begin{align*}
-\dist{p}{\alpha(s)}{\spc{L}_0}&\le \dist{\tilde p}{\tilde w}{},
+\dist{p}{\alpha(s)}{\spc{A}_0}&\le \dist{\tilde p}{\tilde w}{},
 \\
-\dist{\alpha(s)}{z}{\spc{L}_1}&\le\dist{\tilde w}{\tilde z}{};
+\dist{\alpha(s)}{z}{\spc{A}_1}&\le\dist{\tilde w}{\tilde z}{};
 \end{align*}
 by the comparison, 
 \[\dist{\tilde p}{\tilde z}{}\le \side\hinge ypz.\]
@@ -477,41 +477,41 @@ Prove the last inequality.
 
 Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
-Finally if $\gamma(0)\in\partial\spc{L}$, then splitting argument shows that 
+Finally if $\gamma(0)\in\partial\spc{A}$, then splitting argument shows that 
 \[(f\circ\gamma)^+(0)+(f\circ\gamma)^-(0)\le 0.\]
 
-Summarizing, we get that $(f\circ\gamma)''\le 1$ on every arc of $\gamma$ that lies entirely in $\spc{L}_0$ or $\spc{L}_1$.
-If $\gamma$ crosses $\partial \spc{L}$, then we know that it happens only once and at the crossing moment $t_0$ 
+Summarizing, we get that $(f\circ\gamma)''\le 1$ on every arc of $\gamma$ that lies entirely in $\spc{A}_0$ or $\spc{A}_1$.
+If $\gamma$ crosses $\partial \spc{A}$, then we know that it happens only once and at the crossing moment $t_0$ 
 we have $f\circ\gamma^+(t_0)+f\circ\gamma^-(t_0)\le 0$.
 All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:bry-connected}
-Let $\spc{L}$ be a finite-dimensional $\Alex1$ space of dimension $\ge 2$ with non-empty boundary $\partial\spc{L}$.
-Show that $\partial\spc{L}$ is connected.
+Let $\spc{A}$ be a finite-dimensional $\Alex1$ space of dimension $\ge 2$ with non-empty boundary $\partial\spc{A}$.
+Show that $\partial\spc{A}$ is connected.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{L}$ be an $m$-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{L}$
+Let $\spc{A}$ be an $m$-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{A}$
 for $2\le m<\infty$.
 Show that the distance function to the boundary
-\[\distfun_{\partial\spc{L}}\:\spc{L}\to\RR\]
+\[\distfun_{\partial\spc{A}}\:\spc{A}\to\RR\]
 is concave.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:liberman}
-Let $\spc{L}$ be a finite-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{L}$.
-Suppose $\gamma$ is a geodesic in $\partial\spc{L}$ with the induced length metric.
+Let $\spc{A}$ be a finite-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{A}$.
+Suppose $\gamma$ is a geodesic in $\partial\spc{A}$ with the induced length metric.
 Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-concave for any point $p$. 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:native}
-Let $\spc{W}$ be a doubling of finite-dimensional Alexandrov space $\spc{L}$ across its boundary,
-and let $proj\:\spc{W}\to\spc{L}$ be the natural projection.
-Suppose $f\:\spc{L}\to\RR$ is a $\lambda$-concave function.
+Let $\spc{W}$ be a doubling of finite-dimensional Alexandrov space $\spc{A}$ across its boundary,
+and let $proj\:\spc{W}\to\spc{A}$ be the natural projection.
+Suppose $f\:\spc{A}\to\RR$ is a $\lambda$-concave function.
 Show that $f\circ\proj\:\spc{W}\to\RR$ is $\lambda$-concave if and only if $\nabla_xf\in \partial \T_x$ 
-for any $x\in\partial \spc{L}$.
+for any $x\in\partial \spc{A}$.
 \end{thm}
 
 
@@ -524,9 +524,9 @@ This observation can often be used to reduce a statement about general finite-di
 For spaces without boundary the following tools become available.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
-Any compact finite-dimensional Alexandrov space $\spc{L}$ without boundary has a fundamental class with $\ZZ/2$ coefficients;
-that is, if $\spc{L}$ is $m$-dimensional, then
-\[H^m(\spc{L},\ZZ/2)=\ZZ/2.\]
+Any compact finite-dimensional Alexandrov space $\spc{A}$ without boundary has a fundamental class with $\ZZ/2$ coefficients;
+that is, if $\spc{A}$ is $m$-dimensional, then
+\[H^m(\spc{A},\ZZ/2)=\ZZ/2.\]
 
 \end{thm}
 
@@ -538,9 +538,9 @@ in other words, gradient curves can be extended into the past.
 It is also used in the proof of the following version of the domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
 \begin{thm}{Domain invariance}\label{thm-inv-domain}
-Let $\spc{L}_1$ and $\spc{L}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
-Suppose $\Omega_1$ is an open subset in $\spc{L}_1$ and $f\:\Omega_1\to \spc{L}_2$ is an injective continuous map.
-Then $f(\Omega_1)$ is open in $\spc{L}_2$.
+Let $\spc{A}_1$ and $\spc{A}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
+Suppose $\Omega_1$ is an open subset in $\spc{A}_1$ and $f\:\Omega_1\to \spc{A}_2$ is an injective continuous map.
+Then $f(\Omega_1)$ is open in $\spc{A}_2$.
 \end{thm}
 
 Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
@@ -564,10 +564,10 @@ but it seems to be unknown if it has to be homeomorphic to a CW complex.
 The stratification theorem~\ref{thm:top-stratification} can be sharpened as follows.
 
 \begin{thm}{Boundary characterization}
-Let $\spc{L}$ be an $m$-dimensional Alexandrov space with $m<\infty$.
+Let $\spc{A}$ be an $m$-dimensional Alexandrov space with $m<\infty$.
 Then the following statements are equivalent.
 
-\begin{subthm}{item-boundary} $p\in \partial \spc{L}$;
+\begin{subthm}{item-boundary} $p\in \partial \spc{A}$;
 \end{subthm}
 
 \begin{subthm}{item-contractible} $\Sigma_p$ is contractible;
@@ -576,7 +576,7 @@ Then the following statements are equivalent.
 \begin{subthm}{item-space-dir-homology} $\tilde H_{m-1}(\Sigma_p,\ZZ/2)= 0$;
 \end{subthm}
 
-\begin{subthm}{item-local-homology} $H_m(\spc{L},\spc{L}\setminus \{p\},\ZZ/2)= 0$;
+\begin{subthm}{item-local-homology} $H_m(\spc{A},\spc{A}\setminus \{p\},\ZZ/2)= 0$;
 \end{subthm}
 
 \end{thm}

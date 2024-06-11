@@ -9,7 +9,7 @@ most importantly the distance estimates.
 
 \section{Velocity of curve}
 
-Let $\alpha$ be a curve in an Alexandrov space $\spc{L}$.
+Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
 If for any choice of 
 geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
@@ -22,7 +22,7 @@ note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\la
 
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
-Let $\alpha$ be a curve in an Alexandrov space $\spc{L}$.
+Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
 Suppose $f$ a semiconcave Lipschitz function
 defined in a neighborhood of $p\z=\alpha(0)$,
 and $\alpha^+(0)$ is defined.
@@ -44,7 +44,7 @@ By the definition of differential,
 \[(f\circ\gamma)^+(0)=\dd_pf(\gamma^+(0)).\]
 
 By comparison and the definition of $\alpha^+$,
-\[\dist{\alpha(\eps)}{\gamma(\eps)}{\spc{L}}\le s\cdot\eps+o(\eps)\]
+\[\dist{\alpha(\eps)}{\gamma(\eps)}{\spc{A}}\le s\cdot\eps+o(\eps)\]
 for $\eps>0$.
 Therefore,
 \[|f\circ\alpha(\eps)-f\circ\gamma(\eps)|\le L\cdot s\cdot\eps+o(\eps).\]
@@ -66,8 +66,8 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and semiconcave function on an Alexandrov space
-$\spc{L}$.
+Let $f\:\spc{A}\subto\RR$ be a locally Lipschitz and semiconcave function on an Alexandrov space
+$\spc{A}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
@@ -81,8 +81,8 @@ The uniqueness will follow from the first distance estimate (\ref{thm:dist-est})
 We omit the proof of existence as it is rather lengthy.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
-Let $f\:\spc{L}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{L}$.
-Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{L}$ with $\alpha(0)=p$ such that any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
+Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{A}$.
+Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
 Note that the theorem says that the future of a gradient curve is determined by its present, but it says nothing about its past.
@@ -169,7 +169,7 @@ and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 Note that the following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $f$ be a $\lambda$-concave locally Lipschitz function on an Alexandrov space $\spc{L}$.
+Let $f$ be a $\lambda$-concave locally Lipschitz function on an Alexandrov space $\spc{A}$.
 Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
@@ -198,16 +198,16 @@ The following exercise describes a global geometric property of a gradient curve
 It is based on the notion of \index{self-contracting curves}\emph{self-contracting curves} introduced by Aris Daniilidis, Olivier Ley, and Stéphane Sabourau \cite{daniilidis-ley-sabourau}.
 
 \begin{thm}{Exercise}\label{ex:elf-contracting}
-Let $f\:\spc{L}\subto\RR$ be a locally Lipschitz and concave function on an Alexandrov space
-$\spc{L}$.
+Let $f\:\spc{A}\subto\RR$ be a locally Lipschitz and concave function on an Alexandrov space
+$\spc{A}$.
 Then 
-\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{L}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{L}}.\]
+\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{A}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{A}}.\]
 for any $f$-gradient curve $\alpha$ and $t_1\le t_2\le t_3$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:mayer}
-Let $f$ be a locally Lipschitz concave function defined on an Alexandrov space $\spc{L}$.
-Suppose $\hat\alpha\:[0,\ell]\to\spc{L}$ is an arc-length reparametrization of an $f$-gradient curve.
+Let $f$ be a locally Lipschitz concave function defined on an Alexandrov space $\spc{A}$.
+Suppose $\hat\alpha\:[0,\ell]\to\spc{A}$ is an arc-length reparametrization of an $f$-gradient curve.
 Show that $f\circ\hat\alpha$ is concave.
 \end{thm}
 
@@ -217,9 +217,9 @@ Show that $f\circ\hat\alpha$ is concave.
 The following exercise implies that gradient curves for a uniformly converging sequence of $\lambda$-concave functions converge to the gradient curves of the limit function.
 
 \begin{thm}{Exercise}\label{lem:fg-dist-est}
-Let $f$ and $g$ be $\lambda$-concave locally Lipschitz functions on an Alexandrov space $\spc{L}$.
+Let $f$ and $g$ be $\lambda$-concave locally Lipschitz functions on an Alexandrov space $\spc{A}$.
 Suppose
-$\alpha,\beta\:[0,t_{\max})\to \spc{L}$ are respectively $f$- and $g$-gradient curves.
+$\alpha,\beta\:[0,t_{\max})\to \spc{A}$ are respectively $f$- and $g$-gradient curves.
 Assume $|f-g|<\eps$; let $\ell\:t\mapsto\dist{\alpha(t)}{\beta(t)}{}$.
 Show that
 \[\ell^+\le \lambda\cdot\ell+\tfrac{2\cdot\eps}{\ell}.\]
@@ -233,28 +233,28 @@ for some constant $\Const=\Const(t_{\max},\lambda)$.
 
 \section{Gradient flow}
 
-Let $\spc{L}$ be an Alexandrov space 
-and $f$ be a locally Lipschitz semiconcave function defined on an open subset of $\spc{L}$.
+Let $\spc{A}$ be an Alexandrov space 
+and $f$ be a locally Lipschitz semiconcave function defined on an open subset of $\spc{A}$.
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
 \[\GF^t_f(x)=y.\]
-The partially defined map $\GF^t_f$ from $\spc{L}$ to itself is called the \index{gradient!flow}\emph{$f$-gradient flow} for time $t$.
+The partially defined map $\GF^t_f$ from $\spc{A}$ to itself is called the \index{gradient!flow}\emph{$f$-gradient flow} for time $t$.
 Note that
 \[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}.\]
 In other words, one may of that gradient flow as a partial action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
  
 From the first distance estimate \ref{thm:dist-est}, 
-it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{L}$.
+it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{A}$.
 In some cases, it is globally defined.
-For example, if $f$ is a $\lambda$-concave function defined on the whole space $\spc{L}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{L}$ and $t\ge0$;
+For example, if $f$ is a $\lambda$-concave function defined on the whole space $\spc{A}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{A}$ and $t\ge0$;
 see \cite[16.19]{alexander-kapovitch-petrunin2024}.
 
 Now let us reformulate the statements about gradient curves obtained earlier using this new terminology.
 From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $\spc{L}$ be an Alexandrov space 
-and $f\:\spc{L}\to \RR$ be a semiconcave function.
+Let $\spc{A}$ be an Alexandrov space 
+and $f\:\spc{A}\to \RR$ be a semiconcave function.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
 Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.
@@ -263,50 +263,50 @@ Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Li
 The next proposition follows from \ref{lem:fg-dist-est}.
 
 \begin{thm}{Proposition}\label{grad-curve-conv}
-Let $\spc{L}$ be an Alexandrov space.
-Suppose $f_n\:\spc{L}\z\to\RR$ is a sequence of
+Let $\spc{A}$ be an Alexandrov space.
+Suppose $f_n\:\spc{A}\z\to\RR$ is a sequence of
 $\lambda$-concave functions 
-that converges to $f_\infty\:\spc{L}\to \RR$. 
-Then for any $x\in \spc{L}$ and $t\ge 0$, we have
+that converges to $f_\infty\:\spc{A}\to \RR$. 
+Then for any $x\in \spc{A}$ and $t\ge 0$, we have
 \[\GF_{f_n}^t(x)\to \GF_{f_\infty}^t(x)\]
 as $n\to \infty$.
 \end{thm}
 
-There is a more general version of this proposition for a converging sequence $\spc{L}_n\to \spc{L}_\infty$ of spaces and a converging sequence of functions $f_n\:\spc{L}_n\z\to\RR$; see \cite[16.21]{alexander-kapovitch-petrunin2024}.
+There is a more general version of this proposition for a converging sequence $\spc{A}_n\to \spc{A}_\infty$ of spaces and a converging sequence of functions $f_n\:\spc{A}_n\z\to\RR$; see \cite[16.21]{alexander-kapovitch-petrunin2024}.
 
 \section{Gradient exponent}\label{gexp}
 
 One of the technical difficulties in Alexandrov geometry comes from
 nonextendability of geodesics. 
-In particular, the exponential map, $\exp_p\:\T_p\to \spc{L}$, if defined in the usual way, can
+In particular, the exponential map, $\exp_p\:\T_p\to \spc{A}$, if defined in the usual way, can
 be undefined in an arbitrarily small neighborhood of the origin. 
 
 Next we construct the \index{gradient!exponential map}\emph{gradient exponential map} 
-\[\gexp_p\:\T_p\to\spc{L},\]
+\[\gexp_p\:\T_p\to\spc{A},\]
 which essentially solves this problem. 
 It shares many properties with the ordinary exponential map and is even better in certain respects,
 even in the Riemannian universe.
 
-Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$, consider the function $f\z=\distfun_p^2/2$.
+Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$, consider the function $f\z=\distfun_p^2/2$.
 Recall that $\Phi^t_{f}$ denotes the gradient flow.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p(v)=\lim_{n\to\infty}\Phi^{t_n}_{f}(x_n),\]
-where the sequences $x_n\in \spc{L}$ and $t_n\ge 0$ are chosen so that $t_n\to\infty$
+where the sequences $x_n\in \spc{A}$ and $t_n\ge 0$ are chosen so that $t_n\to\infty$
 and $e^{t_n}\cdot\log_px_n\to v$ as $n\to\infty$.
 
-More intuitively, suppose $i_{\lambda}\:\lambda\cdot \spc{L}\to \spc{L}$ sends a point in the rescaled copy $\lambda\cdot\spc{L}$ to the corresponding point in $\spc{L}$.
+More intuitively, suppose $i_{\lambda}\:\lambda\cdot \spc{A}\to \spc{A}$ sends a point in the rescaled copy $\lambda\cdot\spc{A}$ to the corresponding point in $\spc{A}$.
 By the first distance estimate (\ref{thm:dist-est}), the map
-$$\Phi^t_{f}\circ i_{e^t}\:e^t\cdot \spc{L}\to \spc{L}\eqlbl{eq:gexp}$$ 
+$$\Phi^t_{f}\circ i_{e^t}\:e^t\cdot \spc{A}\to \spc{A}\eqlbl{eq:gexp}$$ 
 is short for any $t\ge 0$.
-If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{L},p)\to (\T_p,o_p)$,
-then $\gexp_p\:\T_p\to \spc{L}$ is the limit of $\Phi^{tn}_{f}\circ i_{e^{t_n}}$.
+If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{A},p)\to (\T_p,o_p)$,
+then $\gexp_p\:\T_p\to \spc{A}$ is the limit of $\Phi^{tn}_{f}\circ i_{e^{t_n}}$.
 This way we get that $\gexp_p$ is short as a limit of short maps.
 This observation is generalized in the following proposition. 
 
 
 \begin{thm}{Proposition}\label{prop:gexp}
-Let $\spc{L}$ be a proper $\Alex0$ space.
-Then for any $p\in \spc{L}$ the gradient exponent $\gexp_p\:\T_p\to\spc{L}$ is uniquely defined.
+Let $\spc{A}$ be a proper $\Alex0$ space.
+Then for any $p\in \spc{A}$ the gradient exponent $\gexp_p\:\T_p\to\spc{A}$ is uniquely defined.
 Moreover, $\gexp_p$ is a short map and 
 \[\gexp_p(\gamma^+(0))=\gamma(1)\]
 for any geodesic path $\gamma$ that starts at $p$.
@@ -344,11 +344,11 @@ For $\kappa=-1$ we have
 and $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$
 and 
-\[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{L}}\le \side\hinge0vw_{\HH^2}.\]
+\[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{A}}\le \side\hinge0vw_{\HH^2}.\]
 
 Similarly, for $\kappa=1$ we have $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
-\[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{L}}\le \side\hinge0vw_{\SSS^2},\]
+\[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{A}}\le \side\hinge0vw_{\SSS^2},\]
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
 The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus of but \textit{is different} from the  Riemannian exponential after that.

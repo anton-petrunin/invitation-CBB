@@ -14,28 +14,28 @@ defines a semimetric on the orbit space $\spc{X}/G$.
 Moreover, it is a genuine metric if the orbits of the action are closed.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
-Suppose that a group $G$ acts isometrically on a proper $\Alex0$ space $\spc{L}$, and $G$ has closed orbits.
-Then the quotient space $\spc{L}/G$ is $\Alex0$.
+Suppose that a group $G$ acts isometrically on a proper $\Alex0$ space $\spc{A}$, and $G$ has closed orbits.
+Then the quotient space $\spc{A}/G$ is $\Alex0$.
 
 \end{thm}
 
 A more general formulation will be in  \ref{thm:submetry-CBB-1}.
 
 \parit{Proof.}
-Denote by $\sigma\:\spc{L}\to \spc{L}/G$ the quotient map.
+Denote by $\sigma\:\spc{A}\to \spc{A}/G$ the quotient map.
 
-Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{L}/G$.
-Choose an arbitrary $\hat p\in \spc{L}$ such that $\sigma(\hat{p})=p$.
-Since $\spc{L}$ is proper, we can choose the points $\hat{x}_i\in \spc{L}$ such that $\sigma(\hat x_i)=x_i$ and
-\[\dist{p}{x_i}{\spc{L}/G}
+Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{A}/G$.
+Choose an arbitrary $\hat p\in \spc{A}$ such that $\sigma(\hat{p})=p$.
+Since $\spc{A}$ is proper, we can choose the points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
+\[\dist{p}{x_i}{\spc{A}/G}
 =
-\dist{\hat{p}}{\hat{x}_i}{\spc{L}}\]
+\dist{\hat{p}}{\hat{x}_i}{\spc{A}}\]
 for all $i$.
 
 Note that 
-\[\dist{x_i}{x_j}{\spc{L}/G}
+\[\dist{x_i}{x_j}{\spc{A}/G}
 \le 
-\dist{\hat{x}_i}{\hat{x}_j}{\spc{L}}
+\dist{\hat{x}_i}{\hat{x}_j}{\spc{A}}
 \]
 for all $i$ and $j$.
 Therefore 
@@ -45,7 +45,7 @@ Therefore
 \eqlbl{eq:angles-M-L}\]
 holds for all $i$ and $j$.
 
-By $\EE^2$-comparison in $\spc{L}$,
+By $\EE^2$-comparison in $\spc{A}$,
 we have
 \[\angk {\hat{p}}{\hat{x}_1}{\hat{x}_2}
 +\angk {\hat{p}}{\hat{x}_2}{\hat{x}_3}
@@ -58,7 +58,7 @@ we get
 +\angk p{x_2}{x_3}
 +\angk p{x_3}{x_1}\le 2\cdot\pi;\]
 that is,
-the $\EE^2$-comparison holds for any quadruple in $\spc{L}/G$.
+the $\EE^2$-comparison holds for any quadruple in $\spc{A}/G$.
 \qeds
 
 \begin{thm}{Advanced exercise}\label{ex:Hilbert/G}
@@ -75,8 +75,8 @@ is called a \index{submetry}\emph{submetry} if
 \[\sigma(\oBall(p,r)_\spc{X})=\oBall(\sigma(p),r)_{\spc{Y}}\]
 for any $p\in \spc{X}$ and $r\ge 0$.
 
-Suppose $G$ and $\spc{L}$ are as in \ref{thm:CBB/G}.
-Observe that the quotient map $\sigma\:\spc{L}\to \spc{L}/G$ is a submetry.
+Suppose $G$ and $\spc{A}$ are as in \ref{thm:CBB/G}.
+Observe that the quotient map $\sigma\:\spc{A}\to \spc{A}/G$ is a submetry.
 The following two exercises show that this is not the only source of submetries. 
 
 \begin{thm}{Exercise}\label{ex:sumbetries(S^2)}
@@ -99,7 +99,7 @@ Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points 
 \end{thm}
 
 The proof of \ref{thm:CBB/G} works for submetries equally well;
-that is, \textit{if $\sigma\:\spc{L}\to\spc{M}$ is a submetry and $\spc{L}$ is $\Alex0$, then so is $\spc{M}$}.
+that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex0$, then so is $\spc{B}$}.
 Theorems \ref{thm:CBB/G} admits straightforward generalizations to $\Alex{-1}$ case.
 In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds in any open $\tfrac\pi2$-ball in the quotient of $\Alex1$};
 in particular, the quotient space is \textit{locally} $\Alex1$.
@@ -110,11 +110,11 @@ With a bit of extra work, one can extend the statement to nonproper spaces; see 
 Thus, we have the following two statements.
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB-1}
-Let $\sigma\:\spc{L}\to\spc{M}$ be a submetry.
-Suppose $\spc{L}$ is $\Alex\kappa$ space, then so is $\spc{M}$.
+Let $\sigma\:\spc{A}\to\spc{B}$ be a submetry.
+Suppose $\spc{A}$ is $\Alex\kappa$ space, then so is $\spc{B}$.
 
-In particular, if $G$ acts isometrically on a proper $\Alex\kappa$ space $\spc{L}$, and $G$ has closed orbits.
-Then the quotient space $\spc{L}/G$ is $\Alex\kappa$.
+In particular, if $G$ acts isometrically on a proper $\Alex\kappa$ space $\spc{A}$, and $G$ has closed orbits.
+Then the quotient space $\spc{A}/G$ is $\Alex\kappa$.
 \end{thm}
 
 \section{Hopf's conjecture}
@@ -205,21 +205,21 @@ Use it to construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot
 \end{thm}
 
 \parit{Proof of \ref{thm:hsiang-kleiner}.}
-Assume $\spc{M}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
-By the Toponogov theorem, $\spc{M}$ is $\Alex1$.
-By \ref{thm:CBB/G}, the quotient space $\spc{L}\z=\spc{M}/\SSS^1$ is $\Alex1$;
-evidently, $\spc{L}$ is 3-dimensional.
+Assume $\spc{B}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
+By the Toponogov theorem, $\spc{B}$ is $\Alex1$.
+By \ref{thm:CBB/G}, the quotient space $\spc{A}\z=\spc{B}/\SSS^1$ is $\Alex1$;
+evidently, $\spc{A}$ is 3-dimensional.
 
-Denote by $F\subset \spc{M}$ the fixed point set of the $\SSS^1$-action.
-Each connected component of $F$ is either an isolated point or a 2-dimensional geodesic submanifold in $\spc{M}$;
+Denote by $F\subset \spc{B}$ the fixed point set of the $\SSS^1$-action.
+Each connected component of $F$ is either an isolated point or a 2-dimensional geodesic submanifold in $\spc{B}$;
 the latter has to have positive curvature, and therefore it is either $\SSS^2$ or $\RP^2$.
 Notice that 
 \begin{itemize}
- \item each isolated point contributes 1 to the Euler characteristic of~$\spc{M}$,
- \item each sphere contributes 2 to the Euler characteristic of $\spc{M}$, and
- \item each projective plane contributes 1 to the Euler characteristic of~$\spc{M}$.
+ \item each isolated point contributes 1 to the Euler characteristic of~$\spc{B}$,
+ \item each sphere contributes 2 to the Euler characteristic of $\spc{B}$, and
+ \item each projective plane contributes 1 to the Euler characteristic of~$\spc{B}$.
 \end{itemize}
-Since $\chi(\spc{M})=4$, we are in one of the following three cases:
+Since $\chi(\spc{B})=4$, we are in one of the following three cases:
 \begin{itemize}
  \item $F$ has exactly 4 isolated points,
  \item $F$ has one 2-dimensional submanifold and at least 2 isolated points,
@@ -229,8 +229,8 @@ In each case we will arrive at a contradiction.
 
 \parit{Case 1.}
 Suppose $F$ has exactly 4 isolated points $x_1$, $x_2$, $x_3$, and $x_4$.
-Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{L}$.
-Note that $\Sigma_{y_i}\spc{L}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
+Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{A}$.
+Note that $\Sigma_{y_i}\spc{A}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
 
 By \ref{ex:S^3/S^1}, each angle $\mangle\hinge{y_i}{y_j}{y_k}\le \tfrac\pi2$ for any three distinct points 
 $y_i$, $y_j$, $y_k$.
@@ -241,18 +241,18 @@ Denote by $\sigma$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[
 From above,
 \[\sigma>4\cdot\pi.\]
 
-On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{L}$ has perimeter at most $\pi$.
+On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{A}$ has perimeter at most $\pi$.
 In particular, 
 \[\mangle\hinge{y_1}{y_2}{y_3}+\mangle\hinge{y_1}{y_3}{y_4}+\mangle\hinge{y_1}{y_4}{y_2}\le \pi.\]
-Apply the same argument in $\Sigma_{y_2}\spc{L}$, $\Sigma_{y_3}\spc{L}$, and $\Sigma_{y_4}\spc{L}$;
+Apply the same argument in $\Sigma_{y_2}\spc{A}$, $\Sigma_{y_3}\spc{A}$, and $\Sigma_{y_4}\spc{A}$;
 adding the results, we get 
 \[\sigma\le 4\cdot\pi\]
 --- a contradiction.
 
 \parit{Case 2.}
 Suppose $F$ contains one surface $S$.
-Note that the projection of $S$ to $\spc{L}$ forms its boundary $\partial \spc{L}$.
-Note that doubling $\spc{W}$ of $\spc{L}$ across its boundary has 4 singular points --- each singular point of $\spc{L}$ corresponds to two singular points of $\spc{W}$.
+Note that the projection of $S$ to $\spc{A}$ forms its boundary $\partial \spc{A}$.
+Note that doubling $\spc{W}$ of $\spc{A}$ across its boundary has 4 singular points --- each singular point of $\spc{A}$ corresponds to two singular points of $\spc{W}$.
 
 By the doubling theorem, $\spc{W}$ is a $\Alex1$ space.
 Therefore we arrive at a contradiction in the same way as in the first case.
@@ -265,7 +265,7 @@ Therefore we arrive at a contradiction in the same way as in the first case.
 A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$. 
 
 \begin{thm}{Theorem}\label{thm:extr-point}
-Let $\spc{L}$ be a compact $m$-dimensional $\Alex0$ space.
+Let $\spc{A}$ be a compact $m$-dimensional $\Alex0$ space.
 Then it has at most $2^m$ extremal points.
 \end{thm}
 
@@ -281,36 +281,36 @@ This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer a
 Grigory Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
 
 \parit{Proof of \ref{thm:extr-point}.}
-Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{L}$.
+Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{A}$.
 For each $p_i$ consider its open \index{Voronoi domain}\emph{Voronoi domain} $V_i$; that is, 
-\[V_i=\set{x\in \spc{L}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
+\[V_i=\set{x\in \spc{A}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
 Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
 
 Suppose  $0<\alpha\le 1$.
-Given a point $x\in\spc{L}$, choose a geodesic $[p_ix]$ and denote by $x_i$ the point on $[p_ix]$ such that $\dist{p_i}{x_i}{}=\alpha\cdot\dist{p_i}{x}{}$;
+Given a point $x\in\spc{A}$, choose a geodesic $[p_ix]$ and denote by $x_i$ the point on $[p_ix]$ such that $\dist{p_i}{x_i}{}=\alpha\cdot\dist{p_i}{x}{}$;
 let $\map_i\:x\to x_i$ be the corresponding map.
 By the comparison, 
 \[\dist{x_i}{y_i}{}\ge\alpha\cdot \dist{x}{y}{}\]
 for any $x$, $y$, and $i$.
 Therefore 
-\[\vol(\map_i \spc{L})\ge\alpha^m\cdot\vol \spc{L}.\]
+\[\vol(\map_i \spc{A})\ge\alpha^m\cdot\vol \spc{A}.\]
 
 Suppose $\alpha<\tfrac12$.
-Then $x_i\in V_i$ for any $x\in \spc{L}$.
+Then $x_i\in V_i$ for any $x\in \spc{A}$.
 Indeed, assume $x_i\notin V_i$,
 then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
 Then from the comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ does not form a one-point extremal set.
-It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{L}$
+It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{A}$
 for any $0<\alpha<\tfrac12$; hence 
-\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{L}\quad\text{and}\quad N\le 2^m.\]
+\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{A}\quad\text{and}\quad N\le 2^m.\]
 \qedsf
 
 \section{Crystallographic actions}
 
 
 An isometric action $\Gamma\acts \EE^m$ is called \index{crystallographic action}\emph{crystallographic} if it is 
-\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{L}=\EE^m/\Gamma$ is compact).
+\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{A}=\EE^m/\Gamma$ is compact).
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $F<H<\Gamma$ for a finite group $H$, then $F=H$.
@@ -330,9 +330,9 @@ Denote by $\#_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up t
 
 Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F \cdot g^{-1}$.
 Note that $A_{F'}=g\cdot A_F$.
-In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{L}=\EE^m/\Gamma$.
+In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{A}=\EE^m/\Gamma$.
 Therefore, to count subgroups up to conjugation, we need to count the images of their fixed sets.
-Therefore, by the lemma below (\ref{lem:extr/G}), $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{L}=\EE^m/\Gamma$.
+Therefore, by the lemma below (\ref{lem:extr/G}), $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{A}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
 \begin{thm}{Proposition}\label{prop:2m}
@@ -342,15 +342,15 @@ Then $\#_0(\Gamma)\le 2^m$.
 
 \begin{thm}{Lemma}\label{lem:extr/G}
 Let $\Gamma\acts \EE^m$ be a crystallographic action and $F$ be a maximal finite subgroup of $\Gamma$ that fixes an isolated point $p$.
-Then the image of $p$ in the quotient space $\spc{L}=\EE^m/\Gamma$ is an extremal point.
+Then the image of $p$ in the quotient space $\spc{A}=\EE^m/\Gamma$ is an extremal point.
 \end{thm}
 
 \parit{Proof.}
 Let $q$ be the image of $p$.
 Suppose $q$ is not extremal;
-that is, $\mangle \hinge q{y_1}{y_2}>\tfrac\pi2$ for some hinge $\hinge q{y_1}{y_2}$ in $\spc{L}$.
+that is, $\mangle \hinge q{y_1}{y_2}>\tfrac\pi2$ for some hinge $\hinge q{y_1}{y_2}$ in $\spc{A}$.
 
-Choose the inverse images $x_1,x_2\in \EE^m$ of $y_1,y_2\in \spc{L}$ such that $\dist{p}{x_i}{\EE^m}=\dist{q}{y_i}{\spc{L}}$.
+Choose the inverse images $x_1,x_2\in \EE^m$ of $y_1,y_2\in \spc{A}$ such that $\dist{p}{x_i}{\EE^m}=\dist{q}{y_i}{\spc{A}}$.
 Note that $\mangle \hinge p{x_1}{x_2}\ge \mangle \hinge q{y_1}{y_2}>\tfrac\pi2$.
 Moreover, since $p$ is fixed by $F$, we have
 \[\mangle \hinge p{x_1}{g\cdot x_2}>\tfrac\pi2
@@ -398,7 +398,7 @@ and, what about the existence of distance-noncontracting map $\Sigma/\SSS^1\to \
 
 
 \begin{thm}{Advanced exercise}\label{ex:S1actsS3}
-Suppose $\SSS^1$ acts isometrically on an $\Alex1$ space $\spc{L}$ that is homeomorphic to $\SSS^3$.
+Suppose $\SSS^1$ acts isometrically on an $\Alex1$ space $\spc{A}$ that is homeomorphic to $\SSS^3$.
 Assume its fixed-point set is a closed local geodesic $\gamma$.
 Show that $\length\gamma\le2\cdot\pi$.
 \end{thm}
@@ -406,10 +406,10 @@ Show that $\length\gamma\le2\cdot\pi$.
 The same question for a $\ZZ_2$-action is open \cite{petrunin-involution}.
 
 Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
-(This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{L}=\TT^m/\ZZ_2$.)
+(This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$.)
 Nina Lebedeva has proved \cite{lebedeva} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
-Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{L}=\EE^m/\Gamma$.
+Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{A}=\EE^m/\Gamma$.
 So, \ref{prop:2m} would follow from the next conjecture.
 
 \begin{thm}{Conjecture}

@@ -369,11 +369,11 @@ Argue as above to show that any point lies on $\gamma$ and make a conclusion.
 \parbf{\ref{ex:perim-k>0}.}
 Arguing by contradiction, suppose 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\pi\eqlbl{eq:perimeter-of-triange<2pi}\] 
-for $p,q,r\in \spc{L}$. 
-Rescaling the space slightly, we can assume that $\diam\spc{L}<\pi$,
+for $p,q,r\in \spc{A}$. 
+Rescaling the space slightly, we can assume that $\diam\spc{A}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 By \ref{clm:K>k},
-after rescaling $\spc{L}$ is still $\Alex1$.
+after rescaling $\spc{A}$ is still $\Alex1$.
 
 Take $z_0\in [q r]$ on maximal distance from $p$.
 Consider the following model configuration:
@@ -424,7 +424,7 @@ On the other hand, by assumption, $\dist{\gamma_n(t)}{\gamma_\infty(t)}{}\to0$ a
 \parit{Comments.}
 The compactness of $\Sigma_p$ is necessary.
 An example can be built using iterated warped product of line segments and applying \cite[Theorem 1.2]{alexander-bishop2004}.
-The space $\spc{L}$ can be assumed to be compact.
+The space $\spc{A}$ can be assumed to be compact.
 
 
 \parbf{\ref{ex:geodesic-cone}.}
@@ -482,7 +482,7 @@ Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
 Use \ref{ex:angle-lim} to show that $[pq]$ makes an angle at most $\alpha_0$ with $\gamma$ --- a contradiction.
  
 \parbf{\ref{ex:monotonicity}.}
-Let $\gamma\:[0,\ell]\to \spc{L}$ be the geodesic $[xy]$ parametrized from $x$ to $y$,
+Let $\gamma\:[0,\ell]\to \spc{A}$ be the geodesic $[xy]$ parametrized from $x$ to $y$,
 and let $\phi=f\circ\gamma$.
 Observe that 
 \[\phi'(0)=\dd_xf(\dir xy)\le \<\dir{x}{y},\nabla_{x}f\>.\]
@@ -545,7 +545,7 @@ hence the only-if part follows.
 
 Now suppose $f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2$,
 were $\ell=\dist{x}{y}{}$.
-Let $\gamma\:[0,\ell]\to \spc{L}$ be a geodesic from $x$ to $y$.
+Let $\gamma\:[0,\ell]\to \spc{A}$ be a geodesic from $x$ to $y$.
 Since $f\circ\gamma$ is $\lambda$-concave, we have
 \[f\circ\gamma(\ell)\le f\circ\gamma(0)+(f\circ\gamma)^+(0)\cdot\ell+\lambda\cdot \tfrac{\ell^2}2.\]
 It follows that 
@@ -669,14 +669,14 @@ and since $|u|=|u^*|$, we have equality.
 Apply \ref{ex:-u}.
 
 \parbf{\ref{ex:tangent=Em}.}
-By \ref{ex:diam-compact:proper}, $\spc{L}$ is \emph{separable}; that is, it contains a countable dense set of points.
+By \ref{ex:diam-compact:proper}, $\spc{A}$ is \emph{separable}; that is, it contains a countable dense set of points.
 Apply \ref{cor:euclid-subcone} to this set.
 
 \parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
 
 \parbf{\ref{ex:resporka}.} The only-if part is trivial.
-Suppose the configuration $p$, $a_0,\z\dots, a_{m}\in \spc{L}$ meets the condition.
-By \ref{ex:grad-dist} the directions $\dir q{a_0},\z\dots,\dir q{a_m}\in \Lin_q$ for G-delta dense set of points $q\in \spc{L}$.
+Suppose the configuration $p$, $a_0,\z\dots, a_{m}\in \spc{A}$ meets the condition.
+By \ref{ex:grad-dist} the directions $\dir q{a_0},\z\dots,\dir q{a_m}\in \Lin_q$ for G-delta dense set of points $q\in \spc{A}$.
 If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
 and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
 Conclude that $\dim\Lin_q\ge m$ in this case.
@@ -685,7 +685,7 @@ Conclude that $\dim\Lin_q\ge m$ in this case.
 \ref{SHORT.ex:finite-tan:tan}. Apply \ref{ex:geodesic-cone}, \ref{prop:Tan-is-CBB(0)}, and \ref{thm:finite-space-of-directions}.
 
 \parit{\ref{SHORT.ex:finite-space-of-directions-dim}.}
-Apply \ref{ex:resporka} to show that $\LinDim\T_p=\LinDim\spc{L}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
+Apply \ref{ex:resporka} to show that $\LinDim\T_p=\LinDim\spc{A}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
 
 \parit{\ref{SHORT.ex:finite-tan:sigma}.}
 By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p$ such that $\dist{\xi}{\zeta}{\Sigma_p}<\pi$ there is a geodesic $[\xi\zeta]_{\Sigma_p}$.
@@ -808,15 +808,15 @@ Reuse the argument from  the first part of the proof of Bishop--Gromov inequalit
 \parbf{\ref{ex:BG}.} 
 You should follow the proof Bishop--Gromov inequality, plus prove the following two inequalities 
 \begin{align*}
-\sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{L}}
+\sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{A}}
 \\
-\sinh r_2\cdot\dist{w(x)}{w(y)}{\spc{L}} &\ge \sinh r_1\cdot\dist{x}{y}{\spc{L}}
+\sinh r_2\cdot\dist{w(x)}{w(y)}{\spc{A}} &\ge \sinh r_1\cdot\dist{x}{y}{\spc{A}}
 \end{align*}
 for any $x,y\in\oBall(p,r)$.
 
 \parbf{\ref{ex:dim=dim}.} 
-Suppose $K$ is a compact set in $\spc{L}$ such that $\HausDim K\ge m$.
-Use the map $w$ from the proof of the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}) to show that any open ball in $\spc{L}$ contains a compact set $K'$ such that $\HausDim K'\ge m$.
+Suppose $K$ is a compact set in $\spc{A}$ such that $\HausDim K\ge m$.
+Use the map $w$ from the proof of the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}) to show that any open ball in $\spc{A}$ contains a compact set $K'$ such that $\HausDim K'\ge m$.
 
 Use this in addition to the arguments in \ref{thm:dim=dim}. 
 
@@ -847,19 +847,19 @@ Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 Apply the Bishop--Gromov inequality (\ref{inq:BG}).
 
 \parit{\ref{SHORT.ex:pack-vol:dim}}
-By \ref{ex:dim-lim}, $\dim\spc{L}_\infty\le m$.
-To show that $\dim\spc{L}_\infty\ge m$,
+By \ref{ex:dim-lim}, $\dim\spc{A}_\infty\le m$.
+To show that $\dim\spc{A}_\infty\ge m$,
 apply \ref{cor:euclid-subcone} to a maximal packing and use the estimate in \ref{SHORT.ex:pack-vol:pack}.
 
 \parit{Comment.}
 A stronger statement holds 
-\[\vol_m\spc{L}_\infty=\lim_{n\to\infty} \vol_m\spc{L}_n;\]
+\[\vol_m\spc{A}_\infty=\lim_{n\to\infty} \vol_m\spc{A}_n;\]
 in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
 $\vol_m\:\bm{K}\to \RR$ is continuous.
 
 
 \parbf{\ref{ex:diam-compact:GH}.}
-Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{L}_n}$ for given $R>0$, then apply the diagonal procedure to construct the needed convergence.
+Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{A}_n}$ for given $R>0$, then apply the diagonal procedure to construct the needed convergence.
 
 \parbf{\ref{ex:no-conc}.}
 Consider the infinite product $\SSS^1\times ({\tfrac 12}\cdot \SSS^1)\times ({\tfrac 14}\cdot \SSS^1)\times\dots$
@@ -906,11 +906,11 @@ Therefore the pair $\Susp^2\Sigma$ and $\SSS^5$ provides the needed example.
 \parbf{\ref{ex:bry2bry}.} Apply \ref{thm:spherical-nbhd}, \ref{lem:kwun}, and \ref{thm:top-bry}.
 
 \parbf{\ref{ex:bry-closed}.}
-Let $\spc{L}$ be a finite-dimensional Alexandrov space.
-Choose $x\in\spc{L}$.
+Let $\spc{A}$ be a finite-dimensional Alexandrov space.
+Choose $x\in\spc{A}$.
 By \ref{thm:spherical-nbhd}, a neighborhood $U\ni x$ is homeomorphic to $\T_x$.
-Therefore \ref{ex:bry2bry}, implies that $U\cap\partial\spc{L}=\emptyset$ if and only if $x\notin \partial\spc{L}$;
-that is, the complement $\spc{L}\setminus\partial\spc{L}$ is open, and therefore, $\spc{L}$ is closed.
+Therefore \ref{ex:bry2bry}, implies that $U\cap\partial\spc{A}=\emptyset$ if and only if $x\notin \partial\spc{A}$;
+that is, the complement $\spc{A}\setminus\partial\spc{A}$ is open, and therefore, $\spc{A}$ is closed.
 
 \parbf{\ref{ex:pz<ypz}.}
 Consider the model triangle $[\tilde x\tilde y\tilde z']=\modtrig(xyz)$.
@@ -925,31 +925,31 @@ Show that
 
 
 \parbf{\ref{ex:bry-connected}.}
-Assume $\spc{L}$ has at least two boundary components, say $A$ and $B$.
+Assume $\spc{A}$ has at least two boundary components, say $A$ and $B$.
 Denote by $\gamma$ a geodesic that minimizes the distance from $A$ to $B$.
 
 Let 
-\[\dots,\spc{L}_{-1},\spc{L}_{0},\spc{L}_{1},\dots\]
-be a two-sided infinite sequence of copies on $\partial\spc{L}$.
-Let us glue $\spc{L}_{i}$ to $\spc{L}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
+\[\dots,\spc{A}_{-1},\spc{A}_{0},\spc{A}_{1},\dots\]
+be a two-sided infinite sequence of copies on $\partial\spc{A}$.
+Let us glue $\spc{A}_{i}$ to $\spc{A}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
 
-By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{L}$ or its doubling.
+By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{A}$ or its doubling.
 By the globalization theorem, $\spc{N}$ is $\Alex1$.
 
-Note that the copies of $\gamma$ in $\spc{L}_{i}$ form a line in $\spc{N}$.
+Note that the copies of $\gamma$ in $\spc{A}_{i}$ form a line in $\spc{N}$.
 By the splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
 Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi$ --- a contradiction.
 
 \parbf{\ref{ex:dist-to-bry}.} Choose $x$ on $\gamma$;
 we can assume that $x=\gamma(0)$.
-Let $y\in \partial \spc{L}$ be a closest point to $x$.
+Let $y\in \partial \spc{A}$ be a closest point to $x$.
 Let $\alpha=\mangle(\dir xy,\gamma^+(0)$.
 
-Suppose $x\notin \partial \spc{L}$.
-Show that $\T_y=\RR_{\ge0}\times\T_y\partial \spc{L}$
-and $\dir yx\perp \T_y\partial \spc{L}$.
+Suppose $x\notin \partial \spc{A}$.
+Show that $\T_y=\RR_{\ge0}\times\T_y\partial \spc{A}$
+and $\dir yx\perp \T_y\partial \spc{A}$.
 
-Given a vector $v\in \T_y$, denote by $\bar v$ its projection to $\T_y\partial \spc{L}$.
+Given a vector $v\in \T_y$, denote by $\bar v$ its projection to $\T_y\partial \spc{A}$.
 Apply the comparison and \ref{prop:gexp} to show that 
 \[\dist{\gamma(t)}{\gexp_y(\overline{\log_x\gamma(t)})}{}\le \dist{x}{y}{}+t\cdot\cos\alpha.\]
 Conclude that $\gamma''(0)\le 0$ in the barrier sense.
@@ -977,12 +977,12 @@ It is instructive to check that this formulation is equivalent to ours for conve
 \parbf{\ref{ex:native}.}
 Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
-that $\gamma$ can cross the common boundary of two halves $\spc{L}_0$ and $\spc{L}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
+that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ and $\spc{A}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
 
 In the later case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
 In the former case the convexity has to be checked only at the point of crossing;
 we may assume that it happens at $x=\gamma(0)$.
-Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{L}$ the $f$-gradient flows agree on $\spc{L}_0$ and $\spc{L}_1$.
+Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{A}$ the $f$-gradient flows agree on $\spc{A}_0$ and $\spc{A}_1$.
 
 Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
 Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
@@ -1035,8 +1035,8 @@ preserve the distance to the poles and respects the $\SSS^1$ action.
 \parbf{\ref{ex:number(m-1)}};
 \ref{SHORT.ex:number(m-1):2}.
 Suppose $\#_{m-1}(\Gamma)\ge 3$;
-that is $\spc{L}=\EE^m/\Gamma$ has at least 3 boundary components.
-Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{L}$ using two of these components.
+that is $\spc{A}=\EE^m/\Gamma$ has at least 3 boundary components.
+Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{A}$ using two of these components.
 Show that the obtained space splits and arrive at a contradiction.
 
 (Alternatively, apply a similar construction to all components of the boundary.
@@ -1048,7 +1048,7 @@ Arrive at a contradiction with the Bishop--Gromov inequality.)
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
 
 \parbf{\ref{ex:S1actsS3}.}
-Show that the quotient space $\Delta=\spc{L}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to $\partial\Delta$.
+Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to $\partial\Delta$.
 It remains to show that the perimeter of $\Delta$ cannot exceed $2\cdot\pi$.
 The latter follows from \cite[3.3.5]{petrunin:survey};
 it states that if $\Delta$ as an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
@@ -1137,8 +1137,8 @@ for all large $n$.
 Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
 
 \parit{Comments.}
-More generally, if a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{L}_1,\spc{L}_2,\dots$ converges to $\spc{L}_\infty$ and $\dim \spc{L}_\infty=m<\infty$,
-then $\partial \spc{L}_n$ equipped with the induced length metrics converge to  $\partial \spc{L}_\infty$.
+More generally, if a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1,\spc{A}_2,\dots$ converges to $\spc{A}_\infty$ and $\dim \spc{A}_\infty=m<\infty$,
+then $\partial \spc{A}_n$ equipped with the induced length metrics converge to  $\partial \spc{A}_\infty$.
 This statement is a partial case of the theorem about extremal subsets proved by the second author \cite[1.2]{petrunin1997}.
 
 \parbf{\ref{ex:liberman+milka}}; \ref{SHORT.ex:liberman+milka:liberman}.

@@ -1,12 +1,12 @@
 \parbf{\ref{ex:native}.}
 Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
-that $\gamma$ can cross the common boundary of two halves $\spc{L}_0$ $\spc{L}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
+that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ $\spc{A}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
 
 In the later case $\lambda$-convexity of $f\circ\proj$ follows from $\lambda$-convexity of $f$.
 In the former case the convexity has to be checked only at the point of crossing;
 we may assume that it happens at $x=\gamma(0)$.
-Since $\nabla_x f\in \T_x\partial\spc{L}$, we have 
+Since $\nabla_x f\in \T_x\partial\spc{A}$, we have 
 \[\dd_x(f\circ\proj)(v)\le\langle\nabla_x f,v\rangle\]
 Argue as in the proof of \ref{thm:doubling:doubling}, show that 
 $\langle\gamma^+(0),v\rangle+\langle\gamma^-(0),v\rangle \ge 0$
@@ -27,7 +27,7 @@ $\langle\gamma^+(0),v\rangle+\langle\gamma^-(0),v\rangle \ge 0$
 
 
 \parit{\ref{SHORT.thm:doubling:concave}.}
-Let us apply induction on $m=\LinDim \spc{L}$.
+Let us apply induction on $m=\LinDim \spc{A}$.
 
 \begin{wrapfigure}{r}{30mm}
 \vskip-2mm
@@ -36,8 +36,8 @@ Let us apply induction on $m=\LinDim \spc{L}$.
 \end{wrapfigure}
 
 Choose a geodesic $[pz]$; let $\gamma(0)=p$.
-Suppose $p\notin\partial \spc{L}$.
-Let $q\in \partial\spc{L}$ be a closest point to $p$ and $\alpha\df\mangle\hinge pzq$.
+Suppose $p\notin\partial \spc{A}$.
+Let $q\in \partial\spc{A}$ be a closest point to $p$ and $\alpha\df\mangle\hinge pzq$.
 
 By the definition of boundary points, 
 \[\partial \Sigma_q\z\ne\emptyset.\]
@@ -62,13 +62,13 @@ Let
 \[y
 \df
 \gexp_q\circ\proj(\gamma^+_x(0)).\]
-By \ref{thm:gexp}, $y\in \partial\spc{L}$ and 
+By \ref{thm:gexp}, $y\in \partial\spc{A}$ and 
 \[\dist{x}{y}{}\le \dist{p}{q}{}+\dist{p}{x}{}\cdot \cos\alpha.\eqlbl{eq:|x-y|}\]
 The latter inequality uses in addition the comparison for $[pqx]$ and it requires some work.
 
-Note that \ref{eq:|x-y|} implies that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}\setminus \partial \spc{L}$.
-If $\gamma(t)\in \partial \spc{L}$ for some $t$, then it is easy to see that $(f\circ\gamma)'(t)=0$.
-These two statements imply that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{L}$.
+Note that \ref{eq:|x-y|} implies that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{A}\setminus \partial \spc{A}$.
+If $\gamma(t)\in \partial \spc{A}$ for some $t$, then it is easy to see that $(f\circ\gamma)'(t)=0$.
+These two statements imply that $f\circ\gamma$ is concave for any geodesic that lies in $\spc{A}$.
 
 
 
@@ -106,5 +106,5 @@ Combining this observation with
 Applying the theorem we get the following.
 
 \begin{thm}{Corollary}
-A small spherical neighborhood of any point $p$ in a finite-dimensional $\Alex\kappa$ space $\spc{L}$ is homeomorphic to an open cone over small sphere around $p$.
+A small spherical neighborhood of any point $p$ in a finite-dimensional $\Alex\kappa$ space $\spc{A}$ is homeomorphic to an open cone over small sphere around $p$.
 \end{thm}

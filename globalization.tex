@@ -6,28 +6,28 @@ We start with the simplest meaningful case of this theorem and indicate a way to
 
 \section{Globalization}
 
-A complete geodesic metric space $\spc{L}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{L}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
+A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{A}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
 Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
 \parit{Proof modulo the key lemma.}
-Note that condition \ref{angle-b} holds in $\spc{L}$ (the proof is the same).
+Note that condition \ref{angle-b} holds in $\spc{A}$ (the proof is the same).
 It remains to check \ref{angle-a};
 that is,
 \[\mangle\hinge x p y\ge\angk x p y
 \eqlbl{eq:mod-angle-CBB-comp-glob}\]
-for any hinge $\hinge x p y$ in $\spc{L}$.
+for any hinge $\hinge x p y$ in $\spc{A}$.
 
 First note that \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
 this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\EE^2$-comparison.
-Since $\spc{L}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
+Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
 Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
-Let $\spc{L}$ be locally $\Alex0$. 
+Let $\spc{A}$ be locally $\Alex0$. 
 Assume that the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
@@ -41,7 +41,7 @@ Then the comparison
 holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
 \end{thm}
 
-Let $\hinge x p q$ be a hinge in $\spc{L}$.
+Let $\hinge x p q$ be a hinge in $\spc{A}$.
 Denote by $\side \hinge x p q$ its \index{$\side \hinge x p q$ (model side)}\index{model!side}\emph{model side};
 this is the opposite side in a flat triangle with the same angle and two adjacent sides as in $\hinge x p q$.
 
@@ -53,13 +53,13 @@ this is the opposite side in a flat triangle with the same angle and two adjacen
 More precisely,
 consider the model hinge $\hinge {\tilde x} {\tilde p} {\tilde q}$ in $\EE^2$ that is defined by 
 \begin{align*}
-\mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{L}},
+\mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{A}},
 \\
-\dist{\tilde x} {\tilde p}{\EE^2}&=\dist{x} {p}{\spc{L}},
+\dist{\tilde x} {\tilde p}{\EE^2}&=\dist{x} {p}{\spc{A}},
 \\
-\dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{L}};
+\dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{A}};
 \intertext{then}
-\side \hinge x p q_{\spc{L}}
+\side \hinge x p q_{\spc{A}}
 &\df
 \dist{\tilde p}{\tilde q}{\EE^2}.
 \end{align*}
@@ -229,23 +229,23 @@ Show that $\spc{X}$ has curvature $\ge 1$, but does not have curvature $\ge 0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:RisCBB(1)}
-Let $p$ and $q$ be points in an $\Alex1$ space $\spc{L}$.
+Let $p$ and $q$ be points in an $\Alex1$ space $\spc{A}$.
 Suppose $\dist{p}{q}{}>\pi$.
 Denote by $m$ the midpoint of $[pq]$.
 Show that for any hinge $\hinge mxp$ we have
 either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
 
-Conclude that $\spc{L}$ is isometric to a line interval or a circle.
+Conclude that $\spc{A}$ is isometric to a line interval or a circle.
 
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perim-k>0}
 Suppose  
-$\spc{L}$ is an $\Alex1$
-and $\diam \spc{L}\le \pi$.
+$\spc{A}$ is an $\Alex1$
+and $\diam \spc{A}\le \pi$.
 Show that 
 \[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
-for any triple of points $x,y,z\in \spc{L}$.
+for any triple of points $x,y,z\in \spc{A}$.
 \end{thm}
 
 
@@ -254,11 +254,11 @@ for any triple of points $x,y,z\in \spc{L}$.
 The following question about \ref{angle-a} was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov} but this is a long-standing open problem (possibly dating back to Alexandrov).
 
 \begin{thm}{Open question}\label{open:hinge-}
-Let $\spc{L}$ be a complete geodesic space (you can also assume that $\spc{L}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
-such that for any hinge $\hinge x p y$ in $\spc{L}$, 
+Let $\spc{A}$ be a complete geodesic space (you can also assume that $\spc{A}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
+such that for any hinge $\hinge x p y$ in $\spc{A}$, 
 the angle $\mangle\hinge x p y$ is defined and 
 \[\mangle\hinge x p y\ge\angk x p y.\]
-Is it true that $\spc{L}$ is an Alexandrov space?
+Is it true that $\spc{A}$ is an Alexandrov space?
 \end{thm}
 
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.

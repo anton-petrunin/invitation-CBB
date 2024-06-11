@@ -206,7 +206,7 @@ Show that
 
 
 \begin{thm}{Exercise}\label{ex:pxyvw}
-Let $\spc{L}$ be an $\Alex0$ 
+Let $\spc{A}$ be an $\Alex0$ 
 space.
 Show that  
 \[
@@ -215,12 +215,12 @@ Show that
 \angk xyp=\angk xwp
 \]
 for any points
-$p,x,y,v,w$ in $\spc{L}$ such that $v,w\in \left]xy\right[$.
+$p,x,y,v,w$ in $\spc{A}$ such that $v,w\in \left]xy\right[$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:angle-lim}
-Let $\spc{L}$ be an $\Alex0$ space.
-Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{L}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
+Let $\spc{A}$ be an $\Alex0$ space.
+Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{A}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
 that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
@@ -228,28 +228,28 @@ Show that
 
 \section{Hinge comparison}
 
-Let $\hinge pxy$ be a hinge in an $\Alex0$ space $\spc{L}$.
+Let $\hinge pxy$ be a hinge in an $\Alex0$ space $\spc{A}$.
 By \ref{ex:0-angle}, the angle measure $\mangle\hinge pxy$ is defined and
 \[\mangle\hinge pxy\ge \angk pxy.\]
 
 Further, according to \ref{ex:adjacent-CBB}, we have 
 \[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
-for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{L}$.
+for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$.
 
 The following theorem implies that a geodesic space has nonnegative curvature in the sense of Alexandrov if
 the above conditions hold for all its hinges.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
-A complete geodesic space $\spc{L}$ is $\Alex0$ if the following conditions hold.
+A complete geodesic space $\spc{A}$ is $\Alex0$ if the following conditions hold.
 
 \begin{subthm}{angle-a}
-For any hinge $\hinge x p y$ in $\spc{L}$, the angle 
+For any hinge $\hinge x p y$ in $\spc{A}$, the angle 
 $\mangle\hinge x p y$ is defined and 
 \[\mangle\hinge x p y\ge\angk x p y.\]
 \end{subthm}
 
 \begin{subthm}{angle-b}
-For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{L}$, we have
+For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$, we have
 \[\mangle\hinge pxz+\mangle\hinge pyz\le\pi.\]
 \end{subthm}
 
@@ -290,11 +290,11 @@ Passing to the limits as $w\to p$, we have
 The following theorem summarizes \ref{clm:angle-mono}, \ref{clm:angle-defined}, \ref{ex:adjacent-CBB}, and \ref{thm:angle-cbb}.
 
 \begin{thm}{Theorem}\label{thm:defs_of_alex} 
-Let $\spc{L}$ be a complete geodesic space.
+Let $\spc{A}$ be a complete geodesic space.
 Then the following conditions are equivalent.
 
 \begin{subthm}{cbb}
-$\spc{L}$ is $\Alex0$.
+$\spc{A}$ is $\Alex0$.
 \end{subthm}
  
 
@@ -302,18 +302,18 @@ $\spc{L}$ is $\Alex0$.
 (adjacent angle comparison\index{comparison!adjacent angle comparison})
 \[\angk z p x
 +\angk z p y\le \pi\]
-for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{L}$.
+for any geodesic $[x y]$ and point $z\in \mathopen{]}x y\mathclose{[}$, $z\ne p$ in $\spc{A}$.
 \end{subthm}
 
 \begin{subthm}{point-on-side}
 (\index{comparison!point-on-side comparison}point-on-side comparison)
 \[\angk x p y\le\angk x p z\]
-for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{L}$.
+for any geodesic $[x y]$ and $z\in \mathopen{]}x y\mathclose{[}$ in $\spc{A}$.
 \end{subthm}
 
 \begin{subthm}{angle}(hinge comparison\index{comparison!hinge comparison})
 \index{hinge!comparison}
-the angle $\mangle\hinge x p y$ is defined for any hinge $\hinge x p y$ in $\spc{L}$.
+the angle $\mangle\hinge x p y$ is defined for any hinge $\hinge x p y$ in $\spc{A}$.
 Moreover, 
 \[\mangle\hinge x p y\ge\angk x p y\]
 for any hinge $\hinge x p y$, and
@@ -362,7 +362,7 @@ passing to the limit we get the same for $f$.
 We will also use that \textit{$\lambda$-concave functions are one-sided differentiable}.
 
 \parbf{Functions on metric spaces.}
-A function on a metric space $\spc{L}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{L}$}.
+A function on a metric space $\spc{A}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{A}$}.
 The domain of a function $f$ will be denoted by $\Dom f$.
 
 We say that $f$ is \index{$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if 
@@ -373,12 +373,12 @@ The following proposition is simple but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
-A complete geodesic space $\spc{L}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form 
+A complete geodesic space $\spc{A}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form 
 \[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
 \end{thm} 
 
 \parit{Proof.}
-Choose a unit-speed geodesic $\gamma$ in $\spc{L}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
+Choose a unit-speed geodesic $\gamma$ in $\spc{A}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
 Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}\z=\modtrig(p x y)$.
 Let $\tilde \gamma\:[t_0,t_1]\to\EE^2$ be the unit-speed parametrization of $[\tilde x \tilde y]$ from $\tilde x$ to $\tilde y$.
 
@@ -412,10 +412,10 @@ see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-pe
 We have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
 Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
 This option is more natural and general, but many statements can be reduced to the geodesic case.
-In particular, suppose $\spc{L}$ is a complete length space with curvature $\ge \kappa$,
+In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
 then 
-\textit{$\spc{L}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{L}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
-Also, by Plaut's theorem, any point $p$ in $\spc{L}$ can be connected by geodesics to \textit{most} of points in $\spc{L}$
+\textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
+Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$
 \cite[8.11]{alexander-kapovitch-petrunin2024}; compare to \ref{ex:grad-dist:geod}.
 
 All the discussed statements admit natural generalizations to 

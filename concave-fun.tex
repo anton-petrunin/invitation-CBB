@@ -8,15 +8,15 @@ it includes space of directions, tangent space, differential, and gradient.
 \section{Space of directions} 
 \label{sec:space+directions}
 
-Let $\spc{L}$ be an Alexandrov space.
+Let $\spc{A}$ be an Alexandrov space.
 By \ref{clm:angle-defined}, the angle measure of any hinge in is defined.
-Given $p\in \spc{L}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
+Given $p\in \spc{A}$, consider the set $\mathfrak{S}_p$ of all nontrivial unit-speed geodesics starting at $p$.
 By \ref{claim:angle-3angle-inq}, the triangle inequality holds for $\mangle$ on $\mathfrak{S}_p$,
 that is, $(\mathfrak{S}_p,\mangle)$ 
 forms a \index{semimetric}\emph{semimetric} space;
 that is, $\mangle$ behaves like a metric, but might vanish for distinct directions. 
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{$\Sigma_p'$}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{L}$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{$\Sigma_p'$}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{A}$.
 The elements of $\Sigma'_p$ are called \index{geodesic!direction}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
@@ -30,11 +30,11 @@ By \ref{ex:0-angle},
 [px]\supset[py].
 \]
  
-The completion of $\Sigma'_p$ is called the \index{space of directions}\emph{space of directions} at $p$ and is denoted by \index{$\Sigma_p$ (space of directions)}$\Sigma_p$ or $\Sigma_p\spc{L}$.
+The completion of $\Sigma'_p$ is called the \index{space of directions}\emph{space of directions} at $p$ and is denoted by \index{$\Sigma_p$ (space of directions)}$\Sigma_p$ or $\Sigma_p\spc{A}$.
 The elements of $\Sigma_p$ are called \index{direction}\emph{directions} at $p$.
 
 \begin{thm}{Exercise}\label{ex:dir-compact}
-Let $\spc{L}$ be an Alexandrov space.
+Let $\spc{A}$ be an Alexandrov space.
 Assume that a sequence of geodesics $[px_n]$ converge to a geodesic $[px_\infty]$ in the sense of Hausdorff,
 and $x_\infty\ne p$.
 Suppose $\Sigma_p$ is compact.
@@ -82,8 +82,8 @@ that is, any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ ca
 \end{thm}
 
 \parbf{Tangent space.}
-The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and is denoted by \index{$\T_p$ (tangent space)}$\T_p$ or $\T_p\spc{L}$.
-The elements of $\T_p\spc{L}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
+The Euclidean cone $\Cone\Sigma_p$ over the space of directions $\Sigma_p$ is called the \index{tangent space}\emph{tangent space} at $p$ and is denoted by \index{$\T_p$ (tangent space)}$\T_p$ or $\T_p\spc{A}$.
+The elements of $\T_p\spc{A}$ will be called \index{tangent vector}\emph{tangent vectors} at $p$
 (despite that $\T_p$ is only a cone --- not a vector space).
 The space of directions $\Sigma_p$ can be (and will be) identified with the unit sphere in~$\T_p$;
 that is, with the set $\set{v\in\T_p}{|v|=1}$.
@@ -96,7 +96,7 @@ Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that the tange
 in this case $\T_p$ is \textit{not} $\Alex0$.
 
 \parit{Proof.}
-Consider the tangent space $\T_p=\Cone \Sigma_p$ of an Alexandrov space $\spc{L}$ at a point $p$.
+Consider the tangent space $\T_p=\Cone \Sigma_p$ of an Alexandrov space $\spc{A}$ at a point $p$.
 We need to show that the $\EE^2$-comparison holds for a given quadruple $v_0$, $v_1$, $v_2$, $v_3\in \T_p$.
 
 Recall that the space of geodesic directions $\Sigma_p'$ is dense in $\Sigma_p$.
@@ -106,7 +106,7 @@ Therefore, it is sufficient to consider the case $v_0$, $v_1$, $v_2$, $v_3\in \T
 For each $i$, choose a geodesic $\gamma_i$ from $p$ in the direction of $v_i$;
 assume $\gamma_i$ has speed $|v_i|$ for each $i$.
 Since the angles are defined, we have
-\[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{L}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps)
+\[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{A}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps)
 \eqlbl{eq:gamma-v}\]
 for $\eps>0$.
 The quadruple $\gamma_0(\eps)$, $\gamma_1(\eps)$, $\gamma_2(\eps)$, $\gamma_3(\eps)$ meets the $\MM^2(\kappa)$-comparison.
@@ -116,12 +116,12 @@ Passing to the limit as $\eps\to 0$ and applying \ref{eq:gamma-v}, we get the $\
 
 
 \begin{thm}{Exercise}\label{ex:GHto-tangent}
-Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{L}$,
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$,
 and let $\lambda_n\to\infty$.
-Show that there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{L},p)\z\to (\T_p,0)$ .
+Show that there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$ .
 Moreover, for any geodesic $\gamma$ that starts at $p$, we have
 \[\iota_n\circ\gamma(t/\lambda_n)\to t\cdot \gamma^+(0),\]
-where $\iota_n$ sends a point in $\spc{L}$ to the corresponding point in $\lambda_n\cdot\spc{L}$.
+where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambda_n\cdot\spc{A}$.
 \end{thm}
 
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
@@ -129,7 +129,7 @@ where $\iota_n$ sends a point in $\spc{L}$ to the corresponding point in $\lambd
 Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison},
 and when we say \textit{function} we usually mean a \textit{locally Lipschitz function defined on an open domain}.
 
-Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{L}$.
+Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{A}$.
 Suppose $\phi$ is a continuous function defined in $\Dom f$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that 
 the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
@@ -139,10 +139,10 @@ If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index
 
 
 \begin{thm}{Exercise}\label{ex:distfun-semiconcave}
-Let $f$ be a \emph{distance function} on an $\Alex0$ space $\spc{L}$;
-that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{L}$.
+Let $f$ be a \emph{distance function} on an $\Alex0$ space $\spc{A}$;
+that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{A}$.
 Show that $f''\le \tfrac1f$.
-In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
+In particular, $f$ is semiconcave in $\spc{A}\setminus\{p\}$.
 \end{thm}
 
 
@@ -150,8 +150,8 @@ In particular, $f$ is semiconcave in $\spc{L}\setminus\{p\}$.
 \index{differential of a function}
 
 
-Let $\spc{L}$ be an Alexandrov space.
-Let $f$ be a semiconcave function on $\spc{L}$ and $p\in \Dom f$.
+Let $\spc{A}$ be an Alexandrov space.
+Let $f$ be a semiconcave function on $\spc{A}$ and $p\in \Dom f$.
 Choose a unit-speed geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
@@ -180,7 +180,7 @@ where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:d(distfun)}
-Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{L}$.
+Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 Show the following.
 
 \begin{subthm}{ex:d(distfun):<}
@@ -189,7 +189,7 @@ for any $v\in\T_p$.
 \end{subthm}
 
 \begin{subthm}{ex:d(distfun):=}
-Suppose $\spc{L}$ is proper.
+Suppose $\spc{A}$ is proper.
 Let $\Uparrow_p^q$ be the set of all direction of  geodesics from $p$ to $q$.
 Then
 \[\dd_p\distfun_q(v)=-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle\]
@@ -251,7 +251,7 @@ $\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\x
 
 \begin{thm}{Key lemma}\label{lem:ohta} 
 Let $f$ be a semiconcave function that is defined in a neighborhood of a point $p$
-in an Alexandrov space $\spc{L}$. 
+in an Alexandrov space $\spc{A}$. 
 Then for any $u,v\in \T_p$, we have
 \[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \ge 
@@ -270,7 +270,7 @@ The key lemma however says  that in a certain sense $\dd_p f$ behaves as a conca
 Solving the following exercise should help to find an approach to the key lemma.
 
 \begin{thm}{Exercise}\label{ex:d(distfun):==}
-Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{L}$.
+Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{A}$.
 Suppose the geodesic $[pq]$ can be extended beyond $q$.
 
 Show that
@@ -279,7 +279,7 @@ for any $v\in\T_p$.
 \end{thm}
 
 \parit{Proof of \ref{lem:ohta}.}
-We will assume that $\spc{L}$ is $\Alex0$ and $f$ is concave;
+We will assume that $\spc{A}$ is $\Alex0$ and $f$ is concave;
 the general case requires only minor modifications.
 We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
 
@@ -311,7 +311,7 @@ Note that
 Since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$,
 we can assume that there are geodesics in the directions of $u$ and $v$.
 Choose such geodesics $\gamma_u$ and $\gamma_v$ and assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
-For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{L}$ such that
+For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{A}$ such that
 \begin{itemize}
 \item $v_t=\gamma_v(t)$,\quad  $q_t=\gamma_v(2\cdot t)$
 \item $u_t=\gamma_u(t)$.
@@ -423,7 +423,7 @@ Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and locally
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:semicontinuous-grad}
-Let $f$ be a locally Lipschitz $\lambda$-concave function on an Alexandrov space $\spc{L}$.
+Let $f$ be a locally Lipschitz $\lambda$-concave function on an Alexandrov space $\spc{A}$.
 
 \begin{subthm}{ex:semicontinuous-grad:>s}
 Suppose $s\ge 0$.

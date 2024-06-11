@@ -27,9 +27,9 @@ passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim-lim}
-Suppose that a sequence $\spc{L}_1,\spc{L}_2,\dots$ of $\Alex\kappa$ spaces that converges to $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
-Show that $\spc{L}_\infty$ is $\Alex\kappa$ and
-\[\dim \spc{L}_\infty\le \liminf_{n\to\infty} \dim \spc{L}_n.\]
+Suppose that a sequence $\spc{A}_1,\spc{A}_2,\dots$ of $\Alex\kappa$ spaces that converges to $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
+Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
+\[\dim \spc{A}_\infty\le \liminf_{n\to\infty} \dim \spc{A}_n.\]
 \end{thm}
 
 \section{Gromov's selection theorem}
@@ -73,23 +73,23 @@ Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack
 Denote by $\bm{K}$ the set of isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
 By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.
 
-Choose a space $\spc{L}\in \bm{K}$;
-suppose $x_1,\dots,x_n\in \spc{L}$ is a collection of points such that $\dist{x_i}{x_j}{}\ge \eps$ for all $i\ne j$.
+Choose a space $\spc{A}\in \bm{K}$;
+suppose $x_1,\dots,x_n\in \spc{A}$ is a collection of points such that $\dist{x_i}{x_j}{}\ge \eps$ for all $i\ne j$.
 Note that the balls $B_i=\oBall(x_i,\tfrac\eps2)$ do not overlap.
 
-By \ref{thm:right-inverse}, $\vol \spc{L}>0$.
-By Bishop--Gromov inequality, $\vol \spc{L}<\infty$,
+By \ref{thm:right-inverse}, $\vol \spc{A}>0$.
+By Bishop--Gromov inequality, $\vol \spc{A}<\infty$,
 and if $\eps<D$, then 
-\[\vol B_i\ge (\tfrac\eps{2\cdot D})^m\cdot\vol \spc{L}\]
+\[\vol B_i\ge (\tfrac\eps{2\cdot D})^m\cdot\vol \spc{A}\]
 for any $i$.
 It follows that $n\le (\tfrac{2\cdot D}\eps)^m$;
 that is, 
-\[\pack_\eps\spc{L}\le  N(\eps)\df(\tfrac{2\cdot D}\eps)^m\]
+\[\pack_\eps\spc{A}\le  N(\eps)\df(\tfrac{2\cdot D}\eps)^m\]
 for all small $\eps>0$.
 
-Choose a maximal $\eps$-packing $x_1,\z\dots,x_n\in \spc{L}$.
-By \ref{ex:pack-net}, $\spc{F}_\eps\z\df\{x_1,\z\dots,x_n\}$ is an $\eps$-net of $\spc{L}$.
-Observe that $\dist{\spc{F}_\eps}{\spc{L}}{\GH}\le \eps$.
+Choose a maximal $\eps$-packing $x_1,\z\dots,x_n\in \spc{A}$.
+By \ref{ex:pack-net}, $\spc{F}_\eps\z\df\{x_1,\z\dots,x_n\}$ is an $\eps$-net of $\spc{A}$.
+Observe that $\dist{\spc{F}_\eps}{\spc{A}}{\GH}\le \eps$.
 Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $\le D$ and at most $N(\eps)$ points forms a compact subset in $\GH$.
 
 Summarizing, for any $\eps>0$ we can find a compact $\eps$-net $\bm{F}_\eps\subset \GH$ of $\bm{K}$.
@@ -102,21 +102,21 @@ The latter can be proved the same way, using \ref{ex:BG} instead of \ref{inq:BG}
 \begin{thm}{Exercise}\label{ex:pack-vol}
 
 \begin{subthm}{ex:pack-vol:pack}
-Let $\spc{L}$ be an $m$-dimensional $\Alex0$ space with diameter $\le D$.
-Suppose $\vol\spc{L}\ge v_0>0$.
+Let $\spc{A}$ be an $m$-dimensional $\Alex0$ space with diameter $\le D$.
+Suppose $\vol\spc{A}\ge v_0>0$.
 Show that 
-\[\pack_\eps\spc{L}\ge \frac\Const{\eps^m}\]
+\[\pack_\eps\spc{A}\ge \frac\Const{\eps^m}\]
 for some constant $\Const=\Const(m,D,v_0)>0$.
 \end{subthm}
 
 
 \begin{subthm}{ex:pack-vol:dim}
-Conclude that if $\spc{L}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{L}_\infty$ (if it exists) has dimension~$m$.
+Conclude that if $\spc{A}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces with diameter $\le D$, and volume $\ge v_0$, then its Gromov--Hausdorff limit $\spc{A}_\infty$ (if it exists) has dimension~$m$.
 \end{subthm}
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:diam-compact:GH}
-Let $(\spc{L}_1,p_1),(\spc{L}_2,p_2),\dots$ be a sequence of $m$-dimensional $\Alex\kappa$ spcaes with marked points.
+Let $(\spc{A}_1,p_1),(\spc{A}_2,p_2),\dots$ be a sequence of $m$-dimensional $\Alex\kappa$ spcaes with marked points.
 Show that it contains a subsequence pointed-converging in the sense of Gromov--Hausdorff.
 
 \end{thm}

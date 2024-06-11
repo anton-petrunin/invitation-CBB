@@ -7,8 +7,8 @@ The following theorem provides a source of strictly concave functions  defined o
 
 \begin{thm}{Theorem}
 \label{thm:strictly-concave}
-Let $\spc{L}$ be a complete finite-dimensional Alexandrov  space.
-Then for any point $p\in \spc{L}$, there is  a strictly concave function $f$ defined in an
+Let $\spc{A}$ be a complete finite-dimensional Alexandrov  space.
+Then for any point $p\in \spc{A}$, there is  a strictly concave function $f$ defined in an
 open neighborhood of $p$.
 
 Moreover, given $0\ne v\in T_p$, the differential, $\dd_p f$, can be chosen
@@ -68,7 +68,7 @@ therefore the second property follows.
 The function $f$ in \ref{thm:strictly-concave} can be chosen to have maximum value $0$ at $p$,
 $f(p)=0$ and with $\dd_p f(x)\approx-|x|$.
 It can be constructed by taking the minimum of the functions in the theorem.
-Then the set $K=\set{x\in\spc{L}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$, so we get the following.
+Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$, so we get the following.
 
 
 \begin{thm}{Corollary}\label{cor:convex-nbhd}
@@ -77,31 +77,31 @@ and $f|_{\partial K}=0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:no-conc}
-Construct an Alexandrov space $\spc{L}$ such that there is no strictly concave function with an open domain of definition in $\spc{L}$.
+Construct an Alexandrov space $\spc{A}$ such that there is no strictly concave function with an open domain of definition in $\spc{A}$.
 \end{thm}
 
 
 \section{Liftings}
 
-Suppose that the Gromov--Haudorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{L}$ and $\spc{L}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
-In particular, we may choose a small $\eps>0$, so that for any point $p\in \spc{L}$, there is a point $p'\in \spc{L}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
-the point $p'$ will be called a \index{lifting}\emph{lifting} (or \emph{$\eps$-lifting}) of $p$ in $\spc{L}'$.
-We may choose a lifting $p'\in\spc{L}'$ for every point $p\in\spc{L}$, 
+Suppose that the Gromov--Haudorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{A}$ and $\spc{A}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
+In particular, we may choose a small $\eps>0$, so that for any point $p\in \spc{A}$, there is a point $p'\in \spc{A}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
+the point $p'$ will be called a \index{lifting}\emph{lifting} (or \emph{$\eps$-lifting}) of $p$ in $\spc{A}'$.
+We may choose a lifting $p'\in\spc{A}'$ for every point $p\in\spc{A}$, 
 in this case the map $p\mapsto p'$ is called a {}\emph{($\eps$-)lifting map}.
 
 Note that the lifting is not uniquely defined.
 The lifting map is not assumed to be continuous.
-When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{L},\spc{L}'\hookrightarrow\spc{W}$,
+When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$,
 as well as $\spc{W}$ are chosen.
 
-Let $\spc{L}$ be  a compact $m$-dimensional Alexandrov space.
-Suppose $\spc{L}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{L}}{\spc{L}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{L})>0$.
-Then the construction in $\spc{L}$ from the previous section  
-can be repeated in $\spc{L}'$ for the liftings of all points and the same function $\phi$.
+Let $\spc{A}$ be  a compact $m$-dimensional Alexandrov space.
+Suppose $\spc{A}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{A})>0$.
+Then the construction in $\spc{A}$ from the previous section  
+can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
 The result of this and related constructions will be called \index{lifting}\emph{liftings},
-say we can talk about a lifting from $\spc{L}$ to $\spc{L}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{L}}{\spc{L}'}{\GH}$ is small, then these liftings are stricly concave)
+say we can talk about a lifting from $\spc{A}$ to $\spc{A}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is small, then these liftings are stricly concave)
 and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
 Here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction, but it is straightforward.
 
@@ -140,11 +140,11 @@ and if $y\in\spc{N}$ lies in the simplex with vertices $v_{i_1},\dots, v_{i_m}$,
 \section{Homotopy stability}
 
 \begin{thm}{Theorem}\label{thm:h-stability}
-Let $\spc{L}_1,\spc{L}_2,\dots$, and $\spc{L}_\infty$ be compact $m$-dimensional $\Alex\kappa$ spaces, and $m<\infty$.
-Suppose $\spc{L}_n\z\to \spc{L}_\infty$ as $n\to \infty$ in the sense of Gromov--Hausdorff.
-Then $\spc{L}_\infty$ is homotopically equivalent to $\spc{L}_n$ for all large $n$.
+Let $\spc{A}_1,\spc{A}_2,\dots$, and $\spc{A}_\infty$ be compact $m$-dimensional $\Alex\kappa$ spaces, and $m<\infty$.
+Suppose $\spc{A}_n\z\to \spc{A}_\infty$ as $n\to \infty$ in the sense of Gromov--Hausdorff.
+Then $\spc{A}_\infty$ is homotopically equivalent to $\spc{A}_n$ for all large $n$.
 
-Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
+Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
 \end{thm}
 
 Applying this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:pack-vol}, we get the following.
@@ -156,15 +156,15 @@ here we assume that an integer $m$, and $v_0>0$ and $D>0$ are given.
 \end{thm}
 
 \parit{Proof of \ref{thm:h-finiteness} modulo \ref{thm:h-stability}.}
-Assume the contrary, then we can choose a sequence of spaces $\spc{L}_1,\spc{L}_2,\dots$ that have different homotopy types and satisfy the assumptions of the theorem.
-By Gromov's selection theorem, we can assume that $\spc{L}_n$ converges to say $\spc{L}_\infty$ in the sense of Gromov--Hausdorff.
+Assume the contrary, then we can choose a sequence of spaces $\spc{A}_1,\spc{A}_2,\dots$ that have different homotopy types and satisfy the assumptions of the theorem.
+By Gromov's selection theorem, we can assume that $\spc{A}_n$ converges to say $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 
-By \ref{ex:pack-vol}, $\dim \spc{L}_\infty=m$.
+By \ref{ex:pack-vol}, $\dim \spc{A}_\infty=m$.
 It remains to apply \ref{thm:h-stability}.
 \qeds
 
 \parit{Proof of \ref{thm:h-stability}.}
-Since $\spc{L}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find a finite open cover of $\spc{L}_\infty$ by convex open sets $\Omega_1,\dots, \Omega_k$ such that 
+Since $\spc{A}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find a finite open cover of $\spc{A}_\infty$ by convex open sets $\Omega_1,\dots, \Omega_k$ such that 
 for each $\Omega_i$ there is a strictly concave function $f_i$ that is defined in a neighborhood of $\bar \Omega_i$ and such that $f_i|_{\partial \Omega_i}=0$.
 
 Subtracting from functions $f_i$ some small value $\eps>0$,
@@ -182,25 +182,25 @@ Therefore, in the obtained homotopy we can parametrize $[0,\infty)$ by $[0,1)$ a
 thus we get that $W$ is contractible.
 In other words, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem (\ref{thm:nerve}).
 
-The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{L}_n$ keeping their properties for all large $n$. 
-More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{L}_n$ which are strictly concave for all large $n$ and such that $\bar\Omega_{i,n}=\set{x\in \spc{L}_n}{f_{i,n}(x)\ge 0}$ is a compact convex set and $\Omega_{i,n}\z=\set{x\in \spc{L}_n}{f_{i,n}(x)> 0}$ is an open convex set for each $i$.
+The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{A}_n$ keeping their properties for all large $n$. 
+More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{A}_n$ which are strictly concave for all large $n$ and such that $\bar\Omega_{i,n}=\set{x\in \spc{A}_n}{f_{i,n}(x)\ge 0}$ is a compact convex set and $\Omega_{i,n}\z=\set{x\in \spc{A}_n}{f_{i,n}(x)> 0}$ is an open convex set for each $i$.
 
-Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{L}_n$ for all large~$n$.
-Indeed suppose we have $p_n\in \spc{L}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrary large $n$.
-Since $\spc{L}_\infty$ is compact, there is a limit point $p_\infty\in \spc{L}_\infty$ for a subsequnce of $p_n$.
+Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{A}_n$ for all large~$n$.
+Indeed suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrary large $n$.
+Since $\spc{A}_\infty$ is compact, there is a limit point $p_\infty\in \spc{A}_\infty$ for a subsequnce of $p_n$.
 But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrary large $n$ --- a contradiction.
 
-In a similar fashion, we can show that if $n$ is large, then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{L}_n$ 
-if and only if $\{\Omega_{i}\}_{i\in S}$ has a common point in $\spc{L}_\infty$.
+In a similar fashion, we can show that if $n$ is large, then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{A}_n$ 
+if and only if $\{\Omega_{i}\}_{i\in S}$ has a common point in $\spc{A}_\infty$.
 Here we have to use that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bigcap_{i\in S}\bar\Omega_{i}\ne \emptyset$.
 
 It follows that for any large $n$ the covers 
 \begin{itemize}
-\item $\{\Omega_{1},\dots,\Omega_{k}\}$ of $\spc{L}_\infty$ and 
-\item $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ of $\spc{L}_n$.
+\item $\{\Omega_{1},\dots,\Omega_{k}\}$ of $\spc{A}_\infty$ and 
+\item $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ of $\spc{A}_n$.
 \end{itemize}
 have the same nerve.
-By the nerve theorem (\ref{thm:nerve}), $\spc{L}_n$ and $\spc{L}_\infty$ are homotopically equivalent for all large $n$ --- a contradiction.
+By the nerve theorem (\ref{thm:nerve}), $\spc{A}_n$ and $\spc{A}_\infty$ are homotopically equivalent for all large $n$ --- a contradiction.
 \qeds
 
 \section{Comments}
@@ -240,16 +240,16 @@ The following theorem is a more exact version of \ref{thm:h-stability}.
 Its close relative (\ref{thm:spherical-nbhd}) will play an important role in the following lecture.
 
 \begin{thm}{Stability theorem}\label{thm:stability}
-Let $\spc{L}_1,\spc{L}_2,\dots$, and $\spc{L}_\infty$ be compact $m$-dimensional $\Alex\kappa$ spaces, and $m<\infty$.
-Suppose $\spc{L}_n\to \spc{L}_\infty$ as $n\to \infty$ in the sense of Gromov--Hausdorff.
-Then $\spc{L}_\infty$ is homeomorphic to $\spc{L}_n$ for all large $n$.
+Let $\spc{A}_1,\spc{A}_2,\dots$, and $\spc{A}_\infty$ be compact $m$-dimensional $\Alex\kappa$ spaces, and $m<\infty$.
+Suppose $\spc{A}_n\to \spc{A}_\infty$ as $n\to \infty$ in the sense of Gromov--Hausdorff.
+Then $\spc{A}_\infty$ is homeomorphic to $\spc{A}_n$ for all large $n$.
 
-Moreover, given $\eps>0$ there are maps $h_n\:\spc{L}_\infty\to \spc{L}_n$ that are homeomorphisms and $\eps$-liftings for all large $n$.
+Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that are homeomorphisms and $\eps$-liftings for all large $n$.
 \end{thm}
 
 This theorem was proved by Grigory Perelman \cite{perelman1991};
 the proof was rewritten with more details by the first author \cite{kapovitch}.
-Perelman  informally claimed in private conversations that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{L}_\infty$;
+Perelman  informally claimed in private conversations that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$;
 however no written proof has been presented.
 
 The last statement in the theorem implies the following finiteness result.

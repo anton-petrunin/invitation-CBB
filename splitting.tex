@@ -53,7 +53,7 @@ In other words, a line is a geodesic defined on the real line $\RR$.
 Let $\gamma$ be a line in a metric space $\spc{X}$.
 Show that for any point $x$ we have
 \[\bus_+(x)+\bus_-(x)\ge 0\]
-where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lines $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$ respectively.
+where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively.
 \end{thm}
 
 
@@ -78,18 +78,18 @@ the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\gamma$ be a line in a $\Alex0$ space~$\spc{L}$. 
+Let $\gamma$ be a line in a $\Alex0$ space~$\spc{A}$. 
 Then 
-\[\spc{L}=\spc{L}'\oplus \gamma(\RR)\]
-for some subset $\spc{L}'\subset \spc{L}$.
+\[\spc{A}=\spc{A}'\oplus \gamma(\RR)\]
+for some subset $\spc{A}'\subset \spc{A}$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:splitting}
-Any $\Alex0$ space $\spc{L}$ splits isometrically as
+Any $\Alex0$ space $\spc{A}$ splits isometrically as
 \[
-\spc{L}=\spc{L}'\oplus H
+\spc{A}=\spc{A}'\oplus H
 \]
-where $H\subset \spc{L}$ is a subset isometric to a Hilbert space, and $\spc{L}'\subset \spc{L}$ is a convex subset that contains no lines. 
+where $H\subset \spc{A}$ is a subset isometric to a Hilbert space, and $\spc{A}'\subset \spc{A}$ is a convex subset that contains no lines. 
 \end{thm}
 
 The following lemma is closely related to the first distance estimate (\ref{thm:dist-est});
@@ -97,7 +97,7 @@ it is also a limit case of \ref{prop:gexp}.
 The proof follows similar  lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
-Suppose $f\:\spc{L}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{L}$.
+Suppose $f\:\spc{A}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{A}$.
 Consider two $f$-gradient curves $\alpha$ and~$\beta$.
 Then for any $t, s\ge 0$ we have
 \begin{align*}
@@ -131,7 +131,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \qeds
 
 
-\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with half-lines $\gamma:[0,\infty)\to \spc{L}$ and $\gamma:(-\infty,0]\to \spc{L}$ respectively; that is,
+\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively; that is,
 \[
 \bus_\pm(x)
 \df
@@ -140,7 +140,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 According to \ref{ex:busemann-CBB}, 
 both $\bus_+$ and $\bus_-$ are concave.
 
-By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{L}$.
+By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{A}$.
 On the other hand, by \ref{comp-kappa}, 
 $f(t)=\distfun_x^2\circ\gamma(t)$ 
 is $2$-concave.
@@ -154,7 +154,7 @@ Hence
 \[
 \bus_+(x)+\bus_-(x)= 0
 \]
-for any $x\in \spc{L}$.
+for any $x\in \spc{A}$.
 In particular, the functions $\bus_+$ and $\bus_-$ are \index{affine function}\emph{affine};
 that is, they are convex and concave at the same time.
 
@@ -183,17 +183,17 @@ Then $|\alpha^+|\le 1$ and $(\bus_\pm\circ\alpha)^+=1$; therefore
 
 It follows that for any $t>0$, the $\bus_\pm$-gradient flows commute;
 that is, 
-\[\GF_{\bus_+}^t\circ\GF_{\bus_-}^t=\id_\spc{L}.\]
+\[\GF_{\bus_+}^t\circ\GF_{\bus_-}^t=\id_\spc{A}.\]
 Setting
 \[\GF^t=\left[\begin{matrix}
 \GF_{\bus_+}^t&\hbox{if}\ t\ge0\\
 \GF_{\bus_-}^{-t}&\hbox{if}\ t\le0
                \end{matrix}\right.\]
-defines an $\RR$-action on $\spc{L}$.
+defines an $\RR$-action on $\spc{A}$.
 
-Consider the level set $\spc{L}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
-it is a closed convex subset of $\spc{L}$, and therefore forms an Alexandrov space.
-Consider the map $h\:\spc{L}'\times \RR\to \spc{L}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
+Consider the level set $\spc{A}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
+it is a closed convex subset of $\spc{A}$, and therefore forms an Alexandrov space.
+Consider the map $h\:\spc{A}'\times \RR\to \spc{A}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
 Applying \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is distance non-expanding and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
@@ -214,7 +214,7 @@ It will be used to prove basic properties of the tangent space.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
-Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$.
+Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$.
 
 Given two vectors $u,v\in \T_p$, there is a unique vector $w\in \T_p$ such that
 \[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle \ge 0\]
@@ -236,8 +236,8 @@ However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's ex
 Applying the above lemma for $u=v$, we have the following statement.
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
-Let $\spc{L}$ be an Alexandrov space 
-and $p\in \spc{L}$. 
+Let $\spc{A}$ be an Alexandrov space 
+and $p\in \spc{A}$. 
 Given a vector $u\in \T_p$,  there is a unique vector $u^*\in\T_p$ such that $\langle u^*,u^*\rangle +\langle u,u^*\rangle = 0$ and
 $u^*$ is \index{polar vectors}\emph{polar} to $u$;
 that is,
@@ -287,7 +287,7 @@ By the definition of gradient,
 \section{Linear subspace}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{L}$ be an Alexandrov space, $p\in \spc{L}$ and $u,v\in\T_p$.
+Let $\spc{A}$ be an Alexandrov space, $p\in \spc{A}$ and $u,v\in\T_p$.
 We say that vectors $u$ and $v$ are \index{opposite vectors}\emph{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
 
 The subcone
@@ -298,7 +298,7 @@ will be called the \index{linear subspace}\emph{linear subspace} of $\T_p$.
 Soon we will introduce a natural linear structure on $\Lin_p$.
 
 \begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{L}$ be an Alexandrov space and $p\in \spc{L}$.
+Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$.
 Given two vectors $u,v\in\T_p$, the following statements are equivalent:
 \begin{subthm}{opposite} $u+v=0$;
 \end{subthm}
@@ -323,7 +323,7 @@ hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
 \begin{thm}{Exercise}\label{prop:two-opp}
-Let $\spc{L}$  be an Alexandrov space and $p\in \spc{L}$.
+Let $\spc{A}$  be an Alexandrov space and $p\in \spc{A}$.
 Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$ then $v=w$.
 \end{thm}
 
@@ -344,8 +344,8 @@ for any $x\in \Lin_p$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:-u}
-Let $\spc{L}$ be an Alexandrov space,
-$p\in \spc{L}$ and $u\in \T_p$.
+Let $\spc{A}$ be an Alexandrov space,
+$p\in \spc{A}$ and $u\in \T_p$.
 Suppose $u^*\in \T_p$ is provided by \ref{cor:polar};
 that is, 
 \[\langle u^*,u^*\rangle +\langle u,u^*\rangle = 0
@@ -412,19 +412,19 @@ hence $w\in\Lin_p$.
 \qeds
 
 \begin{thm}{Lemma}\label{ex:grad-dist:G-delta}
-Given a point $p$ in an Alexandrov space $\spc{L}$,
-let $f\z=\distfun_p$, and let $S$ be the subset of points $x\in\spc{L}$ such that $|\nabla_xf|=1$.
+Given a point $p$ in an Alexandrov space $\spc{A}$,
+let $f\z=\distfun_p$, and let $S$ be the subset of points $x\in\spc{A}$ such that $|\nabla_xf|=1$.
 Then $S$ is a dense G-delta set.
 
 \end{thm}
 
 \parit{Proof.}
-Let $S_n\subset \spc{L}$ be defined by inequality $|\nabla_xf|>1-\tfrac1n$.
+Let $S_n\subset \spc{A}$ be defined by inequality $|\nabla_xf|>1-\tfrac1n$.
 By \ref{ex:semicontinuous-grad:>s}, $S_n$ is open.
 
 Choose a point $q\ne p$.
 Observe that $|\nabla_xf|=1$ for any point $x\in\left]pq\right[$.
-It follows that $S_n$ is dense in $\spc{L}$.
+It follows that $S_n$ is dense in $\spc{A}$.
 
 Since $S=\bigcap_nS_n$, the lemma follows.
 \qeds
@@ -454,8 +454,8 @@ Show that for any $x\in S$ there is a unique geodesic $[px]$.
 Note that \ref{ex:grad-dist} implies the following.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
-Given a countable set of points $X$ in an Alexandrov space $\spc{L}$
-there is a G-delta dense set $S\subset\spc{L}$
+Given a countable set of points $X$ in an Alexandrov space $\spc{A}$
+there is a G-delta dense set $S\subset\spc{A}$
 such that 
 $\dir sx\in \Lin_s$
 for any $s\in S$ and $x\in X$.
@@ -480,7 +480,7 @@ The presented proof is close in spirit to the proof given by Cheeger and Gromoll
 it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
 
 \begin{thm}{Open question}
-Let $p$ be a point in an Alexandrov space $\spc{L}$.
+Let $p$ be a point in an Alexandrov space $\spc{A}$.
 Suppose that $0\ne v\in \Lin_p$.
 Is it true that the tangent space $\T_p$ splits in the direction of $v$?
 \end{thm}
@@ -488,8 +488,8 @@ Is it true that the tangent space $\T_p$ splits in the direction of $v$?
 Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
 
 \begin{thm}{Open question}\label{open:Halb-proper}
-Let $\spc{L}$ be a proper Alexandrov space.
-Is it true that for any $p\in \spc{L}$, the tangent space $\T_p$ is a length space?
+Let $\spc{A}$ be a proper Alexandrov space.
+Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length space?
 \end{thm}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -501,46 +501,46 @@ Also, we introduce volume and prove the Bishop--Gromov inequality, the right-inv
 
 \section{Linear dimension}
 
-Let $\spc{L}$ be an Alexandrov space.
-We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim$}$\LinDim \spc{L}$ as the least upper bound on integers $m$ such that 
-the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{L}$ at some point $p\in \spc{L}$.
+Let $\spc{A}$ be an Alexandrov space.
+We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that 
+the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at some point $p\in \spc{A}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 If not stated otherwise, dimension will mean linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that, we will use \index{$\dim$}$\dim\spc{L}$ for $\LinDim\spc{L}$.
+after that, we will use \index{$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
-Let $\spc{L}$ be an $\Alex0$ space.
-Then for any finite set of points $p,x_1,\dots,x_n\in \spc{L}$, there exists a model configuration 
+Let $\spc{A}$ be an $\Alex0$ space.
+Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exists a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
-\[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{L}}
+\[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{A}}
 \quad\text{and}\quad
-|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{L}}\]
+|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
 for any $i$ and $j$.
-Moreover, we can assume that $m\le \LinDim\spc{L}$. 
+Moreover, we can assume that $m\le \LinDim\spc{A}$. 
 \end{thm}
 
 \parit{Proof.}
 By \ref{cor:euclid-subcone}, we can choose a point $p'$ arbitrarily close to $p$ so that 
 $\Lin_{p'}\ni \dir{p'}{x_i}$ for any $i$.
 Let us identify $\EE^m$ with a subspace of $\Lin_{p'}$ spanned by $\dir{p'}{x_1},\dots,\dir{p'}{x_n}$.
-Note that $m\le \LinDim\spc{L}$.
+Note that $m\le \LinDim\spc{A}$.
 
 Set $\tilde p'=0\in \EE^m$ and $\tilde x_i=\dist{p'}{x_n}{}\cdot\dir{p'}{x_n}\in \EE^m$ for every $i$.
 Note that 
-\[|\tilde p'-\tilde x_i|_{\EE^m}=| p'- x_i|_{\spc{L}}\]
+\[|\tilde p'-\tilde x_i|_{\EE^m}=| p'- x_i|_{\spc{A}}\]
 for every $i$.
 Applying the comparison $\mangle\hinge {p'}{x_i}{x_j}\ge \angk {p'}{x_i}{x_j}$, we get
-\[|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{L}}\]
+\[|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
 for any $i$ and $j$.
 Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
-Let $\spc{L}$ be an $\Alex0$ space.
-Suppose $\LinDim\spc{L}\z=m<\infty$.
-Show that $\T_p\spc{L}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{L}$.
+Let $\spc{A}$ be an $\Alex0$ space.
+Suppose $\LinDim\spc{A}\z=m<\infty$.
+Show that $\T_p\spc{A}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{A}$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dim=1}
@@ -549,9 +549,9 @@ Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional ma
 
 
 \begin{thm}{Exercise}\label{ex:resporka}
-Let $\spc{L}$ be an $\Alex0$ space.
+Let $\spc{A}$ be an $\Alex0$ space.
 
-Show that $\LinDim \spc{L}\ge m$ if and only if for some $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{L}$
+Show that $\LinDim \spc{A}\ge m$ if and only if for some $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{A}$
 we have
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any pair $i\ne j$.
@@ -564,24 +564,24 @@ if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connecte
 For instance, any geodesic space is $\infty$-geodesic.
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
-Let $\spc{L}$ be a finite-dimensional Alexandrov space.
-Then for any point $p\in \spc{L}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
+Let $\spc{A}$ be a finite-dimensional Alexandrov space.
+Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
 \end{thm}
 
 
 \begin{thm}{Exercise}\label{ex:finite-tan}
-Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{L}$.
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$.
 Prove the following.
 \begin{subthm}{ex:finite-tan:tan}
 The tangent space $\T_p$ is a proper $\Alex0$ space.
 \end{subthm}
 
 \begin{subthm}{ex:finite-space-of-directions-dim}
-$\LinDim\Sigma_p=\LinDim\spc{L}-1$.
+$\LinDim\Sigma_p=\LinDim\spc{A}-1$.
 \end{subthm}
 
 \begin{subthm}{ex:finite-tan:sigma}
-If $\LinDim \spc{L}>1$, then $\Sigma_p$ is geodesic.
+If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
 \end{subthm}
 
 
@@ -591,10 +591,10 @@ Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all fin
 Such proofs will be indicated below.
 
 \parit{Proof of \ref{thm:finite-space-of-directions}.}
-Choose $\eps>0$; suppose $\spc{L}$ is $m$-dimensional.
+Choose $\eps>0$; suppose $\spc{A}$ is $m$-dimensional.
 Assume we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
 Without loss of generality, we may assume that each direction is geodesic;
-that is, there is a point $x_i\in \spc{L}$ such that $\xi_i=\dir p{x_i}$.
+that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
 Choose $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$ and small fixed $r>0$.
 Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for any $i\ne j$.
@@ -664,10 +664,10 @@ the comparison, but we needed upper bounds that were extracted from the definiti
 \section{Right-inverse theorem}
 
 \begin{thm}{Theorem}\label{thm:right-inverse}
-Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{L}$ such
+Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{A}$ such
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
-Then the map $f\:\spc{L}\to\RR^m$ defined by
+Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
 has a right inverse defined in a neighborhood of $f(p)$.
 \end{thm}
@@ -678,10 +678,10 @@ The structure of the proof can be seen in the following exercise;
 more details are given in the hints.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
-Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse}.
+Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
 Assume $\eps>0$ is sufficiently small.
 Given $\bm{y}\z=(y_1,\z\dots,y_m)\in \RR^m$, 
-consider the function on $\spc{L}$ defined by
+consider the function on $\spc{A}$ defined by
 \[f_{\bm{y}}(x)=\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
 
 
@@ -728,10 +728,10 @@ Note that this finishes the proof of \ref{thm:right-inverse}.
 \section{Distance chart}
 
 \begin{thm}{Theorem}\label{thm:dist-chart}
-Suppose $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{L}$ such
+Suppose $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{A}$ such
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
-Then the map $f\:\spc{L}\to\RR^m$ defined by
+Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
 gives a bi-Lipschitz embedding of a neighborhood $\Omega$ of $p$;
 the restriction $f|_\Omega$ is called \emph{distance chart} at $p$.
@@ -740,7 +740,7 @@ the restriction $f|_\Omega$ is called \emph{distance chart} at $p$.
 The following exercise guides you to prove the theorem.
 
 \begin{thm}{Exercise}\label{ex:proof-dist-chart}
-Suppose $p,a_0,\dots,a_m\in\spc{L}$ and $f\:\spc{L}\to\RR$ are as in \ref{thm:right-inverse}.
+Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
 Show that there is $\eps>0$ such that one of the following $m$ inequalities hold
 \begin{align*}
 \mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
@@ -763,8 +763,8 @@ In this case, we may write $\vol B$ instead of $\vol_m B$.
 
 
 \begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
-Let $\spc{L}$ be an $\Alex0$ space.
-Suppose $\dim \spc{L}=m<\infty$.
+Let $\spc{A}$ be an $\Alex0$ space.
+Suppose $\dim \spc{A}=m<\infty$.
 Then 
 \[\vol \oBall(p,r)\le \omega_m\cdot r^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
@@ -774,10 +774,10 @@ is nonincreasing.
 \end{thm}
 
 \parit{Proof.}
-Given $x\in\spc{L}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Recall that $\log_p\:\spc{L}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
+Given $x\in\spc{A}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
+Recall that $\log_p\:\spc{A}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
 By comparison, $\log_p$ is distance-noncontracting.
-Note that $\log_p$ maps $\oBall(p,r)_{\spc{L}}$ to $\oBall(0,r)_{\T_p}$.
+Note that $\log_p$ maps $\oBall(p,r)_{\spc{A}}$ to $\oBall(0,r)_{\T_p}$.
 
 \begin{wrapfigure}{r}{44 mm}
 \vskip-0mm
@@ -797,7 +797,7 @@ for any $\eps>0$.
 Hence the first statement follows.
 
 Now, suppose $0<r_1<r_2$.
-Consider the map $w\: \spc{L}\to \spc{L}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
+Consider the map $w\: \spc{A}\to \spc{A}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
 (The map $w$ mimics the dilation with center at $p$ and coefficient $\tfrac {r_1}{r_2}$.)
 By comparison,
 \[\dist{w(x)}{w(y)}{}\ge \tfrac {r_1}{r_2}\cdot \dist{x}{y}{}.\]
@@ -815,8 +815,8 @@ Show that any finite-dimensional Alexandrov space is proper.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:BG}
-Let $\spc{L}$ be an $\Alex{-1}$ space.
-Suppose $\spc{L}=m<\infty$.
+Let $\spc{A}$ be an $\Alex{-1}$ space.
+Suppose $\spc{A}=m<\infty$.
 Show that
 \[\vol \oBall(p,r)\le \omega_m\cdot(\sinh r)^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
@@ -832,34 +832,34 @@ More precisely, we have the following theorem; compare to \cite[15.16]{alexander
 We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} \index{$\TopDim$}$\TopDim$ and \index{Hausdorff!dimension}\emph{Hausdorff dimension} \index{$\HausDim$}$\HausDim$.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
-For any Alexandrov space $\spc{L}$, we have
-\[\LinDim \spc{L}=\TopDim \spc{L}=\HausDim \spc{L}.\]
+For any Alexandrov space $\spc{A}$, we have
+\[\LinDim \spc{A}=\TopDim \spc{A}=\HausDim \spc{A}.\]
 \end{thm}
 
 \parit{Proof.}
-Suppose $\LinDim \spc{L}=\infty$.
-By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{L}$ contains a compact subset $K$ with an arbitrarily large $\TopDim K$.
+Suppose $\LinDim \spc{A}=\infty$.
+By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{A}$ contains a compact subset $K$ with an arbitrarily large $\TopDim K$.
 In particular,
-\[\TopDim\spc{L}=\infty.\] 
+\[\TopDim\spc{A}=\infty.\] 
 By Szpilrajn's theorem,
 $\HausDim K\ge \TopDim K$.
 Thus we also have 
-\[\HausDim\spc{L}=\infty.\]
+\[\HausDim\spc{A}=\infty.\]
 
-Now suppose $\LinDim \spc{L}=m<\infty$.
+Now suppose $\LinDim \spc{A}=m<\infty$.
 By the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}), 
-\[\HausDim\spc{L}\le m.\]
+\[\HausDim\spc{A}\le m.\]
 
-Since $\spc{L}$ is proper (\ref{ex:diam-compact:proper}),
+Since $\spc{A}$ is proper (\ref{ex:diam-compact:proper}),
 Szpilrajn's theorem, implies that
-\[\TopDim\spc{L}\le \HausDim\spc{L}\le m.\]
-Finally, the right-inverse theorem (\ref{thm:right-inverse}) implies that $m\le\TopDim\spc{L}$.
+\[\TopDim\spc{A}\le \HausDim\spc{A}\le m.\]
+Finally, the right-inverse theorem (\ref{thm:right-inverse}) implies that $m\le\TopDim\spc{A}$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim=dim}
-Let $\Omega$ be an open subset of Alexandrov space $\spc{L}$.
+Let $\Omega$ be an open subset of Alexandrov space $\spc{A}$.
 Show that 
-\[\LinDim \spc{L}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
+\[\LinDim \spc{A}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
 \end{thm}
 
 \section{Comments}
@@ -886,7 +886,7 @@ The second part is due to Michael Gromov \cite{gromov1981}.
 
 Theorem~\ref{thm:dim=dim}, was essentially proved by Conrad Plaut \cite{plaut:dimension}.
 At that time, it was not known whether
-\[\LinDim\spc{L}=\infty\quad \Rightarrow\quad \TopDim\spc{L}=\infty\]
-for any Alexandrov space $\spc{L}$.
+\[\LinDim\spc{A}=\infty\quad \Rightarrow\quad \TopDim\spc{A}=\infty\]
+for any Alexandrov space $\spc{A}$.
 The latter implication was proved by Grigory Perelman and the second author \cite{perelman-petrunin:qg}.
 
