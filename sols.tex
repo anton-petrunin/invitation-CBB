@@ -445,16 +445,29 @@ To prove the converse, try to reverse the steps in the argument above.
 
 \parbf{\ref{ex:GHto-tangent}.}
 
-It's trivial to check that for any $\lambda>0$ the tangent spaces $T_p\spc{A}$ and $ T_p\lambda \spc{A} $ are canonically isometric via an isometry preserving the base point. With a slight abuse of notations we will identify all spaces  $T_p\lambda \spc{A} $ with $T_p\spc{A}$ via this canonical isometry.
+It's trivial to check that for any $\lambda>0$ the tangent spaces $T_p\spc{A}$ and $ T_p\lambda \spc{A} $ are canonically isometric via the base point preserving  isometry $\gamma'(t)\mapsto \frac{1}{\lambda}\gamma'(t)$ where $\gamma(t)$ is a constant speed geodesic starting at $p$.  With a slight abuse of notations we will identify all spaces  $T_p\lambda \spc{A} $ with $T_p\spc{A}$ via this canonical isometry.
 
 By \ref{thm:finite-space-of-directions} the space of directions $\Sigma_p\spc{A}$ is compact. This is the only consequence of $\spc{A}$ being finite dimensional that we will use. 
 
 Let  $\spc{A}_n=\lambda_n\spc{A}$
 
-Let $f_n=\log^n _p:   \spc{A}_n\to T_p$ be the log map.
+Let $f_n=\log^n _p:   \spc{A}_n\to T_p\spc{A}_n\cong T_p\spc{A}$ be the log map. We claim that this sequence of maps satisfies the assumptions of Lemma ~\ref{lem:almost-isom-pointed}. Condition \ref{SHORT.lem:almost-isom-pointed-basepoint} is trivially satisfied.  
 
-To show pointed convergence it is enough to check that         
+It is clearly enough to check conditions \ref{SHORT.lem:almost-isom-pointed-b} and \ref{SHORT.lem:almost-isom-pointed-c}  for $R=1$. 
 
+Let $\eps>0$. By compactness of $\Sigma_p$ we can find a finite $\eps$-net $\xi_1,\ldots\xi_N$ in $\Sigma_p$. Moreover, without loss of generality we can assume that these directions are geodesic, i.e there exist shortest (in $\spc{A}$) unit speed geodesics $\gamma_1,\ldots, \gamma_N$ starting at $p$ such that $\xi_i=\gamma_i^+(0)$ for $i=1,\ldots, N$. Since the number of elements in our $\eps$-net is finite we can find $T>0$ such that all $\gamma_i$ are defined on $[0,T]$. Then for any $\lambda_n>\frac{1}{T}$ we obviously have that the image under $f_n$ of the union $\cup_N\gamma_i([0,T])$ is $\epsilon$-dense in $\oBall (o,1)_{T_p}$. This verifies  \ref{SHORT.lem:almost-isom-pointed-c}.
+
+It remains to verify \ref{SHORT.lem:almost-isom-pointed-b}.
+By the definition of an angle we can find  $T>0$  as above that in addition  for all $i\ne j$ and any $t\in [0,T]$  it holds  that $|\dist{\xi_i}{\xi_j}{\Sigma_p}- \angk p{\gamma_i(t)}{\gamma_j(t)}|<\eps$.
+
+   By construction of the map $f_n$ this implies that for all  $\lambda_n>\frac{1}{T}$ and all points $x,x'$ in $\cup_N\gamma_i([0,\frac{1}{\lambda_n}])\subset \oBall(p,1)_{\spc{A}_n}$ it holds that
+   
+   $|\dist{x}{x'}{\spc{A}_n}-\dist{f_n(x)}{f_n(x')}{T_p}|<\eps$
+  
+   Now hinge comparison and the triangle inequality imply that the same  holds for arbitrary points $x,x'$  in  $\oBall(p,1)_{\spc{A}_n}$ with $\eps$ replaced by $3\eps$.
+   This verifies \ref{SHORT.lem:almost-isom-pointed-b}.
+   
+   
 \parbf{\ref{ex:distfun-semiconcave}.} From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
 
 \parbf{\ref{ex:df(xi)}.}
