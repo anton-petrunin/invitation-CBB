@@ -460,13 +460,13 @@ By compactness of $\Sigma_p$ we can find a finite $\eps$-net $\xi_1,\dots,\xi_N$
 that is, there exist geodesics $\gamma_1,\ldots, \gamma_N$ starting at $p$ such that $\xi_i=\gamma_i^+(0)$ for each $i$.
 
 Choose $T>0$ such that all $\gamma_i$ are defined on $[0,T]$.
-Apply the comparison to show that for any $\lambda_n>\frac{1}{T}$ the image under $f_n$ of the union $\bigcup_N\gamma_i([0,T])$ is an $\eps$-net in $\oBall(0,1)_{T_p}$.
+Apply the comparison \footnote{ \red V: why do you need comparison for this step?} to show that for any $\lambda_n>\frac{1}{T}$ the image under $f_n$ of the union $\bigcup_N\gamma_i([0,T])$ is an $\eps$-net in $\oBall(0,1)_{T_p}$.
 This proves \ref{SHORT.lem:almost-isom-pointed-c}.
 
 By comparison, we have that
-\[\dist{\xi_i}{\xi_j}{\Sigma_p}\ge \angk p{\gamma_i(t_i)}{\gamma_j(t_j)}<\eps\]
+\[\dist{\xi_i}{\xi_j}{\Sigma_p}\ge \angk p{\gamma_i(t_i)}{\gamma_j(t_j)}-\eps\]
 for all $i\ne j$ and any $t_i,t_j\in (0,T]$.
-By the definition of an angle, we can assume that $T$ have been chosen so that in addition 
+By the definition of an angle, we can assume that $T$ has been chosen so that in addition 
 \[\dist{\xi_i}{\xi_j}{\Sigma_p}\le \angk p{\gamma_i(t)}{\gamma_j(t)}+\eps\]
 for all $i\ne j$ and any $t\in (0,T]$.
 
