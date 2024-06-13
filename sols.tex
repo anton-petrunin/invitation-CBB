@@ -460,11 +460,11 @@ By compactness of $\Sigma_p$ we can find a finite $\eps$-net $\xi_1,\dots,\xi_N$
 that is, there exist geodesics $\gamma_1,\ldots, \gamma_N$ starting at $p$ such that $\xi_i=\gamma_i^+(0)$ for each $i$.
 
 Choose $T>0$ such that all $\gamma_i$ are defined on $[0,T]$.
-Apply the comparison \footnote{ \red V: why do you need comparison for this step?} to show that for any $\lambda_n>\frac{1}{T}$ the image under $f_n$ of the union $\bigcup_N\gamma_i([0,T])$ is an $\eps$-net in $\oBall(0,1)_{T_p}$.
+Show that for any $\lambda_n>\frac{1}{T}$ the image under $f_n$ of the union $\bigcup_N\gamma_i([0,T])$ is an $\eps$-net in $\oBall(0,1)_{T_p}$.
 This proves \ref{SHORT.lem:almost-isom-pointed-c}.
 
 By comparison, we have that
-\[\dist{\xi_i}{\xi_j}{\Sigma_p}\ge \angk p{\gamma_i(t_i)}{\gamma_j(t_j)}-\eps\]
+\[\dist{\xi_i}{\xi_j}{\Sigma_p}\ge \angk p{\gamma_i(t_i)}{\gamma_j(t_j)}\]
 for all $i\ne j$ and any $t_i,t_j\in (0,T]$.
 By the definition of an angle, we can assume that $T$ has been chosen so that in addition 
 \[\dist{\xi_i}{\xi_j}{\Sigma_p}\le \angk p{\gamma_i(t)}{\gamma_j(t)}+\eps\]
@@ -801,9 +801,15 @@ Use \ref{SHORT.ex:proof-right-inverse:grad}, to show that for $t\in[0,t_0]$, we 
 and $\psi^+(t)>\tfrac{1}{10}\cdot\eps^2$ if $\psi(t)<0$.
 Conclude that $\phi(t_0)=\psi(t_0)=0$; hence the result.
 
-
 \parit{\ref{SHORT.ex:proof-right-inverse:end}}
 A straightforward application of \ref{lem:fg-dist-est} and a reformulation of \ref{SHORT.ex:proof-right-inverse:alpha}.
+
+\parit{Remarks.}
+By \ref{lem:fg-dist-est}, that the constructed map $\map$ is bi-Hölder with the exponent $\tfrac12$.
+In particular, if an infinite-dimensional Alexandrov space $\spc{A}$ contains a bi-Hölder copy of Euclidean ball of arbitrary dimension.
+It seems plausible that $\spc{A}$ should contain a bi-Lipschitz copy of Euclidean ball of arbitrary dimension,
+but this question is open.
+
 
 \parbf{\ref{ex:proof-dist-chart}.}
 Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of the inequalities
