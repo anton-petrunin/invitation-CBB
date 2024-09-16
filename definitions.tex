@@ -1,7 +1,7 @@
 %%!TEX root = the-definitions.tex
 \chapter{Definitions}\label{chap:defs}
 
-In this lecture we discuss definitions of Alexandrov space.
+In this lecture we discuss several definitions of Alexandrov space.
 Alexandrov's lemma works as the main tool.
 
 \section{Four-point comparison}\label{sec:4-point}
@@ -35,16 +35,15 @@ holds for any quadruple of points in $\spc{X}$.
 \end{thm}
 
 While this definition can be applied to any metric space,
-we will use it mostly for geodesic space that are complete (and often compact or proper). 
+we will use it mostly for geodesic spaces that are complete (and often compact or proper). 
 If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov, 
 then it will be called an $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
 An $\spc{X}$ is $\Alex\kappa$ for some $\kappa$, then we say that $\spc{X}$ is an \index{Alexandrov space}\emph{Alexandrov space}.
 
 It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
-leave the general curvature bound as an exercise.
-Sometime theses exercises are nontrivial;
-in this case we add a note.
-We often formulate statements of $\kappa=0$ despite that it admits a straightforward generalization to arbitrary curvature bound.
+leave the general curvature bound as an exercise. These generalizations are usually straightforward. We will add notes when they are not.
+%Sometime theses exercises are nontrivial; in this case we add a note.
+We will also often formulate statements just for $\kappa=0$ even when they admit straightforward generalizations to arbitrary curvature bounds.
 
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
@@ -99,7 +98,7 @@ $\angk z p x
 
 The same holds for the hyperbolic and spherical model angles, 
 but in the latter case, one has to assume in addition that
-\[\dist{p}{z}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
+\[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}< 2\cdot\pi.\]
 
 \end{thm}
 
@@ -174,7 +173,7 @@ This exercise implies the following.
 
 \begin{thm}{Claim}\label{clm:angle-defined}
 The angle measure of any hinge in an $\Alex0$ 
-space, is at least as large as the corresponding model angle;
+space is defined and  is at least as large as the corresponding model angle;
 that is,
 \[\mangle\hinge p x y\ge \angk p x y\]
 for any hinge $\hinge p x y$ in an $\Alex0$.
@@ -185,13 +184,13 @@ for any hinge $\hinge p x y$ in an $\Alex0$.
 Let $\hinge p x y$ be a hinge in an $\Alex0$ space.
 Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
 
-Conclude that geodesic in $\Alex0$ space cannot \emph{bifurcate};
+Conclude that geodesics in $\Alex0$ space cannot \emph{bifurcate};
 that is, if two geodesics $[px]$ and $[py]$ share a nontrivial arc with an end at $p$, then $[px]\subset [py]$ or $[py]\subset [px]$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:pi-angle}
 Let $[xy]$ be a geodesic in an $\Alex0$ space.
-Suppose $z\in \left]xy\right[$ show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
+Suppose $z\in \left]xy\right[$. Show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
 \end{thm}
 
 Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
@@ -219,7 +218,7 @@ $p,x,y,v,w$ in $\spc{A}$ such that $v,w\in \left]xy\right[$.
 
 \begin{thm}{Exercise}\label{ex:angle-lim}
 Let $\spc{A}$ be an $\Alex0$ space.
-Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{A}$ converge to the hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
+Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{A}$ converge to a hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
 that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
@@ -320,7 +319,7 @@ for any hinge $\hinge x p y$, and
 for any adjacent hinges $\hinge z p y$ and $\hinge z p x$.
 \end{subthm}
 
-Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Rightarrow$\ref{SHORT.point-on-side}$\Rightarrow$\ref{SHORT.angle} hold in any space, not necessarily geodesic.
+Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Rightarrow$\ref{SHORT.point-on-side}$\Rightarrow$\ref{SHORT.angle} hold in any space, not necessarily a geodesic one.
 \end{thm}
 
 \begin{thm}{Advanced Exercise}\label{ex:urysohn}
@@ -333,8 +332,8 @@ For any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that fo
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:normCBB}
-Let $\spc{W}$ be $\RR^2$ with the metric induced by a norm.
-Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean plane $\EE^2$.
+Let $\spc{W}$ be $\RR^n$ with the metric induced by a norm.
+Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean space $\EE^n$.
 \end{thm}
 
 \section{Function comparison}\label{Function comparison}
@@ -402,7 +401,7 @@ Hence the proposition follows.
 \section{Remarks}
 
 Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
-this is the subject of our previous invitation \cite{alexander-kapovitch-petrunin-2019}.
+this is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
 
 In both comparisons we check certain conditions on the 6 distances between every pair of points in 4-point sets.
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested considering other conditions of that type for $n$-point subsets;
@@ -410,7 +409,7 @@ see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-pe
 
 We have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
 Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
-This option is more natural and general, but many statements can be reduced to the geodesic case.
+This is more natural and general, also many statements can be reduced to the geodesic case.
 In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
 then 
 \textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
