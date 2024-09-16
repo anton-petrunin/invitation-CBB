@@ -7,21 +7,22 @@
 We assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
 \item Compactness and proper metric spaces;
-recall that a metric space is \index{proper space}\emph{proper} if all its closed balls (with finite radius) are compact.
+recall that a metric space is \index{proper space}\emph{proper} if all its closed balls (of finite radius) are compact.
 \item Complete metric spaces and completion.
 \item Curves, semicontinuity of length and rectifiability.
 \item Hausdorff and Gromov--Hausdorff convergence.
 These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Almost isometries}.
-The definitions are there, but it would be hard to follow without prior experience.
+The definitions are there, but some prior familiarity with these concepts will be very helpful
+%it would be hard to follow without prior experience.
 \end{itemize}
-All these topics are treated in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
+All these topics are treated in detail in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 Occasionally, we use the Baire category theorem and Rademacher's theorem, but these could be used as black boxes.
 
 We use some topology. 
 Most of the time, any introductory text in algebraic topology should be sufficient.
 For some examples, we use more advanced results, but these could also be used as black boxes.
 
-Since most of the applications come from Riemannian geometry, it is better to be familiar with the Toponogov comparison theorem and related topics.
+Since most of the applications come from Riemannian geometry, it is beneficial to be familiar with the Toponogov comparison theorem and related topics.
 The classical book by Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains more than one needs.
 
 \section{Notations}
@@ -41,7 +42,7 @@ The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
 might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
 We will denote by \index{$\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$}$\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric), 
-Euclidean space, and Lobachevsky space respectively.
+the Euclidean space, and the Lobachevsky space respectively.
 More generally, $\MM^n(\kappa)$ will denote the \index{model!space}\emph{model $n$-space} of curvature $\kappa$;
 that is,
 \begin{itemize}
@@ -84,7 +85,9 @@ that is, any Cauchy sequence of points in $(\spc{X},\yetdist{*}{*}{})$ converges
 Let $A$ be a subset of a metric space $\spc{X}$.
 Given two points $x,y\in A$,
 consider the value
-\[\dist{x}{y}{A}=\inf_{\alpha}\{\,\length\alpha\,\},\]
+\[\dist{x}{y}{A}=\inf_{\alpha}\{\,\length\alpha\,\}, \footnote{\red V: I think it would be more natural to denote it $\yetdist{x}{y}{A}$ }
+\]
+
 where the greatest lower bound is taken for all paths $\alpha$ from $x$ to $y$ in~$A$.
 In other words, $\dist{*}{*}{A}$ denotes the induced length metric on the subspace $A$.
 (The notation $\dist{*}{*}{A}$ conflicts with the previously defined notation for distance $\dist{x}{y}{\spc{X}}$ in a metric space $\spc{X}$.
@@ -95,8 +98,8 @@ However, most of the time we will work with ambient length spaces where the mean
 Let $\spc{X}$ be a metric space 
 and $\II$\index{$\II$ (real interval)} a real interval. 
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
-\footnote{Others call it differently: \textit{shortest path}, \textit{minimizing geodesic}.
-Our meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, altho they are closely related.}; 
+\footnote{Other texts  may refer to geodesics in our sense of the word as  \textit{shortest path} or \textit{minimizing geodesic}.
+Also, our meaning of the term \textit{geodesic} is different from what is used in Riemannian geometry, although they are closely related.}; 
 in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{}=|s-t|\]
 for any pair $s,t\in \II$.
@@ -179,7 +182,7 @@ Show that $\spc{X}$ is a length space.
 \section{Triangles and model triangles}
 
 \parbf{Triangles.}
-Given a triple of distinct points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+Given a triple of distinct\footnote{ \red V: do the points really need to be distinct in this definition?} points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
 $\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
 
 Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
@@ -190,7 +193,7 @@ If we write $\trig p q r$, it means that we have chosen such a triangle.
 
 \parbf{Model triangles.}
 Given three points $p,q,r$ in a metric space $\spc{X}$,
-let us define its \index{model!triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
+let us define the \index{model!triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
 \index{$\modtrig$ (model triangle)}) to be a triangle in the Euclidean plane $\EE^2$ such that
@@ -246,7 +249,7 @@ If $\mangle\hinge p x y$ is defined, then
 \[0\le \mangle\hinge p x y\le \pi.\]
 
 \begin{thm}{Exercise}\label{ex:angkK}
-Suppose that in the above definition, one uses spherical or hyperbolic model angles instead of Euclidean.
+Suppose that in the above definition, one uses spherical or hyperbolic model angles instead of Euclidean ones.
 Show that it does not change the value $\mangle\hinge p x y$.
 \end{thm}
 
@@ -314,7 +317,7 @@ Clearly, $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 Prove that the sum of adjacent angles is at least $\pi$.
 
 More precisely: suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
-that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ form a geodesic $[xy]$.
+that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ forms a geodesic $[xy]$.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
 whenever  each angle on the left-hand side is defined.
@@ -405,7 +408,7 @@ The metric on  $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of s
 
 The limit space is not uniquely defined by the sequence.
 For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
-The first convergence is evident and the second could be guessed from the diagram.
+The first convergence is evident and the second could be guessed from the picture above.
 
 \begin{figure}[ht!]
 \vskip-0mm
