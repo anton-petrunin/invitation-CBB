@@ -182,7 +182,7 @@ Show that $\spc{X}$ is a length space.
 \section{Triangles and model triangles}
 
 \parbf{Triangles.}
-Given a triple of distinct\footnote{ \red V: do the points really need to be distinct in this definition?} points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
+Given a triple of distinct\footnote{ \red V: do the points really need to be distinct in this definition? we allow two points to be the same later when considering hinges.} points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation 
 $\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
 
 Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
@@ -243,7 +243,7 @@ $\hinge p x y=([p x],[p y])$\index{$\hinge p x y$ (hinge)}.
 \parbf{Angles.}
 The angle measure of a hinge $\hinge p x y$ is defined as the following limit
 \[\mangle\hinge p x y=\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y},\]
-where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
+where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$ (The angle is only defined if this limit exists).
 
 If $\mangle\hinge p x y$ is defined, then
 \[0\le \mangle\hinge p x y\le \pi.\]
