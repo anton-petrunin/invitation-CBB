@@ -23,8 +23,7 @@ but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
 if this does not hold for one of the angles, then we assume that $\SSS^2$-comparison holds for this quadruple.
 
-More generally, one may apply this definition to $\MM^2(\kappa)$.
-This way we define $\MM^2(\kappa)$-comparison for any real $\kappa$.
+More generally, one may apply this definition to $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
 However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$
 (applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases).
 
@@ -114,7 +113,7 @@ $[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\di
 \includegraphics{mppics/pic-740}
 \end{wrapfigure}
 
-Since increasing the opposite side in a plane triangle increases the corresponding angle, 
+Since increasing the opposite side in a plane triangle increases the corresponding angle (this is evident from the cosine law), 
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
 \item $\mangle\hinge{\tilde x}{\tilde p}{\tilde y}-\angk{x}{p}{y}$,
@@ -359,6 +358,7 @@ passing to the limit we get the same for $f$.
 
 We will also use that \textit{$\lambda$-concave functions are one-sided differentiable}.
 
+Also note that that since a concave function defined on an open interval  is automatically locally Lipschitz, the requirement that a $\lambda$-concave function be locally Lipschitz is superfluous for open intervals.
 \parbf{Functions on metric spaces.}
 A function on a metric space $\spc{A}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{A}$}.
 The domain of a function $f$ will be denoted by $\Dom f$.
@@ -400,14 +400,14 @@ Hence the proposition follows.
 
 \section{Remarks}
 
-Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines \textit{upper} curvature bound in the sense of Alexandrov;
+Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov;
 this is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
 
 In both comparisons we check certain conditions on the 6 distances between every pair of points in 4-point sets.
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested considering other conditions of that type for $n$-point subsets;
 see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for the development of this idea.
 
-We have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
+In this text we have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
 Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
 This is more natural and general, also many statements can be reduced to the geodesic case.
 In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
