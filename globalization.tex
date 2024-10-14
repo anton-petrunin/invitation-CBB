@@ -2,7 +2,7 @@
 \chapter{Globalization}\label{chap:globalization}
 
 The globalization theorem states that a locally Alexandrov space is globally Alexandrov.
-We start with the simplest meaningful case of this theorem and indicate a way to extend.
+We start with the simplest meaningful case of this theorem and indicate a way to extend the proof to the general case.
 
 \section{Globalization}
 
@@ -158,11 +158,12 @@ The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
-Otherwise that the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
+Otherwise note that the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.
 By construction, the distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
 Indeed, since on each step, we move $x_n$ toward to the point $p$ or $q$ that is further away, the distances $\dist{x_n}{p}{}$ and $\dist{x_n}{q}{}$ become about the same.
-Namely, by \ref{3|xx'|}, we have that $\dist{p}{x_n}{}-\dist{x_n}{q}{}\le \tfrac29\cdot\ell$ for all large $n$.
+Namely, by \ref{3|xx'|}, we have that $|\dist{p}{x_n}{}-\dist{x_n}{q}{}|\le \tfrac29\cdot\ell$ for all large $n$.
+\footnote{\red V: this should be explained in more detail either in this book or in the big one. whenever I prove the key lemma none of the students can fill this step on their own.   }
 Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we have $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
 Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x_n}{x_{n+1}}{}>\tfrac\ell{100}$.
 
@@ -202,7 +203,7 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 \end{thm}
 
-This implies the following general version of the globalization theorem.
+Using this one can prove the following general version of the globalization theorem.
 
 \begin{thm}{Theorem}\label{thm:globalization+}
 Any locally $\Alex\kappa$ length space is $\Alex\kappa$.
@@ -211,7 +212,7 @@ Any locally $\Alex\kappa$ length space is $\Alex\kappa$.
 By \ref{ex:k-><mono}, we have
 \[\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}\]
 if $\kappa\le \Kappa$ and the right-hand side is defined.
-It follows that a $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
+It follows that an $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
 Therefore, the globalization theorem implies the following.
 
 \begin{thm}{Claim}\label{clm:K>k}
@@ -251,7 +252,7 @@ for any triple of points $x,y,z\in \spc{A}$.
 
 \section{Remarks}
 
-The following question about \ref{angle-a} was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov} but this is a long-standing open problem (possibly dating back to Alexandrov).
+The following question about \ref{angle-a} was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}, this is a long-standing open problem (possibly dating back to Alexandrov).
 
 \begin{thm}{Open question}\label{open:hinge-}
 Let $\spc{A}$ be a complete geodesic space (you can also assume that $\spc{A}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
