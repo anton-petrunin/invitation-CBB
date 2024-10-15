@@ -158,17 +158,18 @@ The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
-Otherwise note that the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$. Then $\eps_n=r_n-r_{n+1}\to 0$.
-By construction, the distances
+Otherwise note that the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.  Since  $\eps_n=r_n-r_{n+1}\to 0$ we can assume that $\eps_n\le \ell/1000$ for all $n$.
+We claim that the distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
 
-Indeed, from \ref{eq:thm:=def-loc-two-sided*} and  \ref{3|xx'|} it easily follows that $\dist{x_n}{x_{n+1}}{}\ge \ell/200$ for all large $n$.
+First note that $\dist{x_n}{x_{n+1}}{}\ge \ell/200$ for all large $n$.  If not then by  \ref{3|xx'|}  we have that $\dist{x_n}{p}{}\ge \tfrac{2}{3}\cdot\ell-3\ell/200 $,  $\dist{x_n}{q}{}\ge \tfrac{2}{3}\cdot\ell-3\ell/200 $ and hence $\dist{x_n}{p}{}+\dist{x_n}{q}{}\ge \tfrac{4}{3}\cdot\ell-6\ell/200>\ell $ which contradicts  \ref{eq:thm:=def-loc-two-sided*}.
 
-We claim the the same lower bound holds for  $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ for all large $n$. Fix $n_0$ such that $\eps_n<l/1000$ for all  $n\ge n_0$.
 
-Suppose for some $n\ge n_0$ it holds that $\dist{x_n}{p}{}\ge \ell/200$ and $\dist{x_n}{q}{}\ge \ell/200$. We want to show that the same lower bound holds for $x_{n+1}$. 
+We claim that $\dist{x_n}{p}{}\ge \ell/200$  and $\dist{x_n}{q}{}\ge \ell/200$  for all large $n$ also. We will prove this by induction.
+It easily follows from  \ref{3|xx'|} and  \ref{eq:thm:=def-loc-two-sided*} and  that if  $\dist{x_{n-1}}{p}{} <\ell /200$ or $\dist{x_{n-1}}{q}{}< \ell/200$  then $\dist{x_n}{p}{}\ge \ell/200$ and $\dist{x_n}{q}{}\ge \ell/200$. 
+Next we want to show that the same lower bound holds for $x_{n+1}$. 
 
-Without loss of generality we can assume that $ \dist{x_n}{p}{}\le  \dist{x_n}{q}{}$. Set $x=x_n, x'=x_{n+1}$.
+Without loss of generality we can assume that $ \dist{x_n}{p}{}\le  \dist{x_n}{q}{}$. As before set $x=x_n, x'=x_{n+1}$.
 
 We have $\eps_n= \dist{x}{p}{}+ \dist{x}{x'}{}-\dist{x'}{p}{}, \dist{x'}{p}{}= \dist{x}{p}{}+ \dist{x}{x'}{}-\eps_n\ge \ell/200+\ell/200-\ell/1000\ge \ell/200$.
 
@@ -185,7 +186,6 @@ Subtracting this from  \ref{3|xx'|} we get
 0\ge 2\dist{x}{x'}{}-\ell/200,\quad \dist{x}{x'}{}\le \ell/400
 \]
 which contradicts that  $ \dist{x}{x'}{}\ge \ell /200$.
-A similar  argument shows that we can find an arbitrary large $n$ such that $\dist{x_n}{p}{}\ge \ell/200$ and $\dist{x_n}{q}{}\ge \ell/200$.
 Now the desired claim follows by induction.
 
 
