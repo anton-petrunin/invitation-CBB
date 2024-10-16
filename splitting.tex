@@ -16,8 +16,7 @@ If $\gamma\:[0,\infty)\to \spc{X}$ is a half-line,
 then the limit 
 \[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
 is called the \index{Busemann function}\emph{Busemann function} of $\gamma$.
-
-The Busemann function $\bus_\gamma$ mimics behavior of the distance function from the ideal point of $\gamma$.
+It mimics behavior of the distance function from the ideal point of $\gamma$.
 
 \begin{thm}{Proposition}\label{prop:busemann}
 For any half-line $\gamma$ in a metric space $\spc{X}$,
@@ -28,19 +27,19 @@ Moreover, $\bus_\gamma$ is $1$-Lipschitz and $\bus_\gamma (\gamma(t))=-t$ for an
 \end{thm}
 
 \parit{Proof.}
-Since $t=\dist{\gamma(0)}{\gamma(t)}{}$, the triangle inequality implies that, the function
+Since $t=\dist{\gamma(0)}{\gamma(t)}{}$, the triangle inequality implies that
 \[t\mapsto\dist{\gamma(t)}{x}{}- t\] 
-is nonincreasing, and 
+is a nonincreasing function, and
 \[\dist{\gamma(t)}{x}{}- t\ge-\dist{\gamma(0)}{x}{}\]
 for any $x\in \spc{X}$.
 Therefore, the limit in \ref{eq:def:busemann*} is defined,
-and it is 1-Lipschitz as a limit of 1-Lipschitz functions.
+and it has to be 1-Lipschitz as a limit of 1-Lipschitz functions.
 The last statement follows since 
 $\dist{\gamma(t)}{\gamma(t_0)}{}\z=t-t_0$ for all large~$t$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:busemann-CBB}
-Any Busemann function on an $\Alex0$ space is concave.
+Show that any Busemann function on an $\Alex0$ space is concave.
 \end{thm}
 
 \section{Splitting theorem}
@@ -169,12 +168,12 @@ For any $x$,
 A curve $\alpha$ is a $\bus_\pm$-gradient curve
 if and only if $\alpha$ is a geodesic such that $(\bus_\pm\circ\alpha)^+=1$.
 Indeed, if $\alpha$ is a geodesic, then $(\bus_\pm\circ\alpha)^+\le 1$ and the equality holds only if $\nabla_\alpha\bus_\pm=\alpha^+$.
-Now suppose $\nabla_\alpha\bus_\pm=\alpha^+$.
+Now suppose $\nabla_\alpha\bus_\pm\z=\alpha^+$.
 Then $|\alpha^+|\le 1$ and $(\bus_\pm\circ\alpha)^+=1$; therefore 
 \begin{align*}
 |t_0-t_1|&\ge \dist{\alpha(t_0)}{\alpha(t_1)}{}\ge
 \\
-&\ge|\bus_\pm\circ\alpha(t_0)-\bus_\pm\circ\alpha(t_1)=
+&\ge|\bus_\pm\circ\alpha(t_0)-\bus_\pm\circ\alpha(t_1)|=
 \\
 &=|t_0-t_1|.
 \end{align*}
@@ -245,12 +244,12 @@ for any $x\in \T_p$.
 
 \parit{Proof of \ref{lem:minus-sum}.}
 By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such that 
-\begin{align*}
-\dd_p\distfun_{a_n}(w)&=-\langle\dir{p}{a_n},w\rangle
-\\
-\dd_p\distfun_{b_n}(w)&=-\langle\dir{p}{b_n},w\rangle
-\end{align*}
-for any $w\in\T_p$ and $\dir{p}{a_n}\to u/|u|$, $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
+\[
+\dd_p\distfun_{a_n}(w)=-\langle\dir{p}{a_n},w\rangle
+\quad\text{and}\quad
+\dd_p\distfun_{b_n}(w)=-\langle\dir{p}{b_n},w\rangle
+\]
+for any $w\in\T_p$; furthemore, $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
 
 Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun_{a_n}+|v|\cdot\distfun_{b_n}.\]
@@ -351,8 +350,7 @@ that is,
 \langle u^*,x\rangle +\langle u,x\rangle \ge 0
 \]
 for any $x\in \T_p$.
-Show that 
-\[u=-u^*\quad\Longleftrightarrow\quad|u|=|u^*|.\]
+Show that $u=-u^*$ if and only if $|u|=|u^*|$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:lin-subcone}
@@ -377,7 +375,7 @@ By \ref{ex:|antisum|} and \ref{ex:3<,>=0},
 \\
 \langle w,x\rangle&= \tfrac12\cdot|x|^2+\tfrac12\cdot\langle x,y\rangle,
 \\
-\langle w,y\rangle&= \tfrac12\cdot|y|^2+\tfrac12\cdot\langle x,y\rangle,
+\langle w,y\rangle&= \tfrac12\cdot|y|^2+\tfrac12\cdot\langle x,y\rangle.
 \end{align*}
 It follows that 
 \begin{align*}
@@ -400,7 +398,7 @@ Note that
 \[|w^*|\le |w|,
 \quad
 \langle w^*,x\rangle+\langle w,x\rangle=0,
-\quad
+\quad\text{and}\quad
 \langle w^*,y\rangle+\langle w,y\rangle=0.
 \]
 The same calculation as above shows that $w^*$ is a midpoint of $-x$ and $-y$ and 
@@ -423,7 +421,6 @@ By \ref{ex:semicontinuous-grad:>s}, $S_n$ is open.
 Choose a point $q\ne p$.
 Observe that $|\nabla_xf|=1$ for any point $x\in\left]pq\right[$.
 It follows that $S_n$ is dense in $\spc{A}$.
-
 Since $S=\bigcap_nS_n$, the lemma follows.
 \qeds
 
@@ -461,16 +458,15 @@ for any $s\in S$ and $x\in X$.
 
 \section{Remarks}
 
-The splitting theorem has an interesting history that starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
+The history of splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
 who proved its $2$-dimensional case.
 For Riemannian manifolds of higher dimensions 
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
 to Alexandrov spaces;
-historically, it was the first result about Alexandrov spaces of dimension higher than 2.
+it was the first result about Alexandrov spaces of dimension higher than 2.
 Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
-
-Further generalizations of the splitting theorem for Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
+Generalizations to Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
 Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
 

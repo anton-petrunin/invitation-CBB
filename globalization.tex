@@ -12,7 +12,7 @@ A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{loca
 Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
-\parit{Proof modulo the key lemma.}
+\parit{Proof modulo the key lemma (\ref{key-lem:globalization}).}
 Note that condition \ref{angle-b} holds in $\spc{A}$ (the proof is the same).
 It remains to check \ref{angle-a};
 that is,
@@ -27,7 +27,7 @@ Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
-Let $\spc{A}$ be locally $\Alex0$. 
+Let $\spc{A}$ be a locally $\Alex0$ space.
 Assume that the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
@@ -101,7 +101,7 @@ Furthermore,
 &
 \dist{p}{x'}{}\z+\dist{x'}{x}{}&<\tfrac{2}{3}\cdot\ell.
 \end{align*}
-In particular, 
+In particular, the assumption of the lemma implies that
 \[\mangle\hinge x p{x'}
 \ge\angk x p{x'}
 \quad \text{and}\quad 
@@ -112,7 +112,7 @@ In particular,
 {
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-6mm
+\vskip-8mm
 \centering
 \includegraphics{mppics/pic-820}
 \vskip-4mm
@@ -154,15 +154,15 @@ From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side \hi
 \includegraphics{mppics/pic-825}
 \end{figure}
 
-The sequence $x_n$ might terminate at some $n$ only if
+The sequence $x_n$ terminates at some $n$ if
 $\dist{p}{x_n}{}+\dist{x_n}{q}{}
 \z<\tfrac{2}{3}\cdot\ell$.
-In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\ge\dist{p}{q}{}$.
+In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\z\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
 Now we can assume that the sequence $x_n$ does not terminate.
-Let us prove the following claim:
-\begin{clm}{}
+Let us prove the following claim.
+\begin{clm}{}\label{clm:>0}
 The distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
 \end{clm}
@@ -182,42 +182,42 @@ By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
 From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar}, $a_n\le \tfrac12\cdot\ell$.
 Hence
 \[
-\tfrac29\cdot\ell\ge \dist{x_n}{x_{n+1}}{}\ge \tfrac1{18}\cdot\ell.
+\tfrac29\cdot\ell\ge \dist{x_n}{x_{n+1}}{}\ge \tfrac1{18}\cdot\ell,
 \eqlbl{eq:|xx'|>=l/18}
 \]
-In particular, we get the claim for $\dist{x_n}{x_{n+1}}{}$.
+which proves the claim for $\dist{x_n}{x_{n+1}}{}$.
 
-Note that we have one of the following
+Note that
+\[a_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}\qquad \text{or}\qquad b_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}\]
+In the latter case,
 \[
 \begin{split}
-a_{n+1}&=b_n-\dist{x_n}{x_{n+1}}{}\qquad \text{or}
+a_{n+1}&=r_{n+1}-b_{n+1}=
 \\
-a_{n+1}&=r_{n+1}-b_n+\dist{x_n}{x_{n+1}}{}=
+&=(r_{n+1}-r_n)+(r_n-b_n)+\dist{x_n}{x_{n+1}}{}
 \\
-&=a_n-(r_n-r_{n+1})+\dist{x_n}{x_{n+1}}{}.
+&=-(r_n-r_{n+1})+a_n+\dist{x_n}{x_{n+1}}{}.
 \end{split}
 \]
 Since $r_n$ does not increase, it must converge;
-in particular, $r_n-r_{n+1}\z\to 0$ as $n\to\infty$.
+so, $r_n-r_{n+1}\z\to 0$ as $n\to\infty$.
 Therefore, $r_n-r_{n+1}\z\le \tfrac1{100}\cdot \ell$ for all large $n$.
 Observe that $b_n\ge\tfrac12 \cdot r_n$, and therefore $b_n\ge \tfrac13\cdot\ell$.
 Taking \ref{eq:|xx'|>=l/18} into account, we get that in both cases $a_{n+1}\ge\tfrac1{100}\cdot \ell$ for all large $n$,
 which finishes the proof of the claim.
 \claimqeds
 
-Since $r_n-r_{n+1}\to 0$, we have that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
+Since $r_n-r_{n+1}\to 0$, \ref{clm:>0} implies that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
 where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$.
 Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk{x_n}{p_n}{x_{n+1}}$, we have
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 
 It follows that
 \[r_n-s_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side \hinge{x_n}p q\to 0.\] 
-Together with the triangle inequality
-\[
-\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge\dist{p}{q}{}
-\]
-this yields
-\[\lim_{n\to\infty}\side \hinge{x_n}p q\ge \dist{p}{q}{}.\]
+By the triangle inequality
+$r_n\ge\dist{p}{q}{}$;
+therefore,
+\[\lim_{n\to\infty}s_n\ge \dist{p}{q}{}.\]
 Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \ref{eq:thm:=def-loc*}.
 \qeds
 
