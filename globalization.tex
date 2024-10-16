@@ -72,13 +72,12 @@ Note that
 We will use it in the following proof.
 
 \parit{Proof.} 
-It is sufficient to prove the inequality
-\[\side \hinge x p q
-\ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\] 
-for any hinge $\hinge x p q$ with $\dist{x}{p}{}+\dist{x}{q}{}<\ell$.
-
 Consider a hinge $\hinge x p q$ such that 
 \[\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}< \ell. \eqlbl{eq:thm:=def-loc-two-sided*}\]
+It is sufficient to prove that
+\[\side \hinge x p q
+\ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\]
+
 First, let us construct a new hinge $\hinge{x'}p q$ with
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
@@ -92,7 +91,8 @@ such that
 Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise, switch the roles of $p$ and $q$.
 Take $x'\in [x q]$ such that 
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
-=\tfrac{2}{3}\cdot\ell. \eqlbl{3|xx'|}\]
+=\tfrac{2}{3}\cdot\ell.
+\eqlbl{3|xx'|}\]
 Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
 The triangle inequality implies \ref{eq:thm:=def-loc-fourstar}.
 Furthermore, 
@@ -112,13 +112,13 @@ In particular,
 {
 
 \begin{wrapfigure}{r}{30 mm}
-\vskip-0mm
+\vskip-6mm
 \centering
 \includegraphics{mppics/pic-820}
 \vskip-4mm
 \end{wrapfigure}
 
-Now, let 
+Let
 $\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig(x x' p)$.
 Take $\tilde  q$ on the extension of $[\tilde  x\tilde  x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}{}\z=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
 By~\ref{eq:thm:=def-loc-threestar},
@@ -154,53 +154,58 @@ From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side \hi
 \includegraphics{mppics/pic-825}
 \end{figure}
 
-The sequence might terminate at some $n$ only if $\dist{p}{x_n}{}+\dist{x_n}{q}{}\z< \tfrac{2}{3}\cdot\ell $.
+The sequence $x_n$ might terminate at some $n$ only if
+$\dist{p}{x_n}{}+\dist{x_n}{q}{}
+\z<\tfrac{2}{3}\cdot\ell$.
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
-Otherwise note that the sequence $r_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}$ is nonincreasing, and $r_n\ge\tfrac{2}{3}\cdot\ell$ for all $n$.  Since  $\eps_n=r_n-r_{n+1}\to 0$ we can assume that $\eps_n\le \ell/1000$ for all $n$.
-We claim that the distances
+Now we can assume that the sequence $x_n$ does not terminate.
+Let us prove the following claim:
+\begin{clm}{}
+The distances
 $\dist{x_n}{x_{n+1}}{}$, $\dist{x_n}{p}{}$, and $\dist{x_n}{q}{}$ are bounded away from zero for all large $n$.
+\end{clm}
 
-First note that $\dist{x_n}{x_{n+1}}{}\ge \ell/200$ for all large $n$.  If not then by  \ref{3|xx'|}  we have that $\dist{x_n}{p}{}\ge \tfrac{2}{3}\cdot\ell-3\ell/200 $,  $\dist{x_n}{q}{}\ge \tfrac{2}{3}\cdot\ell-3\ell/200 $ and hence $\dist{x_n}{p}{}+\dist{x_n}{q}{}\ge \tfrac{4}{3}\cdot\ell-6\ell/200>\ell $ which contradicts  \ref{eq:thm:=def-loc-two-sided*}.
+Set
+\begin{align*}
+a_n&=\min\{\dist{p}{x_n}{},\dist{q}{x_n}{}\},
+\\
+b_n&=\max\{\dist{p}{x_n}{},\dist{q}{x_n}{}\},
+\\
+r_n&=\dist{p}{x_n}{}+\dist{x_n}{q}{}=a_n+b_n.
+\end{align*}
+By the triangle inequality, $r_n$ is a nonincreasing sequence,
+and since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for all $n$.
 
-
-We claim that $\dist{x_n}{p}{}\ge \ell/200$  and $\dist{x_n}{q}{}\ge \ell/200$  for all large $n$ also. We will prove this by induction.
-It easily follows from  \ref{3|xx'|} and  \ref{eq:thm:=def-loc-two-sided*} and  that if  $\dist{x_{n-1}}{p}{} <\ell /200$ or $\dist{x_{n-1}}{q}{}< \ell/200$  then $\dist{x_n}{p}{}\ge \ell/200$ and $\dist{x_n}{q}{}\ge \ell/200$. 
-Next we want to show that the same lower bound holds for $x_{n+1}$. 
-
-Without loss of generality we can assume that $ \dist{x_n}{p}{}\le  \dist{x_n}{q}{}$. As before set $x=x_n, x'=x_{n+1}$.
-
-We have $\eps_n= \dist{x}{p}{}+ \dist{x}{x'}{}-\dist{x'}{p}{}, \dist{x'}{p}{}= \dist{x}{p}{}+ \dist{x}{x'}{}-\eps_n\ge \ell/200+\ell/200-\ell/1000\ge \ell/200$.
-
-Suppose  $\dist{x'}{q}{}\le \ell/200$.
-
-Then from  \ref{eq:thm:=def-loc-two-sided*}  we have
-
+By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
+From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar}, $a_n\le \tfrac12\cdot\ell$.
+Hence
 \[
-\tfrac{2}{3}\cdot\ell \le\dist{p}{x}{}\z+\dist{x}{q}{}=\dist{p}{x}{}\z+\dist{x}{x'}{}+\dist{x'}{q}{}\le \dist{p}{x}{}\z+\dist{x}{x'}{}+\ell/200
+\tfrac29\cdot\ell\ge \dist{x_n}{x_{n+1}}{}\ge \tfrac1{18}\cdot\ell.
+\eqlbl{eq:|xx'|>=l/18}
 \]
-Subtracting this from  \ref{3|xx'|} we get
+In particular, we get the claim for $\dist{x_n}{x_{n+1}}{}$.
 
+Note that we have one of the following
 \[
-0\ge 2\dist{x}{x'}{}-\ell/200,\quad \dist{x}{x'}{}\le \ell/400
+\begin{split}
+a_{n+1}&=b_n-\dist{x_n}{x_{n+1}}{}\qquad \text{or}
+\\
+a_{n+1}&=r_{n+1}-b_n+\dist{x_n}{x_{n+1}}{}=
+\\
+&=a_n-(r_n-r_{n+1})+\dist{x_n}{x_{n+1}}{}.
+\end{split}
 \]
-which contradicts that  $ \dist{x}{x'}{}\ge \ell /200$.
-Now the desired claim follows by induction.
+Since $r_n$ does not increase, it must converge;
+in particular, $r_n-r_{n+1}\z\to 0$ as $n\to\infty$.
+Therefore, $r_n-r_{n+1}\z\le \tfrac1{100}\cdot \ell$ for all large $n$.
+Observe that $b_n\ge\tfrac12 \cdot r_n$, and therefore $b_n\ge \tfrac13\cdot\ell$.
+Taking \ref{eq:|xx'|>=l/18} into account, we get that in both cases $a_{n+1}\ge\tfrac1{100}\cdot \ell$ for all large $n$,
+which finishes the proof of the claim.
+\claimqeds
 
-
-
-
-Indeed, since on each step, we move $x_n$ toward to the point $p$ or $q$ that is further away, the distances $\dist{x_n}{p}{}$ and $\dist{x_n}{q}{}$ become about the same.
-Namely, by \ref{3|xx'|}, we have that $|\dist{p}{x_n}{}-\dist{x_n}{q}{}|\le \tfrac29\cdot\ell$ for all large $n$.
-\footnote{\red V: this should be explained in more detail either in this book or in the big one. whenever I prove the key lemma none of the students can fill this step on their own.   }
-Since $\dist{p}{x_n}{}+\dist{x_n}{q}{}\ge \tfrac23\cdot\ell$, we have $\dist{x_n}{p}{}\ge \tfrac\ell{100}$ and $\dist{x_n}{q}{}\ge \tfrac\ell{100}$.
-Further, since $r_n\ge\tfrac{2}{3}\cdot\ell$, \ref{3|xx'|} implies that $\dist{x_n}{x_{n+1}}{}>\tfrac\ell{100}$.
-
-
-Since the sequence $r_n$ is nonincreasing, it converges.
-In particular, $r_n-r_{n+1}\to 0$ as $n\to\infty$.
-It follows that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
+Since $r_n-r_{n+1}\to 0$, we have that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
 where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$.
 Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk{x_n}{p_n}{x_{n+1}}$, we have
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
