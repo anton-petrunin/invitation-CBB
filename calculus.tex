@@ -3,7 +3,7 @@
 \chapter{Calculus}\label{chap:derivative}
 
 This lecture defines several notions related to the first-order derivatives in Alexandrov spaces;
-it includes space of directions, tangent space, differential, and gradient.
+this includes space of directions, tangent space, differential, and gradient.
 
 \section{Space of directions} 
 \label{sec:space+directions}
@@ -74,7 +74,7 @@ is defined by
 \]
 where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 The value $\theta$ is undefined if $v=\0$ or $w=\0$;
-in these cases we assume that $\<v,w\>\df0$.
+in these cases we set $\<v,w\>\df0$.
 
 \begin{thm}{Exercise}\label{ex:geodesic-cone}
 Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \index{$\pi$-geodesic space}\emph{$\pi$-geodesic};
@@ -104,7 +104,7 @@ It follows that the subcone $\T'_p=\Cone\Sigma_p'$ is dense in $\T_p$.
 Therefore, it is sufficient to consider the case $v_0$, $v_1$, $v_2$, $v_3\in \T'_p$.
 
 For each $i$, choose a geodesic $\gamma_i$ from $p$ in the direction of $v_i$;
-assume $\gamma_i$ has speed $|v_i|$ for each $i$.
+assume $\gamma_i$ has speed $|v_i|$ for each $i$. \footnote{ \red we defined geodesics to have speed one so this is abuse of notations. }
 Since the angles are defined, we have
 \[\dist{\gamma_i(\eps)}{\gamma_j(\eps)}{\spc{A}}=\eps\cdot\dist{v_i}{v_j}{\T_p}+o(\eps)
 \eqlbl{eq:gamma-v}\]
@@ -162,7 +162,7 @@ it is defined since $f$ is semiconcave.
 
 By the following exercise, the value $(\dd_pf)(\xi)$ is defined; that is, it does not depend on the choice of $\gamma$.
 Moreover, $\dd_pf$ is a Lipschitz function on $\Sigma'_p$.
-It follows that the function $\dd_pf\:\Sigma_p'\to\RR$ can be extended to a Lipschitz function $\dd_pf\:\Sigma_p\to\RR$.
+It follows that the function $\dd_pf\:\Sigma_p'\to\RR$ can be uniquely extended to a Lipschitz function $\dd_pf\:\Sigma_p\to\RR$.
 Further, we can extend it to the tangent space by setting 
 \[(\dd_pf)(r\cdot \xi)
 \df
@@ -180,7 +180,7 @@ Show that
 where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
-\begin{thm}{Exercise}\label{ex:d(distfun)}
+\begin{thm}{Exercise ( First Variation Formula)} \label{ex:d(distfun)}
 Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 Show the following.
 
