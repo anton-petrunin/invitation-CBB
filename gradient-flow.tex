@@ -17,9 +17,9 @@ converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right 
 In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
-The tangent vector $v=\dist px{}\cdot\dir px$ can be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$\log_p x$);
-note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
-\footnote{\red V: I don't like how this paragraph is stated since log is multivalued in general. This needs to be mentioned somehow}
+The tangent vector $v=\dist px{}\cdot\dir px$ will be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$\log_p x$).
+The logarithm is a multivalued function from $\spc{A}$ to $\T_p$, so $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
+Note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
 Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
@@ -37,7 +37,7 @@ Then $(f\circ\alpha)^+(0)$ exists and
 Without loss of generality, we can assume that $f(p)=0$.
 Suppose $f$ and therefore $\dd_pf$ are $L$-Lipschitz.
 
-Choose a constant-speed \footnote{\red V: same comment as on page 35. we've defined geodesics to be unit speed } geodesic $\gamma$ that starts from $p$,
+Let $\gamma$ be a geodesic with a constant-speed reparametrization that starts from $p$, and
 such that the distance
 $s=\dist{\alpha^+(0)}{\gamma^+(0)}{\T_p}$
 is small.
@@ -67,7 +67,7 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{A}\subto\RR$ be a locally Lipschitz \footnote{\red V: I thought we defined all semiconcave functions to be  locally Lipschitz } and semiconcave function on an Alexandrov space
+Let $f\:\spc{A}\subto\RR$ be a semiconcave function on an Alexandrov space
 $\spc{A}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
