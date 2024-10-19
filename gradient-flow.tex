@@ -19,24 +19,25 @@ if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
 The tangent vector $v=\dist px{}\cdot\dir px$ can be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$\log_p x$);
 note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
-
+\footnote{\red V: I don't like how this paragraph is stated since log is multivalued in general. This needs to be mentioned somehow}
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
 Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
 Suppose $f$ a semiconcave Lipschitz function
 defined in a neighborhood of $p\z=\alpha(0)$,
 and $\alpha^+(0)$ is defined.
-Then 
+Then $(f\circ\alpha)^+(0)$ exists and 
 \[(f\circ\alpha)^+(0)
 =
 (\dd_pf)(\alpha^+(0)).\]
+
 \end{thm}
 
 \parit{Proof.}
 Without loss of generality, we can assume that $f(p)=0$.
 Suppose $f$ and therefore $\dd_pf$ are $L$-Lipschitz.
 
-Choose a constant-speed geodesic $\gamma$ that starts from $p$,
+Choose a constant-speed \footnote{\red V: same comment as on page 35. we've defined geodesics to be unit speed } geodesic $\gamma$ that starts from $p$,
 such that the distance
 $s=\dist{\alpha^+(0)}{\gamma^+(0)}{\T_p}$
 is small.
@@ -57,7 +58,7 @@ Since $\dd_pf$ is $L$-Lipschitz, we also get
 It follows that the needed identity holds up to error $2\cdot L\cdot s$.
 The statement follows since $s>0$ can be chosen arbitrarily.
 
-The same argument is applicable if in the place of $(f\circ\alpha)^+(0)$
+The same argument is applicable if place of $(f\circ\alpha)^+(0)$
 we use any limit of $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ for a sequence $\eps_n\to 0+$.
 It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is defined and equals to $(\dd_pf)(\alpha^+(0))$.
 \qeds
@@ -66,7 +67,7 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{A}\subto\RR$ be a locally Lipschitz and semiconcave function on an Alexandrov space
+Let $f\:\spc{A}\subto\RR$ be a locally Lipschitz \footnote{\red V: I thought we defined all semiconcave functions to be  locally Lipschitz } and semiconcave function on an Alexandrov space
 $\spc{A}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
@@ -82,7 +83,7 @@ We omit the proof of existence as it is rather lengthy.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
 Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{A}$.
-Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
+Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
 This theorem says that the future of a gradient curve is determined by its present, but it says nothing about its past.
@@ -135,7 +136,7 @@ Then
 
 \section{Distance estimates}
 
-\begin{thm}{Observation}\label{eq:fist-var-inq+}
+\begin{thm}{Lemma}\label{eq:fist-var-inq+}
 Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$ 
 defined on an Alexandrov space.
 Choose a point $p$; let $\ell(t)\df\distfun_p\circ\alpha(t)$ and $q=\alpha(t_0)$.
@@ -264,7 +265,7 @@ The next proposition follows from \ref{lem:fg-dist-est}.
 Let $\spc{A}$ be an Alexandrov space.
 Suppose $f_n\:\spc{A}\z\to\RR$ is a sequence of
 $\lambda$-concave functions 
-that converges to $f_\infty\:\spc{A}\z\to \RR$. 
+that uniformly converges to $f_\infty\:\spc{A}\z\to \RR$. 
 Then for any $x\in \spc{A}$ and $t\ge 0$, we have
 \[\GF_{f_n}^t(x)\to \GF_{f_\infty}^t(x)\]
 as $n\to \infty$.
@@ -285,7 +286,7 @@ which essentially solves this problem.
 It shares many properties with the ordinary exponential map and is even better in certain respects,
 even in the Riemannian universe.
 
-Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$, consider the function $f\z=\distfun_p^2/2$.
+Let $\spc{A}$ be an Alexandrov space of curvature $\ge 0$  and $p\in \spc{A}$, consider the function $f\z=\distfun_p^2/2$.
 Recall that $\Phi^t_{f}$ denotes the gradient flow.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p(v)=\lim_{n\to\infty}\Phi^{t_n}_{f}(x_n),\]
@@ -330,19 +331,20 @@ Again, since $\Phi^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is a shor
 
 \section{Remarks}
 
-The idea to use gradient flow in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
-Originaly, the gradient flow was developed to construct quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}, but it turned out that gradient flow and gradient exponent are better tools.
-Very soon these tools found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
+The idea to use gradient flows in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
+Originally, the notion of  gradient flows  was developed to construct quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}, but it turned out that gradient flow and gradient exponent are better tools than quiasigeodesics.
+These tools quickly found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
 
 
-For a general curvature bound $\kappa$, the construction of gradient exponent has to be modified;
-it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}.
+For a general lower curvature bound $\kappa$, the construction of gradient exponent has to be modified;
+it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of  the modified distance function, For general $\kappa$ there is no rescaling argument as in the case of nonnegative curvature.
 
 For $\kappa=-1$ we have 
-and $\gexp_p(\gamma^+(0))=\gamma(1)$
+that $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$
 and 
 \[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{A}}\le \side\hinge0vw_{\HH^2}.\]
+In other words $\gexp_p$ is short if we equip $_p$ with the hyperbolic cone metric.
 
 Similarly, for $\kappa=1$ we have $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
