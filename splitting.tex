@@ -1,7 +1,7 @@
 %%!TEX root = the-splitting.tex
 \chapter{Line splitting}\label{chap:splitting}
 
-In this lecture, we prove the line splitting theorem and apply it to study tangent spaces of an Alexandrov space.
+In this lecture, we prove the line splitting theorem and apply it to study tangent spaces on an Alexandrov space.
 
 \section{Busemann function}
 
@@ -57,7 +57,7 @@ where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lin
 
 
 Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
-A metric space $\spc{X}$ is a \index{direct sum}\emph{direct sum} of its two $A$ and $B$,
+A metric space $\spc{X}$ is a \index{direct sum}\emph{direct sum} of its two  subsets $A$ and $B$,
 or briefly,
 \[\spc{X}=A\oplus B\]\index{$A\oplus B$ (direct sum)}
 if there are projections $\proj_A\:\spc{X}\to A$ 
@@ -94,7 +94,7 @@ it is also a limit case of \ref{prop:gexp}.
 The proof follows similar  lines.
 
 \begin{thm}{Lemma}\label{lem:dist-estimate}
-Suppose $f\:\spc{A}\to\RR$ be a concave 1-Lipschitz function on an $\Alex0$ space $\spc{A}$.
+Suppose $f\:\spc{A}\to\RR$ is a concave 1-Lipschitz function on an $\Alex0$ space $\spc{A}$.
 Consider two $f$-gradient curves $\alpha$ and~$\beta$.
 Then for any $t, s\ge 0$ we have
 \begin{align*}
@@ -128,7 +128,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \qeds
 
 
-\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively; that is,
+\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with the  half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively; that is,
 \[
 \bus_\pm(x)
 \df
@@ -207,7 +207,7 @@ Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\
 \section{Anti-sum}
 
 Here we give a corollary of \ref{ex:convergence-grad}.
-It will be used to prove basic properties of the tangent space.
+It will be used to prove basic properties of  tangent spaces.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
@@ -279,6 +279,8 @@ By the definition of gradient,
 &&&%line 3 right side
 &=-\langle u,x\rangle -\langle v,x\rangle .
 \end{aligned}\]
+
+The proof of uniqueness is very similar to the proof of uniqueness of gradients and is left to the reader.
 \qedsf
 
 \section{Linear subspace}
@@ -313,6 +315,7 @@ $\langle u,u\rangle =-\langle u,v\rangle =\langle v,v\rangle$;
 thus,
 \ref{SHORT.<x,u>}$\Rightarrow$\ref{SHORT.opposite}.
 
+Suppose  \ref{SHORT.opposite} holds.
 Recall that $\T_p$ has nonnegative curvature.
 The hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
 By \ref{ex:adjacent-CBB}, $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
@@ -458,7 +461,7 @@ for any $s\in S$ and $x\in X$.
 
 \section{Remarks}
 
-The history of splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
+The history of the splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
 who proved its $2$-dimensional case.
 For Riemannian manifolds of higher dimensions 
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
