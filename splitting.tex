@@ -494,7 +494,7 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 \chapter{Dimension and volume}\label{chap:dim}
 
 This lecture shows that several different notions of dimension are the same for Alexandrov spaces.
-Also, we introduce volume and prove the Bishop--Gromov inequality, the right-inverse theorem and introduce the distance chart in finite-dimensional Alexandrov space.
+Also, we introduce volume and prove the Bishop--Gromov inequality, the right-inverse theorem and introduce distance charts in finite-dimensional Alexandrov spaces.
 
 \section{Linear dimension}
 
@@ -503,13 +503,13 @@ We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim$}$
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at some point $p\in \spc{A}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
-If not stated otherwise, dimension will mean linear dimension.
+%If not stated otherwise, dimension will mean linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
 after that, we will use \index{$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
-Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exists a model configuration 
+Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exist an integer $m>0$ and a model configuration 
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{A}}
 \quad\text{and}\quad
@@ -558,7 +558,7 @@ for any pair $i\ne j$.
 
 A metric space $\spc{X}$ will be called $\ell$-geodesic 
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
-For instance, any geodesic space is $\infty$-geodesic.
+For instance, any geodesic space is $\infty$-geodesic. \footnote{\red V: perhaps move this definition to the preliminaries?}
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
 Let $\spc{A}$ be a finite-dimensional Alexandrov space.
@@ -678,7 +678,7 @@ Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{A}$ such
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
-has a right inverse defined in a neighborhood of $f(p)$.
+has a  continuous right inverse defined in a neighborhood of $f(p)$.
 \end{thm}
 
 In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
@@ -725,7 +725,7 @@ t_0
 Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-continuous in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
+continuous (in fact H\"older)  in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 \end{subthm}
 
@@ -743,14 +743,14 @@ for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
 gives a bi-Lipschitz embedding of a neighborhood $\Omega$ of $p$;
-the restriction $f|_\Omega$ is called \emph{distance chart} at $p$.
+the restriction $f|_\Omega$ is called a  \emph{distance chart} at $p$.
 \end{thm}
 
 The following exercise guides you to prove the theorem.
 
 \begin{thm}{Exercise}\label{ex:proof-dist-chart}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
-Show that there is $\eps>0$ such that one of the following $m$ inequalities hold
+Show that there is $\eps>0$ such that one of the inequalities holds in each of the following two strings of $m$  inequalities
 \begin{align*}
 \mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
 \\
@@ -818,10 +818,7 @@ Therefore,
 The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
 It is sufficient for most applications, but a more exact statement will be given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
 
-\begin{thm}{Exercise}\label{ex:diam-compact:proper}
-Show that any finite-dimensional Alexandrov space is proper.
 
-\end{thm}
 
 \begin{thm}{Exercise}\label{ex:BG}
 Let $\spc{A}$ be an $\Alex{-1}$ space.
@@ -834,6 +831,10 @@ Moreover, the function
 is nonincreasing.
 \end{thm}
 
+\begin{thm}{Exercise}\label{ex:diam-compact:proper}
+Show that any finite-dimensional Alexandrov space is proper.
+
+\end{thm}
 \section{Other dimensions}\label{sec:all-dim}
 
 Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
@@ -847,7 +848,7 @@ For any Alexandrov space $\spc{A}$, we have
 
 \parit{Proof.}
 Suppose $\LinDim \spc{A}=\infty$.
-By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{A}$ contains a compact subset $K$ with an arbitrarily large $\TopDim K$.
+By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{A}$ contains a compact subset $K$ with  arbitrarily large $\TopDim K$.
 In particular,
 \[\TopDim\spc{A}=\infty.\] 
 By Szpilrajn's theorem,
