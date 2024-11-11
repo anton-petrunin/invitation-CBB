@@ -45,14 +45,15 @@ For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$
 and all sufficiently small $\eps>0$
 there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{A}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
 
-Moreover, we may assume that 
+Moreover, we may assume that
 \[
 \sup_{x\in \oBall(p,\eps)}\{\,\tfrac1\eps\cdot\dist{\log_px}{h_\eps(x)}{\T_p}\,\}\to 0
 \quad\text{as}\quad
 \eps\to 0.\]
 \end{thm}
+Note that the last condition automatically implies that  $h_\eps$ as an $o(\eps)$ G-H approximation.
 
-This statement is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
+The above theorem is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
 Suppose that an open  neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
 % openness is very important. it's false otherwise
@@ -72,7 +73,7 @@ Prove \ref{lem:kwun} or read the proof in \cite{kwun1964}.
 Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
-$\T_x\cong \T_{x'}$,
+$\T_x\cong \T_{x'}$ (here and below $\cong $ means homeomorphic) 
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:dir}
@@ -89,7 +90,7 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 
 \section{Topology}
 
-The following theorem states that boundary is an object of topology, despite our definition have used geometry.
+The following theorem states that boundary is a topological invariant, despite our definition having used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
 Let $\spc{A}$ and $\spc{A}'$ be homeomorphic finite-dimensional Alexandrov spaces.
@@ -189,10 +190,12 @@ Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\d
 Then we say that $\xi$ is in the \index{space of directions}\emph{space of directions} from $p$ to $X$;
 briefly \index{$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
 
-Further, $\Cone(\Sigma_pX)$ will be called \index{tangent space}\emph{tangent space} to $X$ at $p$;
+Further, $\Cone(\Sigma_pX)$ will be called the \index{tangent space}\emph{tangent space} to $X$ at $p$;
 it will be denoted by \index{$\T_p$ (tangent space)}$\T_pX$.
-%\footnote{{\red V: tangent spaces have already been defined in chapter 4. also, I think we should state somewhere (in chapter 7?) the theorem the pointed rescaled  finite-dimensional Alexandrov space converges to the tangent space.} A: see \ref{ex:GHto-tangent} + now it is tangent space to a subset...}
+\footnote{\red V: I already made that comment but  tangent spaces have already been defined in chapter 4. }
 
+
+We for a point $p\in \partial  \spc{A}$ we define $\Sigma_p(\partial\spc{A})$ and $T_p(\partial\spc{A})$ similarly by requiring $x_n\in \spc{A}$ in the above definition.
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{A}$, we have
 \[\partial (\Sigma_p\spc{A})=\Sigma_p(\partial\spc{A})
@@ -272,7 +275,7 @@ We will denote by
 
 The proof goes by induction on $m$.
 Statement \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- this is the base.
-The step is a combination of the implications below.
+The induction step is a combination of the implications below.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:concave}$_m$.}
 Suppose $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
@@ -296,13 +299,13 @@ Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
-Therefore, the second statement follows.
+Therefore, the second statement of \ref{SHORT.thm:doubling:concave}$_m$ follows.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
 We can assume that $s=\nabla_xf\ne 0$.
-By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})>0$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximize $\dd_xf(\overline{\xi})$.
+By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})>0$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximizes $\dd_xf(\overline{\xi})$.
 
-Let $\zeta\in \partial\Sigma_x$ be a direction that minimize the angle $\mangle(\overline{\xi},\zeta)$.
+Let $\zeta\in \partial\Sigma_x$ be a direction that minimizes the angle $\mangle(\overline{\xi},\zeta)$.
 It is sufficient to show that $\zeta=\overline{\xi}$.
 
 Assume $\zeta\ne \overline{\xi}$;
@@ -313,9 +316,9 @@ By \ref{SHORT.thm:doubling:concave}$_m$, $\mangle(\overline{\xi},\zeta)\le \tfra
 for any $\nu\in \Sigma_\zeta\Sigma_x$ (if $m=2$, then the last statement is evident). 
 
 Let $\phi\:\Sigma_x\to\RR$ be restriction of $\dd_xf$ to $\Sigma_x$.
-Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_\xi\phi(\eta)\le 0$.
-Since $\dd_xf$ is convex, we have that $\phi''+\phi\le 0$.
-If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction.
+Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_{\bar \xi}\phi(\eta)\le 0$.
+Since $\dd_xf$ is concave, we have that $\phi''+\phi\le 0$.
+If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
 If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
@@ -518,7 +521,7 @@ for any $x\in\partial \spc{A}$.
 
 \section{Remarks}
 
-The doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
+It easily follows by induction on dimension  that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
 
 For spaces without boundary the following tools become available.
@@ -586,7 +589,7 @@ Let $f$ be a semiconcave function.
 A point $p\in \Dom f$ is called \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$; 
 otherwise it is called \index{regular point}\emph{regular}.
 
-The following statement plays a technical role in the proof of stability theorem,
+The following statement \footnote{\red  add reference?} plays a technical role in the proof of stability theorem,
 but it is also a useful technical tool on its own.
 
 \begin{thm}{Morse lemma}
@@ -610,4 +613,4 @@ Let $S$ be a component of the boundary of a finite-dimensional Alexandrov space.
 Then $S$ equipped with the induced length metric is an Alexandrov space with the same curvature bound.
 \end{thm}
 
-The doubling theorem has several generalization \cite{petrunin1997,ge-li} that allows to glue nonidentical spaces.
+The doubling theorem has several generalizations \cite{petrunin1997,ge-li} that allow to glue nonidentical spaces.
