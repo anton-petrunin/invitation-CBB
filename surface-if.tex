@@ -8,7 +8,7 @@ this is historically the first application of Alexandrov geometry.
 
 Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^m$ with non-empty interior.
 
-In This chapter we will only deal with convex bodies in  $\EE^3$. Therefore, unless indicated otherwise,  we will assume that $m=3$ from now on.
+In this chapter we will only deal with convex bodies in  $\EE^3$. Therefore, unless indicated otherwise,  we will assume that $m=3$ from now on.
 
 The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
 
@@ -37,7 +37,7 @@ then
 \item $p$ lies on an edge, and its neighborhood is two half-planes glued along the boundary.
 \end{itemize}
 In both cases, a neighborhood of $p$ in $\Sigma$ (with the induced length metric) is isometric to an open domain of the plane.
-Therefore, the total angle around $p$ should be defined to be $2\cdot\pi$.
+Therefore, the total angle around $p$ will be defined to be $2\cdot\pi$.
 
 \begin{thm}{Claim}\label{clm:total-angle}
 Let $\Sigma$ be the surface of a convex polyhedron $P$.
@@ -91,12 +91,12 @@ $v$ is an essential vertex of $\Sigma$.
 
 
 \begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on the surface of a convex polyhedron do not pass thru its essential vertices.
+Show that geodesics on the surface of a convex polyhedron do not pass through its essential vertices.
 \end{thm}
 
 \section{Curvature}
 
-Let $p$ be a point on the surface of a polyhedron, and $\theta_p$ is the total angle around $p$.
+Let $p$ be a point on the surface of a (possibly non convex) polyhedron, and $\theta_p$ is the total angle around $p$.
 The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
 If $p$ is not a vertex, then its curvature is zero.
 
@@ -108,7 +108,7 @@ Show that
 all faces of $T$ are congruent; 
 \end{subthm}
 
-\begin{subthm}{pr:tetrahedron:perp} the line passing thru midpoints of opposite edges of $T$ intersects these edges at right angles.
+\begin{subthm}{pr:tetrahedron:perp} the line passing through midpoints of opposite edges of $T$ intersects these edges at right angles.
 \end{subthm}
  
 \end{thm}
@@ -127,7 +127,7 @@ $\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and a point $p$
 
 We can assume that $p$ is not a vertex;
 the vertex case can be done by approximation.
-Further, by \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.
+Further, by \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.  \footnote{ \red V: that exercise only applies to boundaries of convex polyhedra which is a priori a smaller class than polyhedral surfaces of nonnegative curvature. the proof works for the latter so perhaps it should be restated that way and  the exercise moved}
 
 Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
 Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
@@ -163,25 +163,29 @@ Any convex body is a Hausdorff limit of a sequence of convex polyhedra.
 Therefore, the next proposition follows from \ref{prop:poly-CBB}, \ref{ex:surface-covergence}, and \ref{thm:CBB-closed}.
 
 \begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
-The surface of a convex body is $\Alex0$.
+The surface of a convex body in $\EE^3$ is $\Alex0$.
 \end{thm}
 
 
 \section{Remarks}
 
 \ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that the surface of a convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
-The celebrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
+A celebrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
 the surface of a plane figure is defined as its doubling across the boundary.
-In other words, any $\Alex0$ metric on the sphere is isometric to a surface of (possibly degenerate) convex body.
+In other words, any $\Alex0$ metric on the two-sphere is isometric to a surface of a (possibly degenerate) convex body.
 Moreover this convex body is unique up to congruence.
 The last result is due to Alexei Pogorelov \cite{pogorelov}.
 
 Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketched in the appendix.
-Then he used \ref{ex:surface-covergence} to extend the result to an arbitrary $\Alex0$ metric on the sphere.
+Then he used \ref{ex:surface-covergence} to extend the result to  arbitrary $\Alex0$ metrics on the sphere.
+
+
+Proposition \ref{prop:conv-surf-CBB(0)} generalizes to boundaries of convex bodies  in $\EE^m$ for any $m\ge 2$. This can be proved using \ref{ex:surface-covergence} by approximating a convex body by smooth ones. Boundaries of smooth convex bodies have nonnegative sectional curvature by the Gauss formula and hence are $\Alex0$.
+
 
 \begin{thm}{Advanced exercise}\label{ex:liberman+milka}
 Let $S$ be the surface of a nondegenerate convex body $K\subset\EE^3$;
-we assume that $S$ is equipped with its induced length metric.
+we assume that $S$ is equipped with the induced length metric.
 
 \begin{subthm}{ex:liberman+milka:liberman}
 Show that any geodesic $\gamma$ in $S$ is one-sided differentiable as a curve in $\EE^3$ 
