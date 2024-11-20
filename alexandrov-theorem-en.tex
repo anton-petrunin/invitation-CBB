@@ -3,9 +3,11 @@
 \section{Introduction}
 
 Intrinsic distance between two points on the surface of a convex polyhedron is defined as the length of a shortest curve on the surface between these points.
+\footnote{ \red V: this is defined earlier in the book}
 
 Recall that the sum of angles at the tip of a convex polyhedral angle is less than $2\cdot\pi$;
 this statement can be found in a school textbook \cite[§~48]{kiselev-stereo-en}.
+\footnote{ \red V: this is proved in chapter 11}
 
 It is easy to see that the surface of a convex polyhedron is homeomorphic to the sphere.
 Therefore the statements above imply that the surface of a convex polyhedron equipped with its intrinsic metric is an example of a \textit{polyhedral metric on the sphere with the sum of angles around each vertex at most $2\cdot\pi$};
@@ -141,6 +143,7 @@ Suppose $v$ and $w$ are essential vertices in $M$.
 Let us cut $M$ along a shortest path from $v$ to~$w$.
 The shortest path cannot pass thru an essential vertex of $M$.
 Further, note that there is a three-parameter family of patches that can be used to patch the cut so that the obtained metric remains in $\Psi_n$;
+\footnote{ \red V: I don't understand what this means. what are patches?}
 in particular, the obtained metric has exactly $n$ essential vertices (after the patching, the vertices $v$ and $w$ may become inessential).
 
 
@@ -155,7 +158,7 @@ This statement is very close to the so-called \index{invariance of domain}\emph{
 the latter states that a continuous injective map between manifolds of the same dimension is open.
 
 According to part \ref{thm:unique}, $\iota$ is injective.
-The proof of the invariance of domain theorem can be adapted to our case since both spaces $\Phi_n$ and $\Psi_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, altho, formally speaking, they are \textit{not} manifolds.
+The proof of the invariance of domain theorem can be adapted to our case since both spaces $\Phi_n$ and $\Psi_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, although, formally speaking, they are \textit{not} manifolds.
 In a more technical language, $\Phi_n$ and $\Psi_n$ have the natural structure of $(3\cdot n-6)$-dimensional \index{orbifold}\emph{orbifolds},
 and the map $\iota$ respects the {}\emph{orbifold structure}.
 
@@ -188,7 +191,7 @@ In particular, $\iota(\bar Z)$ is closed in $\Psi$.
 
 Since $\iota(\Phi_n)\subset \Psi_n$ for any $n\ge 3$, we have  $\iota (Z)=\iota(\bar Z)\cap \Psi_n$;
 that is, $\iota (Z)$ is closed in $\Psi_n$. 
-
+\footnote{ \red V: I really don't like how this  proof is written. It's basically wrong as written. The argument should refer to compactness of the closures of $\Psi_n$ an  $\Phi_n$  }
 \medskip
 
 Summarizing, $\iota(\Phi_n)$ is a non-empty closed and open set in $\Psi_n$, and $\Psi_n$ is connected for any $n\ge 3$.

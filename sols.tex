@@ -1199,12 +1199,13 @@ In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
 Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
 Choose a geodesic $[y_1y_2]_W$;
 note that it contains a point of $K$, say $z$.
-Now consider a one-parameter family of points 
+Now consider the one-parameter family of points 
 $y_i(t)\df \gamma(t)+\gamma^+(t)\z\cdot (1-t)\z\cdot \dist{p}{x_i}{S}$.
-Note that this family is not continuous.
+\footnote{\red V: I don't think there should be $\cdot \dist{p}{x_i}{S}$ in this formula}
+Note that this family is not necessarily continuous.
 
-Show that for any point $p\in K$, the function $t\mapsto \dist{p}{\gamma_i(t)}{\EE^3}$ is nonincreasing.
-Conclude that the function $t\mapsto \dist{p}{\gamma_i(t)}{W}$ is nonincreasing for any $p\in S$.
+Show that for any point $q\in K$, the function $t\mapsto \dist{q}{y_i(t)}{\EE^3}$ is nonincreasing.
+Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in S$.
 Therefore, 
 \begin{align*}
 \dist{y_1}{y_2}{W}
