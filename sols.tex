@@ -1074,7 +1074,7 @@ preserve the distance to the poles and respects the $\SSS^1$ action.
 
 \parbf{\ref{ex:number(m-1)}};
 \ref{SHORT.ex:number(m-1):2}.
-Suppose $\#_{m-1}(\Gamma)\ge 3$;
+Suppose $\mathfrak{M}_{m-1}(\Gamma)\ge 3$;
 that is $\spc{A}=\EE^m/\Gamma$ has at least 3 boundary components.
 Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{A}$ using two of these components.
 Show that the obtained space splits and arrive at a contradiction.
@@ -1164,8 +1164,8 @@ The above inequalities imply
 \end{align*}
 for any $x,y\in \Sigma_\infty$.
 
-Note that by an degree argument the maps $g_n$ and $h_n$ are onto.
-Apply \ref{ex:GH-po} to finish the proof.
+By a degree argument the maps $g_n$ and $h_n$ are onto.
+Apply \ref{ex:GH-po} and finish the proof.
 
 Alternatively, since the closest-point projection cannot increase the length of curve, we also get
 \begin{align*}
@@ -1200,9 +1200,9 @@ Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
 Choose a geodesic $[y_1y_2]_W$;
 note that it contains a point of $K$, say $z$.
 Now consider the one-parameter family of points 
-$y_i(t)\df \gamma(t)+\gamma^+(t)\z\cdot (1-t)\z\cdot \dist{p}{x_i}{S}$.
-\footnote{\red V: I don't think there should be $\cdot \dist{p}{x_i}{S}$ in this formula}
-Note that this family is not necessarily continuous.
+$y_i(t)\df \gamma_i(t)+\gamma_i^+(t)\z\cdot (\ell_i-t)$,
+where $\ell_i=\length\gamma_i=\dist{p}{x_i}{S}$.
+(This family is not necessarily continuous.)
 
 Show that for any point $q\in K$, the function $t\mapsto \dist{q}{y_i(t)}{\EE^3}$ is nonincreasing.
 Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in S$.
@@ -1224,7 +1224,7 @@ and $[y_1y_2]_{\EE^3}$ does not intersect $K$.
 In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that lies in the solid triangle 
 $py_1y_2$ and contains its vertex $p$.
 
-Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches $F$.
+Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches~$F$.
 Denote by $x_1'\in [px_1]_{S}$ and $x_2'\in [px_2]_{S}$ the corresponding points;
 that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}S$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}S$.
 From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}S$;

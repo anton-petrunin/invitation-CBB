@@ -318,11 +318,11 @@ An isometric action $\Gamma\acts \EE^m$ is called \index{crystallographic action
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $F<H<\Gamma$ for a finite group $H$, then $F=H$.
-Denote by $\#(\Gamma)$ \footnote{ \red V: this notation is commonly used to denote the order of a set so it might be confusing here. perhaps denote this by something else? } the number of maximal finite subgroups of $\Gamma$ up to conjugation.
+Denote by $\mathfrak{M}(\Gamma)$ the number of maximal finite subgroups of $\Gamma$ up to conjugation.
 
 \begin{thm}{Open question}
 Let $\Gamma\acts \EE^m$ be a crystallographic action.
-Is it true that $\#(\Gamma)\le 2^m$?
+Is it true that $\mathfrak{M}(\Gamma)\le 2^m$?
 \end{thm}
 
 Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
@@ -330,18 +330,18 @@ If $F$ is maximal, then $A_F$ completely describes $F$.
 Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ has to be finite.
 This subgroup must contain $F$, but since $F$ is maximal, it must coinside with $F$. 
 
-Denote by $\#_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
+Denote by $\mathfrak{M}_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
 
 Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F \cdot g^{-1}$.
 Note that $A_{F'}=g\cdot A_F$.
 In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{A}=\EE^m/\Gamma$.
 Therefore, to count subgroups up to conjugation, we need to count the images of their fixed sets.
-Therefore, by the lemma below (\ref{lem:extr/G}), $\#_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{A}=\EE^m/\Gamma$.
+Therefore, by the lemma below (\ref{lem:extr/G}), $\mathfrak{M}_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{A}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
 \begin{thm}{Proposition}\label{prop:2m}
 Let $\Gamma\acts \EE^m$ be a crystallographic action.
-Then $\#_0(\Gamma)\le 2^m$.
+Then $\mathfrak{M}_0(\Gamma)\le 2^m$.
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:extr/G}
@@ -372,11 +372,11 @@ But $p$ is an isolated fixed point of $F$ --- a contradiction.
 Let $\Gamma\acts \EE^m$ be a crystallographic action.
 Show that
 \begin{subthm}{ex:number(m-1):2}
-$\#_{m-1}(\Gamma)\le 2$, and
+$\mathfrak{M}_{m-1}(\Gamma)\le 2$, and
 \end{subthm}
 
 \begin{subthm}{ex:number(m-1):1}
-if $\#_{m-1}(\Gamma)=1$, then $\#_0(\Gamma)\le 2^{m-1}$.
+if $\mathfrak{M}_{m-1}(\Gamma)=1$, then $\mathfrak{M}_0(\Gamma)\le 2^{m-1}$.
 \end{subthm}
 
 Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1):2} and \ref{SHORT.ex:number(m-1):1}.

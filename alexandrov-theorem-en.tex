@@ -3,11 +3,11 @@
 \section{Introduction}
 
 Intrinsic distance between two points on the surface of a convex polyhedron is defined as the length of a shortest curve on the surface between these points.
-\footnote{ \red V: this is defined earlier in the book}
+%\footnote{ \red V: this is defined earlier in the book} Я бы оставил как есть, это же апендикс...
 
 Recall that the sum of angles at the tip of a convex polyhedral angle is less than $2\cdot\pi$;
 this statement can be found in a school textbook \cite[§~48]{kiselev-stereo-en}.
-\footnote{ \red V: this is proved in chapter 11}
+%\footnote{ \red V: this is proved in chapter 11} см. выше
 
 It is easy to see that the surface of a convex polyhedron is homeomorphic to the sphere.
 Therefore the statements above imply that the surface of a convex polyhedron equipped with its intrinsic metric is an example of a \textit{polyhedral metric on the sphere with the sum of angles around each vertex at most $2\cdot\pi$};
@@ -91,7 +91,7 @@ Therefore $\Psi$ is subdivided into countably many subsets
 \paragraph{From a polyhedron to its surface.}
 
 Recall that the surface of a convex polyhedron is a sphere with a polyhedral metric such that the sum of angles around each point is at most $2\cdot\pi$.
-Therefore passing from a polyhedron to its surface defines a map
+Therefore passing from a polyhedron to its surface defines a continuous map
 \[\iota\:\Phi\to \Psi.\]
 
 The number of vertices of a polyhedron is equal to the number of essential vertices of its surface.
@@ -136,16 +136,16 @@ For any integer $n\ge 3$, the space $\Psi_n$ is connected.
 
 The proof of this lemma is not complicated, but it requires ingenuity;
 it can be done by the direct construction of a one-parameter family of metrics in $\Psi_n$ that connects two given metrics.
-Such a family can be obtained by а sequential application of the following construction and its inverse.
+Such a family can be obtained as a sequence of the following deformations (direct or reversed).
 
-Let $M$ be a sphere with metric from $\Psi_n$.
+Start with a sphere $M$ with a metric from $\Psi_n$.
 Suppose $v$ and $w$ are essential vertices in $M$.
 Let us cut $M$ along a shortest path from $v$ to~$w$.
-The shortest path cannot pass thru an essential vertex of $M$.
-Further, note that there is a three-parameter family of patches that can be used to patch the cut so that the obtained metric remains in $\Psi_n$;
-\footnote{ \red V: I don't understand what this means. what are patches?}
-in particular, the obtained metric has exactly $n$ essential vertices (after the patching, the vertices $v$ and $w$ may become inessential).
-
+This way we obtain a sphere with a hole.
+The hole can be patched by a disc so that the obtained metric remains in $\Psi_n$.
+(There is a three-parameter family of such patches, so we have something to choose from.)
+In particular, the obtained metric has exactly $n$ essential vertices (after the patching, the vertices $v$ and $w$ may become inessential).
+Choosing a one-parameter family of such patches, we can get a deformation of~$M$.
 
 \begin{thm}{Lemma}
 The map $\iota\:\Phi_n\to\Psi_n$ is open, 
@@ -158,7 +158,7 @@ This statement is very close to the so-called \index{invariance of domain}\emph{
 the latter states that a continuous injective map between manifolds of the same dimension is open.
 
 According to part \ref{thm:unique}, $\iota$ is injective.
-The proof of the invariance of domain theorem can be adapted to our case since both spaces $\Phi_n$ and $\Psi_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, although, formally speaking, they are \textit{not} manifolds.
+The proof of the invariance of domain theorem can be adapted to our case since both spaces $\Phi_n$ and $\Psi_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, but, formally speaking, they are \textit{not} manifolds.
 In a more technical language, $\Phi_n$ and $\Psi_n$ have the natural structure of $(3\cdot n-6)$-dimensional \index{orbifold}\emph{orbifolds},
 and the map $\iota$ respects the {}\emph{orbifold structure}.
 
@@ -169,7 +169,7 @@ It is uniquely determined by the $3\cdot n$ coordinates of its $n$ vertices.
 We can assume that the first vertex is the origin, the second has two vanishing coordinates and the third has one vanishing coordinate; therefore, all polyhedrons in $\Phi_n$ that lie sufficiently close to $P$ can be described by $3\cdot n-6$ parameters.
 If $P$ has no symmetries then this description can be made one-to-one;
 in this case, a neighborhood of $P$ in $\Phi_n$ is a $(3\cdot n-6)$-dimensional manifold.
-If $P$ has a nontrivial symmetry group, then this description is not one-to-one but it does not have an impact on the dimension of $\Phi_n$.
+If $P$ has a nontrivial symmetry group, then this description is not one-to-one but it does not have an impact on the dimension of~$\Phi_n$.
 
 The case of polyhedral metrics is analogous.
 We need to construct a subdivision of the sphere into plane triangles using only essential vertices.
@@ -183,21 +183,22 @@ that is, the image of a closed set in $\Phi_n$ is closed in $\Psi_n$.
 In particular, for any $n\ge 3$, the set $\iota(\Phi_n)$ is closed in~$\Psi_n$.
 \end{thm}
 
-Choose a closed set $Z$ in $\Phi_n$.
-Denote by $\bar Z$ the closure of $Z$ in $\Phi$; note that $Z=\Phi_n\cap \bar Z$.
-Assume $P_1,P_2,\dots\in Z$ is a sequence of polyhedrons that converges to a polyhedron $P_\infty\in\bar Z$.
-Note that $\iota(P_n)$ converges to $\iota(P_\infty)$ in $\Psi$.
-In particular, $\iota(\bar Z)$ is closed in $\Psi$.
-
-Since $\iota(\Phi_n)\subset \Psi_n$ for any $n\ge 3$, we have  $\iota (Z)=\iota(\bar Z)\cap \Psi_n$;
-that is, $\iota (Z)$ is closed in $\Psi_n$. 
-\footnote{ \red V: I really don't like how this  proof is written. It's basically wrong as written. The argument should refer to compactness of the closures of $\Psi_n$ an  $\Phi_n$  }
-\medskip
+Choose a closed subset $Z\subset \Phi_n$ and a sequence of polyhedrons $P_1,P_2,\ldots$ in $Z$.
+Assume that the sequence $\iota(P_n)$ converges in $\Psi_n$.
+Passing to a subsequence, we can assume that $P_n$ converges in $\Phi$; denote the limit polyhedron by  $P_\infty$.
+Since $\iota$ is continuous, $\iota(P_n)$ converges to $\iota(P_\infty)$ in~$\Psi$.
+Recall that $\iota(\Phi_i)\subset\Psi_i$ for each $i$; therefore, $P_\infty\in \Phi_n$.
+That is, the limit of $\iota(P_n)$ belongs to $\iota(Z)$, and hence $\iota$ is closed.
 
 Summarizing, $\iota(\Phi_n)$ is a non-empty closed and open set in $\Psi_n$, and $\Psi_n$ is connected for any $n\ge 3$.
 Therefore, $\iota(\Phi_n)=\Psi_n$; that is, $\iota\:\Phi_n\z\to\Psi_n$ is surjective.
 \qeds
 
-\parbf{Acknowledgments.} We want to thank Stephanie Alexander, Yuri Burago, and Jules %Kiyoshi
-Tsukahara for their help. 
+\parbf{Acknowledgments.}
+We want to thank Stephanie Alexander,
+Yuri Burago,
+Vitali Kapovitch,
+and Jules %Kiyoshi
+Tsukahara
+for their help.
 The authors were partially supported by RFBR grant 20-01-00070 and NSF grant DMS-2005279.

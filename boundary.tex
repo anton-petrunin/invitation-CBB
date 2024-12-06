@@ -184,6 +184,9 @@ Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
 
 \section{Tangent space}
 
+Spaces of directions and tangent spaces of an Alexandrov space have already been defined in \ref{sec:space+directions} and \ref{sec: tangent space}.
+Let us extend these definitions to subsets of an Alexandrov space.
+
 Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{A}$.
 Choose $p\in \spc{A}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
@@ -192,10 +195,9 @@ briefly \index{$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
 
 Further, $\Cone(\Sigma_pX)$ will be called the \index{tangent space}\emph{tangent space} to $X$ at $p$;
 it will be denoted by \index{$\T_p$ (tangent space)}$\T_pX$.
-\footnote{\red V: I already made that comment but  tangent spaces have already been defined in chapter 4. }
 
+Note that $\Sigma_pX$ is a subset of $\Sigma_p$ and $\T_pX$ is a subcone in $\T_p$
 
-We for a point $p\in \partial  \spc{A}$ we define $\Sigma_p(\partial\spc{A})$ and $T_p(\partial\spc{A})$ similarly by requiring $x_n\in \spc{A}$ in the above definition.
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{A}$, we have
 \[\partial (\Sigma_p\spc{A})=\Sigma_p(\partial\spc{A})
@@ -589,7 +591,7 @@ Let $f$ be a semiconcave function.
 A point $p\in \Dom f$ is called \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$; 
 otherwise it is called \index{regular point}\emph{regular}.
 
-The following statement \footnote{\red  add reference?} plays a technical role in the proof of stability theorem,
+The following statement \footnote{\red add reference? А: Добрый Витя обещал найти :)} plays a technical role in the proof of stability theorem,
 but it is also a useful technical tool on its own.
 
 \begin{thm}{Morse lemma}
