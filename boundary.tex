@@ -591,7 +591,7 @@ Let $f$ be a semiconcave function.
 A point $p\in \Dom f$ is called \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$; 
 otherwise it is called \index{regular point}\emph{regular}.
 
-The following statement \footnote{\red add reference? А: Добрый Витя обещал найти :)} plays a technical role in the proof of stability theorem,
+The following statement plays a technical role in the proof of stability theorem,
 but it is also a useful technical tool on its own.
 
 \begin{thm}{Morse lemma}
@@ -599,6 +599,8 @@ Let $f$ be a semiconcave function on a finite-dimensional Alexandrov space witho
 Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
+
+Morse lemma was originally proved by Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions. For such functions it holds for all Alexandrov spaces without the requirement that they do not have boundary. For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} ( the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) was generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}. On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions involved remain semiconcave when canonically extended to the doubling. This is automatic for the special type of semiconcave functions considered in \cite{perelman1993} therefore this distinction is not made there.
 
 Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if for any $x\in E$
