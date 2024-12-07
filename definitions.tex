@@ -41,8 +41,8 @@ An $\spc{X}$ is $\Alex\kappa$ for some $\kappa$, then we say that $\spc{X}$ is a
 
 It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
 leave the general curvature bound as an exercise. These generalizations are usually straightforward. We will add notes when they are not.
-%Sometime theses exercises are nontrivial; in this case we add a note.
-We will also often formulate statements just for $\kappa=0$ even when they admit straightforward generalizations to arbitrary curvature bounds.
+We will also often formulate statements just for $\kappa=0$ even when they admit straightforward generalizations to arbitrary curvature bounds;
+see \cite{alexander-kapovitch-petrunin2024} for a more formal tratment.
 
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
@@ -129,7 +129,7 @@ and
 the statement follows.
 
 
-The spherical and hyperbolic cases can be proved in the same way.
+The spherical and hyperbolic cases can be proved along the same lines.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:alex-lemma-cat}
@@ -222,6 +222,8 @@ that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\inft
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
+
+Later, you will see that the inequality might be strict.
 
 \section{Hinge comparison}
 
@@ -332,7 +334,7 @@ For any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that fo
 
 \begin{thm}{Exercise}\label{ex:normCBB}
 Let $\spc{W}$ be $\RR^n$ with the metric induced by a norm.
-Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean space $\EE^n$.
+Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean space~$\EE^n$.
 \end{thm}
 
 \section{Function comparison}\label{Function comparison}
@@ -359,6 +361,7 @@ passing to the limit we get the same for $f$.
 We will also use that \textit{$\lambda$-concave functions are one-sided differentiable}.
 
 Also note that that since a concave function defined on an open interval  is automatically locally Lipschitz, the requirement that a $\lambda$-concave function be locally Lipschitz is superfluous for open intervals.
+
 \parbf{Functions on metric spaces.}
 A function on a metric space $\spc{A}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{A}$}.
 The domain of a function $f$ will be denoted by $\Dom f$.
@@ -371,7 +374,7 @@ The following proposition is simple but conceptual ---
 it reformulates a global geometric condition into an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
-A complete geodesic space $\spc{A}$ in $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form 
+A complete geodesic space $\spc{A}$ is $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form
 \[f\:x\mapsto \tfrac12\cdot\dist[2]{p}{x}{}.\] 
 \end{thm} 
 
@@ -409,15 +412,14 @@ see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-pe
 
 In this text we have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
 Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
-This is more natural and general, also many statements can be reduced to the geodesic case.
+This condition is more natural and general, but many statements can be reduced to the geodesic case.
 In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
 then 
 \textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
 Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$
 \cite[8.11]{alexander-kapovitch-petrunin2024}; compare to \ref{ex:grad-dist:geod}.
 
-All the discussed statements admit natural generalizations to 
-spaces with curvature $\ge \kappa$ in the sense of Alexandrov.
+All the discussed statements can be generalized to $\Alex\kappa$ spaces.
 The proof are nearly the same, but the formulas are getting more complicated.
 
 For example, the function comparison for $\Alex{-1}$ spaces states that 

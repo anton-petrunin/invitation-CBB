@@ -19,8 +19,8 @@ All these topics are treated in detail in \cite{burago-burago-ivanov} and \cite{
 Occasionally, we use the Baire category theorem and Rademacher's theorem, but these could be used as black boxes.
 
 We use some topology. 
-Most of the time, any introductory text in algebraic topology should be sufficient.
-For some examples, we use more advanced results, but these could also be used as black boxes.
+An introductory text in algebraic topology should be sufficient most of the time.
+For some examples, we apply more advanced results, but these are used as black boxes.
 
 Since most of the applications come from Riemannian geometry, it is beneficial to be familiar with the Toponogov comparison theorem and related topics.
 The classical book by Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains more than one needs.
@@ -70,7 +70,7 @@ Directly from the definition, it follows that if $\alpha\:[0,1]\to\spc{X}$ is a 
 (that is, $\alpha(0)=x$ and $\alpha(1)=y$), then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 Set 
-\[\yetdist{x}{y}{}=\inf\{\,\length\alpha\,\}\]
+\[\yetdist{x}{y}{}=\inf\{\,\length\alpha\,\},\]
 where the greatest lower bound is taken for all paths from $x$ to~$y$.
 It is straightforward to check that $(x,y)\mapsto \yetdist{x}{y}{}$ is an \emph{$\infty$-metric};
 that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$. 
@@ -95,8 +95,8 @@ However, most of the time we will work with ambient length spaces where the mean
 
 \section{Geodesics}
 
-Let $\spc{X}$ be a metric space 
-and $\II$\index{$\II$ (real interval)} a real interval. 
+Let $\spc{X}$ be a metric space,
+and let $\II$\index{$\II$ (real interval)} be a real interval.
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Other texts  may refer to geodesics in our sense of the word as  \textit{shortest path} or \textit{minimizing geodesic}.
 Also, our meaning of the term \textit{geodesic} is closely related, but different from what is used in Riemannian geometry.};
@@ -107,7 +107,7 @@ for any pair $s,t\in \II$.
 If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
 In this case, the image of $\gamma$ is denoted by $[p q]$\index{$[pq]$ (geodesic)}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
 We may write $[p q]_{\spc{X}}$ 
-to emphasize that the geodesic $[p q]$ is in the space  ${\spc{X}}$.
+to emphasize that the geodesic $[p q]$ lies in the space ${\spc{X}}$.
 
 In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique;
 for example, any meridian is a geodesic between poles on the sphere.
@@ -116,7 +116,7 @@ However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
 
 A metric space is called \index{geodesic!space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
-A metric space $\spc{X}$ is called {}\emph{$\ell$-geodesic}
+A metric space $\spc{X}$ is called \index{$\ell$-geodesic space}\emph{$\ell$-geodesic}
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
 For instance, any geodesic space is $\infty$-geodesic.
 
@@ -199,13 +199,13 @@ Given three points $p,q,r$ in a metric space $\spc{X}$,
 let us define the \index{model!triangle}\emph{model triangle} $\trig{\tilde p}{\tilde q}{\tilde r}$ 
 (briefly, 
 $\trig{\tilde p}{\tilde q}{\tilde r}=\modtrig(p q r)_{\EE^2}$%
-\index{$\modtrig$ (model triangle)}) to be a triangle in the Euclidean plane $\EE^2$ such that
-\begin{align*}\dist{\tilde p}{\tilde q}{\EE^2}&=\dist{p}{q}{\spc{X}},
-&
-\quad\dist{\tilde q}{\tilde r}{\EE^2}&=\dist{q}{r}{\spc{X}},
-&
-\quad\dist{\tilde r}{\tilde p}{\EE^2}&=\dist{r}{p}{\spc{X}}.
-\end{align*}
+\index{$\modtrig$ (model triangle)}) to be a triangle in the Euclidean plane $\EE^2$ with the same sides;
+that is,
+\[
+\dist{\tilde p}{\tilde q}{\EE^2}=\dist{p}{q}{\spc{X}},
+\quad\dist{\tilde q}{\tilde r}{\EE^2}=\dist{q}{r}{\spc{X}},
+\quad\dist{\tilde r}{\tilde p}{\EE^2}=\dist{r}{p}{\spc{X}}.
+\]
 
 In the same way, we can define the \index{hyperbolic model triangle}\emph{hyperbolic} and the \index{spherical model triangles}\emph{spherical model triangles} $\modtrig(p q r)_{\HH^2}$, $\modtrig(p q r)_{\SSS^2}$
 in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
@@ -454,7 +454,7 @@ relation.
 Given  $r > 0$, we have $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
 space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
 respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
-(Here $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
+(Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
 \end{thm}
 
 For the proof of the following statement we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
@@ -465,8 +465,7 @@ $\GH$ is a complete metric space.
 
 This means in particular that if $X,Y$ are compact and $|\spc{X}-\spc{Y}|_{\GH}=0$ then $X$ and $Y$ are isometric.
 
-Gromov--Hausdorff convergence of compact spaces has particularly nice properties.
-From the technical point of view, they follow from the next statement, which we formulate as an exercise.
+Gromov--Hausdorff convergence of compact spaces has particularly nice properties, which follow from the next exercise.
 
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
 Let $f$ be a distance noncontracting map from 
@@ -481,7 +480,7 @@ there is a map $f\:\spc{X}\to \spc{Y}$ such that
 for any $x,x'\in \spc{X}$.
 
 \begin{thm}{Exercise}\label{ex:GH-po}
-Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ are compact metric spaces.
+Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be compact metric spaces.
 Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
 we have 
 \[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
@@ -511,7 +510,7 @@ $\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any 
 
 \end{thm}
 
-When dealing with Gromov--Hausdorff convergence the following lemma is often useful as it allows to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
+When dealing with Gromov--Hausdorff convergence the following lemma allows to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
 Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be complete metric spaces,

@@ -77,7 +77,7 @@ The value $\theta$ is undefined if $v=\0$ or $w=\0$;
 in these cases we set $\<v,w\>\df0$.
 
 \begin{thm}{Exercise}\label{ex:geodesic-cone}
-Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \index{$\pi$-geodesic space}\emph{$\pi$-geodesic};
+Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \index{$\ell$-geodesic space}\emph{$\pi$-geodesic};
 that is, any two points $x,y\in \spc{X}$ such that $\dist{x}{y}{\spc{X}}<\pi$ can be joined by a geodesic in $\spc{X}$.
 \end{thm}
 
@@ -89,7 +89,7 @@ The space of directions $\Sigma_p$ can be (and will be) identified with the unit
 that is, with the set $\set{v\in\T_p}{|v|=1}$.
 
 \begin{thm}{Proposition}\label{prop:Tan-is-CBB(0)}
-A tangent space to an Alexandrov space has nonnegative curvature in the sense of Alexandrov.
+Any tangent space to an Alexandrov space has nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
 Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that the tangent space $\T_p$ at some point of Alexandrov space might fail to be geodesic;
@@ -150,9 +150,7 @@ In particular, $f$ is semiconcave in $\spc{A}\setminus\{p\}$.
 \section{Differential}\label{sec:differential}
 \index{differential of a function}
 
-
-Let $\spc{A}$ be an Alexandrov space.
-Let $f$ be a semiconcave function on $\spc{A}$ and $p\in \Dom f$.
+Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$, and $p\z\in \Dom f$.
 Choose a unit-speed geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
@@ -180,7 +178,7 @@ Show that
 where $L$ is the Lipschitz constant of $f$ in a neighborhood of $p$.
 \end{thm}
 
-\begin{thm}{Exercise ( First Variation Formula)} \label{ex:d(distfun)}
+\begin{thm}{Exercise (First variation formula)} \label{ex:d(distfun)}
 Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 Show the following.
 
@@ -203,7 +201,7 @@ for any $v\in\T_p$.
 
 The following definition generalizes the gradient to semiconcave functions on Alexandrov space.
 This generalization is not trivial even for concave functions on Euclidean space;
-we suggest keeping this case in mind.
+we suggest keeping this example in mind while reading further.
 
 \begin{thm}{Definition}\label{def:grad} 
 Let $f$ be a semiconcave function on an Alexandrov space.
@@ -219,8 +217,7 @@ $(\dd_p f)(g) = \<g,g\>.$
 \end{subthm}
 \end{thm}
 
-The following exercise provides a key property of gradients that will be important latter;
-see the first distance estimate (\ref{thm:dist-est}).
+The following exercise provides a property of gradients that will play a key role in the proof of the first distance estimate (\ref{thm:dist-est}).
 
 \begin{thm}{Exercise}\label{ex:monotonicity}
 Let $f$ be a $\lambda$-concave function on an Alexandrov space.
@@ -435,8 +432,9 @@ were $\ell=\dist{x}{y}{}$.
 \end{subthm}
 
 \begin{subthm}{ex:semicontinuous-grad:lim} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
-that is, if $x_n\z\to x_\infty$, then
-\[|\nabla_{x_\infty}f|\le \liminf_{n\to\infty} |\nabla_{x_n}f|.\]
+that is,
+\[|\nabla_{x_\infty}f|\le \liminf_{x_n\to x_\infty} |\nabla_{x_n}f|.\]
+
 \end{subthm}
 
 \end{thm}

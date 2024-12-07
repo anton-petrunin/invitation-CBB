@@ -2,7 +2,7 @@
 \chapter{Globalization}\label{chap:globalization}
 
 The globalization theorem states that a locally Alexandrov space is globally Alexandrov.
-We start with the simplest meaningful case of this theorem and indicate a way to extend the proof to the general case.
+We prove it in the simplest meaningful case and indicate a way to extend the proof to the general case.
 
 \section{Globalization}
 
@@ -225,7 +225,7 @@ Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \re
 
 \section{General case}
 
-The globalization theorem  can be generalized to any curvature bound $\kappa$.
+The globalization theorem  can be generalized to any curvature bound~$\kappa$.
 The case $\kappa\le 0$ is proved in the same way, but the case $\kappa>0$ requires modifications.
 
 The compactness condition in our version of the theorem can be traded for completeness.
@@ -240,10 +240,10 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 \end{thm}
 
-Using this one can prove the following general version of the globalization theorem.
+Applying this exercise, one can prove the following general version of the globalization theorem.
 
 \begin{thm}{Theorem}\label{thm:globalization+}
-Any locally $\Alex\kappa$ length space is $\Alex\kappa$.
+Any locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
 By \ref{ex:k-><mono}, we have
@@ -289,7 +289,9 @@ for any triple of points $x,y,z\in \spc{A}$.
 
 \section{Remarks}
 
-The following question about \ref{angle-a} was stated in \cite[footnote in 4.1.5]{burago-burago-ivanov}, this is a long-standing open problem (possibly dating back to Alexandrov).
+The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be superfluous.
+This is a long-standing open problem possibly dating back to Alexandrov \cite[footnote in 4.1.5]{burago-burago-ivanov}.
+Let us state it formally.
 
 \begin{thm}{Open question}\label{open:hinge-}
 Let $\spc{A}$ be a complete geodesic space (you can also assume that $\spc{A}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
@@ -304,11 +306,11 @@ Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};
 later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
-Their statement is slightly more general than \ref{thm:globalization+}; it is for complete length spaces.
-Another version for noncomplete, but geodesic spaces was proved by the second author \cite{petrunin:globalization}.
+They prove globalization \textit{complete length spaces}.
+Another version for \textit{noncomplete, but geodesic spaces} was proved by the second author \cite{petrunin:globalization}.
 
 
-We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality to compact nonnegatively curved spaces.
+We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality.
 This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
 The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 Another simplified argument was found by Katsuhiro Shiohama \cite{shiohama}.

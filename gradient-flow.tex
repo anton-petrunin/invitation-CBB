@@ -17,13 +17,13 @@ converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right 
 In addition, $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
-The tangent vector $v=\dist px{}\cdot\dir px$ will be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$\log_p x$).
-The logarithm is a multivalued function from $\spc{A}$ to $\T_p$, so $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
+The tangent vector $v=\dist px{}\cdot\dir px$ will be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{$\log_p x$ (logarithm)}$v=\log_p x$).
+The logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so, $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
 Note that $\gamma^+(0)=\log_px$ for a geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
 Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
-Suppose $f$ a semiconcave Lipschitz function
+Suppose $f$ is a semiconcave Lipschitz function
 defined in a neighborhood of $p\z=\alpha(0)$,
 and $\alpha^+(0)$ is defined.
 Then $(f\circ\alpha)^+(0)$ exists and 
@@ -67,8 +67,7 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 \section{Gradient curves}
 
 \begin{thm}{Definition}\label{def:grad-curve}
-Let $f\:\spc{A}\subto\RR$ be a semiconcave function on an Alexandrov space
-$\spc{A}$.
+Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
 \[\alpha^+=\nabla_{\alpha} f;\]
@@ -90,7 +89,7 @@ This theorem says that the future of a gradient curve is determined by its prese
 
 Here is an example showing that the past is not determined by the present.
 Consider the function $f\:x\mapsto -|x|$ on the real line $\RR$.
-The tangent space $\T_x\RR$ can be identified with $\RR$, and
+The tangent space $\T_x\RR$ can be identified with $\RR$, and $\nabla_xf=-\mathrm{sgn}\, x$; that is,
 \[\nabla_xf=
 \begin{cases}
 1&\text{if}\quad x<0,
@@ -137,7 +136,7 @@ Then
 \section{Distance estimates}
 
 \begin{thm}{Lemma}\label{eq:fist-var-inq+}
-Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$ 
+Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$
 defined on an Alexandrov space.
 Choose a point $p$; let $\ell(t)\df\distfun_p\circ\alpha(t)$ and $q=\alpha(t_0)$.
 Then 
@@ -168,7 +167,7 @@ and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 The following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $f$ be a $\lambda$-concave locally Lipschitz function on an Alexandrov space $\spc{A}$.
+Let $f$ be a $\lambda$-concave locally Lipschitz function defined on an Alexandrov space $\spc{A}$.
 Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
@@ -232,28 +231,26 @@ for some constant $\Const=\Const(t_{\max},\lambda)$.
 
 \section{Gradient flow}
 
-Let $\spc{A}$ be an Alexandrov space 
-and $f$ be a locally Lipschitz semiconcave function defined on an open subset of $\spc{A}$.
+Let $f$ be a locally Lipschitz semiconcave function defined on an open subset of an Alexandrov space $\spc{A}$.
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
 \[\GF^t_f(x)=y.\]
 The partially defined map $\GF^t_f$ from $\spc{A}$ to itself is called the \index{gradient!flow}\emph{$f$-gradient flow} for time $t$.
 Note that
 \[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}.\]
-In other words, one may of that gradient flow as a partial action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
+In other words, the gradient flow is a partial action of the \textit{semigroup} $(\RR_{\ge0},+)$ on the space.
  
 From the first distance estimate \ref{thm:dist-est}, 
 it follows that for any $t\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{A}$.
-In some cases, it is globally defined.
-For example, if $f$ is a $\lambda$-concave function defined on the whole space $\spc{A}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{A}$ and $t\ge0$;
+For sufficiently nice functions, the gradient flow is globally defined.
+For example, if $f$ is a $\lambda$-concave function and it is defined on the whole space $\spc{A}$, then $\GF^t_f(x)$ is defined for all $x\in \spc{A}$ and $t\ge0$;
 see \cite[16.19]{alexander-kapovitch-petrunin2024}.
 
 Now let us reformulate the statements about gradient curves obtained earlier using this new terminology.
 From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $\spc{A}$ be an Alexandrov space 
-and $f\:\spc{A}\to \RR$ be a semiconcave function.
+Let $f$ be a semiconcave function defined on an Alexandrov space $\spc{A}$.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
 Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.
@@ -321,12 +318,12 @@ Note that $f''\le 1$.
 Since the space is proper we can choose a limit in \ref{eq:gexp}.
 
 Let $\gamma$ be a geodesic that stats at $p$.
-Observe that $\gamma\circ\ln$ is an $f$-gradient curve.
+Observe that $t\mapsto \gamma\circ\ln(t)$ is an $f$-gradient curve.
 By the first distance estimate, we have that $\Phi^t_{f}$ is an $e^t$-Lipschitz.
-This implies any limit in \ref{eq:gexp} has the same value;
-that is $\gexp_p$ is uniquely defined.
+This implies that any limit in \ref{eq:gexp} has the same value;
+that is, $\gexp_p$ is uniquely defined.
 
-Again, since $\Phi^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is a short map
+Again, since $\Phi^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is short.
 \qeds
 
 \section{Remarks}
@@ -337,14 +334,14 @@ These tools quickly found applications in other types of singular spaces \cite{j
 
 
 For a general lower curvature bound $\kappa$, the construction of gradient exponent has to be modified;
-it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of  the modified distance function, For general $\kappa$ there is no rescaling argument as in the case of nonnegative curvature.
+it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of  the modified distance function.
 
 For $\kappa=-1$ we have 
 that $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$
 and 
 \[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{A}}\le \side\hinge0vw_{\HH^2}.\]
-In other words $\gexp_p$ is short if we equip $_p$ with the hyperbolic cone metric.
+In other words $\gexp_p$ is short if we equip $\T_p$ with the hyperbolic cone metric.
 
 Similarly, for $\kappa=1$ we have $\gexp_p(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
@@ -352,9 +349,9 @@ for any geodesic path $\gamma$ that starts at $p$ and
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
 The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus of but \textit{is different} from the  Riemannian exponential after that.
-The following statement shows that this technique can prove something nontrivial even for Riemannian manifolds.
+The following exercise is ment to show that this technique can prove something nontrivial even for Riemannian manifolds.
 
-\begin{thm}{Problem}
+\begin{thm}{Exercise}\label{ex:short-onto}
 Let $(M,g)$ be a complete $m$-dimensional Riemannian with sectional curvature at least $1$.
 Assume $M$ is not homeomorphic to $\SSS^m$.
 Show that there is a short onto map $\SSS^m\to (M,g)$.

@@ -1,7 +1,7 @@
 %%!TEX root = the-splitting.tex
 \chapter{Line splitting}\label{chap:splitting}
 
-In this lecture, we prove the line splitting theorem and apply it to study tangent spaces on an Alexandrov space.
+In this lecture, we prove the line splitting theorem and apply it to study tangent spaces of Alexandrov spaces.
 
 \section{Busemann function}
 
@@ -56,22 +56,22 @@ where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lin
 \end{thm}
 
 
-Let $\spc{X}$ be a metric space and $A,B\subset \spc{X}$.
-A metric space $\spc{X}$ is a \index{direct sum}\emph{direct sum} of its two  subsets $A$ and $B$,
+Let $A$ and $B$ be two subsets in a metric space $\spc{X}$.
+We say that $\spc{X}$ is a \index{direct sum}\emph{direct sum} of $A$ and $B$,
 or briefly,
 \[\spc{X}=A\oplus B\]\index{$A\oplus B$ (direct sum)}
-if there are projections $\proj_A\:\spc{X}\to A$ 
+if there are retractions $\proj_A\:\spc{X}\to A$
 and 
 $\proj_B\:\spc{X}\to B$
 such that 
 \[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
 for any two points $x,y\in \spc{X}$.
 
-If $\spc{X}=A\oplus B$, then 
+Observe that if $\spc{X}=A\oplus B$, then
 \begin{itemize}
 \item $A$ intersects $B$ at a single point,
 \item both sets $A$ and $B$ are \index{convex set}\emph{convex sets} in $\spc{X}$;
-the latter means that any geodesic with the ends in $A$ (or $B$) lies in $A$ (or $B$). 
+the latter means that any geodesic with the endpoints in $A$ (or $B$) lies in $A$ (respectively $B$).
 \end{itemize}
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
@@ -195,14 +195,14 @@ Note that $h$ is onto.
 Applying \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is distance non-expanding and non-contracting at the same time; that is, $h$ is an isometry.
 \qeds
 
-Recall that according our definition the real line $\RR$ is $\Alex1$.
-However, most of $\Alex1$ spaces have diameter at most $\pi$;
-see \ref{ex:RisCBB(1)}.
-
 \begin{thm}{Exercise}\label{ex:cone-CBB}
 Suppose $\spc{X}$ is a complete geodesic space.
 Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
 \end{thm}
+
+Recall that according our definition any circle or closed real interval is $\Alex1$.
+Therefore, the condition $\diam\spc{X}\le \pi$ is necessary.
+Nevertheless, according to \ref{ex:RisCBB(1)}, most of $\Alex1$ spaces have diameter at most $\pi$.
 
 \section{Anti-sum}
 
@@ -211,8 +211,7 @@ It will be used to prove basic properties of  tangent spaces.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
-Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$.
-
+Let $p$ be a point in an Alexandrov space $\spc{A}$.
 Given two vectors $u,v\in \T_p$, there is a unique vector $w\in \T_p$ such that
 \[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle \ge 0\]
 for any $x\in \T_p$, and
@@ -227,8 +226,8 @@ Show that
 
 \end{thm}
 
-If $\T_p$ were geodesic, then the lemma would follow from the existence  of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$ which is concave.
-However, the tangent space $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin2024}.
+If $\T_p$ were $\Alex0$, then the lemma would follow from the existence  of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$, which is concave by \ref{ex:busemann-CBB}.
+As you will see, a revision of this idea works in the general case, but it cannot work as is since $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin2024}.
 
 Applying the above lemma for $u=v$, we have the following statement.
 
@@ -424,7 +423,7 @@ By \ref{ex:semicontinuous-grad:>s}, $S_n$ is open.
 Choose a point $q\ne p$.
 Observe that $|\nabla_xf|=1$ for any point $x\in\left]pq\right[$.
 It follows that $S_n$ is dense in $\spc{A}$.
-Since $S=\bigcap_nS_n$, the lemma follows.
+Since $S=\bigcap_nS_n$, the lemma follows from the Baire category theorem.
 \qeds
 
 
@@ -461,17 +460,18 @@ for any $s\in S$ and $x\in X$.
 
 \section{Remarks}
 
-The history of the splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line};
+The history of the splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line},
 who proved its $2$-dimensional case.
-For Riemannian manifolds of higher dimensions 
+For Riemannian manifolds of higher dimensions,
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
 to Alexandrov spaces;
 it was the first result about Alexandrov spaces of dimension higher than 2.
 Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 Generalizations to Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
-This was further generalized by Jeff Cheeger and Toby Colding for limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity} and to their synthetic generalizations, so-called {}\emph{RCD spaces}, by Nicola Gigli \cite{gigli2013splitting, gigli-splitting-overview}.
-Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}, that is, pseudo-Riemannian manifolds of signature $(1,n)$.
+This was further generalized by Jeff Cheeger and Toby Colding for the limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity}.
+Nicola Gigli generalized it further to the so-called {}\emph{RCD spaces} (spaces with synthetically defined Ricci-curvature bound) \cite{gigli2013splitting, gigli-splitting-overview}.
+Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}; that is, pseudo-Riemannian manifolds of signature $(1,n)$.
 
 The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};
 it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
@@ -556,7 +556,7 @@ for any pair $i\ne j$.
 
 \section{Space of directions}
 
-Reall that a metric space $\spc{X}$ will be called \emph{$\ell$-geodesic}
+Reall that a metric space $\spc{X}$ will be called \index{$\ell$-geodesic space}\emph{$\ell$-geodesic}
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
@@ -564,8 +564,7 @@ Let $\spc{A}$ be a finite-dimensional Alexandrov space.
 Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
 \end{thm}
 
-
-By  \ref{ex:GHto-tangent} this immediately gives 
+By \ref{ex:GHto-tangent} this immediately gives
 
 \begin{thm}{Corollary}\label{ex:GHto-tangent-finite-dim}
 Let $p$ be a point in a finite dimensional Alexandrov space $\spc{A}$,
