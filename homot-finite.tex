@@ -43,8 +43,7 @@ $$(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
 
 Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for any $i$. 
 For a geodesic $\gamma$, set $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$. 
-Assume we have a collection $\{q_i\}$ such
-that 
+Assume that
 \[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0\]
 for any geodesic $\gamma$ in $\oBall(p,\eps)$. 
 We can assume that $c>3N/\cos^2\eps$;
@@ -77,7 +76,8 @@ and $f|_{\partial K}=0$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:no-conc}
-Construct an Alexandrov space $\spc{A}$ such that there is no strictly concave function with an open domain of definition in $\spc{A}$.
+Construct an Alexandrov space $\spc{A}$ such that
+there is no open set $\Omega\subset A$ with strictly concave function $f\:\Omega\to\RR$.
 \end{thm}
 
 
@@ -89,10 +89,8 @@ the point $p'$ will be called a \index{lifting}\emph{lifting} (or \emph{$\eps$-l
 We may choose a lifting $p'\in\spc{A}'$ for every point $p\in\spc{A}$, 
 in this case the map $p\mapsto p'$ is called a {}\emph{($\eps$-)lifting map}.
 
-The lifting is not uniquely defined.
-The lifting map is not assumed to be continuous.
-When we talk about liftings, we assume that $\eps>0$, the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$,
-as well as $\spc{W}$ are chosen.
+Let us emphasise that liftings are not uniquely defined, and the lifting map is not assumed to be continuous.
+Also, to talk about liftings, we have to choose that $\eps>0$, the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$.
 
 Let $\spc{A}$ be  a compact $m$-dimensional Alexandrov space.
 Suppose $\spc{A}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{A})>0$.
@@ -100,13 +98,13 @@ Then the construction in $\spc{A}$ from the previous section
 can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
-The result of this and related constructions will be called \index{lifting}\emph{liftings},
+The results of this and related constructions will be also called \index{lifting}\emph{liftings},
 say we can talk about a lifting from $\spc{A}$ to $\spc{A}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is small, then these liftings are strictly concave)
 and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
 Here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction, but it is straightforward.
 
 \begin{thm}{Exercise}\label{ex:no-cont-lifting}
-Give an example of  Gromov--Hausdorff convergence of   spaces   $\spc{A}_n\z\to \spc{A}_\infty$ such that all  $\spc{A}_n$ and $\spc{A}_\infty$ are compact finite dimensional $\Alex0$ and for any small $\eps>0$  there is no continuous $\eps$-lifting $ \spc{A}_\infty\to \spc{A}_n$ for any large $n$.
+Give an example of  Gromov--Hausdorff convergence of spaces $\spc{A}_n\z\to \spc{A}_\infty$ such that all $\spc{A}_n$ and $\spc{A}_\infty$ are compact finite-dimensional $\Alex0$ and for any small $\eps>0$  there is no continuous $\eps$-lifting map $\spc{A}_\infty\to \spc{A}_n$ for any large $n$.
 \end{thm}
 
 \section{Nerves}
@@ -170,7 +168,7 @@ It remains to apply \ref{thm:h-stability}.
 
 \parit{Proof of \ref{thm:h-stability}.}
 Since $\spc{A}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find a finite open cover of $\spc{A}_\infty$ by convex open sets $\Omega_1,\dots, \Omega_k$ such that 
-for each $\Omega_i$ there is a strictly concave function $f_i$ that is defined in a neighborhood of $\bar \Omega_i$ and such that $f_i|_{\partial \Omega_i}=0$.
+for each $\Omega_i$ there is a strictly concave function $f_i$ that is defined in a neighborhood of the closure $\bar \Omega_i$ and such that $f_i|_{\partial \Omega_i}=0$.
 
 Subtracting from functions $f_i$ some small value $\eps>0$,
 we can ensure that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bigcap_{i\in S}\bar\Omega_{i}\ne \emptyset$.
@@ -181,7 +179,7 @@ Indeed, the function
 \[f_S\df\min_{i\in S} f_i\]
 is strictly concave and it vanishes on the boundary of $W$.
 The $f_S$-gradient flow $(t,x)\mapsto \GF_{f_S}^t(x)$ defines a homotopy
-$[0,\infty)\times W\to W$.
+$[0,\infty)\times W\z\to W$.
 By the first distance estimate (\ref{thm:dist-est}), $\GF_{f_S}^t(x)$ converges to the (necessarily unique) maximum point of $f_S$ as $t\to\infty$.
 Therefore, in the obtained homotopy we can parametrize $[0,\infty)$ by $[0,1)$ and extend the homotopy continuously to $[0,1]$;
 thus we get that $W$ is contractible.
@@ -227,15 +225,20 @@ The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the ma
  $m$-dimensional manifolds with lower sectional curvature bound we argue by contradiction and assume that there is a sequence of such manifolds  that violates our assumption, 
 then pass to the limit --- the limit must be an Alexandrov space and this can be used to arrive at a contradiction.
 
-In principle, the same strategy might work for a sequence of Riemannian manifolds with dimension approaching infinity, but so far no applications of this kind are known.
-The following close relative of Gromov's theorem about almost flat manifolds can be attacked by this type of argument.
-\textit{Is it true that no simply connected closed manifold (of arbitrary large dimension) admits a Riemannian metric with sectional curvature and diameter bounded by a fixed positive sufficiently small value?}
-(Riemannian manifolds with these conditions may not be covered by compact nil-manifolds \cite{guzhvina2008}.)
+In principle, the same strategy might work for a sequence of Riemannian manifolds with dimension approaching infinity, but no applications of this kind were found.
+The following question can be attacked by this type of argument.
+
+\begin{thm}{Question}
+Is it true that no simply connected closed manifold (of arbitrary large dimension) admits a Riemannian metric with sectional curvature and diameter bounded by a fixed positive sufficiently small value?
+\end{thm}
+
+If the dimension is bounded, then Gromov's theorem \cite{gromov1978} implies that such a manifold can be covered by a compact nil-manifold; in particular, the manifold cannot be simply connected.
+However, if  the dimension is unbounded, then Riemannian manifolds with these conditions may not be covered by compact nil-manifolds; such examples were found by Galina Guzhvina \cite{guzhvina2008}.
 
 Let us finish with a list of results that can be proved by applying Gromov's selection theorem
 in the same fashion as in the proof of homotopy-type finiteness theorem (\ref{thm:h-finiteness}).
 
-\begin{thm}{Betti-number theorem}
+\begin{thm}{Betti-number theorem}\label{thm:betti}
 For any   $\kappa\in \RR, D>0$ and a positive integer $m$,
 there is a constant $\Const=\Const(m,D,\kappa)$ such that 
 \[\beta_0(M)+\dots+\beta_m(M)\le \Const\]
@@ -267,16 +270,18 @@ Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that 
 
 This theorem was proved by Grigory Perelman \cite{perelman1991};
 the proof was rewritten with more details by the first author \cite{kapovitch}.
-Perelman  informally claimed in private conversations that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$;
-however no written proof has been presented.
+In private conversations, Perelman claimed that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$.
+Since no proof has been written, this statement should be considered as a conjecture;
+partial results in this direction were obtained by Mohammad Alattar \cite{alattar}.
 
 Theorem \ref{thm:h-finiteness} was originally proved by Karsten Grove and Peter Petersen \cite{grove-petersen1988}.
 Perelman's stability theorem (\ref{thm:stability}) implies the following stronger statement.
 
 \begin{thm}{Homeomorphism-type finiteness}
-For any   $\kappa\in \RR, D>0, v>0$ and a positive integer $m$, there are only finitely many homeomorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with sectional curvature $\ge \kappa, \vol\ge v$, and diameter $\le D$.
+For any   $\kappa\in \RR, D>0, v>0$ and a positive integer $m$, there are only finitely many homeomorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with sectional curvature $\ge \kappa$, volume $\ge v$, and diameter $\le D$.
 \end{thm}
 
-Applying several results in differential topology, this statement can be improved to diffeomorphism-type finiteness in all dimensions $m$ except $m=4$ because it is known that except for $m=4$ a closed topological $m$-manifold admits only finitely many smooth structures; see \cite{kirby-siebenmann} and  \cite{moise,thurston} for cases $m\ge 5$ and $m\le 3$, respectively.
+This statement can be improved to diffeomorphism-type finiteness in all dimensions $m\ne 4$.
+Indeed, for $m=4$ a closed topological $m$-manifold admits only finitely many smooth structures; see \cite{kirby-siebenmann} and \cite{moise,thurston} for cases $m\ge 5$ and $m\le 3$, respectively.
 
 

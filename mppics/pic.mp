@@ -1839,8 +1839,8 @@ label.top(btex $x$ etex, z.x);
 label.rt(btex $\gamma_x$ etex, .4[z.q,z.x]);
 label.top(btex $z$ etex, z.z);
 label.bot(btex $y$ etex, z.y);
-label(btex $\spc{L}$ etex, .6*z.p-z.y);
-label.bot(btex $\partial\spc{L}$ etex, -z.y);
+label(btex $\spc{A}$ etex, .6*z.p-z.y);
+label.bot(btex $\partial\spc{A}$ etex, -z.y);
 endfig;
 
 beginfig(1315) 
@@ -1865,7 +1865,7 @@ label.top(btex $x$ etex, z.x);
 label.top(btex $y$ etex, z.y);
 label.top(btex $\gamma$ etex, point 1.5 of p1);
 label.bot(btex $\hat\gamma$ etex, (point 1.5 of p1) yscaled -1);
-label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
+label.ulft(btex $\partial\spc{A}$ etex, 1.3*z.x);
 
 endfig;
 
@@ -1889,9 +1889,9 @@ dOt z.p,z.yy,z.xx;
 
 labelarcsprof(z.p,z.yy,z.a, 14, 0, btex $\theta$ etex);
 
-label.ulft(btex $\partial\spc{L}$ etex, 1.3*z.x);
-label(btex $\spc{L}_1$ etex, 1.3*z.x+(0,1)*u);
-label(btex $\spc{L}_0$ etex, 1.3*z.x+(0,-1)*u);
+label.ulft(btex $\partial\spc{A}$ etex, 1.3*z.x);
+label(btex $\spc{A}_1$ etex, 1.3*z.x+(0,1)*u);
+label(btex $\spc{A}_0$ etex, 1.3*z.x+(0,-1)*u);
 label.urt(btex $\gamma$ etex, .8[z.a,z.b]);
 label.rt(btex $p$ etex, z.p);
 label.rt(btex $y$ etex, z.yy);

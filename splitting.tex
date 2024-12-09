@@ -59,7 +59,7 @@ where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lin
 Let $A$ and $B$ be two subsets in a metric space $\spc{X}$.
 We say that $\spc{X}$ is a \index{direct sum}\emph{direct sum} of $A$ and $B$,
 or briefly,
-\[\spc{X}=A\oplus B\]\index{$A\oplus B$ (direct sum)}
+\[\spc{X}=A\oplus B\]\index{90@$A\oplus B$ (direct sum)}
 if there are retractions $\proj_A\:\spc{X}\to A$
 and 
 $\proj_B\:\spc{X}\to B$
@@ -494,18 +494,18 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 \chapter{Dimension and volume}\label{chap:dim}
 
 This lecture shows that several different notions of dimension are the same for Alexandrov spaces.
-Also, we introduce volume and prove the Bishop--Gromov inequality, the right-inverse theorem and introduce distance charts in finite-dimensional Alexandrov spaces.
+Also, we introduce volume, prove the Bishop--Gromov inequality and the right-inverse theorem, and introduce distance charts.
 
 \section{Linear dimension}
 
 Let $\spc{A}$ be an Alexandrov space.
-We define its \index{linear dimension}\emph{linear dimension} \index{$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that 
+We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at some point $p\in \spc{A}$.
 If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 
 %If not stated otherwise, dimension will mean linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that, we will use \index{$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
+after that, we will use \index{50@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
@@ -530,7 +530,7 @@ Note that
 for every $i$.
 Applying the comparison $\mangle\hinge {p'}{x_i}{x_j}\ge \angk {p'}{x_i}{x_j}$, we get
 \[|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
-for any $i$ and $j$.
+for all $i$ and $j$.
 Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
@@ -547,7 +547,6 @@ Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional ma
 
 \begin{thm}{Exercise}\label{ex:resporka}
 Let $\spc{A}$ be an $\Alex0$ space.
-
 Show that $\LinDim \spc{A}\ge m$ if and only if for some $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{A}$
 we have
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
@@ -556,7 +555,7 @@ for any pair $i\ne j$.
 
 \section{Space of directions}
 
-Reall that a metric space $\spc{X}$ will be called \index{$\ell$-geodesic space}\emph{$\ell$-geodesic}
+Recall that a metric space $\spc{X}$ is \index{91@$\ell$-geodesic space}\emph{$\ell$-geodesic}
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
@@ -564,7 +563,7 @@ Let $\spc{A}$ be a finite-dimensional Alexandrov space.
 Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
 \end{thm}
 
-By \ref{ex:GHto-tangent} this immediately gives
+By \ref{ex:GHto-tangent}, this gives the following.
 
 \begin{thm}{Corollary}\label{ex:GHto-tangent-finite-dim}
 Let $p$ be a point in a finite dimensional Alexandrov space $\spc{A}$,
@@ -591,11 +590,9 @@ $\LinDim\Sigma_p=\LinDim\spc{A}-1$.
 If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
 \end{subthm}
 
-
 \end{thm}
 
-Using \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional Alexandrov spaces via induction on  dimension.
-Such proofs will be indicated below.
+Applying \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional Alexandrov spaces via induction on  dimension; for example, see \ref{thm:doubling}.
 
 \parit{Proof of \ref{thm:finite-space-of-directions}.}
 Choose $\eps>0$; suppose $\spc{A}$ is $m$-dimensional.
@@ -604,13 +601,13 @@ Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
 Choose $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$ and small fixed $r>0$.
-Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for any $i\ne j$.
+Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ if $i\ne j$.
 By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$.
-Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ for any $i\ne j$.
+Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ if $i\ne j$.
 By comparison, 
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
 Therefore, $n\le \pack_\eps\SSS^{m-1}$,
-where \index{$\pack_\eps\spc{X}$}$\pack_\eps\spc{X}$ is the exact upper bound on the number of points $x_1,\z\dots,x_k\in \spc{X}$ such that $\dist{x_i}{x_j}{}\ge\eps$ if $i\ne j$.
+where \index{51@$\pack_\eps\spc{X}$}$\pack_\eps\spc{X}$ is the exact upper bound on the number of points $x_1,\z\dots,x_k\in \spc{X}$ such that $\dist{x_i}{x_j}{}\ge\eps$ if $i\ne j$.
 
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
 By the definition, the space of directions $\Sigma_p$ is complete. 
@@ -625,22 +622,21 @@ If $\Sigma_p$ is compact, then it is $\pi$-geodesic
 Choose two geodesic directions $\xi=\dir px$ and $\zeta=\dir py$;
 let 
 \[\alpha\z=\tfrac12\cdot \mangle \hinge pxy=\tfrac12\cdot \dist{\xi}{\zeta}{\Sigma_p}.\]
+Suppose $\alpha<\tfrac\pi2$.
 
-Suppose $\alpha<\pi/2$.
-Let us show that it is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
+It is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
 that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such that
 \[\mangle\hinge pxz\le \alpha+\eps
 \quad\text{and}\quad
 \mangle\hinge pyz\le \alpha+\eps.\]
-Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$.
-After that, Menger's lemma (\ref{lem:mid>geod}) will finish the proof.
+Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$, and Menger's lemma (\ref{lem:mid>geod}) finishes the proof.
 
 Choose a sequence of small positive numbers $r_n\to0$
 Consider sequences $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
 Let $m_n$ be a midpoint of $[x_n\,y_n]$.
 %??? we use here that the directions $\xi=\dir px$ and $\zeta=\dir py$ are not opposite???
 
-Since $\Sigma_p$ is compact, we can pass to a sequence of $r_n$ such that 
+Since $\Sigma_p$ is compact, we can pass to a subsequence of $r_n$ such that
 $\dir{p}{m_n}$ converges;
 denote its limit by $\mu$.
 Choose a geodesic $[pz]$ that runs at a small angle from $\mu$.
@@ -653,20 +649,23 @@ By \ref{ex:alex-lemma-cat}, we have
 Let $z_n\in [pz]$ be the point such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
 By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrary small given error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
-Applying this observation and the definition of angle measure, we also have the following approximations
+Applying this observation and the definition of angle measure, we also get that the following approximations
 \begin{align*}
 \angk p{x_n}{y_n}&\approx \mangle\hinge p{x_n}{y_n},
 \\
-\angk p{x_n}{m_n}\approx\angk p{x_n}{z_n}&\approx\mangle\hinge p{x_n}{z_n},
+\angk p{x_n}{m_n}&\approx\angk p{x_n}{z_n}\approx\mangle\hinge p{x_n}{z_n},
 \\
-\angk p{m_n}{y_n}\approx\angk p{z_n}{y_n}&\approx\mangle\hinge p{z_n}{y_n},
+\angk p{m_n}{y_n}&\approx\angk p{z_n}{y_n}\approx\mangle\hinge p{z_n}{y_n},
 \end{align*}
-again, with arbitrary given error for all large $n$.
+hold with arbitrary given error and all large $n$.
 It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as required.
 \qeds
 
-In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ have lower bounds by 
-the comparison, but we needed upper bounds that were extracted from the definition of angle measure and the compactness of space of directions.
+\parit{Remark.}
+In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ have lower bounds by
+the comparison, but we needed upper bounds.
+These were extracted from the definition of angle measure and the compactness of the space of directions.
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that it cannot be done without the compactness condition.
 
 \section{Right-inverse theorem}
 
@@ -720,14 +719,14 @@ t_0
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:end}
-Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot|\dist{\bm{a}}{p}{}-\bm{y}|$.
+Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot\bigl|\dist{\bm{a}}{p}{}-\bm{y}\bigr|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-continuous (in fact H\"older)  in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
+continuous (in fact H\"older) in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
+(This finishes the proof of \ref{thm:right-inverse}.)
 \end{subthm}
 
-This finishes the proof of \ref{thm:right-inverse}.
 \end{thm}
 
 %??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.
@@ -750,7 +749,7 @@ The following exercise guides you to prove the theorem.
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
 Show that there is $\eps>0$ such that one of the inequalities holds in each of the following two strings of $m$  inequalities
 \begin{align*}
-\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
+\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps;
 \\
 \mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps
 \end{align*}
@@ -837,7 +836,8 @@ Show that any finite-dimensional Alexandrov space is proper.
 
 Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
-We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} \index{$\TopDim$}$\TopDim$ and \index{Hausdorff!dimension}\emph{Hausdorff dimension} \index{$\HausDim$}$\HausDim$.
+We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} and \index{Hausdorff!dimension}\emph{Hausdorff dimension}, which will be denoted by \index{50@$\TopDim$}$\TopDim$ and
+\index{50@$\HausDim$}$\HausDim$, respectively.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{A}$, we have

@@ -11,7 +11,7 @@ as an illustration we prove the homotopy stability theorem (\ref{thm:h-stability
 
 \begin{thm}{Theorem}\label{thm:CBB-closed}
 Let $\spc{X}_n\z\to \spc{X}_\infty$ be a convergence in the sense of Gromov--Hausdorff.
-Suppose that each for each $n$, the space $\spc{X}_n$ has curvature $\ge\kappa$ in the sense of Alexandrov.
+Suppose that for each $n$, the space $\spc{X}_n$ has curvature $\ge\kappa$ in the sense of Alexandrov.
 Then the same holds for~$\spc{X}_\infty$.
 \end{thm}
 
@@ -27,7 +27,7 @@ passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim-lim}
-Suppose that a sequence $\spc{A}_1,\spc{A}_2,\dots$ of $\Alex\kappa$ spaces that converges to $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
+Suppose that a sequence $\spc{A}_1,\spc{A}_2,\dots$ of $\Alex\kappa$ spaces converges to $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
 \[\dim \spc{A}_\infty\le \liminf_{n\to\infty} \dim \spc{A}_n.\]
 \end{thm}
@@ -41,12 +41,12 @@ has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
 Let $X$ be a subset of a metric space $\spc{W}$.
-Recall that a set $Z\subset \spc{W}$ is called an \index{$\eps$-net}\emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
+Recall that a set $Z\subset \spc{W}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
 
 We will use the following characterization of compact sets.
 
 \begin{thm}{Exercise}\label{ex:net}
-A closed subset $X$ of a complete metric space.
+Let $X$ be a closed subset in a complete metric space.
 
 \begin{subthm}{ex:net:finite}
 Show that $X$ is compact if and only if it admits a finite $\eps$-net for any $\eps>0$.
@@ -95,8 +95,7 @@ Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $
 Summarizing, for any $\eps>0$ we can find a compact $\eps$-net $\bm{F}_\eps\subset \GH$ of $\bm{K}$.
 Since $\GH$ is complete (\ref{prop:complete}), it remains to apply \ref{ex:net:compact}.
 
-Rescaling reduces $\Alex\kappa$ case to the $\Alex{-1}$ case.
-The latter can be proved in the same way, using \ref{ex:BG} instead of \ref{inq:BG}.
+Rescaling reduces $\Alex\kappa$ case to the $\Alex{-1}$ case, which can be proved along the same lines, using \ref{ex:BG} instead of \ref{inq:BG}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:pack-vol}

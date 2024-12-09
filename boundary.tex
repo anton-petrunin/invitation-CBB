@@ -9,7 +9,7 @@ After discussing its properties, we prove the doubling theorem (\ref{thm:doublin
 Let us give an inductive definition of the boundary of finite-dimensional Alexandrov spaces.
 
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
-By Exercise~\ref{ex:dim=1},
+By~\ref{ex:dim=1},
 $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with non-empty boundary).
 This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
@@ -26,7 +26,7 @@ It is instructive to check the following statements.
 \item If $\spc{A}\iso\spc{A}_1\times\spc{A}_2$ is a finite-dimensional Alexandrov space,
 then
 \[\partial \spc{A}=(\partial\spc{A}_1\times\spc{A}_2)\,\cup\,(\spc{A}_1\times\partial\spc{A}_2)\]
-\item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$  (this necessarily implies that   $\Cone\Sigma$  is  $\Alex1 $ then
+\item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$ (this implies that $\Sigma$ is  $\Alex1$), then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
 where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
 \end{itemize}
@@ -34,9 +34,9 @@ where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma
 
 \section{Conic neighborhoods}
 
-The following statement \cite{perelman1993} is a close relative of Perelman's stability theorem \ref{thm:stability}.
-% but its proof is  simpler .
+The following statement is a close relative of Perelman's stability theorem \ref{thm:stability}.
 We are going to use this result without proof.
+A proof can be found in \cite{perelman1993}.
 
 Recall that the logarithm $\log_px\:\spc{A}\to \T_p$ is defined on page \pageref{page:log}.
 
@@ -51,7 +51,8 @@ Moreover, we may assume that
 \quad\text{as}\quad
 \eps\to 0.\]
 \end{thm}
-Note that the last condition automatically implies that  $h_\eps$ as an $o(\eps)$ G-H approximation.
+
+Note that the last condition automatically implies that $h_\eps$ as an $o(\eps)$-sometry.
 
 The above theorem is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
@@ -102,10 +103,10 @@ Then $\dim \spc{A}=\dim\spc{A}'$ and
 \end{thm}
 
 While working on the proof, keep in mind that there are pairs of spaces $\spc{K}_1$ and $\spc{K}_2$ such that $\spc{K}_1\ncong \spc{K}_2$, but $\RR\times \spc{K}_1\cong \RR\times \spc{K}_2$.
-Suspension over the Poincaré homology sphere with $\SSS^4$ is one of the examples; compare to \ref{ex:conic-tangen:example}.
+Suspension over the Poincaré homology sphere and $\SSS^4$ gives an example of such a pair; compare to \ref{ex:conic-tangen:example}.
 
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
-Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, \index{$\rank\spc{A}$}$\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
+Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, \index{51@$\rank\spc{A}$}$\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
 here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
 In the following proof we will apply induction on the rank of $\spc{A}$.
@@ -138,7 +139,7 @@ Suppose $k>1$.
 Let $\spc{A}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional $\Alex0$ cone.
 Observe that $\rank\T_y\le\rank\spc{A}$ for any $y\in\spc{A}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
-Since $k>1$ we can find $z\in\partial\spc{C}$ such that $z\ne 0$.
+Since $k>1$, we can choose $z\ne 0$ that lies in $\partial\spc{C}$.
 Choose $y$ that projects to $z$;
 in particular, $\rank\T_y<\rank\spc{A}$.
 By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
@@ -166,7 +167,7 @@ Observe that $\T_y\cong\T_{y'}$,
 
 \parit{Case 3.}
 Suppose $k\le 1$ and $k'\le 1$.
-Since $\partial \spc{A}\ne \emptyset$, $k=1$.
+Since $\partial \spc{A}\ne \emptyset$, we have $k=1$.
 By \ref{ex:dim=1}, $\spc{A}\z\cong \RR^{m-1}\times\RR_{\ge0}$.
 Therefore, $\spc{A}'\cong\RR^m$, and $\spc{A}\ncong\spc{A}'$ --- a contradiction.
 \qeds
@@ -184,19 +185,19 @@ Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
 
 \section{Tangent space}
 
-Spaces of directions and tangent spaces of an Alexandrov space have already been defined in \ref{sec:space+directions} and \ref{sec: tangent space}.
+Spaces of directions and tangent spaces of an Alexandrov space have already been defined in Lecture~\ref{chap:derivative}.
 Let us extend these definitions to subsets of an Alexandrov space.
 
 Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{A}$.
 Choose $p\in \spc{A}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
 Then we say that $\xi$ is in the \index{space of directions}\emph{space of directions} from $p$ to $X$;
-briefly \index{$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
+briefly \index{70@$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
 
 Further, $\Cone(\Sigma_pX)$ will be called the \index{tangent space}\emph{tangent space} to $X$ at $p$;
-it will be denoted by \index{$\T_p$ (tangent space)}$\T_pX$.
+it will be denoted by \index{70@$\T_p$ (tangent space)}$\T_pX$.
 
-Note that $\Sigma_pX$ is a subset of $\Sigma_p$ and $\T_pX$ is a subcone in $\T_p$
+Note that $\Sigma_pX$ is a subset of $\Sigma_p$ and $\T_pX$ is a subcone in $\T_p$.
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{A}$, we have
@@ -234,7 +235,7 @@ The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two cop
 more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{A}$ defined by $(x,i)\mapsto x$ is a short map. 
-The metric on $\spc{W}$ can also be defined explicitly as
+The metric on $\spc{W}$ can also be defined as
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
 \dist{x}{y}{\spc{X}}&\text{if}\quad i= j.
@@ -297,7 +298,8 @@ Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
 
 Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
-Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$;
+Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$.
+By the splitting theorem (\ref{thm:splitting}) $\Cone \Xi$ is a direct product of the line with some subcone;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
@@ -333,7 +335,7 @@ Since the distance $\dist{x}{y}{}$ is minimal,
 we get $\langle \dir yx,v\rangle\le 0$ for any $v\in \partial \T_y$.
 In particular,
 \[\langle \dir yx,\nabla_y f\rangle\le 0\]
-Applying Exercise~\ref{ex:monotonicity} to $x$ and $y$, 
+Applying \ref{ex:monotonicity} to $x$ and $y$,
 we get
 \[\ell'(t)\le \ell(t)\]
 if the left-hand side is defined.
@@ -382,8 +384,8 @@ let $f\df\tfrac12\cdot\distfun_p^2$.
 It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
 If $p\in \partial\spc{A}$, then the statement follows from function comparison in $\spc{A}_0$ and $\spc{A}_1$.
 So, we can assume that $p\in \spc{A}_0\setminus \partial\spc{A}$.
-
-If $\gamma$ lies in $\partial \spc{A}$, then this inequality follows from the comparison in~$\spc{A}_0$.
+Also, we can assume that $\gamma$ does not lie in $\partial \spc{A}$;
+otherwise, the inequality follows from the comparison in~$\spc{A}_0$.
 
 \begin{wrapfigure}{r}{55mm}
 \vskip-2mm
@@ -418,7 +420,7 @@ for small values $s>0$
 --- a contradition.
 
 $\Cone \Xi$ contains a line with directions $\dir x{y}$ and $\dir xp$.
-By the splitting theorem, $\Cone \Xi$ split in these directions;
+By the splitting theorem, $\Cone \Xi$ splits in these directions;
 in particular, 
 \[\dist{\dir x{y}}{\xi}{}+\dist{\xi}{\dir xp}{}=\pi.\]
 for any $\xi\in\Xi$.
@@ -498,11 +500,8 @@ Show that $\partial\spc{A}$ is connected.
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{A}$ be an $m$-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{A}$
-for $2\le m<\infty$.
-Show that the distance function to the boundary
-\[\distfun_{\partial\spc{A}}\:\spc{A}\to\RR\]
-is concave.
+Let $\spc{A}$ be an finite-dimensional $\Alex0$ space with non-empty boundary $\partial\spc{A}$.
+Show that the distance function to the boundary is concave.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:liberman}
@@ -512,8 +511,7 @@ Show that the function $t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is 1-c
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:native}
-Let $\spc{W}$ be a doubling of finite-dimensional Alexandrov space $\spc{A}$ across its boundary,
-and let $proj\:\spc{W}\to\spc{A}$ be the natural projection.
+Let $proj\:\spc{W}\to\spc{A}$ be the natural projection to a finite-dimensional Alexandrov space $\spc{A}$ from its doubling $\spc{W}$ across the boundary.
 Suppose $f\:\spc{A}\to\RR$ is a $\lambda$-concave function.
 Show that $f\circ\proj\:\spc{W}\to\RR$ is $\lambda$-concave if and only if $\nabla_xf\in \partial \T_x$ 
 for any $x\in\partial \spc{A}$.
@@ -521,7 +519,9 @@ for any $x\in\partial \spc{A}$.
 
 
 
-\section{Remarks}
+\section{Remarks}\label{sec:bry-remarks}
+
+The doubling theorem has several generalizations \cite{petrunin1997,ge-li} that allow to glue nonidentical spaces.
 
 It easily follows by induction on dimension  that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
@@ -564,7 +564,7 @@ $S_{m-2}=\emptyset$.
 
 \end{thm}
 
-Let us mention that this statement implies that a compact finite-dimensional Alexandrov space has the homotopy type of a finite CW complex,
+This statement implies that a compact finite-dimensional Alexandrov space has the homotopy type of a finite CW complex,
 but it seems to be unknown if it has to be homeomorphic to a CW complex.
 
 The stratification theorem~\ref{thm:top-stratification} can be sharpened as follows.
@@ -600,7 +600,11 @@ Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-Morse lemma was originally proved by Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions. For such functions it holds for all Alexandrov spaces without the requirement that they do not have boundary. For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} ( the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) was generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}. On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions involved remain semiconcave when canonically extended to the doubling. This is automatic for the special type of semiconcave functions considered in \cite{perelman1993} therefore this distinction is not made there.
+Morse lemma was originally proved by Grigory Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions.
+For such functions it holds for all Alexandrov spaces without the requirement that they do not have boundary.
+For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) was generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
+On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.
+This is automatic for the special type of semiconcave functions considered in \cite{perelman1993} therefore this distinction is not made there.
 
 Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if for any $x\in E$
@@ -616,5 +620,3 @@ The following conjecture is one of the oldest questions in Alexandrov geometry t
 Let $S$ be a component of the boundary of a finite-dimensional Alexandrov space.
 Then $S$ equipped with the induced length metric is an Alexandrov space with the same curvature bound.
 \end{thm}
-
-The doubling theorem has several generalizations \cite{petrunin1997,ge-li} that allow to glue nonidentical spaces.

@@ -12,7 +12,8 @@ Note that
 \inf
 \set{\dist{x}{g\cdot y}{\spc{X}}}{g\in G}\]
 defines a semimetric on the orbit space $\spc{X}/G$.
-Moreover, it is a genuine metric if the orbits of the action are closed.
+Moreover, if the orbits of the action are closed,
+then it is a genuine metric.
 
 \begin{thm}{Theorem}\label{thm:CBB/G}
 Suppose that a group $G$ acts isometrically on a proper $\Alex0$ space $\spc{A}$, and $G$ has closed orbits.
@@ -20,13 +21,13 @@ Then the quotient space $\spc{A}/G$ is $\Alex0$.
 
 \end{thm}
 
-A more general formulation will be given  in  \ref{thm:submetry-CBB-1}.
+A more general formulation will be given in \ref{thm:submetry-CBB-1}.
 
 \parit{Proof.}
 Denote by $\sigma\:\spc{A}\to \spc{A}/G$ the quotient map.
 
 Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{A}/G$.
-Choose an arbitrary $\hat p\in \spc{A}$ such that $\sigma(\hat{p})=p$.
+Choose $\hat p\in \spc{A}$ such that $\sigma(\hat{p})=p$.
 Since $\spc{A}$ is proper, we can choose  points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
 \[\dist{p}{x_i}{\spc{A}/G}
 =
@@ -99,11 +100,12 @@ Let $\sigma\:\EE^2\to [0,\infty)$ be a submetry.
 Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points and $\sigma(x)\z=\distfun_Kx$.
 \end{thm}
 
-The proof of \ref{thm:CBB/G} works for submetries equally well;
+The proof of \ref{thm:CBB/G} works for submetries;
 that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex0$, then so is $\spc{B}$}.
 Theorem \ref{thm:CBB/G} admits a straightforward generalization to $\Alex{-1}$ case.
-In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds in any open $\tfrac\pi2$-ball in the quotient of $\Alex1$};
-in particular, the quotient space is \textit{locally} $\Alex1$.
+
+In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds for a quartuple $p,x_1,x_2,x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
+In particular, the quotient space is \textit{locally} $\Alex1$.
 But since $\Alex1$ space is geodesic, then so is its quotient.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
 The same holds for the targets of submetries from an  $\Alex1$ space.
@@ -114,7 +116,7 @@ Thus, we have the following two statements.
 Let $\sigma\:\spc{A}\to\spc{B}$ be a submetry.
 If $\spc{A}$ is $\Alex\kappa$ space, then so is $\spc{B}$.
 
-In particular, if $G$ acts isometrically on a proper $\Alex\kappa$ space $\spc{A}$, and $G$ has closed orbits.
+In particular, if $G$ acts isometrically on an $\Alex\kappa$ space $\spc{A}$, and $G$ has closed orbits.
 Then the quotient space $\spc{A}/G$ is $\Alex\kappa$.
 \end{thm}
 
@@ -130,13 +132,12 @@ There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $
 
 
 \begin{thm}{Key lemma}\label{lem:S^3/S^1}
-Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points 
+Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points
 and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
 Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with a factor $\tfrac12$.
 \end{thm}
 
-The proof of the lemma is done mostly by calculations;
-it is guided by the following exercise.
+The proof of the lemma is guided by the following exercise.
 
 \begin{thm}{Exercise}\label{ex:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points.
@@ -178,7 +179,7 @@ This symmetry has two fixed points, north pole and south pole, that correspond t
 \noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
 
 \begin{subthm}{ex:S^3/S^1:a}
-Show that the inverse image $T(r)$ of $S(r)$ in $\SSS^3$ is also an orbit of the torus action.
+Show that the inverse image $T(r)$ of $S(r)$ in $\SSS^3$ is an orbit of the torus action.
 Conclude that $a(r)=\pi^2\cdot\sin r\cdot \cos r$ is the area $T(r)$.
 \end{subthm}
 
@@ -211,9 +212,10 @@ By the Toponogov theorem, $\spc{B}$ is $\Alex1$.
 By \ref{thm:CBB/G}, the quotient space $\spc{A}\z=\spc{B}/\SSS^1$ is $\Alex1$;
 evidently, $\spc{A}$ is 3-dimensional.
 
-Denote by $F\subset \spc{B}$ the fixed point set of the $\SSS^1$-action. Then  $\chi(\spc{B})=\chi(F)$. 
+Denote by $F\subset \spc{B}$ the fixed point set of the $\SSS^1$-action.
+Then $\chi(\spc{B})\z=\chi(F)$.
 Each connected component of $F$ is either an isolated point or a 2-dimensional geodesic submanifold in $\spc{B}$;
-the latter has to have positive curvature, and therefore it is either $\SSS^2$ or $\RP^2$.
+the latter has to have positive curvature, and therefore it is homeomorphic to $\SSS^2$ or $\RP^2$.
 Notice that 
 \begin{itemize}
  \item each isolated point contributes 1 to the Euler characteristic of~$\spc{B}$,
@@ -238,22 +240,22 @@ $y_i$, $y_j$, $y_k$.
 In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
 By the comparison, the sum of angles in each triangle is strictly greater than $\pi$.
 
-Denote by $\sigma$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
+Denote by $\omega$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
 From above,
-\[\sigma>4\cdot\pi.\]
+\[\omega>4\cdot\pi.\]
 
 On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{A}$ has perimeter at most $\pi$.
 In particular, 
 \[\mangle\hinge{y_1}{y_2}{y_3}+\mangle\hinge{y_1}{y_3}{y_4}+\mangle\hinge{y_1}{y_4}{y_2}\le \pi.\]
 Apply the same argument in $\Sigma_{y_2}\spc{A}$, $\Sigma_{y_3}\spc{A}$, and $\Sigma_{y_4}\spc{A}$;
 adding the results, we get 
-\[\sigma\le 4\cdot\pi\]
+\[\omega\le 4\cdot\pi\]
 --- a contradiction.
 
 \parit{Case 2.}
 Suppose $F$ contains one surface $S$.
 Then the projection of $S$ to $\spc{A}$ forms its boundary $\partial \spc{A}$.
-The doubling $\spc{W}$ of $\spc{A}$ across its boundary has 4 singular points --- each singular point of $\spc{A}$ corresponds to two singular points of $\spc{W}$.
+The doubling $\spc{W}$ of $\spc{A}$ across its boundary has at least 4 singular points --- each singular point of $\spc{A}$ corresponds to two singular points of $\spc{W}$.
 
 By the doubling theorem, $\spc{W}$ is a $\Alex1$ space.
 Therefore we arrive at a contradiction in the same way as in the first case.
@@ -263,7 +265,7 @@ Therefore we arrive at a contradiction in the same way as in the first case.
 
 \section{Erdős' problem rediscovered}
 
-A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$, or equivalently $\diam \Sigma_p\le \pi/2$.
+A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$; equivalently, $\diam \Sigma_p\le \pi/2$.
 
 \begin{thm}{Theorem}\label{thm:extr-point}
 Let $\spc{A}$ be a compact $m$-dimensional $\Alex0$ space.
@@ -301,15 +303,17 @@ Then $x_i\in V_i$ for any $x\in \spc{A}$.
 Indeed, assume $x_i\notin V_i$,
 then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
 Then from the comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
-that is, $p_j$ does not form a one-point extremal set.
+that is, $p_j$ is not an extremal point.
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{A}$
 for any $0<\alpha<\tfrac12$; hence 
 \[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{A}\quad\text{and}\quad N\le 2^m.\]
 \qedsf
 
-It's easy to see that \ref{thm:extr-point} implies the bound in $|F|\le 2^m$ in \ref{erdos-problem} by taking $\spc{A}$ to be the convex hull of $F$;
+
+\parit{Remark.}
+Applying the above argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
 the case of equality requires more work.
-%\footnote{{\red V; does the rigidity case follow from this?} Maybe move this phrase to the section with remarks --- the equality case is discussed there.} ??? there is something about equality case in 
+
 
 \section{Crystallographic actions}
 
@@ -417,19 +421,31 @@ Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal poin
 (This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$.)
 Nina Lebedeva has proved \cite{lebedeva2015} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
-Counting maximal finite subgroups in a crystallographic group $\Gamma$ is equivalent to counting the so-called primitive extremal subsets in the quotient space $\spc{A}=\EE^m/\Gamma$.
+The extremal subsets of Alexandrov space were brifly discussed in \ref{sec:bry-remarks}.
+The following definition is more relevant to isometric group actions.
+
+A closed subset $E$ in a finite-dimensional Alexandrov space is called
+\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes a minimal value.
+An extremal set is called \index{minimal extremal set}\emph{minimal} if it contains no proper extremal subsets.
+
+For example, the whole space and the empty set are extremal.
+Also, every vertex, edge, or face (as well as their unions) of the cube is an extremal subset of the cube.
+Vertices of the cube are its only minimal extremal subsets.
+
+Counting maximal finite subgroups in a crystallographic group $\Gamma$ (up to conjugation) is equivalent to counting the minimal extremal subsets in the quotient space $\spc{A}=\EE^m/\Gamma$.
 So, \ref{prop:2m} would follow from the next conjecture.
 
 \begin{thm}{Conjecture}
-Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ primitive extremal subset.
+Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ minimal extremal subset.
 \end{thm}
 
-Here is an equivalent definition of extremal sets.  
-A closed subset $E$ in a finite-dimensional Alexandrov space is called 
-\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes a minimal value.
-An extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets.
+Let us mention another related conjecture.
+An extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
+For example, each face of $m$-dimensional cube is its primitive extremal subset;
+therefore the cube has exactly $3^m$ primitive extremal subset, including the empty set and the whole cube.
 
-For example, the whole space and the empty set are extremal.
-Also, every vertex, edge, or face (as well as their union) of the cube is an extremal subset of the cube.
-Vertices of the cube are its only primitive extremal subsets.
+\begin{thm}{Conjecture}
+Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ minimal extremal subset.
+\end{thm}
 
+Crude estimates on number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.
