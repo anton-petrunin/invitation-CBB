@@ -368,6 +368,44 @@ labelarcsprof(z.x1, z.p, z.x3, 9, 13, btex $\alpha^{13}$ etex);
 
 endfig;
 
+beginfig(380)
+save u,p;
+path p[];
+u:=.7cm;
+
+z.o=origin;
+z.z=(-2,0)*u;
+z.p=1.3[z.z,z.o];
+z.r=z.z rotated 50;
+z.q=z.z rotated -60;
+z.qq=z.p+((z.q-z.p) zscaled (.5,-.15));
+z.rr=z.p+((z.r-z.p) zscaled (.5,.15));
+
+p0=arc(z.r,z.z,z.q);
+p1=arc(z.q,z.qq,z.p);
+p2=arc(z.p,z.rr,z.r);
+
+mark_rt_angle(z.p,z.z,z.z+z.p rotated 90);
+mark_rt_angle(z.p,z.z,z.z+z.p rotated -90);
+
+clip currentpicture to (p0--p1--p2--cycle);
+
+draw p0;
+draw p1;
+draw p2;
+draw z.z--z.p;
+
+z.zz=point .8 of p0;
+
+dOt z.p,z.q,z.r,z.z, z.zz;
+
+label.rt(btex $\tilde p$ etex, z.p);
+label.top(btex $\tilde q$ etex, z.q);
+label.bot(btex $\tilde r$ etex, z.r);
+label.lft(btex $\tilde z_0$ etex, z.z);
+label.lft(btex $\tilde z$ etex, z.zz);
+endfig;
+
 beginfig(409)
 save u,p,k;
 path p[];
@@ -1583,6 +1621,64 @@ whitelabel(btex $W=\Up V$ etex, (3,3)*u);
 label(btex {\small $\bm{f}[\spx{\bm{f}}(\Delta^k)]$} etex rotated -19, (-3,-5)+point 0.4 of p1);
 
 endfig;
+
+beginfig(1111)
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.p=origin;
+z.y1=(1.4,0)*u;
+z.y2=(1.1,1)*u;
+z.yy1=.7*z.y1;
+z.yy2=.6*z.y2;
+z.z=.6[z.yy1,z.yy2];
+
+p1=z.p{z.y1}...z.z{z.yy2-z.yy1}...{-z.y2}z.p--cycle;
+
+
+hatchfill p1 withcolor (77, 1mm, -.5bp);
+draw p1;
+draw z.p--z.y1--z.y2--cycle;
+draw  z.yy1--z.yy2;
+
+dOt z.p,z.y1,z.y2,z.yy1,z.yy2;
+
+label.lft(btex $p$ etex, z.p);
+label.rt(btex $y_1$ etex, z.y1);
+label.ulft(btex $y_2$ etex, z.y2);
+label.bot(btex $y'_1$ etex, z.yy1);
+label.ulft(btex $y'_2$ etex, z.yy2);
+whitelabel(btex $F$ etex, .7[z.p,z.z]+(1,-1));
+endfig;
+
+beginfig(1160)
+save u,p;
+path p[];
+u:=2cm;
+
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+z.c=(.4,-1)*u;
+
+draw z.a--z.b--z.c--cycle;
+draw .5[z.a,z.b]--.5[z.b,z.c]--.5[z.c,z.a]--cycle;
+
+dOt z.a,z.b,z.c,.5[z.a,z.b],.5[z.b,z.c],.5[z.c,z.a];
+
+rimmark(z.a--.5[z.a,z.b],.5[z.a,z.b]--z.b,.5[z.a,z.c]--.5[z.c,z.b]);
+rimmark2(z.b--.5[z.c,z.b],.5[z.c,z.b]--z.c,.5[z.a,z.b]--.5[z.c,z.a]);
+rimmark3(z.c--.5[z.c,z.a],.5[z.c,z.a]--z.a,.5[z.a,z.b]--.5[z.c,z.b]);
+
+label.top(btex $v_1$ etex, z.a);
+label.top(btex $v_1$ etex, z.b);
+label.bot(btex $v_1$ etex, z.c);
+label.top(btex $v_2$ etex, .5[z.a,z.b]);
+label.lrt(btex $v_3$ etex, .5[z.c,z.b]);
+label.llft(btex $v_4$ etex, .5[z.a,z.c]);
+endfig;
+
+
 
 beginfig(1201) 
 save u,p;

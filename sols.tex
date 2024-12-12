@@ -19,7 +19,7 @@ Choose a Cauchy sequence $x_n$ in $(\spc{X},\|*\z-*\|)$; it is sufficient to sho
 Observe that the sequence $x_n$ is Cauchy in $(\spc{X},|*-*|)$;
 denote its limit by $x_\infty$.
 
-Passing to a subsequence, we can assume that $\|x_n-x_{n+1}\|\z<\tfrac1{2^n}$.
+Passing to a subsequence, we can assume that $\|x_n-x_{n+1}\|\z<\tfrac1{2^n}$ for each $n$.
 It follows that there is a 1-Lipschitz path $\gamma$ in $(\spc{X},\|*-*\|)$ such that $x_n=\gamma(\tfrac1{2^n})$ for each $n$ and $x_\infty=\gamma(0)$.
 Therefore,
 \begin{align*}
@@ -57,7 +57,7 @@ h^2&0
 Calculate $h(\kappa,r)$.
 Show that for fixed $r$, the function $r\mapsto h(\kappa,r)$ is nonincreasing in the domain of definition.
 Suppose $\kappa<\Kappa$, consider the partially defined map $\MM^2(\kappa)\to\MM^2(\Kappa)$ that sends a point to the point with the same polar coordinates.
-Show that this map is short in the domain of definition.
+Show that this map is short in its domain of definition.
 Use it to prove the statement in the exercise.
 
 
@@ -106,7 +106,7 @@ Since $\distfun_{A_n}$ is $1$-Lipschitz for any $n$, we have
 \[|f(x_i)-f(x_j)|\le \dist{x_i}{x_j}{}\]
 for all $i$ and $j$.
 Suppose $f(x_i)<\infty$ for some $i$, then the same holds for any $i$.
-Therefore, the function $f$ can be extended to a continuous function defined on the whole ambient space.
+Therefore, the function $f$ can be extended to a continuous function defined on the ambient space.
 Show that $A_\infty=f^{-1}\{0\}$ is the limit of $A_n$ in the sense of Hausdorff.
 
 If $f(x_i)=\infty$ for some $i$, then the same holds for any $i$.
@@ -159,30 +159,27 @@ It follows that
 In particular, 
 \[|x_0-y_0|_{\spc{K}}=\ell_0=\ell_1=|f(x_0)-f(y_0)|_{\spc{K}}\]
 for any pair of points $(x_0,y_0)$ in $\spc{K}$.
-That is, the map $f$ is distance-preserving; hence $f$ is injective.
+That is, the map $f$ is distance-preserving and hence injective.
 From $({*})$, we also get that $f(\spc{K})$ is everywhere dense.
-Since $\spc{K}$ is compact $f\:\spc{K}\to \spc{K}$ is surjective --- hence the result.
+Since $\spc{K}$ is compact, $f$ is surjective --- hence the result.
 
 \parit{Remarks.}
 This is a basic lemma in the introduction to Gromov--Hausdorff distance \cite[see 7.3.30 in][]{burago-burago-ivanov}.
-The presented proof is not quite standard;
-I learned it from Travis Morrison, 
-a student in my MASS class at Penn State, Fall 2011.
+The presented proof was suggested by Travis Morrison.
 
-This exercise implies that \textit{any surjective non-expanding map from a compact metric space to itself is an isometry}.
+\parbf{\ref{ex:non-expanding-map}.}
+Apply \ref{ex:non-contracting-map} to a left inverse of the map.
 
-\parbf{\ref{ex:GH-po}.}
-The only-if part is trivial. 
-Let us prove the if part.
-
-If $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\not\to 0$, then we can pass to a subsequence such that $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\ge\eps$ for some $\eps>0$.
-Show that we can pass to a subsequence again, so that $\spc{X}_n$ converges in the sense of Gromov--Hausdorff, say to $\spc{Y}$.
-Observe that $\spc{Y}\le \spc{X}_\infty$ and $\spc{X}_\infty\le\spc{Y}$.
-By \ref{ex:non-contracting-map}, $\spc{Y}\iso \spc{X}_\infty$ --- a contradiction.
 
 \parbf{\ref{ex:compact-GH}.} Show and use that $\dist{\spc{X}_\infty}{\spc{X}_\infty'}{\GH}<\eps$ for any $\eps>0$.
 
+\parbf{\ref{ex:GH-po}.}
+The only-if part is trivial.
+Let us prove the if part.
 
+Let $f_n\:\spc{X}_n\to \spc{X}_\infty$ and $h_n\:\spc{X}_\infty\to \spc{X}_n$ be the maps in the definition of the inequalities $\spc{X}_n\le \spc{X}_\infty+\eps_n$ and $\spc{X}_\infty\le \spc{X}_n+\eps_n$, respectively.
+Apply \ref{ex:non-contracting-map}, to show that any partial limit of $f_n\circ h_n$ is an isometry of $\spc{X}_\infty$.
+Conclude that $f_n$ is an $\eps_n'$-isometry for some converging-to-zero sequence $\eps_n'$ and apply \ref{lem:almost-isom}.
 
 \parbf{\ref{ex:GH-noncompact}}; \ref{SHORT.ex:GH-noncompact:proper}
  Consider the graphs of the following functions with the induced metric from $\RR^2$.
@@ -194,7 +191,8 @@ x\mapsto \cos x+\sin \tfrac x\pi.
 
 
 \parit{\ref{SHORT.ex:GH-noncompact:bounded}}
-For every rational number  $q\in[1,2]$ consider an interval of length $q$. Let $\spc{X}$ be obtained by identifying all  initial points of  the intervals to one point and all  end points to another.
+For every rational number  $q\in[1,2]$ consider an interval of length~$q$.
+Let $\spc{X}$ be obtained by identifying all endpoints of the intervals.
 
 Let $\spc{Y}$ be constructed in the same way but skipping the interval of length $1.5$.
 
@@ -218,11 +216,11 @@ Hence
 
 \parbf{\ref{ex:(3+1)-expanding}.} For the only-if part consider the following two cases.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_y)$ that lie on the opposite sides of $[qy_2]$.
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_3)$ that lie on the opposite sides of $[qy_2]$.
 By the comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
 Therefore the obtained configuration meets all the conditions.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose a model triangle $[qy_1y_2]\z=\modtrig(px_1x_2)$
 and take $y_3$ on the extension of $[y_1q]$ behind $q$ such that $\dist{q}{y_3}{}=\dist{p}{x_3}{}$.
 Then $\mangle \hinge q{y_2}{y_3}\ge \angk p{x_2}{x_3}$, therefore $\dist{y_2}{y_3}{}\ge \dist{x_2}{x_3}{}$.
 Further, $\dist{y_2}{y_3}{}=\dist{x_2}{p}{}+\dist{p}{x_3}{} \ge \dist{x_2}{x_3}{}$,
@@ -230,11 +228,10 @@ and again, the obtained configuration meets all the conditions.
 
 To prove the if part, choose a configuration $q,y_1,y_2,y_3$ that meets all the conditions and maximize the sum
 \[\dist{y_1}{y_2}{}+\dist{y_2}{y_3}{}+\dist{y_3}{y_1}{}.\]
-Show that $q$ lies in the solid triangle $y_1y_2y_3$;
+Show that $\dist{q}{y_i}{}=\dist{p}{x_i}{}$ for each $i$ and $q$ lies in the solid triangle $y_1y_2y_3$;
 in particular 
 \[\mangle \hinge q{y_1}{y_2}+\mangle \hinge q{y_2}{y_3}+ \mangle \hinge q{y_3}{y_1}=2\cdot\pi.\]
-Moreover, $\dist{q}{y_i}{}=\dist{p}{x_i}{}$ for each $i$.
-Applying that increasing the opposite side in a plane triangle increases the corresponding angle, we get 
+Applying the angle monotonicity (\ref{angle-monotonicity}), we get
 \[\angk  p{x_1}{x_2}+\angk p{x_2}{x_3}+\angk p{x_3}{x_1}
 \le 
 2\cdot\pi.
@@ -253,7 +250,7 @@ Note that
 &=\dist{x}{y}{\spc{X}},
 \end{align*}
 where $\spc{X}$ is our metric space.
-It remains to apply the monotonicity of angle in a triangle with respect to its opposite side. 
+It remains to apply the angle monotonicity (\ref{angle-monotonicity}).
 
 
 \parbf{\ref{ex:noncreasing}.}
@@ -270,10 +267,10 @@ Conclude that $[px]\subset [py]$.
 Assume that there are two distinct geodesics from $z$ to $x$.
 Then we can choose distinct points $p$ and $q$ on these geodesics such that $\dist{z}{p}{}=\dist{z}{q}{}$.
 Observe that $\angk zpq>0$.
-By the triangle inequality, we get 
-\[\dist{x}{p}{}+\dist{p}{y}{}\le \dist{x}{p}{}+\dist{p}{z}{}+\dist{z}{y}{}=\dist{x}{z}{}+\dist{z}{y}{}\]
-Observe that $\angk zxy=\pi$.
-Therefore $\mangle\hinge zxy=\pi$ for any geodesic $[zx]$.
+By comparison,
+\[\angk zpq+\angk zpy+\angk zqy\le 2\cdot\pi.\]
+Therefore, one of the angles $\angk zpy$ or $\angk zqy$ is strictly less than $\pi$.
+The latter contradicts the triangle inequality.
 
 \parbf{\ref{ex:adjacent-CBB}.}
 By \ref{ex:adjacent-angles}, we have
@@ -288,7 +285,7 @@ Passing to the limit as
 $\dist{z}{\bar x}{}\to 0$,
 $\dist{z}{\bar y}{}\to 0$, and
 $\dist{z}{\bar p}{}\to 0$,
-we get the statement.
+we get \[\mangle\hinge pxz+\mangle\hinge pyz\le \pi.\]
 
 \parbf{\ref{ex:pxyvw}.} 
 Without loss of generality, we can assume that $x$, $v$, $w$, and $y$ appear on 
@@ -317,12 +314,12 @@ and $\bar z_\infty\in\left]x_\infty z_\infty\right]$ such that
 $\angk{x_\infty}{\bar y_\infty}{\bar z_\infty}>\alpha$.
 Now choose $\bar y_n\in\left]x_n y_n\right]$ and $\bar y_n\in\left]x_n z_n\right]$ such that $\bar y_n\to \bar y_\infty$ and $\bar z_n\to \bar z_\infty$.
 Observe that 
-\[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge\liminf_{n\to\infty}\angk{x_n}{\bar y_n}{\bar z_n} \ge \alpha,\]
+\[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge\liminf_{n\to\infty}\angk{x_n}{\bar y_n}{\bar z_n} = \angk{x_\infty}{\bar y_\infty}{\bar z_\infty},\]
 hence the result.
 
 \parbf{\ref{ex:urysohn}.}
 The Urysohn space provides an example;
-see for example \cite[Lecture 2]{petrunin2023pure}.
+see, for example, \cite[Lecture 2]{petrunin2023pure}.
 
 \parbf{\ref{ex:normCBB}.}
 Choose a triangle $[0vw]$.
@@ -331,12 +328,13 @@ Note that $m=\tfrac12(v+w)$ is the midpoint of $[vw]$.
 Use comparison, to show that
 \[2\cdot |\tfrac12(v+w)|^2+2\cdot |\tfrac12(v-w)|^2\ge |v|^2+|w|^2.\]
 
-Note this inequality implies the opposite one;
+This inequality implies the opposite one;
 it follows if we rewrite it via $x=\tfrac12(v+w)$ and $y=\tfrac12(v-w)$.
 Hence we have 
 \[2\cdot |\tfrac12(v+w)|^2+2\cdot |\tfrac12(v-w)|^2= |v|^2+|w|^2\]
 for any $v,w$.
-That is, the norm is quadratic and the statement follows.
+That is, the norm meets the parallelogram identity.
+It is well known that all such norms are quadratic, and the statement follows.
 
 \parbf{\ref{ex:alm-min}.}
 Suppose such a point does not exist;
@@ -353,7 +351,8 @@ However, $\spc{X}$ does not have curvature $\ge 0$ since
 \[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
 
 \parbf{\ref{ex:RisCBB(1)}.}
-Suppose $\mangle\hinge mxp\ne 0$ and $\mangle\hinge mxp\ne\pi$, or equivalently $\mangle\hinge mxq\ne0$.
+Suppose $\mangle\hinge mxp\ne 0$ and $\mangle\hinge mxp\ne\pi$;
+equivalently, $\mangle\hinge mxp\ne 0$ and $\mangle\hinge mxq\ne0$.
 
 We can assume that $\dist pq{}$ only slightly exceeds $\pi$,
 so $\dist pm{}<\pi$ and $\dist qm{}<\pi$.
@@ -363,8 +362,9 @@ Use the comparison to show that
 and arrive at a contradiction with the triangle inequality.
 
 Extend $[pq]$ to a maximal local geodesic $\gamma$.
-It might be a closed or a line segment.
-Argue as above to show that any point lies on $\gamma$ and make a conclusion.
+Argue as above to show that any point lies on $\gamma$.
+If $\gamma$ is closed, then the space is isometric to a circle;
+otherwise, it is isometric to a line segment.
 
 \parbf{\ref{ex:perim-k>0}.}
 Arguing by contradiction, suppose 
@@ -374,6 +374,13 @@ Rescaling the space slightly, we can assume that $\diam\spc{A}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 By \ref{clm:K>k},
 after rescaling $\spc{A}$ is still $\Alex1$.
+
+\begin{wrapfigure}{o}{25mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-380}
+\vskip-0mm
+\end{wrapfigure}
 
 Take $z_0\in [q r]$ on maximal distance from $p$.
 Consider the following model configuration:
@@ -392,29 +399,28 @@ and
 =\mangle\hinge{\tilde z_0}{\tilde r}{\tilde p}
 =\tfrac\pi2.\]
 
-Let $\tilde z\in [\tilde q\tilde r]$,
+Choose $\tilde z\in [\tilde q\tilde r]$,
 and let $z\in [q r]$ be the corresponding point.
-By comparison, $\dist pz{}\le\dist {\tilde p}{\tilde z}{}$ for points $z$ near $z_0$.
+By comparison, $\dist pz{}\le\dist {\tilde p}{\tilde z}{}$ if $z$ lies near $z_0$.
 Moreover, this inequality holds as far as 
 \[\dist{\tilde p}{\tilde z_0}{}+\dist{\tilde z_0}{\tilde z}{}+\dist{\tilde p}{\tilde z}{}<2\cdot\pi.\]
 But this inequality holds for all $\tilde z$ since  $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
-Hence we get $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
+Hence $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
 The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
 
 \parbf{\ref{ex:dir-compact}.}
 Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
 Since $\Sigma_p$ is compact, we may pass to a converging subsequence of $\dir p{x_n}$;
-denote by $\xi$ its limit.
+denote its limit by $\xi$.
 We may assume that $\mangle (\dir p{x_\infty},\xi)>0$.
 
 Denote by $\gamma_n$ and $\gamma_\infty$ the arc-length parametrization of $[px_n]$ and $[px_\infty]$ from $p$.
-Choose a geodesic $\alpha$ that starts from $p$ and goes in a direction sufficiently close to $\xi$.
-By comparison we can choose $\alpha$ so that
-\[\dist{\alpha(t)}{\gamma_n(t)}{}<\eps\cdot t\]
-for all large $n$ and all sufficiently small $t$.
-Moreover, we can assume that
-\[\dist{\alpha(t)}{\gamma_\infty(t)}{}>a\cdot t\]
-for some fixed $a>0$ and all small $t$.
+For a  geodesic $\alpha$ that starts from $p$ and goes in a direction sufficiently close to $\xi$, we have
+\[\dist{\alpha(t)}{\gamma_n(t)}{}<\eps\cdot t
+\quad\text{and}\quad
+\dist{\alpha(t)}{\gamma_\infty(t)}{}>a\cdot t
+\]
+for some $\eps \ll a$, all large $n$ and all sufficiently small $t$.
 These two inequalities imply 
 that 
 \[\dist{\gamma_n(t)}{\gamma_\infty(t)}{}>\tfrac a2\cdot t\]
@@ -429,28 +435,28 @@ The space $\spc{A}$ can be assumed to be compact.
 
 \parbf{\ref{ex:geodesic-cone}.}
 Any point of $\Cone \spc{X}$ can be connected to the origin by a geodesic.
-Given a nonzero element $v\in\Cone \spc{X}$, denote by $v'$ its projection in $\spc{X}$.
+Given a nonzero element $v\in\Cone \spc{X}$, denote by $v'$ its projection in~$\spc{X}$; so, $v=|v|\cdot v'$.
 
 Suppose $\spc{X}$ is $\pi$-geodesic.
 Choose two nonzero elements $v,w\z\in\Cone \spc{X}$; let $\alpha=\mangle(v,w)=\dist{v'}{w'}{\spc{X}}$.
-If $\alpha\ge \pi$, then the product of geodesics $[v0]\cup [0w]$ forms a geodesic $[vw]$.
+If $\alpha\ge \pi$, then the product of geodesics $[v0]$ and $[0w]$ is a geodesic $[vw]$.
 If $\alpha<\pi$, there is a geodesic $\gamma\:[0,\alpha]\to \spc{X}$ from $v'$ to $w'$.
 Consider hinge $\hinge {\tilde o}{\tilde v}{\tilde w}$ in the plane 
 such that $\mangle\hinge {\tilde o}{\tilde v}{\tilde w}=\alpha$, $\dist{\tilde o}{\tilde v}{}=|v|$, and $\dist{\tilde o}{\tilde w}{}=|w|$.
-Let $t\mapsto (\phi(t),r(t))$ be geodesic $[\tilde v\tilde w]$ written in polar coordinates with origin $\tilde o$, so that $\phi(0)=0$.
+Let $t\mapsto (\phi(t),r(t))$ be geodesic $[\tilde v\tilde w]$ written in polar coordinates with origin at $\tilde o$, so that $\phi(0)=0$.
 Show that $t\mapsto r(t)\cdot\gamma\circ\phi(t)$ is a geodesic from $v$ to $w$;
 here we identify $\spc{X}$ with the unit sphere in $\Cone \spc{X}$.
 
-To prove the converse, try to reverse the steps in the argument above.
+To prove the converse, reverse the steps in the argument.
 
 \parbf{\ref{ex:GHto-tangent}.}
 Let  $\spc{A}_n=\lambda_n\cdot\spc{A}$.
 Note that for any $n$ the space $\Sigma_p\spc{A}$ is identical to $\Sigma_{\iota_n(p)} \spc{A}_n$.
 In particular, we can identify isometrically $\T_p\spc{A}$ with $\T_{\iota_n(p)}(\lambda\cdot \spc{A})$.
-So for any geodesic $\gamma$ that starts at $p$, the vector $\gamma^+(0)$ corresponds to $\frac{1}{\lambda}\cdot(\iota_n\circ\gamma)^+(0))$.
+So for any geodesic $\gamma$ that starts at $p$, the vector $\gamma^+(0)$ corresponds to $\frac{1}{\lambda_n}\cdot(\iota_n\circ\gamma)^+(0)$.
 
 Consider the logarithm maps $f_n=\log_{\iota_n(p)}\:\spc{A}_n\to T_p\spc{A}$.
-We claim that this sequence of maps satisfies the assumptions of Lemma~\ref{lem:almost-isom-pointed};
+We claim that this sequence of maps satisfies the assumptions in \ref{lem:almost-isom-pointed};
 the condition in \ref{SHORT.lem:almost-isom-pointed-basepoint} is evident.  
 
 It is sufficient to check the conditions in \ref{SHORT.lem:almost-isom-pointed-b} and \ref{SHORT.lem:almost-isom-pointed-c} only for $R=1$. 
@@ -466,15 +472,15 @@ This proves \ref{SHORT.lem:almost-isom-pointed-c}.
 By comparison, we have that
 \[\dist{\xi_i}{\xi_j}{\Sigma_p}\ge \angk p{\gamma_i(t_i)}{\gamma_j(t_j)}\]
 for all $i\ne j$ and any $t_i,t_j\in (0,T]$.
-By the definition of an angle, we can assume that $T$ has been chosen so that in addition 
+By the definition of angle, we can assume that $T$ has been chosen so that in addition
 \[\dist{\xi_i}{\xi_j}{\Sigma_p}\le \angk p{\gamma_i(t)}{\gamma_j(t)}+\eps\]
 for all $i\ne j$ and any $t\in (0,T]$.
 
 By construction of the map $f_n$ this implies that 
-\[|\dist{x}{x'}{\spc{A}_n}-\dist{f_n(x)}{f_n(x')}{T_p}|<\eps\]
+\[\left|\dist{x}{x'}{\spc{A}_n}-\dist{f_n(x)}{f_n(x')}{\T_p}\right|<\eps\]
 for all $\lambda_n>\frac{1}{T}$ and all points $x,x'$ in $\bigcup_N\gamma_i([0,\frac{1}{\lambda_n}])\subset \oBall(p,1)_{\spc{A}_n}$.
   
-Now hinge comparison and the triangle inequality imply that the same  holds for arbitrary points $x,x'$  in  $\oBall(p,1)_{\spc{A}_n}$ with $\eps$ replaced by $3\eps$.
+Now hinge comparison and the triangle inequality imply that the same  holds for arbitrary points $x,x'$  in  $\oBall(p,1)_{\spc{A}_n}$ with $\eps$ replaced by $3\cdot\eps$.
 This verifies \ref{SHORT.lem:almost-isom-pointed-b}.
 
 \parbf{\ref{ex:distfun-semiconcave}.} From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
@@ -485,18 +491,17 @@ Since angles are defined, it follows that
 for all small $t>0$.     
 Since $f$ is $L$-Lipschitz, we get 
 \[|f(\gamma_1(t))-f(\gamma_2(t))|\le L\cdot \theta\cdot t,\]
-hence the statement.
+and the statement follows.
 
 \parbf{\ref{ex:d(distfun)}}; \ref{SHORT.ex:d(distfun):<}
-Note that we can assume there is a geodesic in the direction of $v$, and apply \ref{ex:first-var}.
+Show that we can assume there is a geodesic in the direction of $v$, and apply \ref{ex:first-var}.
 
 \parit{\ref{SHORT.ex:d(distfun):=}.}
 By \ref{SHORT.ex:d(distfun):<}, $\dd_p\distfun_q(v)\le-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle$.
 Suppose this inequality is strict for some $v$.
 We can assume that $|v|=1$ and there is a geodesic, say $\gamma$ in the direction of $v$.
-Let $\dd_p\distfun_q(v)=-\cos\alpha_0$ for some $\alpha\in [0,\pi]$.
+Let $\dd_p\distfun_q(v)=-\cos\alpha_0$ for some $\alpha_0\in [0,\pi]$.
 Note that any geodesic from $p$ to $q$ makes angle bigger than $\alpha_0$ with $\gamma$.
-
 
 The function $f=\distfun_q\circ\gamma$ is Lipschitz.
 By Rademacher's theorem it is differentiable almost everywhere;
@@ -530,17 +535,16 @@ Hence the statement follows.
 \parbf{\ref{ex:d(distfun):==}.}
 If the space is proper, then the statement follows from \ref{SHORT.ex:d(distfun):=} and \ref{ex:pi-angle}.
 
-To do the general case argue by contradiction.
-Let $z$ be a point on the extension of $[pq]$ behind $q$;
-it exists by the assumption.
+To do the general case, let us argue by contradiction.
+By the assumption, we can shoose be a point $z$ on the extension of $[pq]$ behind $q$.
 We can assume that $|v|=1$ and it is a direction of a geodesic, say $[px]$.
 
-Show that for there is a sequence $x_n\in \left]px\right]$ such that $\dist{p}{x_n}{}\to0$ ad
+Show that there is a sequence $x_n\in \left]px\right]$ such that $\dist{p}{x_n}{}\to0$ and
 $\mangle \hinge q{x_n}p>\eps$ for each $n$ and some fixed $\eps>0$.
 Observe that $\mangle\hinge q{x_n}z\z<\pi-\eps$; therefore
 \[\dist{z}{x_n}{}<\dist{x_n}{q}{}+\dist{q}z{}-\delta\]
 for each $n$ and some fixed $\delta>0$.
-Pass to the limit as $x_n\to p$ and arrive at a contradiction.
+Pass to the limit as $x_n\to p$ and arrive at a contradiction to the triangle inequality.
 
 \parbf{\ref{ex:convergence-grad}.}
 Note that
@@ -560,11 +564,11 @@ Therefore,
 =\<\nabla_p f,\nabla_p f\>+\<\nabla_p g,\nabla_p g\>-2\cdot\<\nabla_p f,\nabla_p g\>
 \le
 \\
-&\le (\dd_p f)(\nabla_p f)+(\dd_p g)(\nabla_p g)-
+&\qquad\le (\dd_p f)(\nabla_p f)+(\dd_p g)(\nabla_p g)-
 (\dd_p f)(\nabla_p g)-(\dd_p g)(\nabla_p f)
 \le
 \\
-&\le s\cdot(|\nabla_p f|+|\nabla_p g|).
+&\qquad\le s\cdot(|\nabla_p f|+|\nabla_p g|).
 \end{align*}
 
 \parbf{\ref{ex:semicontinuous-grad}.}
@@ -573,7 +577,7 @@ Then we can choose a geodesic $\gamma$ that starts at $x$ such that
 $(f\circ\gamma)^+(0)>s$.
 In particular, there is $\eps>0$ such that
 \[f\circ\gamma(t)>(s+\eps)\cdot t+o(t),\]
-hence the only-if part follows.
+and the only-if part follows.
 
 Now suppose $f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2$,
 were $\ell=\dist{x}{y}{}$.
@@ -600,7 +604,7 @@ Conclude that the function
 $t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is noncreasing for $t\le t_3$.
 
 \parbf{\ref{ex:mayer}.}
-For any $s>s_0$,
+Suppose $s>s_0$, then
 \begin{align*}
 (f\circ\hat\alpha)^+(s_0)&=|\nabla_{\hat\alpha(s_0)}f|
 \ge
@@ -612,9 +616,10 @@ For any $s>s_0$,
 &\ge
 \frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{\dist{\hat\alpha(s)}{\hat\alpha(s_0)}{}}.
 \end{align*} 
-Since $s-s_0\ge\dist{\hat\alpha(s)}{\hat\alpha(s_0)}{}$, for any $s>s_0$ we have 
+Since $s-s_0\ge\dist{\hat\alpha(s)}{\hat\alpha(s_0)}{}$,
 \[(f\circ\hat\alpha)^+(s_0)\ge
-\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0}.\]
+\frac{f\circ\hat\alpha(s)-f\circ\hat\alpha(s_0)}{s-s_0},\]
+which implies the statement.
 
 \parbf{\ref{lem:fg-dist-est}.}
 Fix $t$, and let $p=\alpha(t)$ and $q=\beta(t)$.
@@ -674,7 +679,7 @@ that is, perimeters triangles $[px_1x_2]$, $[px_2x_3]$, and $[px_3x_1]$ are stri
 Note that $\EE^3\iso\Cone\SSS^2$.
 Use this together with the $\SSS^2$-comparison for $p,x_1,x_2,x_3$ in $\spc{X}$ to show that $\EE^2$-comparison holds for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$.
 
-Finally, if some of the model triangles are not defined, consider rescaling of $\spc{X}$ with a coefficient $\lambda$ slightly smaller than 1.
+Finally, if one of the model triangles is undefined, consider rescaling of $\spc{X}$ with a coefficient $\lambda$ slightly smaller than 1.
 Apply the argument above to show that the comparison holds for the corresponding points in $\Cone(\lambda\cdot\spc{X})$ and pass to the limit as $\lambda\to 1$.
 
 \parit{Comment.}
@@ -761,7 +766,7 @@ By the definition of gradient and \ref{ex:d(distfun):<}, we have
 \end{align*}
 If $\dist{a_i}{x}{}>y_i$, then 
 \[\dd_xf_{\bm{y}}=\sigma+\eps\cdot \dd_x\distfun_{a_0},\]
-where $\sigma$ is a minimum of a subset of the following functions
+where $\sigma$ is a minimum of a subset of the following functions:
 $0$, and $\dd_x\distfun_{a_j}$ for $0\ne j\ne i$.
 By \ref{inq-a_j}, 
 \[(\dd_x\distfun_{a_i}{}{})(\nabla_x f_{\bm{y}})< -\tfrac\alpha2\cdot\eps.\]
@@ -853,7 +858,7 @@ Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist
 Reuse the argument from  the first part of the proof of Bishop--Gromov inequality.
 
 \parbf{\ref{ex:BG}.} 
-You should follow the proof Bishop--Gromov inequality, plus prove the following two inequalities 
+Follow the proof Bishop--Gromov inequality, plus prove the following two inequalities
 \begin{align*}
 \sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{A}}
 \\
@@ -874,15 +879,15 @@ Apply \ref{ex:resporka}.
 \ref{SHORT.ex:net:finite}.
 Suppose $X$ is compact.
 Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls have a finite subcover.
-Note that the centers of these balls is an $\eps$-net of $X$.
+Note that the centers of these balls form an $\eps$-net of $X$.
 
-Suppose $X$ has a finite $\eps$-net.
+Now suppose $X$ has a finite $\eps$-net.
 Show that any sequence $x_n$ of points in $X$ has a subsequence such that all of its points lie in one $\eps$-ball.
 Apply this statement for $\eps=\tfrac1n$ together with the diagonal procedure.
 
 \parit{\ref{SHORT.ex:net:compact}.}
 Let $Z$ be a compact $\eps$-net of $X$.
-By \ref{SHORT.ex:net:finite}, $Z$ admits a finite $\eps$-net $F$.
+By \ref{SHORT.ex:net:finite}, $Z$ has a finite $\eps$-net, say~$F$.
 Note that $F$ is a $2\cdot\eps$-net of $X$.
 Since $\eps>0$ is arbitrary, we get the result.
 
@@ -899,10 +904,10 @@ To show that $\dim\spc{A}_\infty\ge m$,
 apply \ref{cor:euclid-subcone} to a maximal packing and use the estimate in \ref{SHORT.ex:pack-vol:pack}.
 
 \parit{Comment.}
-In fact,
-\[\vol_m\spc{A}_\infty=\lim_{n\to\infty} \vol_m\spc{A}_n;\]
-in other words, if $\bm{K}\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
-$\vol_m\:\bm{K}\to \RR$ is continuous.
+The following stronger statement holds
+\[\vol_m\spc{A}_\infty=\lim_{n\to\infty} \vol_m\spc{A}_n.\]
+In other words, if $\bm{K}_m\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
+$\vol_m\:\bm{K}_m\to \RR$ is continuous.
 
 
 \parbf{\ref{ex:diam-compact:GH}.}
@@ -911,8 +916,15 @@ Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff conver
 \parbf{\ref{ex:no-conc}.}
 Consider the infinite product $\SSS^1\times ({\tfrac 12}\cdot \SSS^1)\times ({\tfrac 14}\cdot \SSS^1)\times\dots$
 
-\parbf{\ref{ex:no-cont-lifting}.} Consider the canonical metric $g$ on the round unit sphere $\SSS^3$ and the Hopf bundle $\SSS^3\to \SSS^2$. Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
-Then all  $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$. Verify that this convergence provides the desired counterexample.
+\parbf{\ref{ex:no-cont-lifting}.}
+Consider the canonical metric $g$ on the round unit sphere $\SSS^3$ and the Hopf bundle $\SSS^3\to \SSS^2$.
+Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
+Then all  $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
+Verify that this convergence provides the desired counterexample.
+
+\parit{Comments.}
+
+
 \parbf{\ref{ex:conic}.}
 Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
 Without loss of generality, we may assume that $V\Subset W$;
@@ -940,7 +952,7 @@ of the form
 where $\phi_n\:V\to \RR_{\ge 0}$, $\psi_n\:W\to \RR_{\ge 0}$ are suitable continuous functions;
 ``$\ast$'' and ``$\star$'' denote the multiplications in the cone structures of $V$ and $W$ respectively.
 
-\parit{Comment.} If it is hard to follow, read the original proof by Kyung Whan Kwun \cite{kwun1964}.
+\parit{Comment.} One may also read the original proof by Kyung Whan Kwun \cite{kwun1964}.
 
 \parbf{\ref{ex:conic-tangent}}; \ref{SHORT.ex:conic-tangen:tangent}. Apply \ref{thm:spherical-nbhd} and \ref{lem:kwun}.
 
@@ -958,7 +970,7 @@ Therefore the pair $\Susp^2\Sigma$ and $\SSS^5$ provides the needed example.
 Let $\spc{A}$ be a finite-dimensional Alexandrov space.
 Choose $x\in\spc{A}$.
 By \ref{thm:spherical-nbhd}, a neighborhood $U\ni x$ is homeomorphic to $\T_x$.
-Therefore \ref{ex:bry2bry}, implies that $U\cap\partial\spc{A}=\emptyset$ if and only if $x\notin \partial\spc{A}$;
+Therefore \ref{ex:bry2bry}, implies that $U\cap\partial\spc{A}=\emptyset\  \Leftrightarrow\ x\notin \partial\spc{A}$;
 that is, the complement $\spc{A}\setminus\partial\spc{A}$ is open, and therefore, $\spc{A}$ is closed.
 
 \parbf{\ref{ex:pz<ypz}.}
@@ -974,12 +986,11 @@ Show that
 
 
 \parbf{\ref{ex:bry-connected}.}
-Assume $\spc{A}$ has at least two boundary components, say $A$ and $B$.
-Denote by $\gamma$ a geodesic that minimizes the distance from $A$ to $B$.
+Assume that $\partial\spc{A}$ has at least two connected components, say $A$ and $B$.
+Let $\gamma$ be a geodesic that minimizes the distance from $A$ to $B$.
 
-Let 
+Consider two-sided infinite sequence of copies of $\spc{A}$
 \[\dots,\spc{A}_{-1},\spc{A}_{0},\spc{A}_{1},\dots\]
-be a two-sided infinite sequence of copies on $\partial\spc{A}$.
 Let us glue $\spc{A}_{i}$ to $\spc{A}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
 
 By the doubling theorem, every point in the obtained space $\spc{N}$ has a neighborhood that is isometric to a neighborhood of the corresponding point in $\spc{A}$ or its doubling.
@@ -989,23 +1000,25 @@ The copies of $\gamma$ in $\spc{A}_{i}$ form a line in $\spc{N}$.
 By the splitting theorem, $\spc{N}$ is isometric to a product $\spc{N}'\oplus \RR$.
 Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi$ --- a contradiction.
 
-\parbf{\ref{ex:dist-to-bry}.}
-We can assume that $\dim \spc{A}\ge 2$;
-otherwise the statement is tivial.
+\parbf{\ref{ex:dist-to-bry}}; \ref{SHORT.ex:dist-to-bry:geod}
+Apply the gradient flow as in the proof of \ref{thm:doubling} (part \ref{SHORT.thm:partial-grad:flow}$_{m}\z+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\z\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$).
 
-Choose $x$ on $\gamma$;
+\parit{\ref{SHORT.ex:dist-to-bry:dist}.}
+We can assume that $\dim \spc{A}\ge 2$; otherwise the statement is tivial.
+
+Choose an interior point $x$ on $\gamma$;
 we can assume that $x=\gamma(0)$.
-Let $y\in \partial \spc{A}$ be a closest point to $x$.
-Let $\alpha=\mangle(\dir xy,\gamma^+(0)$.
+Let $y\in \partial \spc{A}$ be a closest point to $x$,
+and let $\alpha=\mangle(\dir xy,\gamma^+(0)$.
 
-Suppose $x\notin \partial \spc{A}$.
+By \ref{SHORT.ex:dist-to-bry:geod}, we can assume that $x\notin \partial \spc{A}$.
 Show that $\T_y=\RR_{\ge0}\times\T_y\partial \spc{A}$
 and $\dir yx\perp \T_y\partial \spc{A}$.
 
 Given a vector $v\in \T_y$, denote by $\bar v$ its projection to $\T_y\partial \spc{A}$.
 Apply the comparison and \ref{prop:gexp} to show that 
 \[\dist{\gamma(t)}{\gexp_y(\overline{\log_x\gamma(t)})}{}\le \dist{x}{y}{}+t\cdot\cos\alpha.\]
-Conclude that $\gamma''(0)\le 0$ in the barrier sense.
+Conclude that $(\distfun_{\partial \spc{A}}\circ\gamma)''(0)\le 0$ in the barrier sense.
 
 
 \parbf{\ref{ex:liberman}.}
@@ -1019,13 +1032,8 @@ where $f=\tfrac12\cdot\distfun_p^2$ and $s(t)\z=\ln\circ\bar\rho(t)-\ln\circ\rho
 Use the first distance estimate to show that $\length\bar\gamma<\length\gamma$ and arrive at a contradiction.
 
 \parit{Comment.}
-The statement was proved by Grigory Perelman and the second author \cite{perelman-petrunin};
-it generalizes a theorem of Joseph Liberman \cite{liberman} about geodesics on convex surfaces.
-The original Liberman's version of the following geometric statement.
-\textit{Suppose that $C$ is the cone over $\gamma$ with the vertex at $p$,
-where $\gamma$ is a geodesic on a convex surface and $p$ is a point in the convex body bounded by the surface.
-Then after unfolding $C$ into plane, $\gamma$ becomes a locally convex curve.}
-It is instructive to check that this formulation is equivalent to ours for convex bodies.
+This is the so-called \index{Liberman's lemma}\emph{Liberman's lemma};
+it was proved by Grigory Perelman and the second author \cite{perelman-petrunin} and generalizes a theorem of Joseph Liberman \cite{liberman} about geodesics on convex surfaces.
 
 \parbf{\ref{ex:native}.}
 Choose a geodesic $\gamma$ in $\spc{W}$.
@@ -1035,10 +1043,10 @@ that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ and $\spc{
 In the later case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
 In the former case the convexity has to be checked only at the point of crossing;
 we may assume that it happens at $x=\gamma(0)$.
-Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{A}$ the $f$-gradient flows agree on $\spc{A}_0$ and $\spc{A}_1$.
+Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{A}$ the $f$-gradient flows on $\spc{A}_0$ and $\spc{A}_1$ agree on the common boundary; so they induce a continuous flow on $\spc{W}$.
 
 Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
-Apply $f$-gradinent flow to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
+Apply the constructed flow on $\spc{W}$ to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
 and arrive at a contradiction.
 
 \parbf{\ref{ex:Hilbert/G}.} Read \cite[Section 4]{terng-thorbergsson} and/or the solution for ``Quotient of the Hilbert space'' in \cite{petrunin2020}.
@@ -1064,7 +1072,8 @@ the restriction $\sigma|_H$ is an isometry.
 Suppose such a half-line $H$ starts at $p$ and passes thru $q$.
 Show that $\langle x-p,q-p \rangle\le 0$ for any $x\in \sigma^{-1}\{0\}$.
 Conclude that $\sigma^{-1}\{0\}$ is a convex closed set.
-Finally use the definition of submetry to show that  $\sigma^{-1}\{0\}$ has no interior points. 
+Use the definition of submetry to show that  $\sigma^{-1}\{0\}$ has no interior points.
+Make a conclusion.
 
 \parbf{\ref{ex:S^3/S^1}};
 \ref{SHORT.ex:S^3/S^1:pq}.
@@ -1074,21 +1083,21 @@ Show that the described torus action is induced by a maximal torus in $\SO(3)$.
 Use that maximal tori in $\SO(3)$ are conjugate.
 
 \parit{\ref{SHORT.ex:S^3/S^1:sphere}.}
-Cut $\SSS^3$ into two solid tori the Clifford torus $\tfrac1{\sqrt2}\cdot \SSS^1\times \SSS^1$.
-Observe that the quotient of each solid torus is a disc;
+Cut $\SSS^3$ into by the Clifford torus $\tfrac1{\sqrt2}\cdot (\SSS^1\times \SSS^1)$.
+Observe that the quotient of each half is a disc;
 conclude that $\Sigma_{p,q}$ is a sphere.
-The torus action on $\SSS^3$ induce the needed $\SSS^1$-cation on $\Sigma_{p,q}$.
+The torus action on $\SSS^3$ induce the needed $\SSS^1$-action on $\Sigma_{p,q}$.
 
-\parit{\ref{SHORT.ex:S^3/S^1:a}+\ref{SHORT.ex:S^3/S^1:b}+\ref{SHORT.ex:S^3/S^1:c}.} Straightforward calculations.
+\parit{\ref{SHORT.ex:S^3/S^1:a}+\ref{SHORT.ex:S^3/S^1:b}+\ref{SHORT.ex:S^3/S^1:c}.} Calculations.
 
 \parit{\ref{SHORT.ex:S^3/S^1:cc}.}
 Consider the map $\Sigma_{p,q}\to\Sigma_{1,1}$ that sends poles to poles,
-preserve the distance to the poles and respects the $\SSS^1$ action.
+preserve the distance to the poles and respects the $\SSS^1$-actions.
 
 \parbf{\ref{ex:number(m-1)}};
 \ref{SHORT.ex:number(m-1):2}.
 Suppose $\mathfrak{M}_{m-1}(\Gamma)\ge 3$;
-that is $\spc{A}=\EE^m/\Gamma$ has at least 3 boundary components.
+that is, $\spc{A}=\EE^m/\Gamma$ has at least 3 boundary components.
 Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{A}$ using two of these components.
 Show that the obtained space splits and arrive at a contradiction.
 
@@ -1101,9 +1110,9 @@ Arrive at a contradiction with the Bishop--Gromov inequality.)
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
 
 \parbf{\ref{ex:S1actsS3}.}
-Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to $\partial\Delta$.
+Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to itsboundary $\partial\Delta$.
 It remains to show that the perimeter of $\Delta$ cannot exceed $2\cdot\pi$.
-The latter follows from \cite[3.3.5]{petrunin:survey};
+The latter follows from the Lytchak's problem \cite[3.3.5]{petrunin:survey};
 it states that if $\Delta$ as an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\z\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
 
 \parbf{\ref{ex:surf-S2}.}
@@ -1123,16 +1132,23 @@ Since $v$ is essential, $\alpha+\beta<2\cdot\pi$.
 Therefore $\alpha<\pi$ or $\beta<\pi$.
 Arrive at a contradiction by showing that $\gamma$ is not length-minimizing.
 
+\begin{wrapfigure}{r}{25mm}
+\vskip-6mm
+\centering
+\includegraphics{mppics/pic-1160}
+\vskip-0mm
+\end{wrapfigure}
+
 \parbf{\ref{pr:tetrahedron}}; \ref{SHORT.pr:tetrahedron:=}.
 Cut the surface of $T$ along three edges coming from one vertex $v_1$ and unfold the obtained surface onto the plane.
 Show that this way we get a triangle, the three vertices correspond to $v_1$ and the midpoints of sides correspond to the remaining three vertices.
 Make a conclusion.
 
 \parit{\ref{SHORT.pr:tetrahedron:perp}}.
-Suppose that $0,v_1,v_2,v_3\in\RR^3$ are the vertices of $T$.
+Let $v_1,v_2,v_3,v_4\in\RR^3$ be the vertices of $T$.
 From \ref{SHORT.pr:tetrahedron:=}, we have that 
-\[|v_1|=|v_2-v_3|,\quad |v_2|=|v_3-v_1|,\quad|v_3|=|v_1-v_1|.\]
-Use it to show that $\langle v_1,v_2+v_3-v_1\rangle=0$.
+\[|v_1-v_2|=|v_3-v_4|,\quad |v_1-v_3|=|v_2-v_4|,\quad|v_1-v_4|=|v_2-v_3|.\]
+Use it to show that $\langle v_1-v_2,v_1+v_2-v_3-v_4\rangle=0$.
 Make a conclusion.
 
 \parbf{\ref{ex:poly-CBB}.}
@@ -1213,9 +1229,8 @@ Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
 Choose a geodesic $[y_1y_2]_W$;
 note that it contains a point of $K$, say $z$.
 Now consider the one-parameter family of points 
-$y_i(t)\df \gamma_i(t)+\gamma_i^+(t)\z\cdot (\ell_i-t)$,
-where $\ell_i=\length\gamma_i=\dist{p}{x_i}{S}$.
-(This family is not necessarily continuous.)
+\[y_i(t)\df \gamma_i(t)+\gamma_i^+(t)\z\cdot (1-t).\]
+This family is not necessarily continuous; note that $y_i(0)=y_i$ and $y_i(1)=x_i$.
 
 Show that for any point $q\in K$, the function $t\mapsto \dist{q}{y_i(t)}{\EE^3}$ is nonincreasing.
 Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in S$.
@@ -1226,11 +1241,18 @@ Therefore,
 \\
 &=\dist{y_1(0)}{z}{W}+\dist{y_2(0)}{z}{W}\ge
 \\
-&\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge 
+&\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge
 \\
 &\ge\dist{x_1}{x_2}{S}.
 \end{align*}
 The last inequality follows since the closest point projection $W\to S$ is short.
+
+\begin{wrapfigure}{o}{28mm}
+\vskip-3mm
+\centering
+\includegraphics{mppics/pic-1111}
+\vskip-0mm
+\end{wrapfigure}
 
 It remains to consider the case when the plane $py_1y_2$ does not support $K$,
 and $[y_1y_2]_{\EE^3}$ does not intersect $K$.

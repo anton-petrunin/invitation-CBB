@@ -101,6 +101,15 @@ but in the latter case, one has to assume in addition that
 
 \end{thm}
 
+In the proof we will apply the following statement from elementary geometry.
+
+\begin{thm}{Angle monotonicity}\label{angle-monotonicity}
+Increasing the opposite side in a plane triangle increases the corresponding angle, and the other way around.
+
+Moreover, the same statement holds for spherical and hyperbolic triangles.
+\end{thm}
+
+
 \parit{Proof.} 
 Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)$.
 Take 
@@ -113,7 +122,7 @@ $[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\di
 \includegraphics{mppics/pic-740}
 \end{wrapfigure}
 
-Since increasing the opposite side in a plane triangle increases the corresponding angle (this is evident from the cosine law), 
+By the angle monotonicity (\ref{angle-monotonicity}),
 the following expressions have the same sign:
 \begin{enumerate}[(i)]
 \item $\mangle\hinge{\tilde x}{\tilde p}{\tilde y}-\angk{x}{p}{y}$,
@@ -223,7 +232,8 @@ Show that
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
 
-Later, you will see that the inequality might be strict.
+The last inequality might be strict;
+for example, on the surface of convex polyhedron, which is a $\Alex0$ space by \ref{prop:conv-surf-CBB(0)}.
 
 \section{Hinge comparison}
 

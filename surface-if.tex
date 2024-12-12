@@ -1,13 +1,12 @@
 %%!TEX root = the-surface-if.tex
 \chapter{Surface of convex body}\label{chap:convex-body}
 
-In this lecture, we discuss historically the first application of Alexandrov geometry to intrisic geometry of surfaces of convex bodies.
+In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$},
+which is historically the first application of Alexandrov geometry.
 
 \section{Definitions}
 
-Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^m$ with non-empty interior.
-
-In this chapter we will only deal with convex bodies in  $\EE^3$. Therefore, unless indicated otherwise,  we will assume that $m=3$ from now on.
+Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^3$ with non-empty interior.
 
 The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
 
@@ -15,16 +14,13 @@ The \index{surface}\emph{surface} of a convex body is defined as its boundary eq
 Show that the surface of a convex body is homeomorphic to $\SSS^2$.
 \end{thm}
 
-In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$.}
-
-
 \section{Surface of convex polyhedra}
 
 A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
 
-The surface, say $\Sigma$, of a convex polyhedron $P$ admits a triangulation such that each triangle is isometric to a plane triangle.
-In other words, $\Sigma$ is a \index{polyhedral surface}\emph{polyhedral surface};
-that is, it is a 2-dimensional manifold with a length metric that admits a triangulation such that each triangle is isometric to a solid plane triangle.
+The surface, say $\Sigma$, of a convex polyhedron $P$ admits a finite triangulation such that each triangle is isometric to a plane triangle.
+In other words, $\Sigma$ is a closed \index{polyhedral surface}\emph{polyhedral surface};
+that is, it is a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
 
 The total angle around a vertex $v$ in $\Sigma$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
@@ -36,23 +32,21 @@ then
 \item $p$ lies on an edge, and its neighborhood is two half-planes glued along the boundary.
 \end{itemize}
 In both cases, a neighborhood of $p$ in $\Sigma$ (with the induced length metric) is isometric to an open domain of the plane.
-Therefore, the total angle around $p$ will be defined to be $2\cdot\pi$.
+In this case, the total angle around $p$ will be defined to be $2\cdot\pi$.
 
 \begin{thm}{Claim}\label{clm:total-angle}
 Let $\Sigma$ be the surface of a convex polyhedron $P$.
 Then, the total angle around any point in $\Sigma$ cannot exceed $2\cdot\pi$.
 \end{thm} 
 
-In the proof, we will need the triangle inequality for angles (or the spherical triangle inequality).
-A proof of this statement is given in the classical geometry textbook by Andrei Kiselyov \cite[§ 47]{kiselev-stereo-en};
-it also follows from \ref{claim:angle-3angle-inq}.
-(In fact our proof of \ref{claim:angle-3angle-inq} is a straightforward generalization of the argument in \cite[§ 47]{kiselev-stereo-en}.)
+We will need the triangle inequality for angles (or the spherical triangle inequality).
+It follows from \ref{claim:angle-3angle-inq}, but our proof of this statement is a straightforward generalization of the argument in the classical geometry textbook \cite[§ 47]{kiselev-stereo-en} that proves following staement.
 
 \begin{thm}{Spherical triangle inequality}\label{ex:angle-triangle}
 Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
-Denote by $\theta_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
+Denote by $\alpha_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
 Then
-$$\theta_{1,3}\le \theta_{1,2}+\theta_{2,3}$$
+$$\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}$$
 and in case of equality, the vectors $w_1,w_2,w_3$ lie in a plane.
 \end{thm}
 
@@ -63,7 +57,7 @@ Applying rescaling we may assume that the sphere has unit radius.
 Then we need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
 
 \begin{wrapfigure}{o}{22mm}
-\vskip-2mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-1103}
 \end{wrapfigure}
@@ -95,9 +89,9 @@ Show that geodesics on the surface of a convex polyhedron may have essential ver
 
 \section{Curvature}
 
-Let $p$ be a point on the surface of a (possibly non convex) polyhedron, and $\theta_p$ is the total angle around $p$.
+Let $p$ be a point on the surface of a (possibly nonconvex) polyhedron, and $\theta_p$ is the total angle around $p$.
 The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
-If $p$ is not a vertex, then its curvature is zero.
+If $p$ is not a vertex, then its curvature is defined to be zero.
 
 \begin{thm}{Exercise}\label{pr:tetrahedron} 
 Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
@@ -139,7 +133,7 @@ Let
 Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
 Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get 
 $\tilde f(t)\ge f(t)$ if $t$ is sufficiently close to $t_0$.
-That is, $\tilde f$ is a local upper support of $f$ at $t_0$.
+That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$.
 Evidently, $\tilde f''\equiv 1$; therefore $f''\le 1$.
 It remains to apply \ref{comp-kappa}.
 \qeds

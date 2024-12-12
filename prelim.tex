@@ -4,7 +4,9 @@
 
 \section{Prerequisites}
 
-We assume that the reader is familiar with the following topics in metric geometry:
+Most importantly, the reader should know and love elementary geometry, including convexity.
+
+We also assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
 \item Compactness and proper metric spaces;
 recall that a metric space is \index{proper space}\emph{proper} if all its closed balls (of finite radius) are compact.
@@ -265,16 +267,16 @@ Give an example of a hinge $\hinge p x y$ in a metric space with an undefined an
 
 \begin{thm}{Proposition}\label{claim:angle-3angle-inq}
 Let  $[px_1]$, $[px_2]$, and $[px_3]$ be three geodesics in a metric space.
-Suppose all the angle measures $\alpha_{i j}=\mangle\hinge p {x_i}{x_j}$ are defined.
+Suppose all the angle measures $\alpha_{i, j}=\mangle\hinge p {x_i}{x_j}$ are defined.
 Then 
-\[\alpha_{13}\le \alpha_{12}+\alpha_{23}.\]
+\[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}.\]
 
 \end{thm}
 
 
 
 \parit{Proof.}
-Since $\alpha_{13}\le\pi$, we can assume that $\alpha_{12}+\alpha_{23}< \pi$.
+Since $\alpha_{1,3}\le\pi$, we can assume that $\alpha_{1,2}+\alpha_{2,3}< \pi$.
 Denote by $\gamma_i$ the unit-speed parametrization of $[px_i]$ from $p$ to $x_i$.
 Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
 \begin{align*}
@@ -282,9 +284,9 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
 &\le 
 \dist{\gamma_1(t)}{\gamma_2(s)}{}+\dist{\gamma_2(s)}{\gamma_3(\tau)}{}<\\
 &<
-\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{12}+\eps)} +
+\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{1,2}+\eps)} +
 \\
-&\quad+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{23}+\eps)}\le
+&\quad+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{2,3}+\eps)}\le
 \end{align*}
 
 \begin{wrapfigure}{o}{30 mm}
@@ -298,17 +300,17 @@ Below we define
 $s(t,\tau)$ so that for 
 $s=s(t,\tau)$, this chain of inequalities can be continued as follows:
 \[\le
-\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha_{12}+\alpha_{23}+2\cdot \eps)}.
+\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha_{1,2}+\alpha_{2,3}+2\cdot \eps)}.
 \]
 
 Thus for any $\eps>0$, 
-\[\alpha_{13}\le \alpha_{12}+\alpha_{23}+2\cdot \eps.\]
+\[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}+2\cdot \eps.\]
 Hence the result follows.
 
 To define $s(t,\tau)$, consider three half-lines $\tilde \gamma_1$, $\tilde \gamma_2$, $\tilde \gamma_3$ on a Euclidean plane starting at one point, such that
-$\mangle(\tilde \gamma_1,\tilde \gamma_2)\z=\alpha_{12}+\eps$,
-$\mangle(\tilde \gamma_2,\tilde \gamma_3)\z=\alpha_{23}+\eps$,
-and $\mangle(\tilde \gamma_1,\tilde \gamma_3)\z=\alpha_{12}\z+\alpha_{23}\z+2\cdot \eps$.
+$\mangle(\tilde \gamma_1,\tilde \gamma_2)\z=\alpha_{1,2}+\eps$,
+$\mangle(\tilde \gamma_2,\tilde \gamma_3)\z=\alpha_{2,3}+\eps$,
+and $\mangle(\tilde \gamma_1,\tilde \gamma_3)\z=\alpha_{1,2}\z+\alpha_{2,3}\z+2\cdot \eps$.
 We parametrize each half-line by the distance from the starting point.
 Given two positive numbers $t,\tau\in\RR_{\ge0}$, let $s=s(t,\tau)$ be 
 the number such that 
@@ -457,34 +459,25 @@ respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 (Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
 \end{thm}
 
-For the proof of the following statement we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
+Gromov--Hausdorff convergence of compact spaces has particularly nice properties, which follow from the next exercise.
+
+\begin{thm}{Exercise}\label{ex:non-contracting-map}
+Let $f$ be a distance noncontracting map from
+a compact metric space $\spc{K}$ to itself.
+Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:non-expanding-map}
+Show that any surjective non-expanding map from a compact metric space to itself is an isometry.
+\end{thm}
+
+For the proof of the following statements we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
 
 \begin{thm}{Proposition}\label{prop:complete}
 $\GH$ is a complete metric space.
 \end{thm}
 
-This means in particular that if $X,Y$ are compact and $|\spc{X}-\spc{Y}|_{\GH}=0$ then $X$ and $Y$ are isometric.
-
-Gromov--Hausdorff convergence of compact spaces has particularly nice properties, which follow from the next exercise.
-
-\begin{thm}{Exercise}\label{ex:non-contracting-map}
-Let $f$ be a distance noncontracting map from 
-a compact metric space $\spc{K}$ to itself.
-Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
-\end{thm}
-
-For two metric spaces $\spc{X}$ and $\spc{Y}$,
-we write $\spc{X}\le \spc{Y}+\eps$ if
-there is a map $f\:\spc{X}\to \spc{Y}$ such that 
-\[\dist{x}{x'}{\spc{X}}\le \dist{f(x)}{f(x')}{\spc{Y}}+\eps\]
-for any $x,x'\in \spc{X}$.
-
-\begin{thm}{Exercise}\label{ex:GH-po}
-Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be compact metric spaces.
-Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
-we have 
-\[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
-\end{thm}
+This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
 
 \begin{thm}{Exercise}\label{ex:compact-GH}
 Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
@@ -555,12 +548,23 @@ The proof of the second part is analogous; one only needs to change one line in 
 We leave part \ref{SHORT.lem:almost-isom-c} as an exercise.
 \qedsf
 
+For two metric spaces $\spc{X}$ and $\spc{Y}$,
+we write $\spc{X}\le \spc{Y}+\eps$ if
+there is a map $f\:\spc{X}\to \spc{Y}$ such that
+\[\dist{x}{x'}{\spc{X}}\le \dist{f(x)}{f(x')}{\spc{Y}}+\eps\]
+for any $x,x'\in \spc{X}$.
+
+\begin{thm}{Exercise}\label{ex:GH-po}
+Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be compact metric spaces.
+Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
+we have
+\[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
+\end{thm}
+
 Lemma~\ref{lem:almost-isom} has a natural analogue for pointed convergence.
 For simplicity we only state part \ref{SHORT.lem:almost-isom-a} of the lemma.
 Parts \ref{SHORT.lem:almost-isom-b} and \ref{SHORT.lem:almost-isom-c} can be rephrased similarly;
 in \ref{SHORT.lem:almost-isom-c} we have to assume that the space is proper.
-
-
 
 \begin{thm}{Lemma}\label{lem:almost-isom-pointed}
 Let $(\spc{X}_1, p_1),(\spc{X}_2,p_2) ,\dots$, let $(\spc{X}_\infty, p_\infty)$ be pointed metric spaces, and let $\eps(n,R)\to\0+$ as $n\to\infty$ for any fixed $R>0$.
