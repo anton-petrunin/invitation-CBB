@@ -1,12 +1,149 @@
-\chapter{Alexandrov embedding theorem}\label{chap:alex-embedding}
+\chapter{Convex polyhedra}\label{chap:alex-embedding}
 
+In this lecture we discuss intrisic geometry of surfaces of convex polyhedra.
 We will prove the Cauchy theorem, and then modify it to prove the Alexandrov uniqueness theorem.
-Further, we sketch a proof of the Alexandrov embedding theorem.
+
+\section{Surface of convex polyhedra}
+
+Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^3$ with non-empty interior.
+
+The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
+
+\begin{thm}{Exercise}\label{ex:surf-S2}
+Show that the surface of a convex body is homeomorphic to $\SSS^2$.
+\end{thm}
+
+A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
+
+The surface, say $\Sigma$, of a convex polyhedron $P$ admits a finite triangulation such that each triangle is isometric to a plane triangle.
+In other words, $\Sigma$ is a closed \index{polyhedral surface}\emph{polyhedral surface};
+that is, it is a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
+A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
+
+The total angle around a vertex $v$ in $\Sigma$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
+
+If a point $p\in \Sigma$ is not a vertex of $P$,
+then
+\begin{itemize}
+\item $p$ lies in the interior of a face of $P$, and its neighborhood in $\Sigma$ is a piece of plane, or
+\item $p$ lies on an edge, and its neighborhood is two half-planes glued along the boundary.
+\end{itemize}
+In both cases, a neighborhood of $p$ in $\Sigma$ (with the induced length metric) is isometric to an open domain of the plane.
+In this case, the total angle around $p$ will be defined to be $2\cdot\pi$.
+
+\begin{thm}{Claim}\label{clm:total-angle}
+Let $\Sigma$ be the surface of a convex polyhedron $P$.
+Then, the total angle around any point in $\Sigma$ cannot exceed $2\cdot\pi$.
+\end{thm}
+
+The proof relies on the triangle inequality for angles (or the spherical triangle inequality).
+It follows from \ref{claim:angle-3angle-inq}, but our proof of this statement is a straightforward generalization of the argument in the classical geometry textbook \cite[§ 47]{kiselev-stereo-en} that proves following staement.
+
+\begin{thm}{Spherical triangle inequality}\label{ex:angle-triangle}
+Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
+Denote by $\alpha_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
+Then
+$$\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}.$$
+Moreover, in the case of equality, the three solid angles spanned by $w_1$, $w_2$, and $w_3$ form a plane.
+\end{thm}
+
+\parit{Proof of \ref{clm:total-angle}.}
+Consider the intersection of $P$ with a small sphere centered at~$p$;
+it is a convex spherical polygon, say $F$.
+Applying rescaling we may assume that the sphere has unit radius.
+Then we need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
+
+\begin{wrapfigure}{o}{22mm}
+\vskip-4mm
+\centering
+\includegraphics{mppics/pic-1103}
+\end{wrapfigure}
+
+Note that $F$ lies in a hemisphere, say $H$.
+Moreover, there is a decreasing sequence of convex spherical polygons
+\[H=H_0\supset\dots\supset H_n=F,\]
+such that $H_{i+1}$ is obtained from $H_{i}$ by cutting along a chord.
+
+By the spherical triangle inequality (\ref{ex:angle-triangle}), we have
+\[
+2\cdot\pi=\perim H=\perim H_0\ge\dots\ge\perim H_n=\perim F
+\]
+--- hence the result.
+\qedsf
+
+A vertex of a triangulation of a polyhedral surface is called \index{essential vertex}\emph{essential} if the total angle around it is not $2\cdot\pi$.
+
+\begin{thm}{Exercise}\label{ex:vertex-essential-vertex}
+Let $v$ be a point on the surface $\Sigma$ of a convex polyhedron $P$.
+Show that $v$ is a vertex of $P$ if and only if
+$v$ is an essential vertex of $\Sigma$.
+\end{thm}
+
+
+\begin{thm}{Exercise}\label{ex:geodesic-vertex}
+Show that geodesics on the surface of a convex polyhedron may have essential vertices only at their ends.
+\end{thm}
+
+\section{Curvature}
+
+Let $p$ be a point on the surface of a (possibly nonconvex) polyhedron, and $\theta_p$ is the total angle around $p$.
+The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
+If $p$ is not a vertex, then its curvature is defined to be zero.
+
+\begin{thm}{Exercise}\label{pr:tetrahedron}
+Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
+Show that
+
+\begin{subthm}{pr:tetrahedron:=}
+all faces of $T$ are congruent;
+\end{subthm}
+
+\begin{subthm}{pr:tetrahedron:perp} the line containing midpoints of opposite edges of $T$ intersects these edges at right angles.
+\end{subthm}
+
+\end{thm}
+
+Claim~\ref{clm:total-angle} says that \textit{surfaces of convex polyhedra have nonnegative curvature} in the sense of the above definition.
+Now we show that this definition agrees with the 4-point comparison.
+
+\begin{thm}{Proposition}\label{prop:poly-CBB}
+A polyhedral surface with nonnegative curvature at each vertex is $\Alex0$.
+\end{thm}
+
+\parit{Proof.}
+Denote the surface by $\Sigma$.
+By \ref{comp-kappa}, it is sufficient to check that
+$\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and a point $p$ in $\Sigma$.
+
+We can assume that $p$ is not a vertex;
+the vertex case can be done by approximation.
+Applying the same argument as in \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.
+
+Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
+Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
+Therefore a small neighborhood of $U\supset [px]$ can be unfolded on a plane;
+that is, there is an injective length-preserving map $z\mapsto \tilde z$
+of $U$ into the Euclidean plane.
+This way we map part of $\gamma$ in $U$ to a line segment $\tilde\gamma$.
+Let
+\[\tilde f(t)\df\tfrac12\cdot\distfun_{\tilde p}^2\circ\tilde \gamma(t).\]
+Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
+Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get
+$\tilde f(t)\ge f(t)$ if $t$ is sufficiently close to $t_0$.
+That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$.
+Evidently, $\tilde f''\equiv 1$; therefore $f''\le 1$.
+It remains to apply \ref{comp-kappa}.
+\qeds
+
+\begin{thm}{Exercise}\label{ex:poly-CBB}
+Prove the converse to the proposition;
+that is, show that if a poyhedral surface is $\Alex0$, then it has nonnegative curvature in the sense defined in this section.
+\end{thm}
 
 
 \section{Cauchy theorem}
 
-Recall that \textit{surfaces} of convex polyhedrons are considered with the induced length metric..
+Recall that \textit{surfaces} of convex polyhedrons are considered with the induced length metric.
  
 \begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be two non-degenerate convex polyhedrons in $\EE^3$;
 denote their surfaces 
@@ -15,18 +152,17 @@ Suppose there is an isometry $P\to P'$ that sends each face of $K$ to a face of 
 Then $K$ is congruent to $K'$; moreover the isometry $P\to P'$ can be extended to a motion of $\EE^3$ that maps $K$  to $K'$.
 \end{thm}
 
-\parit{Proof.} 
+\parit{Proof modulo two lemmas.}
 Consider the graph $\Gamma$ formed by the edges of $K$;
-the edges of $K'$ form the same graph.
+the edges of $K'$ form an isomorphic graph.
  
-For an edge $e$ in $\Gamma$, denote by $\alpha_e$ and $\alpha'_e$ the corresponding dihedral angles in $K$ and $K'$ respectively.
+For an edge $e$ in $\Gamma$, denote by $\alpha_e$ and $\alpha'_e$ the corresponding dihedral angles in $K$ and $K'$, respectively.
 Mark $e$ by plus if $\alpha_e < \alpha'_e$ and by minus if $\alpha_e > \alpha'_e$.
 
-Now remove from $\Gamma$ everything that was not marked;
+Let us remove from $\Gamma$ everything that is not marked;
 that is, leave only the edges marked by $(+)$ or $(-)$ and their endpoints.
-
-Note that the theorem follows if $\Gamma$ is an empty graph;
-assume the contrary.
+If $\Gamma$ is an empty graph, then the theorem follows.
+Now assume the contrary.
 
 The graph $\Gamma$ is embedded into $P$, which is homeomorphic to the sphere.
 In particular, the edges coming from one vertex have a natural cyclic order. 
@@ -41,7 +177,8 @@ In other words, at each vertex of $\Gamma$, one can choose 4 edges marked by $(+
 Note that the local lemma contradicts the following.
 
 \begin{thm}{Global lemma}\label{lem:global}
-Let $\Gamma$ be a nonempty subgraph of the graph formed by the edges of a convex polyhedron. Then it is impossible to mark all of the edges of $\Gamma$ by $(+)$ or $(-)$ 
+Let $\Gamma$ be a nonempty planar graph.
+Then it is impossible to mark all of the edges of $\Gamma$ by $(+)$ or $(-)$
 such that the number of sign changes around each vertex of $\Gamma$ is at least $4$.
 \end{thm}
 
@@ -51,15 +188,15 @@ It remains to prove these two lemmas.
 
 \section{Local lemma}
 
-Next lemma is the main ingredient in our proof of the local lemma.
+The following lemma is the main ingredient in our proof of the local lemma.
 
 \begin{thm}{Arm lemma}\label{lem:arm}
 Assume that $A=[a_0 a_1\dots a_n]$ is a convex polygon in $\EE^2$
 and $A'=[a'_0 a'_1\dots a'_n]$ be a polygonal line in $\EE^3$
 such that 
-$$|a_i-a_{i+1}|=|a'_i-a'_{i+1}|$$ for any $i\in\{0,\dots,n-1\}$
+$|a_i-a_{i+1}|=|a'_i-a'_{i+1}|$ for any $i\in\{0,\dots,n-1\}$
 and 
-$$\measuredangle a_i\le \measuredangle a'_i$$ 
+$\measuredangle a_i\le \measuredangle a'_i$
 for each $i\in\{1,\dots,n-1\}$.
 Then 
 $$|a_0-a_n|\le |a'_0-a'_n|$$
@@ -67,7 +204,7 @@ and equality holds if and only if $A$ is congruent to $A'$.
 \end{thm}
 
 One may view the polygonal lines $[a_0a_1\dots a_n]$ and $[a'_0a'_1\dots a'_n]$ as a robot's arm in two positions.
-The arm lemma states that when the arm opens, 
+Informally speaking, the arm lemma says that when the arm opens,
 the distance between the shoulder and tip of a finger increases. 
 
 \begin{thm}{Exercise}\label{ex:arm-nonconvex}
@@ -89,8 +226,8 @@ Give an example showing the statement does not hold without assuming convexity.
 \parit{Proof.}
 We will view $\EE^2$ as the $xy$-plane in~$\EE^3$; 
 so both $A$ and $A'$ lie in~$\EE^3$.
-Let $a_m$ be the vertex of $A$ that lies on the maximal distance to the line $(a_0a_n)$.
 
+Let $a_m$ be the vertex of $A$ that lies on the maximal distance to the line $(a_0a_n)$.
 Let us shift indexes of $a_i$ and $a'_i$ down by $m$,
 so that 
 \begin{align*}
@@ -115,10 +252,9 @@ where $k=n-m$.
 
 Without loss of generality, we may assume that
 \begin{itemize}
-\item $a_0=a'_0$ and they both coincide with the origin $(0,0,0)\in\EE^3$;
+\item $a_0=a'_0$ and they both coincide with the origin in $\EE^3$;
 \item all $a_i$ lie in the $xy$-plane and the $x$-axis is parallel to the line $(a_{-m}a_k)$;
-\item the angle $\measuredangle a'_0$ lies in $xy$-plane and contains the angle $\measuredangle a_0$ inside
-and the directions to $a'_{-1}$,$a_{-1}$, $a_{1}$ and $a'_{1}$ from $a_0$ appear in the same cyclic order.
+\item the angle $\measuredangle a'_0$ lies in $xy$-plane and contains the angle $\measuredangle a_0$ inside so that the directions to $a'_{-1}$,$a_{-1}$, $a_{1}$ and $a'_{1}$ from $a_0$ appear in the same cyclic order.
 \end{itemize}
 
 Denote by $x_i$ and $x'_i$ the projections of $a_i$ and $a'_i$ to the $x$-axis.
@@ -127,13 +263,12 @@ In this case,
 $$|a_k-a_{-m}|=x_k-x_{-m}.$$
 Since the projection is a distance non-expanding, we also have
 $$|a'_k-a'_{-m}|\ge x'_k-x'_{-m}.$$ 
-{
 
 \begin{wrapfigure}{r}{60mm}
-\vskip-7mm
+\vskip-5mm
 \centering
 \includegraphics{mppics/pic-30}
-\vskip-0mm
+\vskip3mm
 \end{wrapfigure}
 
 Therefore it is sufficient to show
@@ -143,8 +278,6 @@ The latter holds if
 $$x'_i-x'_{i-1}\ge x_i-x_{i-1}.\eqlbl{eq:|bb|=<|aa|}$$
 for each $i$.
 It remains to prove \ref{eq:|bb|=<|aa|}.
-
-}
 
 Let us assume that $i>0$; 
 the case $i\le 0$ is similar.
@@ -192,6 +325,8 @@ Denote by $a'_0 a'_1 \dots a'_n$
 the corresponding line in $P'$;
 let $a'=a'_0$ and $b'=a'_n$.
 
+{
+
 \begin{wrapfigure}{r}{40mm}
 \vskip-0mm
 \centering
@@ -204,6 +339,8 @@ we have
 $$\measuredangle a_i\le\measuredangle a'_i$$
 for each $i$.
 
+}
+
 \begin{thm}{Exercise}\label{ex:a<a}
 Prove the last statement. 
 \end{thm}
@@ -211,16 +348,15 @@ Prove the last statement.
 By the construction we have $|a_i-a_{i-1}|=|a'_i-a'_{i-1}|$ for all $i$.
 By the arm lemma (\ref{lem:arm}), 
 we get 
-\begin{clm}{}\label{clm:ab<ab}
-$|a-b|\le |a'-b'|$.
-\end{clm}
+\[|a-b|\le |a'-b'|.
+\eqlbl{clm:ab<ab}\]
+
 Swap $K$ and $K'$ and repeat the same construction for a plane passing thru $a'$ and $b'$.
 We get
-\begin{clm}{}\label{clm:ab>ab}
-$|a-b|\ge |a'-b'|$.
-\end{clm}
+\[|a-b|\ge |a'-b'|.
+\eqlbl{clm:ab>ab}\]
 
-The claims 
+The inequalities
 \ref{clm:ab<ab} and \ref{clm:ab>ab} 
 together imply $|a-b|=|a'-b'|$.
 The equality case in the arm lemma implies that no edge at $v$ is marked;
@@ -297,7 +433,7 @@ Denote by $s$ the total number of sign changes in $\Gamma$ for all vertices.
 By the local lemma (\ref{lem:local}), we have 
 $$ 4\cdot k\le s.\eqlbl{eq:S>=4k}$$
 
-Let us get an upper bound on $s$ by counting the number of sign changes when you go around
+Let us get an upper bound on $s$ by counting the number of sign changes when one travels around
 each region. 
 Denote by $m_n$ the number of regions bounded by $n$ edges;
 if an edge appears twice when it is counted twice.
@@ -317,275 +453,7 @@ Clearly, \ref{eq:S>=4k} and \ref{eq:23-44-45} contradict \ref{eq:k=2+}.
 \qeds
 
 
-\section{Uniqueness}
 
-Alexandrov's uniqueness theorem states that the conclusion of the Cauchy theorem (\ref{thm:cauchy}) still holds without the face-to-face assumption.
-
-\begin{thm}{Theorem}\label{thm:alexandrov-uni'}
-Any two convex polyhedrons in $\EE^3$ with isometric surfaces are congruent.
-
-Moreover, any isometry between surfaces of convex polyhedrons can be extended to an isometry of the whole $\EE^3$. 
-\end{thm}
-
-\parit{Needed modifications in the proof of \ref{thm:cauchy}.}
-Suppose $\iota\:P\to P'$ be an isometry between surfaces of $K$ and $K'$.
-Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$; further, these will be called \index{fake edge}\emph{fake} edges.
-The marked lines divide $P$ into convex polygons, and the restriction of $\iota$ to each polygon is a rigid motion.
-These polygons play the role of faces in the proof above.
-
-A vertex of the obtained graph can be a vertex of $K$, or it can be a fake vertex;
-that is, it might be an intersection of an edge and a fake edge.
-
-\begin{figure}[ht!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-50}
-\vskip-0mm
-\end{figure}
-
-For the first type of vertex, the local lemma can be proved the same way. 
-For a fake vertex $v$, it is easy to see that both parts of the edge coming thru $v$ are marked with minus
-while both of the fake edges at $v$ are marked with plus.
-Therefore, the local lemma holds for the fake vertices as well.
-
-What remains in the proof needs no modifications.
-\qeds
-
-\begin{thm}{Exercise}\label{pr:K-P-simmetry}
-Let $K$ be a convex polyhedron in $\EE^3$;
-denote by $P$ its surface.
-Show that each isometry $\iota\:P\z\to P$,
-can be extended to an isometry of $\EE^3$. 
-\end{thm}
-
-\section{Existence}\label{sec:Alexandrov-existence}
-
-\begin{thm}{Theorem}\label{thm:exist}
-A polyhedral metric on the sphere is isometric to the surface of a convex polyhedron (possibly degenerate to a flat polygon) if and only if it has nonnegative curvature at each point.
-\end{thm}
-
-\begin{wrapfigure}{r}{30mm}
-\vskip-5mm
-\centering
-\includegraphics{mppics/pic-1010}
-\vskip-0mm
-\end{wrapfigure}
-
-By \ref{thm:alexandrov-uni'}, a convex polyhedron is completely defined by the intrinsic metric of its surface.
-By \ref{thm:exist}, it follows that knowing the metric we could find the position of the edges.
-However, in practice, it is not easy to do.
-
-For example, the surface glued from a rectangle as shown on the diagram defines a tetrahedron.
-Some of the glued lines appear inside facets of the tetrahedron and some edges (dashed lines) do not follow the sides of the rectangle.
-
-\paragraph{Space of polyhedrons.}
-Let us denote by $\mathbf{K}$ the space of all convex polyhedrons in the Euclidean space,
-including polyhedrons that degenerate to a plane polygon.
-Polyhedra in $\mathbf{K}$ will be considered up to a motion of the space, 
-and the whole space $\mathbf{K}$ will be considered with Hausdorff distance up to a motion of the space;
-that is, the distance between $K$ and $K'$ is the exact lower bound on Hausdorff distance from $\iota(K)$ to $K'$, where $\iota$ is arbitrary motion of $\EE^3$.
-
-Further, denote by $\mathbf{K}_n$ the polyhedrons in $\mathbf{K}$ with exactly $n$ vertices.
-Since any polyhedron has at least 3 vertices, the space $\mathbf{K}$ admits a subdivision into a countable number of subsets $\mathbf{K}_3,\mathbf{K}_4,\dots$
-
-\paragraph{Space of polyhedral metrics.}
-The space of polyhedral metrics on the sphere with nonnegative curvature will be denoted by $\mathbf{P}$.
-The metrics in $\mathbf{P}$ will be considered up to an isometry, and the whole space $\mathbf{P}$ will be equipped with the topology induced by the Gromov--Hausdorff metric.
-
-The subset of $\mathbf{P}$ of all metrics with exactly $n$ essential vertices will be denoted by $\mathbf{P}_n$.
-It is easy to see that any metric in $\mathbf{P}$ has at least 3 essential vertices.
-Therefore $\mathbf{P}$ is subdivided into countably many subsets
- $\mathbf{P}_3,\mathbf{P}_4,\dots$
-
-\paragraph{From a polyhedron to its surface.}
-
-By \ref{prop:poly-CBB}, passing from a polyhedron to its surface defines a map
-\[\iota\:\mathbf{K}\to \mathbf{P}.\]
-
-By \ref{ex:vertex-essential-vertex}, the number of vertices of a polyhedron is equal to the number of essential vertices on its surface.
-In other words, $\iota(\mathbf{K}_n)\subset \mathbf{P}_n$ for any $n\ge 3$.
-
-Using the introduced notation, we can unite \ref{thm:alexandrov-uni'} and \ref{thm:exist} in the following more exact statement.
-
-\begin{thm}{Reformulation}
-For any integer $n\ge 3$,
-the map $\iota$ induces a bijection between $\mathbf{K}_n$ and~$\mathbf{P}_n$.
-\end{thm}
-
-The proof is based on a construction of a one-parameter family of polyhedrons that starts at an arbitrary polyhedron
-and ends at a polyhedron with its surface isometric to the given one.
-This type of argument is called the \textit{continuity method}; it is often used in the theory of differential equations.
-
-
-\parit{Sketch.}
-By \ref{thm:alexandrov-uni'}, the map $\iota\:\mathbf{K}_n\to\mathbf{P}_n$ is injective.
-Let us prove that it is surjective.
-
-\begin{thm}{Lemma}
-For any integer $n\ge 3$, the space $\mathbf{P}_n$ is connected.
-\end{thm}
-
-The proof of this lemma is not complicated, but it requires ingenuity;
-it can be done by the direct construction of a one-parameter family of metrics in $\mathbf{P}_n$ that connects two given metrics.
-Such a family can be obtained by а sequential application of the following construction and its inverse.
-
-Let $P\in\mathbf{P}_n$.
-Suppose $v$ and $w$ are essential vertices in $P$.
-Let us cut $P$ along a geodesic from $v$ to $w$.
-Note that the geodesic cannot pass thru an essential vertex of $P$.
-Further, note that there is a three-parameter family of patches that can be used to patch the cut so that the obtained metric remains in $\mathbf{P}_n$;
-in particular, the obtained metric has exactly $n$ essential vertices (after the patching, the vertices $v$ and $w$ may become inessential).
-
-
-\begin{thm}{Lemma}
-The map $\iota\:\mathbf{K}_n\to\mathbf{P}_n$ is open, 
-that is, it maps any open set in $\mathbf{K}_n$ to an open set in $\mathbf{P}_n$.
-
-In particular, for any $n\ge 3$, the image $\iota(\mathbf{K}_n)$ is open in~$\mathbf{P}_n$.
-\end{thm}
-
-This statement is very close to the so-called \textit{invariance of domain theorem};
-the latter states that a continuous injective map between manifolds of the same dimension is open.
-
-Recall that $\iota$ is injective.
-The proof of the invariance of domain theorem can be adapted to our case since both spaces $\mathbf{K}_n$ and $\mathbf{P}_n$ are $(3\cdot n-6)$-dimensional and both look like manifolds, altho, formally speaking, they are \textit{not} manifolds.
-In a more technical language, $\mathbf{K}_n$ and $\mathbf{P}_n$ have the natural structure of $(3\cdot n-6)$-dimensional \textit{orbifolds},
-and the map $\iota$ respects the \textit{orbifold structure}.
-
-We will only show that both spaces $\mathbf{K}_n$ and $\mathbf{P}_n$ are $(3\cdot n-6)$-dimensional.
-
-Choose  $K\in\mathbf{K}_n$.
-Note that $K$ is uniquely determined by the $3\cdot n$ coordinates of its $n$ vertices.
-We can assume that the first vertex is the origin, the second has two vanishing coordinates and the third has one vanishing coordinate; therefore, all polyhedrons in $\mathbf{K}_n$ that lie sufficiently close to $K$ can be described by $3\cdot n-6$ parameters.
-If $K$ has no symmetries, then this description can be made one-to-one;
-in this case, a neighborhood of $K$ in $\mathbf{K}_n$ is a $(3\cdot n-6)$-dimensional manifold.
-If $K$ has a nontrivial symmetry group, then this description is not one-to-one but it does not have an impact on the dimension of~$\mathbf{K}_n$.
-
-The case of polyhedral metrics is analogous.
-We need to construct a subdivision of the sphere into plane triangles using only essential vertices.
-By Euler's formula, there are exactly $3\cdot n-6$ edges in this subdivision.
-Note that the lengths of edges completely describe the metric, and slight changes in these lengths produce a metric with the same property.
-Again, if $P$ has no symmetries, then this description is one-to-one.
-
-\begin{thm}{Lemma}
-The map $\iota\:\mathbf{K}_n\to\mathbf{P}_n$ is closed;
-that is, the image of a closed set in $\mathbf{K}_n$ is closed in $\mathbf{P}_n$.
-
-In particular, for any $n\ge 3$, the set $\iota(\mathbf{K}_n)$ is closed in~$\mathbf{P}_n$.
-\end{thm}
-
-Choose a closed set $Z$ in $\mathbf{K}_n$.
-Denote by $\bar Z$ the closure of $Z$ in $\mathbf{K}$; note that $Z=\mathbf{K}_n\cap \bar Z$.
-Assume $K_1,K_2,\dots\in Z$ is a sequence of polyhedrons that converges to a polyhedron $K_\infty\in\bar Z$.
-By \ref{lem:H>GH}, $\iota(K_n)$ converges to $\iota(K_\infty)$ in $\mathbf{P}$.
-In particular, $\iota(\bar Z)$ is closed in $\mathbf{P}$.
-
-Since $\iota(\mathbf{K}_n)\subset \mathbf{P}_n$ for any $n\ge 3$, we have $\iota (Z)=\iota(\bar Z)\cap \mathbf{P}_n$;
-that is, $\iota (Z)$ is closed in $\mathbf{P}_n$. 
-
-\medskip
-
-Summarizing, $\iota(\mathbf{K}_n)$ is a nonempty closed and open set in $\mathbf{P}_n$, and $\mathbf{P}_n$ is connected for any $n\ge 3$.
-Therefore, $\iota(\mathbf{K}_n)=\mathbf{P}_n$; that is, $\iota\:\mathbf{K}_n\z\to\mathbf{P}_n$ is surjective.
-\qeds
-
-\section{Approximation}
-
-By now, the embedding theorem is proved for polyhedral metrics on the sphere.
-The general case is done by approximation, using the following statement.
-
-\begin{thm}{Proposition}\label{prop:H>GH}
-Let $K_1,K_2,\dots$ be a sequence of convex bodies that converge to $K_\infty$ in the sense of Hausdorff.
-Then the surface of $K_n$ converges to the surface of $K_\infty$ in the sense of Gromov--Hausdorff.
-\end{thm}
-
-If $K_\infty$ is nondegenerate, then the statement follows from \ref{lem:H>GH}.
-The degenerate case is left as an exercise.
-
-Let $\spc{X}_\infty$ be an $\Alex0$ space that is homeomorphic to $\SSS^2$.
-Suppose that $\spc{X}_\infty$ is a Gromov--Hausdorff limit of a sequence of spheres with polyhedral metrics $\spc{X}_1,\spc{X}_2,\dots$
-By \ref{thm:exist}, there is a sequence of convex polyhedra $K_1,K_2,\dots$ with surfaces isometric to $\spc{X}_1,\spc{X}_2,\dots$, respectively.
-Note that  $\diam K_n\le \diam \spc{X}_n$ for any $n$.
-Therefore we can assume that all polyhedra $K_1,K_2,\dots$ lie in a closed ball of sufficiently large radius.
-
-Applying Blaschke selection theorem, we can pass to a subsequence of $K_1,K_2,\dots$ that converges in the sense of Hausdorff; denote its limit by $K_\infty$.
-By \ref{prop:H>GH} the surface of $K_\infty$ is isometric to $\spc{X}_\infty$.
-
-Therefore it remains to prove the following lemma.
-
-\begin{thm}{Lemma}\label{lem:GH-approximation}
-Let $\spc{X}$ be an $\Alex0$ space that is homeomorphic to $\SSS^2$.
-Then there is a sphere with polyhedral metrics $\spc{X}'$
-that is arbitrarily close to $\spc{X}$ in the sense of Gromov--Hausdorff.
-\end{thm}
-
-\parit{Idea behind the proof.}
-Suppose we can triangulate $\spc{X}_\infty$ by small geodesic triangles;
-that is, we can choose a finite set of points $p_1,\dots,p_n\z\in \spc{X}_\infty$ and some geodesics $[p_ip_j]$ that cut $\spc{X}_\infty$ into regions of small diameter bounded by geodesic triangles $[p_ip_jp_k]$.
-(The actual proof constructs a triangulation with a weaker property.)
-
-Observe that total angle around each $p_i$ cannot exceed $2\cdot \pi$.
-That is, suppose $p_{j_1},\dots,p_{j_k}$ are points connected to $p_i$ by geodesics.
-Assume that they are ordered in the natural cyclic order.
-Then 
-\[\mangle\hinge{p_i}{p_{j_1}}{p_{j_2}}+\dots+\mangle\hinge{p_i}{p_{j_{k-1}}}{p_{j_k}}+\mangle\hinge{p_i}{p_{j_{k}}}{p_{j_1}}\le 2\cdot\pi.\]
-By comparison, we get
-\[\angk{p_i}{p_{j_1}}{p_{j_2}}+\dots+
-\angk{p_i}{p_{j_{k-1}}}{p_{j_k}}+\angk{p_i}{p_{j_{k}}}{p_{j_1}}\le 2\cdot\pi.\eqlbl{eq:sum<=<2pi}\]
-
-Now let us exchange each triangle by its model triangle.
-That is, consider a model triangle for each region in the subdivision of $\spc{X}$ and glue them together by the same rule.
-By \ref{eq:sum<=<2pi}, the obtained polyhedral surface $\spc{X}'$ has nonnegative curvature.
-It remains to show that this way we can produce $\spc{X}'$ arbitrarily close to $\spc{X}$.
-
-Denote by $p_i\to p_i'$ the natural map; it takes $p_i$ in $\spc{X}$ and returns the corresponding point in $\spc{X}'$.
-Observe that 
-\[\dist{p_i'}{p_j'}{\spc{X}'}
-\le
-\dist{p_i}{p_j}{\spc{X}}.\eqlbl{eq:|pp|}\]
-Indeed, choose a geodesic $\gamma$ from $p_i$ to $p_j$.
-Let $p_i=x_0,x_1,\dots,x_n=p_j$ be the points of intersections of $\gamma$ with the edges of the triangulation listed as they appear on $\gamma$.
-For each $i$, denote by $x_i'$ the corresponding point in $\spc{X}'$.
-By comparison, we get 
-\[\dist{x_k'}{x_{k-1}'}{\spc{X}'}
-\le
-\dist{x_k}{x_{k-1}}{\spc{X}}.\]
-for each $k$.
-Therefore, \ref{eq:|pp|} follows.
-
-Suppose $\eps>0$ is small, the points $p_1,\dots,p_n$ form an $\eps$-net in $\spc{X}$, all edges of the triangulation are smaller than $\eps$ and
-\[\dist{p_i'}{p_j'}{\spc{X}'}
-\ge
-\dist{p_i}{p_j}{\spc{X}} -100\cdot \eps.\eqlbl{eq:|pp|>=}\]
-Then, together with the inequality above it proves that the lemma.
-
-Note that the sides of the model triangles are local geodesics in $\spc{X}'$,
-but not necessarily geodesic; that is they do not have to be length-minimizing.
-Now, let us make another unjustified assumption:
-\textit{Suppose that the sides of model triangles in $\spc{X}'$ are geodesics.}
-(The actual proof does not use this assumption.)
-
-Choose a geodesic $\gamma'$ from $p_i'$ to $p_j'$ in $\spc{X}'$.
-Note that $\gamma'$ visits each triangle in the triangulation of $\spc{X}'$ at most once.
-
-Let $p_i'=x_0',x_1',\dots,x_n'\z=p_j'$ be the points of intersections of $\gamma'$ with the edges of the triangulation listed from $p_i'$ to $p_j'$.
-For each $i$, denote by $x_i$ the corresponding point in $\spc{X}$.
-Let $\Delta_k'$ be the triangle that contains arc $[x'_{k-1}x'_k]$ of $\gamma'$ and $\Delta_k$ the corresponding triangle in $\spc{X}$.
-Note that
-\[\dist{x_k'}{x_{k-1}'}{\spc{X}'}
-\ge
-\dist{x_k}{x_{k-1}}{\spc{X}} -\eps\cdot K(\Delta_k),
-\eqlbl{eq:|xx|<}\]
-where $K(\Delta_k)$ denotes the access of $\Delta_k$;
-that is, the sum of its internal angles minus $\pi$.
-
-Euler's formula and \ref{eq:sum<=<2pi} imply that the sum of all accesses is at most $4\cdot\pi$.
-Therefore, summing up \ref{eq:|xx|<}, we get 
-\[\dist{p_i'}{p_j'}{\spc{X}'}
-\ge
-\dist{p_i}{p_j}{\spc{X}}-4\cdot \pi\cdot \eps.\]
-Whence \ref{eq:|pp|>=} follows.
-\qeds
 
 
 \section{Comments}
@@ -605,8 +473,7 @@ Alexandr Alexandrov \cite{alexandrov-1941}.
 Original Cauchy's proof \cite{cauchy}
 also used a version of the arm lemma, but its proof contained a small mistake (corrected in one century).
 
-Our proof of the arm lemma is due to Stanisław Zaremba.
-This and a couple of other proofs can be found in the letters between him and Isaac Schoenberg \cite{schoenberg-zaremba}.
+Several proofs of the arm lemma can be found in the letters between him and Isaac Schoenberg \cite{schoenberg-zaremba}.
 
 The following variation of the arm lemma makes sense for nonconvex spherical polygons.
 It is due to Viktor Zalgaller \cite{zalgaller}.
@@ -620,20 +487,8 @@ and each angle of $A$ is at least the corresponding angle in $A'$.
 Then $A$ is congruent to~$A'$. 
 \end{thm}
 
+Another close relative of the arm lemma is Reshetnyak's majorization theorem \cite{alexander-kapovitch-petrunin-2019}.
+
 \parit{Global lemma.}
 A more visual proof of the global lemma is given in \cite[II \S 1.3]{alexandrov}.
-This argument was reused by Anton Klyachko \cite{klyachko} in his \index{car-crash lemma}\emph{car-crash lemma}.
-
-\parit{Existence theorem.}
-This theorem was proved by Alexandr Alexandrov~\cite{alexandrov-1941}.
-Our sketch is taken from \cite{lebedeva-petrunin};
-a complete proof is nicely written in~\cite{alexandrov}.
-In the original proof, the spaces $\mathbf{K}_n$ and $\mathbf{P}_n$ were modified so the they become $(3\cdot n-6)$-dimensional manifolds.
-It was done by introducing extra structure (for $\mathbf{K}_n$ it is orientation + a marked vertex and an edge) that \textit{brakes symmetries} of the spaces.
-After that one could apply the domain invariance theorem directly.
-Alternatively, one may first remove from $\mathbf{K}_n$ and $\mathbf{P}_n$ elements (polyhedron or surface)with nontrivial symmetries (after that the spaces become manifolds) and show that any symmetric polyhedron (or surface) can be approximated by a non-symmetric polyhedron (or surface).
-
-A very different proof was found by Yuri Volkov in his thesis \cite{volkov};
-it uses a deformation of three-dimensional polyhedral space.
-
-%P and \Sigma???
+This argument reused by Anton Klyachko \cite{klyachko} in his \index{car-crash lemma}\emph{car-crash lemma}.

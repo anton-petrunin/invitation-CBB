@@ -4,144 +4,16 @@
 In this lecture, we will prove that \textit{surface of a convex body is $\Alex0$},
 which is historically the first application of Alexandrov geometry.
 
-\section{Definitions}
 
-Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^3$ with non-empty interior.
 
-The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
+\section{Uniqueness}
 
-\begin{thm}{Exercise}\label{ex:surf-S2}
-Show that the surface of a convex body is homeomorphic to $\SSS^2$.
-\end{thm}
+\begin{thm}{Theorem}
 
-\section{Surface of convex polyhedra}
-
-A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
-
-The surface, say $\Sigma$, of a convex polyhedron $P$ admits a finite triangulation such that each triangle is isometric to a plane triangle.
-In other words, $\Sigma$ is a closed \index{polyhedral surface}\emph{polyhedral surface};
-that is, it is a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
-A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
-
-The total angle around a vertex $v$ in $\Sigma$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
-
-If a point $p\in \Sigma$ is not a vertex of $P$,
-then
-\begin{itemize}
-\item $p$ lies in the interior of a face of $P$, and its neighborhood in $\Sigma$ is a piece of plane, or
-\item $p$ lies on an edge, and its neighborhood is two half-planes glued along the boundary.
-\end{itemize}
-In both cases, a neighborhood of $p$ in $\Sigma$ (with the induced length metric) is isometric to an open domain of the plane.
-In this case, the total angle around $p$ will be defined to be $2\cdot\pi$.
-
-\begin{thm}{Claim}\label{clm:total-angle}
-Let $\Sigma$ be the surface of a convex polyhedron $P$.
-Then, the total angle around any point in $\Sigma$ cannot exceed $2\cdot\pi$.
-\end{thm} 
-
-We will need the triangle inequality for angles (or the spherical triangle inequality).
-It follows from \ref{claim:angle-3angle-inq}, but our proof of this statement is a straightforward generalization of the argument in the classical geometry textbook \cite[§ 47]{kiselev-stereo-en} that proves following staement.
-
-\begin{thm}{Spherical triangle inequality}\label{ex:angle-triangle}
-Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
-Denote by $\alpha_{i,j}$ the angle between the vectors $v_i$ and $v_j$.
-Then
-$$\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}$$
-and in case of equality, the vectors $w_1,w_2,w_3$ lie in a plane.
-\end{thm}
-
-\parit{Proof of \ref{clm:total-angle}.}
-Consider the intersection of $P$ with a small sphere centered at~$p$;
-it is a convex spherical polygon, say $F$.
-Applying rescaling we may assume that the sphere has unit radius.
-Then we need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
-
-\begin{wrapfigure}{o}{22mm}
-\vskip-4mm
-\centering
-\includegraphics{mppics/pic-1103}
-\end{wrapfigure}
-
-Note that $F$ lies in a hemisphere, say $H$.
-Moreover, there is a decreasing sequence of convex spherical polygons 
-\[H=H_0\supset\dots\supset H_n=F,\]
-such that $H_{i+1}$ is obtained from $H_{i}$ by cutting along a chord.
-
-By the spherical triangle inequality (\ref{ex:angle-triangle}), we have
-\[
-2\cdot\pi=\perim H=\perim H_0\ge\dots\ge\perim H_n=\perim F
-\]
---- hence the result.
-\qedsf
-
-A vertex of a triangulation of a polyhedral surface is called \index{essential vertex}\emph{essential} if the total angle around it is not $2\cdot\pi$.
-
-\begin{thm}{Exercise}\label{ex:vertex-essential-vertex}
-Let $v$ be a point on the surface $\Sigma$ of a convex polyhedron $P$.
-Show that $v$ is a vertex of $P$ if and only if 
-$v$ is an essential vertex of $\Sigma$.
 \end{thm}
 
 
-\begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on the surface of a convex polyhedron may have essential vertices only at their ends.
-\end{thm}
 
-\section{Curvature}
-
-Let $p$ be a point on the surface of a (possibly nonconvex) polyhedron, and $\theta_p$ is the total angle around $p$.
-The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
-If $p$ is not a vertex, then its curvature is defined to be zero.
-
-\begin{thm}{Exercise}\label{pr:tetrahedron} 
-Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
-Show that 
-
-\begin{subthm}{pr:tetrahedron:=}
-all faces of $T$ are congruent; 
-\end{subthm}
-
-\begin{subthm}{pr:tetrahedron:perp} the line containing midpoints of opposite edges of $T$ intersects these edges at right angles.
-\end{subthm}
- 
-\end{thm}
-
-Claim~\ref{clm:total-angle} says that \textit{surfaces of convex polyhedra have nonnegative curvature} in the sense of the above definition.
-Now we show that this definition agrees with the 4-point comparison.
-
-\begin{thm}{Proposition}\label{prop:poly-CBB}
-A polyhedral surface with nonnegative curvature at each vertex is $\Alex0$.
-\end{thm}
-
-\parit{Proof.}
-Denote the surface by $\Sigma$.
-By \ref{comp-kappa}, it is sufficient to check that 
-$\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and a point $p$ in $\Sigma$.
-
-We can assume that $p$ is not a vertex;
-the vertex case can be done by approximation.
-Applying the same argument as in \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.
-
-Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
-Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
-Therefore a small neighborhood of $U\supset [px]$ can be unfolded on a plane;
-that is, there is an injective length-preserving map $z\mapsto \tilde z$
-of $U$ into the Euclidean plane.
-This way we map part of $\gamma$ in $U$ to a line segment $\tilde\gamma$.
-Let 
-\[\tilde f(t)\df\tfrac12\cdot\distfun_{\tilde p}^2\circ\tilde \gamma(t).\]
-Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
-Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get 
-$\tilde f(t)\ge f(t)$ if $t$ is sufficiently close to $t_0$.
-That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$.
-Evidently, $\tilde f''\equiv 1$; therefore $f''\le 1$.
-It remains to apply \ref{comp-kappa}.
-\qeds
-
-\begin{thm}{Exercise}\label{ex:poly-CBB}
-Prove the converse to the proposition;
-that is, show that if a poyhedral surface is $\Alex0$, then it has nonnegative curvature in the sense defined in this section.
-\end{thm}
 
 \section{Surface of convex body}
 
