@@ -1,43 +1,4 @@
- \section{Uniqueness}
 
-Alexandrov's uniqueness theorem states that the conclusion of the Cauchy theorem (\ref{thm:cauchy}) still holds without the face-to-face assumption.
-
-\begin{thm}{Theorem}\label{thm:alexandrov-uni'}
-Any two convex polyhedrons in $\EE^3$ with isometric surfaces are congruent.
-
-Moreover, any isometry between surfaces of convex polyhedrons can be extended to an isometry of the whole $\EE^3$.
-\end{thm}
-
-\parit{Needed modifications in the proof of Cauchy's theorem.}
-Suppose $\iota\:P\to P'$ be an isometry between surfaces of $K$ and $K'$.
-Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$; further, these will be called \index{fake edge}\emph{fake} edges.
-The marked lines divide $P$ into convex polygons, and the restriction of $\iota$ to each polygon is a rigid motion.
-These polygons should be used instead of faces in the proof of \ref{thm:cauchy}.
-
-A vertex of the obtained graph can be a vertex of $K$, or it can be a fake vertex;
-that is, it might be an intersection of an edge and a fake edge.
-
-\begin{figure}[ht!]
-\vskip-0mm
-\centering
-\includegraphics{mppics/pic-50}
-\vskip-0mm
-\end{figure}
-
-For the first type of vertex, the local lemma can be proved the same way.
-For a fake vertex $v$, it is easy to see that both parts of the edge coming thru $v$ are marked with minus
-while both of the fake edges at $v$ are marked with plus.
-Therefore, the local lemma holds for the fake vertices as well.
-
-The remaining parts of the proof need no modifications.
-\qeds
-
-\begin{thm}{Exercise}\label{pr:K-P-simmetry}
-Let $K$ be a convex polyhedron in $\EE^3$;
-denote by $P$ its surface.
-Show that each isometry $\iota\:P\z\to P$,
-can be extended to an isometry of $\EE^3$.
-\end{thm}
 
 \section{Existence}\label{sec:Alexandrov-existence}
 
