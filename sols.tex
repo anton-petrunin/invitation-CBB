@@ -1222,7 +1222,7 @@ Since the coordinates are smooth we get that $\gamma^+(t)$ is defined as well.
 
 \parit{\ref{SHORT.ex:liberman+milka:milka}.}
 If the plane $py_1y_2$ supports $K$, then 
-$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_S$.
+$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_P$.
 In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
 
 Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
@@ -1233,7 +1233,7 @@ Now consider the one-parameter family of points
 This family is not necessarily continuous; note that $y_i(0)=y_i$ and $y_i(1)=x_i$.
 
 Show that for any point $q\in K$, the function $t\mapsto \dist{q}{y_i(t)}{\EE^3}$ is nonincreasing.
-Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in S$.
+Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in P$.
 Therefore, 
 \begin{align*}
 \dist{y_1}{y_2}{W}
@@ -1243,9 +1243,9 @@ Therefore,
 \\
 &\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge
 \\
-&\ge\dist{x_1}{x_2}{S}.
+&\ge\dist{x_1}{x_2}{P}.
 \end{align*}
-The last inequality follows since the closest point projection $W\to S$ is short.
+The last inequality follows since the closest point projection $W\to P$ is short.
 
 \begin{wrapfigure}{o}{28mm}
 \vskip-3mm
@@ -1260,12 +1260,12 @@ In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that l
 $py_1y_2$ and contains its vertex $p$.
 
 Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches~$F$.
-Denote by $x_1'\in [px_1]_{S}$ and $x_2'\in [px_2]_{S}$ the corresponding points;
-that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}S$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}S$.
-From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}S$;
+Denote by $x_1'\in [px_1]_{P}$ and $x_2'\in [px_2]_{P}$ the corresponding points;
+that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}P$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}P$.
+From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}P$;
 in other words, 
 \[\angk p{y_1'}{y_2'}\ge \angk p{x_1'}{x_2'};\]
-here we think of  $[p{y_1'}{y_2'}]$ as a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ as a triangle in $S$.
+here we think of  $[p{y_1'}{y_2'}]$ as a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ as a triangle in $P$.
 Note that 
 \[\angk p{y_1'}{y_2'}=\angk p{y_1}{y_2}
 \quad\text{and}\quad
@@ -1280,3 +1280,66 @@ It was originally proved by Joseph Liberman \cite{liberman}; the proof of \ref{e
 
 Part~\ref{SHORT.ex:liberman+milka:milka} is a result of Anatolii Milka \cite[Theorem 2]{milka1982}.
 
+\parbf{\ref{ex:arm-nonconvex}.}
+
+\parbf{\ref{ex:cauchy}.}
+
+\parbf{\ref{ex:arm'}};
+\ref{SHORT.ex:bow'+}.
+We can assume that $a_0=a'_0$ is the origin, $a_1=a'_1$ lies on the positive part of the $x$-axis,
+and the points $a_n$ and $a'_n$ lie in the upper half-plane of the $(x,y)$-plane.
+
+Suppose $\mangle a_0<\mangle a_0'$.
+Find a point $x$ such that
+$\dist{x}{a_n}{}<\dist{x}{a_n'}{}$, and $[x a_0\dots a_n]$ is a convex polygon in the $(x,y)$-plane.
+(Here you have to use that $\mangle a_n\le\tfrac\pi2$.)
+
+{
+
+\begin{wrapfigure}{r}{47 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-1118}
+\vskip0mm
+\end{wrapfigure}
+
+Apply the arm lemma (\ref{lem:arm}) to $[x a_0\dots a_n]$ and $[x a_0'\dots a_n']$, and arrive at a contradiction.
+
+\parit{\ref{SHORT.ex:bow'-}.} Look at the picture and think.
+
+}
+
+\parbf{\ref{ex:a<a}.}
+Apply the angle monotonicity (\ref{angle-monotonicity}) couple of times.
+
+\parbf{\ref{ex:disc-bend}.}
+
+\parit{Source:} The second part of the exercise was added by Viktor Zalgaller to the translation of Alexandrov's book \cite{alexandrov}.
+More statements of this type can be found in Zalgaller's classification of convex polyhdra with regular faces \cite{zalgaller}.
+
+\parbf{\ref{ex:octahedron}.}
+
+\parbf{\ref{ex:disc}.}
+The exercise can be deduces from the Riemann mapping theorem.
+Let us sketch the proof sugested by Fedor Petrov \cite{petrov};
+it only used Jordan's theorem.
+
+\medskip
+
+It is sufficient to prove that an open simply connected domain $\Omega$ of the plane is homeomorphic to an open disc.
+Let us represent $\Omega$ as a union $P_1\cup P_2\cup\ldots$, where all $P_i$ are (closed) polygons and $P_i\Subset P_{i+1}$ for all $i$; that is $P_i$ lies in the interior of $P_{i+1}$.
+Apply the Jordan's theorem couple of times to show that there is a sequence of homeomorphisms $f_i$ form $P_i$ to the closed disc of radius $1-\tfrac1{2^i}$ such that $f_{i+1}$ extends $f_i$.
+Given $x\in \Omega$, set $f(x)=f_i(x)$ for all sufficiently large $i$.
+Observe that $f$ is a homeomorphism from $\Omega$ to the open unit disc.
+
+Now, let us recursively construct our system of polygons.
+Note that $\Omega$ can be presented as a union of a countable collection of coordinate squares, say $S_1,S_2,\dots$
+Set $P_1=S_1$.
+Suppose $P_1,\dots,P_{i-1}$ are constructed,
+Add to $P_{i-1}$ several squares that cover its boundary together with $S_i$.
+If necessary, add to it a finite number of squares so that the union becomes connected.
+The obtained set may contain holes, but since $\Omega$ is simply connected everything in holes belongs to $\Omega$, add all this to the set.
+Denote the obtained set by $P_i$.
+
+
+\parbf{\ref{pr:K-P-simmetry}.}

@@ -1,39 +1,38 @@
-\chapter{Convex polyhedra}\label{chap:alex-embedding}
+\chapter{Polyhedral surfaces}\label{chap:alex-embedding}
 
-In this lecture we discuss intrisic geometry of surfaces of convex polyhedra.
-We will prove the Cauchy theorem, and then modify it to prove the Alexandrov uniqueness theorem.
+In this lecture we discuss intrisic geometry of surfaces of convex polyhedra and convex bodies.
+Furhter, we prove the Cauchy theorem, and then modify the proof to get the Alexandrov uniqueness theorem.
 
-\section{Surface of convex polyhedra}
+\section{Surface of convex polyhedron}
 
 Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^3$ with non-empty interior.
-
 The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
 
 \begin{thm}{Exercise}\label{ex:surf-S2}
-Show that the surface of a convex body is homeomorphic to $\SSS^2$.
+Show that the surface of a convex body is homeomorphic to the 2-dimensional sphere.
 \end{thm}
 
 A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
 
-The surface, say $\Sigma$, of a convex polyhedron $P$ admits a finite triangulation such that each triangle is isometric to a plane triangle.
-In other words, $\Sigma$ is a closed \index{polyhedral surface}\emph{polyhedral surface};
+The surface, say $P$, of a convex polyhedron $K$ admits a finite triangulation such that each triangle is isometric to a plane triangle.
+In other words, $P$ is a closed \index{polyhedral surface}\emph{polyhedral surface};
 that is, it is a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
 
-The total angle around a vertex $v$ in $\Sigma$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
+The total angle around a vertex $v$ in $P$ is defined as the sum of angles at $v$ of all triangles in the triangulation that contain $v$.
 
-If a point $p\in \Sigma$ is not a vertex of $P$,
+If a point $p\in P$ is not a vertex of $K$,
 then
 \begin{itemize}
-\item $p$ lies in the interior of a face of $P$, and its neighborhood in $\Sigma$ is a piece of plane, or
+\item $p$ lies in the interior of a face of $K$, and its neighborhood in $P$ is a piece of plane, or
 \item $p$ lies on an edge, and its neighborhood is two half-planes glued along the boundary.
 \end{itemize}
-In both cases, a neighborhood of $p$ in $\Sigma$ (with the induced length metric) is isometric to an open domain of the plane.
+In both cases, a neighborhood of $p$ in $P$ (with the induced length metric) is isometric to an open domain of the plane.
 In this case, the total angle around $p$ will be defined to be $2\cdot\pi$.
 
 \begin{thm}{Claim}\label{clm:total-angle}
-Let $\Sigma$ be the surface of a convex polyhedron $P$.
-Then, the total angle around any point in $\Sigma$ cannot exceed $2\cdot\pi$.
+Let $P$ be the surface of a convex polyhedron $K$.
+Then, the total angle around any point $p\in P$ cannot exceed $2\cdot\pi$.
 \end{thm}
 
 The proof relies on the triangle inequality for angles (or the spherical triangle inequality).
@@ -48,7 +47,7 @@ Moreover, in the case of equality, the three solid angles spanned by $w_1$, $w_2
 \end{thm}
 
 \parit{Proof of \ref{clm:total-angle}.}
-Consider the intersection of $P$ with a small sphere centered at~$p$;
+Consider the intersection of $K$ with a small sphere centered at~$p$;
 it is a convex spherical polygon, say $F$.
 Applying rescaling we may assume that the sphere has unit radius.
 Then we need to show that the perimeter of $F$ does not exceed $2\cdot\pi$.
@@ -74,9 +73,9 @@ By the spherical triangle inequality (\ref{ex:angle-triangle}), we have
 A vertex of a triangulation of a polyhedral surface is called \index{essential vertex}\emph{essential} if the total angle around it is not $2\cdot\pi$.
 
 \begin{thm}{Exercise}\label{ex:vertex-essential-vertex}
-Let $v$ be a point on the surface $\Sigma$ of a convex polyhedron $P$.
-Show that $v$ is a vertex of $P$ if and only if
-$v$ is an essential vertex of $\Sigma$.
+Let $v$ be a point on the surface $P$ of a convex polyhedron $K$.
+Show that $v$ is a vertex of $K$ if and only if
+$v$ is an essential vertex of $P$.
 \end{thm}
 
 
@@ -86,9 +85,9 @@ Show that geodesics on the surface of a convex polyhedron may have essential ver
 
 \section{Curvature}
 
-Let $p$ be a point on the surface of a (possibly nonconvex) polyhedron, and $\theta_p$ is the total angle around $p$.
+Let $p$ be a point on a polyhedral surface, and $\theta_p$ is the total angle around $p$.
 The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
-If $p$ is not a vertex, then its curvature is defined to be zero.
+Note that if $p$ is not a vertex in a triangulation of $P$, then its curvature is zero.
 
 \begin{thm}{Exercise}\label{pr:tetrahedron}
 Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
@@ -111,16 +110,16 @@ A polyhedral surface with nonnegative curvature at each vertex is $\Alex0$.
 \end{thm}
 
 \parit{Proof.}
-Denote the surface by $\Sigma$.
+Denote the surface by $P$.
 By \ref{comp-kappa}, it is sufficient to check that
-$\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and a point $p$ in $\Sigma$.
+$\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and any point $p$ in $P$.
 
 We can assume that $p$ is not a vertex;
 the vertex case can be done by approximation.
 Applying the same argument as in \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.
 
 Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
-Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
+Again, by the argument in \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
 Therefore a small neighborhood of $U\supset [px]$ can be unfolded on a plane;
 that is, there is an injective length-preserving map $z\mapsto \tilde z$
 of $U$ into the Euclidean plane.
@@ -129,7 +128,7 @@ Let
 \[\tilde f(t)\df\tfrac12\cdot\distfun_{\tilde p}^2\circ\tilde \gamma(t).\]
 Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
 Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get
-$\tilde f(t)\ge f(t)$ if $t$ is sufficiently close to $t_0$.
+$\tilde f(t)\ge f(t)$ if $t$ if the left-hand side is defined.
 That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$.
 Evidently, $\tilde f''\equiv 1$; therefore $f''\le 1$.
 It remains to apply \ref{comp-kappa}.
@@ -140,12 +139,46 @@ Prove the converse to the proposition;
 that is, show that if a poyhedral surface is $\Alex0$, then it has nonnegative curvature in the sense defined in this section.
 \end{thm}
 
+\section{Surface of convex body}
+
+\begin{thm}{Advanced exercise}\label{ex:surface-covergence}
+Let $K_1,K_2,\dots,$ and $K_\infty$ be convex bodies in $\EE^m$.
+Denote by $P_n$ the surface of $K_n$ with induced length metric.
+Suppose $K_n\z\to K_\infty$ in the sense of Hausdorff.
+Show that $P_n\to P_\infty$ in the sense of Gromov--Hausdorff.
+\end{thm}
+
+Any convex body is a Hausdorff limit of a sequence of convex polyhedra.
+Therefore, the next proposition follows from \ref{prop:poly-CBB}, \ref{ex:surface-covergence}, and \ref{thm:CBB-closed}.
+
+\begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
+The surface of a convex body in $\EE^3$ is $\Alex0$.
+\end{thm}
+
+\begin{thm}{Very advanced exercise}\label{ex:liberman+milka}
+Let $P$ be the surface of a nondegenerate convex body $K\subset\EE^3$;
+we assume that $P$ is equipped with the induced length metric.
+
+\begin{subthm}{ex:liberman+milka:liberman}
+Show that any geodesic $\gamma$ in $P$ is one-sided differentiable as a curve in $\EE^3$
+\end{subthm}
+
+\begin{subthm}{ex:liberman+milka:milka}
+Let $\gamma_1$ and $\gamma_2$ be geodesic paths in $P$ that start at one point $p\z=\gamma_1(0)\z=\gamma_2(0)$.
+Suppose $x_i=\gamma_i(1)$, and $y_i\z=p+\gamma_i^+(0)$.
+Show that
+\[\dist{x_1}{x_2}{P}\le \dist{y_1}{y_2}{W},\]
+where $W$ is the complement to the interior of $K$.
+\end{subthm}
+
+\end{thm}
+
 
 \section{Cauchy theorem}
 
 Recall that \textit{surfaces} of convex polyhedrons are considered with the induced length metric.
  
-\begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be two non-degenerate convex polyhedrons in $\EE^3$;
+\begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be convex polyhedrons in $\EE^3$;
 denote their surfaces 
 by $P$ and $P'$.
 Suppose there is an isometry $P\to P'$ that sends each face of $K$ to a face of $K'$.
@@ -154,15 +187,15 @@ Then $K$ is congruent to $K'$; moreover the isometry $P\to P'$ can be extended t
 
 \parit{Proof modulo two lemmas.}
 Consider the graph $\Gamma$ formed by the edges of $K$;
-the edges of $K'$ form an isomorphic graph.
+the edges of $K'$ form a naturally isomorphic graph.
  
-For an edge $e$ in $\Gamma$, denote by $\alpha_e$ and $\alpha'_e$ the corresponding dihedral angles in $K$ and $K'$, respectively.
+For an edge $e$ in $\Gamma$, denote by $\alpha_e$ and $\alpha'_e$ the dihedral angles in $K$ and $K'$, respectively.
 Mark $e$ by plus if $\alpha_e < \alpha'_e$ and by minus if $\alpha_e > \alpha'_e$.
 
 Let us remove from $\Gamma$ everything that is not marked;
 that is, leave only the edges marked by $(+)$ or $(-)$ and their endpoints.
 If $\Gamma$ is an empty graph, then the theorem follows.
-Now assume the contrary.
+Let us assume the contrary.
 
 The graph $\Gamma$ is embedded into $P$, which is homeomorphic to the sphere.
 In particular, the edges coming from one vertex have a natural cyclic order. 
@@ -186,11 +219,9 @@ It remains to prove these two lemmas.
 \qeds
 
 
-\section{Local lemma}
+\section{Arm lemma}
 
-The following lemma is the main ingredient in our proof of the local lemma.
-
-\begin{thm}{Arm lemma}\label{lem:arm}
+\begin{thm}{Lemma}\label{lem:arm}
 Assume that $A=[a_0 a_1\dots a_n]$ is a convex polygon in $\EE^2$
 and $A'=[a'_0 a'_1\dots a'_n]$ be a polygonal line in $\EE^3$
 such that 
@@ -205,13 +236,14 @@ and equality holds if and only if $A$ is congruent to $A'$.
 
 One may view the polygonal lines $[a_0a_1\dots a_n]$ and $[a'_0a'_1\dots a'_n]$ as a robot's arm in two positions.
 Informally speaking, the arm lemma says that when the arm opens,
-the distance between the shoulder and tip of a finger increases. 
+the distance between the shoulder and tip of a finger increases;
+assuming that starting position a convex plane polygon.
 
 \begin{thm}{Exercise}\label{ex:arm-nonconvex}
 Show that the arm lemma does not hold if 
 instead of the convexity,
 one only the local convexity;
-that is, if you go along the polygonal line $a_0 a_1\dots a_n$, then you only turn left.
+that is, if we assume only that the polygonal line $a_0 a_1\dots a_n$ turns only left.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:cauchy}
@@ -253,7 +285,7 @@ where $k=n-m$.
 Without loss of generality, we may assume that
 \begin{itemize}
 \item $a_0=a'_0$ and they both coincide with the origin in $\EE^3$;
-\item all $a_i$ lie in the $xy$-plane and the $x$-axis is parallel to the line $(a_{-m}a_k)$;
+\item all $a_i$ lie in the $xy$-plane and the $x$-axis is parallel to the line $a_{-m}a_k$;
 \item the angle $\measuredangle a'_0$ lies in $xy$-plane and contains the angle $\measuredangle a_0$ inside so that the directions to $a'_{-1}$,$a_{-1}$, $a_{1}$ and $a'_{1}$ from $a_0$ appear in the same cyclic order.
 \end{itemize}
 
@@ -296,7 +328,7 @@ From convexity of $[a_1 a_1\dots a_i]$, we have
 $$\sigma_i=\sigma_1+(\pi-\measuredangle a_1)+\dots+(\pi-\measuredangle a_i)$$
  for any $i>0$.
 Since $\measuredangle (w'_{i-1},w'_i)=\pi -\measuredangle a'_i$,
-applying \ref{ex:angle-triangle} several times,
+applying the triangle inequality for angles (\ref{ex:angle-triangle}) several times,
 we get
 $$\sigma'_i\le\sigma'_1+(\pi-\measuredangle a'_1)+\dots+(\pi-\measuredangle a'_i).$$
 Since $\measuredangle a'_j\ge \measuredangle a_j$ for each $j$, we get
@@ -306,13 +338,28 @@ Applying \ref{eq:proj}, we get \ref{eq:|bb|=<|aa|}.
 
 In the case of equality, we have $\sigma_i=\sigma'_i$,
 which implies $\measuredangle a_i=\measuredangle a'_i$ for each $i$.
-This also implies that all $a'_i$ lie in $xy$-plane.
+This also implies that all $A'$ is a convex polygonal lien in the $xy$-plane.
 The latter easily follows from the equality case in \ref{ex:angle-triangle}.
 \qeds
+
+\begin{thm}{Advanced exercise}\label{ex:arm'}
+Let $A$ and $A'$ be as in the arm lemma (\ref{lem:arm}).
+
+\begin{subthm}{ex:bow'+}
+Suppose that $\measuredangle \hinge{a_n}{a_{n-1}}{a_0}\le\tfrac\pi2$.
+Show that $\measuredangle \hinge{a_0}{a_1}{a_n}\ge \measuredangle \hinge{a_0'}{a_1'}{a_n'}$.
+\end{subthm}
+
+\begin{subthm}{ex:bow'-} Show that the inequality $\measuredangle \hinge{a_0}{a_1}{a_n}\ge \measuredangle \hinge{a_0'}{a_1'}{a_n'}$ does not hold in general.
+\end{subthm}
+
+\end{thm}
+
+\section{Proof of local lemma}
  
 \parit{Proof of the local lemma (\ref{lem:local}).}
 Assume that the local lemma does not hold at the vertex $v$ of $\Gamma$.
-Cut from $P$ a small pyramid $\Delta$ with the vertex~$v$.
+Choose a plane that cuts from $P$ a small pyramid $\Delta$ with the vertex~$v$.
 One can choose two points $a$ and $b$ on the base of $\Delta$
 so that on one side of the segments $[va]$ and $[vb]$ we have only pluses
 and on the other side only minuses.
@@ -365,7 +412,7 @@ that is, $v$ is not a vertex of $\Gamma$
 \qeds
 
 From the proof, it follows that the local lemma is indeed local --- it works for two nonconguent convex polyhedral angles with equal corresponding faces.
-Use this observation to solve the following exercise.
+Use this observation in the following exercise.
 
 \begin{wrapfigure}{r}{20mm}
 \vskip-0mm
@@ -390,17 +437,7 @@ Show that the second configuration has a rotational symmetry with the axis passi
 
 \end{thm}
 
-\section{Global lemma}
-
-The proof of the global lemma is based on counting the sign changes 
-in two ways;
-first while moving around each vertex of $\Gamma$ 
-and second while moving around each of the regions separated by $\Gamma$
-on the surface~$P$. 
-If two edges are adjacent at a vertex,
-then they are also adjacent in a region. 
-The converse is true as well. 
-Therefore, both countings give the same number.
+\section{Proof of global lemma}
 
 It is instructive to do the next exercise before diving into the proof.
 
@@ -412,11 +449,22 @@ such that there would be 4 sign changes at each vertex.
 Show that this is impossible.
 \end{thm}
 
+The proof of the global lemma is based on counting the sign changes
+in two ways;
+first while walking around each vertex of $\Gamma$
+and second while moving around each of the regions separated by $\Gamma$
+on the surface~$P$.
+If two edges are adjacent at a vertex,
+then they are also adjacent in a region.
+The converse is true as well.
+Therefore, both countings give the same number.
+
 \parit{Proof of \ref{lem:global}.}
 We can assume that $\Gamma$ is connected;
 that is, one can get from any vertex to any other vertex by walking along edges.
 (If not, pass to a connected component of $\Gamma$.)
 
+We can assume that $\Gamma$ is embedded in the sphere.
 Denote by $k$ and $l$ the number of vertices and edges in $\Gamma$.
 Denote by $m$ the number of \textit{regions} that $\Gamma$ cuts from $P$.
 Since $\Gamma$ is connected, each region is homeomorphic to an open disc.
@@ -433,16 +481,16 @@ Denote by $s$ the total number of sign changes in $\Gamma$ for all vertices.
 By the local lemma (\ref{lem:local}), we have 
 $$ 4\cdot k\le s.\eqlbl{eq:S>=4k}$$
 
-Let us get an upper bound on $s$ by counting the number of sign changes when one travels around
+Let us get an upper bound on $s$ by counting the number of sign changes when one walks around
 each region. 
 Denote by $m_n$ the number of regions bounded by $n$ edges;
 if an edge appears twice when it is counted twice.
 Note that each region is bounded by at least $3$ edges;
 therefore
 $$m=m_3+m_4+m_5+\dots\eqlbl{eq:3-4-5}$$
-Counting edges and using the fact that each edge belongs to exactly two regions, we get
+Since edge belongs to exactly two regions, we get
 $$2\cdot l=3\cdot m_3+ 4\cdot m_4+5\cdot m_5+\dots$$
-Combining this with Euler's formula (\ref{eq:cauchy:euler}), we get
+Combining this with Euler's formula \ref{eq:cauchy:euler}, we get
 $$4\cdot k=8+2\cdot m_3+4\cdot m_4+6\cdot m_5+8\cdot m_6+\dots
 \eqlbl{eq:k=2+}$$
 Observe that the number of sign changes in $n$-gon regions has to be even and $\le n$.
@@ -453,7 +501,7 @@ Clearly, \ref{eq:S>=4k} and \ref{eq:23-44-45} contradict \ref{eq:k=2+}.
 \qeds
 
 
-\section{Uniqueness}
+\section{Alexandrov uniqueness theorem}
 
 Alexandrov's uniqueness theorem states that the conclusion of the Cauchy theorem (\ref{thm:cauchy}) still holds without the face-to-face assumption.
 
@@ -463,9 +511,14 @@ Any two convex polyhedrons in $\EE^3$ with isometric surfaces are congruent.
 Moreover, any isometry between surfaces of convex polyhedrons can be extended to an isometry of the whole $\EE^3$.
 \end{thm}
 
-\parit{Needed modifications in the proof of Cauchy's theorem.}
-Suppose $\iota\:P\to P'$ be an isometry between surfaces of $K$ and $K'$.
-Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$; further, these will be called \index{fake edge}\emph{fake} edges.
+Instead of proof we list the modifications needed in the proof of Cauchy's theorem.
+
+\parit{List of modifications in the proof of \ref{thm:cauchy}.}
+Suppose $\iota\:P\z\to P'$ be an isometry between surfaces of $K$ and $K'$.
+Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$.
+It might happen that an edge in $K'$ does not correspond to an edge in $K$;
+it this case its inverse image in $K$ will be called a \index{fake edge}\emph{fake edge} of $K$.
+
 The marked lines divide $P$ into convex polygons, and the restriction of $\iota$ to each polygon is a rigid motion.
 These polygons should be used instead of faces in the proof of \ref{thm:cauchy}.
 
@@ -495,24 +548,23 @@ can be extended to an isometry of $\EE^3$.
 \end{thm}
 
 
-\section{Comments}
+\section{Remarks}
 
 This lecture contains selected material from Alexandrov's book~\cite{alexandrov}.
 
 In Euclid's Elements, 
-solids were called equal if the same holds for their faces, but no proof was given.
+solids were claimed to be equal if the same holds for their faces, but no proof was given.
 Adrien-Marie Legendre became interested in this problem towards the end of the 18th century.
 He discussed it with his colleague Joseph-Louis Lagrange, who suggested this problem to Augustin-Louis Cauchy in 1813; soon he proved it \cite{cauchy}.
 This theorem is included in many popular books \cite{aigner-zigler,dolbilin,tabacnikov-fuks}.
-
-The observation that the face-to-face condition can be removed was made by 
+The key observation that the face-to-face condition can be removed was made by
 Alexandr Alexandrov \cite{alexandrov-1941}.
 
 \parit{Arm lemma.}
-Original Cauchy's proof \cite{cauchy}
-also used a version of the arm lemma, but its proof contained a small mistake (corrected in one century).
+Cauchy's proof \cite{cauchy}
+also used a version of the arm lemma, but its proof contained a small mistake that was corrected in a century \cite{sabitov}.
 
-Several proofs of the arm lemma can be found in the letters between him and Isaac Schoenberg \cite{schoenberg-zaremba}.
+Several proofs of the arm lemma can be found in the letters between Isaac Schoenberg and Stanisław Zaremba \cite{schoenberg-zaremba}.
 
 The following variation of the arm lemma makes sense for nonconvex spherical polygons.
 It is due to Viktor Zalgaller \cite{zalgaller}.
@@ -526,8 +578,26 @@ and each angle of $A$ is at least the corresponding angle in $A'$.
 Then $A$ is congruent to~$A'$. 
 \end{thm}
 
-Another close relative of the arm lemma is Reshetnyak's majorization theorem \cite{alexander-kapovitch-petrunin-2019}.
+Another close relative of the arm lemma is Reshetnyak's majorization theorem \cite{reshetnyak}.
 
 \parit{Global lemma.}
 A more visual proof of the global lemma is given in \cite[II \S 1.3]{alexandrov}.
 This argument reused by Anton Klyachko \cite{klyachko} in his \index{car-crash lemma}\emph{car-crash lemma}.
+
+\parit{Approximation.}
+Proposition \ref{prop:conv-surf-CBB(0)} generalizes to boundaries of convex bodies  in $\EE^m$ for any $m\ge 2$.
+This could be considered as a partial case of the conjecture about boundary of Alexandrov space; see \ref{conj:bry}.
+Another partial case is proved by the authors and Stephanie Alexander \cite{alexander-kapovitch-petrunin-2008}.
+
+\parit{Existance theorem.}
+\ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that the surface of a convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
+The celebrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
+the surface of a plane figure is defined as its doubling across the boundary.
+In other words, any $\Alex0$ metric on the two-sphere is isometric to a surface of a (possibly degenerate) convex body.
+Moreover this convex body is unique up to congruence.
+The last part is due to Alexei Pogorelov \cite{pogorelov}.
+
+Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketched in the appendix.
+Then he used approximation to extend the result to  arbitrary $\Alex0$ metrics on the sphere.
+
+

@@ -1652,6 +1652,31 @@ label.ulft(btex $y'_2$ etex, z.yy2);
 whitelabel(btex $F$ etex, .7[z.p,z.z]+(1,-1));
 endfig;
 
+beginfig(1118)
+save u,p;
+path p[];
+u:=1cm;
+
+z.a0=(-2,.7)*u;
+z.a1=origin;
+z.a2=(-1,.7)*u;
+z.aa2=z.a2 rotated -45;
+
+draw z.a0--z.a1--z.a2;
+draw z.a1--z.aa2;
+draw z.a0--z.a2 dashed evenly;
+draw z.a0--z.aa2 dashed evenly;
+rimmark2(z.a1--z.a2,z.a1--z.aa2);
+
+dOt z.a0, z.a1, z.a2, z.aa2;
+
+label.lft(btex $a'_0=a_0$ etex, z.a0);
+label.rt(btex $a_1=a'_1$ etex, z.a1);
+label.urt(btex $a_2$ etex, z.a2);
+label.urt(btex $a'_2$ etex, z.aa2);
+
+endfig;
+
 beginfig(1160)
 save u,p;
 path p[];

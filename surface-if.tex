@@ -15,55 +15,9 @@ which is historically the first application of Alexandrov geometry.
 
 
 
-\section{Surface of convex body}
 
-\begin{thm}{Advanced exercise}\label{ex:surface-covergence}
-Let $K_1,K_2,\dots,$ and $K_\infty$ be convex bodies in $\EE^m$.
-Denote by $S_n$ the surface of $K_n$ with induced length metric.
-Suppose $K_n\z\to K_\infty$ in the sense of Hausdorff.
-Show that $S_n\to S_\infty$ in the sense of Gromov--Hausdorff.
-\end{thm}
-
-Any convex body is a Hausdorff limit of a sequence of convex polyhedra.
-Therefore, the next proposition follows from \ref{prop:poly-CBB}, \ref{ex:surface-covergence}, and \ref{thm:CBB-closed}.
-
-\begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
-The surface of a convex body in $\EE^3$ is $\Alex0$.
-\end{thm}
 
 
 \section{Remarks}
 
-\ref{ex:surf-S2} and \ref{prop:poly-CBB} imply that the surface of a convex body is a sphere with nonnegative curvature in the sense of Alexandrov.
-A celebrated theorem of Alexandrov states that the converse also holds if we allow degeneration of convex bodies to plane figures;
-the surface of a plane figure is defined as its doubling across the boundary.
-In other words, any $\Alex0$ metric on the two-sphere is isometric to a surface of a (possibly degenerate) convex body.
-Moreover this convex body is unique up to congruence.
-The last result is due to Alexei Pogorelov \cite{pogorelov}.
-
-Originally, Alexandrov proved the statement for polyhedral metrics on the sphere; this proof is sketched in the appendix.
-Then he used \ref{ex:surface-covergence} to extend the result to  arbitrary $\Alex0$ metrics on the sphere.
-
-Proposition \ref{prop:conv-surf-CBB(0)} generalizes to boundaries of convex bodies  in $\EE^m$ for any $m\ge 2$.
-This can be proved using \ref{ex:surface-covergence} by approximating a convex body by smooth ones.
-Boundaries of smooth convex bodies have nonnegative sectional curvature by the Gauss formula and hence are $\Alex0$.
-
-
-\begin{thm}{Advanced exercise}\label{ex:liberman+milka}
-Let $S$ be the surface of a nondegenerate convex body $K\subset\EE^3$;
-we assume that $S$ is equipped with the induced length metric.
-
-\begin{subthm}{ex:liberman+milka:liberman}
-Show that any geodesic $\gamma$ in $S$ is one-sided differentiable as a curve in $\EE^3$ 
-\end{subthm}
-
-\begin{subthm}{ex:liberman+milka:milka}
-Let $\gamma_1$ and $\gamma_2$ be geodesic paths in $S$ that start at one point $p\z=\gamma_1(0)\z=\gamma_2(0)$.
-Suppose $x_i=\gamma_i(1)$, and $y_i\z=p+\gamma_i^+(0)$.
-Show that 
-\[\dist{x_1}{x_2}{S}\le \dist{y_1}{y_2}{W},\]
-where $W$ is the complement to the interior of $K$.
-\end{subthm}
-
-\end{thm}
 
