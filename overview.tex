@@ -9,7 +9,7 @@ Also, the book by Alexey Pogorelov \cite{pogorelov1969} is very recommened, desp
 A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
 
-Note that acording to our definition, any polyhedral surface is closed.
+Note that according to our definition, any polyhedral surface is compact.
 
 Choose a point $p$ on a polyhedral surface $\spc{P}$.
 We can assume that $p$ is a vertex of a triangulation $\spc{P}$;
@@ -18,7 +18,8 @@ Denote by $\theta_p$ the total angle around $p$;
 that is, the sum of all angles at $p$ of all the triangles with vertex at $p$.
 
 Note that $\theta_p$ does not depend on the choice of triangulation.
-The value $2\cdot\pi-\theta_p$ is called \emph{curvature} at $p$.
+If $p$ is an interior point, then the value $2\cdot\pi-\theta_p$ is called \emph{curvature} at $p$.
+If $p$ lies on the boundary of $\spc{P}$, then the value $\pi-\theta_p$ is called \emph{inner turn} at $p$.
 
 A point with nonvanishing curvature will be called an \emph{essential vertex} of the surface.
 Observe that an essential vertex is a vertex in any triangulation.
@@ -30,7 +31,10 @@ Show that geodesics on a closed polyhedral surface with nonnegative curvature ma
 The following statement is an analog of the Gauss--Bonnet formula.
 
 \begin{thm}{Exercise}\label{ex:gauss-bonnet}
-Show that the sum of curvatures of a closed polyhedral surface $\spc{P}$ equals $2\cdot\pi\cdot\chi(\spc{P})$,
+Let $K(\spc{P})$ and $T(\spc{P})$ denote the sum of curvatures of all interior points
+and the sum of all inner turns of the boundary points a polyhedral surface $\spc{P}$.
+Show that
+\[K(\spc{P})+T(\spc{P})=2\cdot\pi\cdot\chi(\spc{P}),\]
 where $\chi(\spc{P})$ denotes the Euler characteristic of $\spc{P}$.
 \end{thm}
 

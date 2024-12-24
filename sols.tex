@@ -1159,12 +1159,11 @@ It remains to apply \ref{prop:poly-CBB}.
 
 \parit{\ref{SHORT.ex:approximation:diangle}.}
 Suppose $\ell=\length\gamma_1$, and $\gamma_1$ is parametrized by $[0,\ell]$.
-Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{}$.
-Show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
-Make a conclusion.
-
-(With a bit more work, one can improve the inequality to
-\[\cos \omega\cdot \length \gamma_1\le \length \gamma_0.)\]
+Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{\Upsilon}$.
+Apply the Gauss--Bonnet formula (\ref{ex:gauss-bonnet})
+to show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
+Observe that $f$ is Lipschitz and make a conclusion.\footnote{With a bit more work, one can improve the inequality to
+\[\cos \tfrac\omega2\cdot \length \gamma_1\le \length \gamma_0.\]}
 
 \parit{\ref{SHORT.ex:approximation:excess}.} Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
 
