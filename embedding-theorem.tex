@@ -1,3 +1,4 @@
+%%!TEX root = invitation-CBB.tex
 \chapter{Polyhedral surfaces}\label{chap:alex-embedding}
 
 In this lecture we discuss intrisic geometry of surfaces of convex polyhedra and convex bodies.
@@ -36,7 +37,7 @@ Then, the total angle around any point $p\in P$ cannot exceed $2\cdot\pi$.
 \end{thm}
 
 The proof relies on the triangle inequality for angles (or the spherical triangle inequality).
-It follows from \ref{claim:angle-3angle-inq}, but our proof of this statement is a straightforward generalization of the argument in the classical geometry textbook \cite[§ 47]{kiselev-stereo-en} that proves following staement.
+It follows from \ref{claim:angle-3angle-inq}, but our proof of this statement is a straightforward generalization of the argument in the classical geometry textbook \cite[§ 47]{kiselev-stereo-en} that proves the following statement.
 
 \begin{thm}{Spherical triangle inequality}\label{ex:angle-triangle}
 Let $w_1,w_2,w_3$ be unit vectors in $\EE^3$.
@@ -217,7 +218,7 @@ Given a vertex $v$ of $\Gamma$, count the \textit{number of sign changes} around
 that is, the number of consequent pairs edges with different signs. 
 
 \begin{thm}{Local lemma}\label{lem:local}
-For any vertex of $\Gamma$ the number of sign changes is at least $4$.
+For any vertex of  $\Gamma$ the number of sign changes is at least $4$.
 \end{thm}
 
 In other words, at each vertex of $\Gamma$, one can choose 4 edges marked by $(+)$, $(-)$, $(+)$, $(-)$ in the same cyclical order.
@@ -226,7 +227,7 @@ Note that the local lemma contradicts the following.
 \begin{thm}{Global lemma}\label{lem:global}
 Let $\Gamma$ be a nonempty planar graph.
 Then it is impossible to mark all of the edges of $\Gamma$ by $(+)$ or $(-)$
-such that the number of sign changes around each vertex of $\Gamma$ is at least $4$.
+in such a way  that the number of sign changes around each vertex of $\Gamma$ is at least $4$.
 \end{thm}
 
 It remains to prove these two lemmas.
@@ -352,7 +353,7 @@ Applying \ref{eq:proj}, we get \ref{eq:|bb|=<|aa|}.
 
 In the case of equality, we have $\sigma_i=\sigma'_i$,
 which implies $\measuredangle a_i=\measuredangle a'_i$ for each $i$.
-This also implies that all $A'$ is a convex polygonal lien in the $xy$-plane.
+This also implies that all $A'$ is a convex polygonal line in the $xy$-plane.
 The latter easily follows from the equality case in \ref{ex:angle-triangle}.
 \qeds
 
@@ -528,7 +529,7 @@ Moreover, any isometry between surfaces of convex polyhedrons can be extended to
 Instead of proof we list the modifications needed in the proof of Cauchy's theorem.
 
 \parit{List of modifications in the proof of \ref{thm:cauchy}.}
-Suppose $\iota\:P\z\to P'$ be an isometry between surfaces of $K$ and $K'$.
+Suppose $\iota\:P\z\to P'$  is an isometry between surfaces of $K$ and $K'$.
 Mark in $P$ all the edges of $K$ and all the inverse images of edges in $K'$.
 It might happen that an edge in $K'$ does not correspond to an edge in $K$;
 it this case its inverse image in $K$ will be called a \index{fake edge}\emph{fake edge} of $K$.
