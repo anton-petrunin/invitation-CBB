@@ -1,3 +1,82 @@
+\parbf{\ref{ex:arm'}};
+\ref{SHORT.ex:bow'+}.
+We can assume that $a_0=a'_0$ is the origin, $a_1=a'_1$ lies on the positive part of the $x$-axis,
+and the points $a_n$ and $a'_n$ lie in the upper half-plane of the $(x,y)$-plane.
+
+Suppose $\mangle a_0<\mangle a_0'$.
+Find a point $x$ such that
+$\dist{x}{a_n}{}<\dist{x}{a_n'}{}$, and $[x a_0\dots a_n]$ is a convex polygon in the $(x,y)$-plane.
+(Here you have to use that $\mangle a_n\le\tfrac\pi2$.)
+
+{
+
+\begin{wrapfigure}{r}{47 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-1118}
+\vskip0mm
+\end{wrapfigure}
+
+Apply the arm lemma (\ref{lem:arm}) to $[x a_0\dots a_n]$ and $[x a_0'\dots a_n']$, and arrive at a contradiction.
+
+\parit{\ref{SHORT.ex:bow'-}.} Look at the picture and think.
+
+}
+
+\parbf{\ref{ex:a<a}.}
+Apply the angle monotonicity (\ref{angle-monotonicity}) couple of times.
+
+\parbf{\ref{ex:disc-bend}.}
+
+\parit{Source:} The second part of the exercise was added by Viktor Zalgaller to the translation of Alexandrov's book \cite{alexandrov}.
+More statements of this type can be found in Zalgaller's classification of convex polyhdra with regular faces \cite{zalgaller}.
+
+\parbf{\ref{ex:octahedron}.}
+
+\parbf{\ref{ex:disc}.}
+The exercise can be deduces from the Riemann mapping theorem.
+Let us sketch the proof suggested by Fedor Petrov \cite{petrov};
+it only used Jordan's theorem.
+
+\medskip
+
+It is sufficient to prove that an open simply connected domain $\Omega$ of the plane is homeomorphic to an open disc.
+Let us represent $\Omega$ as a union $P_1\cup P_2\cup\ldots$, where all $P_i$ are (closed) polygons and $P_i\Subset P_{i+1}$ for all $i$; that is $P_i$ lies in the interior of $P_{i+1}$.
+Apply the Jordan's theorem couple of times to show that there is a sequence of homeomorphisms $f_i$ form $P_i$ to the closed disc of radius $1-\tfrac1{2^i}$ such that $f_{i+1}$ extends $f_i$.
+Given $x\in \Omega$, set $f(x)=f_i(x)$ for all sufficiently large $i$.
+Observe that $f$ is a homeomorphism from $\Omega$ to the open unit disc.
+
+Now, let us recursively construct our system of polygons.
+Note that $\Omega$ can be presented as a union of a countable collection of coordinate squares, say $S_1,S_2,\dots$
+Set $P_1=S_1$.
+Suppose $P_1,\dots,P_{i-1}$ are constructed,
+Add to $P_{i-1}$ several squares that cover its boundary together with $S_i$.
+If necessary, add to it a finite number of squares so that the union becomes connected.
+The obtained set may contain holes, but since $\Omega$ is simply connected everything in holes belongs to $\Omega$, add all this to the set.
+Denote the obtained set by $P_i$.
+
+
+\parbf{\ref{pr:K-P-simmetry}.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \parbf{\ref{ex:native}.}
 Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 

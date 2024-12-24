@@ -1115,22 +1115,65 @@ It remains to show that the perimeter of $\Delta$ cannot exceed $2\cdot\pi$.
 The latter follows from the Lytchak's problem \cite[3.3.5]{petrunin:survey};
 it states that if $\Delta$ as an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\z\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
 
-\parbf{\ref{ex:surf-S2}.}
-We can assume that the origin lies in the interior of the convex body.
-Consider the central projection from its surface, say $\Sigma$, to the sphere $\SSS^2$ centered at the origin.
-Show that this projection $\Sigma\to \SSS^2$ is a homeomorphism.
-
-\parbf{\ref{ex:vertex-essential-vertex}.}
-Follow the argument in \ref{clm:total-angle}.
-Show that the inequality is strict if and only if $F$ has opposite points.
-
-
 \parbf{\ref{ex:geodesic-vertex}.}
 Suppose a geodesic $\gamma$ passes thru a vertex $v$.
 Denote by $\alpha$ and $\beta$ the angles that $\gamma$ cuts at $v$.
 Since $v$ is essential, $\alpha+\beta<2\cdot\pi$.
 Therefore $\alpha<\pi$ or $\beta<\pi$.
 Arrive at a contradiction by showing that $\gamma$ is not length-minimizing.
+
+\parbf{\ref{ex:gauss-bonnet}.}
+Denote by $k$, $l$, and $m$ the number of vertices, edges, and triangles, respectively in a chosen triangulation of $P$.
+Note that
+\[2\cdot l=3\cdot m
+\qquad\text{and}\qquad
+k-l+m=\chi(P).\]
+The first identity follows since each edge appears in two triangles and each triangle has 3 edges;
+the second identity is the Euler's formula.
+
+Since each triangle contributes $\pi$ to the total sum of angles, we get that total curvature is $2\cdot\pi\cdot k-\pi\cdot m$.
+It remains to apply straightforward algebraic manipulations.
+
+\parbf{\ref{ex:poly-CBB}.}
+We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ at every vertex $p$ it at most $2\cdot\pi$.
+
+Assume that $\theta>2\cdot\pi$,
+let $\phi=\max\{\,\pi,\tfrac13\cdot\theta\,\}$.
+We can choose three points $x_1$, $x_2$, and $x_3$ close to $p$ such that
+$\mangle \hinge p{x_i}{x_j}=\phi$ for $i\ne j$.
+Since the points $x_i$ are close to $p$, we have $\mangle \hinge p{x_i}{x_j}=\angk p{x_i}{x_j}$.
+The latter contradicts $\EE^2$-comparison.
+
+\parbf{\ref{ex:approximation}};
+\ref{SHORT.ex:approximation:nbhd}.
+Apply \ref{cor:convex-nbhd}.
+
+\parit{\ref{SHORT.ex:approximation:triangulation}.}
+Observe that any chord divides a convex figure on $\spc{P}$ into two convex figure.
+Use it to show that union of two convex poygons can triangulated by convex triangles.
+Apply the last stattement recurcevely to a finite cove of $\spc{P}$ by convex polygons.
+
+\parit{\ref{SHORT.ex:approximation:poly}.}
+By comparison, $\tilde{\spc{P}}$ has nonnegative curvature.
+It remains to apply \ref{prop:poly-CBB}.
+
+\parit{\ref{SHORT.ex:approximation:diangle}.}
+Suppose $\ell=\length\gamma_1$, and $\gamma_1$ is parametrized by $[0,\ell]$.
+Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{}$.
+Show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
+Make a conclusion.
+
+(With a bit more work, one can improve the inequality to
+\[\cos \omega\cdot \length \gamma_1\le \length \gamma_0.)\]
+
+\parit{\ref{SHORT.ex:approximation:excess}.} Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
+
+\parit{\ref{SHORT.ex:approximation:length}.} Apply the angle comparison.
+
+\parbf{\ref{ex:surf-S2}.}
+We can assume that the origin lies in the interior of the convex body.
+Consider the central projection from its surface, say $\Sigma$, to the sphere $\SSS^2$ centered at the origin.
+Show that this projection $\Sigma\to \SSS^2$ is a homeomorphism.
 
 \begin{wrapfigure}{r}{25mm}
 \vskip-6mm
@@ -1150,16 +1193,6 @@ From \ref{SHORT.pr:tetrahedron:=}, we have that
 \[|v_1-v_2|=|v_3-v_4|,\quad |v_1-v_3|=|v_2-v_4|,\quad|v_1-v_4|=|v_2-v_3|.\]
 Use it to show that $\langle v_1-v_2,v_1+v_2-v_3-v_4\rangle=0$.
 Make a conclusion.
-
-\parbf{\ref{ex:poly-CBB}.}
-We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ at every vertex $p$ it at most $2\cdot\pi$.
-
-Assume that $\theta>2\cdot\pi$,
-let $\phi=\max\{\,\pi,\tfrac13\cdot\theta\,\}$.
-We can choose three points $x_1$, $x_2$, and $x_3$ close to $p$ such that 
-$\mangle \hinge p{x_i}{x_j}=\phi$ for $i\ne j$.
-Since the points $x_i$ are close to $p$, we have $\mangle \hinge p{x_i}{x_j}=\angk p{x_i}{x_j}$.
-The latter contradicts $\EE^2$-comparison. 
 
 \parbf{\ref{ex:surface-covergence}.}
 We will use that the closest-point projection from the Euclidean space to a convex body is \index{short map}\emph{short};
@@ -1210,17 +1243,48 @@ More generally, if a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1
 then $\partial \spc{A}_n$ equipped with the induced length metrics converge to  $\partial \spc{A}_\infty$.
 This statement is a partial case of the theorem about extremal subsets proved by the second author \cite[1.2]{petrunin1997}.
 
-\parbf{\ref{ex:liberman+milka}}; \ref{SHORT.ex:liberman+milka:liberman}.
-By \ref{ex:liberman}, the function $f_p\:t\mapsto \distfun_p\circ\gamma(t)$ is semiconcave for any $p\in K$.
-In particular, one-sided derivatives $f_p^+(t)$ are defined for every $t$.
+\parbf{\ref{ex:alexandrov=<4}.}
+\ref{SHORT.ex:alexandrov=<4:>=3}. Observe that curvature of any essential vertes is less than $2\cdot\pi$ and apply the Gauss--Bonnet formula \ref{ex:gauss-bonnet}.
 
-Given $x=\gamma(t)$, choose three points $p_1,p_2,p_3\in K$ in general position;
-that is, the four points $x,p_1,p_2,p_3$ do not lie in one plane.
-Observe that the distance functions $\distfun_{p_i}$ give smooth coordinates in a neighborhood of $x$.
-From above the functions $f_{p_i}$ have one-sided derivatives at $t$.
-Since the coordinates are smooth we get that $\gamma^+(t)$ is defined as well.
+\parit{\ref{SHORT.ex:alexandrov=<4:=3}.} Show that geodeiscs between essential vertices divide the surface into two flat triangles, which have to be isometric since their sides are equal.
+Make a conclusion.
 
-\parit{\ref{SHORT.ex:liberman+milka:milka}.}
+\parit{\ref{SHORT.ex:alexandrov=<4:4}.}
+Show that geodeiscs between the essential vertices can be shoosen so that they do not cross each other;
+that is, every pair of geodesics intersect only at the common vertex.
+In this case they divide the surfase into plane triangles.
+
+Since the curvature is nonnegative, the sum of three angles of the triangles at each vertex is at most $2\cdot\pi$.
+Show that these triangles form a faces of tetrhedron (possibly degenerate to a quadrangle)
+if the three angles at one (and therefore any) vertex satisfy the triangle inequality.
+In the latter case, the sum of angles at each vertex is less than $\pi$.
+Therefore the sum of all 12 angles of these 4 triangles has to be less than $4\cdot \pi$.
+
+On the other hand, the angles of each triangle sum up to $\pi$.
+Therefore the sum of all 12 angles has to be $4\cdot \pi$ --- a contradiction.
+
+\parbf{\ref{ex:convex}.} Assume the contrary,
+then there is a minimizing geodesic $\gamma\not\subset\Delta$ with ends $p$ and $q$ in $\Delta$.
+
+Without loss of generality, we may assume that only one arc of $\gamma$ lies outside of $\Delta$.
+Reflection of this arc  with respect to $\Pi$ together with the remaining part of $\gamma$ forms another curve $\hat\gamma$ from $p$ to $q$;
+it runs partly along surface
+and partly outside $K$,
+but does not get in the interior of $K$.
+Note that
+\[\length\hat\gamma=\length\gamma.\]
+
+Denote by $\bar\gamma$ the closest point projection of $\hat\gamma$ to $K$.
+Since $K$ is convex, the projection decreases the length.
+Therefore
+the curve $\bar\gamma$ lies on the surface of $K$,
+it has the same ends as $\gamma$,
+and
+\[\length\bar\gamma<\length\gamma.\]
+This means that $\gamma$ is not length-minimizing
+--- a contradiction.
+
+\parbf{\ref{ex:milka}.}
 If the plane $py_1y_2$ supports $K$, then 
 $\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_P$.
 In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
@@ -1273,73 +1337,3 @@ Note that
 \]
 the second inequality follows from \ref{ex:noncreasing}.
 Hence the remaining case follows.
-
-\parit{Comments.}
-Part~\ref{SHORT.ex:liberman+milka:liberman} is the so-called Liberman lemma --- a key tool in studying geodesics on convex surfaces.
-It was originally proved by Joseph Liberman \cite{liberman}; the proof of \ref{ex:liberman} is its generalization. 
-
-Part~\ref{SHORT.ex:liberman+milka:milka} is a result of Anatolii Milka \cite[Theorem 2]{milka1982}.
-
-\parbf{\ref{ex:arm-nonconvex}.}
-
-\parbf{\ref{ex:cauchy}.}
-
-\parbf{\ref{ex:arm'}};
-\ref{SHORT.ex:bow'+}.
-We can assume that $a_0=a'_0$ is the origin, $a_1=a'_1$ lies on the positive part of the $x$-axis,
-and the points $a_n$ and $a'_n$ lie in the upper half-plane of the $(x,y)$-plane.
-
-Suppose $\mangle a_0<\mangle a_0'$.
-Find a point $x$ such that
-$\dist{x}{a_n}{}<\dist{x}{a_n'}{}$, and $[x a_0\dots a_n]$ is a convex polygon in the $(x,y)$-plane.
-(Here you have to use that $\mangle a_n\le\tfrac\pi2$.)
-
-{
-
-\begin{wrapfigure}{r}{47 mm}
-\vskip-7mm
-\centering
-\includegraphics{mppics/pic-1118}
-\vskip0mm
-\end{wrapfigure}
-
-Apply the arm lemma (\ref{lem:arm}) to $[x a_0\dots a_n]$ and $[x a_0'\dots a_n']$, and arrive at a contradiction.
-
-\parit{\ref{SHORT.ex:bow'-}.} Look at the picture and think.
-
-}
-
-\parbf{\ref{ex:a<a}.}
-Apply the angle monotonicity (\ref{angle-monotonicity}) couple of times.
-
-\parbf{\ref{ex:disc-bend}.}
-
-\parit{Source:} The second part of the exercise was added by Viktor Zalgaller to the translation of Alexandrov's book \cite{alexandrov}.
-More statements of this type can be found in Zalgaller's classification of convex polyhdra with regular faces \cite{zalgaller}.
-
-\parbf{\ref{ex:octahedron}.}
-
-\parbf{\ref{ex:disc}.}
-The exercise can be deduces from the Riemann mapping theorem.
-Let us sketch the proof sugested by Fedor Petrov \cite{petrov};
-it only used Jordan's theorem.
-
-\medskip
-
-It is sufficient to prove that an open simply connected domain $\Omega$ of the plane is homeomorphic to an open disc.
-Let us represent $\Omega$ as a union $P_1\cup P_2\cup\ldots$, where all $P_i$ are (closed) polygons and $P_i\Subset P_{i+1}$ for all $i$; that is $P_i$ lies in the interior of $P_{i+1}$.
-Apply the Jordan's theorem couple of times to show that there is a sequence of homeomorphisms $f_i$ form $P_i$ to the closed disc of radius $1-\tfrac1{2^i}$ such that $f_{i+1}$ extends $f_i$.
-Given $x\in \Omega$, set $f(x)=f_i(x)$ for all sufficiently large $i$.
-Observe that $f$ is a homeomorphism from $\Omega$ to the open unit disc.
-
-Now, let us recursively construct our system of polygons.
-Note that $\Omega$ can be presented as a union of a countable collection of coordinate squares, say $S_1,S_2,\dots$
-Set $P_1=S_1$.
-Suppose $P_1,\dots,P_{i-1}$ are constructed,
-Add to $P_{i-1}$ several squares that cover its boundary together with $S_i$.
-If necessary, add to it a finite number of squares so that the union becomes connected.
-The obtained set may contain holes, but since $\Omega$ is simply connected everything in holes belongs to $\Omega$, add all this to the set.
-Denote the obtained set by $P_i$.
-
-
-\parbf{\ref{pr:K-P-simmetry}.}

@@ -68,9 +68,15 @@ By the spherical triangle inequality (\ref{ex:angle-triangle}), we have
 2\cdot\pi=\perim H=\perim H_0\ge\dots\ge\perim H_n=\perim F
 \]
 --- hence the result.
-\qedsf
+\qeds
 
-A vertex of a triangulation of a polyhedral surface is called \index{essential vertex}\emph{essential} if the total angle around it is not $2\cdot\pi$.
+\section{Curvature}
+
+Let $p$ be a point on a polyhedral surface, and $\theta_p$ is the total angle around $p$.
+The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
+
+Note that if $p$ is not a vertex in a triangulation of $P$, then its curvature is zero.
+A vertex of a triangulation of a polyhedral surface is called \index{essential vertex}\emph{essential} if its curvature is not $0$.
 
 \begin{thm}{Exercise}\label{ex:vertex-essential-vertex}
 Let $v$ be a point on the surface $P$ of a convex polyhedron $K$.
@@ -80,14 +86,8 @@ $v$ is an essential vertex of $P$.
 
 
 \begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on the surface of a convex polyhedron may have essential vertices only at their ends.
+Show that geodesics on a closed polyhedral surface with nonnegative curvature may have essential vertices only at their ends.
 \end{thm}
-
-\section{Curvature}
-
-Let $p$ be a point on a polyhedral surface, and $\theta_p$ is the total angle around $p$.
-The value $2\cdot \pi -\theta_p$ is called the \index{curvature}\emph{curvature} of the polyhedral surface at $p$.
-Note that if $p$ is not a vertex in a triangulation of $P$, then its curvature is zero.
 
 \begin{thm}{Exercise}\label{pr:tetrahedron}
 Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
@@ -101,6 +101,12 @@ all faces of $T$ are congruent;
 \end{subthm}
 
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:gauss-bonnet}
+Show that sum of curvatures of a closed polyhedral surface $P$ equals to $2\cdot\pi\cdot\chi(P)$,
+where $\chi(P)$ denotes the Euler characteristic of $P$.
+\end{thm}
+
 
 Claim~\ref{clm:total-angle} says that \textit{surfaces of convex polyhedra have nonnegative curvature} in the sense of the above definition.
 Now we show that this definition agrees with the 4-point comparison.
@@ -116,10 +122,10 @@ $\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and any point $
 
 We can assume that $p$ is not a vertex;
 the vertex case can be done by approximation.
-Applying the same argument as in \ref{ex:geodesic-vertex}, we may assume that $\gamma$ does not contain vertices.
+By \ref{ex:geodesic-vertex}, $\gamma$ does not contain vertices.
 
 Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
-Again, by the argument in \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
+Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
 Therefore a small neighborhood of $U\supset [px]$ can be unfolded on a plane;
 that is, there is an injective length-preserving map $z\mapsto \tilde z$
 of $U$ into the Euclidean plane.
@@ -160,8 +166,15 @@ Let $P$ be the surface of a nondegenerate convex body $K\subset\EE^3$;
 we assume that $P$ is equipped with the induced length metric.
 
 \begin{subthm}{ex:liberman+milka:liberman}
-Show that any geodesic $\gamma$ in $P$ is one-sided differentiable as a curve in $\EE^3$
+Show that any geodesic $\gamma$ in $P$ is one-sided differentiable as a curve in $\EE^3$.
 \end{subthm}
+
+\begin{subthm}{ex:liberman+milka:convex}
+Suppose a plane $\Pi$ cuts from $P$ a disc $\Delta$, and the reflection of $\Delta$ across $\Pi$ lies in $K$.
+Show that $\Delta$ is a convex subset of $P$;
+that is, if a geodesic has ends in $\Delta$, then it completely lies in $\Delta$.
+\end{subthm}
+
 
 \begin{subthm}{ex:liberman+milka:milka}
 Let $\gamma_1$ and $\gamma_2$ be geodesic paths in $P$ that start at one point $p\z=\gamma_1(0)\z=\gamma_2(0)$.
@@ -178,7 +191,8 @@ where $W$ is the complement to the interior of $K$.
 
 Recall that \textit{surfaces} of convex polyhedrons are considered with the induced length metric.
  
-\begin{thm}{Theorem}\label{thm:cauchy} Let $K$ and $K'$ be convex polyhedrons in $\EE^3$;
+\begin{thm}{Theorem}\label{thm:cauchy}
+Let $K$ and $K'$ be convex polyhedrons in $\EE^3$;
 denote their surfaces 
 by $P$ and $P'$.
 Suppose there is an isometry $P\to P'$ that sends each face of $K$ to a face of $K'$.
