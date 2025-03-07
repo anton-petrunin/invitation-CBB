@@ -1,31 +1,33 @@
-\chapter{An overview of surface theory}\label{chap:surfaces}
+\chapter{Surface theory}\label{chap:surfaces}
 
-This lecture aims to provide guidance on the key ideas and theorems in the geometry of convex surfaces, which is the main source for modern Alexandrov geometry.
+This lecture is less rigorous;
+it aims to demonstrate beauty of geometry of convex surfaces, which is the precursor of modern Alexandrov geometry.
 For a deeper dive into this theory, we recommend turning to the classic and brilliantly written books by Alexandr Alexandrov \cite{alexandrov,alexandrov-1948}.
-Also, the book by Alexey Pogorelov \cite{pogorelov1969} is very recommened, despite being a challenge to read.
+Also, the book by Alexey Pogorelov \cite{pogorelov1969} is very recommended, despite being a challenge to read.
+
 
 \section{Polyhedral surfaces}
 
-A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
+A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
 
 Note that according to our definition, any polyhedral surface is compact.
 
 Choose a point $p$ on a polyhedral surface $\spc{P}$.
 We can assume that $p$ is a vertex of a triangulation $\spc{P}$;
-if not, subdivide the triangulation.
-Denote by $\theta_p$ the total angle around $p$;
-that is, the sum of all angles at $p$ of all the triangles with vertex at $p$.
+it can be achieved by subdividing the triangulation.
+Denote by $\theta_p$ the \emph{total angle} around $p$;
+that is, the sum of all angles at $p$ in all the triangles that have $p$ as a vertex.
 
 Note that $\theta_p$ does not depend on the choice of triangulation.
 If $p$ is an interior point, then the value $2\cdot\pi-\theta_p$ is called \emph{curvature} at $p$.
 If $p$ lies on the boundary of $\spc{P}$, then the value $\pi-\theta_p$ is called \emph{inner turn} at $p$.
 
-A point with nonvanishing curvature will be called an \emph{essential vertex} of the surface.
+A point with nonvanishing curvature or inner turn will be called an \emph{essential vertex} of the surface.
 Observe that an essential vertex is a vertex in any triangulation.
 
 \begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on a closed polyhedral surface with nonnegative curvature may have essential vertices only at their endpoints.
+Show that geodesics on a polyhedral surface with nonnegative curvatures and nonnegative inner turns may have essential vertices only at their endpoints.
 \end{thm}
 
 The following statement is an analog of the Gauss--Bonnet formula.
@@ -38,10 +40,10 @@ Show that
 where $\chi(\spc{P})$ denotes the Euler characteristic of $\spc{P}$.
 \end{thm}
 
-Let us show that this new definition of curvature agrees with the $\Alex0$ comparison.
+The following proposition states that this new definition of curvature agrees with the $\Alex0$ comparison.
 
 \begin{thm}{Proposition}\label{prop:poly-CBB}
-A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at every point.
+A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at every inner point and and nonnegative inner turn at each boundary point.
 \end{thm}
 
 \parit{Proof.}
@@ -63,7 +65,7 @@ Let
 Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
 Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get
 $\tilde f(t)\ge f(t)$ if $t$ is close to $t_0$.
-That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$.
+That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$; see \ref{Function comparison}.
 Evidently, $\tilde f''(t)\equiv 1$.
 Therefore, $f$ is 1-concave.
 
@@ -74,94 +76,168 @@ The converse is left to the reader.\qeds
 \section{Approximation}
 
 The following theorem is the main extra tool available in Alexandrov geometry of surfaces.
-It can be used to reduce questions about $\Alex0$ surfaces to polyhedral surfaces with nonnegative curveature; for example, see~\ref{cor:Alex0-convex}.
+We will use this statement in the proof of \ref{cor:Alex0-convex} to reduce questions about $\Alex0$ surfaces to polyhedral surfaces with nonnegative curvature.
 
 \begin{thm}{Theorem}\label{thm:approximation}
-Any closed $\Alex0$ surface can be approximated by a polyhedral $\Alex0$ surfaces in the sense of Gromov--Hausdorff.
+Any closed $\Alex0$ surface is a Gromov--Hausdorff limit of homeomorphic polyhedral surfaces with nonnegative curvature.
 \end{thm}
 
-The proof relies on a sequence of statements from the following exercise.
+The construction of polyhedral approximations is based on the following exercise.
 
-Suppose a convex solid triangle $\Delta$ in a  $\Alex0$ surface has angles $\alpha$, $\beta$ and $\gamma$.
-Then its excess( briefly $\excess\Delta$) is defined as $\alpha+\beta+\gamma-\pi$.
-Since the angles of a model triangle sum up to $\pi$,
-the excess of any triangle in a $\Alex0$ surface is nonnegative.
-
-\begin{thm}{Exercise}\label{ex:approximation}
-Let $\spc{P}$ be an $\Alex0$ surface.
+\begin{thm}{Exercise}\label{ex:construction}
+Let $\spc{P}$ be a closed $\Alex0$ surface.
 
 \begin{subthm}{ex:approximation:nbhd}
-Show that any point $p$ admits a closed convex polygonal neighborhood $N$;
+Show that any point $p$ admits an arbitrary small closed convex polygonal neighborhood $N$;
 that is, $N$ is convex and bounded by a broken geodesic.
 
 \end{subthm}
 
 \begin{subthm}{ex:approximation:triangulation}
 Given $\delta>0$, show that $\spc{P}$ admits a triangulation $\tau$ by convex triangles
-with excess and diameter smaller than $\delta$.
+with positive inner turn at each vertex and diameter smaller than $\delta$.
 \end{subthm}
 
 \begin{subthm}{ex:approximation:poly}
-Suppose $\tau$ is a triangulation of $\spc{P}$ by convex triangles.
-Let us prepare a solid model triangle $\tilde\Delta$ for each triangle $\Delta$ in $\tau$ and glue them as prescribed by $\tau$;
-as a result, we get a surface $\tilde{\spc{P}}$ that is homeomorphic to $\spc{P}$.
-Show that $\tilde{\spc{P}}$ is a polyhedral surface with nonnegative curvature.
+Suppose that $v$ is a vertex of a triangulation $\tau$ of $\spc{P}$ by convex triangles.
+Let $\theta_v$ be the sum of angles at $v$ in all the triangles of~$\tau$.
+Show that $\theta_v\le 2\cdot\pi$.
 \end{subthm}
 
-\begin{subthm}{ex:approximation:diangle}
-Let $\Upsilon$ be a disc in $\tilde{\spc{P}}$ bounded by a geodesic $\gamma_0$ and local geodesic $\gamma_1$ with common endpoints.
-Let $\omega$ be the sum of the curvatures of points in $\Upsilon$.
-Show that
-\[\cos \omega\cdot \length \gamma_1\le \length \gamma_0\]
-if $\omega<\pi$.
-\end{subthm}
+\end{thm}
+
+\parit{Construction.}
+Let $\spc{P}$ be a closed $\Alex0$ surface.
+By part \ref{SHORT.ex:approximation:triangulation}, we can triangulate $\spc{P}$ by small convex triangles, say diameter of each triangle is less than given $\delta>0$.
+Let us exchange each triangle of the triangulation by its model solid triangle; denote by $\tilde {\spc{P}}_\delta$ the obtained polyhedral surface.
+Note that $\tilde {\spc{P}}_\delta$ is homeomorphic to $\spc{P}$;
+moreover, there is a homeomorphism $\spc{P}\to \tilde {\spc{P}}_\delta$ that sends a point $x\in \spc{P}$ to a point $\tilde x\in \tilde {\spc{P}}_\delta$ in the corresponding model triangle.
+
+By the angle comparison (\ref{angle-a}) and part \ref{SHORT.ex:approximation:poly} of the exercise, the total angle around each vertex in $\tilde {\spc{P}}_\delta$ cannot exceed $2\cdot\pi$.
+That is, the obtained polyhedral space $\tilde {\spc{P}}_\delta$ has nonnegative curvature.
+\qeds
+
+Observe that Theorem \ref{thm:approximation} follows from the following.
+
+\begin{thm}{Claim}\label{clm:approximation}
+If $\tilde {\spc{P}}_\delta$ is provides by the construction, then $\tilde {\spc{P}}_\delta\to\spc{P}$ as $\delta\to 0$ in the sense of Gromov--Hausdorff.
+\end{thm}
+
+This claim seems to be self-evident, but it is not;
+a very smart proof was given by Alexandrov \cite[VII §~6]{alexandrov-1948}.
+We will indicate an alternative proof based on the following exercise and two theorems which will be stated without a proof.
+The first theorem is due to Yuri Burago, Mikhael Gromov, and Grigori Perelman \cite[10.8]{burago-gromov-perelman};
+it is a generalization of Alexandrov's theorem for surfaces \cite[X §~2]{alexandrov-1948}.
+The second theorem is due to Nan Li \cite[Corollary 0.1]{li}.
+
+\begin{thm}{Theorem}\label{thm:cont-vol}
+Let $\spc{X}_1, \spc{X}_2$ be a sequence of $n$-dimensional $\Alex\kappa$ spaces that converges to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
+Then the $n$-volume on $\spc{X}_i$ weakly converges to the $n$-volume on $\spc{X}_\infty$.
+\end{thm}
+
+\begin{thm}{Theorem}\label{thm:vol-short}
+Let $\spc{X}$ be an Alexandrov space without boundary, and let $\spc{Y}$ be an arbitrary Alexandrov space.
+Then any short volume-preserving map $\spc{X}\to\spc{Y}$ is an isometry.
+\end{thm}
+
+Suppose a convex solid triangle $\Delta$ in an $\Alex0$ surface has angles $\alpha$, $\beta$ and $\gamma$.
+Let us define its excess by
+\[\excess\Delta=\alpha+\beta+\gamma-\pi.\]
+Since the angles of a model triangle sum up to $\pi$, by the angle comparison (\ref{angle-a}),
+the excess is nonnegative.
+
+\begin{thm}{Exercise}\label{ex:approximation}
+Let $\tau$ be a triangulation of a closed $\Alex0$ surface $\spc{P}$ by convex triangles $\Delta_1,\dots,\Delta_n$.
+
+
+%\begin{subthm}{ex:approximation:diangle}
+%Let $\Upsilon$ be a topological disc in $\tilde{\spc{P}}$ bounded by a geodesic $\gamma_0$ and local geodesic $\gamma_1$ with common endpoints.
+%Let $\omega$ be the sum of the curvatures of points in $\Upsilon$.
+%Show that
+%\[\cos \omega\cdot \length \gamma_1\le \length \gamma_0\]
+%if $\omega<\pi$.
+%\end{subthm}
 
 
 \begin{subthm}{ex:approximation:excess}
-Let $\tau$ be a triangulation of $\spc{P}$ by convex triangles $\Delta_1,\dots,\Delta_n$
 Show that
 \[\excess\Delta_1+\dots+\excess\Delta_n \le 2\cdot\pi\cdot \chi(\spc{P}),\]
 where $\chi(\spc{P})$ denotes the Euler characteristic of $\spc{P}$.
-
-Conclude that $\chi(\spc{P})\ge 0$; so $\spc{P}$ is homeomorphic to a sphere, projctive plane, torus, or Klein bottle.
 \end{subthm}
 
 
 \begin{subthm}{ex:approximation:length}
-Let $x$ and $y$ be points on the sides of a triangle $\Delta$ of $\tau$, and let $\tilde x$ and $\tilde y$ be the corresponding points in the corresponding triangle $\tilde \Delta$ in $\tilde{\spc{P}}$.
+Let $x$ and $y$ be points on the sides of a triangle $\Delta_i$, and let $\tilde x$ and $\tilde y$ be the corresponding points in the corresponding triangle $\tilde \Delta$ in $\tilde{\spc{P}}$.
 Show that
 \[\dist{\tilde x}{\tilde y}{\tilde \Delta}\le\dist{x}{y}{\Delta}\le \dist{\tilde x}{\tilde y}{\tilde \Delta}+\excess\Delta\cdot \diam \Delta.\]
-Conclude that
-\[\dist{\tilde v}{\tilde w}{\tilde {\spc{P}}}\le \dist{v}{w}{\spc{P}}\]
-for any vertices $v$ and $w$ of $\tau$ in $\spc{P}$ and corresponding vertices $\tilde v$ and $\tilde w$ in $\tilde{\spc{P}}$.
+
 \end{subthm}
 
-%\begin{subthm}{ex:approximation:area}
-%Let $\Delta$ be a solid triangle in the triangulation $\tau$ of $\spc{P}$, and $\tilde \Delta$ --- the corresponding triangle in $\tilde{\spc{P}}$.
-%Show that
-%\[\area \tilde \Delta\le \area \Delta\le \area \tilde \Delta+\tfrac12\cdot\excess\Delta\cdot (\diam \Delta)^2.\]
-%Conclude that if $\tau$ is as in \ref{SHORT.ex:approximation:triangulation}, then
-%\[\area \tilde{\spc{P}}\le \area \spc{P}\le \area \tilde{\spc{P}}+2\cdot \pi\cdot \delta^2.\]
-%\end{subthm}
+\begin{subthm}{ex:approximation:area}
+Let $\Delta$ be a solid triangle in the triangulation $\tau$ of $\spc{P}$, and $\tilde \Delta$ --- the corresponding triangle in $\tilde{\spc{P}}$.
+Show that
+\[\area \tilde \Delta\le \area \Delta\le \area \tilde \Delta+\tfrac12\cdot\excess\Delta\cdot (\diam \Delta)^2.\]
+
+\end{subthm}
 
 \end{thm}
 
-To prove the approximation theorem, we need to show that $\tilde {\spc{P}}\to \spc{P}$ as $\delta\to0$ in the sense of Gromov--Hausdorff.
-The latter follows from the next claim.
+Note that part \ref{SHORT.ex:approximation:excess} implies that $\chi(\spc{P})\ge 0$.
+Therefore, $\spc{P}$ is homeomorphic to a sphere, projctive plane, torus, or Klein bottle.
+In the latter two cases, the construction produces a flat surface $\tilde{\spc{P}}_\delta$, which has to be isometric to $\spc{P}$.
+Therefore the cases of sphere, projctive plane are more interesting.
 
-\begin{thm}{Claim}
-There is $\eps\z=\eps(\area\spc{P}, \diam\spc{P}, \delta)>0$ such that $\eps\to0$ as $\delta\to 0$ and
-\[\dist{v}{w}{\spc{P}}\le \dist{\tilde v}{\tilde w}{\tilde{\spc{P}}}+\eps\]
-for any vertices $v$ and $w$ of $\tau$ in $\spc{P}$ and corresponding vertices $\tilde v$ and $\tilde w$ in $\tilde{\spc{P}}$.
-\end{thm}
+\parit{Proof of \ref{clm:approximation}.}
+Choose a sequence of positive numbers $\delta_n\to0$;
+let $\tilde{\spc{P}}_{\delta_n}$ be polyhedral spaces provided by the construction and let $\tau_n$ be the corresponding triangulation.
 
-If each triangle in the triangulation of $\tilde{\spc{P}}$ were convex, then the claim would follow from \ref{SHORT.ex:approximation:excess} and \ref{SHORT.ex:approximation:length}.
-The same argument would work if any such triangle could not be visited by a geodesic more than 1000 times,
-but it seems that there is no univeral bound on the number of such visits.
+According to part \ref{SHORT.ex:approximation:length} of the exercise, the spaces $\tilde{\spc{P}}_{\delta_n}$ have bounded diameter.
+Therefore by Gromov's selection theorem, we can pass to a converging sequence of $\tilde{\spc{P}}_{\delta_n}$;
+denote its Gromov--Hausdorff limit by $\tilde{\spc{P}}$.
+Note that if $\tilde{\spc{P}}_{\delta}$ does not converge to $\spc{P}$, then we can assume that $\tilde{\spc{P}}$ is not isometric to $\spc{P}$.
 
-The rest of the statements in the exercise help to deal with this issue.
-The reader might try to complete the proof on their own or read it in \cite[VII § 6]{alexandrov-1948}.
-%Part \ref{SHORT.ex:approximation:area} was not used in Alexandrov's proof, but it could be used.
+Choose two points $x,y\in \spc{P}$, and connect them by a geodesic.
+Denote by $s_1,\dots,s_m$ the points of the geodesic on the sides of the triangulation $\tau_n$;
+we assume that these points appear in the same order on the geodesic.
+Denote by $\tilde x$, $\tilde y$, and $\tilde s_1,\dots,\tilde s_m$ the corresponding points in $\tilde{\spc{P}}_{\delta_n}$.
+By part \ref{SHORT.ex:approximation:length} of the exercise,
+\[\dist{\tilde s_{i-1}}{\tilde s_i}{\tilde{\spc{P}}_{\delta_n}}\le\dist{s_{i-1}}{s_i}{\spc{P}}.\]
+Note also that
+\[\dist{\tilde x}{\tilde s_1}{\tilde{\spc{P}}_{\delta_n}}\le \delta_n
+\quad\text{and}\quad
+\dist{\tilde s_m}{\tilde y}{\tilde{\spc{P}}_{\delta_n}}\le \delta_n
+\]
+Therefore
+\[\dist{\tilde x}{\tilde y}{\tilde{\spc{P}}_{\delta_n}}\le\dist{x}{y}{\spc{P}}+2\cdot\delta_n.\]
+
+Passing to the limit, we get a short onto map $\spc{P}\to \tilde{\spc{P}}$.
+On the other hand, applying parts \ref{SHORT.ex:approximation:excess} and \ref{SHORT.ex:approximation:area}, we get that
+\[
+\area \spc{P} -\pi\cdot\chi(\spc{P})\cdot \delta_n^2
+\le
+\area \tilde{\spc{P}}_{\delta_n}
+\le
+\area \spc{P}
+\]
+By Theorem \ref{thm:cont-vol}, $\area \spc{P}= \area \tilde{\spc{P}}$.
+Applying Theorem \ref{thm:vol-short}, we get that the short map $\spc{P}\to \tilde{\spc{P}}$ is an isometry --- a contradiction.
+\qeds
+
+\parit{Remark.}
+The main difficulty in the proof comes from nonconvexity of triangles in the triangulation of $\tilde{\spc{P}}_\delta$.
+If these triangles would be convex, then the first estimate in parts \ref{SHORT.ex:approximation:length} and \ref{SHORT.ex:approximation:excess} would imply that $\tilde{\spc{P}}_\delta$ is close to $\spc{P}$ in the sense of Gromov--Hausdorff.
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{Surface of polyhedrons and bodies}
 
@@ -174,8 +250,7 @@ Show that the surface of a convex body is homeomorphic to the 2-dimensional sphe
 
 A \index{convex polyhedron}\emph{convex polyhedron} is a convex body with a finite number of extremal points, called its \index{vertex}\emph{vertices}.
 
-Note that the surface, say $\spc{P}$, of a convex polyhedron $K$ is a polyhedral surface;
-that is, it admits a finite triangulation such that each triangle is isometric to a plane triangle.
+Note that the surface of a convex polyhedron $K$ is a closed polyhedral surface.
 
 \begin{thm}{Exercise}\label{pr:tetrahedron}
 Assume that the surface of a nondegenerate tetrahedron $T$ has curvature $\pi$ at each of its vertices.
@@ -224,7 +299,7 @@ If one assumes that the isometry between the surfaces is face-to-face,
 then we get an equivalent reformulation of Cauchy's theorem.
 Cauchy's argument, with a small addition, proves \ref{thm:alexandrov-uni'}.
 
-First, let us remind the framework of Cauchy's proof, assuming the reader knows it.
+First, let us remind Cauchy's proof, assuming the reader knows it.
 If not, then read it in one of the classical texts \cite{aigner-zigler,dolbilin,tabacnikov-fuks}.
 
 \parit{Sketch of Cauchy's proof.}
@@ -242,7 +317,7 @@ In particular, the edges coming from one vertex have a natural cyclic order.
 Given a vertex $v$ of $\Gamma$, we can count the \textit{number of sign changes} around $v$;
 that is, the number of consequent pairs of edges with different signs.
 
-Now we need to show two statements:
+We need to show two statements:
 
 \begin{thm}{Local lemma}
 At any vertex of $\Gamma$, the number of sign changes is at least $4$.
@@ -283,7 +358,8 @@ Therefore, we still have at least four sign changes at $v$.
 The remaining argument works as before.
 \qeds
 
-Let us also state the following result of Alexey Pogorelov \cite[chapter III]{pogorelov}.
+Let us also state the following result of Alexey Pogorelov \cite[chapter III]{pogorelov};
+an alternative proof was found by Yurii Volkov \cite{volkov1968}.
 
 \begin{thm}{Theorem}
 Any two convex bodies in $\EE^3$ with isometric surfaces are congruent.
@@ -305,10 +381,10 @@ Alexandrov's theorem states that the converse holds if one includes in the consi
 In other words, we have to consider a plane polygon as a degenerate polyhedron;
 in this case, its surface is defined as the doubling of the polygon across its boundary.
 
-Further, we assume that a polyhedron can degenerate to a plane polygon.
+From now on, we assume that a polyhedron can degenerate to a plane polygon.
 
 \begin{thm}{Theorem}\label{thm:alexandrov-first}
-A polyhedral metric on the two-sphere is isometric to the surface of a convex polyhedron if and only if it has nonnegative curvature.
+A polyhedral metric on the two-sphere is isometric to the surface of a convex polyhedron (possibly degenerate) if and only if it has nonnegative curvature.
 
 \end{thm}
 
@@ -497,7 +573,7 @@ that is, $\iota\:\bm{K}_n\z\to\bm{P}_n$ is surjective.
 \section{Ambient space}
 
 On one hand the Alexandrov surface theory is simpler since it has extra tools,
-but it is also more complicated since these tools produce more questions.
+On the other hand, this tool comes with extra structure, which makes the theory more complicated.
 The following result of Joseph Liberman \cite{liberman} gives an example.
 
 \begin{thm}{Theorem}
@@ -550,7 +626,7 @@ It was motivated by a vague definition in Euclid's Elements, which could be inte
 \textit{polyhedrons are equal if the same holds for their faces}.
 
 The local lemma was already known to Legendre.
-Legendre discussed this question with his colleague Joseph-Louis Lagrange, who suggested this problem to Augustin-Louis Cauchy in 1813; soon he proved it \cite{cauchy}.
+Legendre discussed this question with his colleague Joseph-Louis Lagrange, who suggested this problem to Augustin-Louis Cauchy in 1813; soon he solved it \cite{cauchy}.
 
 The key observation that the face-to-face condition can be removed was made by
 Alexandr Alexandrov in 1941; in the same paper he proved the uniqueness theorem \cite{alexandrov-1941}.

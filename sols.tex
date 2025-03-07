@@ -1123,16 +1123,19 @@ Therefore $\alpha<\pi$ or $\beta<\pi$.
 Arrive at a contradiction by showing that $\gamma$ is not length-minimizing.
 
 \parbf{\ref{ex:gauss-bonnet}.}
-Denote by $k$, $l$, and $m$ the number of vertices, edges, and triangles, respectively in a chosen triangulation of $P$.
+Assume $\spc{P}$ has no boundary.
+Denote by $k$, $l$, and $m$ the number of vertices, edges, and triangles, respectively in a chosen triangulation of $\spc{P}$.
 Note that
 \[2\cdot l=3\cdot m
 \qquad\text{and}\qquad
-k-l+m=\chi(P).\]
+k-l+m=\chi(\spc{P}).\]
 The first identity follows since each edge appears in two triangles and each triangle has 3 edges;
 the second identity is the Euler's formula.
 
 Since each triangle contributes $\pi$ to the total sum of angles, we get that total curvature is $2\cdot\pi\cdot k-\pi\cdot m$.
 It remains to apply straightforward algebraic manipulations.
+
+If $\spc{P}$ has nonempty boundary, then pass to its doubling, apply the formula and rewrite the result using inner turns.
 
 \parbf{\ref{ex:poly-CBB}.}
 We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ at every vertex $p$ it at most $2\cdot\pi$.
@@ -1144,7 +1147,7 @@ $\mangle \hinge p{x_i}{x_j}=\phi$ for $i\ne j$.
 Since the points $x_i$ are close to $p$, we have $\mangle \hinge p{x_i}{x_j}=\angk p{x_i}{x_j}$.
 The latter contradicts $\EE^2$-comparison.
 
-\parbf{\ref{ex:approximation}};
+\parbf{\ref{ex:construction}.}
 \ref{SHORT.ex:approximation:nbhd}.
 Apply \ref{cor:convex-nbhd}.
 
@@ -1157,17 +1160,47 @@ Apply the last stattement recurcevely to a finite cove of $\spc{P}$ by convex po
 By comparison, $\tilde{\spc{P}}$ has nonnegative curvature.
 It remains to apply \ref{prop:poly-CBB}.
 
-\parit{\ref{SHORT.ex:approximation:diangle}.}
-Suppose $\ell=\length\gamma_1$, and $\gamma_1$ is parametrized by $[0,\ell]$.
-Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{\Upsilon}$.
-Apply the Gauss--Bonnet formula (\ref{ex:gauss-bonnet})
-to show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
-Observe that $f$ is Lipschitz and make a conclusion.\footnote{With a bit more work, one can improve the inequality to
-\[\cos \tfrac\omega2\cdot \length \gamma_1\le \length \gamma_0.\]}
+%\parit{\ref{SHORT.ex:approximation:diangle}.}
+%Suppose $\ell=\length\gamma_1$, and $\gamma_1$ is parametrized by $[0,\ell]$.
+%Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{\Upsilon}$.
+%Apply the Gauss--Bonnet formula (\ref{ex:gauss-bonnet})
+%to show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
+%Observe that $f$ is Lipschitz and make a conclusion.\footnote{With a bit more work, one can improve the inequality to
+%\[\cos \tfrac\omega2\cdot \length \gamma_1\le \length \gamma_0.\]}
 
-\parit{\ref{SHORT.ex:approximation:excess}.} Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
+\parbf{\ref{ex:approximation}}; \ref{SHORT.ex:approximation:excess}.
+Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
 
-\parit{\ref{SHORT.ex:approximation:length}.} Apply the angle comparison.
+\parit{\ref{SHORT.ex:approximation:length}.}
+Apply the angle comparison.
+
+\parit{\ref{SHORT.ex:approximation:area}.}
+The first inequality follows form the generalized vesion of Kiszbraun's theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
+we will not discuss its proof since this inequalty is not used in the proof.
+In the proof of the second inequality, we use Alexandrov's idea \cite[X §~1]{alexandrov-1948}.
+
+Suppose that a convex triangle $\Delta$ has vertices $x$, $y$, and $z$, with opposite side lengths $a$, $b$ and $c$ and angles $\alpha$, $\beta$, and $\gamma$, respectively.
+Let $\tilde\Delta$ be its solid model triangle and let $\tilde \alpha$, $\tilde \beta$, and $\tilde \gamma$ the corresponding angles.
+
+Use that $\log_x$ is a noncontracting map to show that
+\[\area\Delta-\area\tilde\Delta\le \tfrac12\cdot(\alpha-\tilde\alpha)\cdot (\diam \Delta)^2+o(a).\]
+
+Now let us subdivide $\Delta$ into triangles $\Delta_1,\dots,\Delta_n$ with common vertex $x$ and small opposite sides $a_1,\dots,a_n$; so, $a=a_1+\dots+a_n$.
+The model triangles $\tilde\Delta_1,\dots,\tilde\Delta_n$ can be arranged on the plane with common corresponding sides.
+This way we get a convex triangle $\tilde\Lambda$ with two straight sides $b$ amd $c$ and a polygonal side of total length $a$.
+Summing up the above inequalities for $\Delta_1,\dots,\Delta_n$, we get
+\[\area\Delta-\area\tilde\Lambda\le \tfrac12\cdot(\alpha-\tilde\alpha)\cdot (\diam\Delta)^2+o(a_1)+\dots +o(a_n).\]
+It follows that given $\eps>0$, we can choose the subdivision so that
+\[\area\Delta-\area\tilde\Lambda\le \tfrac12\cdot(\alpha-\tilde\alpha)\cdot (\diam\Delta)^2+\eps.\]
+
+By the angle comparison, the angles adjacent to polygonal sides of $\tilde\Lambda$ do not exceed $\beta$ and $\gamma$.
+It follows that
+\[\area\tilde\Lambda-\area\tilde\Delta\le \tfrac12\cdot(\beta+\gamma-\tilde\beta-\tilde\gamma)\cdot \diam^2 \Delta.\]
+Therefore
+\[\area\Delta-\area\tilde\Delta\le \tfrac12\cdot\excess\Delta\cdot \diam^2 \Delta+\eps\]
+for arbitrary $\eps>0$, hence the result.
+
+
 
 \parbf{\ref{ex:surf-S2}.}
 We can assume that the origin lies in the interior of the convex body.
@@ -1285,7 +1318,7 @@ This means that $\gamma$ is not length-minimizing
 
 \parbf{\ref{ex:milka}.}
 If the plane $py_1y_2$ supports $K$, then 
-$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_P$.
+$\mangle\hinge p{y_1}{y_2}_{\EE^3}=\mangle\hinge p{x_1}{x_2}_{\spc{P}}$.
 In this case, the statement follows from \ref{prop:conv-surf-CBB(0)}.
 
 Now suppose that the line segment $[y_1y_2]_{\EE^3}$ intersects $K$.
@@ -1296,7 +1329,7 @@ Now consider the one-parameter family of points
 This family is not necessarily continuous; note that $y_i(0)=y_i$ and $y_i(1)=x_i$.
 
 Show that for any point $q\in K$, the function $t\mapsto \dist{q}{y_i(t)}{\EE^3}$ is nonincreasing.
-Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in P$.
+Conclude that the function $t\mapsto \dist{q}{y_i(t)}{W}$ is nonincreasing for any $q\in \spc{P}$.
 Therefore, 
 \begin{align*}
 \dist{y_1}{y_2}{W}
@@ -1306,9 +1339,9 @@ Therefore,
 \\
 &\ge\dist{y_1(1)}{z}{W}+\dist{y_2(1)}{z}{W}\ge
 \\
-&\ge\dist{x_1}{x_2}{P}.
+&\ge\dist{x_1}{x_2}{\spc{P}}.
 \end{align*}
-The last inequality follows since the closest point projection $W\to P$ is short.
+The last inequality follows since the closest point projection $W\to \spc{P}$ is short.
 
 \begin{wrapfigure}{o}{28mm}
 \vskip-3mm
@@ -1323,12 +1356,12 @@ In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that l
 $py_1y_2$ and contains its vertex $p$.
 
 Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches~$F$.
-Denote by $x_1'\in [px_1]_{P}$ and $x_2'\in [px_2]_{P}$ the corresponding points;
-that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}P$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}P$.
-From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}P$;
+Denote by $x_1'\in [px_1]_{\spc{P}}$ and $x_2'\in [px_2]_{\spc{P}}$ the corresponding points;
+that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}{\spc{P}}$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}{\spc{P}}$.
+From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}{\spc{P}}$;
 in other words, 
 \[\angk p{y_1'}{y_2'}\ge \angk p{x_1'}{x_2'};\]
-here we think of  $[p{y_1'}{y_2'}]$ as a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ as a triangle in $P$.
+here we think of  $[p{y_1'}{y_2'}]$ as a triangle in $\EE^3$, but $[p{x_1'}{x_2'}]$ as a triangle in $\spc{P}$.
 Note that 
 \[\angk p{y_1'}{y_2'}=\angk p{y_1}{y_2}
 \quad\text{and}\quad

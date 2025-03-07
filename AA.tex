@@ -1,3 +1,143 @@
+
+\section{The construction}
+
+Let $\spc{P}$ be an $\Alex0$ surface that is homeomorphic to the 2-sphere.
+Choose a triangulation $\tau_0$ of $\spc{P}$ by nondegenerate convex triangles; it exists by \ref{ex:approximation:triangulation}.
+Note that we can construct a sequence of triangulations $\tau_1,\tau_2,\dots$ such that each $\tau_i$ is a subdivision of $\tau_{i-1}$ and the diameters of triangles in $\tau_i$ are smaller $\delta_i$, for some sequence $\delta_i\to 0$.
+
+Consider the 1-skeleton of $\tau_i$ and glue in it a model solid triangle instead of each triangle in $\tau_i$.
+This way we obtain a polyhedral surface $\tilde{\spc{P}}_i$ for each $i$.
+By construction, $\tilde{\spc{P}}_i$ is homeomorphic to the sphere.
+Moreover, there is a homeomorphism $f_i\:\spc{P}\to\tilde{\spc{P}}_i$ that each triangle of $\tau_i$ to the corresponding model triangle.
+
+
+\begin{thm}{Claim}
+The polyhedral surfaces $\tilde{\spc{P}}_i$ converge to $\spc{P}$ as $i\to\infty$ in the sense of Gromov--Hausdorff.
+Moreover,
+\[\dist{f_i(x)}{f_i(y)}{\spc{P}_i}\lg\dist{x}{y}{\spc{P}}\pm\eps_i\]
+for some fixed sequence $\eps_i$ and any points $x,y\in \spc{P}$.
+\end{thm}
+
+Note that the claim implies the approximation theorem (\ref{thm:approximation}).
+
+Given a vertex $v$ of $\tau_i$, let us denote by $\tilde v_j$ the corresponding vertex in $\tilde{\spc{P}}_j$ for $j\ge i$.
+By \ref{ex:approximation:length},
+\[\dist{v}{w}{\spc{P}}\ge \dist{\tilde v_j}{\tilde w_j}{\tilde{\spc{P}}_j}\]
+for any two vertices $v,w$ of $\tau_i$.
+
+Observe that the set of vertices of $\tau_i$ forms a $\delta_i$-net in $\spc{P}$.
+Morever, the corresponding vertces form a $\delta_i$-net in $\tilde{\spc{P}}_i$.
+By Gromov's selection theorem, we can pass to a converging subsequence of $\tilde{\spc{P}}_i$.
+Denote its Gromov--Hausdorff limit by $\spc{P}'$.
+From above we have that there is a short onto map $\spc{P}\to \spc{P}'$;
+in particular, $\spc{P}'\le \spc{P}$.
+
+Suppose $K$ is a topological disc in $\spc{P}$ that is a union of several triangles of $\tau_i$.
+Let $\tilde K_j$ be the corresponding subset in $\tilde{\spc{P}}_j$.
+
+
+
+
+Recall that $T(K)$ denotes the sum of inner turns of $K$.
+According to \ref{ex:gauss-bonnet}, $T(K)\le 2\cdot\pi$.
+
+\begin{thm}{Claim}
+There is a constant $C$ such that if $T(K)>\pi$, then
+\[\dist{\tilde v_j}{\tilde w_j}{\tilde K_j}\le C\cdot\delta_j\]
+where $v$ and $w$ be vertices of $\tau_j$ in $K$.
+\end{thm}
+
+\parit{Proof.}
+Choose a geodsic path $\gamma$ from $\tilde v_j$ to $\tilde w_j$ in $\tilde K_j$.
+
+Let $t_0=0$, and let $t_1\in[0,1]$ be the maximal value such that $v_0=\gamma(t_0)$ and $v_1=\gamma(t_1)$ lie in the same triangle of $\tau_j$.
+Further, let $t_2\in[0,1]$ be the maximal value such that $v_1=\gamma(t_1)$ and $v_2=\gamma(t_2)$ lie in the same triangle.
+Continuing this process, we get a partition $t_0<t_1<\dots<t_n$ of $[0,1]$ and points $v=v_0,v_1\dots,v_n=w$.
+Note that all these $n$ points lie on different edges of the triangulation $\tau_i$.
+Consider the broken local geodesic $\bar\gamma$ with vertices $v_0,v_1\dots,v_n$ and edges formed by line segments from $v_{i-1}$ to $v_i$ in their common triangle.
+
+We can assume that $\bar\gamma(t_i)=\gamma(t_i)$ for each $i$.
+The arc $\bar\gamma|_{[t_{i-1},t_i]}$ might be different from $\gamma|_{[t_{i-1},t_i]}$,
+in this case, $\gamma|_{[t_{i-1},t_i]}$ has to leave the common triangle of $v_{i-1}$ and $v_i$ and come back to it.
+
+We claim that $\gamma$ and $\bar\gamma$ intersect in a sousage-like way;
+that is, $\gamma$ and $\bar\gamma$ cut from $\tilde{\spc{P}}_j$ one \textit{big} component containing the complement $\tilde{\spc{P}}_j\setminus K_j$ and several diangles.
+In particular, the common points of $\gamma$ and $\bar\gamma$ appear in the same orger on $\gamma$ and $\bar\gamma$.
+
+Assume the contrary.
+Let us follow $\gamma$ form $0$ to $1$ untill the time moment, say $c$, when the condition fails.
+Note that the point $s=\gamma(c)$ lies a boundary of already created diangle, say between $p=\gamma(a)$ and $q=\gamma(b)$.
+In this case the points $p$ and $q$ lie in one triaggle, denote it by $\triangle$, and the diangle is formed by arc $\gamma|_{[a,b]}$ and a line sement $[pq]_\triangle$.
+The geodesic $\gamma$ has no self-interections.
+Therefore, $\gamma$ must enter the diangle thru the side $[pq]_\triangle$;
+that is, $s\in [pq]_\triangle$.
+It means that the arc $\gamma|_{[a,c]}$ and the line segment $[ps]_\triangle$ bound a diangle;
+moreover it has negative inner tun at $s$.
+By \ref{ex:gauss-bonnet}, the total curvature of the diangle exceeds $\pi$, which contradicts the assumption.
+
+Now, denote by $D_1,\dots, D_k$ the diangles between $\gamma$ and $\bar\gamma$.
+We already proved that they do not overlap.
+Each $D_k$ is bounded by arc of $\gamma$ and $\bar\gamma$;
+denote their length by $\ell_k$, $\bar \ell_k$;
+since $\gamma$ is a geodesic, we have that
+\[\ell_k\le \bar\ell_k.\]
+
+Denote by $\omega_k$ the total curvature of $D_k$.
+By \ref{ex:approximation:diangle},
+\[\cos\tfrac{\omega_k}2\cdot\bar\ell_k\le \ell_k.
+\eqlbl{eq:l<l}\]
+Summing up, and taking into account that $\ell_k<\delta_i$ for each $k$, we get
+\[\length\bar\gamma-\length\gamma=\sum_k(\bar\ell_k-\ell_k)\le \frac{\delta_i}{\cos\tfrac{\omega}2}.\]
+
+Now consider the points $v=v_0,v_1\dots,v_n=w$ in $\spc{P}$ that correspond to $v=v_0,v_1\dots,v_n=w$.
+???
+\qeds
+
+
+
+Furthemore, the vertces of $\tau_i$ form a $\delta_i$-net in $\tilde{\spc{P}}_i$.???
+
+It remains to show that there is a  converging-to-zero sequence $\eps_0,\eps_1,\dots$ such that
+\[\dist{v}{w}{\spc{P}}\le \dist{\tilde v_j}{\tilde w_j}{\tilde{\spc{P}}_j}+\eps_i\]
+for any two veritces $v,w$ of $\tau _i$ and all sufficiently large $j\ge i$.
+
+
+
+Consider a geodesic $\tilde\gamma\:[0,\ell]\to\tilde{\spc{P}}_i$.
+Perturbing the endpoints a bit, we may assume that connects a point in the interior of one triangle $T_0$ with the interior of another triangle of $\tilde\tau_i$ and it does not pass thru a vertex of $\tilde\tau_i$???.
+Let $t_0=0$.
+Let $t_1$ be the maximal value such that $\tilde\gamma(t_1) \in T_1$.
+After that $\tilde\gamma$ has to enter another triangle, denote it by $T_2$.
+Denote by $t_2$ be the maximal value such that $\tilde\gamma(t_2) \in T_2$.
+Continuing this way, we get a sequence $0=t_0<t_1<\dots<t_n=\ell$.
+Note that the arc $\tilde\gamma|_{[t_{i-1},t_i]}$ starts and ends in $T_i$, but since $T_i$ is not convex it might travel outside of $T_i$.
+Consider the broken local geodesic $\bar\gamma$ with edges formed by line segments from $\tilde\gamma(t_{i-1})$ to $\tilde\gamma(t_i)$ in $T_i$.
+
+\begin{thm}{Claim}
+Let $K$ be a geodesic polygon in a $\Alex0$ surface, and $\omega(K)<\pi$.
+Suppose that a geodesic $\tilde\gamma$ in $K$ and $\alpha$ be local geodesic with ends $\tilde\gamma(t_0)$ and $\tilde\gamma(t_1)$ that does not intersects arc $\tilde\gamma|_{[t_0,t_1]}$.
+Then $\tilde\gamma$ does intersects $\alpha$ only at these two points.
+\end{thm}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 \parbf{\ref{ex:arm'}};
 \ref{SHORT.ex:bow'+}.
 We can assume that $a_0=a'_0$ is the origin, $a_1=a'_1$ lies on the positive part of the $x$-axis,
