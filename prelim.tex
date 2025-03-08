@@ -4,20 +4,20 @@
 
 \section{Prerequisites}
 
-Most importantly, the reader should know and love elementary geometry, including convexity.
+The main prerequisite: the reader should know and love elementary geometry, including convexity.
 
 We also assume that the reader is familiar with the following topics in metric geometry:
 \begin{itemize}
 \item Compactness and proper metric spaces;
 recall that a metric space is \index{proper space}\emph{proper} if all its closed balls (of finite radius) are compact.
 \item Complete metric spaces and completion.
-\item Curves, semicontinuity of length and rectifiability.
+\item Curves, semicontinuity of length, and rectifiability.
 \item Hausdorff and Gromov--Hausdorff convergence.
 These are discussed briefly in \ref{sec:Hausdorff convergence}--\ref{sec:Almost isometries}.
 The definitions are there, but some prior familiarity with these concepts will be very helpful
 %it would be hard to follow without prior experience.
 \end{itemize}
-All these topics are treated in detail in \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
+All these topics are treated in detail in the classic book of Dmitri Burago, Yurii Burago, and Sergei Ivanov \cite{burago-burago-ivanov}; see also a short book of second author \cite{petrunin2023pure}.
 Occasionally, we use the Baire category theorem and Rademacher's theorem, but these could be used as black boxes.
 
 We use some topology. 
@@ -115,7 +115,7 @@ In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need 
 for example, any meridian is a geodesic between poles on the sphere.
 However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 
-A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed parameterization by the unit interval $[0,1]$.
+A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed reparameterization by the unit interval $[0,1]$.
 
 A metric space is called \index{geodesic!space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
 A metric space $\spc{X}$ is called \index{91@$\ell$-geodesic space}\emph{$\ell$-geodesic}
@@ -163,8 +163,8 @@ as a midpoint of the already defined
 $\gamma(\tfrac{k-1}{2^n})$ and $\gamma(\tfrac{k+1}{2^n})$.
 
 This way we define $\gamma(t)$ for all dyadic rationals $t$ in $[0,1]$.
-Moreover, $\gamma$ has Lipschitz constant $\dist{x}{y}{}$.
-Since $\spc{X}$ is complete, the map $\gamma$ can be extended continuously to $[0,1]$.
+Moreover, the map $\gamma$ has Lipschitz constant $\dist{x}{y}{}$.
+Since $\spc{X}$ is complete, $\gamma$ can be extended continuously to $[0,1]$.
 Moreover,
 \[
 \length\gamma\le \dist{x}{y}{}.
@@ -187,10 +187,9 @@ Show that $\spc{X}$ is a length space.
 \section{Triangles and model triangles}
 
 \parbf{Triangles.}
-Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle}; we will use the short notation
-$\trig p q r=\trig p q r_{\spc{X}}=([q r], [r p], [p q])$\index{10@$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
+Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle} and denoted by $\trig p q r=\trig p q r_{\spc{X}}$\index{10@$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
 
-Given a triple $p,q,r\in \spc{X}$ there may be no triangle 
+Given a triple of points $p,q,r\in \spc{X}$ there may be no triangle
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
 Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
 If we write $\trig p q r$, it means that we have chosen such a triangle.
@@ -227,7 +226,7 @@ $\angk p q r_{\EE^2}$%
 
 For example, if $\dist{p}{q}{}=\dist{q}{r}{}=\dist{r}{p}{}$, then $\angk p q r_{\EE^2}=\tfrac\pi3$ regardless of existence and relative position of geodesics $[pq]$ and $[pr]$.
 
-The same way we define $\angk p q r_{\MM^2(\kappa)}$;
+In the same way we define $\angk p q r_{\MM^2(\kappa)}$;
 in particular, $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$.
 We may use the notation $\angk p q r$ if it is evident which of the model spaces is meant.
 
@@ -331,12 +330,12 @@ Give an example showing that the inequality can be strict.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:first-var}
-Assume that the angle measure of $\hinge q p x$ is defined.
 Let $\gamma$ be the unit speed parametrization of $[qx]$ from $q$ to $x$.
+Assume that the angle measure $\phi=\hinge q p x$ is defined.
 Show that
 \[\dist{p}{\gamma(t)}{}
 \le
-\dist{q}{p}{}-t\cdot \cos(\mangle\hinge q p x)+o(t).\]
+\dist{q}{p}{}-t\cdot \cos\phi+o(t).\]
 
 \end{thm}
 
@@ -348,7 +347,8 @@ We say that the sequence $A_n$ \index{Hausdorff!limit}\emph{converges} to a clos
 $\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
 \end{thm}
 
-For example, suppose $\spc{X}$ is the Euclidean plane and $A_n$ is the circle with radius $n$ and center at the point $(0,n)$; it converges to the $x$-axis.
+For example, suppose $\spc{X}$ is the Euclidean plane and $A_n$ is the circle with radius $n$ and center at the point $(0,n)$.
+Then $A_n$ converges to the $x$-axis as $n\to \infty$.
 
 \begin{figure}[ht!]
 \vskip-0mm
@@ -388,7 +388,7 @@ and
 $A$ lies in an $R$-neighborhood of~$B$.
 \end{thm}
 
-The following exercise implies that Hausdorff convergence of compact subsets is the convergence in Hausdorff metric.
+According to the following exercise, Hausdorff convergence of non-empty compact subsets is the convergence in Hausdorff metric.
 
 \begin{thm}{Exercise}\label{ex:Haus-conv}
 Let $A_1,A_2,\dots,$ and $A_\infty$ be compact non-empty sets in a metric space $\spc{X}$.
@@ -413,7 +413,7 @@ The metric on  $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of s
 
 The limit space is not uniquely defined by the sequence.
 For example, if each space $\spc{X}_n$ in the sequence is isometric to the half-line, then its limit might be isometric to the half-line or the whole line.
-The first convergence is evident and the second could be guessed from the picture above.
+The first convergence is evident and the second could be guessed from the picture.
 
 \begin{figure}[ht!]
 \vskip-0mm
@@ -421,8 +421,8 @@ The first convergence is evident and the second could be guessed from the pictur
 \includegraphics{mppics/pic-500}
 \end{figure}
 
-Any sequence of spaces has an empty space as its limit in some  Gromov--Hausdorff convergence.
-Exercise \ref{ex:compact-GH} states that if the limit is non-empty and compact, then it is unique up to isometry. 
+Note that any sequence of spaces has an empty space as its limit in some  Gromov--Hausdorff convergence.
+As we will see in Exercise \ref{ex:compact-GH}, if the limit is non-empty and compact, then it is unique up to isometry.
 
 \begin{thm}{Exercise}\label{ex:geod-closed}
 Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
@@ -468,7 +468,7 @@ Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:non-expanding-map}
-Show that any surjective non-expanding map from a compact metric space to itself is an isometry.
+Show that any surjective \index{short map}\emph{short} map (that is, distance-nonexpanding) from a compact metric space to itself is an isometry.
 \end{thm}
 
 For the proof of the following statements we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
@@ -494,11 +494,14 @@ is called an \index{isometry!$\eps$-isometry}\emph{$\eps$-isometry}
 if the following two conditions hold:
 
 \begin{subthm}{}
-$f(\spc{X})$ is an \index{net@$\eps$-net}\emph{$\eps$-net} in $\spc{Y}$; that is, for any $y\in \spc{Y}$ there is $x\in \spc{X}$ such that $\dist{f(x)}{y}{\spc{Y}}<\eps$.
+$f(\spc{X})$ is an \index{net@$\eps$-net}\emph{$\eps$-net} in $\spc{Y}$; that is, for any $y\in \spc{Y}$ there is $x\in \spc{X}$ such that
+\[\dist{f(x)}{y}{\spc{Y}}<\eps.\]
 \end{subthm}
 
 \begin{subthm}{}
-$\bigl|\dist{f(x)}{f(x')}{\spc{Y}}-\dist{x}{x'}{\spc{X}}\bigr|\le \eps$ for any $x,x'\in\spc{X}$.
+$f(\spc{X})$ is an \index{distance-preserving}\emph{$\eps$-distance-preserving}; that is,
+\[\dist{f(x)}{f(x')}{\spc{Y}}\lg \dist{x}{x'}{\spc{X}}\pm\eps \]
+for any $x,x'\in\spc{X}$.
 \end{subthm}
 
 \end{thm}

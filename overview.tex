@@ -1,82 +1,95 @@
-\chapter{Surface theory}\label{chap:surfaces}
+\chapter{Surfaces}\label{chap:surfaces}
 
 This lecture is less rigorous;
-it aims to demonstrate beauty of geometry of convex surfaces, which is the precursor of modern Alexandrov geometry.
-For a deeper dive into this theory, we recommend turning to the classic and brilliantly written books by Alexandr Alexandrov \cite{alexandrov,alexandrov-1948}.
-Also, the book by Alexey Pogorelov \cite{pogorelov1969} is very recommended, despite being a challenge to read.
+its aim is to introduce the reader to the geometry of convex surfaces, the main precursor to modern Alexandrov geometry.
+For a deeper dive into this theory, we recommend the classic and brilliantly written books by Alexandr Alexandrov \cite{alexandrov, alexandrov-1948}.
+Additionally, the book by Alexey Pogorelov \cite{pogorelov1969} is highly recommended, despite being a challenging read.
 
 
 \section{Polyhedral surfaces}
 
-A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) with a length metric that admits a finite triangulation such that each triangle is isometric to a solid plane triangle.
-A \index{triangulation}\emph{triangulation} of a polyhedral surface will always be assumed to satisfy this condition.
+A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) equipped with a length metric that admits a finite triangulation, where each triangle is isometric to a Euclidean triangle.
+A \index{triangulation}\emph{triangulation} of a polyhedral surface is always assumed to satisfy this condition.
 
-Note that according to our definition, any polyhedral surface is compact.
+Note that, according to our definition, every polyhedral surface is compact.
 
-Choose a point $p$ on a polyhedral surface $\spc{P}$.
-We can assume that $p$ is a vertex of a triangulation $\spc{P}$;
-it can be achieved by subdividing the triangulation.
-Denote by $\theta_p$ the \emph{total angle} around $p$;
-that is, the sum of all angles at $p$ in all the triangles that have $p$ as a vertex.
+Consider a point $p$ on a polyhedral surface $\spc{P}$.
+We can assume that $p$ is a vertex of a triangulation of $\spc{P}$,
+which can be achieved by subdividing the triangulation.
+Let $\theta_p$ denote the \emph{total angle} around $p$, which is the sum of all angles at $p$ in the triangles that have $p$ as a vertex.
 
-Note that $\theta_p$ does not depend on the choice of triangulation.
-If $p$ is an interior point, then the value $2\cdot\pi-\theta_p$ is called \emph{curvature} at $p$.
-If $p$ lies on the boundary of $\spc{P}$, then the value $\pi-\theta_p$ is called \emph{inner turn} at $p$.
+Note that $\theta_p$ is independent of the choice of triangulation.
+If $p$ is an interior point, then the value $2\cdot\pi-\theta_p$ is called the \emph{curvature} at $p$.
+If $p$ lies on the boundary of $\spc{P}$, then the value $\pi-\theta_p$ is called the \emph{inner turn} at $p$.
 
-A point with nonvanishing curvature or inner turn will be called an \emph{essential vertex} of the surface.
-Observe that an essential vertex is a vertex in any triangulation.
+A point with nonzero curvature or inner turn will be called an \emph{essential vertex} of the surface.
+Note that an essential vertex is a vertex in any triangulation.
 
 \begin{thm}{Exercise}\label{ex:geodesic-vertex}
-Show that geodesics on a polyhedral surface with nonnegative curvatures and nonnegative inner turns may have essential vertices only at their endpoints.
+Show that geodesics on a polyhedral surface with nonnegative curvature and nonnegative inner turns can have essential vertices only at their endpoints.
 \end{thm}
 
 The following statement is an analog of the Gauss--Bonnet formula.
 
 \begin{thm}{Exercise}\label{ex:gauss-bonnet}
-Let $K(\spc{P})$ and $T(\spc{P})$ denote the sum of curvatures of all interior points
-and the sum of all inner turns of the boundary points a polyhedral surface $\spc{P}$.
+Let $K(\spc{P})$ and $T(\spc{P})$ denote the sum of the curvatures at all interior points
+and the sum of the inner turns at all boundary points of a polyhedral surface $\spc{P}$, respectively.
 Show that
-\[K(\spc{P})+T(\spc{P})=2\cdot\pi\cdot\chi(\spc{P}),\]
+\[
+K(\spc{P}) + T(\spc{P}) = 2 \cdot \pi \cdot \chi(\spc{P}),
+\]
 where $\chi(\spc{P})$ denotes the Euler characteristic of $\spc{P}$.
 \end{thm}
 
-The following proposition states that this new definition of curvature agrees with the $\Alex0$ comparison.
+The following proposition states that this new definition of curvature is consistent with the $\Alex0$ comparison.
 
 \begin{thm}{Proposition}\label{prop:poly-CBB}
-A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at every inner point and and nonnegative inner turn at each boundary point.
+A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at every interior point and nonnegative inner turn at each boundary point.
 \end{thm}
 
 \parit{Proof.}
 By \ref{comp-kappa}, it is sufficient to check that
 $f=\tfrac12\cdot\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and any point $p$.
 
-We can assume that $p$ is not a vertex and the endpoints of $\gamma$ are not vertices;
-the vertex case can be done by approximation.
-By \ref{ex:geodesic-vertex}, $\gamma$ does not contain vertices.
+We can assume that $p$ is not a vertex and that the endpoints of $\gamma$ are not vertices;
+the case where $p$ or the endpoints of $\gamma$ are vertices can be handled by approximation.
+By \ref{ex:geodesic-vertex}, $\gamma$ does not contain any vertices.
+
+
 
 Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
-Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain vertices.
-Therefore, a neighborhood $U\supset [px]$ can be unfolded on a plane;
-that is, there is an injective length-preserving map $z\mapsto \tilde z$
+Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain any vertices.
+Therefore, a neighborhood $U \supset [px]$ can be unfolded onto a plane;
+that is, there exists an injective length-preserving map $z \mapsto \tilde z$
 of $U$ into the Euclidean plane.
-This way we map the part of $\gamma$ in $U$ to a line segment $\tilde\gamma$.
+In this way, we map the part of $\gamma$ in $U$ to a line segment $\tilde \gamma$.
 Let
-\[\tilde f(t)\df\tfrac12\cdot\distfun_{\tilde p}^2\circ\tilde \gamma(t).\]
-Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0)= f(t_0)$.
-Furthermore, since the unfolding $z\mapsto \tilde z$ preserves lengths of curves, we get
-$\tilde f(t)\ge f(t)$ if $t$ is close to $t_0$.
-That is, $\tilde f$ is a local upper barrier of $f$ at $t_0$; see \ref{Function comparison}.
-Evidently, $\tilde f''(t)\equiv 1$.
+\[\tilde f(t) \df \tfrac12 \cdot \distfun_{\tilde p}^2 \circ \tilde \gamma(t).\]
+Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0) = f(t_0)$.
+Furthermore, since the unfolding map $z \mapsto \tilde z$ preserves the lengths of curves, we obtain
+$\tilde f(t) \ge f(t)$ if $t$ is close to $t_0$.
+That is, $\tilde f$ is a local upper barrier for $f$ at $t_0$; see \ref{Function comparison}.
+Evidently, $\tilde f''(t) \equiv 1$.
 Therefore, $f$ is 1-concave.
 
 \begin{thm}{Exercise}\label{ex:poly-CBB}
 The converse is left to the reader.\qeds
 \end{thm}
 
+
+
+
+
+
+
+
+
+
 \section{Approximation}
 
-The following theorem is the main extra tool available in Alexandrov geometry of surfaces.
-We will use this statement in the proof of \ref{cor:Alex0-convex} to reduce questions about $\Alex0$ surfaces to polyhedral surfaces with nonnegative curvature.
+The following theorem is a key additional tool in the Alexandrov geometry of surfaces.
+We will use this result in the proof of \ref{cor:Alex0-convex} to reduce questions about $\Alex0$ surfaces to polyhedral surfaces with nonnegative curvature.
+
 
 \begin{thm}{Theorem}\label{thm:approximation}
 Any closed $\Alex0$ surface is a Gromov--Hausdorff limit of homeomorphic polyhedral surfaces with nonnegative curvature.
@@ -88,7 +101,7 @@ The construction of polyhedral approximations is based on the following exercise
 Let $\spc{P}$ be a closed $\Alex0$ surface.
 
 \begin{subthm}{ex:approximation:nbhd}
-Show that any point $p$ admits an arbitrary small closed convex polygonal neighborhood $N$;
+Show that any point $p$ admits an arbitrarily small closed convex polygonal neighborhood $N$;
 that is, $N$ is convex and bounded by a broken geodesic.
 
 \end{subthm}
@@ -109,26 +122,28 @@ Show that $\theta_v\le 2\cdot\pi$.
 \parit{Construction.}
 Let $\spc{P}$ be a closed $\Alex0$ surface.
 By part \ref{SHORT.ex:approximation:triangulation}, we can triangulate $\spc{P}$ by small convex triangles, say diameter of each triangle is less than given $\delta>0$.
-Let us exchange each triangle of the triangulation by its model solid triangle; denote by $\tilde {\spc{P}}_\delta$ the obtained polyhedral surface.
-Note that $\tilde {\spc{P}}_\delta$ is homeomorphic to $\spc{P}$;
-moreover, there is a homeomorphism $\spc{P}\to \tilde {\spc{P}}_\delta$ that sends a point $x\in \spc{P}$ to a point $\tilde x\in \tilde {\spc{P}}_\delta$ in the corresponding model triangle.
+Now, replace each triangle in the triangulation with its corresponding model solid triangle, and denote the resulting polyhedral surface by $\tilde{\spc{P}}_\delta$.
 
-By the angle comparison (\ref{angle-a}) and part \ref{SHORT.ex:approximation:poly} of the exercise, the total angle around each vertex in $\tilde {\spc{P}}_\delta$ cannot exceed $2\cdot\pi$.
-That is, the obtained polyhedral space $\tilde {\spc{P}}_\delta$ has nonnegative curvature.
+Note that $\tilde{\spc{P}}_\delta$ is homeomorphic to $\spc{P}$;
+moreover, there exists a homeomorphism $\spc{P} \to \tilde{\spc{P}}_\delta$ that maps each point $x \in \spc{P}$ to a point $\tilde{x} \in \tilde{\spc{P}}_\delta$ in the corresponding model triangle.
+
+By the angle comparison (\ref{angle-a}) and part \ref{SHORT.ex:approximation:poly} of the exercise, the total angle around each vertex in $\tilde{\spc{P}}_\delta$ does not exceed $2\cdot\pi$.
+Thus, the resulting polyhedral surface $\tilde{\spc{P}}_\delta$ has nonnegative curvature.
 \qeds
 
-Observe that Theorem \ref{thm:approximation} follows from the following.
+Observe that Theorem \ref{thm:approximation} follows from the following statement.
 
 \begin{thm}{Claim}\label{clm:approximation}
-If $\tilde {\spc{P}}_\delta$ is provides by the construction, then $\tilde {\spc{P}}_\delta\to\spc{P}$ as $\delta\to 0$ in the sense of Gromov--Hausdorff.
+If $\tilde{\spc{P}}_\delta$ is provided by the construction, then $\tilde{\spc{P}}_\delta\to\spc{P}$ as $\delta\to 0$ in the sense of Gromov--Hausdorff.
 \end{thm}
 
-This claim seems to be self-evident, but it is not;
-a very smart proof was given by Alexandrov \cite[VII §~6]{alexandrov-1948}.
-We will indicate an alternative proof based on the following exercise and two theorems which will be stated without a proof.
+Altho this claim looks self-evident, it is not.
+A remarkably elegant proof was given by Alexandrov \cite[VII §~6]{alexandrov-1948}.
+We will outline an alternative proof based on the following exercise and two theorems, which will be stated without proof.
+
 The first theorem is due to Yuri Burago, Mikhael Gromov, and Grigori Perelman \cite[10.8]{burago-gromov-perelman};
-it is a generalization of Alexandrov's theorem for surfaces \cite[X §~2]{alexandrov-1948}.
-The second theorem is due to Nan Li \cite[Corollary 0.1]{li}.
+it generalizes Alexandrov's theorem for surfaces \cite[X §~2]{alexandrov-1948}.
+The second theorem is due to Nan Li \cite{li}.
 
 \begin{thm}{Theorem}\label{thm:cont-vol}
 Let $\spc{X}_1, \spc{X}_2$ be a sequence of $n$-dimensional $\Alex\kappa$ spaces that converges to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
