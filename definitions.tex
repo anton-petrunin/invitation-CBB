@@ -1,12 +1,12 @@
 %%!TEX root = the-definitions.tex
 \chapter{Definitions}\label{chap:defs}
 
-In this lecture we discuss several definitions of Alexandrov space.
-Alexandrov's lemma works as the main tool.
+In this lecture we prove equivalence of several definitions of Alexandrov space.
+
 
 \section{Four-point comparison}\label{sec:4-point}
 
-Recall that $\angk  pxy$ denotes the model angle at $p$; see page \pageref{page:model-angle}.
+Recall that $\angk  pxy$ denotes the model angle; see page \pageref{page:model-angle}.
 
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
@@ -15,17 +15,18 @@ If the inequality
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
 holds, then we say that the quadruple meets \index{comparison}\emph{$\EE^2$-comparison}.
+If the left-hand side is undefined, then we assume that the comparison holds.
 
-If instead of $\EE^2$, we use $\SSS^2$ or $\HH^2$, then we get the definition of
-$\SSS^2$- or $\HH^2$-comparisons.
+Instead of $\EE^2$, we can use $\SSS^2$ or $\HH^2$.
+This way we get the definition of $\SSS^2$- or $\HH^2$-comparisons.
 Recall that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
 but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
 if this does not hold for one of the angles, then we assume that $\SSS^2$-comparison holds for this quadruple.
 
 More generally, one may apply this definition to $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
-However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$
-(applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases).
+However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$;
+applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases.
 
 \begin{thm}{Definition}\label{def:CBB}
 A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
@@ -142,12 +143,12 @@ The spherical and hyperbolic cases can be proved along the same lines.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:alex-lemma-cat}
-Assume $p,x,y,z$ are as in Alexandrov's lemma.
+Assume $p,x,y,z$ are as in Alexandrov's lemma (\ref{lem:alex}).
 Show that
 \[\angk p x y
 \ge
 \angk p x z + \angk p z y,\]
-with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} in \ref{lem:alex} vanish.
+with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} and \ref{SHORT.lem-alex-angle} in Alexandrov's lemma vanish.
 \end{thm}
 
 Note that 
@@ -227,7 +228,7 @@ $p,x,y,v,w$ in $\spc{A}$ such that $v,w\in \left]xy\right[$.
 \begin{thm}{Exercise}\label{ex:angle-lim}
 Let $\spc{A}$ be an $\Alex0$ space.
 Suppose hinges $\hinge {x_n}{y_n}{z_n}$ in $\spc{A}$ converge to a hinge $\hinge {x_\infty}{y_\infty}{z_\infty}$;
-that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the Hausdorff sense.
+that is, geodesics $[x_ny_n]$ and $[x_nz_n]$ converge to the geodesics $[x_\infty y_\infty]$ and $[x_\infty z_\infty]$ in the sense of Hausdorff.
 Show that 
 \[\liminf_{n\to\infty}\mangle \hinge {x_n}{y_n}{z_n}\ge \mangle \hinge {x_\infty}{y_\infty}{z_\infty}.\]
 \end{thm}
@@ -240,13 +241,11 @@ for example, on the surface of convex polyhedron, which is a $\Alex0$ space by \
 Let $\hinge pxy$ be a hinge in an $\Alex0$ space $\spc{A}$.
 By \ref{ex:noncreasing}, the angle measure $\mangle\hinge pxy$ is defined and
 \[\mangle\hinge pxy\ge \angk pxy.\]
-
 Further, according to \ref{ex:adjacent-CBB}, we have 
 \[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
 for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$.
 
-The following theorem implies that a geodesic space has nonnegative curvature in the sense of Alexandrov if
-the above conditions hold for all its hinges.
+The following theorem provides a converse.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
 A complete geodesic space $\spc{A}$ is $\Alex0$ if the following conditions hold.
@@ -368,9 +367,16 @@ To prove equivalence, approximate $f$ by smooth functions taking a convolutions 
 Note that all the conditions are equivalent for $f_n$;
 passing to the limit we get the same for $f$.
 
-We will also use that \textit{$\lambda$-concave functions are one-sided differentiable}.
+\begin{thm}{Exercise}\label{ex:concave'}
+Show that $\lambda$-concave functions are one-sided differentiable.
+\end{thm}
 
-Also note that that since a concave function defined on an open interval  is automatically locally Lipschitz, the requirement that a $\lambda$-concave function be locally Lipschitz is superfluous for open intervals.
+The following exercise implies that if the function defined on an open interval, then the Lipschitz condition can be dropped from the definition of $\lambda$-concavity.
+
+\begin{thm}{Exercise}\label{ex:concave-open}
+Suppose a real-to-real function $f$ is defined on an open inerval and satisfies one the Jensen inequality stated above.
+Show that $f$ is locally Lipscitz.
+\end{thm}
 
 \parbf{Functions on metric spaces.}
 A function on a metric space $\spc{A}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{A}$}.
@@ -381,7 +387,7 @@ for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
 The following proposition is simple but conceptual ---
-it reformulates a global geometric condition into an infinitesimal condition on distance functions.
+it reduces a global comparison to an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
 A complete geodesic space $\spc{A}$ is $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form
@@ -400,12 +406,12 @@ Set
 r(t)&\df\dist{p}{\gamma(t)}{}.
 \end{align*}
 Clearly, $\tilde r(t_0)=r(t_0)$ and $\tilde r(t_1)=r(t_1)$.
-Note that the point-on-side comparison (\ref{point-on-side}) is equivalent to 
+Note that the point-on-side comparison (\ref{point-on-side}) says that the implication
 \[t_0\le t\le t_1
 \qquad\Longrightarrow\qquad
 \tilde r(t)\le r(t)
 \eqlbl{eq:r=<r}\]
-for any $\gamma$ and $t_0<t_1$.
+holds for any $\gamma$ and $t_0<t_1$.
 
 Jensen's inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
 Hence the proposition follows.
@@ -413,15 +419,51 @@ Hence the proposition follows.
 
 \section{Remarks}
 
+Note that Alexandrov's lemma is a result in neutral geometry;
+it has the following useful variation; see \cite[10.2]{alexander-kapovitch-petrunin2024} or \cite[3.3]{alexander-kapovitch-kirszbraun}.
+
+\begin{thm}{Overlap lemma}\label{lem:extend-overlap}
+Let $\tilde x^1$, $\tilde x^2$, $\tilde x^3$, $\tilde p^1$, $\tilde p^2$, ans $\tilde p^3$ be points in $\EE^2$, $\SSS^2$, or $\HH^2$.
+Assume that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
+\begin{enumerate}[(i)]
+
+\item
+\label{no-overlap:px=px}
+$\dist{\tilde p^i}{\tilde x^\kay}{}=\dist{\tilde p^j}{\tilde x^\kay}{}$,
+%$\dist{\tilde p^i}{\tilde x^\kay}{}=\dist{\tilde p^j}{\tilde x^\kay}{}$,
+
+\item
+\label{no-overlap:orient-1}
+$\tilde p^i$ and $\tilde x^i$ lie in the same closed half-space determined by $[\tilde x^j\tilde x^\kay]$,
+\end{enumerate}
+
+If no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^\kay}$ overlap,
+then
+\[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
+where $\mangle\tilde p^i\df\mangle\hinge{\tilde p^i}{\tilde x^\kay}{\tilde x^j}$
+for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
+\end{thm}
+
+The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be superfluous.
+This is a long-standing open problem possibly dating back to Alexandrov \cite[footnote in 4.1.5]{burago-burago-ivanov}.
+Let us state it formally.
+
+\begin{thm}{Open question}\label{open:hinge-}
+Let $\spc{A}$ be a complete geodesic space (you can also assume that $\spc{A}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$)
+such that for any hinge $\hinge x p y$ in $\spc{A}$,
+the angle $\mangle\hinge x p y$ is defined and
+\[\mangle\hinge x p y\ge\angk x p y.\]
+Is it true that $\spc{A}$ is an Alexandrov space?
+\end{thm}
+
 Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov;
 this is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
 
-In both comparisons we check certain conditions on the 6 distances between every pair of points in 4-point sets.
+In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
 Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested considering other conditions of that type for $n$-point subsets;
 see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for the development of this idea.
 
-In this text we have chosen complete \textit{geodesic} spaces with curvature at least $\kappa$ as the main object of study (the $\Alex\kappa$ spaces).
-Instead of the \textit{geodesic} condition, we could assume that they are \textit{length} spaces. 
+One coul define Alxandrov space as a complete \textit{length} space with curvature $\ge \kappa$.
 This condition is more natural and general, but many statements can be reduced to the geodesic case.
 In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
 then 
@@ -439,5 +481,6 @@ $f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
 Similarly, the function comparison for $\Alex1$ states that for any point $p$, we have
 $f''\le -f$ for the function $f=-\cos\circ\distfun_p$
 defined in $\oBall(p,\pi)$.
+
 The geometric meaning of these inequalities remains the same:
 \textit{distance functions are more concave than distance functions in $\MM^2(\kappa)$}.

@@ -2,7 +2,7 @@
 \chapter{Globalization}\label{chap:globalization}
 
 The globalization theorem states that a locally Alexandrov space is globally Alexandrov.
-We prove it in the simplest meaningful case and indicate a way to extend the proof to the general case.
+We prove it for compact spaces and indicate the proof of the general case.
 
 \section{Globalization}
 
@@ -51,7 +51,7 @@ this is the opposite side in a flat triangle with the same angle and two adjacen
 \end{wrapfigure}
 
 More precisely,
-consider the model hinge $\hinge {\tilde x} {\tilde p} {\tilde q}$ in $\EE^2$ that is defined by 
+consider the model hinge $\hinge {\tilde x} {\tilde p} {\tilde q}$ in $\EE^2$ such that
 \begin{align*}
 \mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{A}},
 \\
@@ -69,7 +69,6 @@ Note that
 \quad\Longleftrightarrow\quad
 \mangle\hinge x p q\ge \angk x p q.
 \]
-We will use it in the following proof.
 
 \parit{Proof.} 
 Consider a hinge $\hinge x p q$ such that 
@@ -160,7 +159,7 @@ $\dist{p}{x_n}{}+\dist{x_n}{q}{}
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\z\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
-Now we can assume that the sequence $x_n$ does not terminate.
+From now we assume that the process does not terminate.
 Let us prove the following claim.
 \begin{clm}{}\label{clm:>0}
 The distances
@@ -229,7 +228,7 @@ The globalization theorem  can be generalized to any curvature bound~$\kappa$.
 The case $\kappa\le 0$ is proved in the same way, but the case $\kappa>0$ requires modifications.
 
 The compactness condition in our version of the theorem can be traded for completeness.
-The proof uses the following statement where $r(x)$ measures the size of a neighborhood of $x$ where the comparison holds.
+The proof uses the following statement.
 
 \begin{thm}{Exercise}\label{ex:alm-min}
 Let $\spc{X}$ be a complete metric space.
@@ -240,7 +239,9 @@ for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
 
 \end{thm}
 
-Applying this exercise, one can prove the following general version of the globalization theorem.
+Given a point $x$ in a locally $\Alex\kappa$ space denote by
+$r(x)$ the size of a neighborhood of $x$ where the comparison holds.
+Applying the exercise to $r$ and then the key lemma, one can prove the following.
 
 \begin{thm}{Theorem}\label{thm:globalization+}
 Any locally $\Alex\kappa$ space is $\Alex\kappa$.
@@ -257,14 +258,15 @@ If $\Kappa>\kappa$, then any $\Alex\Kappa$ space is $\Alex\kappa$.
 \end{thm}
 
 In other words the expression \textit{curvature bounded below by $\kappa$} makes sense for geodesic spaces.
-However, by the following exercise, it does not make much sense in general.
+However, it does not make much sense in general.
 
-\begin{thm}{Exercise}\label{ex:CBB(1)notitCBB(0)}
-Let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
-\[\dist{p}{x_i}{}=\pi,\quad\dist{x_i}{x_j}{}=2\cdot\pi\]
+For example,
+let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by $\dist{p}{x_i}{}=\pi$ and $\quad\dist{x_i}{x_j}{}=2\cdot\pi$
 for all $i\ne j$.
-Show that $\spc{X}$ has curvature $\ge 1$, but does not have curvature $\ge 0$.
-\end{thm}
+Since $\spc{X}$ has no defined sphericlal model angle, it has curvature $\ge 1$.
+On the other hand, $\spc{X}$ does not have curvature $\ge 0$ since
+\[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
+
 
 \begin{thm}{Exercise}\label{ex:RisCBB(1)}
 Let $p$ and $q$ be points in an $\Alex1$ space $\spc{A}$.
@@ -288,18 +290,6 @@ for any triple of points $x,y,z\in \spc{A}$.
 
 
 \section{Remarks}
-
-The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be superfluous.
-This is a long-standing open problem possibly dating back to Alexandrov \cite[footnote in 4.1.5]{burago-burago-ivanov}.
-Let us state it formally.
-
-\begin{thm}{Open question}\label{open:hinge-}
-Let $\spc{A}$ be a complete geodesic space (you can also assume that $\spc{A}$ is homeomorphic to $\mathbb{S}^2$ or $\RR^2$) 
-such that for any hinge $\hinge x p y$ in $\spc{A}$, 
-the angle $\mangle\hinge x p y$ is defined and 
-\[\mangle\hinge x p y\ge\angk x p y.\]
-Is it true that $\spc{A}$ is an Alexandrov space?
-\end{thm}
 
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
 Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};

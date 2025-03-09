@@ -335,19 +335,14 @@ for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that all such norms are quadratic, and the statement follows.
 
+\parbf{\ref{ex:concave'}.}
+
 \parbf{\ref{ex:alm-min}.}
 Suppose such a point does not exist;
 that is, for any $p\in \spc{X}$ there is a point $p'$ such that $r(p')\le  (1-\eps)\cdot r(p)$ and $\dist p{p'}{}<\tfrac{1}{\eps}\cdot r(p)$.
 Construct a sequence of points $p_0,p_1,\dots$ such that $p_n=p_{n-1}'$ for any~$n$.
 Show that this sequence is Cauchy; denote its limit by $p_\infty$.
 Arrive at a contradiction by showing that $r(p_\infty)\le0$.
-
-\parbf{\ref{ex:CBB(1)notitCBB(0)}.}
-The space $\spc{X}$ has no defined sphericlal model angles;
-therefore it has curvature $\ge 1$.
-
-However, $\spc{X}$ does not have curvature $\ge 0$ since
-\[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
 
 \parbf{\ref{ex:RisCBB(1)}.}
 Suppose $\mangle\hinge mxp\ne 0$ and $\mangle\hinge mxp\ne\pi$;
@@ -1171,7 +1166,7 @@ It remains to apply \ref{prop:poly-CBB}.
 Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
 
 \parit{\ref{SHORT.ex:approximation:length}.}
-Apply the angle comparison.
+Apply the hinge comparison (\ref{angle}).
 
 \parit{\ref{SHORT.ex:approximation:area}.}
 The first inequality follows form the generalized vesion of Kiszbraun's theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
@@ -1192,11 +1187,11 @@ Summing up the above inequalities for $\Delta_1,\dots,\Delta_n$, we get
 It follows that given $\eps>0$, we can choose the subdivision so that
 \[\area\Delta-\area\tilde\Lambda\le \tfrac12\cdot(\alpha-\tilde\alpha)\cdot (\diam\Delta)^2+\eps.\]
 
-By the angle comparison, the angles adjacent to polygonal sides of $\tilde\Lambda$ do not exceed $\beta$ and $\gamma$.
+By the hinge comparison (\ref{angle}), the angles adjacent to polygonal sides of $\tilde\Lambda$ do not exceed $\beta$ and $\gamma$.
 It follows that
-\[\area\tilde\Lambda-\area\tilde\Delta\le \tfrac12\cdot(\beta+\gamma-\tilde\beta-\tilde\gamma)\cdot \diam^2 \Delta.\]
+\[\area\tilde\Lambda-\area\tilde\Delta\le \tfrac12\cdot(\beta+\gamma-\tilde\beta-\tilde\gamma)\cdot (\diam \Delta)^2.\]
 Therefore
-\[\area\Delta-\area\tilde\Delta\le \tfrac12\cdot\excess\Delta\cdot \diam^2 \Delta+\eps\]
+\[\area\Delta-\area\tilde\Delta\le \tfrac12\cdot\excess\Delta\cdot (\diam \Delta)^2+\eps\]
 for arbitrary $\eps>0$, hence the result.
 
 
