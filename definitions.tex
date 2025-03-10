@@ -17,6 +17,13 @@ If the inequality
 holds, then we say that the quadruple meets \index{comparison}\emph{$\EE^2$-comparison}.
 If the left-hand side is undefined, then we assume that the comparison holds.
 
+\begin{thm}{Exercise}\label{ex:CBB+-}
+Suppose $\EE^2$-comparison holds for quadruple $p,x_1,x_2,x_3$.
+Show that $\EE^2$-comparison holds for quadruple $q,y_1,y_2,y_3$ if
+\[\dist{q}{y_i}{}\ge\dist{p}{x_i}{}\qquad\text{and}\qquad\dist{y_i}{y_j}{}\le\dist{x_i}{x_j}{}\]
+for all $i$ and $j$.
+\end{thm}
+
 Instead of $\EE^2$, we can use $\SSS^2$ or $\HH^2$.
 This way we get the definition of $\SSS^2$- or $\HH^2$-comparisons.
 Recall that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
@@ -417,6 +424,36 @@ Jensen's inequality for the function $h$ is equivalent to \ref{eq:r=<r}.
 Hence the proposition follows.
 \qeds
 
+\section{Semiconcave functions}\label{sec:Semiconcave functions}
+
+Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison},
+and when we say \textit{function} we usually mean a \textit{locally Lipschitz function defined on an open domain}.
+
+Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{A}$.
+Suppose $\phi$ is a continuous function defined in $\Dom f$.
+We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that
+the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
+
+If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index{semiconcave function}\emph{semiconcave}.
+
+\begin{thm}{Exercise}\label{ex:distfun-semiconcave}
+Let $f$ be a \emph{distance function} on an $\Alex0$ space $\spc{A}$;
+that is, $f(x)\equiv\dist{p}{x}{}$ for some $p\in \spc{A}$.
+Show that $f''\le \tfrac1f$.
+In particular, $f$ is semiconcave in $\spc{A}\setminus\{p\}$.
+\end{thm}
+
+Proposition~\ref{comp-kappa} admits the following generalization.
+The is nearly the same, but the formulas are getting more complicated.
+
+\begin{thm}{Proposition}
+A complete geodesic space $\spc{A}$ is $\Alex{\mp1}$
+if $f''\z\le \pm f$ for any function of the type $f=\cosh\circ\distfun_p$ (respectively, $f=-\cos\circ\distfun_p|_{\oBall(p,\pi)}$).
+\end{thm}
+
+The geometric meaning of these inequalities remains the same:
+\textit{distance functions are more concave than distance functions in $\MM^2(\kappa)$}.
+
 \section{Remarks}
 
 Note that Alexandrov's lemma is a result in neutral geometry;
@@ -470,17 +507,3 @@ then
 \textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
 Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$
 \cite[8.11]{alexander-kapovitch-petrunin2024}; compare to \ref{ex:grad-dist:geod}.
-
-All the discussed statements can be generalized to $\Alex\kappa$ spaces.
-The proof are nearly the same, but the formulas are getting more complicated.
-
-For example, the function comparison for $\Alex{-1}$ spaces states that 
-$f''\z\le f$ for any function of the type $f=\cosh\circ\distfun_p$.
-(The inequality used here will be defined in Section \ref{sec:Semiconcave functions}.)
-
-Similarly, the function comparison for $\Alex1$ states that for any point $p$, we have
-$f''\le -f$ for the function $f=-\cos\circ\distfun_p$
-defined in $\oBall(p,\pi)$.
-
-The geometric meaning of these inequalities remains the same:
-\textit{distance functions are more concave than distance functions in $\MM^2(\kappa)$}.
