@@ -40,35 +40,6 @@ Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most
 has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
-Let $X$ be a subset of a metric space $\spc{W}$.
-Recall that a set $Z\subset \spc{W}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $X$ if for any point $x\in X$, there is a point $z\in Z$ such that $\dist{x}{z}{}<\eps$.
-
-We will use the following characterization of compact sets.
-
-\begin{thm}{Exercise}\label{ex:net}
-Let $X$ be a closed subset in a complete metric space.
-
-\begin{subthm}{ex:net:finite}
-Show that $X$ is compact if and only if it admits a finite $\eps$-net for any $\eps>0$.
-\end{subthm}
-
-\begin{subthm}{ex:net:compact}
-Show that $X$ is compact if and only if it admits a compact $\eps$-net for any $\eps>0$.
-\end{subthm}
-
-\end{thm}
-
-Recall that $\pack_\eps\spc{X}$ is the exact upper bound on the number of points $x_1,\z\dots,x_n\in \spc{X}$ such that $\dist{x_i}{x_j}{}\ge\eps$ if $i\ne j$.
-
-If $n=\pack_\eps\spc{X}<\infty$, then
-the collection of points $x_1,\dots,x_n$ is called a \index{maximal packing}\emph{maximal $\eps$-packing}.
-
-\begin{thm}{Exercise}\label{ex:pack-net}
-Show that any maximal $\eps$-packing $x_1,\dots,x_n$ is an $\eps$-net.
-Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack_\eps\spc{X}\z<\infty$ for any $\eps>0$.
-\end{thm}
-
-
 \parit{Proof of \ref{thm:gromov-compactness}.}
 Denote by $\bm{K}$ the set of isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
 By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.

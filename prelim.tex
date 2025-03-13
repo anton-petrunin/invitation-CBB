@@ -43,6 +43,12 @@ are called, respectively, the \index{open ball}\emph{open} and  the \index{close
 The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
 might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
+The \index{diameter}\emph{diameter} of $\spc{X}$ is  defined as
+\[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
+
+The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
+\[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
+
 We will denote by \index{60@$\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$}$\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric),
 the Euclidean space, and the Lobachevsky space respectively.
 More generally, $\MM^n(\kappa)$ will denote the \index{model!space}\emph{model $n$-space} of curvature $\kappa$;
@@ -53,6 +59,35 @@ that is,
 \item if $\kappa<0$, then $\MM^n(\kappa)$ is the Lobachevsky $n$-space $\HH^n$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
 in particular $\MM^n(-1)=\HH^n$.
 \end{itemize}
+
+\section{Nets and packing}\label{sec:packing}
+
+Let $S$ be a subset of a metric space $\spc{X}$.
+Recall that a set $Z\subset \spc{X}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $S$ if for any point $s\in S$, there is a point $z\in Z$ such that $\dist{s}{z}{}\le\eps$.
+
+The \index{$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$\index{$\pack_\eps\spc{X}$}.
+If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x_1,x_2,\dots,x_m\}$ in $\spc{X}$
+such that $\dist{x_i}{x_j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
+
+We will use the following characterization of compact sets.
+
+\begin{thm}{Exercise}\label{ex:net}
+Let $X$ be a closed subset in a complete metric space.
+
+\begin{subthm}{ex:net:finite}
+Show that $X$ is compact if and only if it admits a finite $\eps$-net for any $\eps>0$.
+\end{subthm}
+
+\begin{subthm}{ex:net:compact}
+Show that $X$ is compact if and only if it admits a compact $\eps$-net for any $\eps>0$.
+\end{subthm}
+
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:pack-net}
+Show that any maximal $\eps$-packing $x_1,\dots,x_n$ is an $\eps$-net.
+Conclude that a complete metric space $\spc{X}$ is compact if and only if $\pack_\eps\spc{X}\z<\infty$ for any $\eps>0$.
+\end{thm}
 
 \section{Length spaces}\label{sec:length}
 
@@ -495,7 +530,7 @@ if the following two conditions hold:
 
 \begin{subthm}{}
 $f(\spc{X})$ is an \index{net@$\eps$-net}\emph{$\eps$-net} in $\spc{Y}$; that is, for any $y\in \spc{Y}$ there is $x\in \spc{X}$ such that
-\[\dist{f(x)}{y}{\spc{Y}}<\eps.\]
+\[\dist{f(x)}{y}{\spc{Y}}\le\eps.\]
 \end{subthm}
 
 \begin{subthm}{}

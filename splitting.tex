@@ -5,12 +5,10 @@ In this lecture, we prove the line splitting theorem and apply it to study tange
 
 \section{Busemann function}
 
-A \index{half-line}\emph{half-line}
-%??? Вить, можешь поменять везде half-line на ray --- я ни за ни против.
-is a distance-preserving map
-from $\RR_{\ge0}=[0,\infty)$ 
-to a metric space.
-In other words, a half-line is a geodesic defined on the real half-line $\RR_{\ge0}$.
+%??? Вить, если хочешь, можешь поменять везде half-line на ray --- я ни за ни против.
+
+A \index{half-line}\emph{half-line} is a geodesic defined on the real half-line $[0,\infty)$;
+that is, a distance-preserving map from $[0,\infty)$ to a metric space.
 
 If $\gamma\:[0,\infty)\to \spc{X}$ is a half-line,
 then the limit 
@@ -67,12 +65,20 @@ such that
 \[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
 for any two points $x,y\in \spc{X}$.
 
-Observe that if $\spc{X}=A\oplus B$, then
-\begin{itemize}
-\item $A$ intersects $B$ at a single point,
-\item both sets $A$ and $B$ are \index{convex set}\emph{convex sets} in $\spc{X}$;
+\begin{thm}{Exercise}\label{ex:oplus}
+Suppose $\spc{X}=A\oplus B$.
+Show that
+\begin{subthm}{}
+ $A$ intersects $B$ at a single point, and
+\end{subthm}
+
+\begin{subthm}{}
+both sets $A$ and $B$ are \index{convex set}\emph{convex sets} in $\spc{X}$;
 the latter means that any geodesic with the endpoints in $A$ (or $B$) lies in $A$ (respectively $B$).
-\end{itemize}
+\end{subthm}
+
+\end{thm}
+
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
 Let $\gamma$ be a line in a $\Alex0$ space~$\spc{A}$. 
@@ -143,7 +149,8 @@ $f(t)=\distfun_x^2\circ\gamma(t)$
 is $2$-concave.
 In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$.  Therefore, for all large $t$
 \[
-\dist{\gamma( t)}{x}{}- t +\dist{\gamma(- t)}{x}{}- t\le \sqrt{ t^2+at+b}-t+\sqrt{ t^2-at+b}-t
+\dist{\gamma( t)}{x}{}+\dist{\gamma(- t)}{x}{}- 2\cdot t
+\le \sqrt{ t^2+at+b}+\sqrt{ t^2-at+b}-2\cdot t
 \]
 
 Passing to the limit as $t\to\infty$, we get that  $\bus_+(x)+\bus_-(x)\le 0$.
@@ -206,8 +213,8 @@ Nevertheless, according to \ref{ex:RisCBB(1)}, most of $\Alex1$ spaces have diam
 
 \section{Anti-sum}
 
-Here we give a corollary of \ref{ex:convergence-grad}.
-It will be used to prove basic properties of  tangent spaces.
+The following lemma is a corollary of \ref{ex:convergence-grad}.
+It will be used to prove basic properties of tangent spaces.
 
 
 \begin{thm}{Anti-sum lemma}\label{lem:minus-sum} 
@@ -227,7 +234,7 @@ Show that
 \end{thm}
 
 If $\T_p$ were $\Alex0$, then the lemma would follow from the existence  of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$, which is concave by \ref{ex:busemann-CBB}.
-As you will see, a revision of this idea works in the general case, but it cannot work as is since $\T_p$ might fail to be geodesic; see  Halbeisen's example \cite{alexander-kapovitch-petrunin2024}.
+As you will see, a revision of this idea works in the general case, but it cannot work as is since $\T_p$ might fail to be geodesic; see Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024}.
 
 Applying the above lemma for $u=v$, we have the following statement.
 
@@ -248,21 +255,22 @@ By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such 
 \quad\text{and}\quad
 \dd_p\distfun_{b_n}(w)=-\langle\dir{p}{b_n},w\rangle
 \]
-for any $w\in\T_p$; furthemore, $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
+for any $w\in\T_p$.
+Furthemore, we can assume that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
 
 Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun_{a_n}+|v|\cdot\distfun_{b_n}.\]
 Note that 
 \[(\dd_pf_n)(x)=-|u|\cdot\langle \dir{p}{a_n},x\rangle -|v|\cdot\langle \dir{p}{b_n},x\rangle .\]
 Thus we have the following uniform convergence for $x\in\Sigma_p$:
-\[(\dd_pf_n)(x)\to-\langle u,x\rangle -\langle v,x\rangle \]
-as $n\to\infty$,
+\[(\dd_pf_n)(x)\rightrightarrows-\langle u,x\rangle -\langle v,x\rangle \]
+as $n\to\infty$.
 According to \ref{ex:convergence-grad}, 
 the sequence $\nabla_pf_n$ converges.
 Let 
 \[w=\lim_{n\to\infty}\nabla_pf_n.\]
 By the definition of gradient,
-\[\begin{aligned}
+\begin{align*}
 \langle w,w\rangle &=\lim_{n\to\infty}\langle \nabla_pf_n,\nabla_pf_n\rangle =
 &&&%right side
 \langle w,x\rangle &=\lim_{n\to\infty}\langle \nabla_pf_n,x\rangle \ge
@@ -277,7 +285,7 @@ By the definition of gradient,
 &=-\langle u,w\rangle -\langle v,w\rangle ,
 &&&%line 3 right side
 &=-\langle u,x\rangle -\langle v,x\rangle .
-\end{aligned}\]
+\end{align*}
 
 The proof of uniqueness is very similar to the proof of uniqueness of gradients and is left to the reader.
 \qedsf
@@ -296,7 +304,7 @@ will be called the \index{linear subspace}\emph{linear subspace} of $\T_p$.
 Soon we will introduce a natural linear structure on $\Lin_p$.
 
 \begin{thm}{Proposition}\label{prop:opposite}
-Let $\spc{A}$ be an Alexandrov space and $p\in \spc{A}$.
+Let $p$ be a point in an Alexandrov space.
 Given two vectors $u,v\in\T_p$, the following statements are equivalent:
 \begin{subthm}{opposite} $u+v=0$;
 \end{subthm}
@@ -322,8 +330,9 @@ hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
 \begin{thm}{Exercise}\label{prop:two-opp}
-Let $\spc{A}$  be an Alexandrov space and $p\in \spc{A}$.
-Then for any three vectors $u,v,w\in\T_p$, if $u+v=0$ and $u+ w=0$ then $v=w$.
+Let $u$, $v$, and $w$ be tangent vectors at a point of an Alexandrov space.
+Assume $u+v=0$ and $u+ w=0$.
+Show that $v=w$.
 \end{thm}
 
 Let $u\in \Lin_p$; that is, $u+v=0$ for some $v\in\T_p$.
@@ -336,7 +345,7 @@ By \ref{prop:opposite}, we have identity
 
 
 \begin{thm}{Exercise}\label{ex:3<,>=0}
-Suppose $u,v,w\in\T_p$ are as in \ref{lem:minus-sum}.
+Suppose $u$, $v$, and $w$ are as in \ref{lem:minus-sum}.
 Show that
 \[\langle u,x\rangle +\langle v,x\rangle +\langle w,x\rangle = 0\]
 for any $x\in \Lin_p$.
@@ -366,8 +375,8 @@ in particular, it is complete.
 
 If any two vectors in $\Lin_p$ can be connected by a geodesic in $\Lin_p$,
 then the statement follows from the splitting theorem (\ref{thm:splitting}).
-By Menger's lemma (\ref{lem:mid>geod}), it is sufficient to show that for any two vectors $x,y\in\Lin_p$
-there is a midpoint $w\in \Lin_p$.
+By Menger's lemma (\ref{lem:mid>geod}), it is sufficient to show that for any pair $x,y\in\Lin_p$
+has a midpoint $w\in \Lin_p$.
 
 Choose $w\in \T_p$ to be the anti-sum of $u=-\tfrac{1}{2}\cdot x$ and $v=-\tfrac{1}{2}\cdot y$;
 see \ref{lem:minus-sum}.
@@ -417,7 +426,8 @@ Then $S$ is a dense G-delta set.
 \end{thm}
 
 \parit{Proof.}
-Let $S_n\subset \spc{A}$ be defined by inequality $|\nabla_xf|>1-\tfrac1n$.
+Given a positive integer $n$, consider the set
+\[S_n=\set{x\in\spc{A}}{|\nabla_xf|>1-\tfrac1n}.\]
 By \ref{ex:semicontinuous-grad:>s}, $S_n$ is open.
 
 Choose a point $q\ne p$.
@@ -461,7 +471,7 @@ for any $s\in S$ and $x\in X$.
 \section{Remarks}
 
 The history of the splitting theorem starts with Stefan Cohn-Vossen \cite{cohn-vossen_line},
-who proved its $2$-dimensional case.
+who proved it in the $2$-dimensional case.
 For Riemannian manifolds of higher dimensions,
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
@@ -471,7 +481,7 @@ Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 Generalizations to Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for the limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity}.
 Nicola Gigli generalized it further to the so-called {}\emph{RCD spaces} (spaces with synthetically defined Ricci-curvature bound) \cite{gigli2013splitting, gigli-splitting-overview}.
-Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}; that is, pseudo-Riemannian manifolds of signature $(1,n)$.
+Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}.
 
 The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};
 it is taken from our book \cite{alexander-kapovitch-petrunin2024}.
@@ -493,24 +503,22 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 
 \chapter{Dimension and volume}\label{chap:dim}
 
-This lecture shows that several different notions of dimension are the same for Alexandrov spaces.
-Also, we introduce volume, prove the Bishop--Gromov inequality and the right-inverse theorem, and introduce distance charts.
+In this lecture, we introduce volume, distance charts, and several notions of dimension, and prove the Bishop--Gromov inequality and the right-inverse theorem.
 
 \section{Linear dimension}
 
 Let $\spc{A}$ be an Alexandrov space.
 We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that
-the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at some point $p\in \spc{A}$.
-If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
+the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
-%If not stated otherwise, dimension will mean linear dimension.
+If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
 after that, we will use \index{50@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
-Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exist an integer $m>0$ and a model configuration 
-$\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ such that 
+Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exist a model configuration
+$\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ for some $m$ such that
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{A}}
 \quad\text{and}\quad
 |\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
@@ -547,10 +555,8 @@ Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional ma
 
 \begin{thm}{Exercise}\label{ex:resporka}
 Let $\spc{A}$ be an $\Alex0$ space.
-Show that $\LinDim \spc{A}\z\ge m$ if and only if for some $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{A}$
-we have
-\[\angk p{a_i}{a_j}>\tfrac\pi2\]
-for any pair $i\ne j$.
+Show that $\LinDim \spc{A}\z\ge m$ if and only if there are $m+2$ points $p$, $a_0,\z\dots, a_{m}\in \spc{A}$
+such that $\angk p{a_i}{a_j}>\tfrac\pi2$ for any pair $i\ne j$.
 \end{thm}
 
 \section{Space of directions}
@@ -563,7 +569,7 @@ Let $\spc{A}$ be a finite-dimensional Alexandrov space.
 Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
 \end{thm}
 
-By \ref{ex:GHto-tangent}, this gives the following.
+By \ref{ex:GHto-tangent}, it implies the following.
 
 \begin{thm}{Corollary}\label{ex:GHto-tangent-finite-dim}
 Let $p$ be a point in a finite dimensional Alexandrov space $\spc{A}$,
@@ -592,11 +598,13 @@ If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Applying \ref{ex:finite-space-of-directions-dim}, one can prove results for all finite-dimensional Alexandrov spaces via induction on  dimension; for example, see \ref{thm:doubling}.
+Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrv spece.
+It will be used in the doubling theorem (\ref{thm:doubling}).
 
 \parit{Proof of \ref{thm:finite-space-of-directions}.}
 Choose $\eps>0$; suppose $\spc{A}$ is $m$-dimensional.
-Assume we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
+Assume $\pack_\eps \Sigma_p\ge n$;
+that is, we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that $\mangle(\xi_i,\xi_j)\z>\eps$ for any $i\ne j$.
 Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
@@ -606,8 +614,7 @@ By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such th
 Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ if $i\ne j$.
 By comparison, 
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
-Therefore, $n\le \pack_\eps\SSS^{m-1}$,
-where \index{51@$\pack_\eps\spc{X}$}$\pack_\eps\spc{X}$ is the exact upper bound on the number of points $x_1,\z\dots,x_k\in \spc{X}$ such that $\dist{x_i}{x_j}{}\ge\eps$ if $i\ne j$.
+Therefore, $\pack_\eps \Sigma_p\le \pack_\eps\SSS^{m-1}$.
 
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
 By the definition, the space of directions $\Sigma_p$ is complete. 
@@ -638,9 +645,9 @@ Let $m_n$ be a midpoint of $[x_n\,y_n]$.
 
 Since $\Sigma_p$ is compact, we can pass to a subsequence of $r_n$ such that
 $\dir{p}{m_n}$ converges;
-denote its limit by $\mu$.
-Choose a geodesic $[pz]$ that runs at a small angle from $\mu$.
-Let us show that $\dir pz$ is the needed almost midpoint.
+denote the limit by $\mu$.
+Choose a geodesic $[pz]$ that runs at a small angle to $\mu$.
+It remains to show that $\dir pz$ is the needed almost midpoint.
 
 Evidently, $\angk p{x_n}{m_n}=\angk p{y_n}{m_n}$.
 By \ref{ex:alex-lemma-cat}, we have
@@ -665,7 +672,7 @@ It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as r
 In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ have lower bounds by
 the comparison, but we needed upper bounds.
 These were extracted from the definition of angle measure and the compactness of the space of directions.
-Halbeisen's example \cite{alexander-kapovitch-petrunin2024} shows that it cannot be done without the compactness condition.
+Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that it cannot be done without the compactness condition.
 
 \section{Right-inverse theorem}
 
@@ -680,7 +687,7 @@ has a  continuous right inverse defined in a neighborhood of $f(p)$.
 
 In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
 The construction uses gradient flow for a suitably chosen family of functions.
-The structure of the proof can be seen in the following exercise;
+The frame of the proof can be seen in the following exercise;
 more details are given in the hints.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
@@ -688,7 +695,7 @@ Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:ri
 Assume $\eps>0$ is sufficiently small.
 Given $\bm{y}\z=(y_1,\z\dots,y_m)\in \RR^m$, 
 consider the function on $\spc{A}$ defined by
-\[f_{\bm{y}}(x)=\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
+\[f_{\bm{y}}(x)\df\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
 
 
 \begin{subthm}{ex:proof-right-inverse:grad}
@@ -780,7 +787,7 @@ is nonincreasing.
 \end{thm}
 
 \parit{Proof.}
-Given $x\in\spc{A}$ choose a geodesic path $\gamma_x$ from $p$ to $x$.
+Given $x\in\spc{A}$, choose a geodesic path $\gamma_x$ from $p$ to $x$.
 Recall that $\log_p\:\spc{A}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
 By comparison, $\log_p$ is distance-noncontracting.
 Note that $\log_p$ maps $\oBall(p,r)_{\spc{A}}$ to $\oBall(0,r)_{\T_p}$.
@@ -804,7 +811,7 @@ Hence the first statement follows.
 
 Now, suppose $0<r_1<r_2$.
 Consider the map $w\: \spc{A}\to \spc{A}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
-(The map $w$ mimics the dilation with center at $p$ and coefficient $\tfrac {r_1}{r_2}$.)
+(This map mimics the dilation with center at $p$ and coefficient $\tfrac {r_1}{r_2}$.)
 By comparison,
 \[\dist{w(x)}{w(y)}{}\ge \tfrac {r_1}{r_2}\cdot \dist{x}{y}{}.\]
 Observe that $\oBall(p,r_1) \supset w[\oBall(p,r_2)]$.
@@ -812,8 +819,9 @@ Therefore,
 \[\vol \oBall(p,r_1)\ge (\tfrac {r_1}{r_2})^m\cdot\vol \oBall(p,r_2).\]
 \qedsf
 
-The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case. 
-It is sufficient for most applications, but a more exact statement will be given in \ref{inq:BG+} which also includes the case of  $\Alex{1}$ spaces.
+The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case;
+it is sufficient for most applications.
+A more exact statement for $\Alex\kappa$ spaces is given in \ref{inq:BG+}.
 
 
 
@@ -834,7 +842,7 @@ Show that any finite-dimensional Alexandrov space is proper.
 \end{thm}
 \section{Other dimensions}\label{sec:all-dim}
 
-Next we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
+Now we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
 We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} and \index{Hausdorff!dimension}\emph{Hausdorff dimension}, which will be denoted by \index{50@$\TopDim$}$\TopDim$ and
 \index{50@$\HausDim$}$\HausDim$, respectively.
@@ -861,7 +869,7 @@ By the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}),
 Since $\spc{A}$ is proper (\ref{ex:diam-compact:proper}),
 Szpilrajn's theorem, implies that
 \[\TopDim\spc{A}\le \HausDim\spc{A}\le m.\]
-Finally, the right-inverse theorem (\ref{thm:right-inverse}) implies that $m\le\TopDim\spc{A}$.
+Finally, by the right-inverse theorem (\ref{thm:right-inverse}), $m\le\TopDim\spc{A}$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim=dim}
@@ -876,19 +884,21 @@ Let us state a version of the Bishop--Gromov inequality for $\Alex\kappa$ spaces
 Its proof requires additionally the so-called \textit{coarea formula} for Alexandrov spaces. 
 The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 
-\begin{thm}{Bishop--Gromov inequality}\label{inq:BG+}
+\begin{thm}{Optimal Bishop--Gromov inequality}\label{inq:BG+}
 Given a point $p$ in an $m$-dimensional $\Alex\kappa$ space,
-consider the function $v(r)\z=\vol_m\oBall(p,r)$;
+consider the function
+\[v\:r\z\to\vol_m\oBall(p,r);\]
 denote by $\tilde v(r)$ the volume of $r$ ball in $\MM^m(\kappa)$.
 Then 
 \[v(r)\le \tilde v(r)\]
-for $r>0$ and the function 
+for any $r>0$.
+Morevoer, the function
 \[r\mapsto \frac{v(r)}{\tilde v(r)}\] is nonincreasing.
 If $\kappa>0$, then one has to assume that $r<\tfrac\pi{\sqrt\kappa}$.
 \end{thm}
 
 This inequality was originally proved for Riemannian manifolds with lower Ricci curvature.
-The first part is also called \emph{Bishop's inequality}.
+The first part is also known as \emph{Bishop's inequality}.
 It is due to Richard Bishop; see \cite{bishop1964} and \cite[Corollary 4, p. 256]{bishop-crittenden}.
 The second part is due to Michael Gromov \cite{gromov1981}.
 
