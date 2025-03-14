@@ -32,21 +32,22 @@ $\phi_{r,c}'(r)=1$,
 and $\phi_{r,c}''(r)=- {2c}/{r}$. 
 
 Let $\gamma$ be a unit-speed geodesic, fix a point $q$ and let 
-$$\alpha(t)=\mangle(\gamma^+(t),\dir{\gamma(t)}{q}).$$
+\[\alpha(t)=\mangle(\gamma^+(t),\dir{\gamma(t)}{q}).\]
+
 Recall that $r$ is small.
 If $\dist q{\gamma(t)}{}$ is sufficiently close to
 $r$, then direct calculations show that
-$$(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
+\[(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
 \le 
-\frac{3-c\cdot \cos^2[\alpha(t)]}{r}.$$
+\frac{3-c\cdot \cos^2[\alpha(t)]}{r}.\]
 (Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\alpha(t)\approx\tfrac\pi2$.) 
 
-Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for any $i$. 
+Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for every $i$.
 For a geodesic $\gamma$, set $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$. 
 Assume that
-\[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0\]
+\[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0\eqlbl{eq:angle-ne-pi/2}\]
 for any geodesic $\gamma$ in $\oBall(p,\eps)$. 
-We can assume that $c>3N/\cos^2\eps$;
+Choose $c>3N/\cos^2\eps$;
 then the inequality above implies that the function
 $$f=\sum_i \phi_{r,c}\circ\distfun_{q_i}$$
 is strictly concave in $\oBall(p,\eps')$ for some positive $\eps'<\eps$.
@@ -57,7 +58,7 @@ and $\angk p{q_j}{q_i}>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
 On the other hand, suppose $\gamma$ runs from $x$ to~$y$.
 If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-point comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
 $N\le \Const(m)/\delta^{m-2}$. 
-Therefore, for small $\delta>0$ and yet smaller $\eps>0$, the set $\{q_i\}$ forms the needed collection.
+Therefore, for small $\delta>0$ and yet smaller $\eps>0$, the set $\{q_i\}$ meets \ref{eq:angle-ne-pi/2}.
 
 If $r$ is small, then points $q_i$ can be chosen so that all directions
 $\dir p {q_i}$ will be $\eps$-close to a given direction $\xi$ and
@@ -90,12 +91,12 @@ We may choose a lifting $p'\in\spc{A}'$ for every point $p\in\spc{A}$,
 in this case the map $p\mapsto p'$ is called a {}\emph{($\eps$-)lifting map}.
 
 Let us emphasise that liftings are not uniquely defined, and the lifting map is not assumed to be continuous.
-Also, to talk about liftings, we have to choose that $\eps>0$, the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$.
+Also, to talk about liftings, we have to choose $\eps>0$, as well as the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$.
 
 Let $\spc{A}$ be  a compact $m$-dimensional Alexandrov space.
 Suppose $\spc{A}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{A})>0$.
-Then the construction in $\spc{A}$ from the previous section  
-can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
+If the construction of the previous section is performed in $\spc{A}$,
+then we can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
 The results of this and related constructions will be also called \index{lifting}\emph{liftings},
@@ -206,7 +207,7 @@ have the same nerve.
 By the nerve theorem (\ref{thm:nerve}), $\spc{A}_n$ and $\spc{A}_\infty$ are homotopy equivalent for all large $n$ --- a contradiction.
 \qeds
 
-The proof above implies the following.
+Note that the proof above implies the following.
 
 \begin{thm}{Theorem}\label{thm:finite-dim-hom-simplicial}
 Any compact finite-dimensional Alexandrov space is homotopy equivalent to a finite simplicial complex.
@@ -221,12 +222,16 @@ in particular, it provides a version of the Liouville theorem about phase-space 
 
 The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
 
-The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about 
- $m$-dimensional manifolds with lower sectional curvature bound we argue by contradiction and assume that there is a sequence of such manifolds  that violates our assumption, 
-then pass to the limit --- the limit must be an Alexandrov space and this can be used to arrive at a contradiction.
+The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about $m$-dimensional manifolds with lower sectional curvature bound we follow the following steps:
+\begin{itemize}
+\item Arguing by contradiction, we assume existance of a sequence of manifolds that violates our assumption.
+\item Use Gromov's selection theorem to choose a converging subseqence.
+\item Use curvature survival, to conclude that the limit space is Alexandrov.
+\item Try to arrive at a contradiction using Alexandrov geometry.
+\end{itemize}
 
 In principle, the same strategy might work for a sequence of Riemannian manifolds with dimension approaching infinity, but no applications of this kind were found.
-The following question can be attacked by this type of argument.
+The following question gives an example where such strategy might be successful in principle.
 
 \begin{thm}{Question}
 Is it true that no simply connected closed manifold (of arbitrary large dimension) admits a Riemannian metric with sectional curvature and diameter bounded by a fixed positive sufficiently small value?
@@ -246,8 +251,8 @@ for any closed $m$-dimensional Riemannian manifold $M$ with sectional curvature 
 Here $\beta_i(M)$ denotes $i^\text{th}$ Betti number of $M$.
 \end{thm}
 
-Gromov's original proof \cite{gromov-1981} of the Betti-number theorem did not use Alexandrov geometry directly;
-but it is quite natural to prove it via Gromov's selection theorem.
+Gromov's original proof \cite{gromov-1981} of the Betti-number theorem did not use Alexandrov geometry directly.
+However, it is easy to produce a proof following the steps above (noone bothered to write it so far).
 The following result was proved by the second author \cite{petrunin2008}, and it uses the same technique.
 
 \begin{thm}{Scalar curvature bound}
@@ -268,8 +273,9 @@ Then $\spc{A}_\infty$ is homeomorphic to $\spc{A}_n$ for all large $n$.
 Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that are homeomorphisms and $\eps$-liftings for all large $n$.
 \end{thm}
 
-This theorem was proved by Grigory Perelman \cite{perelman1991};
-the proof was rewritten with more details by the first author \cite{kapovitch}.
+This theorem was proved by Grigory Perelman \cite{perelman1991}.
+The proof was rewritten with more details by the first author \cite{kapovitch};
+for more exact statements can see \cite{kapovitch2002} and \cite{kapovitch2005}.
 In private conversations, Perelman claimed that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$.
 Since no proof has been written, this statement should be considered as a conjecture;
 partial results in this direction were obtained by Mohammad Alattar \cite{alattar}.

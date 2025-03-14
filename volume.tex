@@ -2,9 +2,14 @@
 
 \chapter{Limit spaces}\label{chap:lim}\label{chap:stability}
 
-In this lecture we show that lower curvature bound in the sense of Alexandrov survives under Gromov--Hausdorff limit and prove the Gromov selection theorem.
-This theorem is the main source of applications of Alexandrov geometry,
+
+Here we will show that lower curvature bound in the sense of Alexandrov survives under Gromov--Hausdorff limit,
+present Perelman's construction of strictly concave functions, and
+prove Gromov's selection theorem.
+
+The suvival of curvature bound provides the main source of applications of Alexandrov geometry;
 as an illustration we prove the homotopy stability theorem (\ref{thm:h-stability}) and deduce the homotopy finiteness theorem (\ref{thm:h-finiteness}) from it.
+
 
 
 \section{Survival of curvature bounds}
@@ -35,17 +40,17 @@ Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
 \section{Gromov's selection theorem}
 
 \begin{thm}{Theorem}\label{thm:gromov-compactness}
-Let $D,\kappa\in\RR$, and $m$ be a positive integer. 
+Let $m$ be a positive integer, and let $D,\kappa\in\RR$.
 Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most $D$
 has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
 \parit{Proof of \ref{thm:gromov-compactness}.}
-Denote by $\bm{K}$ the set of isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
+Denote by $\bm{K}$ the set of all isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
 By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.
 
 Choose a space $\spc{A}\in \bm{K}$;
-suppose $x_1,\dots,x_n\in \spc{A}$ is a collection of points such that $\dist{x_i}{x_j}{}\ge \eps$ for all $i\ne j$.
+suppose $x_1,\dots,x_n\in \spc{A}$ is a collection of points such that $\dist{x_i}{x_j}{}> \eps$ for all $i\ne j$.
 Note that the balls $B_i=\oBall(x_i,\tfrac\eps2)$ do not overlap.
 
 By \ref{thm:right-inverse}, $\vol \spc{A}>0$.
@@ -66,7 +71,8 @@ Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $
 Summarizing, for any $\eps>0$ we can find a compact $\eps$-net $\bm{F}_\eps\subset \GH$ of $\bm{K}$.
 Since $\GH$ is complete (\ref{prop:complete}), it remains to apply \ref{ex:net:compact}.
 
-Rescaling reduces $\Alex\kappa$ case to the $\Alex{-1}$ case, which can be proved along the same lines, using \ref{ex:BG} instead of \ref{inq:BG}.
+We finished the proof of the case $\kappa=0$.
+In the general case, applying rescaling, we can assume that $\kappa=-1$ and then argue as before, using \ref{ex:BG} instead of \ref{inq:BG}.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:pack-vol}
@@ -86,7 +92,6 @@ Conclude that if $\spc{A}_n$ is a sequence of $m$-dimensional $\Alex0$ spaces wi
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:diam-compact:GH}
-Let $(\spc{A}_1,p_1),(\spc{A}_2,p_2),\dots$ be a sequence of $m$-dimensional $\Alex\kappa$ spaces with marked points.
-Show that it contains a subsequence pointed-converging in the sense of Gromov--Hausdorff.
+Show that any sequence of $m$-dimensional $\Alex\kappa$ spaces with marked points contains a subsequence pointed-converging in the sense of Gromov--Hausdorff (see Section~\ref{sec:Gromov--Hausdorff}).
 
 \end{thm}
