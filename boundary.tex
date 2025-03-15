@@ -348,10 +348,11 @@ In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
 Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the first statement follows.
 
 It remains to show $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
-Without loss of generality, we can assume that $|v|=1$.
-Since $v\in\partial\T_p$, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $\dir{p}{x_n}\to v$.
+Suppose $v=t\cdot u$ and $|u|=1$.
+Note that $u\in\partial\T_p$.
+Therefore, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $\dir{p}{x_n}\to v$; let $r_n=\dist{p}{x_n}{}$.
 From above, the $f$-gradient curve $\alpha_n$ that start at $x_n$ remains in $\partial\spc{A}$.
-By the definition of gradient exponent, the $t\mapsto \gexp_p(t\cdot v)$ is a limit of reparemetrizations of $\alpha_n$.
+By the definition of gradient exponent, $\gexp_p(v)=\gexp_p(t\cdot u)$ is a limit of $\alpha_n(\ln\tfrac{t}{r_n})$.
 Hence the last statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
