@@ -6,7 +6,7 @@ After discussing its properties, we prove the doubling theorem (\ref{thm:doublin
 
 \section{Definition}
 
-Let us give an inductive definition of the boundary of finite-dimensional Alexandrov spaces.
+The definition of boundary will use induction of dimension, and it will work only for finite-dimensional Alexandrov spaces.
 
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By~\ref{ex:dim=1},
@@ -23,12 +23,12 @@ therefore its boundary is already defined and hence this inductive definition ma
 It is instructive to check the following statements.
 \begin{itemize}
 \item For a closed convex set $K\subset \EE^m$ with non-empty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
-\item If $\spc{A}\iso\spc{A}_1\times\spc{A}_2$ is a finite-dimensional Alexandrov space,
-then
-\[\partial \spc{A}=(\partial\spc{A}_1\times\spc{A}_2)\,\cup\,(\spc{A}_1\times\partial\spc{A}_2)\]
+\item Suppose a finite-dimensional Alexandrov space $\spc{A}$ is a direct sum of $\spc{A}_1$ and $\spc{A}_2$.
+Then
+\[\partial \spc{A}=(\partial\spc{A}_1\oplus\spc{A}_2)\,\cup\,(\spc{A}_1\oplus\partial\spc{A}_2)\]
 \item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$ (this implies that $\Sigma$ is  $\Alex1$), then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
-where $\Cone\partial\Sigma=\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
+where $\Cone\partial\Sigma\df\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
 \end{itemize}
 
 
@@ -38,7 +38,7 @@ The following statement is a close relative of Perelman's stability theorem \ref
 We are going to use this result without proof.
 A proof can be found in \cite{perelman1993}.
 
-Recall that the logarithm $\log_px\:\spc{A}\to \T_p$ is defined on page \pageref{page:log}.
+Recall that the logarithm $\log_p\:\spc{A}\to \T_p$ is a mulivalued function defined in \ref{Velocity of curve}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
 For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$
@@ -98,12 +98,12 @@ Let $\spc{A}$ and $\spc{A}'$ be homeomorphic finite-dimensional Alexandrov space
 Then $\dim \spc{A}=\dim\spc{A}'$ and
 \[\partial\spc{A}\ne \emptyset
 \quad\iff\quad
-\partial\spc{A}'\ne \emptyset
+\partial\spc{A}'\ne \emptyset.
 \]
 \end{thm}
 
 While working on the proof, keep in mind that there are pairs of spaces $\spc{K}_1$ and $\spc{K}_2$ such that $\spc{K}_1\ncong \spc{K}_2$, but $\RR\times \spc{K}_1\cong \RR\times \spc{K}_2$.
-Suspension over the Poincaré homology sphere and $\SSS^4$ gives an example of such a pair; compare to \ref{ex:conic-tangen:example}.
+For example, one can let $\spc{K}_1=\SSS^4$ and let $\spc{K}_2$ be the suspension over the Poincaré homology sphere; compare to \ref{ex:conic-tangen:example}.
 
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
 Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, \index{51@$\rank\spc{A}$}$\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
@@ -148,7 +148,7 @@ The latter contradicts the minimality of $k$.
 
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
 Since $\partial \spc{A}\ne \emptyset$, we get that $k=1$;
-therefore, $\spc{A}=\RR^{m-1}\times\RR_{\ge0}$.
+therefore, $\spc{A}=\RR^{m-1}\times[0,\infty)$.
 
 Let $\spc{A}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
 Since $\partial\spc{A}\cong\RR^{m-1}$,
@@ -168,7 +168,7 @@ Observe that $\T_y\cong\T_{y'}$,
 \parit{Case 3.}
 Suppose $k\le 1$ and $k'\le 1$.
 Since $\partial \spc{A}\ne \emptyset$, we have $k=1$.
-By \ref{ex:dim=1}, $\spc{A}\z\cong \RR^{m-1}\times\RR_{\ge0}$.
+By \ref{ex:dim=1}, $\spc{A}\z\cong \RR^{m-1}\times[0,\infty)$.
 Therefore, $\spc{A}'\cong\RR^m$, and $\spc{A}\ncong\spc{A}'$ --- a contradiction.
 \qeds
 
@@ -252,7 +252,7 @@ Then
 \begin{subthm}{thm:doubling:concave}
 If $\dim \spc{A}\ge 2$, then
 $\distfun_{\partial \Sigma_x}(\xi)\le \tfrac\pi2$ for any $x\in\partial \spc{A}$ and $\xi\in \Sigma_x$.
-Moreover, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\mangle(\xi,\zeta)\le\tfrac\pi2$ for any $\zeta\in \Sigma_x$. 
+Moreover, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\mangle(\xi,\zeta)=\tfrac\pi2$ for any $\zeta\in \Sigma_x$.
 \end{subthm}
 
 \begin{subthm}{thm:partial-grad:grad}
@@ -261,6 +261,7 @@ $\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{A}$.
 
 \begin{subthm}{thm:partial-grad:flow}
 If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{A}$, then $\alpha(t)\in \partial \spc{A}$ for any $t$.
+\\
 Moreover, if $p\in \partial \spc{A}$, then $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
 \end{subthm}
 
@@ -299,7 +300,7 @@ The latter contradicts \ref{ex:RisCBB(1)}.
 
 Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
 Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$.
-By the splitting theorem (\ref{thm:splitting}) $\Cone \Xi$ is a direct product of the line with some subcone;
+By the splitting theorem (\ref{thm:splitting}), $\Cone \Xi$ is a direct product of the line with some subcone;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
@@ -344,7 +345,14 @@ Integrating the inequality, we get
 \[\ell(t)\le e^t\cdot\ell(0)\]
 for any $t\ge 0$.
 In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
-Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the statement follows.
+Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the first statement follows.
+
+It remains to show $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
+Without loss of generality, we can assume that $|v|=1$.
+Since $v\in\partial\T_p$, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $\dir{p}{x_n}\to v$.
+From above, the $f$-gradient curve $\alpha_n$ that start at $x_n$ remains in $\partial\spc{A}$.
+By the definition of gradient exponent, the $t\mapsto \gexp_p(t\cdot v)$ is a limit of reparemetrizations of $\alpha_n$.
+Hence the last statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
@@ -406,7 +414,7 @@ As before, we denote by $\Sigma_0$ and $\Sigma_1$ two copies of $\Sigma_x$ in  $
 and keep notation $\partial\Sigma_x$ for their common boundary.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
 
-The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides from $\Xi$ and
+The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides from $\partial\Sigma_x$ and
 \[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
 Otherwise, we could choose a direction $\xi\in\partial\Sigma$ such that
 \[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi.\]
@@ -428,7 +436,7 @@ It follows that for any $\xi\in\Xi$ there is $\xi'\in\partial\Sigma_x$ such that
 $\xi$ and $\xi'$ lie on some geodesic $[\dir x{y} \dir xp]_\Xi$.
 
 Fix $t\approx 0$ such that $t\ne 0$; let $z=\gamma(t)$.
-Choose such $\xi'$ for $\xi=\dir xz$.
+Choose such a direction $\xi'$ for $\xi=\dir xz$.
 Consider the radial curve $\alpha(s)\df\gexp_x(s\cdot\xi')$.
 Let us show that 
 \[
@@ -532,7 +540,7 @@ for any $x\in\partial \spc{A}$.
 
 \section{Remarks}\label{sec:bry-remarks}
 
-The doubling theorem has several generalizations \cite{petrunin1997,ge-li} that allow to glue nonidentical spaces.
+The doubling theorem has generalizations \cite{petrunin1997,ge-li} that allow for gluing multiple nonidentical spaces.
 
 It easily follows by induction on dimension  that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
@@ -547,7 +555,8 @@ that is, if $\spc{A}$ is $m$-dimensional, then
 \end{thm}
 
 This lemma was proved by Karsten Grove and Peter Petersen \cite{grove-petersen1993}.
-Originally it was stated for Alexander--Spanier cohomology. We do not make this distinction  because for compact Alexandrov spaces it is the same as singular cohomology. Indeed,  both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier}, compact Alexandrov spaces are homotopy equivalent to finite simplicial complexes \ref{thm:finite-dim-hom-simplicial} and  for paracompact  CW complexes  Alexander--Spanier cohomology is isomorphic to \v{C}ech  and singular cohomolgy \cite[Chapter 6]{Spanier}.
+Originally it was stated for Alexander--Spanier cohomology. We do not make this distinction  because for compact Alexandrov spaces it is the same as singular cohomology.
+Indeed,  both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier}, compact Alexandrov spaces are homotopy equivalent to finite simplicial complexes (see \ref{thm:finite-dim-hom-simplicial}) and  for paracompact  CW complexes  Alexander--Spanier cohomology is isomorphic to \v{C}ech  and singular cohomolgy \cite[Chapter 6]{Spanier}.
 
 This lemma implies, for example, that on finite-dimensional Alexandrov spaces without boundary 
 the gradient flow for a $\lambda$-concave function is an onto map;
@@ -611,10 +620,11 @@ Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-Morse lemma was originally proved by Grigory Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions.
+The Morse lemma was originally proved by Grigory Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions.
 For such functions it holds for all Alexandrov spaces without the requirement that they do not have boundary.
 For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) was generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
-On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.
+On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.%
+\footnote{Semiconcave functions are often defined to meet this property, but we do not follow this convention.}
 This is automatic for the special type of semiconcave functions considered in \cite{perelman1993} therefore this distinction is not made there.
 
 Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.

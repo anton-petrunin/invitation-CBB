@@ -312,7 +312,7 @@ Then
 \parit{Proof.}
 Since $\alpha_{1,3}\le\pi$, we can assume that $\alpha_{1,2}+\alpha_{2,3}< \pi$.
 Denote by $\gamma_i$ the unit-speed parametrization of $[px_i]$ from $p$ to $x_i$.
-Given any $\eps>0$, for all sufficiently small $t,\tau,s\in\RR_{\ge0}$ we have
+Given any $\eps>0$, for all sufficiently small $t,\tau,s\in[0,\infty)$ we have
 \begin{align*}
 \dist{\gamma_1(t)}{\gamma_3(\tau)}{}
 &\le 
@@ -346,7 +346,7 @@ $\mangle(\tilde \gamma_1,\tilde \gamma_2)\z=\alpha_{1,2}+\eps$,
 $\mangle(\tilde \gamma_2,\tilde \gamma_3)\z=\alpha_{2,3}+\eps$,
 and $\mangle(\tilde \gamma_1,\tilde \gamma_3)\z=\alpha_{1,2}\z+\alpha_{2,3}\z+2\cdot \eps$.
 We parametrize each half-line by the distance from the starting point.
-Given two positive numbers $t,\tau\in\RR_{\ge0}$, let $s=s(t,\tau)$ be 
+Given two positive numbers $t,\tau$, let $s=s(t,\tau)$ be
 the number such that 
 $\tilde \gamma_2(s)\z\in[\tilde \gamma_1(t)\ \tilde \gamma_3(\tau)]$. 
 Clearly, $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
@@ -469,7 +469,7 @@ Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
 Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$.
 We say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
 This is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence}.
-For example, the sequence $(\spc{X}_n,p_n)=(\RR_{\ge0},0)$ converges to $(\RR_{\ge0},0)$, while $(\spc{X}_n,p_n)=(\RR_{\ge0},n)$ converges to $(\RR,0)$ as $n\to \infty$.
+For example, the sequence $(\spc{X}_n,p_n)=([0,\infty),0)$ converges to $([0,\infty),0)$, while $(\spc{X}_n,p_n)=([0,\infty),n)$ converges to $(\RR,0)$ as $n\to \infty$.
 
 \section{Gromov--Hausdorff metric}\label{sec:Gromov--Hausdorff-metric}
 
