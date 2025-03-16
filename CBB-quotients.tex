@@ -45,7 +45,7 @@ Therefore
 \le
 \angk {\hat{p}}{\hat{x}_i}{\hat{x}_j}
 \eqlbl{eq:angles-M-L}\]
-holds for all $i$ and $j$.
+for all $i$ and $j$.
 
 By $\EE^2$-comparison in $\spc{A}$,
 we have
@@ -72,7 +72,7 @@ Conclude that $G$ is $\Alex0$.
 
 \section{Submetries}
 
-A map $\sigma\:\spc{X}\to\spc{Y}$ between the metric spaces $\spc{X}$ and $\spc{Y}$
+A map $\sigma\:\spc{X}\to\spc{Y}$ between metric spaces $\spc{X}$ and $\spc{Y}$
 is called a \index{submetry}\emph{submetry} if 
 \[\sigma(\oBall(p,r)_\spc{X})=\oBall(\sigma(p),r)_{\spc{Y}}\]
 for any $p\in \spc{X}$ and $r\ge 0$.
@@ -101,7 +101,7 @@ Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points 
 \end{thm}
 
 The proof of \ref{thm:CBB/G} works for submetries;
-that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex0$, then so is $\spc{B}$}.
+that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is a proper $\Alex0$ space, then so is $\spc{B}$}.
 Theorem \ref{thm:CBB/G} admits a straightforward generalization to $\Alex{-1}$ case.
 
 In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds for a quartuple $p,x_1,x_2,x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
@@ -109,8 +109,8 @@ In particular, the quotient space is \textit{locally} $\Alex1$.
 But since $\Alex1$ space is geodesic, then so is its quotient.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
 The same holds for the targets of submetries from an  $\Alex1$ space.
-With a bit of extra work, one can extend the statement to nonproper spaces; see \cite[8.34]{alexander-kapovitch-petrunin2024}.
-Thus, we have the following two statements.
+With a bit of extra work, one can extend the statement to nonproper spaces \cite[8.34]{alexander-kapovitch-petrunin2024}.
+Thus, we have the following.
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB-1}
 Let $\sigma\:\spc{A}\to\spc{B}$ be a submetry.
@@ -122,14 +122,14 @@ Then the quotient space $\spc{A}/G$ is $\Alex\kappa$.
 
 \section{Hopf's conjecture}
 
-\textit{Does $\mathbb{S}^2\times\mathbb{S}^2$ admit a Riemannian metric with positive sectional curvature?}
- \index{Hopf's conjecture}\emph{Hopf's conjecture} says that the answer should be negative.
-The following partial result towards the conjecture was obtained by Wu-Yi Hsiang and Bruce Kleiner \cite{hsiang-kleiner}. The proof uses Alexandrov geometry and we present it here.
+\textit{Does $\mathbb{S}^2\times\mathbb{S}^2$ admit a Riemannian metric with positive sectional curvature?} \index{Hopf's conjecture}\emph{Hopf's conjecture} says that the answer should be negative.
+Let us take a close look at the following partial result obtained by Wu-Yi Hsiang and Bruce Kleiner \cite{hsiang-kleiner}.
 
 \begin{thm}{Theorem}\label{thm:hsiang-kleiner}
 There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and a nontrivial isometric $\SSS^1$-action.
 \end{thm}
 
+Reacall that a group action $G\acts\spc{X}$ is called \index{effective action}\emph{effective} if for any $g\in G$ there is $x\in\spc{X}$ such that $g\cdot x\ne x$.
 
 \begin{thm}{Key lemma}\label{lem:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points
@@ -140,7 +140,7 @@ Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, wh
 The proof of the lemma is guided by the following exercise.
 
 \begin{thm}{Exercise}\label{ex:S^3/S^1}
-Suppose $\SSS^1\acts\SSS^3$ is an isometric action without fixed points.
+Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points.
 Let us think   of $\SSS^3$ as the unit sphere in $\RR^4$.
 
 \begin{subthm}{ex:S^3/S^1:pq}
@@ -179,15 +179,18 @@ This symmetry has two fixed points, north pole and south pole, that correspond t
 \noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
 
 \begin{subthm}{ex:S^3/S^1:a}
-Show that the inverse image $T(r)$ of $S(r)$ in $\SSS^3$ is an orbit of the torus action.
-Conclude that $a(r)=\pi^2\cdot\sin r\cdot \cos r$ is the area $T(r)$.
+Denote by $T(r)$ the inverse image $T(r)$ in $\SSS^3$, and let $a(r)$ be its area.
+Show that $T(r)$ is an orbit of the torus action and
+\[a(r)=\pi^2\cdot\sin r\cdot \cos r.\]
+
 \end{subthm}
 
 \smallskip
 
 \begin{subthm}{ex:S^3/S^1:b}
 Let $b_{p,q}(r)$ be the length of the $\SSS^1$-orbit in $\SSS^3$ that corresponds to a point on $S(r)$. 
-Show that $b_{p,q}=\pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}$.
+Show that
+\[b_{p,q}=\pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}.\]
 \end{subthm}
 
 \smallskip
@@ -223,14 +226,14 @@ Notice that
  \item each projective plane contributes 1 to the Euler characteristic of~$\spc{B}$.
 \end{itemize}
 Since $\chi(\spc{B})=4$, we are in one of the following three cases:
-\begin{itemize}
- \item $F$ has exactly 4 isolated points,
- \item $F$ has one 2-dimensional submanifold and at least 2 isolated points,
- \item $F$ has at least two 2-dimensional submanifolds.
-\end{itemize}
+\begin{enumerate}
+ \item\label{case1} $F$ has exactly 4 isolated points,
+ \item\label{case2} $F$ has one 2-dimensional submanifold and at least 2 isolated points,
+ \item\label{case3} $F$ has at least two 2-dimensional submanifolds.
+\end{enumerate}
 In each case we will arrive at a contradiction.
 
-\parit{Case 1.}
+\parit{Case \ref{case1}.}
 Suppose $F$ has exactly 4 isolated points $x_1$, $x_2$, $x_3$, and $x_4$.
 Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{A}$.
 Note that $\Sigma_{y_i}\spc{A}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
@@ -252,7 +255,7 @@ adding the results, we get
 \[\omega\le 4\cdot\pi\]
 --- a contradiction.
 
-\parit{Case 2.}
+\parit{Case \ref{case2}.}
 Suppose $F$ contains one surface $S$.
 Then the projection of $S$ to $\spc{A}$ forms its boundary $\partial \spc{A}$.
 The doubling $\spc{W}$ of $\spc{A}$ across its boundary has at least 4 singular points --- each singular point of $\spc{A}$ corresponds to two singular points of $\spc{W}$.
@@ -260,7 +263,7 @@ The doubling $\spc{W}$ of $\spc{A}$ across its boundary has at least 4 singular 
 By the doubling theorem, $\spc{W}$ is a $\Alex1$ space.
 Therefore we arrive at a contradiction in the same way as in the first case.
 
-\parit{Case 3.} Impossible by \ref{ex:bry-connected}.
+\parit{Case \ref{case3}.} Impossible by \ref{ex:bry-connected}.
 \qeds
 
 \section{Erdős' problem rediscovered}
@@ -271,17 +274,6 @@ A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extrema
 Let $\spc{A}$ be a compact $m$-dimensional $\Alex0$ space.
 Then it has at most $2^m$ extremal points.
 \end{thm}
-
-The proof is a translation of the proof of the following classical problem in discrete geometry to Alexandrov's language.
-
-\begin{thm}{Problem}\label{erdos-problem}
-Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
-Then  $|F|\le2^m$.
-Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
-\end{thm}
-
-This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
-Grigory Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
 
 \parit{Proof of \ref{thm:extr-point}.}
 Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{A}$.
@@ -302,23 +294,20 @@ Suppose $\alpha<\tfrac12$.
 Then $x_i\in V_i$ for any $x\in \spc{A}$.
 Indeed, assume $x_i\notin V_i$,
 then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
-Then from the comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
+Then by comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ is not an extremal point.
+
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{A}$
 for any $0<\alpha<\tfrac12$; hence 
-\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{A}\quad\text{and}\quad N\le 2^m.\]
-\qedsf
-
-
-\parit{Remark.}
-Applying the above argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
-the case of equality requires more work.
+\[\vol V_i\ge\tfrac1{2^m}\cdot\vol \spc{A}.\]
+Since $V_1,\dots,V_N$ are disjoint subsets of $\spc{A}$, we have $N\le 2^m$.
+\qeds
 
 
 \section{Crystallographic actions}
 
 An isometric action $\Gamma\acts \EE^m$ is called \index{crystallographic action}\emph{crystallographic} if it is 
-\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{A}=\EE^m/\Gamma$ is compact).
+\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many elements $g\in \Gamma$ such that $g\cdot x\in K$) and \emph{cocompact} (that is, the quotient space $\spc{A}=\EE^m/\Gamma$ is compact).
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $F<H<\Gamma$ for a finite group $H$, then $F=H$.
@@ -340,7 +329,7 @@ Choose a finite subgroup $F<\Gamma$; consider a conjugate subgroup $F'=g \cdot F
 Note that $A_{F'}=g\cdot A_F$.
 In particular, the subspaces $A_F$ and $A_{F'}$ have the same image in the quotient space $\spc{A}=\EE^m/\Gamma$.
 Therefore, to count subgroups up to conjugation, we need to count the images of their fixed sets.
-Therefore, by the lemma below (\ref{lem:extr/G}), $\mathfrak{M}_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{A}=\EE^m/\Gamma$.
+By the lemma below (\ref{lem:extr/G}), $\mathfrak{M}_0(\Gamma)$ cannot exceed the number of extremal points in $\spc{A}=\EE^m/\Gamma$.
 Combining this observation with \ref{thm:extr-point}, we get the following.
 
 \begin{thm}{Proposition}\label{prop:2m}
@@ -405,17 +394,33 @@ see \cite{harvey-searle}.
 Let $\Sigma$ be an $\Alex1$ space homeomorphic to $\SSS^3$.
 Suppose $\SSS^1$ acts on $\Sigma$ isometrically and without fixed points.
 Is it true that any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$?
-and, what about the existence of distance-noncontracting map $\Sigma/\SSS^1\to \tfrac12\cdot\SSS^2$?
+
+And if the answer is, is there a distance-noncontracting map
+\[\Sigma/\SSS^1\z\to \tfrac12\cdot\SSS^2?\]
 \end{thm}
 
 
 \begin{thm}{Advanced exercise}\label{ex:S1actsS3}
 Suppose $\SSS^1$ acts isometrically on an $\Alex1$ space $\spc{A}$ that is homeomorphic to $\SSS^3$.
 Assume its fixed-point set is a closed local geodesic $\gamma$.
-Show that $\length\gamma\le2\cdot\pi$.
+Show that
+\[\length\gamma\le2\cdot\pi.\]
 \end{thm}
 
-The same question for a $\ZZ_2$-action is open \cite{petrunin-involution}.
+An analogous question for a $\ZZ_2$-action is open \cite{petrunin-involution}.
+
+Theorem \ref{thm:extr-point} is a translation of the following classical problem in discrete geometry to Alexandrov's language.
+
+\begin{thm}{Problem}\label{erdos-problem}
+Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
+Then  $|F|\le2^m$.
+Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
+\end{thm}
+
+This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
+Grigory Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
+Applying the our argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
+the case of equality requires more work.
 
 Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
 (This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$.)
@@ -448,4 +453,4 @@ therefore the cube has exactly $3^m$ primitive extremal subset, including the em
 Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ minimal extremal subset.
 \end{thm}
 
-Crude estimates on number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.
+Some crude estimates on number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.
