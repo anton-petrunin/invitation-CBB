@@ -2,6 +2,22 @@
 
 \chapter{Semisolutions}
 
+\parbf{\ref{ex:net}};
+\ref{SHORT.ex:net:finite}.
+Suppose $X$ is compact.
+Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls have a finite subcover.
+Note that the centers of these balls form an $\eps$-net of $X$.
+
+Now suppose $X$ has a finite $\eps$-net.
+Show that any sequence $x_n$ of points in $X$ has a subsequence such that all of its points lie in one $\eps$-ball.
+Apply this statement for $\eps=\tfrac1n$ together with the diagonal procedure.
+
+\parit{\ref{SHORT.ex:net:compact}.}
+Let $Z$ be a compact $\eps$-net of $X$.
+By \ref{SHORT.ex:net:finite}, $Z$ has a finite $\eps$-net, say~$F$.
+Note that $F$ is a $2\cdot\eps$-net of $X$.
+Since $\eps>0$ is arbitrary, we get the result.
+
 \parbf{\ref{ex:compact+connceted}.}
 Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
 %???eps-net are not defined!!!
@@ -195,7 +211,28 @@ Let $\spc{X}$ be obtained by identifying all endpoints of the intervals.
 
 Let $\spc{Y}$ be constructed in the same way but skipping the interval of length $1.5$.
 
-\parbf{\ref{ex:CBB+-}.} ???
+\parbf{\ref{ex:CBB+-}.} Note that we can assume that we have equality in all inequalities except one.
+In other words, we can asuume that equality holds in all inequalities except $\dist{y_1}{y_2}{}\le\dist{x_1}{x_2}{}$ or $\dist{q}{y_2}{}\ge\dist{p}{x_2}{}$.
+
+In the first case,
+\[
+\angk  q{y_1}{y_2}\le \angk  p{x_1}{x_2},
+\quad
+\angk  q{y_2}{y_3}= \angk  p{x_2}{x_3},
+\quad
+\text{and}
+\quad
+\angk  q{y_3}{y_1}= \angk  p{x_3}{x_1}.
+\]
+Thefore the comparison for $p,x_1,x_2,x_3$ implies the comparsion for $q,y_1,y_2,y_3$.
+
+In the second case, let us argue by contradiction.
+Assume that the comparsion does not hold for $q,y_1,y_2,y_3$.
+Show that
+\[\angk  q{y_1}{y_2}+\angk  q{y_2}{y_3}> \pi.\]
+Then show and use that
+\[\angk  p{x_1}{x_2}+\angk  p{x_2}{x_3}\ge\angk  q{y_1}{y_2}+\angk  q{y_2}{y_3}.\]
+
 
 \parbf{\ref{ex:Euclid-is-CBB}.}
 The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
@@ -335,9 +372,40 @@ for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that all such norms are quadratic, and the statement follows.
 
-\parbf{\ref{ex:concave'}.} ???
+\parbf{\ref{ex:concave'}.}
+Choose a $\lambda$-concave function $f\:\II\to\RR$.
+Note that
+\[h\:t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2\]
+is concve,
+and it is sufficient to show that $h$ is one-sided differentiable.
 
-\parbf{\ref{ex:distfun-semiconcave}.} ???
+Choose $t_0\in \II$.
+Show and use that the function
+$t\mapsto \tfrac {h(t)-h(t_0)}{t-t_0}$ is nonincreasing (nondecreasing) for $t>t_0$ (respectively, for $t<t_0$).
+
+
+
+\parbf{\ref{ex:concave-open}.}
+We can assume that $\lambda=0$, otherwise pass to the function $t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2$.
+
+Suppose that $f$ is defined at $t_0$.
+Since $f$ is defined on an open inteval, we can choose $a$ and $b$ such that $a<t_0<b$ and $f$ is defined on $[a,b]$.
+Suppose that $t\in [a,b]\setminus\{t_0\}$.
+Show and use that
+\begin{align*}
+t&>t_0
+&&\Longrightarrow
+&\frac{f(b)-f(t_0)}{b-t_0}&\le \frac{f(t)-f(t_0)}{t-t_0}\le \frac{f(a)-f(t_0)}{a-t_0},
+\\
+t&<t_0
+&&\Longrightarrow
+&\frac{f(b)-f(t_0)}{b-t_0}&\ge \frac{f(t)-f(t_0)}{t-t_0}\ge \frac{f(a)-f(t_0)}{a-t_0}.
+\end{align*}
+
+
+
+\parbf{\ref{ex:distfun-semiconcave}.}
+From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
 
 \parbf{\ref{ex:alm-min}.}
 Suppose such a point does not exist;
@@ -479,7 +547,6 @@ for all $\lambda_n>\frac{1}{T}$ and all points $x,x'$ in $\bigcup_N\gamma_i([0,\
 Now hinge comparison and the triangle inequality imply that the same  holds for arbitrary points $x,x'$  in  $\oBall(p,1)_{\spc{A}_n}$ with $\eps$ replaced by $3\cdot\eps$.
 This verifies \ref{SHORT.lem:almost-isom-pointed-b}.
 
-\parbf{\ref{ex:distfun-semiconcave}.} From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
 
 \parbf{\ref{ex:df(xi)}.}
 Since angles are defined, it follows that 
@@ -649,7 +716,13 @@ Hence, the map $s$ is onto.
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
 
-\parbf{\ref{ex:oplus}.} ???
+\parbf{\ref{ex:oplus}}; \ref{SHORT.ex:oplus:a}.
+Show and use that $\proj_AB=\proj_BA$ is a one-point set.
+
+\parit{\ref{SHORT.ex:oplus:b}.} Suppose $\gamma$ is a rectifiable curve with the endpoints in $A$.
+Show and use that the curve $\bar\gamma=\proj_A\circ\gamma$ has the same endpoints and
+\[\length\bar\gamma\le \length\gamma;\]
+moreover, in case of equality $\gamma$ lies in $A$.
 
 \parbf{\ref{ex:cone-CBB}.}
 Suppose $\Cone\spc{X}$ is $\Alex0$.
@@ -850,11 +923,6 @@ From above, we can choose $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ 
 By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cdot \dist{x}{y}{}$.
 Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
 
-
- 
-\parbf{\ref{ex:diam-compact:proper}.}
-Reuse the argument from  the first part of the proof of Bishop--Gromov inequality.
-
 \parbf{\ref{ex:BG}.} 
 Follow the proof Bishop--Gromov inequality, plus prove the following two inequalities
 \begin{align*}
@@ -863,6 +931,9 @@ Follow the proof Bishop--Gromov inequality, plus prove the following two inequal
 \sinh r_2\cdot\dist{w(x)}{w(y)}{\spc{A}} &\ge \sinh r_1\cdot\dist{x}{y}{\spc{A}}
 \end{align*}
 for any $x,y\in\oBall(p,r)$.
+
+\parbf{\ref{ex:diam-compact:proper}.}
+Reuse the argument from  the first part of the proof of Bishop--Gromov inequality.
 
 \parbf{\ref{ex:dim=dim}.} 
 Suppose $K$ is a compact set in $\spc{A}$ such that $\HausDim K\ge m$.
@@ -873,21 +944,7 @@ Use this in addition to the arguments in \ref{thm:dim=dim}.
 \parbf{\ref{ex:dim-lim}.}
 Apply \ref{ex:resporka}.
 
-\parbf{\ref{ex:net}};
-\ref{SHORT.ex:net:finite}.
-Suppose $X$ is compact.
-Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls have a finite subcover.
-Note that the centers of these balls form an $\eps$-net of $X$.
 
-Now suppose $X$ has a finite $\eps$-net.
-Show that any sequence $x_n$ of points in $X$ has a subsequence such that all of its points lie in one $\eps$-ball.
-Apply this statement for $\eps=\tfrac1n$ together with the diagonal procedure.
-
-\parit{\ref{SHORT.ex:net:compact}.}
-Let $Z$ be a compact $\eps$-net of $X$.
-By \ref{SHORT.ex:net:finite}, $Z$ has a finite $\eps$-net, say~$F$.
-Note that $F$ is a $2\cdot\eps$-net of $X$.
-Since $\eps>0$ is arbitrary, we get the result.
 
 
 \parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
