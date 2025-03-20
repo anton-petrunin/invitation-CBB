@@ -1,3 +1,259 @@
+\section{Rectangles}
+
+\begin{thm}{Theorem}\label{thm:area-rect}
+The area of a rectangle is the product of its adjacent sides.
+\end{thm}
+
+\parit{Proof.}
+Let us denote by $\mathcal{R}_{a,b}$ the solid rectangle with adjacent sides $a$ and~$b$,
+and let $s(a,b)=\area \mathcal{R}_{a,b}$.
+We need to show that
+\[s(a,b)=a\cdot b\eqlbl{eq:a(a,b)=ab}\]
+for any $a>0$ and $b>0$.
+
+Note that $\mathcal{R}_{1,1}$ is a solid unit square.
+Therefore
+\[s(1,1)=1.\]
+
+Given a positive interger $n$,
+we can subdivide a solid unit square into $n^2$ of squares with side lenght $\tfrac1n$.
+By Proposition~\ref{prop:subdivision} and invariance of area, we get
+\[n^2\cdot s(\tfrac1n,\tfrac1n)=1
+\quad\text{and}\quad
+s(\tfrac1n,\tfrac1n)=\tfrac1n\cdot\tfrac1n.\]
+
+Further, for positive intergers $k$, $m$, and $n$, the rectangle $\mathcal{R}_{\frac kn,\frac mn}$ can be sudivided into $k\cdot m$ squares with side lenght $\tfrac1n$.
+Therefore
+\[s(\tfrac kn,\tfrac mn)=\tfrac kn\cdot \tfrac mn,\eqlbl{eq:a(a,b)=ab-}\]
+which is a partial case of \ref{eq:a(a,b)=ab}.
+
+Suppose $a\le a'$ and $b\le b'$.
+Then we can assume that $\mathcal{R}_{a,b}\subset \mathcal{R}_{a',b'}$ and therefore
+\[s(a,b)\le s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
+
+Now let us argue by contradiction.
+Assume that $s(a,b)\ne a\cdot b$ for some $a>0$ and $b>0$.
+Then $s(a,b)> a\cdot b$ or $s(a,b) <a\cdot b$.
+
+\raggedcolumns\setlength{\multicolsep}{.5mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
+If $s(a,b)> a\cdot b$,
+we can choose a positive integer $n$ such that
+\[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
+Choose integers $k$ and $m$ such that
+\begin{align*}
+a< \tfrac kn&\le a+\tfrac1n,
+\\
+b<\tfrac mn&\le b+\tfrac1n.
+\end{align*}
+By \ref{s(a,b)>s(a',b')} and \ref{eq:a(a,b)=ab-}, we get that
+\begin{align*}
+s(a,b)&\le s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\le
+\\
+&\le (a+\tfrac1n)\cdot(b+\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)>}.
+
+\columnbreak
+
+If $s(a,b)< a\cdot b$, choose a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
+\[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
+Choose integers $k$ and $m$ such that
+\begin{align*}
+a> \tfrac kn&\ge a-\tfrac1n,
+\\
+b>\tfrac mn&\ge b-\tfrac1n.
+\end{align*}
+By \ref{s(a,b)>s(a',b')}, we get that
+\begin{align*}
+s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\ge
+\\
+&\ge (a-\tfrac1n)\cdot(b-\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)<}.\qeds
+\end{multicols}
+\setlength{\columnseprule}{0pt}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\section{Rectangles}
+
+\begin{thm}{Theorem}\label{thm:area-rect}
+The area of a rectangle is the product of its adjacent sides.
+\end{thm}
+
+\begin{thm}{Algebraic lemma}\label{lem:alg-area}
+Assume that a function $s$
+returns a nonnegative real number $s(a,b)$
+for any pair of positive real numbers $(a,b)$
+and it satisfies the following identities:
+\[\begin{aligned}
+s(1,1)&=1,
+\\
+s(a,b+c)&=s(a,b)+s(a,c),
+\\
+s(a+b,c)&=s(a,c)+s(b,c)
+\end{aligned}
+\eqlbl{3s}
+\]
+for any $a,b,c>0$.
+Then
+\[s(a,b)=a\cdot b\]
+for any $a,b>0$.
+\end{thm}
+
+The proof is similar to the proof of Lemma~\ref{lem:R-auto}.
+
+\parit{Proof.}
+If $a>a'$ and $b>b'$ then
+\[s(a,b)\ge s(a',b').\eqlbl{s(a,b)>s(a',b')}\]
+Indeed, since $s$ returns nonnegative numbers, we get that
+\begin{align*}
+s(a,b)&=s(a',b)+s(a-a',b)\ge s(a',b)=
+\\
+&= s(a',b')+s(a',b-b')\ge s(a',b').
+\end{align*}
+
+Applying the second and third identity in \ref{3s} a few times we get that
+\begin{align*}
+m\cdot s(a,b)&=s(a,m\cdot b)=
+\\&=s(m\cdot a,b)
+\end{align*}
+for any positive integer $m$. Therefore
+\begin{align*}
+s(\tfrac kl,\tfrac mn)
+&=k \cdot s(\tfrac 1l,\tfrac mn)=
+\\
+&=k\cdot m \cdot s(\tfrac 1l,\tfrac 1n)=
+\\
+&=k\cdot m\cdot \tfrac 1l\cdot s(1, \tfrac 1n)=
+\\
+&=k\cdot m\cdot \tfrac 1l\cdot \tfrac 1n\cdot s(1,1)=
+\\
+&=\tfrac kl\cdot\tfrac mn
+\end{align*}
+for any positive integers $k$, $l$, $m$, and $n$.
+That is, the needed identity holds for any pair of rational numbers $a=\tfrac kl$ and $b=\tfrac mn$.
+
+Arguing by contradiction, assume $s(a,b)\ne a\cdot b$ for a pair of positive real numbers $(a,b)$;
+so, $s(a,b)> a\cdot b$ or $s(a,b)\z< a\cdot b$.
+
+Recall that \index{63@$\lfloor x \rfloor$, $\lceil x \rceil$}$\lfloor x \rfloor$ and $\lceil x \rceil$  denote \index{floor and ceiling}\emph{floor} and \emph{ceiling} of $x$;
+that is, $\lfloor x \rfloor$ is the greatest integer such that $\lfloor x \rfloor\le x$,
+and $\lceil x \rceil$ is the least integer such that $\lceil x \rceil\ge x$.
+
+\raggedcolumns\setlength{\multicolsep}{.5mm}
+\setlength{\columnseprule}{1pt}
+\begin{multicols}{2}
+If $s(a,b)> a\cdot b$,
+we can choose a positive integer $n$ such that
+\[s(a,b)> (a+\tfrac1n)\cdot (b+\tfrac1n).\eqlbl{s(a,b)>}\]
+Set $k=\lfloor a\cdot n \rfloor+1$ and $m=\lfloor b\cdot n \rfloor+1$;
+equivalently, $k$ and $m$ are positive integers such that
+\begin{align*}
+a< \tfrac kn&\le a+\tfrac1n,
+\\
+b<\tfrac mn&\le b+\tfrac1n.
+\end{align*}
+By \ref{s(a,b)>s(a',b')}, we get that
+\begin{align*}
+s(a,b)&\le s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\le
+\\
+&\le (a+\tfrac1n)\cdot(b+\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)>}.
+
+\columnbreak
+
+If $s(a,b)< a\cdot b$, choose a positive integer $n$ such that $a>\tfrac1n$, $b>\tfrac1n$, and
+\[s(a,b)< (a-\tfrac1n)\cdot (b-\tfrac1n).\eqlbl{s(a,b)<}\]
+Set $k=\lceil a\cdot n \rceil-1$ and $m=\lceil b\cdot n \rceil-1$; that is,
+\begin{align*}
+a> \tfrac kn&\ge a-\tfrac1n,
+\\
+b>\tfrac mn&\ge b-\tfrac1n.
+\end{align*}
+By \ref{s(a,b)>s(a',b')}, we get that
+\begin{align*}
+s(a,b)&\ge s(\tfrac kn,\tfrac mn)=
+\\
+&=\tfrac kn\cdot\tfrac mn\ge
+\\
+&\ge (a-\tfrac1n)\cdot(b-\tfrac1n),
+\end{align*}
+which contradicts \ref{s(a,b)<}.\qeds
+\end{multicols}
+\setlength{\columnseprule}{0pt}
+
+
+
+
+
+
+
+
+\parit{Proof of Theorem~\ref{thm:area-rect}.}
+Suppose that $\mathcal{R}_{a,b}$ denotes the solid rectangle with sides $a$ and~$b$.
+Let
+\[s(a,b)=\area \mathcal{R}_{a,b}.\]
+
+By the definition of area,
+$s(1,1)=\area(\mathcal{K}_1)=1$.
+That is, the first identity in the algebraic lemma holds.
+
+
+\begin{wrapfigure}{o}{30 mm}
+\vskip-0mm
+\centering
+\includegraphics{mppics/pic-304}
+\end{wrapfigure}
+
+The rectangle $\mathcal{R}_{a+b,c}$
+can be subdivided into two rectangles $\mathcal{R}_{a,c}$
+and~$\mathcal{R}_{b,c}$.
+By Proposition~\ref{prop:subdivision},
+\[
+\area \mathcal{R}_{a+b,c}=\area \mathcal{R}_{a,c}+\area \mathcal{R}_{b,c}.
+\]
+That is, the second identity in the algebraic lemma holds.
+The proof of the third identity is similar.
+
+It remains to apply the algebraic lemma.
+\qeds
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 \section{The construction}
 
