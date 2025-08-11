@@ -478,20 +478,37 @@ that defines Gromov--Hausdorff convergence.
 We want to define the metric on the set of \textit{isometry classes} of compact metric spaces.
 Further, the term \textit{metric space} might also stand for its \textit{isometry class}.
 
-The obtained metric is called the Gromov--Hausdorff metric;
-the corresponding metric space will be denoted by $\GH$.
-This distance is defined as the maximal metric such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
-Here is a formal definition.
+Loosly speaking, it the distance between (isometry classes of) compact metric spaces will be defined as the maximal value such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+
+Observe that we \textit{know} a real number $x$ if we can answer yes or no question $x<r$ for any $r$.
+Keep this in mind while readint the following definition.
 
 \begin{thm}{Definition}\label{def:GH}
 The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
 is defined by the following
 relation.
- 
+
 Given  $r > 0$, we have $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
 space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
-respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$. 
+respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 (Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
+\end{thm}
+
+These distances spaces actually define a metric on (isometry classes of) compact metric spaces; for a proof we refer to \cite{burago-burago-ivanov,petrunin2023pure}.
+The obtained metric is called the Gromov--Hausdorff metric;
+the corresponding metric space will be denoted by $\GH$.
+Moreover, each of these textbooks \cite{burago-burago-ivanov,petrunin2023pure} provide the following statement.
+
+\begin{thm}{Proposition}\label{prop:complete}
+$\GH$ is a complete metric space.
+\end{thm}
+
+This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
+
+\begin{thm}{Exercise}\label{ex:compact-GH}
+Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
+Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are non-empty limit spaces of $\spc{X}_n$ for some Gromov--Hausdorff convergences.
+Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty'$.
 \end{thm}
 
 Gromov--Hausdorff convergence of compact spaces has particularly nice properties, which follow from the next exercise.
@@ -504,20 +521,6 @@ Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
 
 \begin{thm}{Exercise}\label{ex:non-expanding-map}
 Show that any surjective \index{short map}\emph{short} map (that is, distance-nonexpanding) from a compact metric space to itself is an isometry.
-\end{thm}
-
-For the proof of the following statements we refer to \cite{burago-burago-ivanov} and \cite{petrunin2023pure}.
-
-\begin{thm}{Proposition}\label{prop:complete}
-$\GH$ is a complete metric space.
-\end{thm}
-
-This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
-
-\begin{thm}{Exercise}\label{ex:compact-GH}
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
-Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are non-empty limit spaces of $\spc{X}_n$ for some Gromov--Hausdorff convergences.
-Assume $\spc{X}_\infty$ is compact, show that it is isometric to~$\spc{X}_\infty'$.
 \end{thm}
 
 \section{Almost isometries}\label{sec:Almost isometries}
