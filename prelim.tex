@@ -259,14 +259,14 @@ will be called the \index{model!angle}\emph{model angle} of the triple $p$, $q$,
 $\angk p q r_{\EE^2}$%
 \index{30@$\angk{p}{q}{r}$ (model angle)}.\label{page:model-angle}
 
-For example, if $\dist{p}{q}{}=\dist{q}{r}{}=\dist{r}{p}{}$, then $\angk p q r_{\EE^2}=\tfrac\pi3$ regardless of existence and relative position of geodesics $[pq]$ and $[pr]$.
+For example, if $\dist{p}{q}{}=\dist{q}{r}{}=\dist{r}{p}{}$, then $\angk p q r_{\EE^2}=\tfrac\pi3$ regardless of the existence and relative position of geodesics $[pq]$ and $[pr]$.
 
 In the same way we define $\angk p q r_{\MM^2(\kappa)}$;
 in particular, $\angk p q r_{\HH^2}$ and $\angk p q r_{\SSS^2}$.
 We may use the notation $\angk p q r$ if it is evident which of the model spaces is meant.
 
 \begin{thm}{Exercise}\label{ex:k-><mono}
-Show that for any triple of point $p$, $q$, and $r$,
+Show that for any triple of points $p$, $q$, and $r$,
 the function
 \[\kappa\mapsto \angk p q r_{\MM^2(\kappa)}\]
 is nondecreasing in its domain of definition.
@@ -401,10 +401,16 @@ The following exercise is an extension of the so-called Blaschke selection theor
 Show that any sequence of closed sets in a proper metric space has a convergent subsequence in the sense of Hausdorff.
 \end{thm}
 
+
+\begin{thm}{Exercise}\label{ex:two>one}
+Construct a metric space with a sequence of points $\{x_0,x_1,\dots\}$ such that $\dist{x_0}{x_n}{}=1$ for any $n>0$ and the two-point sets $\{x_0,x_n\}$ converge to one-point set $\{x_0\}$ in the sense of Hausdorff.
+\end{thm}
+
+
 \section{Hausdorff metric}
 
 \begin{thm}{Definition}\label{def:hausdorff-convergence}
-Let $A$ and $B$ be two non-empty compact subsets of a metric space $\spc{X}$.
+Let $A$ and $B$ be two nonempty compact subsets of a metric space $\spc{X}$.
 Then the \index{Hausdorff!distance}\emph{Hausdorff distance} between $A$ and $B$ is defined as 
 $$|A-B|_{\Haus\spc{X}}
 \df
@@ -416,31 +422,32 @@ $$
 The following observation gives a useful reformulation of the definition:
 
 \begin{thm}{Observation}\label{obs:Haus-nbhds}
-Suppose $A$ and $B$ be two compact subsets of a metric space $\spc{X}$.
-Then $|A-B|_{\Haus\spc{X}}< R$ if and only if and only if 
+Suppose $A$ and $B$ are two compact subsets of a metric space $\spc{X}$.
+Then $|A-B|_{\Haus\spc{X}}< R$ if and only if
 $B$ lies in an $R$-neighborhood of $A$, 
 and 
 $A$ lies in an $R$-neighborhood of~$B$.
 \end{thm}
 
-According to the following exercise, Hausdorff convergence of non-empty compact subsets is the convergence in Hausdorff metric.
+According to the following exercise, Hausdorff convergence of nonempty compact subsets is the convergence in Hausdorff metric.
 
 \begin{thm}{Exercise}\label{ex:Haus-conv}
-Let $A_1,A_2,\dots,$ and $A_\infty$ be compact non-empty sets in a metric space $\spc{X}$.
+Let $A_1,A_2,\dots,$ and $A_\infty$ be compact nonempty sets in a proper metric space $\spc{X}$.
 Show that $\dist{A_n}{A_\infty}{\Haus\spc{X}}\to 0$ as $n\to\infty$
 if and only if $A_n\to A_\infty$ in the sense of Hausdorff.
 \end{thm}
 
 \section{Gromov--Hausdorff convergence}\label{sec:Gromov--Hausdorff}
 
-Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be a sequence of complete metric spaces.
+Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be a sequence of proper metric spaces.
 Suppose that there is a metric on the disjoint union 
 \[\bm{X}=\bigsqcup_{n\in \NN\cup\{\infty\}} \spc{X}_n\] 
 that satisfies the following property:
 
 \begin{thm}{Property}\label{propery:GH}
-The restriction of the metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, 
-and $\spc{X}_n\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
+The restriction of the metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric,
+the space $\bm{X}$ is proper,
+and $\spc{X}_n\z\to \spc{X}_\infty$ as subsets in $\bm{X}$ in the sense of Hausdorff.
 \end{thm}
 
 In this case we say that the metric on $\bm{X}$ \textit{defines} a \index{Gromov--Hausdorff limit}\emph{convergence} $\spc{X}_n\z\to \spc{X}_\infty$ in the {}\emph{sense of Gromov--Hausdorff}.
@@ -457,31 +464,25 @@ The first convergence is evident and the second could be guessed from the pictur
 \end{figure}
 
 Note that any sequence of spaces has an empty space as its limit in some  Gromov--Hausdorff convergence.
-As we will see in Exercise \ref{ex:compact-GH}, if the limit is non-empty and compact, then it is unique up to isometry.
-
-\begin{thm}{Exercise}\label{ex:geod-closed}
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of geodesic metric spaces.
-Suppose $\spc{X}_n\to \spc{X}_\infty$ is a convergence in the sense of Gromov--Hausdorff.
-Assume $\spc{X}_\infty$ is proper, show that it is geodesic.
-\end{thm}
+As we will see further, if the limit is nonempty and compact, then it is unique up to isometry.
 
 \parbf{Pointed convergence.}
-Often the isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$.
+The isometry class of the limit can be fixed by marking a point $p_n$ in each space $\spc{X}_n$.
 We say that $(\spc{X}_n,p_n)$ converges to $(\spc{X}_\infty,p_\infty)$ if there is a metric on $\bm{X}$ as in \ref{propery:GH} such that $p_n\to p_\infty$.
 This is called \index{pointed convergence}\emph{pointed Gromov--Hausdorff convergence}.
 For example, the sequence $(\spc{X}_n,p_n)=([0,\infty),0)$ converges to $([0,\infty),0)$, while $(\spc{X}_n,p_n)=([0,\infty),n)$ converges to $(\RR,0)$ as $n\to \infty$.
 
 \section{Gromov--Hausdorff metric}\label{sec:Gromov--Hausdorff-metric}
 
-In this section we cook up a metric space out of all compact non-empty metric spaces
+In this section we cook up a metric space out of all compact nonempty metric spaces
 that defines Gromov--Hausdorff convergence.
 We want to define the metric on the set of \textit{isometry classes} of compact metric spaces.
 Further, the term \textit{metric space} might also stand for its \textit{isometry class}.
 
-Loosly speaking, it the distance between (isometry classes of) compact metric spaces will be defined as the maximal value such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+Loosely speaking, the distance between (isometry classes of) compact metric spaces will be defined as the maximal value such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
 
-Observe that we \textit{know} a real number $x$ if we can answer yes or no question $x<r$ for any $r$.
-Keep this in mind while readint the following definition.
+Observe that we \textit{know} a real number $x$ if we can give yes/no answer to the question $x<r$ for any $r$.
+Keep this in mind while reading the following definition.
 
 \begin{thm}{Definition}\label{def:GH}
 The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
@@ -494,34 +495,19 @@ respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 (Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
 \end{thm}
 
-These distances spaces actually define a metric on (isometry classes of) compact metric spaces; for a proof we refer to \cite{burago-burago-ivanov,petrunin2023pure}.
+These distances actually define a metric on (isometry classes of) compact metric spaces; for a proof we refer to \cite{burago-burago-ivanov,petrunin2023pure}.
 The obtained metric is called the Gromov--Hausdorff metric;
 the corresponding metric space will be denoted by $\GH$.
-Moreover, each of these textbooks \cite{burago-burago-ivanov,petrunin2023pure} provide the following statement.
+This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
+Moreover, each of the references above provide the following statement.
 
 \begin{thm}{Proposition}\label{prop:complete}
 $\GH$ is a complete metric space.
 \end{thm}
 
-This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
+The proofs of the mentioned statements are not quite straightforward.
+The following two exercises should help the reader who wants to reconstruct these proofs without reading the mentioned textbooks.
 
-Notice that now we have two notions of convergence of metric spaces.
-One is defined in the previous section; it works for arbitrary metric spaces and
-its limit might not be uniquely defined.
-And the other is defined as convergence in $\GH$;
-the limit in $\GH$ is unique, if it exists.
-Therefore, these convergences are different.
-On the other hand, if we restrict our attention only to compact spaces, then these two convergences are essentially the same.
-
-\begin{thm}{Exercise}\label{ex:compact-GH}
-Let $\spc{X}_1,\spc{X}_2,\dots$ be a sequence of metric spaces.
-Suppose $\spc{X}_\infty$ and $\spc{X}_\infty'$ are non-empty limit spaces of $\spc{X}_n$ for some Gromov--Hausdorff convergences.
-Assume $\spc{X}_\infty$ is compact; show that $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
-Conclude that $\spc{X}_\infty$ is isometric to~$\spc{X}_\infty'$.
-
-\end{thm}
-
-The following statement is primarily responsible for the properties of convergence of compact spaces.
 
 \begin{thm}{Exercise}\label{ex:non-contracting-map}
 Let $f$ be a distance noncontracting map from
@@ -532,6 +518,30 @@ Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
 \begin{thm}{Exercise}\label{ex:non-expanding-map}
 Show that any surjective \index{short map}\emph{short} map (that is, distance-nonexpanding) from a compact metric space to itself is an isometry.
 \end{thm}
+
+\parbf{Two convergences.}
+Notice that now we have two notions of convergence of metric spaces.
+One is defined in the previous section; it works for proper metric spaces and
+its limit might not be uniquely defined.
+The other is defined as convergence in $\GH$;
+the limit in $\GH$ is unique, if it exists.
+Therefore, these convergences are different.
+On the other hand, if we restrict our attention only to nonempty compact spaces, then these two convergences are essentially the same.
+Let us sketch why.
+
+Suppose $|\spc{X}_n-\spc{X}_\infty|_{\GH}\to 0$ as $n\to \infty$;
+that is $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
+Then there is a metric on $\spc{V}_n=\spc{X}_n\sqcup \spc{X}_\infty$ such that the restriction of metric on each $\spc{X}_n$ and $\spc{X}_\infty$ coincides with its original metric, and $\dist{\spc{X}_n}{\spc{X}_\infty}{\Haus\spc{V}_n}<\eps_n$ for some sequence $\eps_n\to 0$.
+Gluing all $\spc{V}_n$ along $\spc{X}_\infty$, we get the required space $\bm{X}$, which defines convergence.
+
+Once the convergence is fixed, we can talk about limits of sequences $x_n\in \spc{X}_n$ in $\spc{X}_\infty$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on --- all these limits are defined as the corresponding limits in the ambient space $\bm{X}$.
+
+Now suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ with the common space $\bm{X}$.
+Assume that all spaces $\spc{X}_1,\spc{X}_2,\dots$, as well as $\spc{X}_\infty$ are compact, and $\spc{X}_\infty$ is nonempty.
+(The latter condition means that the convergence is nontrivial.)
+Observe that in this case $\dist{\spc{X}_n}{\spc{X}_\infty}{\Haus\bm{X}}\to 0$ as $n\to \infty$,
+and therefore $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0$.
+In other words $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
 
 \section{Almost isometries}\label{sec:Almost isometries}
 
@@ -547,7 +557,7 @@ $f(\spc{X})$ is an \index{net@$\eps$-net}\emph{$\eps$-net} in $\spc{Y}$; that is
 \end{subthm}
 
 \begin{subthm}{}
-$f(\spc{X})$ is an \index{distance-preserving}\emph{$\eps$-distance-preserving}; that is,
+$f(\spc{X})$ is \index{distance-preserving}\emph{$\eps$-distance-preserving}; that is,
 \[\dist{f(x)}{f(x')}{\spc{Y}}\lg \dist{x}{x'}{\spc{X}}\pm\eps \]
 for any $x,x'\in\spc{X}$.
 \end{subthm}
@@ -557,7 +567,7 @@ for any $x,x'\in\spc{X}$.
 When dealing with Gromov--Hausdorff convergence the following lemma allows to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
-Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be complete metric spaces,
+Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be compact metric spaces,
 and let $\eps_n\to\0+$ as $n\to\infty$.
 Suppose that either 
 \begin{subthm}{lem:almost-isom-a}
@@ -571,7 +581,7 @@ Then there is a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$.
 Furthermore, a partial converse also holds.
 
 \begin{subthm}{lem:almost-isom-c}
-Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ and $\spc{X}_\infty$ is compact.
+Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ and $\spc{X}_\infty$ is nonempty and compact.
 Then there exist $\eps_n\to\0+$ as $n\to\infty$ and $\eps_n$-isometries $f_n\:\spc{X}_n\to\spc{X}_\infty$ (and $h_n\:\spc{X}_\infty\to\spc{X}_n$)
 such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty) }{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
 \end{subthm}
@@ -593,7 +603,7 @@ by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1
 where we assume that $x_\infty,y_\infty\in \spc{X}_\infty$, and $x_n,y_n\in \spc{X}_n$ for each $n$. 
 It remains to observe that this indeed defines a metric on $\bm{X}$, and $\spc{X}_n\to \spc{X}_\infty$ in the sense of Hausdorff.
 
-The proof of the second part is analogous; one only needs to change one line in the definition of the metric to the following:
+The proof of the second part is analogous; one only needs to change one line in the definition of the metric as follows:
 \[\dist{x_n}{x_\infty}{\bm{X}}=\inf\set{\dist{x_n}{h(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{{y_\infty}\in \spc{X}_\infty}.\]
 
 We leave part \ref{SHORT.lem:almost-isom-c} as an exercise.
@@ -606,8 +616,8 @@ there is a map $f\:\spc{X}\to \spc{Y}$ such that
 for any $x,x'\in \spc{X}$.
 
 \begin{thm}{Exercise}\label{ex:GH-po}
-Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be compact metric spaces.
-Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
+Let $\spc{X}_1,\spc{X}_2,\dots,$ and $\spc{X}_\infty$ be nonempty compact metric spaces.
+Show that there is a Gromov--Hausdorff convergence $\spc{X}_n\z\to\spc{X}_\infty$ if and only if for some sequence $\eps_n\to 0$,
 we have
 \[\spc{X}_\infty\le \spc{X}_n+\eps_n\quad\text{and}\quad \spc{X}_n\le \spc{X}_\infty+\eps_n.\]
 \end{thm}
@@ -644,7 +654,7 @@ we leave the former to the reader.
 
 \section{Remarks}
 
-In principle, our definition of Gromov--Hausdorff distance works for complete metric spaces that are not necessarily compact.
+In principle, our definition of Gromov--Hausdorff distance can be applied to complete metric spaces that are not necessarily compact.
 However, according to the following exercise, it only defines a semimetric; that is, zero Gromov--Hausdorff distance does not imply that the spaces are isometric.
 For that reason it is not in use.
 
