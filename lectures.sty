@@ -299,7 +299,7 @@ isbn=false]{biblatex}
 %THEOREM
 \newcounter{thm}[chapter]
 \renewcommand{\thethm}{\thechapter.\arabic{thm}}
-\newcommand\claim[2][{}]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2.#1}
+\newcommand\claim[2][.]{\par\medskip\noindent\refstepcounter{thm}\hbox{\bf \thechapter.\arabic{thm}. #2#1}
 \it\ %\ignorespaces
 }
 \def\endclaim{
