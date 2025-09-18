@@ -165,7 +165,7 @@ Show that any proper length space is geodesic.
 
 \section{Menger's lemma}
 
-\begin{thm}{Lemma}\label{lem:mid>geod}
+\begin{thm}{Menger's lemma}\label{lem:mid>geod}
 Let $\spc{X}$ be a complete metric space.
 Assume that for any pair of points $x,y\in \spc{X}$, 
 there is a midpoint~$z$.
@@ -300,7 +300,7 @@ Give an example of a hinge $\hinge p x y$ in a metric space with an undefined an
 \section{Triangle inequality for angles}
 
 \begin{thm}{Proposition}\label{claim:angle-3angle-inq}
-Let  $[px_1]$, $[px_2]$, and $[px_3]$ be three geodesics in a metric space.
+Consider three geodesics $[px_1]$, $[px_2]$, and $[px_3]$ in a metric space.
 Suppose all the angle measures $\alpha_{i, j}=\mangle\hinge p {x_i}{x_j}$ are defined.
 Then 
 \[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}.\]
@@ -310,21 +310,26 @@ Then
 
 
 \parit{Proof.}
-Since $\alpha_{1,3}\le\pi$, we can assume that $\alpha_{1,2}+\alpha_{2,3}< \pi$.
+We can assume that $\alpha_{1,3}>0$.
+Furthermore, since $\alpha_{1,3}\le\pi$, we can assume that $\alpha_{1,2}+\alpha_{2,3}< \pi$.
+
 Denote by $\gamma_i$ the unit-speed parametrization of $[px_i]$ from $p$ to $x_i$.
-Given any $\eps>0$, for all sufficiently small $t,\tau,s\in[0,\infty)$ we have
+Given small $\eps>0$, for all sufficiently small $t,\tau,s\in[0,\infty)$ we have
 \begin{align*}
-\dist{\gamma_1(t)}{\gamma_3(\tau)}{}
-&\le 
-\dist{\gamma_1(t)}{\gamma_2(s)}{}+\dist{\gamma_2(s)}{\gamma_3(\tau)}{}<\\
-&<
-\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{1,2}+\eps)} +
+\sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha_{1,3}-\eps)}
+&\le
+\dist{\gamma_1(t)}{\gamma_3(\tau)}{}\le
 \\
-&\quad+\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{2,3}+\eps)}\le
+\le
+\dist{\gamma_1(t)}{\gamma_2(s)}{}+\dist{\gamma_2(s)}{\gamma_3(\tau)}{}&<\\
+<
+\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{1,2}+\eps)}\;&+
+\\
+\quad+\;\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{2,3}+\eps)}&\le
 \end{align*}
 
 \begin{wrapfigure}{o}{30 mm}
-\vskip-16mm
+\vskip-17mm
 \centering
 \includegraphics{mppics/pic-615}
 \vskip0mm
@@ -332,13 +337,12 @@ Given any $\eps>0$, for all sufficiently small $t,\tau,s\in[0,\infty)$ we have
 
 Below we define 
 $s(t,\tau)$ so that for 
-$s=s(t,\tau)$, this chain of inequalities can be continued as follows:
+$s=s(t,\tau)$, this chain of inequalities can be continued as
 \[\le
 \sqrt{t^2+\tau^2-2\cdot t\cdot \tau\cdot \cos(\alpha_{1,2}+\alpha_{2,3}+2\cdot \eps)}.
 \]
-
-Thus for any $\eps>0$, 
-\[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}+2\cdot \eps.\]
+Thus
+\[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}+3\cdot \eps.\]
 Hence the result follows.
 
 To define $s(t,\tau)$, consider three half-lines $\tilde \gamma_1$, $\tilde \gamma_2$, $\tilde \gamma_3$ on a Euclidean plane starting at one point, such that

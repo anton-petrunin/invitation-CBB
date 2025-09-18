@@ -86,14 +86,7 @@ $\angk p{x}{y}_{\EE^2}-\angk p{x}{y}_{\HH^2}=O(\dist[2]{p}{x}{}+\dist[2]{p}{y}{}
 Consider a hinge in the plane $\RR^2$ with a metric defined by norm, say by the $\ell^\infty$-norm.
 
 \parbf{\ref{ex:adjacent-angles}.}
-Assume $\mangle\hinge pxz+\mangle\hinge pyz<\pi$.
-By \ref{claim:angle-3angle-inq}, $\mangle\hinge pxy<\pi$.
-Therefore,
-$\angk p{\bar x}{\bar y}<\pi$
-for some $\bar x\in \left]px\right]$ and $\bar y\in \left]py\right]$.
-Hence 
-\[\dist p{\bar x}{}+\dist {\bar y}p{}<\dist {\bar x}{\bar y}{}\]
---- a contradiction.
+Show that $\mangle\hinge pxy=\pi$ and apply \ref{claim:angle-3angle-inq}.
 
 \parbf{\ref{ex:first-var}.}
 Denote by $\alpha$ the arc-length parametrization of $[qp]$ from $q$ to $p$.
@@ -305,16 +298,16 @@ The latter contradicts the triangle inequality.
 \parbf{\ref{ex:adjacent-CBB}.}
 By \ref{ex:adjacent-angles}, we have
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi.\]
-Since $z\in \left]xy\right[$ we have 
-\[\angk z{\bar x}{\bar y}=\pi\]
+Since $p\in \left]xy\right[$ we have
+\[\angk p{\bar x}{\bar y}=\pi\]
 for any $\bar x\in \left[xz\right[$ and $\bar y\in \left]zy\right]$.
 By comparison, we have that 
-\[\angk z{\bar x}{\bar p}+\angk z{\bar p}{\bar y}\le\pi\]
-for any $\bar p\in \left]zp\right]$.
+\[\angk p{\bar x}{\bar z}+\angk p{\bar z}{\bar y}\le\pi\]
+for any $\bar z\in \left]zp\right]$.
 Passing to the limit as
-$\dist{z}{\bar x}{}\to 0$,
-$\dist{z}{\bar y}{}\to 0$, and
-$\dist{z}{\bar p}{}\to 0$,
+$\dist{p}{\bar x}{}\to 0$,
+$\dist{p}{\bar y}{}\to 0$, and
+$\dist{p}{\bar z}{}\to 0$,
 we get \[\mangle\hinge pxz+\mangle\hinge pyz\le \pi.\]
 
 \parbf{\ref{ex:pxyvw}.} 
