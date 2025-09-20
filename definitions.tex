@@ -422,9 +422,8 @@ Note that the point-on-side comparison (\ref{point-on-side}) says that the impli
 \tilde r(t)\le r(t)
 \eqlbl{eq:r=<r}\]
 holds for any $\gamma$ and $t_0<t_1$.
-
-Jensen's inequality (see Section~\ref{Function comparison}) for the function $t\mapsto \tfrac12\cdot r(t)^2$ is equivalent to \ref{eq:r=<r}.
-Hence the proposition follows.
+Note that \ref{eq:r=<r} implies the Jensen inequality for the function $h\:t\mapsto r(t)^2-t^2$.
+Since the subinterval $[t_0,t_1]$ can be chosen arbitrarily, we get that $h$ is concave, and the proposition follows.
 \qeds
 
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
