@@ -6,7 +6,11 @@ We prove it for compact spaces and indicate the proof of the general case.
 
 \section{Globalization}
 
-A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{A}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
+A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{A}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison  holds for any quadruple of points in $U$.
+
+It is straightforward to obtain a local version of Theorem~\ref{thm:defs_of_alex} for locally $\Alex0$ spaces;
+it gives a list of equivalent properties that hold in sufficiently small neighborhoods of any point.
+In particular, the analog of \ref{angle} implies that \textit{the angle measure of any hinge in locally $\Alex0$ space is well defined.}
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
 Any compact locally $\Alex0$ space is $\Alex0$.
@@ -77,11 +81,12 @@ It is sufficient to prove that
 \[\side \hinge x p q
 \ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\]
 
-First, let us construct a new hinge $\hinge{x'}p q$ with
+First, let us describe a construction of a new hinge $\hinge{x'}p q$, which has many properties;
+in particular,
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
 \eqlbl{eq:thm:=def-loc-fourstar}\]
-such that 
+and
 \[\side \hinge x p q
 \ge\side \hinge{x'}p q.
 \eqlbl{eq:thm:=def-loc-fivestar}\]
