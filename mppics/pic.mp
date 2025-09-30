@@ -852,11 +852,11 @@ u:=1cm;
 
 z.p=(0,0)*u;
 z.q=(6,0)*u;
-z.x0=(-2,2)*u;
+z.x0=(-1.5,2.2)*u;
 z.x1=.25[z.x0,z.q];
-z.x2=.5[z.x0,z.q];
-z.x3=.5[z.x2,z.p];
-z.x4=.5[z.x3,z.q];
+z.x2=.65[z.x0,z.q];
+z.x3=.4[z.x2,z.p];
+z.x4=.45[z.x3,z.q];
 z.x5=.5[z.x4,z.p];
 
 draw z.x0--z.p;
@@ -866,6 +866,7 @@ draw z.x2--z.p;
 draw z.x3--z.q;
 draw z.x4--z.p;
 draw z.x5--z.q;
+draw z.p--z.q dashed evenly;
 
 dOt z.p,z.q,z.x0,z.x1,z.x2,z.x3,z.x4,z.x5;
 
@@ -875,8 +876,8 @@ label.top(btex $x_0$ etex, z.x0);
 label.urt(btex $x_1$ etex, z.x1);
 label.urt(btex $x_2$ etex, z.x2);
 label.ulft(btex $x_3$ etex, z.x3);
-whitelabel.urt(btex $x_4$ etex, z.x4);
-label.bot(btex $x_5$ etex, z.x5);
+label.urt(btex $x_4$ etex, z.x4);
+whitelabel.bot(btex $x_5$ etex, z.x5);
 
 endfig;
 
