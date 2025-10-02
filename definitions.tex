@@ -423,8 +423,12 @@ Note that the point-on-side comparison (\ref{point-on-side}) says that the impli
 \eqlbl{eq:r=<r}\]
 holds for any $\gamma$ and $t_0<t_1$.
 
-Observe that $(\tilde r^2)''\equiv2$; also \ref{eq:r=<r} implies the Jensen inequality for the function $h\:t\mapsto r(t)^2-t^2$.
-Since the subinterval $[t_0,t_1]$ can be chosen arbitrarily, we conclude that $h$ is concave, and the proposition follows.
+Observe that $(\tilde r^2)''\equiv2$.
+If $(r^2)''\le 2$, then $t\mapsto r^2(t)-\tilde r^2(t)$ is concave.
+Since $\tilde r(t_0)=r(t_0)$ and $\tilde r(t_1)=r(t_1)$, we get \ref{eq:r=<r}, which proves the if part.
+
+On the other hand, \ref{eq:r=<r} implies the Jensen inequality for the function $h\:t\mapsto r(t)^2-t^2$.
+Since the subinterval $[t_0,t_1]$ can be chosen arbitrarily, we conclude that $h''\le 0$, or, equivalently, $(\tfrac12\cdot r^2)''\le 2$, and the only-if part follows.
 \qeds
 
 \section{Semiconcave functions}\label{sec:Semiconcave functions}
