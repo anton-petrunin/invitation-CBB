@@ -227,61 +227,84 @@ therefore,
 Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \ref{eq:thm:=def-loc*}.
 \qeds
 
-\section{General case}
-
-The globalization theorem  can be generalized to any curvature bound~$\kappa$.
-The case $\kappa\le 0$ is proved in the same way, but the case $\kappa>0$ requires modifications.
-
-The compactness condition in our version of the theorem can be traded for completeness.
-The proof uses the following statement, assuming that $r(x)$ is the maximal radius of the ball centered at $x$ in which the comparison holds; see \cite[2F]{alexander-kapovitch-petrunin2024}.
-
-\begin{thm}{Exercise}\label{ex:alm-min}
-Let $\spc{X}$ be a complete metric space.
-Suppose $r\:\spc{X}\to \RR$ is a positive continuous function.
-Show that for any $\eps>0$ there is a point $p\in \spc{X}$ such that 
-\[r(x)> (1-\eps)\cdot r(p)\] 
-for any $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
-
-\end{thm}
-
-Given a point $x$ in a locally $\Alex\kappa$ space denote by
-$r(x)$ the size of a neighborhood of $x$ where the comparison holds.
-Applying the exercise to $r$ and then the key lemma, one can prove the following.
+\section{On general case}
 
 \begin{thm}{Theorem}\label{thm:globalization+}
 Any locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
-By \ref{ex:k-><mono}, we have
-\[\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}\]
-if $\kappa\le \Kappa$ and the right-hand side is defined.
-It follows that an $\Alex\Kappa$ space is \textit{locally} $\Alex\kappa$.
-Therefore, the globalization theorem implies the following.
+This is a more general version of our globalization theorem~\ref{thm:glob}.
+It holds for an arbitrary curvature bound~$\kappa$ and replaces compactness with completeness.
+A complete proof can be found in~\cite[2F]{alexander-kapovitch-petrunin2024}; it is based on the idea from \ref{thm:glob}, but requires a few additional twists that we are about to discuss.
+
+\parbf{Trading compactness for completeness.}
+Assume for a moment that $\kappa=0$.
+To replace compactness by completeness, we need the following statement.
+
+\begin{thm}{Exercise}\label{ex:alm-min}
+Let $\spc{X}$ be a complete metric space.
+Suppose $r\:\spc{X}\to \RR$ is a positive continuous function.
+Show that for any $\eps>0$, there exists a point $p\in \spc{X}$ such that
+\[
+r(x)> (1-\eps)\cdot r(p)
+\]
+for every $x\in \cBall[p,\tfrac{1}{\eps}\cdot r(p)]$.
+
+\end{thm}
+
+Define $r(x)$ to be the maximal radius of a ball centered at $x$ in which the comparison condition holds (this definition should be made precise, but the details are not important here).
+Note that if $r(x)=\infty$ for one (and therefore for every) point $x$, then the theorem follows immediately.
+To prove the theorem, we need to choose a point $p$ satisfying the conclusion of the exercise and apply the key lemma.
+
+\parbf{On general curvature bounds.}
+The case $\kappa\le 0$ in \ref{thm:globalization+} can be proved in the same way as the case $\kappa=0$, but the case $\kappa>0$ requires extra care.
+This is because model triangles may be undefined in $\MM^2(\kappa)$ when $\kappa>0$.%
+\footnote{Recall that according to the definitions in Section~\ref{sec:Triangles and model triangles},
+if $\angk p q r_{\MM^2(\kappa)}$, and hence $\modtrig(p q r)_{\MM^2(\kappa)}$, are defined for some $\kappa>0$, then
+$\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi/\sqrt{\kappa}$.}
+
+\parbf{Meaning of curvature bounded below.}
+Recall that an $\Alex\kappa$ space is defined as a complete geodesic space having ``curvature $\ge\kappa$ in the sense of Alexandrov.''
+This suggests that the following claim should hold.
 
 \begin{thm}{Claim}\label{clm:K>k}
 If $\Kappa>\kappa$, then any $\Alex\Kappa$ space is $\Alex\kappa$.
 \end{thm}
 
-In other words the expression \textit{curvature bounded below by $\kappa$} makes sense for geodesic spaces.
-However, it does not make much sense in general.
+The proof of this statement uses \ref{thm:globalization+}.
 
-For example,
-let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by $\dist{p}{x_i}{}=\pi$ and $\dist{x_i}{x_j}{}=2\cdot\pi$
-for all $i\ne j$.
-Since $\spc{X}$ has no defined sphericlal model angle, it has curvature $\ge 1$.
-On the other hand, $\spc{X}$ does not have curvature $\ge 0$ since
-\[\angk  p{x_1}{x_2}_{\EE^2}=\angk  p{x_2}{x_3}_{\EE^2}=\angk  p{x_1}{x_3}_{\EE^2}=\pi.\]
+\parit{Proof.}
+By~\ref{ex:k-><mono},
+\[
+\angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}
+\]
+whenever the right-hand side is defined.
+This completes the proof in the case $\Kappa\le 0$.
+In general, however, the comparison holds only for sufficiently small triangles;
+in particular, any $\Alex\Kappa$ space is \emph{locally} $\Alex\kappa$.
+Therefore, \ref{thm:globalization+} completes the proof.
+\qeds
 
+While the expression ``curvature bounded below by $\kappa$'' makes sense for geodesic spaces,
+it does not make much sense for general metric spaces.
+For example, let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
+$\dist{p}{x_i}{}=\pi$ and $\dist{x_i}{x_j}{}=2\cdot\pi$ for all $i\ne j$.
+Since $\spc{X}$ has no defined spherical model angles, it formally has curvature $\ge 1$.
+On the other hand, $\spc{X}$ does not have curvature $\ge 0$, since
+\[
+\angk  p{x_1}{x_2}_{\EE^2}
+=\angk  p{x_2}{x_3}_{\EE^2}
+=\angk  p{x_1}{x_3}_{\EE^2}
+=\pi.
+\]
 
 \begin{thm}[!]{Exercise}\label{ex:RisCBB(1)}
 Let $p$ and $q$ be points in an $\Alex1$ space $\spc{A}$.
-Suppose $\dist{p}{q}{}>\pi$.
-Denote by $m$ the midpoint of $[pq]$.
-Show that for any hinge $\hinge mxp$ we have
-either $\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
+Suppose $\dist{p}{q}{}>\pi$, and let $m$ be the midpoint of $[pq]$.
+Show that for any hinge $\hinge mxp$, we have either
+$\mangle\hinge mxp=0$ or $\mangle\hinge mxp=\pi$.
 
-Conclude that $\spc{A}$ is isometric to a line interval or a circle.
-
+Conclude that $\spc{A}$ is isometric to a line segment or a circle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perim-k>0}
@@ -297,8 +320,8 @@ for any triple of points $x,y,z\in \spc{A}$.
 \section{Remarks}
 
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
-Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti};
-later it was reproved independently by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref?? 
+Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti} and
+rediscovered by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref??
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
 They prove globalization \textit{complete length spaces}.
