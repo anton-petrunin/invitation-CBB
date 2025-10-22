@@ -236,12 +236,22 @@ where
 
 \end{thm}
 
-If $\T_p\iso\EE^m$ and $\dd_p f$ is a concave function,
-then
-\[2\cdot(\dd_p f)(\tfrac{u+v}2)\ge(\dd_p f)(u)+(\dd_p f)(v).\]
-The latter implies the statement since $|u+v|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}$.
-In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make  sense.
-The key lemma however says  that in a certain sense $\dd_p f$ behaves as a concave function.
+
+Suppose that $\T_p\iso\EE^m$ and the differential $\dd_p f$ is a concave function.
+Let $w=\tfrac{u+v}2$, then
+\[2\cdot(\dd_p f)(w)\ge(\dd_p f)(u)+(\dd_p f)(v).
+\eqlbl{eq:2df(w)>=df(u)+df(v)}\]
+The latter implies the statement since
+\[2\cdot |w|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.
+\eqlbl{eq:2|w|=|u+v|}\]
+In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make sense.
+The key lemma, however, says that in a certain sense $\dd_p f$ behaves as a concave function.
+The proof mimics the calculations above inside $\spc{A}$,
+instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $w_t)$ in $\spc{A}$
+and prove the approximate versions
+\ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}
+of \ref{eq:2df(w)>=df(u)+df(v)} and \ref{eq:2|w|=|u+v|}, respectively.
+The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|}.
 
 Solving the following exercise should help to find an approach to the key lemma.
 
@@ -301,17 +311,17 @@ we have
 \qquad
 \dist{u_t}{q_t}{}=t\cdot\dist{\tilde u}{\tilde q}{}+o(t).\]
 
-From the point-on-side and hinge comparisons (\ref{point-on-side}$+$\ref{angle}), we have
+From the point-on-side (\ref{point-on-side}), we have
 \[\angk{v_t}p{w_t}
 \ge
 \angk{v_t}p{u_t}
-\ge
+=
 \mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\tfrac{o(t)}t\]
 and
 \[\angk{v_t}{q_t}{w_t}
 \ge
 \angk{v_t}{q_t}{u_t}
-\ge
+=
 \mangle\hinge{\tilde v}{\tilde q}{\tilde u}+\tfrac{o(t)}t.\]
 Clearly, 
 $\mangle\hinge{\tilde v}{\tilde p}{\tilde u}+\mangle\hinge{\tilde v}{\tilde q}{\tilde u}=\pi$. 
@@ -322,15 +332,19 @@ $\angk{v_t}p{w_t}
 \to
 \mangle\hinge{\tilde v}{\tilde p}{\tilde w}$ as $t\to0+$
 and thus 
-\[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).\]
+\[\dist{p}{w_t}{}=t\cdot\dist{\tilde p}{\tilde w}{}+o(t).
+\eqlbl{eq:2|wt|=|ut+vt|}\]
 
 Without loss of generality, we can assume that $f(p)=0$.
 Since $f$ is concave, we have 
-\begin{align*}
+\[
+\begin{aligned}
 2\cdot f(w_t)&\ge f(u_t)+f(v_t)=
 \\
 &=t\cdot [(\dd_p f)(u)+(\dd_p f)(v)]+o(t).
-\end{align*}
+\end{aligned}
+\eqlbl{eq:2df(wt)>=df(ut)+df(vt)}
+\]
  
 Applying concavity of $f$, we have
 \begin{align*}
