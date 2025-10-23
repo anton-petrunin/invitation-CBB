@@ -239,21 +239,23 @@ where
 
 Suppose that $\T_p\iso\EE^m$ and the differential $\dd_p f$ is a concave function.
 Let $w=\tfrac{u+v}2$, then
-\[2\cdot(\dd_p f)(w)\ge(\dd_p f)(u)+(\dd_p f)(v).
-\eqlbl{eq:2df(w)>=df(u)+df(v)}\]
-The latter implies the statement since
-\[2\cdot |w|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}.
+\[2\cdot |w|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \eqlbl{eq:2|w|=|u+v|}\]
+and
+\[2\cdot(\dd_p f)(w)\ge(\dd_p f)(u)+(\dd_p f)(v),
+\eqlbl{eq:2df(w)>=df(u)+df(v)}\]
+and the statement follows.
+
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make sense.
 The key lemma, however, says that in a certain sense $\dd_p f$ behaves as a concave function.
 The proof mimics the calculations above inside $\spc{A}$,
 instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $w_t)$ in $\spc{A}$
 and prove the approximate versions
 \ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}
-of \ref{eq:2df(w)>=df(u)+df(v)} and \ref{eq:2|w|=|u+v|}, respectively.
-The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|}.
+of \ref{eq:2|w|=|u+v|} and \ref{eq:2df(w)>=df(u)+df(v)}, respectively.
 
-Solving the following exercise should help to find an approach to the key lemma.
+The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|};
+solving the following exercise should give a hint.
 
 \begin{thm}[!]{Exercise}\label{ex:d(distfun):==}
 Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{A}$.
