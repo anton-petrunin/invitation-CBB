@@ -503,15 +503,13 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 
 \chapter{Dimension and volume}\label{chap:dim}
 
-In this lecture, we introduce volume, distance charts, and several notions of dimension, and prove the Bishop--Gromov inequality and the right-inverse theorem.
-
 \section{Linear dimension}
 
 Let $\spc{A}$ be an Alexandrov space.
 We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
-If not stated otherwise, dimension of an Alexandrov space is its linear dimension.
+If not stated otherwise, dimension means linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
 after that, we will use \index{50@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
@@ -545,9 +543,16 @@ Passing to a limit configuration as $p'\to p$ we get the result.
 \begin{thm}[!]{Exercise}\label{ex:tangent=Em}
 Let $\spc{A}$ be an $\Alex0$ space.
 Suppose $\LinDim\spc{A}\z=m<\infty$.
-Show that for points $p$ in a G-delta dense set in $\spc{A}$ the tangent space
-$\T_p\spc{A}$ is isometric to a Euclidean space of dimension at most $m$.%
-(In fact, this space has dimension $m$; see \ref{ex:tangent=Em+}.)
+Show that there is a G-delta dense set $\spc{A}^\circ\subset\spc{A}$ such that
+
+\begin{subthm}{ex:tangent=Em:a}
+for any $p\in \spc{A}^\circ$, the tangent space $\T_p\spc{A}\iso\EE^{k}$ for some integer $k=k(p)\le m$.
+\end{subthm}
+
+\begin{subthm}{ex:tangent=Em:b}
+Try to use \ref{inq:BG} and \ref{thm:dim=dim} to show that $k(p)=m$ for any $p\in \spc{A}^\circ$.
+\end{subthm}
+
 \end{thm}
 
 
@@ -569,10 +574,10 @@ if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connecte
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
 Let $\spc{A}$ be a finite-dimensional Alexandrov space.
-Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is a compact $\pi$-geodesic space.
+Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is compact and $\pi$-geodesic.
 \end{thm}
 
-By \ref{ex:GHto-tangent}, it implies the following.
+By \ref{ex:GHto-tangent}, this theorem implies the following.
 
 \begin{thm}{Corollary}\label{ex:GHto-tangent-finite-dim}
 Let $p$ be a point in a finite dimensional Alexandrov space $\spc{A}$,
@@ -591,14 +596,15 @@ Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
 Choose $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$ and small fixed $r>0$.
-Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ if $i\ne j$.
-By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$.
+Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for $i\ne j$.
+By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$;
+in particular, all directions $\dir{p'}{y_i}$ lie in a unit sphere of dimension at most $m-1$.
 Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ if $i\ne j$.
 By comparison, 
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
 Therefore, $\pack_\eps \Sigma_p\le \pack_\eps\SSS^{m-1}$.
 
-Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$.
+Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$ for any $\eps>0$.
 By the definition, the space of directions $\Sigma_p$ is complete. 
 Applying \ref{ex:pack-net}, we get that  $\Sigma_p$ is compact.
 
@@ -635,7 +641,7 @@ Evidently, $\angk p{x_n}{m_n}=\angk p{y_n}{m_n}$.
 By \ref{ex:alex-lemma-cat}, we have
 \[\angk p{x_n}{m_n}+\angk p{y_n}{m_n}\le \angk p{x_n}{y_n}.\]
 
-Let $z_n\in [pz]$ be the point such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
+Choose points $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$ for all large~$n$.
 By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrary small given error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also get that the following approximations
@@ -659,7 +665,7 @@ Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that it 
 \section{Right-inverse theorem}
 
 \begin{thm}{Right-inverse theorem}\label{thm:right-inverse}
-Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{A}$ such
+Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{A}$ such that
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
@@ -669,7 +675,7 @@ has a  continuous right inverse defined in a neighborhood of $f(p)$.
 
 In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
 The construction uses gradient flow for a suitably chosen family of functions.
-The frame of the proof can be seen in the following exercise;
+The proof can be extracted from the following exercise;
 more details are given in the hints.
 
 \begin{thm}{Exercise}\label{ex:proof-right-inverse}
@@ -756,41 +762,59 @@ We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE
 This definition will be applied mostly to subsets in $m$-dimensional Alexandrov spaces.
 In this case, we may write $\vol B$ instead of $\vol_m B$.
 
+\pagebreak[2]
 
 \begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
 Let $\spc{A}$ be an $\Alex0$ space.
-Suppose $\dim \spc{A}=m<\infty$.
-Then 
-\[\vol \oBall(p,r)\le \omega_m\cdot r^m,\]
+
+\begin{subthm}{inq:BG:a}
+Then
+\[\vol_k \oBall(p,r)_{\spc{A}}\le \vol_k \oBall(0,r)_{\T_p\spc{A}}\]
+for any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$.
+\end{subthm}
+
+\smallskip
+
+\noindent Further, suppose $\dim \spc{A}=m<\infty$.
+
+\smallskip
+
+\begin{subthm}{inq:BG:b}
+Then for any point $p\in \spc{A}$ and any radius $r>0$ we have
+\[\vol_m \oBall(p,r)\le \omega_m\cdot r^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
-Moreover, the function 
-\[r\mapsto \frac{\vol B(p,r)}{r^m}\]
+\end{subthm}
+
+\begin{subthm}{inq:BG:c}
+Moreover, the function
+\[r\mapsto \frac{\vol_m B(p,r)}{r^m}\]
 is nonincreasing.
+\end{subthm}
+
 \end{thm}
 
 \parit{Proof.}
 Given $x\in\spc{A}$, choose a geodesic path $\gamma_x$ from $p$ to $x$.
 Recall that $\log_p\:\spc{A}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
 By comparison, $\log_p$ is distance-noncontracting.
-Note that $\log_p(\oBall(p,r)_{\spc{A}})\subset \oBall(0,r)_{\T_p}$.
+Note that $\log_p(\oBall(p,r)_{\spc{A}})\subset \oBall(0,r)_{\T_p}$;
+this proves part \ref{SHORT.inq:BG:a}.
 
 \begin{wrapfigure}{r}{44 mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-803}
 \vskip1mm
 \end{wrapfigure}
 
-If $\T_p\iso \EE^k$ for some $k\le m$, then $\vol_m\oBall(0,r)_{\T_p}\z\le \omega_m\cdot r^m$,
-and the first statement follows.
-
-Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for $k\le m$.%
-\footnote{By \ref{ex:tangent=Em+}, we can assume that $k=m$, but this staement use  the Bishop--Gromov inequality.}
-If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\subset \oBall(p',r+\eps)$.
+If $\T_p\iso \EE^k$ for some $k\le m$, then \ref{SHORT.inq:BG:a} implies \ref{SHORT.inq:BG:b}.
+In the general case, by \ref{ex:tangent=Em:a}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.%
+\footnote{By \ref{ex:tangent=Em:b}, we can assume that $k=m$, but its proof uses  the Bishop--Gromov inequality.}
+If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\z\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
 for any $\eps>0$.
-Hence the first statement follows.
+Hence \ref{SHORT.inq:BG:b} follows.
 
 Now, suppose $0<r_1<r_2$.
 Consider the map $w\: \spc{A}\to \spc{A}$ defined by $w\:x\mapsto \gamma_x(\tfrac {r_1}{r_2})$.
@@ -861,14 +885,6 @@ Show that
 \[\LinDim \spc{A}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
 \end{thm}
 
-Here is a more exact version of Exercise~\ref{ex:tangent=Em}.
-
-\begin{thm}[!]{Exercise}\label{ex:tangent=Em+}
-Let $\spc{A}$ be an $\Alex0$ space.
-Suppose $\LinDim\spc{A}\z=m<\infty$.
-Show that $\T_p\spc{A}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{A}$.
-\end{thm}
-
 \begin{thm}[!]{Exercise}\label{ex:finite-tan}
 Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$.
 Prove the following.
@@ -886,13 +902,12 @@ If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrv spece.
+Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrov space.
 It will be used extensively in Lecture~\ref{chap:bry}.
 
 \section{Remarks}
 
-Let us state a version of the Bishop--Gromov inequality for $\Alex\kappa$ spaces.
-Its proof requires additionally the so-called \textit{coarea formula} for Alexandrov spaces. 
+The proof of the following version of the Bishop--Gromov inequality requires additionally the so-called \textit{coarea formula} for Alexandrov spaces.
 The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 
 \begin{thm}{Optimal Bishop--Gromov inequality}\label{inq:BG+}
