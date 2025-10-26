@@ -545,8 +545,11 @@ Passing to a limit configuration as $p'\to p$ we get the result.
 \begin{thm}[!]{Exercise}\label{ex:tangent=Em}
 Let $\spc{A}$ be an $\Alex0$ space.
 Suppose $\LinDim\spc{A}\z=m<\infty$.
-Show that $\T_p\spc{A}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{A}$.
+Show that for points $p$ in a G-delta dense set in $\spc{A}$ the tangent space
+$\T_p\spc{A}$ is isometric to a Euclidean space of dimension at most $m$.%
+(In fact, this space has dimension $m$; see \ref{ex:tangent=Em+}.)
 \end{thm}
+
 
 \begin{thm}[!]{Exercise}\label{ex:dim=1}
 Show that a 1-dimensional Alexandrov space is homeomorphic to a 1-dimensional manifold, possibly with nonempty boundary.
@@ -579,27 +582,6 @@ Then there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{A},p
 %\[\iota_n\circ\gamma(t/\lambda_n)\to t\cdot \gamma^+(0),\]
 %where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambda_n\cdot\spc{A}$.
 \end{thm}
-
-
-\begin{thm}[!]{Exercise}\label{ex:finite-tan}
-Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$.
-Prove the following.
-\begin{subthm}{ex:finite-tan:tan}
-The tangent space $\T_p$ is a proper $\Alex0$ space.
-\end{subthm}
-
-\begin{subthm}{ex:finite-space-of-directions-dim}
-$\LinDim\Sigma_p=\LinDim\spc{A}-1$.
-\end{subthm}
-
-\begin{subthm}{ex:finite-tan:sigma}
-If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
-\end{subthm}
-
-\end{thm}
-
-Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrv spece.
-It will be used extensively in Lecture~\ref{chap:bry}.
 
 \parit{Proof of \ref{thm:finite-space-of-directions}.}
 Choose $\eps>0$; suppose $\spc{A}$ is $m$-dimensional.
@@ -790,7 +772,7 @@ is nonincreasing.
 Given $x\in\spc{A}$, choose a geodesic path $\gamma_x$ from $p$ to $x$.
 Recall that $\log_p\:\spc{A}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
 By comparison, $\log_p$ is distance-noncontracting.
-Note that $\log_p$ maps $\oBall(p,r)_{\spc{A}}$ to $\oBall(0,r)_{\T_p}$.
+Note that $\log_p(\oBall(p,r)_{\spc{A}})\subset \oBall(0,r)_{\T_p}$.
 
 \begin{wrapfigure}{r}{44 mm}
 \vskip-0mm
@@ -799,10 +781,11 @@ Note that $\log_p$ maps $\oBall(p,r)_{\spc{A}}$ to $\oBall(0,r)_{\T_p}$.
 \vskip1mm
 \end{wrapfigure}
 
-If $\T_p\iso \EE^m$, then $\vol\oBall(0,r)_{\T_p}\z=\omega_m\cdot r^m$,
+If $\T_p\iso \EE^k$ for some $k\le m$, then $\vol_m\oBall(0,r)_{\T_p}\z\le \omega_m\cdot r^m$,
 and the first statement follows.
 
-If $\T_p$ is not isometric to $\EE^m$, then by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
+Otherwise, by \ref{ex:tangent=Em}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for $k\le m$.%
+\footnote{By \ref{ex:tangent=Em+}, we can assume that $k=m$, but this staement use  the Bishop--Gromov inequality.}
 If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
@@ -877,6 +860,34 @@ Let $\Omega$ be an open subset of Alexandrov space $\spc{A}$.
 Show that 
 \[\LinDim \spc{A}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
 \end{thm}
+
+Here is a more exact version of Exercise~\ref{ex:tangent=Em}.
+
+\begin{thm}[!]{Exercise}\label{ex:tangent=Em+}
+Let $\spc{A}$ be an $\Alex0$ space.
+Suppose $\LinDim\spc{A}\z=m<\infty$.
+Show that $\T_p\spc{A}\iso \EE^m$ for a G-delta dense set of points $p\in\spc{A}$.
+\end{thm}
+
+\begin{thm}[!]{Exercise}\label{ex:finite-tan}
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$.
+Prove the following.
+\begin{subthm}{ex:finite-tan:tan}
+The tangent space $\T_p$ is a proper $\Alex0$ space.
+\end{subthm}
+
+\begin{subthm}{ex:finite-space-of-directions-dim}
+$\LinDim\Sigma_p=\LinDim\spc{A}-1$.
+\end{subthm}
+
+\begin{subthm}{ex:finite-tan:sigma}
+If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
+\end{subthm}
+
+\end{thm}
+
+Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrv spece.
+It will be used extensively in Lecture~\ref{chap:bry}.
 
 \section{Remarks}
 

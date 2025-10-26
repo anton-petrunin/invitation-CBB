@@ -785,20 +785,6 @@ If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
 and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
 Conclude that $\dim\Lin_q\ge m$ in this case. To see this show and use that given $m+1$ vectors in $\RR^k$ making pairwise obtuse angles with each other any $m$ of them must be linearly independent.
 
-\parbf{\ref{ex:finite-tan}}; 
-\ref{SHORT.ex:finite-tan:tan}. Apply \ref{ex:geodesic-cone}, \ref{prop:Tan-is-CBB(0)}, and \ref{thm:finite-space-of-directions}.
-
-\parit{\ref{SHORT.ex:finite-space-of-directions-dim}.}
-Apply \ref{ex:resporka} to show that $\LinDim\T_p=\LinDim\spc{A}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
-
-\parit{\ref{SHORT.ex:finite-tan:sigma}.}
-By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p$ such that $\dist{\xi}{\zeta}{\Sigma_p}<\pi$ there is a geodesic $[\xi\zeta]_{\Sigma_p}$.
-Suppose $\dist{\xi}{\zeta}{\Sigma_p}\ge\pi$, then $\T_p$ contains a line thru the origin in the directions $\xi$ and $\zeta$.
-By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:splitting}) to $\T_p$.
-We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
-Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
-
-
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
 By \ref{ex:distfun-semiconcave}, each function $\distfun_{a_i}$ is semiconcave in a small neighborhood of $p$.
 Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$; further we will assume that $r$ is sufficiently small.
@@ -928,11 +914,26 @@ Use the map $w$ from the proof of the Bishop--Gromov inequality (\ref{inq:BG} an
 
 Use this in addition to the arguments in \ref{thm:dim=dim}. 
 
+\parbf{\ref{ex:tangent=Em+}.}
+Recall that by \ref{ex:tangent=Em}, we have a G-delta dense set of points $p\in \spc{A}$ such that $\T_p\iso \EE^{k(p)}$ for some integer $k(p)\le m$.
+Try to apply the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}) and Theorem~\ref{thm:dim=dim} to show that $k(p)=m$ for any $p$ in the set.
+
+\parbf{\ref{ex:finite-tan}};
+\ref{SHORT.ex:finite-tan:tan}. Apply \ref{ex:geodesic-cone}, \ref{prop:Tan-is-CBB(0)}, and \ref{thm:finite-space-of-directions}.
+
+\parit{\ref{SHORT.ex:finite-space-of-directions-dim}.}
+Apply \ref{ex:resporka} to show that $\LinDim\T_p\le\LinDim\spc{A}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
+Further, apply \ref{thm:dim=dim} to show that $\LinDim\T_p\ge\LinDim\spc{A}$.
+
+\parit{\ref{SHORT.ex:finite-tan:sigma}.}
+By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p$ such that $\dist{\xi}{\zeta}{\Sigma_p}<\pi$ there is a geodesic $[\xi\zeta]_{\Sigma_p}$.
+Suppose $\dist{\xi}{\zeta}{\Sigma_p}\ge\pi$, then $\T_p$ contains a line thru the origin in the directions $\xi$ and $\zeta$.
+By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:splitting}) to $\T_p$.
+We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
+Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
+
 \parbf{\ref{ex:dim-lim}.}
 Apply \ref{ex:resporka}.
-
-
-
 
 \parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
 Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
