@@ -540,19 +540,10 @@ for all $i$ and $j$.
 Passing to a limit configuration as $p'\to p$ we get the result.
 \qeds
 
-\begin{thm}[!]{Exercise}\label{ex:tangent=Em}
+\begin{thm}[!]{Exercise}\label{ex:dim-max}
 Let $\spc{A}$ be an $\Alex0$ space.
-Suppose $\LinDim\spc{A}\z=m<\infty$.
-Show that there is a G-delta dense set $\spc{A}^\circ\subset\spc{A}$ such that
-
-\begin{subthm}{ex:tangent=Em:a}
-for any $p\in \spc{A}^\circ$, the tangent space $\T_p\spc{A}\iso\EE^{k}$ for some integer $k=k(p)\le m$.
-\end{subthm}
-
-\begin{subthm}{ex:tangent=Em:b}
-Try to use \ref{inq:BG} and \ref{thm:dim=dim} to show that $k(p)=m$ for any $p\in \spc{A}^\circ$.
-\end{subthm}
-
+Suppose that $\LinDim \spc{A}\z= m<\infty$ and the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
+Show that $\T_p\spc{A}\iso \EE^m$.
 \end{thm}
 
 
@@ -726,6 +717,20 @@ and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 
 %??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.
 
+\begin{thm}[!]{Exercise}\label{ex:tangent=Em}
+Let $\spc{A}$ be an $\Alex0$ space.
+Suppose $\LinDim\spc{A}\z=m<\infty$.
+
+\begin{subthm}{ex:tangent=Em:ball}
+Show that there is a ball $B=\cBall[p,r]_{\spc{A}}$ and a constant $c>0$ such that $\pack_\eps B\ge \tfrac c{\eps^m}$ for any $\eps>0$.
+\end{subthm}
+
+\begin{subthm}{ex:tangent=Em:G-delta}
+Show that $\T_p\spc{A}\iso \EE^m$ for points $p$ in a dense G-delta set of points in $\spc{A}$.
+\end{subthm}
+
+\end{thm}
+
 \section{Distance chart}
 
 \begin{thm}{Theorem}\label{thm:dist-chart}
@@ -808,8 +813,7 @@ this proves part \ref{SHORT.inq:BG:a}.
 \end{wrapfigure}
 
 If $\T_p\iso \EE^k$ for some $k\le m$, then \ref{SHORT.inq:BG:a} implies \ref{SHORT.inq:BG:b}.
-In the general case, by \ref{ex:tangent=Em:a}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.%
-\footnote{By \ref{ex:tangent=Em:b}, we can assume that $k=m$, but its proof uses  the Bishop--Gromov inequality.}
+In the general case, by \ref{ex:tangent=Em:G-delta}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.
 If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\z\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]

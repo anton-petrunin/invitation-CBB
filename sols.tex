@@ -772,14 +772,18 @@ and since $|u|=|u^*|$, we have equality.
 \parbf{\ref{ex:grad-dist}.}
 Apply \ref{ex:-u}.
 
-\parbf{\ref{ex:tangent=Em}}; \ref{SHORT.ex:tangent=Em:a}.
-By \ref{ex:diam-compact:proper}, $\spc{A}$ is \emph{separable}; that is, it contains a countable dense set of points.
-Apply \ref{cor:euclid-subcone} to this set.
+\parbf{\ref{ex:dim-max}.}
+Let $L\subset \T_p$ be a subspace isometric to $\EE^m$.
+Assume $L\ne \T_p$.
 
-\parit{\ref{SHORT.ex:tangent=Em:b}.}
-Assume that $k=k(p)<m$ for some $p\in \spc{A}^\circ$.
-Apply \ref{inq:BG:a} to show that $\HausDim\spc{A}\le k$.
-Apply \ref{thm:dim=dim} and arrive at a contradiction.
+Let $N=\pack_\eps\SSS^{m-1}$.
+Observe that the unit sphere in $L$ is isometric to $\SSS^{m-1}$ and
+use it to show that $\pack_\eps\Sigma_p>N$ for some $\eps>0$.
+
+It follows that we can choose $N+1$ directions in $\Sigma_p$ at anles leger that $\eps$ from each other.
+Use it to construct points $x_1,\dots,x_{N+1}$ such that
+$\angk p{x_i}{x_j}>\eps$ for $i\ne j$, and apply \ref{thm:n+1}.
+
 
 \parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
 
@@ -873,6 +877,15 @@ In particular, if an infinite-dimensional Alexandrov space $\spc{A}$ contains a 
 It seems plausible that $\spc{A}$ should contain a bi-Lipschitz copy of Euclidean ball of arbitrary dimension,
 but this question is open.
 
+\parbf{\ref{ex:tangent=Em}}; \ref{SHORT.ex:tangent=Em:ball}.
+Apply the right-inverse theorem and \ref{ex:resporka}.
+
+\parit{\ref{SHORT.ex:tangent=Em:G-delta}.}
+Let $B=\cBall[p,r]$ be as in \ref{SHORT.ex:tangent=Em:ball}, so given a radius $R\gg r$ we can choose $\eps>0$ and an integer $N$ such that
+\[\pack_\eps \cBall(0,R+r)_{\EE^{m-1}}< N\le \pack_\eps B.\]
+
+Applying \ref{cor:euclid-subcone} to an $\eps$-packing $x_1,\dots,x_N$, we get that $\dim\Lin_s\z\ge m$ for any point $s$ in a dense G-delta subset of $\oBall(p,R)$.
+Conclude that $\dim\Lin_s\z\ge m$ for any point $s$ in a dense G-delta subset of $\spc{A}$ and apply \ref{ex:dim-max}.
 
 \parbf{\ref{ex:proof-dist-chart}.}
 Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of the inequalities

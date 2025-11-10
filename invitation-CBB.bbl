@@ -1,0 +1,3929 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{debug/global//global/global}
+    \entry{aigner-zigler}{book}{}
+      \name{author}{2}{}{%
+        {{hash=38fb5707547864ac9055c9e8cd9c351a}{%
+           family={Aigner},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=f95e9d4c13baef16292c57f666093ee9}{%
+           family={Ziegler},
+           familyi={Z\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{a9e3444ef56a21493afef954e997f5e1}
+      \strng{fullhash}{a9e3444ef56a21493afef954e997f5e1}
+      \strng{bibnamehash}{a9e3444ef56a21493afef954e997f5e1}
+      \strng{authorbibnamehash}{a9e3444ef56a21493afef954e997f5e1}
+      \strng{authornamehash}{a9e3444ef56a21493afef954e997f5e1}
+      \strng{authorfullhash}{a9e3444ef56a21493afef954e997f5e1}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Any edition}
+      \field{title}{Proofs from the Book}
+    \endentry
+    \entry{alattar}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=4f7aa551c8fca2af26dea74b32fc0e26}{%
+           family={Alattar},
+           familyi={A\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \strng{fullhash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \strng{bibnamehash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \strng{authorbibnamehash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \strng{authornamehash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \strng{authorfullhash}{4f7aa551c8fca2af26dea74b32fc0e26}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.GT}
+      \field{eprinttype}{arXiv}
+      \field{title}{Deformations of Lipschitz Homeomorphisms}
+      \field{year}{2024}
+      \verb{eprint}
+      \verb 2409.06170
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2409.06170
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2409.06170
+      \endverb
+    \endentry
+    \entry{alexander-bishop2004}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b9f76c795e92f6d26a6895e7e48582b2}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=28f7a15d178694f912de2cbcc3a354fb}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{e9543e2668455c4ac083220403e918ee}
+      \strng{fullhash}{e9543e2668455c4ac083220403e918ee}
+      \strng{bibnamehash}{e9543e2668455c4ac083220403e918ee}
+      \strng{authorbibnamehash}{e9543e2668455c4ac083220403e918ee}
+      \strng{authornamehash}{e9543e2668455c4ac083220403e918ee}
+      \strng{authorfullhash}{e9543e2668455c4ac083220403e918ee}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{6}
+      \field{title}{Curvature bounds for warped products of metric spaces}
+      \field{volume}{14}
+      \field{year}{2004}
+      \field{pages}{1143\bibrangedash 1181}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.1007/s00039-004-0487-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00039-004-0487-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00039-004-0487-2
+      \endverb
+    \endentry
+    \entry{alexander-kapovitch-kirszbraun}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=b9f76c795e92f6d26a6895e7e48582b2}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{fullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{bibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorbibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authornamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorfullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \field{extraname}{1}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the {G}ökova {G}eometry-{T}opology {C}onference 2010}
+      \field{title}{Alexandrov meets {K}irszbraun}
+      \field{year}{2011}
+      \field{pages}{88\bibrangedash 109}
+      \range{pages}{22}
+    \endentry
+    \entry{alexander-kapovitch-petrunin-2008}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b9f76c795e92f6d26a6895e7e48582b2}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{fullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{bibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorbibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authornamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorfullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \field{extraname}{2}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0019-2082,1945-6581}
+      \field{journaltitle}{Illinois J. Math.}
+      \field{number}{3}
+      \field{title}{An optimal lower curvature bound for convex hypersurfaces in {R}iemannian manifolds}
+      \field{volume}{52}
+      \field{year}{2008}
+      \field{pages}{1031\bibrangedash 1033}
+      \range{pages}{3}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.ijm/1254403729
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.ijm/1254403729
+      \endverb
+    \endentry
+    \entry{alexander-kapovitch-petrunin-2019}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b9f76c795e92f6d26a6895e7e48582b2}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{fullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{bibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorbibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authornamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorfullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \field{extraname}{3}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{SpringerBriefs in Mathematics}
+      \field{title}{An invitation to {A}lexandrov geometry: CAT(0) spaces}
+      \field{year}{2019}
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-030-05312-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-030-05312-3
+      \endverb
+    \endentry
+    \entry{alexander-kapovitch-petrunin2024}{book}{}
+      \name{author}{3}{}{%
+        {{hash=b9f76c795e92f6d26a6895e7e48582b2}{%
+           family={Alexander},
+           familyi={A\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{fullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{bibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorbibnamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authornamehash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \strng{authorfullhash}{aa42ec7a3d230a7f0c6f8f074e7e770f}
+      \field{extraname}{4}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{[9781470473020]; [9781470475369]; [9781470475352]}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{Alexandrov geometry: foundations}
+      \field{volume}{236}
+      \field{year}{2024}
+    \endentry
+    \entry{alexandrov}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fb5681802173499db0332532f701335c}{%
+           family={Александров},
+           familyi={А\bibinitperiod},
+           given={А.\bibnamedelimi Д.},
+           giveni={А\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{fb5681802173499db0332532f701335c}
+      \strng{fullhash}{fb5681802173499db0332532f701335c}
+      \strng{bibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorbibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authornamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorfullhash}{fb5681802173499db0332532f701335c}
+      \field{extraname}{1}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: Alexandrov, A. D., \emph{Convex polyhedra,} 2005]}
+      \field{langid}{english}
+      \field{title}{Выпуклые многогранники}
+      \field{year}{1950}
+    \endentry
+    \entry{alexandrov-1941}{article}{}
+      \name{author}{1}{}{%
+        {{hash=fb5681802173499db0332532f701335c}{%
+           family={Александров},
+           familyi={А\bibinitperiod},
+           given={А.\bibnamedelimi Д.},
+           giveni={А\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{fb5681802173499db0332532f701335c}
+      \strng{fullhash}{fb5681802173499db0332532f701335c}
+      \strng{bibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorbibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authornamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorfullhash}{fb5681802173499db0332532f701335c}
+      \field{extraname}{2}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Матем. сб.}
+      \field{langid}{russian}
+      \field{number}{1-2}
+      \field{title}{Существование выпуклого многогранника и выпуклой поверхности с заданной метрикой}
+      \field{volume}{11(53)}
+      \field{year}{1942}
+      \field{pages}{15\bibrangedash 65}
+      \range{pages}{51}
+    \endentry
+    \entry{alexandrov-1948}{book}{}
+      \name{author}{1}{}{%
+        {{hash=fb5681802173499db0332532f701335c}{%
+           family={Александров},
+           familyi={А\bibinitperiod},
+           given={А.\bibnamedelimi Д.},
+           giveni={А\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{fb5681802173499db0332532f701335c}
+      \strng{fullhash}{fb5681802173499db0332532f701335c}
+      \strng{bibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorbibnamehash}{fb5681802173499db0332532f701335c}
+      \strng{authornamehash}{fb5681802173499db0332532f701335c}
+      \strng{authorfullhash}{fb5681802173499db0332532f701335c}
+      \field{extraname}{3}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[tranlated in A. D. Alexandrov. A. D. Alexandrov selected works. Part II.]}
+      \field{langid}{russian}
+      \field{title}{Внутренняя геометрия выпуклых поверхностей}
+      \field{year}{1948}
+    \endentry
+    \entry{alexandrov-zalgaller}{book}{}
+      \name{author}{2}{}{%
+        {{hash=bf8d3add26021614443ae065b2a90a4c}{%
+           family={Alexandrov},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+        {{hash=1e65b8cf3ceb920d12ce66948100e7f3}{%
+           family={Zalgaller},
+           familyi={Z\bibinitperiod},
+           given={V.\bibnamedelimi A.},
+           giveni={V\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \strng{fullhash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \strng{bibnamehash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \strng{authorbibnamehash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \strng{authornamehash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \strng{authorfullhash}{6ab8cec30ac02f9d15455ff209a724c5}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Translations of Mathematical Monographs}
+      \field{title}{Intrinsic geometry of surfaces}
+      \field{volume}{Vol. 15}
+      \field{year}{1967}
+    \endentry
+    \entry{alexandrov:devel}{article}{}
+      \name{author}{1}{}{%
+        {{hash=45fe40981a9a71080e138046dfab4782}{%
+           family={Alexandrow},
+           familyi={A\bibinitperiod},
+           given={A.\bibnamedelimi D.},
+           giveni={A\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \strng{namehash}{45fe40981a9a71080e138046dfab4782}
+      \strng{fullhash}{45fe40981a9a71080e138046dfab4782}
+      \strng{bibnamehash}{45fe40981a9a71080e138046dfab4782}
+      \strng{authorbibnamehash}{45fe40981a9a71080e138046dfab4782}
+      \strng{authornamehash}{45fe40981a9a71080e138046dfab4782}
+      \strng{authorfullhash}{45fe40981a9a71080e138046dfab4782}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Schr. Forschungsinst. Math.}
+      \field{title}{Über eine {V}erallgemeinerung der {R}iemannschen {G}eometrie}
+      \field{volume}{1}
+      \field{year}{1957}
+      \field{pages}{33\bibrangedash 84}
+      \range{pages}{52}
+    \endentry
+    \entry{ambrosio-gigli-savare}{book}{}
+      \name{author}{3}{}{%
+        {{hash=d1fb85e6b388ff3ca0e66ab5e4721170}{%
+           family={Ambrosio},
+           familyi={A\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=9224796c31d365b0de13665a0f99c228}{%
+           family={Gigli},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=7dac69264dd2c8263424744836d3da22}{%
+           family={Savaré},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \strng{fullhash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \strng{bibnamehash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \strng{authorbibnamehash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \strng{authornamehash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \strng{authorfullhash}{2abdbfd2829876471fb5db8c0bfcc31d}
+      \field{sortinit}{a}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{Second}
+      \field{isbn}{978-3-7643-8721-1}
+      \field{series}{Lectures in Mathematics ETH Zürich}
+      \field{title}{Gradient flows in metric spaces and in the space of probability measures}
+      \field{year}{2008}
+    \endentry
+    \entry{berestovskii1987}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7d98e0ca52fa2755ff143a14a9f51aac}{%
+           family={Берестовский},
+           familyi={Б\bibinitperiod},
+           given={В.\bibnamedelimi Н.},
+           giveni={В\bibinitperiod\bibinitdelim Н\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \strng{fullhash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \strng{bibnamehash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \strng{authorbibnamehash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \strng{authornamehash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \strng{authorfullhash}{7d98e0ca52fa2755ff143a14a9f51aac}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English tran\-sla\-tion: V. N. Berestovskii. “Submetries of three-dimensional forms of non\-ne\-ga\-tive curvature”. \emph{Sibirsk. Mat. Zh.} 28.4 (1987), 552--562.]}
+      \field{journaltitle}{Сиб. матем. журн.}
+      \field{langid}{russian}
+      \field{number}{4}
+      \field{title}{Субметрии пространственных форм неотрицательной кривизны}
+      \field{volume}{28}
+      \field{year}{1987}
+      \field{pages}{44\bibrangedash 56}
+      \range{pages}{13}
+    \endentry
+    \entry{bilokopytov}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c435ecb0c57c1646e75a82c0d6ae268e}{%
+           family={Bilokopytov},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \strng{fullhash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \strng{bibnamehash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \strng{authorbibnamehash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \strng{authornamehash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \strng{authorfullhash}{c435ecb0c57c1646e75a82c0d6ae268e}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{MathOverflow}
+      \field{title}{Is it possible to connect every compact set?}
+      \verb{eprint}
+      \verb https://mathoverflow.net/q/359390
+      \endverb
+      \verb{urlraw}
+      \verb https://mathoverflow.net/q/359390
+      \endverb
+      \verb{url}
+      \verb https://mathoverflow.net/q/359390
+      \endverb
+    \endentry
+    \entry{bishop-crittenden}{book}{}
+      \name{author}{2}{}{%
+        {{hash=0fa10d3dce201faa6373c5e3a44f91b7}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={R.\bibnamedelimi L.},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=7a32f13d8cda0b5aedca3b5dc1667429}{%
+           family={Crittenden},
+           familyi={C\bibinitperiod},
+           given={R.\bibnamedelimi J.},
+           giveni={R\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+      }
+      \strng{namehash}{16d037116b94a3287edaccc434e0631d}
+      \strng{fullhash}{16d037116b94a3287edaccc434e0631d}
+      \strng{bibnamehash}{16d037116b94a3287edaccc434e0631d}
+      \strng{authorbibnamehash}{16d037116b94a3287edaccc434e0631d}
+      \strng{authornamehash}{16d037116b94a3287edaccc434e0631d}
+      \strng{authorfullhash}{16d037116b94a3287edaccc434e0631d}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Pure and Applied Mathematics}
+      \field{title}{Geometry of manifolds}
+      \field{volume}{Vol. XV}
+      \field{year}{1964}
+    \endentry
+    \entry{bishop1964}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ab7e96de5927e045fd0ecee7ffb33db4}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={Richard\bibnamedelima L},
+           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+      }
+      \strng{namehash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{fullhash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{bibnamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{authorbibnamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{authornamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{authorfullhash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Amer. Math. Soc. Not.}
+      \field{title}{A relation between volume, mean curvature and diameter}
+      \field{volume}{10}
+      \field{year}{1963}
+      \field{pages}{364}
+      \range{pages}{1}
+    \endentry
+    \entry{brue-mondino-semola}{article}{}
+      \name{author}{3}{}{%
+        {{hash=4bf741ff8aea0445edc19b4e33879e4f}{%
+           family={Bruè},
+           familyi={B\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+        {{hash=b01b0930fcd6d19dc747ed85014788a5}{%
+           family={Mondino},
+           familyi={M\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=35e6550c39017e4cfb2a0b131e839a53}{%
+           family={Semola},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{e190dc8ca186cc184b982cd2f57bed92}
+      \strng{fullhash}{e190dc8ca186cc184b982cd2f57bed92}
+      \strng{bibnamehash}{e190dc8ca186cc184b982cd2f57bed92}
+      \strng{authorbibnamehash}{e190dc8ca186cc184b982cd2f57bed92}
+      \strng{authornamehash}{e190dc8ca186cc184b982cd2f57bed92}
+      \strng{authorfullhash}{e190dc8ca186cc184b982cd2f57bed92}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{3}
+      \field{title}{The metric measure boundary of spaces with {R}icci curvature bounded below}
+      \field{volume}{33}
+      \field{year}{2023}
+      \field{pages}{593\bibrangedash 636}
+      \range{pages}{44}
+      \verb{doi}
+      \verb 10.1007/s00039-023-00626-x
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00039-023-00626-x
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00039-023-00626-x
+      \endverb
+    \endentry
+    \entry{burago-burago-ivanov}{book}{}
+      \name{author}{3}{}{%
+        {{hash=3622807463817bad31f8093c8154f1e9}{%
+           family={Burago},
+           familyi={B\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=18b5ff0d96f0bfce18165cc44db66838}{%
+           family={Burago},
+           familyi={B\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=afac1ab83b97c58bebefbbc88882b883}{%
+           family={Ivanov},
+           familyi={I\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{b73876fa5d94d25633eccef3507aebc9}
+      \strng{fullhash}{b73876fa5d94d25633eccef3507aebc9}
+      \strng{bibnamehash}{b73876fa5d94d25633eccef3507aebc9}
+      \strng{authorbibnamehash}{b73876fa5d94d25633eccef3507aebc9}
+      \strng{authornamehash}{b73876fa5d94d25633eccef3507aebc9}
+      \strng{authorfullhash}{b73876fa5d94d25633eccef3507aebc9}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[Русский перевод: Бураго Д. Ю., Бураго Ю. Д., Иванов С. В. «Курс метрической геометрии», 2004.]}
+      \field{isbn}{0-8218-2129-6}
+      \field{series}{Graduate Studies in Mathematics}
+      \field{title}{A course in metric geometry}
+      \field{volume}{33}
+      \field{year}{2001}
+      \verb{doi}
+      \verb 10.1090/gsm/033
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/gsm/033
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/gsm/033
+      \endverb
+    \endentry
+    \entry{burago-gromov-perelman}{article}{}
+      \name{author}{1}{}{%
+        {{hash=a1d5e1d5e8e8c016f6e4e5459bdccfee}{%
+           family={Ю.\bibnamedelimi Д.\bibnamedelimi Бураго},
+           familyi={Ю\bibinitperiod\bibinitdelim Д\bibinitperiod\bibinitdelim Б\bibinitperiod},
+           given={Г.\bibnamedelimi Я.\bibnamedelimi Перельман},
+           giveni={Г\bibinitperiod\bibinitdelim Я\bibinitperiod\bibinitdelim П\bibinitperiod},
+           suffix={М.\bibnamedelimi Л.\bibnamedelimi Громов},
+           suffixi={М\bibinitperiod\bibinitdelim Л\bibinitperiod\bibinitdelim Г\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{fullhash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{bibnamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{authorbibnamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{authornamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{authorfullhash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \field{sortinit}{b}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: Yu. D. Burago, M. L. Gromov, G. Ya. Perelman, “A. D. Alexandrov spaces with curvature bounded below”, Russian Math. Surveys, 47:2 (1992), 1–58]}
+      \field{journaltitle}{УМН}
+      \field{langid}{russian}
+      \field{number}{2(284)}
+      \field{title}{Пространства А. Д. Александрова с ограниченными снизу кривизнами}
+      \field{volume}{47}
+      \field{year}{1992}
+      \field{pages}{3\bibrangedash 51}
+      \range{pages}{49}
+    \endentry
+    \entry{cauchy}{article}{}
+      \name{author}{1}{}{%
+        {{hash=0857c1f281d0752823be8b962b6814b1}{%
+           family={Cauchy},
+           familyi={C\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{0857c1f281d0752823be8b962b6814b1}
+      \strng{fullhash}{0857c1f281d0752823be8b962b6814b1}
+      \strng{bibnamehash}{0857c1f281d0752823be8b962b6814b1}
+      \strng{authorbibnamehash}{0857c1f281d0752823be8b962b6814b1}
+      \strng{authornamehash}{0857c1f281d0752823be8b962b6814b1}
+      \strng{authorfullhash}{0857c1f281d0752823be8b962b6814b1}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal de l’Ecole Polytechnique}
+      \field{number}{9}
+      \field{title}{Sur les polygones et les polyèdres: second Mémoire}
+      \field{volume}{16}
+      \field{year}{1813}
+      \field{pages}{26\bibrangedash 38}
+      \range{pages}{13}
+    \endentry
+    \entry{cheeger-colding-alm-rigidity}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2f06929698e442904a69929febb46c0f}{%
+           family={Cheeger},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=b615b8f19e64189b26ccac9aeab9b85a}{%
+           family={Colding},
+           familyi={C\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{c101e8d63f22c49ecf022c258f21939c}
+      \strng{fullhash}{c101e8d63f22c49ecf022c258f21939c}
+      \strng{bibnamehash}{c101e8d63f22c49ecf022c258f21939c}
+      \strng{authorbibnamehash}{c101e8d63f22c49ecf022c258f21939c}
+      \strng{authornamehash}{c101e8d63f22c49ecf022c258f21939c}
+      \strng{authorfullhash}{c101e8d63f22c49ecf022c258f21939c}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{1}
+      \field{title}{Lower bounds on {R}icci curvature and the almost rigidity of warped products}
+      \field{volume}{144}
+      \field{year}{1996}
+      \field{pages}{189\bibrangedash 237}
+      \range{pages}{49}
+      \verb{doi}
+      \verb 10.2307/2118589
+      \endverb
+      \verb{urlraw}
+      \verb https://doi-org.myaccess.library.utoronto.ca/10.2307/2118589
+      \endverb
+      \verb{url}
+      \verb https://doi-org.myaccess.library.utoronto.ca/10.2307/2118589
+      \endverb
+    \endentry
+    \entry{cheeger-ebin}{book}{}
+      \name{author}{2}{}{%
+        {{hash=2f06929698e442904a69929febb46c0f}{%
+           family={Cheeger},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=02987c82d419e688bdb59f372f7616f1}{%
+           family={Ebin},
+           familyi={E\bibinitperiod},
+           given={D.\bibnamedelimi G.},
+           giveni={D\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \strng{namehash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \strng{fullhash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \strng{bibnamehash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \strng{authorbibnamehash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \strng{authornamehash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \strng{authorfullhash}{06b2e231b3e0f8c1d044fed8b34d34b7}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0-8218-4417-5}
+      \field{title}{Comparison theorems in {R}iemannian geometry}
+      \field{year}{2008}
+    \endentry
+    \entry{cheeger-gromoll-split}{article}{}
+      \name{author}{2}{}{%
+        {{hash=2f06929698e442904a69929febb46c0f}{%
+           family={Cheeger},
+           familyi={C\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=c6abe4974356b603e77b8df7d73fc338}{%
+           family={Gromoll},
+           familyi={G\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \strng{fullhash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \strng{bibnamehash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \strng{authorbibnamehash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \strng{authornamehash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \strng{authorfullhash}{16cb2045b7afe5a3fc83da328bb11b5f}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geometry}
+      \field{title}{The splitting theorem for manifolds of nonnegative {R}icci curvature}
+      \field{volume}{6}
+      \field{year}{1971/72}
+      \field{pages}{119\bibrangedash 128}
+      \range{pages}{10}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214430220
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214430220
+      \endverb
+    \endentry
+    \entry{cohn-vossen_line}{article}{}
+      \name{author}{1}{}{%
+        {{hash=2dde2d1eca3c2117aeef84a966b2ef3d}{%
+           family={Cohn-Vossen},
+           familyi={C\bibinithyphendelim V\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \strng{namehash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \strng{fullhash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \strng{bibnamehash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \strng{authorbibnamehash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \strng{authornamehash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \strng{authorfullhash}{2dde2d1eca3c2117aeef84a966b2ef3d}
+      \field{sortinit}{c}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mat. Sb.}
+      \field{langid}{german}
+      \field{number}{2}
+      \field{title}{Totalkrümmung und geodätische Linien auf einfachzusammenhängenden offenen vollständigen Flächenstücken}
+      \field{volume}{1(43)}
+      \field{year}{1936}
+    \endentry
+    \entry{daniilidis-ley-sabourau}{article}{}
+      \name{author}{3}{}{%
+        {{hash=624ba7663e2f3e0a1b58197acf6c73fc}{%
+           family={Daniilidis},
+           familyi={D\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=f3d4a802ef6990bf0c5182f1eff91df3}{%
+           family={Ley},
+           familyi={L\bibinitperiod},
+           given={O.},
+           giveni={O\bibinitperiod}}}%
+        {{hash=1cac5064f5e178f86da77879e8817c0c}{%
+           family={Sabourau},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{0633a2df6edd7cee855c573b89231971}
+      \strng{fullhash}{0633a2df6edd7cee855c573b89231971}
+      \strng{bibnamehash}{0633a2df6edd7cee855c573b89231971}
+      \strng{authorbibnamehash}{0633a2df6edd7cee855c573b89231971}
+      \strng{authornamehash}{0633a2df6edd7cee855c573b89231971}
+      \strng{authorfullhash}{0633a2df6edd7cee855c573b89231971}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0021-7824}
+      \field{journaltitle}{J. Math. Pures Appl. (9)}
+      \field{number}{2}
+      \field{title}{Asymptotic behaviour of self-contracted planar curves and gradient orbits of convex functions}
+      \field{volume}{94}
+      \field{year}{2010}
+      \field{pages}{183\bibrangedash 199}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1016/j.matpur.2010.03.007
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.matpur.2010.03.007
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.matpur.2010.03.007
+      \endverb
+    \endentry
+    \entry{danzer-gruenbaum}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5ff07ab84fe97beb120d87d1a6b721e2}{%
+           family={Danzer},
+           familyi={D\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a92ab9256cd70a3cf22f9c479ac04404}{%
+           family={Grünbaum},
+           familyi={G\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \strng{namehash}{92d3d172cf642ed357c1a04d73756e65}
+      \strng{fullhash}{92d3d172cf642ed357c1a04d73756e65}
+      \strng{bibnamehash}{92d3d172cf642ed357c1a04d73756e65}
+      \strng{authorbibnamehash}{92d3d172cf642ed357c1a04d73756e65}
+      \strng{authornamehash}{92d3d172cf642ed357c1a04d73756e65}
+      \strng{authorfullhash}{92d3d172cf642ed357c1a04d73756e65}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5874}
+      \field{journaltitle}{Math. Z.}
+      \field{langid}{german}
+      \field{title}{Über zwei {P}robleme bezüglich konvexer {K}örper von {P}. {E}rdős und von {V}. {L}. {K}lee}
+      \field{volume}{79}
+      \field{year}{1962}
+      \field{pages}{95\bibrangedash 99}
+      \range{pages}{5}
+    \endentry
+    \entry{dolbilin}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7c9a5ba07a905ae0de07f3c25bd75fd1}{%
+           family={Долбилин},
+           familyi={Д\bibinitperiod},
+           given={Н.\bibnamedelimi П.},
+           giveni={Н\bibinitperiod\bibinitdelim П\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \strng{fullhash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \strng{bibnamehash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \strng{authorbibnamehash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \strng{authornamehash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \strng{authorfullhash}{7c9a5ba07a905ae0de07f3c25bd75fd1}
+      \field{sortinit}{d}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{russian}
+      \field{title}{Жемчужины теории многогранников}
+      \field{year}{2000}
+    \endentry
+    \entry{erdos}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e0d0e2888dbc45cf93a1050ca44edf47}{%
+           family={Erdős},
+           familyi={E\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \strng{fullhash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \strng{bibnamehash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \strng{authorbibnamehash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \strng{authornamehash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \strng{authorfullhash}{e0d0e2888dbc45cf93a1050ca44edf47}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0026-2285}
+      \field{journaltitle}{Michigan Math. J.}
+      \field{title}{Some unsolved problems}
+      \field{volume}{4}
+      \field{year}{1957}
+      \field{pages}{291\bibrangedash 300}
+      \range{pages}{10}
+    \endentry
+    \entry{eshenburg-split}{article}{}
+      \name{author}{1}{}{%
+        {{hash=4d5dd19fcaeaeaf69c23bda27a317cbb}{%
+           family={Eschenburg},
+           familyi={E\bibinitperiod},
+           given={J.-H.},
+           giveni={J\bibinithyphendelim H\bibinitperiod}}}%
+      }
+      \strng{namehash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \strng{fullhash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \strng{bibnamehash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \strng{authorbibnamehash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \strng{authornamehash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \strng{authorfullhash}{4d5dd19fcaeaeaf69c23bda27a317cbb}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{The splitting theorem for space-times with strong energy condition}
+      \field{volume}{27}
+      \field{year}{1988}
+      \field{pages}{477\bibrangedash 491}
+      \range{pages}{15}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214442005
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214442005
+      \endverb
+    \endentry
+    \entry{eskenazis-mendel-naor}{article}{}
+      \name{author}{3}{}{%
+        {{hash=b8a24dbda39b3cdaa7e3b3428a2d5bdb}{%
+           family={Eskenazis},
+           familyi={E\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=7dcc1dd6f54426ca6f3f12c2312130b0}{%
+           family={Mendel},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=983f41dbcb8e586f8e971f381eaf8559}{%
+           family={Naor},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{036cd0a59ce754bc989b8e678373c6f5}
+      \strng{fullhash}{036cd0a59ce754bc989b8e678373c6f5}
+      \strng{bibnamehash}{036cd0a59ce754bc989b8e678373c6f5}
+      \strng{authorbibnamehash}{036cd0a59ce754bc989b8e678373c6f5}
+      \strng{authornamehash}{036cd0a59ce754bc989b8e678373c6f5}
+      \strng{authorfullhash}{036cd0a59ce754bc989b8e678373c6f5}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0020-9910,1432-1297}
+      \field{journaltitle}{Invent. Math.}
+      \field{number}{3}
+      \field{title}{Nonpositive curvature is not coarsely universal}
+      \field{volume}{217}
+      \field{year}{2019}
+      \field{pages}{833\bibrangedash 886}
+      \range{pages}{54}
+      \verb{doi}
+      \verb 10.1007/s00222-019-00878-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00222-019-00878-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00222-019-00878-1
+      \endverb
+    \endentry
+    \entry{ge-li}{article}{}
+      \name{author}{2}{}{%
+        {{hash=710d13814ab0f31d59d19bde2ea9f048}{%
+           family={Ge},
+           familyi={G\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=7683dc4384a659a650a0afecef2cda41}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{8838efef967224f19b9de6120592195d}
+      \strng{fullhash}{8838efef967224f19b9de6120592195d}
+      \strng{bibnamehash}{8838efef967224f19b9de6120592195d}
+      \strng{authorbibnamehash}{8838efef967224f19b9de6120592195d}
+      \strng{authornamehash}{8838efef967224f19b9de6120592195d}
+      \strng{authorfullhash}{8838efef967224f19b9de6120592195d}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708,1090-2082}
+      \field{journaltitle}{Adv. Math.}
+      \field{title}{Gluing of multiple {A}lexandrov spaces}
+      \field{volume}{399}
+      \field{year}{2022}
+      \field{pages}{Paper No. 108248\bibrangessep 26}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1016/j.aim.2022.108248
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.aim.2022.108248
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.aim.2022.108248
+      \endverb
+    \endentry
+    \entry{gigli-splitting-overview}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9224796c31d365b0de13665a0f99c228}{%
+           family={Gigli},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{fullhash}{9224796c31d365b0de13665a0f99c228}
+      \strng{bibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorbibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authornamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorfullhash}{9224796c31d365b0de13665a0f99c228}
+      \field{extraname}{1}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Anal. Geom. Metr. Spaces}
+      \field{number}{1}
+      \field{title}{An overview of the proof of the splitting theorem in spaces with non-negative {R}icci curvature}
+      \field{volume}{2}
+      \field{year}{2014}
+      \field{pages}{169\bibrangedash 213}
+      \range{pages}{45}
+      \verb{doi}
+      \verb 10.2478/agms-2014-0006
+      \endverb
+      \verb{urlraw}
+      \verb https://doi-org.myaccess.library.utoronto.ca/10.2478/agms-2014-0006
+      \endverb
+      \verb{url}
+      \verb https://doi-org.myaccess.library.utoronto.ca/10.2478/agms-2014-0006
+      \endverb
+    \endentry
+    \entry{gigli2013splitting}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=9224796c31d365b0de13665a0f99c228}{%
+           family={Gigli},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{fullhash}{9224796c31d365b0de13665a0f99c228}
+      \strng{bibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorbibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authornamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorfullhash}{9224796c31d365b0de13665a0f99c228}
+      \field{extraname}{2}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{The splitting theorem in non-smooth context}
+      \field{year}{2013}
+      \verb{eprint}
+      \verb 1302.5555
+      \endverb
+    \endentry
+    \entry{gigli2018}{article}{}
+      \name{author}{1}{}{%
+        {{hash=9224796c31d365b0de13665a0f99c228}{%
+           family={Gigli},
+           familyi={G\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{fullhash}{9224796c31d365b0de13665a0f99c228}
+      \strng{bibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorbibnamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authornamehash}{9224796c31d365b0de13665a0f99c228}
+      \strng{authorfullhash}{9224796c31d365b0de13665a0f99c228}
+      \field{extraname}{3}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-1-4704-2765-8; 978-1-4704-4266-8}
+      \field{issn}{0065-9266,1947-6221}
+      \field{journaltitle}{Mem. Amer. Math. Soc.}
+      \field{number}{1196}
+      \field{title}{Nonsmooth differential geometry---an approach tailored for spaces with {R}icci curvature bounded from below}
+      \field{volume}{251}
+      \field{year}{2018}
+      \field{pages}{v+161}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1090/memo/1196
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/memo/1196
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/memo/1196
+      \endverb
+    \endentry
+    \entry{gromov-1981}{article}{}
+      \name{author}{1}{}{%
+        {{hash=00439431c8452ddc2a23d53f156c3ffe}{%
+           family={Gromov},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{fullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{bibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorbibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authornamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorfullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \field{extraname}{1}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Commentarii Mathematici Helvetici}
+      \field{title}{Curvature, diameter and Betti numbers}
+      \field{volume}{56}
+      \field{year}{1981}
+      \field{pages}{179\bibrangedash 195}
+      \range{pages}{17}
+    \endentry
+    \entry{gromov1978}{article}{}
+      \name{author}{1}{}{%
+        {{hash=00439431c8452ddc2a23d53f156c3ffe}{%
+           family={Gromov},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{fullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{bibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorbibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authornamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorfullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \field{extraname}{2}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X,1945-743X}
+      \field{journaltitle}{J. Differential Geometry}
+      \field{number}{2}
+      \field{title}{Almost flat manifolds}
+      \field{volume}{13}
+      \field{year}{1978}
+      \field{pages}{231\bibrangedash 241}
+      \range{pages}{11}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214434488
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214434488
+      \endverb
+    \endentry
+    \entry{gromov1981}{book}{}
+      \name{author}{1}{}{%
+        {{hash=00439431c8452ddc2a23d53f156c3ffe}{%
+           family={Gromov},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=f9f36286479e69d5898c43fbe9c0d7c4}{%
+           family={Lafontaine},
+           familyi={L\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=5187924ba98e9048f0e1321cecef8e36}{%
+           family={Pansu},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{fullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{bibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorbibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authornamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorfullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{editorbibnamehash}{1cab255d2ca696ff1ee520b15e8e1caf}
+      \strng{editornamehash}{1cab255d2ca696ff1ee520b15e8e1caf}
+      \strng{editorfullhash}{1cab255d2ca696ff1ee520b15e8e1caf}
+      \field{extraname}{3}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{2-7124-0714-8}
+      \field{series}{Textes Mathématiques}
+      \field{title}{Structures métriques pour les variétés riemanniennes}
+      \field{volume}{1}
+      \field{year}{1981}
+    \endentry
+    \entry{gromov1999}{book}{}
+      \name{author}{1}{}{%
+        {{hash=00439431c8452ddc2a23d53f156c3ffe}{%
+           family={Gromov},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{fullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{bibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorbibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authornamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorfullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \field{extraname}{4}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Metric structures for Riemannian and non-Riemannian spaces}
+      \field{volume}{152}
+      \field{year}{1999}
+    \endentry
+    \entry{gromov2001}{article}{}
+      \name{author}{1}{}{%
+        {{hash=00439431c8452ddc2a23d53f156c3ffe}{%
+           family={Gromov},
+           familyi={G\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{fullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{bibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorbibnamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authornamehash}{00439431c8452ddc2a23d53f156c3ffe}
+      \strng{authorfullhash}{00439431c8452ddc2a23d53f156c3ffe}
+      \field{extraname}{5}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0373-2703}
+      \field{journaltitle}{Zap. Nauchn. Sem. S.-Peterburg. Otdel. Mat. Inst. Steklov. (POMI)}
+      \field{title}{{${\rm CAT}(\kappa)$}-spaces: construction and concentration}
+      \field{volume}{280}
+      \field{year}{2001}
+      \field{pages}{100\bibrangedash 140\bibrangessep 299\bibrangedash 300}
+      \range{pages}{43}
+      \verb{doi}
+      \verb 10.1023/B:JOTH.0000008756.15786.0f
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1023/B:JOTH.0000008756.15786.0f
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1023/B:JOTH.0000008756.15786.0f
+      \endverb
+    \endentry
+    \entry{grove-petersen1988}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c123214e61fba9e97525492163cca0bb}{%
+           family={Grove},
+           familyi={G\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=dd746f7318e405c4adaf25a1b0af4675}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe062f219bbc59741689ce2470537942}
+      \strng{fullhash}{fe062f219bbc59741689ce2470537942}
+      \strng{bibnamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authorbibnamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authornamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authorfullhash}{fe062f219bbc59741689ce2470537942}
+      \field{extraname}{1}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0003-486X,1939-8980}
+      \field{journaltitle}{Ann. of Math. (2)}
+      \field{number}{1}
+      \field{title}{Bounding homotopy types by geometry}
+      \field{volume}{128}
+      \field{year}{1988}
+      \field{pages}{195\bibrangedash 206}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.2307/1971439
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/1971439
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/1971439
+      \endverb
+    \endentry
+    \entry{grove-petersen1993}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c123214e61fba9e97525492163cca0bb}{%
+           family={Grove},
+           familyi={G\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=dd746f7318e405c4adaf25a1b0af4675}{%
+           family={Petersen},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{fe062f219bbc59741689ce2470537942}
+      \strng{fullhash}{fe062f219bbc59741689ce2470537942}
+      \strng{bibnamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authorbibnamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authornamehash}{fe062f219bbc59741689ce2470537942}
+      \strng{authorfullhash}{fe062f219bbc59741689ce2470537942}
+      \field{extraname}{2}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Inventiones mathematicae}
+      \field{number}{1}
+      \field{title}{A radius sphere theorem}
+      \field{volume}{112}
+      \field{year}{1993}
+      \field{pages}{577\bibrangedash 583}
+      \range{pages}{7}
+    \endentry
+    \entry{grove-wilking}{article}{}
+      \name{author}{2}{}{%
+        {{hash=c123214e61fba9e97525492163cca0bb}{%
+           family={Grove},
+           familyi={G\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+        {{hash=cc3e0a6a29c817210c61290920b25539}{%
+           family={Wilking},
+           familyi={W\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{4f30110d67d2a736bbcd8b291ba20591}
+      \strng{fullhash}{4f30110d67d2a736bbcd8b291ba20591}
+      \strng{bibnamehash}{4f30110d67d2a736bbcd8b291ba20591}
+      \strng{authorbibnamehash}{4f30110d67d2a736bbcd8b291ba20591}
+      \strng{authornamehash}{4f30110d67d2a736bbcd8b291ba20591}
+      \strng{authorfullhash}{4f30110d67d2a736bbcd8b291ba20591}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1465-3060}
+      \field{journaltitle}{Geom. Topol.}
+      \field{number}{5}
+      \field{title}{A knot characterization and 1-connected nonnegatively curved 4-manifolds with circle symmetry}
+      \field{volume}{18}
+      \field{year}{2014}
+      \field{pages}{3091\bibrangedash 3110}
+      \range{pages}{20}
+      \verb{doi}
+      \verb 10.2140/gt.2014.18.3091
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2140/gt.2014.18.3091
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2140/gt.2014.18.3091
+      \endverb
+    \endentry
+    \entry{guzhvina2008}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=da54c70580cfa111d8765c3ffafcbcb6}{%
+           family={Guzhvina},
+           familyi={G\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \strng{fullhash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \strng{bibnamehash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \strng{authorbibnamehash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \strng{authornamehash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \strng{authorfullhash}{da54c70580cfa111d8765c3ffafcbcb6}
+      \field{sortinit}{g}
+      \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprinttype}{arXiv}
+      \field{title}{Gromov's pinching constant}
+      \field{year}{2008}
+      \verb{eprint}
+      \verb 0804.0201
+      \endverb
+    \endentry
+    \entry{halbeisen}{article}{}
+      \name{author}{1}{}{%
+        {{hash=43c5d9a410d62a95b58aa12446cb7bef}{%
+           family={Halbeisen},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \strng{fullhash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \strng{bibnamehash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \strng{authorbibnamehash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \strng{authornamehash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \strng{authorfullhash}{43c5d9a410d62a95b58aa12446cb7bef}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-2611}
+      \field{journaltitle}{Manuscripta Math.}
+      \field{number}{2}
+      \field{title}{On tangent cones of {A}lexandrov spaces with curvature bounded below}
+      \field{volume}{103}
+      \field{year}{2000}
+      \field{pages}{169\bibrangedash 182}
+      \range{pages}{14}
+      \verb{doi}
+      \verb 10.1007/s002290070018
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s002290070018
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s002290070018
+      \endverb
+    \endentry
+    \entry{harvey-searle}{article}{}
+      \name{author}{2}{}{%
+        {{hash=b2d836e810a6560664ea5939074b8d71}{%
+           family={Harvey},
+           familyi={H\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e58c88bb49cea9155d0fa321c9ffad5a}{%
+           family={Searle},
+           familyi={S\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \strng{fullhash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \strng{bibnamehash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \strng{authorbibnamehash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \strng{authornamehash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \strng{authorfullhash}{3b25d40586ddb47d65e1e99e2bb3a644}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1431-0635,1431-0643}
+      \field{journaltitle}{Doc. Math.}
+      \field{title}{Positively curved {R}iemannian orbifolds and {A}lexandrov spaces with circle symmetry in dimension 4}
+      \field{volume}{26}
+      \field{year}{2021}
+      \field{pages}{1889\bibrangedash 1927}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.3934/dcdsb.2020281
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.3934/dcdsb.2020281
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.3934/dcdsb.2020281
+      \endverb
+    \endentry
+    \entry{hatcher}{book}{}
+      \name{author}{1}{}{%
+        {{hash=60430c1ac989f9278a5d69515129a405}{%
+           family={Hatcher},
+           familyi={H\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {english}%
+      }
+      \strng{namehash}{60430c1ac989f9278a5d69515129a405}
+      \strng{fullhash}{60430c1ac989f9278a5d69515129a405}
+      \strng{bibnamehash}{60430c1ac989f9278a5d69515129a405}
+      \strng{authorbibnamehash}{60430c1ac989f9278a5d69515129a405}
+      \strng{authornamehash}{60430c1ac989f9278a5d69515129a405}
+      \strng{authorfullhash}{60430c1ac989f9278a5d69515129a405}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[Русский перевод: Хатчер А. «Алгебраическая топология», 2011.]}
+      \field{isbn}{0-521-79160-X; 0-521-79540-0}
+      \field{langid}{russian}
+      \field{title}{Algebraic topology}
+      \field{year}{2002}
+    \endentry
+    \entry{hsiang-kleiner}{article}{}
+      \name{author}{2}{}{%
+        {{hash=8818b6d20ac5e0b0596b72b85c9cdf1a}{%
+           family={Hsiang},
+           familyi={H\bibinitperiod},
+           given={W.-Y.},
+           giveni={W\bibinithyphendelim Y\bibinitperiod}}}%
+        {{hash=b0cee717c94b49303a844de46049cf4e}{%
+           family={Kleiner},
+           familyi={K\bibinitperiod},
+           given={B.},
+           giveni={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \strng{fullhash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \strng{bibnamehash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \strng{authorbibnamehash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \strng{authornamehash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \strng{authorfullhash}{57bd14fb65f8da360cab8cbf05a07f57}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{On the topology of positively curved {$4$}-manifolds with symmetry}
+      \field{volume}{29}
+      \field{year}{1989}
+      \field{pages}{615\bibrangedash 621}
+      \range{pages}{7}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214443064
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214443064
+      \endverb
+    \endentry
+    \entry{hu-kirk}{article}{}
+      \name{author}{2}{}{%
+        {{hash=159029973b3def99234db749f3500c24}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+        {{hash=7814b896a50c5fb93334f08b836e8918}{%
+           family={Kirk},
+           familyi={K\bibinitperiod},
+           given={W.\bibnamedelimi A.},
+           giveni={W\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+      }
+      \strng{namehash}{6c250836375faa2e3054d666868f3055}
+      \strng{fullhash}{6c250836375faa2e3054d666868f3055}
+      \strng{bibnamehash}{6c250836375faa2e3054d666868f3055}
+      \strng{authorbibnamehash}{6c250836375faa2e3054d666868f3055}
+      \strng{authornamehash}{6c250836375faa2e3054d666868f3055}
+      \strng{authorfullhash}{6c250836375faa2e3054d666868f3055}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9939}
+      \field{journaltitle}{Proc. Amer. Math. Soc.}
+      \field{number}{1}
+      \field{title}{Local contractions in metric spaces}
+      \field{volume}{68}
+      \field{year}{1978}
+      \field{pages}{121\bibrangedash 124}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.2307/2040922
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2307/2040922
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2307/2040922
+      \endverb
+    \endentry
+    \entry{hurewicz-wallman}{book}{}
+      \name{author}{2}{}{%
+        {{hash=e1e6e1d462a5e3d93e7fd17aa07b8fb1}{%
+           family={Hurewicz},
+           familyi={H\bibinitperiod},
+           given={W.},
+           giveni={W\bibinitperiod}}}%
+        {{hash=56edd8c9fa021bff17c23be402930de4}{%
+           family={Wallman},
+           familyi={W\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \strng{fullhash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \strng{bibnamehash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \strng{authorbibnamehash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \strng{authornamehash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \strng{authorfullhash}{e4d7abf41fd56d8ac82d96ff4c86f05c}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Princeton Mathematical Series, v. 4}
+      \field{title}{Dimension {T}heory}
+      \field{year}{1941}
+    \endentry
+    \entry{jost}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=d5edea0b5fa1abf37c386bc807bb56fb}{%
+           family={Jost},
+           familyi={J\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+      }
+      \strng{namehash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \strng{fullhash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \strng{bibnamehash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \strng{authorbibnamehash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \strng{authornamehash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \strng{authorfullhash}{d5edea0b5fa1abf37c386bc807bb56fb}
+      \field{sortinit}{j}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{New directions in {D}irichlet forms}
+      \field{series}{AMS/IP Stud. Adv. Math.}
+      \field{title}{Nonlinear {D}irichlet forms}
+      \field{volume}{8}
+      \field{year}{1998}
+      \field{pages}{1\bibrangedash 47}
+      \range{pages}{47}
+    \endentry
+    \entry{kapovitch}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Int. Press, Somerville, MA}%
+      }
+      \strng{namehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{fullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{bibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorbibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authornamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorfullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \field{extraname}{1}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Surveys in differential geometry. {V}ol. {XI}}
+      \field{isbn}{978-1-57146-117-9}
+      \field{series}{Surv. Differ. Geom.}
+      \field{title}{Perelman's stability theorem}
+      \field{volume}{11}
+      \field{year}{2007}
+      \field{pages}{103\bibrangedash 136}
+      \range{pages}{34}
+      \verb{doi}
+      \verb 10.4310/SDG.2006.v11.n1.a5
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/SDG.2006.v11.n1.a5
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/SDG.2006.v11.n1.a5
+      \endverb
+    \endentry
+    \entry{kapovitch-zhu}{article}{}
+      \name{author}{2}{}{%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+        {{hash=a6ce5334b2c4a46c7f7d08b1b2f5bc23}{%
+           family={Zhu},
+           familyi={Z\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \strng{fullhash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \strng{bibnamehash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \strng{authorbibnamehash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \strng{authornamehash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \strng{authorfullhash}{e7663a60547c7b65c26081a6e65aeb3c}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0232-704X,1572-9060}
+      \field{journaltitle}{Ann. Global Anal. Geom.}
+      \field{number}{2}
+      \field{title}{On the intrinsic and extrinsic boundary for metric measure spaces with lower curvature bounds}
+      \field{volume}{64}
+      \field{year}{2023}
+      \field{pages}{Paper No. 17\bibrangessep 18}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/s10455-023-09920-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10455-023-09920-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10455-023-09920-1
+      \endverb
+    \endentry
+    \entry{kapovitch2002}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{fullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{bibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorbibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authornamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorfullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \field{extraname}{2}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{1}
+      \field{title}{Regularity of limits of noncollapsing sequences of manifolds}
+      \field{volume}{12}
+      \field{year}{2002}
+      \field{pages}{121\bibrangedash 137}
+      \range{pages}{17}
+      \verb{doi}
+      \verb 10.1007/s00039-002-8240-1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00039-002-8240-1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00039-002-8240-1
+      \endverb
+    \endentry
+    \entry{kapovitch2005}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7fa9dc9f23c01556a8f6a9488ec1498e}{%
+           family={Kapovitch},
+           familyi={K\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{fullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{bibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorbibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authornamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \strng{authorfullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
+      \field{extraname}{3}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5874,1432-1823}
+      \field{journaltitle}{Math. Z.}
+      \field{number}{3}
+      \field{title}{Restrictions on collapsing with a lower sectional curvature bound}
+      \field{volume}{249}
+      \field{year}{2005}
+      \field{pages}{519\bibrangedash 539}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1007/s00209-004-0715-3
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00209-004-0715-3
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00209-004-0715-3
+      \endverb
+    \endentry
+    \entry{kirby-siebenmann}{book}{}
+      \name{author}{2}{}{%
+        {{hash=192c28dc571c81fefffafc370e9e20f4}{%
+           family={Kirby},
+           familyi={K\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a62417cf2c53a9833ca22ccf57ef8958}{%
+           family={Siebenmann},
+           familyi={S\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \strng{fullhash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \strng{bibnamehash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \strng{authorbibnamehash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \strng{authornamehash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \strng{authorfullhash}{4b9a759ef2045c2d10381b73b9d7db17}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{With notes by John Milnor and Michael Atiyah}
+      \field{series}{Annals of Mathematics Studies}
+      \field{title}{Foundational essays on topological manifolds, smoothings, and triangulations}
+      \field{volume}{No. 88}
+      \field{year}{1977}
+    \endentry
+    \entry{kiselev-stereo-en}{book}{}
+      \name{author}{1}{}{%
+        {{hash=71b3f2321494ad7c4066d09fe4751af8}{%
+           family={Kiselev},
+           familyi={K\bibinitperiod},
+           given={A.\bibnamedelimi P.},
+           giveni={A\bibinitperiod\bibinitdelim P\bibinitperiod}}}%
+      }
+      \strng{namehash}{71b3f2321494ad7c4066d09fe4751af8}
+      \strng{fullhash}{71b3f2321494ad7c4066d09fe4751af8}
+      \strng{bibnamehash}{71b3f2321494ad7c4066d09fe4751af8}
+      \strng{authorbibnamehash}{71b3f2321494ad7c4066d09fe4751af8}
+      \strng{authornamehash}{71b3f2321494ad7c4066d09fe4751af8}
+      \strng{authorfullhash}{71b3f2321494ad7c4066d09fe4751af8}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Kiselev's Geometry: Stereometry}
+      \field{year}{2008}
+    \endentry
+    \entry{klyachko}{article}{}
+      \name{author}{1}{}{%
+        {{hash=25e2bd6a8c0a9e8d49b79d9663140af8}{%
+           family={Klyachko},
+           familyi={K\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \strng{fullhash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \strng{bibnamehash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \strng{authorbibnamehash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \strng{authornamehash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \strng{authorfullhash}{25e2bd6a8c0a9e8d49b79d9663140af8}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0092-7872,1532-4125}
+      \field{journaltitle}{Comm. Algebra}
+      \field{number}{7}
+      \field{title}{A funny property of sphere and equations over groups}
+      \field{volume}{21}
+      \field{year}{1993}
+      \field{pages}{2555\bibrangedash 2575}
+      \range{pages}{21}
+      \verb{doi}
+      \verb 10.1080/00927879308824692
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1080/00927879308824692
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1080/00927879308824692
+      \endverb
+    \endentry
+    \entry{kwun1964}{article}{}
+      \name{author}{1}{}{%
+        {{hash=52008de80506355666b0ad184213b4b5}{%
+           family={Kwun},
+           familyi={K\bibinitperiod},
+           given={K.\bibnamedelimi W.},
+           giveni={K\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \strng{namehash}{52008de80506355666b0ad184213b4b5}
+      \strng{fullhash}{52008de80506355666b0ad184213b4b5}
+      \strng{bibnamehash}{52008de80506355666b0ad184213b4b5}
+      \strng{authorbibnamehash}{52008de80506355666b0ad184213b4b5}
+      \strng{authornamehash}{52008de80506355666b0ad184213b4b5}
+      \strng{authorfullhash}{52008de80506355666b0ad184213b4b5}
+      \field{sortinit}{k}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Proc. Amer. Math. Soc.}
+      \field{number}{3}
+      \field{title}{Uniqueness of the open cone neighborhood}
+      \field{volume}{15}
+      \field{year}{1964}
+      \field{pages}{476\bibrangedash 479}
+      \range{pages}{4}
+    \endentry
+    \entry{lang-schroeder:globalization}{article}{}
+      \name{author}{2}{}{%
+        {{hash=04f2fd38a11ffc23b795a1070c124c0b}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=70238d324bd5d722a60ac72998a9eff0}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{fullhash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{bibnamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authorbibnamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authornamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authorfullhash}{5cac65daf80eb20a4665075fd6d993a1}
+      \field{extraname}{1}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0013-8584}
+      \field{journaltitle}{Enseign. Math.}
+      \field{number}{3-4}
+      \field{title}{On {T}oponogov's comparison theorem for {A}lexandrov spaces}
+      \field{volume}{59}
+      \field{year}{2013}
+      \field{pages}{325\bibrangedash 336}
+      \range{pages}{12}
+      \verb{doi}
+      \verb 10.4171/LEM/59-3-6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4171/LEM/59-3-6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4171/LEM/59-3-6
+      \endverb
+    \endentry
+    \entry{lang-schroeder:kirszbraun}{article}{}
+      \name{author}{2}{}{%
+        {{hash=04f2fd38a11ffc23b795a1070c124c0b}{%
+           family={Lang},
+           familyi={L\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+        {{hash=70238d324bd5d722a60ac72998a9eff0}{%
+           family={Schroeder},
+           familyi={S\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{fullhash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{bibnamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authorbibnamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authornamehash}{5cac65daf80eb20a4665075fd6d993a1}
+      \strng{authorfullhash}{5cac65daf80eb20a4665075fd6d993a1}
+      \field{extraname}{2}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{3}
+      \field{title}{Kirszbraun's theorem and metric spaces of bounded curvature}
+      \field{volume}{7}
+      \field{year}{1997}
+      \field{pages}{535\bibrangedash 560}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/s000390050018
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s000390050018
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s000390050018
+      \endverb
+    \endentry
+    \entry{lebedeva-petrunin-zolotov}{article}{}
+      \name{author}{3}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=759d0bf0747b64adfec6de0e1c379c71}{%
+           family={Zolotov},
+           familyi={Z\bibinitperiod},
+           given={V.},
+           giveni={V\bibinitperiod}}}%
+      }
+      \strng{namehash}{63d83af6b93d5c77e2b0207948879b3e}
+      \strng{fullhash}{63d83af6b93d5c77e2b0207948879b3e}
+      \strng{bibnamehash}{63d83af6b93d5c77e2b0207948879b3e}
+      \strng{authorbibnamehash}{63d83af6b93d5c77e2b0207948879b3e}
+      \strng{authornamehash}{63d83af6b93d5c77e2b0207948879b3e}
+      \strng{authorfullhash}{63d83af6b93d5c77e2b0207948879b3e}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{1}
+      \field{title}{Bipolar comparison}
+      \field{volume}{29}
+      \field{year}{2019}
+      \field{pages}{258\bibrangedash 282}
+      \range{pages}{25}
+      \verb{doi}
+      \verb 10.1007/s00039-019-00481-9
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00039-019-00481-9
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00039-019-00481-9
+      \endverb
+    \endentry
+    \entry{lebedeva-petrunin2021}{article}{}
+      \name{author}{2}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{fullhash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{bibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorbibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authornamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorfullhash}{1751292ef80f4bebcd923b82131b987a}
+      \field{extraname}{1}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2299-3274}
+      \field{journaltitle}{Anal. Geom. Metr. Spaces}
+      \field{number}{1}
+      \field{title}{5-point {$\rm CAT(0)$} spaces after {T}etsu {T}oyoda}
+      \field{volume}{9}
+      \field{year}{2021}
+      \field{pages}{160\bibrangedash 166}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1515/agms-2020-0126
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/agms-2020-0126
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/agms-2020-0126
+      \endverb
+    \endentry
+    \entry{lebedeva-petrunin2023}{article}{}
+      \name{author}{2}{}{%
+        {{hash=5bfeff66ad72aacaaa0f63bb55f521d2}{%
+           family={Лебедева},
+           familyi={Л\bibinitperiod},
+           given={Н.\bibnamedelimi Д.},
+           giveni={Н\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+        {{hash=044c4373d927f3b42ed251bacb554abe}{%
+           family={Петрунин},
+           familyi={П\bibinitperiod},
+           given={А.\bibnamedelimi М.},
+           giveni={А\bibinitperiod\bibinitdelim М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{33e3cca12e333ded61e79322b2582fc8}
+      \strng{fullhash}{33e3cca12e333ded61e79322b2582fc8}
+      \strng{bibnamehash}{33e3cca12e333ded61e79322b2582fc8}
+      \strng{authorbibnamehash}{33e3cca12e333ded61e79322b2582fc8}
+      \strng{authornamehash}{33e3cca12e333ded61e79322b2582fc8}
+      \strng{authorfullhash}{33e3cca12e333ded61e79322b2582fc8}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: Lebedeva, N. and Petrunin, A., “Graph comparison meets {A}lexandrov” \emph{Sib. Math. J.} 64.3 (2023) 624--628.]}
+      \field{journaltitle}{Сиб. матем. журн.}
+      \field{langid}{russian}
+      \field{number}{3}
+      \field{title}{Граф-сравнения и условия Александрова}
+      \field{volume}{64}
+      \field{year}{2023}
+      \field{pages}{579\bibrangedash 584}
+      \range{pages}{6}
+    \endentry
+    \entry{lebedeva-petrunin2024}{article}{}
+      \name{author}{2}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{fullhash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{bibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorbibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authornamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorfullhash}{1751292ef80f4bebcd923b82131b987a}
+      \field{extraname}{2}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1073-7928,1687-0247}
+      \field{journaltitle}{Int. Math. Res. Not. IMRN}
+      \field{number}{5}
+      \field{title}{Five-point {T}oponogov theorem}
+      \field{year}{2024}
+      \field{pages}{3601\bibrangedash 3624}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1093/imrn/rnad027
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1093/imrn/rnad027
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1093/imrn/rnad027
+      \endverb
+    \endentry
+    \entry{lebedeva-petrunin2024b}{article}{}
+      \name{author}{2}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{fullhash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{bibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorbibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authornamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorfullhash}{1751292ef80f4bebcd923b82131b987a}
+      \field{extraname}{3}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1465-3060,1364-0380}
+      \field{journaltitle}{Geom. Topol.}
+      \field{number}{8}
+      \field{title}{Curvature tensor of smoothable {A}lexandrov spaces}
+      \field{volume}{28}
+      \field{year}{2024}
+      \field{pages}{3869\bibrangedash 3907}
+      \range{pages}{39}
+      \verb{doi}
+      \verb 10.2140/gt.2024.28.3869
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2140/gt.2024.28.3869
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2140/gt.2024.28.3869
+      \endverb
+    \endentry
+    \entry{lebedeva-petrunin2025}{article}{}
+      \name{author}{2}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {World Scientific Pub Co Pte Ltd}%
+      }
+      \strng{namehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{fullhash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{bibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorbibnamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authornamehash}{1751292ef80f4bebcd923b82131b987a}
+      \strng{authorfullhash}{1751292ef80f4bebcd923b82131b987a}
+      \field{extraname}{4}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1793-7167}
+      \field{journaltitle}{Journal of Topology and Analysis}
+      \field{month}{7}
+      \field{title}{Trees meet octahedron comparison}
+      \field{year}{2023}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1142/s1793525323500231
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.1142/S1793525323500231
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.1142/S1793525323500231
+      \endverb
+    \endentry
+    \entry{lebedeva2015}{article}{}
+      \name{author}{1}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{fullhash}{658183aba547feb0c74a1338029c1fea}
+      \strng{bibnamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authorbibnamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authornamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authorfullhash}{658183aba547feb0c74a1338029c1fea}
+      \field{extraname}{1}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1465-3060}
+      \field{journaltitle}{Geom. Topol.}
+      \field{number}{3}
+      \field{title}{Alexandrov spaces with maximal number of extremal points}
+      \field{volume}{19}
+      \field{year}{2015}
+      \field{pages}{1493\bibrangedash 1521}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.2140/gt.2015.19.1493
+      \endverb
+      \verb{urlraw}
+      \verb http://dx.doi.org/10.2140/gt.2015.19.1493
+      \endverb
+      \verb{url}
+      \verb http://dx.doi.org/10.2140/gt.2015.19.1493
+      \endverb
+    \endentry
+    \entry{lebedeva2019}{article}{}
+      \name{author}{1}{}{%
+        {{hash=658183aba547feb0c74a1338029c1fea}{%
+           family={Lebedeva},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{fullhash}{658183aba547feb0c74a1338029c1fea}
+      \strng{bibnamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authorbibnamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authornamehash}{658183aba547feb0c74a1338029c1fea}
+      \strng{authorfullhash}{658183aba547feb0c74a1338029c1fea}
+      \field{extraname}{2}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0046-5755,1572-9168}
+      \field{journaltitle}{Geom. Dedicata}
+      \field{title}{On open flat sets in spaces with bipolar comparison}
+      \field{volume}{203}
+      \field{year}{2019}
+      \field{pages}{347\bibrangedash 351}
+      \range{pages}{5}
+      \verb{doi}
+      \verb 10.1007/s10711-019-00439-z
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s10711-019-00439-z
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s10711-019-00439-z
+      \endverb
+    \endentry
+    \entry{legendre}{book}{}
+      \name{author}{1}{}{%
+        {{hash=9223d0612caa8b723678067d5bb158f1}{%
+           family={Legendre},
+           familyi={L\bibinitperiod},
+           given={A.-M.},
+           giveni={A\bibinithyphendelim M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9223d0612caa8b723678067d5bb158f1}
+      \strng{fullhash}{9223d0612caa8b723678067d5bb158f1}
+      \strng{bibnamehash}{9223d0612caa8b723678067d5bb158f1}
+      \strng{authorbibnamehash}{9223d0612caa8b723678067d5bb158f1}
+      \strng{authornamehash}{9223d0612caa8b723678067d5bb158f1}
+      \strng{authorfullhash}{9223d0612caa8b723678067d5bb158f1}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Eléments de géométrie}
+      \field{year}{1794}
+    \endentry
+    \entry{li}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7683dc4384a659a650a0afecef2cda41}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={N.},
+           giveni={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{7683dc4384a659a650a0afecef2cda41}
+      \strng{fullhash}{7683dc4384a659a650a0afecef2cda41}
+      \strng{bibnamehash}{7683dc4384a659a650a0afecef2cda41}
+      \strng{authorbibnamehash}{7683dc4384a659a650a0afecef2cda41}
+      \strng{authornamehash}{7683dc4384a659a650a0afecef2cda41}
+      \strng{authorfullhash}{7683dc4384a659a650a0afecef2cda41}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0001-8708,1090-2082}
+      \field{journaltitle}{Adv. Math.}
+      \field{title}{Lipschitz-volume rigidity in {A}lexandrov geometry}
+      \field{volume}{275}
+      \field{year}{2015}
+      \field{pages}{114\bibrangedash 146}
+      \range{pages}{33}
+      \verb{doi}
+      \verb 10.1016/j.aim.2015.02.002
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.aim.2015.02.002
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.aim.2015.02.002
+      \endverb
+    \endentry
+    \entry{liberman}{article}{}
+      \name{author}{1}{}{%
+        {{hash=93c8464b8af4cc1c26e5ea397bd06808}{%
+           family={Либерман},
+           familyi={Л\bibinitperiod},
+           given={И.\bibnamedelimi М.},
+           giveni={И\bibinitperiod\bibinitdelim М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \strng{fullhash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \strng{bibnamehash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \strng{authorbibnamehash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \strng{authornamehash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \strng{authorfullhash}{93c8464b8af4cc1c26e5ea397bd06808}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Докл. АН СССР}
+      \field{langid}{russian}
+      \field{number}{2}
+      \field{title}{Геодезические линии на выпуклых поверхностях}
+      \field{volume}{32}
+      \field{year}{1941}
+      \field{pages}{310\bibrangedash 312}
+      \range{pages}{3}
+    \endentry
+    \entry{lytchak:open-map}{article}{}
+      \name{author}{1}{}{%
+        {{hash=698cf66d8a93d5d2b7949cdd2ad9088c}{%
+           family={Lytchak},
+           familyi={L\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \strng{fullhash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \strng{bibnamehash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \strng{authorbibnamehash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \strng{authornamehash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \strng{authorfullhash}{698cf66d8a93d5d2b7949cdd2ad9088c}
+      \field{sortinit}{l}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0234-0852}
+      \field{journaltitle}{St. Petersburg Math. J.}
+      \field{number}{3}
+      \field{title}{Open map theorem for metric spaces}
+      \field{volume}{17}
+      \field{year}{2006}
+      \field{pages}{477\bibrangedash 491}
+      \range{pages}{15}
+      \verb{doi}
+      \verb 10.1090/S1061-0022-06-00916-2
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/S1061-0022-06-00916-2
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/S1061-0022-06-00916-2
+      \endverb
+    \endentry
+    \entry{mayer}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5afbe97eddec83978a84b56a6ed882bf}{%
+           family={Mayer},
+           familyi={M\bibinitperiod},
+           given={U.},
+           giveni={U\bibinitperiod}}}%
+      }
+      \strng{namehash}{5afbe97eddec83978a84b56a6ed882bf}
+      \strng{fullhash}{5afbe97eddec83978a84b56a6ed882bf}
+      \strng{bibnamehash}{5afbe97eddec83978a84b56a6ed882bf}
+      \strng{authorbibnamehash}{5afbe97eddec83978a84b56a6ed882bf}
+      \strng{authornamehash}{5afbe97eddec83978a84b56a6ed882bf}
+      \strng{authorfullhash}{5afbe97eddec83978a84b56a6ed882bf}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1019-8385}
+      \field{journaltitle}{Comm. Anal. Geom.}
+      \field{number}{2}
+      \field{title}{Gradient flows on nonpositively curved metric spaces and harmonic maps}
+      \field{volume}{6}
+      \field{year}{1998}
+      \field{pages}{199\bibrangedash 253}
+      \range{pages}{55}
+      \verb{doi}
+      \verb 10.4310/CAG.1998.v6.n2.a1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/CAG.1998.v6.n2.a1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/CAG.1998.v6.n2.a1
+      \endverb
+    \endentry
+    \entry{menger}{article}{}
+      \name{author}{1}{}{%
+        {{hash=6988f9e4c4951e3562704fa5638d0d94}{%
+           family={Menger},
+           familyi={M\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {german}%
+      }
+      \strng{namehash}{6988f9e4c4951e3562704fa5638d0d94}
+      \strng{fullhash}{6988f9e4c4951e3562704fa5638d0d94}
+      \strng{bibnamehash}{6988f9e4c4951e3562704fa5638d0d94}
+      \strng{authorbibnamehash}{6988f9e4c4951e3562704fa5638d0d94}
+      \strng{authornamehash}{6988f9e4c4951e3562704fa5638d0d94}
+      \strng{authorfullhash}{6988f9e4c4951e3562704fa5638d0d94}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5831}
+      \field{journaltitle}{Math. Ann.}
+      \field{langid}{german}
+      \field{number}{1}
+      \field{title}{Untersuchungen über allgemeine {M}etrik}
+      \field{volume}{100}
+      \field{year}{1928}
+      \field{pages}{75\bibrangedash 163}
+      \range{pages}{89}
+      \verb{doi}
+      \verb 10.1007/BF01448840
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF01448840
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF01448840
+      \endverb
+    \endentry
+    \entry{milka-line}{article}{}
+      \name{author}{1}{}{%
+        {{hash=05651da3ff576ff6442710144b9f1b88}{%
+           family={Милка},
+           familyi={М\bibinitperiod},
+           given={А.\bibnamedelimi Д.},
+           giveni={А\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{fullhash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{bibnamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authorbibnamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authornamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authorfullhash}{05651da3ff576ff6442710144b9f1b88}
+      \field{extraname}{1}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Укр. геометр, сб.}
+      \field{langid}{russian}
+      \field{title}{Метрическое строение одного класса пространств, содержащих прямые линии}
+      \field{volume}{4}
+      \field{year}{1967}
+      \field{pages}{43\bibrangedash 48}
+      \range{pages}{6}
+    \endentry
+    \entry{milka1982}{article}{}
+      \name{author}{1}{}{%
+        {{hash=05651da3ff576ff6442710144b9f1b88}{%
+           family={Милка},
+           familyi={М\bibinitperiod},
+           given={А.\bibnamedelimi Д.},
+           giveni={А\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{fullhash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{bibnamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authorbibnamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authornamehash}{05651da3ff576ff6442710144b9f1b88}
+      \strng{authorfullhash}{05651da3ff576ff6442710144b9f1b88}
+      \field{extraname}{2}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Украин. геом. сб.}
+      \field{langid}{russian}
+      \field{number}{25}
+      \field{title}{Геодезические и кратчайшие линии на выпуклых гиперповерхностях. I}
+      \field{year}{1982}
+      \field{pages}{95\bibrangedash 110}
+      \range{pages}{16}
+    \endentry
+    \entry{moise}{book}{}
+      \name{author}{1}{}{%
+        {{hash=765054d4e89eedfc152ea6459a8003ce}{%
+           family={Moise},
+           familyi={M\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{765054d4e89eedfc152ea6459a8003ce}
+      \strng{fullhash}{765054d4e89eedfc152ea6459a8003ce}
+      \strng{bibnamehash}{765054d4e89eedfc152ea6459a8003ce}
+      \strng{authorbibnamehash}{765054d4e89eedfc152ea6459a8003ce}
+      \strng{authornamehash}{765054d4e89eedfc152ea6459a8003ce}
+      \strng{authorfullhash}{765054d4e89eedfc152ea6459a8003ce}
+      \field{sortinit}{m}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{title}{Geometric topology in dimensions 2 and 3}
+      \field{volume}{Vol. 47}
+      \field{year}{1977}
+    \endentry
+    \entry{ohta}{article}{}
+      \name{author}{1}{}{%
+        {{hash=09219733c59916836e97b387b7c68b15}{%
+           family={Ohta},
+           familyi={O\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{09219733c59916836e97b387b7c68b15}
+      \strng{fullhash}{09219733c59916836e97b387b7c68b15}
+      \strng{bibnamehash}{09219733c59916836e97b387b7c68b15}
+      \strng{authorbibnamehash}{09219733c59916836e97b387b7c68b15}
+      \strng{authornamehash}{09219733c59916836e97b387b7c68b15}
+      \strng{authorfullhash}{09219733c59916836e97b387b7c68b15}
+      \field{sortinit}{o}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9327}
+      \field{journaltitle}{Amer. J. Math.}
+      \field{number}{2}
+      \field{title}{Gradient flows on {W}asserstein spaces over compact {A}lexandrov spaces}
+      \field{volume}{131}
+      \field{year}{2009}
+      \field{pages}{475\bibrangedash 516}
+      \range{pages}{42}
+      \verb{doi}
+      \verb 10.1353/ajm.0.0048
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1353/ajm.0.0048
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1353/ajm.0.0048
+      \endverb
+    \endentry
+    \entry{perelman-Erdos}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=7f1debf616c1c5f3fd090fc1351b3adc}{%
+           family={Perelman},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{fullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{bibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorbibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authornamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorfullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \field{extraname}{1}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the {I}nternational {C}ongress of {M}athematicians, {V}ol.\ 1, 2 ({Z}ürich, 1994)}
+      \field{title}{Spaces with curvature bounded below}
+      \field{year}{1995}
+      \field{pages}{517\bibrangedash 525}
+      \range{pages}{9}
+    \endentry
+    \entry{perelman-petrunin}{article}{}
+      \name{author}{2}{}{%
+        {{hash=00947c9b964ed3494681111aed0b3250}{%
+           family={Перельман},
+           familyi={П\bibinitperiod},
+           given={Г.\bibnamedelimi Я.},
+           giveni={Г\bibinitperiod\bibinitdelim Я\bibinitperiod}}}%
+        {{hash=044c4373d927f3b42ed251bacb554abe}{%
+           family={Петрунин},
+           familyi={П\bibinitperiod},
+           given={А.\bibnamedelimi М.},
+           giveni={А\bibinitperiod\bibinitdelim М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{b5382c2ef012c046ce33588b6344074a}
+      \strng{fullhash}{b5382c2ef012c046ce33588b6344074a}
+      \strng{bibnamehash}{b5382c2ef012c046ce33588b6344074a}
+      \strng{authorbibnamehash}{b5382c2ef012c046ce33588b6344074a}
+      \strng{authornamehash}{b5382c2ef012c046ce33588b6344074a}
+      \strng{authorfullhash}{b5382c2ef012c046ce33588b6344074a}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: G. Perelman and A. Petrunin. “Extremal subsets in Aleksandrov spaces and the generalized Liberman theorem”. \emph{St. Petersburg Math. J.}, 5:1 (1993), 215--227.]}
+      \field{journaltitle}{Алгебра и анализ}
+      \field{langid}{russian}
+      \field{number}{1}
+      \field{title}{Экстремальные подмножества в пространствах Александрова и обобщенная теорема Либермана}
+      \field{volume}{5}
+      \field{year}{1993}
+      \field{pages}{242\bibrangedash 256}
+      \range{pages}{15}
+    \endentry
+    \entry{perelman-petrunin:qg}{misc}{}
+      \name{author}{2}{}{%
+        {{hash=7f1debf616c1c5f3fd090fc1351b3adc}{%
+           family={Perelman},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{086baf1e14ce3f280025bac432e13937}
+      \strng{fullhash}{086baf1e14ce3f280025bac432e13937}
+      \strng{bibnamehash}{086baf1e14ce3f280025bac432e13937}
+      \strng{authorbibnamehash}{086baf1e14ce3f280025bac432e13937}
+      \strng{authornamehash}{086baf1e14ce3f280025bac432e13937}
+      \strng{authorfullhash}{086baf1e14ce3f280025bac432e13937}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Quasigeodesics and gradient curves in {A}lexandrov spaces}
+      \verb{eprint}
+      \verb http://www.math.psu.edu/petrunin/
+      \endverb
+    \endentry
+    \entry{perelman1991}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=7f1debf616c1c5f3fd090fc1351b3adc}{%
+           family={Perelman},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{fullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{bibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorbibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authornamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorfullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \field{extraname}{2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{preprint}
+      \field{title}{Alexandrov spaces with curvatures bounded from below II}
+      \field{year}{1991}
+      \verb{urlraw}
+      \verb https://anton-petrunin.github.io/papers/alexandrov/perelmanASWCBFB2+.pdf
+      \endverb
+      \verb{url}
+      \verb https://anton-petrunin.github.io/papers/alexandrov/perelmanASWCBFB2+.pdf
+      \endverb
+    \endentry
+    \entry{perelman1993}{article}{}
+      \name{author}{1}{}{%
+        {{hash=00947c9b964ed3494681111aed0b3250}{%
+           family={Перельман},
+           familyi={П\bibinitperiod},
+           given={Г.\bibnamedelimi Я.},
+           giveni={Г\bibinitperiod\bibinitdelim Я\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{00947c9b964ed3494681111aed0b3250}
+      \strng{fullhash}{00947c9b964ed3494681111aed0b3250}
+      \strng{bibnamehash}{00947c9b964ed3494681111aed0b3250}
+      \strng{authorbibnamehash}{00947c9b964ed3494681111aed0b3250}
+      \strng{authornamehash}{00947c9b964ed3494681111aed0b3250}
+      \strng{authorfullhash}{00947c9b964ed3494681111aed0b3250}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: G. Ya. Perel'man, “Elements of Morse theory on Aleksandrov spaces”, \emph{St. Petersburg Math. J.}, 5:1 (1994), 205--213]}
+      \field{journaltitle}{Алгебра и анализ}
+      \field{langid}{russian}
+      \field{number}{1}
+      \field{title}{Начала теории Морса на пространствах Александрова}
+      \field{volume}{5}
+      \field{year}{1993}
+      \field{pages}{232\bibrangedash 241}
+      \range{pages}{10}
+    \endentry
+    \entry{perelman1994}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7f1debf616c1c5f3fd090fc1351b3adc}{%
+           family={Perelman},
+           familyi={P\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{fullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{bibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorbibnamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authornamehash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \strng{authorfullhash}{7f1debf616c1c5f3fd090fc1351b3adc}
+      \field{extraname}{3}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{preprint}
+      \field{title}{DC Structure on Alexandrov Space (preliminary version)}
+      \field{year}{1994}
+    \endentry
+    \entry{petrunin-2023}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{1}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{MathOverflow}
+      \field{title}{Proof of Lemma 37.5 in Pak's Lectures on Discrete and Polyhedral Geometry}
+      \verb{eprint}
+      \verb https://mathoverflow.net/q/437971
+      \endverb
+    \endentry
+    \entry{petrunin-involution}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{MathOverflow}
+      \field{title}{Involution of 3-sphere}
+      \verb{eprint}
+      \verb https://mathoverflow.net/q/471189
+      \endverb
+      \verb{urlraw}
+      \verb https://mathoverflow.net/q/471189
+      \endverb
+      \verb{url}
+      \verb https://mathoverflow.net/q/471189
+      \endverb
+    \endentry
+    \entry{petrunin-stadler}{article}{}
+      \name{author}{2}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=cf695396ac47701306a06006a4d23830}{%
+           family={Stadler},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{6840ce594c83a49e83723616851d4745}
+      \strng{fullhash}{6840ce594c83a49e83723616851d4745}
+      \strng{bibnamehash}{6840ce594c83a49e83723616851d4745}
+      \strng{authorbibnamehash}{6840ce594c83a49e83723616851d4745}
+      \strng{authornamehash}{6840ce594c83a49e83723616851d4745}
+      \strng{authorfullhash}{6840ce594c83a49e83723616851d4745}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1465-3060}
+      \field{journaltitle}{Geom. Topol.}
+      \field{number}{6}
+      \field{title}{Metric-minimizing surfaces revisited}
+      \field{volume}{23}
+      \field{year}{2019}
+      \field{pages}{3111\bibrangedash 3139}
+      \range{pages}{29}
+      \verb{doi}
+      \verb 10.2140/gt.2019.23.3111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.2140/gt.2019.23.3111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.2140/gt.2019.23.3111
+      \endverb
+    \endentry
+    \entry{petrunin-zamora}{book}{}
+      \name{author}{2}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=9bdd3ae89ba7615c21c596a19343b1b9}{%
+           family={Barrera},
+           familyi={B\bibinitperiod},
+           given={S.\bibnamedelimi Zamora},
+           giveni={S\bibinitperiod\bibinitdelim Z\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e1429a9e25fb31007a38069635fecbc}
+      \strng{fullhash}{5e1429a9e25fb31007a38069635fecbc}
+      \strng{bibnamehash}{5e1429a9e25fb31007a38069635fecbc}
+      \strng{authorbibnamehash}{5e1429a9e25fb31007a38069635fecbc}
+      \strng{authornamehash}{5e1429a9e25fb31007a38069635fecbc}
+      \strng{authorfullhash}{5e1429a9e25fb31007a38069635fecbc}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.HO}
+      \field{eprinttype}{arXiv}
+      \field{title}{What is differential geometry: curves and surfaces}
+      \field{year}{2021}
+      \verb{eprint}
+      \verb 2012.11814
+      \endverb
+    \endentry
+    \entry{petrunin:globalization}{article}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{3}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0025-5831}
+      \field{journaltitle}{Math. Ann.}
+      \field{number}{1-2}
+      \field{title}{A globalization for non-complete but geodesic spaces}
+      \field{volume}{366}
+      \field{year}{2016}
+      \field{pages}{387\bibrangedash 393}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s00208-015-1295-8
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s00208-015-1295-8
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s00208-015-1295-8
+      \endverb
+    \endentry
+    \entry{petrunin:qg}{book}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{4}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Thesis (Ph.D.)--University of Illinois at Urbana-Champaign}
+      \field{title}{Quasigeodesics in multidimensional {A}lexandrov spaces}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:9543694
+      \endverb
+      \verb{url}
+      \verb http://gateway.proquest.com/openurl?url_ver=Z39.88-2004&rft_val_fmt=info:ofi/fmt:kev:mtx:dissertation&res_dat=xri:pqdiss&rft_dat=xri:pqdiss:9543694
+      \endverb
+    \endentry
+    \entry{petrunin:survey}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{5}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Surveys in differential geometry. {V}ol. {XI}}
+      \field{series}{Surv. Differ. Geom.}
+      \field{title}{Semiconcave functions in {A}lexandrov's geometry}
+      \field{volume}{11}
+      \field{year}{2007}
+      \field{pages}{137\bibrangedash 201}
+      \range{pages}{65}
+      \verb{doi}
+      \verb 10.4310/SDG.2006.v11.n1.a6
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4310/SDG.2006.v11.n1.a6
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4310/SDG.2006.v11.n1.a6
+      \endverb
+    \endentry
+    \entry{petrunin1997}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{6}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Comparison geometry}
+      \field{title}{Applications of quasigeodesics and gradient curves}
+      \field{year}{1997}
+      \field{pages}{203\bibrangedash 219}
+      \range{pages}{17}
+    \endentry
+    \entry{petrunin2008}{article}{}
+      \name{author}{1}{}{%
+        {{hash=044c4373d927f3b42ed251bacb554abe}{%
+           family={Петрунин},
+           familyi={П\bibinitperiod},
+           given={А.\bibnamedelimi М.},
+           giveni={А\bibinitperiod\bibinitdelim М\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{044c4373d927f3b42ed251bacb554abe}
+      \strng{fullhash}{044c4373d927f3b42ed251bacb554abe}
+      \strng{bibnamehash}{044c4373d927f3b42ed251bacb554abe}
+      \strng{authorbibnamehash}{044c4373d927f3b42ed251bacb554abe}
+      \strng{authornamehash}{044c4373d927f3b42ed251bacb554abe}
+      \strng{authorfullhash}{044c4373d927f3b42ed251bacb554abe}
+      \field{extraname}{1}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: Petrunin, A. M., “An upper bound for the curvature integral”, St. Petersburg Math. J.20(2009), no.2, 255--265.]}
+      \field{journaltitle}{Алгебра и анализ}
+      \field{langid}{english}
+      \field{number}{2}
+      \field{title}{Верхняя оценка на интеграл кривизны}
+      \field{volume}{20}
+      \field{year}{2008}
+      \field{pages}{134\bibrangedash 148}
+      \range{pages}{15}
+    \endentry
+    \entry{petrunin2017}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ccf6e87136fd4644ebdd47a5526282a8}{%
+           family={Петрунин},
+           familyi={П\bibinitperiod},
+           given={А.},
+           giveni={А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \strng{fullhash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \strng{bibnamehash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \strng{authorbibnamehash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \strng{authornamehash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \strng{authorfullhash}{ccf6e87136fd4644ebdd47a5526282a8}
+      \field{extraname}{2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: A. Pe\-tru\-nin. “In search of a five-point Aleksandrov type condition”. \emph{St. Petersburg Math. J.}, 29:1 (2018), 223--225]}
+      \field{journaltitle}{Алгебра и анализ}
+      \field{langid}{russian}
+      \field{number}{1}
+      \field{title}{В поисках пятиточечного условия Александровского типа}
+      \field{volume}{29}
+      \field{year}{2017}
+      \field{pages}{296\bibrangedash 298}
+      \range{pages}{3}
+    \endentry
+    \entry{petrunin2020}{book}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{7}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Assoc. Math. Res. Monogr.}
+      \field{title}{PIGTIKAL (puzzles in geometry that I know and love)}
+      \field{volume}{2}
+      \field{year}{2020}
+    \endentry
+    \entry{petrunin2023pure}{book}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{8}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-3-031-39161-3; 978-3-031-39162-0}
+      \field{series}{SpringerBriefs in Mathematics}
+      \field{title}{Pure metric geometry}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.1007/978-3-031-39162-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-031-39162-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-031-39162-0
+      \endverb
+    \endentry
+    \entry{pizzetti}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ccd8e6da3f505b873049a24b95a65071}{%
+           family={Pizzetti},
+           familyi={P\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccd8e6da3f505b873049a24b95a65071}
+      \strng{fullhash}{ccd8e6da3f505b873049a24b95a65071}
+      \strng{bibnamehash}{ccd8e6da3f505b873049a24b95a65071}
+      \strng{authorbibnamehash}{ccd8e6da3f505b873049a24b95a65071}
+      \strng{authornamehash}{ccd8e6da3f505b873049a24b95a65071}
+      \strng{authorfullhash}{ccd8e6da3f505b873049a24b95a65071}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Atti della Reale Accademia dei Lincei, Rendiconti (5). Classe di Scienze Fisiche, Matematiche e Naturali}
+      \field{number}{1}
+      \field{title}{Paragone fra due triangoli a lati uguali}
+      \field{volume}{16}
+      \field{year}{1907}
+      \field{pages}{6\bibrangedash 11}
+      \range{pages}{6}
+    \endentry
+    \entry{plaut:dimension}{article}{}
+      \name{author}{1}{}{%
+        {{hash=5072b1714b4b5828d469feee8b5018d9}{%
+           family={Plaut},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{fullhash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{bibnamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authorbibnamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authornamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authorfullhash}{5072b1714b4b5828d469feee8b5018d9}
+      \field{extraname}{1}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1050-6926}
+      \field{journaltitle}{J. Geom. Anal.}
+      \field{number}{1}
+      \field{title}{Spaces of {W}ald curvature bounded below}
+      \field{volume}{6}
+      \field{year}{1996}
+      \field{pages}{113\bibrangedash 134}
+      \range{pages}{22}
+      \verb{doi}
+      \verb 10.1007/BF02921569
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02921569
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02921569
+      \endverb
+    \endentry
+    \entry{plaut:survey}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=5072b1714b4b5828d469feee8b5018d9}{%
+           family={Plaut},
+           familyi={P\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{fullhash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{bibnamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authorbibnamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authornamehash}{5072b1714b4b5828d469feee8b5018d9}
+      \strng{authorfullhash}{5072b1714b4b5828d469feee8b5018d9}
+      \field{extraname}{2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Handbook of geometric topology}
+      \field{title}{Metric spaces of curvature {$\geq k$}}
+      \field{year}{2002}
+      \field{pages}{819\bibrangedash 898}
+      \range{pages}{80}
+    \endentry
+    \entry{pogorelov}{book}{}
+      \name{author}{1}{}{%
+        {{hash=674cd0b75cc3d0ebd72f9289b497ce24}{%
+           family={Погорелов},
+           familyi={П\bibinitperiod},
+           given={А.\bibnamedelimi В.},
+           giveni={А\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{fullhash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{bibnamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authorbibnamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authornamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authorfullhash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \field{extraname}{1}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{langid}{russian}
+      \field{series}{Монографии института математики, вып. II}
+      \field{title}{Однозначная определённость общих выпуклых поверхностей}
+      \field{year}{1952}
+    \endentry
+    \entry{pogorelov1969}{book}{}
+      \name{author}{1}{}{%
+        {{hash=674cd0b75cc3d0ebd72f9289b497ce24}{%
+           family={Погорелов},
+           familyi={П\bibinitperiod},
+           given={А.\bibnamedelimi В.},
+           giveni={А\bibinitperiod\bibinitdelim В\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{fullhash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{bibnamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authorbibnamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authornamehash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \strng{authorfullhash}{674cd0b75cc3d0ebd72f9289b497ce24}
+      \field{extraname}{2}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: A. V. Pogorelov. Extrinsic geometry of convex surfaces. Vol. 35. Translations of Mathematical Monographs. 1973.]}
+      \field{langid}{russian}
+      \field{title}{Внешняя геометрия выпуклых поверхностей}
+      \field{year}{1969}
+    \endentry
+    \entry{reshetnyak}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e327612b6d5b361134c2d70cd5fbc9f8}{%
+           family={Решетняк},
+           familyi={Р\bibinitperiod},
+           given={Ю.\bibnamedelimi Г.},
+           giveni={Ю\bibinitperiod\bibinitdelim Г\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \strng{fullhash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \strng{bibnamehash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \strng{authorbibnamehash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \strng{authornamehash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \strng{authorfullhash}{e327612b6d5b361134c2d70cd5fbc9f8}
+      \field{sortinit}{r}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Матем. сб.}
+      \field{langid}{russian}
+      \field{number}{3}
+      \field{title}{К теории пространств кривизны, не большей $K$}
+      \field{volume}{52(94)}
+      \field{year}{1960}
+      \field{pages}{789\bibrangedash 798}
+      \range{pages}{10}
+    \endentry
+    \entry{reshetnyak1993}{incollection}{}
+      \name{author}{1}{}{%
+        {{hash=9c5f5fc3c05085bd507f32e1d5eb5d50}{%
+           family={Reshetnyak},
+           familyi={R\bibinitperiod},
+           given={Yu.\bibnamedelimi G.},
+           giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer, Berlin}%
+      }
+      \strng{namehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{fullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{bibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authorbibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authornamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \strng{authorfullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
+      \field{sortinit}{r}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Geometry, {IV}}
+      \field{isbn}{3-540-54701-0}
+      \field{series}{Encyclopaedia Math. Sci.}
+      \field{title}{Two-dimensional manifolds of bounded curvature}
+      \field{volume}{70}
+      \field{year}{1993}
+      \field{pages}{3\bibrangedash 163\bibrangessep 245\bibrangedash 250}
+      \range{pages}{167}
+      \verb{doi}
+      \verb 10.1007/978-3-662-02897-1\_1
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/978-3-662-02897-1_1
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/978-3-662-02897-1_1
+      \endverb
+    \endentry
+    \entry{sabitov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=65714941b3a17c568fe17d16595054aa}{%
+           family={Sabitov},
+           familyi={S\bibinitperiod},
+           given={I.\bibnamedelimi Kh.},
+           giveni={I\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+      }
+      \strng{namehash}{65714941b3a17c568fe17d16595054aa}
+      \strng{fullhash}{65714941b3a17c568fe17d16595054aa}
+      \strng{bibnamehash}{65714941b3a17c568fe17d16595054aa}
+      \strng{authorbibnamehash}{65714941b3a17c568fe17d16595054aa}
+      \strng{authornamehash}{65714941b3a17c568fe17d16595054aa}
+      \strng{authorfullhash}{65714941b3a17c568fe17d16595054aa}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Siberian Math. J.}
+      \field{number}{4}
+      \field{title}{Around the proof of the {L}egendre--{C}auchy lemma on convex polygons}
+      \field{volume}{45}
+      \field{year}{2004}
+      \field{pages}{740\bibrangedash 762}
+      \range{pages}{23}
+    \endentry
+    \entry{schoenberg-zaremba}{article}{}
+      \name{author}{2}{}{%
+        {{hash=9ecc395970b775ea97b39a9c1b5fd4e1}{%
+           family={Schoenberg},
+           familyi={S\bibinitperiod},
+           given={I.\bibnamedelimi J.},
+           giveni={I\bibinitperiod\bibinitdelim J\bibinitperiod}}}%
+        {{hash=c81ed0b07f6e125f049edd5d45a2b104}{%
+           family={Zaremba},
+           familyi={Z\bibinitperiod},
+           given={S.\bibnamedelimi C.},
+           giveni={S\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+      }
+      \strng{namehash}{061477f22c4fac2c9d3eb972aa01574a}
+      \strng{fullhash}{061477f22c4fac2c9d3eb972aa01574a}
+      \strng{bibnamehash}{061477f22c4fac2c9d3eb972aa01574a}
+      \strng{authorbibnamehash}{061477f22c4fac2c9d3eb972aa01574a}
+      \strng{authornamehash}{061477f22c4fac2c9d3eb972aa01574a}
+      \strng{authorfullhash}{061477f22c4fac2c9d3eb972aa01574a}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0008-414X}
+      \field{journaltitle}{Canadian J. Math.}
+      \field{title}{On {C}auchy's lemma concerning convex polygons}
+      \field{volume}{19}
+      \field{year}{1967}
+      \field{pages}{1062\bibrangedash 1071}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.4153/CJM-1967-096-4
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.4153/CJM-1967-096-4
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.4153/CJM-1967-096-4
+      \endverb
+    \endentry
+    \entry{sevare}{article}{}
+      \name{author}{1}{}{%
+        {{hash=7dac69264dd2c8263424744836d3da22}{%
+           family={Savaré},
+           familyi={S\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{7dac69264dd2c8263424744836d3da22}
+      \strng{fullhash}{7dac69264dd2c8263424744836d3da22}
+      \strng{bibnamehash}{7dac69264dd2c8263424744836d3da22}
+      \strng{authorbibnamehash}{7dac69264dd2c8263424744836d3da22}
+      \strng{authornamehash}{7dac69264dd2c8263424744836d3da22}
+      \strng{authorfullhash}{7dac69264dd2c8263424744836d3da22}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1631-073X}
+      \field{journaltitle}{C. R. Math. Acad. Sci. Paris}
+      \field{number}{3}
+      \field{title}{Gradient flows and diffusion semigroups in metric spaces under lower curvature bounds}
+      \field{volume}{345}
+      \field{year}{2007}
+      \field{pages}{151\bibrangedash 154}
+      \range{pages}{4}
+      \verb{doi}
+      \verb 10.1016/j.crma.2007.06.018
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/j.crma.2007.06.018
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/j.crma.2007.06.018
+      \endverb
+    \endentry
+    \entry{sharafutdinov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=e95359bfb1a7e70a68b32715b18c7299}{%
+           family={Шарафутдинов},
+           familyi={Ш\bibinitperiod},
+           given={В.\bibnamedelimi А.},
+           giveni={В\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{e95359bfb1a7e70a68b32715b18c7299}
+      \strng{fullhash}{e95359bfb1a7e70a68b32715b18c7299}
+      \strng{bibnamehash}{e95359bfb1a7e70a68b32715b18c7299}
+      \strng{authorbibnamehash}{e95359bfb1a7e70a68b32715b18c7299}
+      \strng{authornamehash}{e95359bfb1a7e70a68b32715b18c7299}
+      \strng{authorfullhash}{e95359bfb1a7e70a68b32715b18c7299}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[English translation: V. A. Sharafutdinov, “Convex sets in a manifold of nonnegative curvature”, \emph{Math. Notes}, 26:1 (1979), 556--560]}
+      \field{journaltitle}{Мат. заметки}
+      \field{langid}{russian}
+      \field{number}{1}
+      \field{title}{О выпуклых множествах в многообразии неотрицательной кривизны}
+      \field{volume}{26}
+      \field{year}{1979}
+      \field{pages}{129\bibrangedash 136}
+      \range{pages}{8}
+    \endentry
+    \entry{shiohama}{book}{}
+      \name{author}{1}{}{%
+        {{hash=398aa6d054bbe50d48e971de5eb1e83e}{%
+           family={Shiohama},
+           familyi={S\bibinitperiod},
+           given={K.},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \strng{fullhash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \strng{bibnamehash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \strng{authorbibnamehash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \strng{authornamehash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \strng{authorfullhash}{398aa6d054bbe50d48e971de5eb1e83e}
+      \field{sortinit}{s}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{series}{Lecture Notes Series}
+      \field{title}{An introduction to the geometry of {A}lexandrov spaces}
+      \field{volume}{8}
+      \field{year}{1993}
+    \endentry
+    \entry{Spanier}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3574f5197bbc04a0032644afdf20019c}{%
+           family={Spanier},
+           familyi={S\bibinitperiod},
+           given={Edwin\bibnamedelima H.},
+           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \strng{namehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{fullhash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{bibnamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authorbibnamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authornamehash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{authorfullhash}{3574f5197bbc04a0032644afdf20019c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Algebraic topology}
+      \field{year}{1981}
+    \endentry
+    \entry{tabacnikov-fuks}{book}{}
+      \name{author}{2}{}{%
+        {{hash=dd49876aaa4a7b0d32eec0ebf9b06d0e}{%
+           family={Fuchs},
+           familyi={F\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+        {{hash=cc7450836f95de00e4212d503f5d5a7d}{%
+           family={Tabachnikov},
+           familyi={T\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{a26da1514a62ba966da58a5c76509af1}
+      \strng{fullhash}{a26da1514a62ba966da58a5c76509af1}
+      \strng{bibnamehash}{a26da1514a62ba966da58a5c76509af1}
+      \strng{authorbibnamehash}{a26da1514a62ba966da58a5c76509af1}
+      \strng{authornamehash}{a26da1514a62ba966da58a5c76509af1}
+      \strng{authorfullhash}{a26da1514a62ba966da58a5c76509af1}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[Русский перевод: Табачников, С. Л., Фукс, Д. Б. «Математический дивертисмент» 2016]}
+      \field{isbn}{978-0-8218-4316-1}
+      \field{note}{Thirty lectures on classic mathematics}
+      \field{title}{Mathematical omnibus}
+      \field{year}{2007}
+      \verb{doi}
+      \verb 10.1090/mbk/046
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/mbk/046
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/mbk/046
+      \endverb
+    \endentry
+    \entry{terng-thorbergsson}{article}{}
+      \name{author}{2}{}{%
+        {{hash=67eed592b5493912978f6fc174ac7830}{%
+           family={Terng},
+           familyi={T\bibinitperiod},
+           given={C.-L.},
+           giveni={C\bibinithyphendelim L\bibinitperiod}}}%
+        {{hash=9d7a29fc7d9a6a2a8e0431f59b330bab}{%
+           family={Thorbergsson},
+           familyi={T\bibinitperiod},
+           given={G.},
+           giveni={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \strng{fullhash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \strng{bibnamehash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \strng{authorbibnamehash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \strng{authornamehash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \strng{authorfullhash}{af7831fdea8525461cd03ca83fe5fa9a}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-040X}
+      \field{journaltitle}{J. Differential Geom.}
+      \field{number}{3}
+      \field{title}{Submanifold geometry in symmetric spaces}
+      \field{volume}{42}
+      \field{year}{1995}
+      \field{pages}{665\bibrangedash 718}
+      \range{pages}{54}
+      \verb{urlraw}
+      \verb http://projecteuclid.org/euclid.jdg/1214457552
+      \endverb
+      \verb{url}
+      \verb http://projecteuclid.org/euclid.jdg/1214457552
+      \endverb
+    \endentry
+    \entry{thurston}{article}{}
+      \name{author}{1}{}{%
+        {{hash=545743c5717cd961d412960dabb2f3da}{%
+           family={Thurston},
+           familyi={T\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{545743c5717cd961d412960dabb2f3da}
+      \strng{fullhash}{545743c5717cd961d412960dabb2f3da}
+      \strng{bibnamehash}{545743c5717cd961d412960dabb2f3da}
+      \strng{authorbibnamehash}{545743c5717cd961d412960dabb2f3da}
+      \strng{authornamehash}{545743c5717cd961d412960dabb2f3da}
+      \strng{authorfullhash}{545743c5717cd961d412960dabb2f3da}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1050-6926}
+      \field{journaltitle}{J. Geom. Anal.}
+      \field{number}{3}
+      \field{title}{{CAT}(0) 4-manifolds possessing a single tame point are {E}uclidean}
+      \field{volume}{6}
+      \field{year}{1996}
+      \field{pages}{475\bibrangedash 494 (1997)}
+      \range{pages}{-1}
+      \verb{doi}
+      \verb 10.1007/BF02921662
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/BF02921662
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/BF02921662
+      \endverb
+    \endentry
+    \entry{toponogov-globalization+splitting}{article}{}
+      \name{author}{1}{}{%
+        {{hash=39598055020edcc2f9890afa5ebcb769}{%
+           family={Топоногов},
+           familyi={Т\bibinitperiod},
+           given={В.\bibnamedelimi А.},
+           giveni={В\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{39598055020edcc2f9890afa5ebcb769}
+      \strng{fullhash}{39598055020edcc2f9890afa5ebcb769}
+      \strng{bibnamehash}{39598055020edcc2f9890afa5ebcb769}
+      \strng{authorbibnamehash}{39598055020edcc2f9890afa5ebcb769}
+      \strng{authornamehash}{39598055020edcc2f9890afa5ebcb769}
+      \strng{authorfullhash}{39598055020edcc2f9890afa5ebcb769}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Успехи математических наук}
+      \field{langid}{russian}
+      \field{number}{1 (85)}
+      \field{title}{Римановы пространства кривизны, ограниченной снизу}
+      \field{volume}{14}
+      \field{year}{1959}
+      \field{pages}{87\bibrangedash 130}
+      \range{pages}{44}
+    \endentry
+    \entry{toyoda}{article}{}
+      \name{author}{1}{}{%
+        {{hash=ce9324eb17dbf33ba25e6a09af7d4a6d}{%
+           family={Toyoda},
+           familyi={T\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \strng{fullhash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \strng{bibnamehash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \strng{authorbibnamehash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \strng{authornamehash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \strng{authorfullhash}{ce9324eb17dbf33ba25e6a09af7d4a6d}
+      \field{sortinit}{t}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2299-3274}
+      \field{journaltitle}{Anal. Geom. Metr. Spaces}
+      \field{number}{1}
+      \field{title}{An intrinsic characterization of five points in a {${\rm CAT}(0)$} space}
+      \field{volume}{8}
+      \field{year}{2020}
+      \field{pages}{114\bibrangedash 165}
+      \range{pages}{52}
+      \verb{doi}
+      \verb 10.1515/agms-2020-0111
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1515/agms-2020-0111
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1515/agms-2020-0111
+      \endverb
+    \endentry
+    \entry{volkov}{article}{}
+      \name{author}{1}{}{%
+        {{hash=50e9c567c5541a0ba58d69a817ea20f0}{%
+           family={Волков},
+           familyi={В\bibinitperiod},
+           given={Ю.\bibnamedelimi А.},
+           giveni={Ю\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{fullhash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{bibnamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authorbibnamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authornamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authorfullhash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \field{extraname}{1}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Зап. научн. сем. ПОМИ}
+      \field{langid}{russian}
+      \field{title}{Существование многогранника с данной разверткой}
+      \field{year}{2018}
+      \field{pages}{50\bibrangedash 78}
+      \range{pages}{29}
+    \endentry
+    \entry{volkov1968}{article}{}
+      \name{author}{1}{}{%
+        {{hash=50e9c567c5541a0ba58d69a817ea20f0}{%
+           family={Волков},
+           familyi={В\bibinitperiod},
+           given={Ю.\bibnamedelimi А.},
+           giveni={Ю\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{fullhash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{bibnamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authorbibnamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authornamehash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \strng{authorfullhash}{50e9c567c5541a0ba58d69a817ea20f0}
+      \field{extraname}{2}
+      \field{sortinit}{v}
+      \field{sortinithash}{afb52128e5b4dc4b843768c0113d673b}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{addendum}{[Translated in Alexandrov, A. D., \textit{Convex polyhedra,} 2005]}
+      \field{journaltitle}{Украин. геом. сб.}
+      \field{langid}{russian}
+      \field{number}{5-6}
+      \field{title}{Оценка деформации выпуклой поверхности в зависимости от изменения ее внутренней метрики}
+      \field{year}{1968}
+      \field{pages}{44\bibrangedash 69}
+      \range{pages}{26}
+    \endentry
+    \entry{zalgaller}{article}{}
+      \name{author}{1}{}{%
+        {{hash=d3f012369875e4766d5d2e190172d950}{%
+           family={Залгаллер},
+           familyi={З\bibinitperiod},
+           given={В.\bibnamedelimi А.},
+           giveni={В\bibinitperiod\bibinitdelim А\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {russian}%
+      }
+      \strng{namehash}{d3f012369875e4766d5d2e190172d950}
+      \strng{fullhash}{d3f012369875e4766d5d2e190172d950}
+      \strng{bibnamehash}{d3f012369875e4766d5d2e190172d950}
+      \strng{authorbibnamehash}{d3f012369875e4766d5d2e190172d950}
+      \strng{authornamehash}{d3f012369875e4766d5d2e190172d950}
+      \strng{authorfullhash}{d3f012369875e4766d5d2e190172d950}
+      \field{sortinit}{z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{УМН}
+      \field{langid}{russian}
+      \field{number}{5(71)}
+      \field{title}{О деформациях многоугольника на сфере}
+      \field{volume}{11}
+      \field{year}{1956}
+      \field{pages}{177\bibrangedash 178}
+      \range{pages}{2}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
