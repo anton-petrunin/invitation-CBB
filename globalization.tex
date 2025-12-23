@@ -36,7 +36,7 @@ Assume that the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
 holds for any hinge $\hinge x p q$ with 
-$\dist{x}{y}{}+\dist{x}{q}{}
+$\dist{x}{p}{}+\dist{x}{q}{}
 <
 \frac{2}{3}\cdot\ell$.
 Then the comparison
@@ -184,7 +184,7 @@ and since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ 
 
 By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
 %From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar},
-Since $a_n+b_n=r_n<l$ and $a_n\le b_n$ it holds that
+Since $a_n+b_n=r_n<\ell$ and $a_n\le b_n$ it holds that
  $a_n\le \tfrac12\cdot\ell$.
 Hence
 \[
@@ -227,7 +227,7 @@ therefore,
 Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \ref{eq:thm:=def-loc*}.
 \qeds
 
-\section{On general case}
+\section{On the general case}
 
 \begin{thm}{Theorem}\label{thm:globalization+}
 Any locally $\Alex\kappa$ space is $\Alex\kappa$.
@@ -324,8 +324,8 @@ Its two-dimensional case was proved by Paolo Pizzetti \cite{pizzetti} and
 rediscovered by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref??
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
-They prove globalization \textit{complete length spaces}.
-Another version for \textit{noncomplete, but geodesic spaces} was proved by the third author \cite{petrunin:globalization}.
+They prove globalization for \textit{complete length spaces}.
+Another version for \textit{noncomplete but geodesic spaces} is due to the third author \cite{petrunin:globalization}.
 
 
 We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality.

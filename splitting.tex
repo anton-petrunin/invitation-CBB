@@ -50,7 +50,7 @@ In other words, a line is a geodesic defined on the real line $\RR$.
 Let $\gamma$ be a line in a metric space $\spc{X}$.
 Show that for any point $x$ we have
 \[\bus_+(x)+\bus_-(x)\ge 0\]
-where, $\bus_+$ and $\bus_-$, are the Busemann functions asociated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively.
+where, $\bus_+$ and $\bus_-$, are the Busemann functions associated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively.
 \end{thm}
 
 
@@ -145,7 +145,7 @@ both $\bus_+$ and $\bus_-$ are concave.
 
 By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{A}$.
 On the other hand, by \ref{comp-kappa}, 
-$f(t)=\distfun_x^2\circ\gamma(t)$ 
+$f\:t\mapsto\distfun_x^2\circ\gamma(t)$
 is $2$-concave.
 In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$.  Therefore, for all large $t$
 \[
@@ -199,7 +199,7 @@ Consider the level set $\spc{A}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
 it is a closed convex subset of $\spc{A}$, and therefore forms an Alexandrov space.
 Consider the map $h\:\spc{A}'\times \RR\to \spc{A}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
-Applying \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is distance non-expanding and non-contracting at the same time; that is, $h$ is an isometry.
+Applying \ref{lem:dist-estimate} for $\GF_{\bus_+}^t$ and $\GF_{\bus_-}^t$ shows that $h$ is distance nonexpanding and noncontracting at the same time; that is, $h$ is an isometry.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:cone-CBB}
@@ -207,7 +207,7 @@ Suppose $\spc{X}$ is a complete geodesic space.
 Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
 \end{thm}
 
-Recall that according our definition any circle or closed real interval is $\Alex1$.
+Recall that according to our definition any circle or closed real interval is $\Alex1$.
 Therefore, the condition $\diam\spc{X}\le \pi$ is necessary.
 Nevertheless, according to \ref{ex:RisCBB(1)}, most of $\Alex1$ spaces have diameter at most $\pi$.
 
@@ -256,7 +256,7 @@ By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such 
 \dd_p\distfun_{b_n}(w)=-\langle\dir{p}{b_n},w\rangle
 \]
 for any $w\in\T_p$.
-Furthemore, we can assume that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
+Furthermore, we can assume that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
 
 Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun_{a_n}+|v|\cdot\distfun_{b_n}.\]
@@ -506,7 +506,7 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 \section{Linear dimension}
 
 Let $\spc{A}$ be an Alexandrov space.
-We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound on integers $m$ such that
+We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound of integers $m$ such that
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
 If not stated otherwise, dimension means linear dimension.
@@ -530,7 +530,7 @@ $\Lin_{p'}\ni \dir{p'}{x_i}$ for any $i$.
 Let us identify $\EE^m$ with a subspace of $\Lin_{p'}$ spanned by $\dir{p'}{x_1},\dots,\dir{p'}{x_n}$.
 Note that $m\le \LinDim\spc{A}$.
 
-Set $\tilde p'=0\in \EE^m$ and $\tilde x_i=\dist{p'}{x_n}{}\cdot\dir{p'}{x_n}\in \EE^m$ for every $i$.
+Set $\tilde p'=0\in \EE^m$ and $\tilde x_i=\dist{p'}{x_i}{}\cdot\dir{p'}{x_i}\in \EE^m$ for every $i$.
 Note that 
 \[|\tilde p'-\tilde x_i|_{\EE^m}=| p'- x_i|_{\spc{A}}\]
 for every $i$.
@@ -617,7 +617,7 @@ that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such t
 \mangle\hinge pyz\le \alpha+\eps.\]
 Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$, and Menger's lemma (\ref{lem:mid>geod}) finishes the proof.
 
-Choose a sequence of small positive numbers $r_n\to0$
+Choose a sequence of small positive numbers $r_n\to0$.
 Consider sequences $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
 Let $m_n$ be a midpoint of $[x_n\,y_n]$.
 %??? we use here that the directions $\xi=\dir px$ and $\zeta=\dir py$ are not opposite???
@@ -656,7 +656,7 @@ Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that it 
 \section{Right-inverse theorem}
 
 \begin{thm}{Right-inverse theorem}\label{thm:right-inverse}
-Suppose $p,a_0,\dots,a_m$ be points in an Alexandrov space $\spc{A}$ such that
+Suppose $p,a_0,\dots,a_m$ are points in an Alexandrov space $\spc{A}$ such that
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
@@ -734,7 +734,7 @@ Show that $\T_p\spc{A}\iso \EE^m$ for points $p$ in a dense G-delta set of point
 \section{Distance chart}
 
 \begin{thm}{Theorem}\label{thm:dist-chart}
-Suppose $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{A}$ such
+Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
@@ -780,7 +780,7 @@ for any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$.
 
 \smallskip
 
-\noindent Further, suppose $\dim \spc{A}=m<\infty$.
+\noindent Further, suppose $\LinDim \spc{A}=m<\infty$.
 
 \smallskip
 
@@ -837,8 +837,8 @@ A more exact statement for $\Alex\kappa$ spaces is given in \ref{inq:BG+}.
 
 
 \begin{thm}[!]{Exercise}\label{ex:BG}
-Let $\spc{A}$ be an $\Alex{-1}$ space.
-Suppose $\spc{A}=m<\infty$.
+Let $\spc{A}$ be a finite-dimensional $\Alex{-1}$ space;
+so $\LinDim\spc{A}=m<\infty$.
 Show that
 \[\vol \oBall(p,r)\le \omega_m\cdot(\sinh r)^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
@@ -878,7 +878,7 @@ By the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}),
 \[\HausDim\spc{A}\le m.\]
 
 Since $\spc{A}$ is proper (\ref{ex:diam-compact:proper}),
-Szpilrajn's theorem, implies that
+Szpilrajn's theorem implies that
 \[\TopDim\spc{A}\le \HausDim\spc{A}\le m.\]
 Finally, by the right-inverse theorem (\ref{thm:right-inverse}), $m\le\TopDim\spc{A}$.
 \qeds
@@ -918,11 +918,11 @@ The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 Given a point $p$ in an $m$-dimensional $\Alex\kappa$ space,
 consider the function
 \[v\:r\z\to\vol_m\oBall(p,r);\]
-denote by $\tilde v(r)$ the volume of $r$ ball in $\MM^m(\kappa)$.
+denote by $\tilde v(r)$ the volume of $r$-ball in $\MM^m(\kappa)$.
 Then 
 \[v(r)\le \tilde v(r)\]
 for any $r>0$.
-Morevoer, the function
+Moreover, the function
 \[r\mapsto \frac{v(r)}{\tilde v(r)}\] is nonincreasing.
 If $\kappa>0$, then one has to assume that $r<\tfrac\pi{\sqrt\kappa}$.
 \end{thm}

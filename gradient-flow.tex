@@ -8,7 +8,7 @@ Here we define the gradient flow and prove the distance estimates.
 
 \section{Velocity of curve}\label{Velocity of curve}
 
-Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
+Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$, and let $p=\alpha(t_0)$.
 If for any choice of 
 geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
@@ -59,7 +59,7 @@ The statement follows since $s>0$ can be chosen arbitrarily.
 
 The same argument is applicable if in place of $(f\circ\alpha)^+(0)$
 we use any limit of $\tfrac1{\eps_n}\cdot [f\circ\alpha(\eps_n)-f(p)]$ for a sequence $\eps_n\to 0+$.
-It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is defined and equals to $(\dd_pf)(\alpha^+(0))$.
+It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is defined and equals $(\dd_pf)(\alpha^+(0))$.
 \qeds
 
 
@@ -199,7 +199,7 @@ It is based on the notion of \index{self-contracting curves}\emph{self-contracti
 \begin{thm}{Exercise}\label{ex:elf-contracting}
 Let $\alpha$ be a gradient curve of a concave function on an Alexandrov space.
 Show that
-\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{A}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{A}}.\]
+\[\dist{\alpha(t_1)}{\alpha(t_3)}{\spc{A}}\ge \dist{\alpha(t_2)}{\alpha(t_3)}{\spc{A}}\]
 if $t_1\le t_2\le t_3$.
 \end{thm}
 
@@ -318,7 +318,7 @@ so it is appropriate to use term \textit{exponent} for $\gexp$.
 Note that $f''\le 1$.
 Since the space is proper we can choose a limit in \ref{eq:gexp}.
 
-Let $\gamma$ be a geodesic that stats at $p$.
+Let $\gamma$ be a geodesic that starts at $p$.
 Observe that $t\mapsto \gamma\circ\ln(t)$ is an $f$-gradient curve.
 By the first distance estimate, we have that $\GF^t_{f}$ is an $e^t$-Lipschitz.
 This implies that any limit in \ref{eq:gexp} has the same value;
@@ -331,9 +331,8 @@ Again, since $\GF^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is short.
 
 The idea to use gradient flows in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
 The gradient flow was introduced by the third author to construct quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}.
-It turned out that gradient flow and gradient exponent are better tools than quiasigeodesics.
+It turned out that gradient flow and gradient exponent are better tools than quasigeodesics.
 These tools quickly found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
-
 
 For a general lower curvature bound $\kappa$, the construction of gradient exponent has to be modified;
 it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of  the modified distance function.
@@ -354,7 +353,7 @@ The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the
 The following exercise is ment to show that this technique can prove something nontrivial even for Riemannian manifolds.
 
 \begin{thm}{Exercise}\label{ex:short-onto}
-Let $(M,g)$ be a complete $m$-dimensional Riemannian with sectional curvature at least $1$.
+Let $(M,g)$ be a complete $m$-dimensional Riemannian manifold with sectional curvature at least $1$.
 Assume $M$ is not homeomorphic to $\SSS^m$.
 Show that there is a short onto map $\SSS^m\to (M,g)$.
 \end{thm}

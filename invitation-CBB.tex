@@ -26,13 +26,14 @@ pdfauthor={\theauthors}
 
 %\overfullrule=100mm
 \def\red{\color{red}}
-\begin{document}
 
-\spell{\pagestyle{empty}\renewcommand\includegraphics[2][{}]{}\def\emph{\textit}\renewcommand\footnote[1]{\ (#1)}\renewcommand\z{}\renewcommand\section[1]{SECTION. {#1} SECTION.}}{}
+\spell{\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{ [PICTURE] }\RenewEnviron{figure*}[1][]{ [PICTURE] }\RenewEnviron{wrapfigure}[1][]{ [PICTURE] }\RenewEnviron{Figure}[1][]{ [PICTURE] }\usepackage{emptypage}\pagestyle{empty}\makeatother\usepackage[none]{hyphenat}\def\emph{\textit}\renewcommand{\footnote}[1]{\textup{\ (#1)}}\renewcommand{\frac}[2]{(#1)/(#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}}{}
+
+\begin{document}
 
 \frontmatter
 \title{\thetitle}
-\author{Vitali Kapovitch,\\ Nina Lebedeva, and\\ Anton Petrunin}
+\author{Vitali Kapovitch,\\Nina Lebedeva,\\and\\Anton Petrunin}
 \date{}
 \maketitle
 \thispagestyle{empty}
@@ -75,6 +76,9 @@ pdfauthor={\theauthors}
 \include{sols}%%%%%%%%%%%%%%%%
 
 {
+\cleardoublepage
+\phantomsection
+\addcontentsline{toc}{chapter}{\indexname}
 \input{invitation-CBB.ind}
 
 \def\emph{\textit}

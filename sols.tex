@@ -5,7 +5,7 @@
 \parbf{\ref{ex:net}};
 \ref{SHORT.ex:net:finite}.
 Suppose $X$ is compact.
-Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls have a finite subcover.
+Then for any $\eps>0$ any cover of $X$ by open $\eps$-balls has a finite subcover.
 Note that the centers of these balls form an $\eps$-net of $X$.
 
 Now suppose $X$ has a finite $\eps$-net.
@@ -104,7 +104,7 @@ The statement follows since $\eps>0$ is arbitrary.
 
 \parbf{\ref{ex:generalized-selection}.}
 Since the space is proper, it is separable; 
-that is, we can choose an countable everywhere dense set $\{x_1,x_2,\dots\}$.
+that is, we can choose a countable everywhere dense set $\{x_1,x_2,\dots\}$.
 
 Let $A_1,A_2,\dots$ be a sequence of closed sets.
 Applying the diagonal procedure, we can pass to a subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$;
@@ -199,7 +199,7 @@ Let $\spc{X}$ be obtained by identifying all endpoints of the intervals.
 Let $\spc{Y}$ be constructed in the same way but skipping the interval of length $1.5$.
 
 \parbf{\ref{ex:CBB+-}.} Note that we can assume that we have equality in all inequalities except one.
-In other words, we can asuume that equality holds in all inequalities except $\dist{y_1}{y_2}{}\le\dist{x_1}{x_2}{}$ or $\dist{q}{y_2}{}\ge\dist{p}{x_2}{}$.
+In other words, we can assume that equality holds in all inequalities except $\dist{y_1}{y_2}{}\le\dist{x_1}{x_2}{}$ or $\dist{q}{y_2}{}\ge\dist{p}{x_2}{}$.
 
 In the first case,
 \[
@@ -211,10 +211,10 @@ In the first case,
 \quad
 \angk  q{y_3}{y_1}= \angk  p{x_3}{x_1}.
 \]
-Thefore the comparison for $p,x_1,x_2,x_3$ implies the comparsion for $q,y_1,y_2,y_3$.
+Therefore, the comparison for $p,x_1,x_2,x_3$ implies the comparison for $q,y_1,y_2,y_3$.
 
 In the second case, let us argue by contradiction.
-Assume that the comparsion does not hold for $q,y_1,y_2,y_3$.
+Assume that the comparison does not hold for $q,y_1,y_2,y_3$.
 Show that
 \[\angk  q{y_1}{y_2}+\angk  q{y_2}{y_3}> \pi.\]
 Then show and use that
@@ -239,11 +239,11 @@ Hence
 
 \parbf{\ref{ex:(3+1)-expanding}.} For the only-if part consider the following two cases.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\le \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_3)$ that lie on the opposite sides of $[qy_2]$.
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_3)$ that lie on the opposite sides of $[qy_2]$.
 By the comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
 Therefore the obtained configuration meets all the conditions.
 
-If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose a model triangle $[qy_1y_2]\z=\modtrig(px_1x_2)$
+If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\le \pi$, then choose a model triangle $[qy_1y_2]\z=\modtrig(px_1x_2)$
 and take $y_3$ on the extension of $[y_1q]$ behind $q$ such that $\dist{q}{y_3}{}=\dist{p}{x_3}{}$.
 Then $\mangle \hinge q{y_2}{y_3}\ge \angk p{x_2}{x_3}$, therefore $\dist{y_2}{y_3}{}\ge \dist{x_2}{x_3}{}$.
 Further, $\dist{y_2}{y_3}{}=\dist{x_2}{p}{}+\dist{p}{x_3}{} \ge \dist{x_2}{x_3}{}$,
@@ -363,7 +363,7 @@ It is well known that all such norms are quadratic, and the statement follows.
 Choose a $\lambda$-concave function $f\:\II\to\RR$.
 Note that
 \[h\:t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2\]
-is concve,
+is concave,
 and it is sufficient to show that $h$ is one-sided differentiable.
 
 Choose $t_0\in \II$.
@@ -377,18 +377,11 @@ We can assume that $\lambda=0$, otherwise pass to the function $t\mapsto f(t)-\l
 
 Suppose that $f$ is defined at $t_0$.
 Since $f$ is defined on an open inteval, we can choose $a$ and $b$ such that $a<t_0<b$ and $f$ is defined on $[a,b]$.
-Suppose that $t\in [a,b]\setminus\{t_0\}$.
 Show and use that
 \begin{align*}
-t&>t_0
-&&\Longrightarrow
-&\frac{f(b)-f(t_0)}{b-t_0}&\le \frac{f(t)-f(t_0)}{t-t_0}\le \frac{f(a)-f(t_0)}{a-t_0},
-\\
-t&<t_0
-&&\Longrightarrow
-&\frac{f(b)-f(t_0)}{b-t_0}&\ge \frac{f(t)-f(t_0)}{t-t_0}\ge \frac{f(a)-f(t_0)}{a-t_0}.
+\frac{f(b)-f(t_0)}{b-t_0}&\le \frac{f(t)-f(t_0)}{t-t_0}\le \frac{f(a)-f(t_0)}{a-t_0}
 \end{align*}
-
+for any $t\in [a,b]\setminus\{t_0\}$.
 
 
 \parbf{\ref{ex:distfun-semiconcave}.}
@@ -443,7 +436,7 @@ two geodesics $[\tilde p\tilde z_0]$, $[\tilde q\tilde r]$ in $\mathbb{S}^2$ suc
 \\ 
 \dist{\tilde z_0}{\tilde q}{}&=\dist{z_0}{q}{},
 &  
-\dist{\tilde z_0}{\tilde r}{}&=\dist{z_0}{q}{},
+\dist{\tilde z_0}{\tilde r}{}&=\dist{z_0}{r}{},
 \end{align*}
 and 
 \[\mangle\hinge{\tilde z_0}{\tilde q}{\tilde p}
@@ -503,14 +496,13 @@ To prove the converse, reverse the steps in the argument.
 \parbf{\ref{ex:GHto-tangent}.}
 Let  $\spc{A}_n=\lambda_n\cdot\spc{A}$.
 Note that for any $n$ the space $\Sigma_p\spc{A}$ is identical to $\Sigma_{\iota_n(p)} \spc{A}_n$.
-In particular, we can identify isometrically $\T_p\spc{A}$ with $\T_{\iota_n(p)}(\lambda\cdot \spc{A})$.
+In particular, we can identify isometrically $\T_p\spc{A}$ with $\T_{\iota_n(p)}\spc{A}_n$.
 So for any geodesic $\gamma$ that starts at $p$, the vector $\gamma^+(0)$ corresponds to $\frac{1}{\lambda_n}\cdot(\iota_n\circ\gamma)^+(0)$.
 
-Consider the logarithm maps $f_n=\log_{\iota_n(p)}\:\spc{A}_n\to T_p\spc{A}$.
-We claim that this sequence of maps satisfies the assumptions in \ref{lem:almost-isom-pointed};
-the condition in \ref{SHORT.lem:almost-isom-pointed-basepoint} is evident.  
+Consider the logarithm maps $f_n=\log_{\iota_n(p)}\:\spc{A}_n\to \T_p\spc{A}$.
+We claim that this sequence of maps satisfies the assumptions in \ref{lem:almost-isom-pointed}.
 
-It is sufficient to check the conditions in \ref{SHORT.lem:almost-isom-pointed-b} and \ref{SHORT.lem:almost-isom-pointed-c} only for $R=1$. 
+The condition in \ref{SHORT.lem:almost-isom-pointed-basepoint} is evident, and it is sufficient to check the conditions in \ref{SHORT.lem:almost-isom-pointed-b} and \ref{SHORT.lem:almost-isom-pointed-c} only for $R=1$.
 
 Choose $\eps>0$.
 By compactness of $\Sigma_p$ we can find a finite $\eps$-net $\xi_1,\dots,\xi_N$ in $\Sigma_p$. Moreover, without loss of generality we can assume that these directions are geodesic;
@@ -562,7 +554,7 @@ Use \ref{SHORT.ex:d(distfun):<} to show that
 $f'(t)=-\cos\alpha(t)$, where $\alpha(t)$ is the angle between $\gamma$ and any geodesic from $\gamma(t)$ to $q$.
 We can choose a sequence $t_n\to 0$ such that 
 \[\lim_{n\to\infty}\alpha(t_n) \le \alpha_0.\]
-Consider a sequence of geodsics $[p\,\gamma(t_n)]$.
+Consider a sequence of geodesics $[p\,\gamma(t_n)]$.
 Since the space is proper, we can pass to its convergent subsequence.
 Its limit is a geodesic from $p$ to $q$, denote it by $[pq]$.
 
@@ -586,7 +578,7 @@ Hence the statement follows.
 If the space is proper, then the statement follows from \ref{ex:d(distfun):=} and \ref{ex:pi-angle}.
 
 To do the general case, let us argue by contradiction.
-By the assumption, we can shoose be a point $z$ on the extension of $[pq]$ behind $q$.
+By the assumption, we can choose a point $z$ on the extension of $[pq]$ behind~$q$.
 We can assume that $|v|=1$ and it is a direction of a geodesic, say $[px]$.
 
 Show that there is a sequence $x_n\in \left]px\right]$ such that $\dist{p}{x_n}{}\to0$ and
@@ -650,8 +642,7 @@ Apply \ref{ex:d(distfun):<} and the definition of gradient to show that
 \ge0
 \]
 for any $t<t_3$.
-Conclude that the function 
-$t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is noncreasing for $t\le t_3$.
+Conclude that the function $t\mapsto \distfun_{\alpha(t_3)}\circ\alpha(t)$ is nonincreasing for $t\le t_3$.
 
 \parbf{\ref{ex:mayer}.}
 Suppose $s>s_0$, then
@@ -689,16 +680,19 @@ Integrating this inequality, we get the second statement.
 
 \parbf{\ref{ex:short-onto}.}
 Choose a point $p\in M$.
-Observe that $\gexp_p^1$ provides a short map from the unit hemisphere $\SSS_+^m$ to $(M,g)$.
+Observe that $\gexp_p^1$ provides a short map from the unit hemisphere $\SSS_+^m$ onto $\cBall[p,\tfrac\pi2]_{(M,g)}$.
 Composing this map with the quotient map $\SSS^m\to \SSS_+^m$ brings us a short map $s\:\SSS^m\z\to(M,g)$.
 
 Since $M$ is not homeomorphic to the sphere,
-the diameter sphere theorem, $\diam (M,g)\le \tfrac\pi2$.
+the diameter sphere theorem implies that $\diam (M,g)\le \tfrac\pi2$.
+In particular, $\cBall[p,\tfrac\pi2]_{(M,g)}\z=(M,g)$.
 Hence, the map $s$ is onto.
 
-\parbf{\ref{ex:busemann-CBB}.} Apply \ref{ex:distfun-semiconcave}.
+\parbf{\ref{ex:busemann-CBB}.}
+Apply \ref{ex:distfun-semiconcave}.
 
-\parbf{\ref{ex:bus+bus}.} By the triangle inequality, 
+\parbf{\ref{ex:bus+bus}.}
+By the triangle inequality,
 \[\dist{\gamma(-t)}{x}{}+\dist{\gamma(t)}{x}{}-2\cdot t\ge 0\]
 for any $t\ge 0$.
 Passing to the limit as $t\to\infty$, we get the result.
@@ -706,7 +700,8 @@ Passing to the limit as $t\to\infty$, we get the result.
 \parbf{\ref{ex:oplus}}; \ref{SHORT.ex:oplus:a}.
 Show and use that $\proj_AB=\proj_BA$ is a one-point set.
 
-\parit{\ref{SHORT.ex:oplus:b}.} Suppose $\alpha$ is a rectifiable curve with the endpoints in $A$.
+\parit{\ref{SHORT.ex:oplus:b}.}
+Suppose $\alpha$ is a rectifiable curve with the endpoints in $A$.
 Show and use that the curve $\beta=\proj_A\circ\alpha$ has the same endpoints and
 \[\length\beta\le \length\alpha;\]
 moreover, in case of equality, $\beta=\alpha$.
@@ -721,7 +716,7 @@ Now choose a quadruple of points $p,x_1,x_2,x_3\in \spc{X}$;
 we will identify $\spc{X}$ with the unit sphere in $\Cone\spc{X}$.
 Suppose $\dist{p}{x_i}{}<\tfrac\pi2$ for any $i$.
 Consider the following points in the cone: $y_i=\tfrac1{\cos \dist{p}{x_i}{\spc{X}}}\cdot x_i$, and $q=p$.
-Show that $\EE^2$-comparison for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$ implies $\SSS^2$-comparsion for $p,x_1,x_2,x_3$ in $\spc{X}$.
+Show that $\EE^2$-comparison for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$ implies $\SSS^2$-comparison for $p,x_1,x_2,x_3$ in $\spc{X}$.
 Conclude that $\spc{X}$ is locally $\Alex1$. 
 Apply the globalization theorem (\ref{thm:globalization+}).
 
@@ -780,7 +775,7 @@ Let $N=\pack_\eps\SSS^{m-1}$.
 Observe that the unit sphere in $L$ is isometric to $\SSS^{m-1}$ and
 use it to show that $\pack_\eps\Sigma_p>N$ for some $\eps>0$.
 
-It follows that we can choose $N+1$ directions in $\Sigma_p$ at anles leger that $\eps$ from each other.
+It follows that we can choose $N+1$ directions in $\Sigma_p$ at angles larger than $\eps$ from each other.
 Use it to construct points $x_1,\dots,x_{N+1}$ such that
 $\angk p{x_i}{x_j}>\eps$ for $i\ne j$, and apply \ref{thm:n+1}.
 
@@ -893,7 +888,7 @@ Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of
 \mangle\hinge xy{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
 \]
 holds.
-Similarty, we get that at least one of the inequalities
+Similarly, we get that at least one of the inequalities
 \[
 \mangle\hinge yx{a_0}<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge yx{a_m}<\tfrac\pi2-\eps,
 \]
@@ -901,7 +896,7 @@ holds.
 
 Suppose our statement does not hold for $x$ and $y$ in a sufficiently small neighborhood of $p$.
 It follows that 
-\[\mangle\hinge yx{a_0}<\tfrac\pi2-\eps
+\[\mangle\hinge xy{a_0}<\tfrac\pi2-\eps
 \quad\text{and}\quad
 \mangle\hinge yx{a_0}<\tfrac\pi2-\eps.
 \eqlbl{eq:a0}
@@ -915,7 +910,7 @@ By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cd
 Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
 
 \parbf{\ref{ex:BG}.} 
-Follow the proof Bishop--Gromov inequality, plus prove the following two inequalities
+Follow the proof of the Bishop--Gromov inequality, plus prove the following two inequalities
 \begin{align*}
 \sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{A}}
 \\
@@ -937,7 +932,7 @@ Use this in addition to the arguments in \ref{thm:dim=dim}.
 
 \parit{\ref{SHORT.ex:finite-space-of-directions-dim}.}
 Apply \ref{ex:resporka} to show that $\LinDim\T_p\le\LinDim\spc{A}$ (argue as in \ref{prop:Tan-is-CBB(0)}).
-Further, apply \ref{thm:dim=dim} to show that $\LinDim\T_p\ge\LinDim\spc{A}$.
+Argue as in the finite-dimensional case in the proof of \ref{thm:dim=dim} to obtain that $\LinDim\T_p\ge\LinDim\spc{A}$.
 
 \parit{\ref{SHORT.ex:finite-tan:sigma}.}
 By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p$ such that $\dist{\xi}{\zeta}{\Sigma_p}<\pi$ there is a geodesic $[\xi\zeta]_{\Sigma_p}$.

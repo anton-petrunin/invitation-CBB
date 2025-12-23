@@ -2,7 +2,7 @@
 
 \chapter{Calculus}\label{chap:derivative}
 
-This lecture defines several notions related to the first-order derivatives in Alexandrov spaces, including space of directions, tangent space, differential, and gradient.
+This lecture defines several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
 
 \section{Space of directions} 
 \label{sec:space+directions}
@@ -66,14 +66,16 @@ Now let us extend several notions from Euclidean space to Euclidean cones.
 The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
 For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the \index{norm}\emph{norm} of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
-The \index{scalar product}\emph{scalar product} $\<v,w\>$
+The \index{angle measure}\emph{angle measure} \index{31@$\mangle(v,w)$ (angle measure)} $\mangle(v,w)$ and \index{32@$\<v,w\>$ (scalar product)} \index{scalar product}\emph{scalar product} $\<v,w\>$
 of $v=s\cdot p$ and $w=t\cdot q$
 is defined by 
-\[\<v,w\>
-\df |v|\cdot|w|\cdot\cos\theta
+\[
+\mangle(v,w)\df\min\{\pi, \dist{p}{q}{\spc{X}}\}
+\quad\text{and}\quad
+\<v,w\>
+\df |v|\cdot|w|\cdot\cos(\mangle(v,w)).
 \]
-where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
-The value $\theta$ is undefined if $v=\0$ or $w=\0$;
+The value $\mangle(v,w)$ is undefined if $v=\0$ or $w=\0$;
 in these cases we set $\<v,w\>\df0$.
 
 \begin{thm}{Exercise}\label{ex:geodesic-cone}
@@ -120,7 +122,7 @@ Let $p$ be a point in an Alexandrov space $\spc{A}$,
 and let $\lambda_n\to\infty$.
 Suppose $\Sigma_p$ is compact.
 Show that there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$.
-Moreover, the convergence can be shoosen so that for any geodesic $\gamma$ that starts at $p$, we have
+Moreover, the convergence can be choosen so that for any geodesic $\gamma$ that starts at $p$, we have
 \[\iota_n\circ\gamma(t/\lambda_n)\to t\cdot \gamma^+(0),\]
 where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambda_n\cdot\spc{A}$.
 \end{thm}
@@ -138,7 +140,7 @@ it is defined since $f$ is semiconcave.
 
 By the following exercise, $\dd_pf$ is a Lipschitz function on $\Sigma'_p$.
 It follows that the function $\dd_pf\:\Sigma_p'\to\RR$ can be uniquely extended to a Lipschitz function $\dd_pf\:\Sigma_p\to\RR$.
-Further, we can extend it to the tangent space by setting 
+Furthermore, we can extend it to the tangent space by setting
 \[(\dd_pf)(r\cdot \xi)
 \df
 r\cdot (\dd_pf)(\xi)\]
@@ -166,7 +168,7 @@ for any $v\in\T_p$.
 
 \begin{subthm}{ex:d(distfun):=}
 Suppose $\spc{A}$ is proper.
-Let $\Uparrow_p^q$ be the set of all direction of  geodesics from $p$ to $q$.
+Let $\Uparrow_p^q$ be the set of all directions of geodesics from $p$ to $q$.
 Show that
 \[\dd_p\distfun_q(v)=-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
@@ -220,7 +222,7 @@ Moreover, if $\dd_pf\le 0$, then we have $\nabla_pf=0$;
 otherwise, $\nabla_pf\z=s\cdot \overline{\xi}$, where 
 $s= \dd_pf(\overline{\xi})$
 and
-$\overline{\xi}\in \Sigma_p$ is the direction that maximize the value $\dd_pf(\xi)$ for $\xi\in \Sigma_p$.
+$\overline{\xi}\in \Sigma_p$ is the direction that maximizes the value $\dd_pf(\xi)$ for $\xi\in \Sigma_p$.
 \end{thm}
 
 
@@ -248,17 +250,17 @@ and the statement follows.
 
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make sense.
 The key lemma, however, says that in a certain sense $\dd_p f$ behaves as a concave function.
-The proof mimics the calculations above inside $\spc{A}$,
-instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $w_t)$ in $\spc{A}$
+The proof mimics the calculations above inside $\spc{A}$.
+Instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $w_t)$ in $\spc{A}$
 and prove the approximate versions
-\ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}
-of \ref{eq:2|w|=|u+v|} and \ref{eq:2df(w)>=df(u)+df(v)}, respectively.
+of \ref{eq:2|w|=|u+v|} and \ref{eq:2df(w)>=df(u)+df(v)};
+see \ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}, respectively.
 
 The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|};
 solving the following exercise should give a hint.
 
 \begin{thm}[!]{Exercise}\label{ex:d(distfun):==}
-Let $p$ and $q$ be distinct points in an Alexandrov space $\spc{A}$.
+Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 Suppose the geodesic $[pq]$ can be extended beyond $q$.
 
 Show that
@@ -269,7 +271,7 @@ for any $v\in\T_p$.
 \parit{Proof of \ref{lem:ohta}.}
 We will assume that $\spc{A}$ is $\Alex0$ and $f$ is concave;
 the general case requires only minor modifications.
-We can assume that $v\ne 0$, $w\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
+We can assume that $u\ne 0$, $v\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
 
 {
 
@@ -421,7 +423,7 @@ Let $f$ be a locally Lipschitz $\lambda$-concave function on an Alexandrov space
 Suppose $s\ge 0$.
 Show that $|\nabla_xf|> s$ if and only if for some point $y$ we have
 \[f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2,\]
-were $\ell=\dist{x}{y}{}$.
+where $\ell=\dist{x}{y}{}$.
 \end{subthm}
 
 \begin{subthm}{ex:semicontinuous-grad:lim} Show that $x\mapsto|\nabla_xf|$ is lower semicontinuous;
