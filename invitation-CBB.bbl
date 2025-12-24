@@ -351,7 +351,7 @@
       \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{addendum}{[tranlated in A. D. Alexandrov. A. D. Alexandrov selected works. Part II.]}
+      \field{addendum}{[translated in A. D. Alexandrov. A. D. Alexandrov selected works. Part II.]}
       \field{langid}{russian}
       \field{title}{Внутренняя геометрия выпуклых поверхностей}
       \field{year}{1948}
@@ -381,7 +381,7 @@
       \field{labeltitlesource}{title}
       \field{series}{Translations of Mathematical Monographs}
       \field{title}{Intrinsic geometry of surfaces}
-      \field{volume}{Vol. 15}
+      \field{volume}{V15}
       \field{year}{1967}
     \endentry
     \entry{alexandrov:devel}{article}{}
@@ -529,23 +529,23 @@
       \field{labeltitlesource}{title}
       \field{series}{Pure and Applied Mathematics}
       \field{title}{Geometry of manifolds}
-      \field{volume}{Vol. XV}
+      \field{volume}{XV}
       \field{year}{1964}
     \endentry
     \entry{bishop1964}{article}{}
       \name{author}{1}{}{%
-        {{hash=ab7e96de5927e045fd0ecee7ffb33db4}{%
+        {{hash=28f7a15d178694f912de2cbcc3a354fb}{%
            family={Bishop},
            familyi={B\bibinitperiod},
-           given={Richard\bibnamedelima L},
-           giveni={R\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+           given={R.},
+           giveni={R\bibinitperiod}}}%
       }
-      \strng{namehash}{ab7e96de5927e045fd0ecee7ffb33db4}
-      \strng{fullhash}{ab7e96de5927e045fd0ecee7ffb33db4}
-      \strng{bibnamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
-      \strng{authorbibnamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
-      \strng{authornamehash}{ab7e96de5927e045fd0ecee7ffb33db4}
-      \strng{authorfullhash}{ab7e96de5927e045fd0ecee7ffb33db4}
+      \strng{namehash}{28f7a15d178694f912de2cbcc3a354fb}
+      \strng{fullhash}{28f7a15d178694f912de2cbcc3a354fb}
+      \strng{bibnamehash}{28f7a15d178694f912de2cbcc3a354fb}
+      \strng{authorbibnamehash}{28f7a15d178694f912de2cbcc3a354fb}
+      \strng{authornamehash}{28f7a15d178694f912de2cbcc3a354fb}
+      \strng{authorfullhash}{28f7a15d178694f912de2cbcc3a354fb}
       \field{sortinit}{b}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -648,24 +648,32 @@
       \endverb
     \endentry
     \entry{burago-gromov-perelman}{article}{}
-      \name{author}{1}{}{%
-        {{hash=a1d5e1d5e8e8c016f6e4e5459bdccfee}{%
-           family={Ю.\bibnamedelimi Д.\bibnamedelimi Бураго},
-           familyi={Ю\bibinitperiod\bibinitdelim Д\bibinitperiod\bibinitdelim Б\bibinitperiod},
-           given={Г.\bibnamedelimi Я.\bibnamedelimi Перельман},
-           giveni={Г\bibinitperiod\bibinitdelim Я\bibinitperiod\bibinitdelim П\bibinitperiod},
-           suffix={М.\bibnamedelimi Л.\bibnamedelimi Громов},
-           suffixi={М\bibinitperiod\bibinitdelim Л\bibinitperiod\bibinitdelim Г\bibinitperiod}}}%
+      \name{author}{3}{}{%
+        {{hash=90f1827d4494a44304947a872cb38f43}{%
+           family={Бураго},
+           familyi={Б\bibinitperiod},
+           given={Ю.\bibnamedelimi Д.},
+           giveni={Ю\bibinitperiod\bibinitdelim Д\bibinitperiod}}}%
+        {{hash=f9ac6c4039cc47e247ee1e30e7cf40c4}{%
+           family={Громов},
+           familyi={Г\bibinitperiod},
+           given={М.\bibnamedelimi Л.},
+           giveni={М\bibinitperiod\bibinitdelim Л\bibinitperiod}}}%
+        {{hash=00947c9b964ed3494681111aed0b3250}{%
+           family={Перельман},
+           familyi={П\bibinitperiod},
+           given={Г.\bibnamedelimi Я.},
+           giveni={Г\bibinitperiod\bibinitdelim Я\bibinitperiod}}}%
       }
       \list{language}{1}{%
         {russian}%
       }
-      \strng{namehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
-      \strng{fullhash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
-      \strng{bibnamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
-      \strng{authorbibnamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
-      \strng{authornamehash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
-      \strng{authorfullhash}{a1d5e1d5e8e8c016f6e4e5459bdccfee}
+      \strng{namehash}{d09b8245bd89ff6320c8fc0232fd7316}
+      \strng{fullhash}{d09b8245bd89ff6320c8fc0232fd7316}
+      \strng{bibnamehash}{d09b8245bd89ff6320c8fc0232fd7316}
+      \strng{authorbibnamehash}{d09b8245bd89ff6320c8fc0232fd7316}
+      \strng{authornamehash}{d09b8245bd89ff6320c8fc0232fd7316}
+      \strng{authorfullhash}{d09b8245bd89ff6320c8fc0232fd7316}
       \field{sortinit}{b}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -698,7 +706,7 @@
       \field{sortinithash}{4d103a86280481745c9c897c925753c0}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal de l’Ecole Polytechnique}
+      \field{journaltitle}{Journal de l’École Polytechnique}
       \field{number}{9}
       \field{title}{Sur les polygones et les polyèdres: second Mémoire}
       \field{volume}{16}
@@ -1309,9 +1317,10 @@
       \field{sortinithash}{32d67eca0634bf53703493fb1090a2e8}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Metric structures for Riemannian and non-Riemannian spaces}
-      \field{volume}{152}
-      \field{year}{1999}
+      \field{isbn}{978-0-8176-4582-3; 0-8176-4582-9}
+      \field{series}{Modern Birkhäuser Classics}
+      \field{title}{Metric structures for {R}iemannian and non-{R}iemannian spaces}
+      \field{year}{2007}
     \endentry
     \entry{gromov2001}{article}{}
       \name{author}{1}{}{%
@@ -1732,9 +1741,6 @@
            given={V.},
            giveni={V\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Int. Press, Somerville, MA}%
-      }
       \strng{namehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
       \strng{fullhash}{7fa9dc9f23c01556a8f6a9488ec1498e}
       \strng{bibnamehash}{7fa9dc9f23c01556a8f6a9488ec1498e}
@@ -1746,7 +1752,7 @@
       \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Surveys in differential geometry. {V}ol. {XI}}
+      \field{booktitle}{Surveys in differential geometry}
       \field{isbn}{978-1-57146-117-9}
       \field{series}{Surv. Differ. Geom.}
       \field{title}{Perelman's stability theorem}
@@ -2295,9 +2301,6 @@
            given={A.},
            giveni={A\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {World Scientific Pub Co Pte Ltd}%
-      }
       \strng{namehash}{1751292ef80f4bebcd923b82131b987a}
       \strng{fullhash}{1751292ef80f4bebcd923b82131b987a}
       \strng{bibnamehash}{1751292ef80f4bebcd923b82131b987a}
@@ -2476,7 +2479,7 @@
       \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{booktitle}{Докл. АН СССР}
+      \field{journaltitle}{Докл. АН СССР}
       \field{langid}{russian}
       \field{number}{2}
       \field{title}{Геодезические линии на выпуклых поверхностях}
@@ -2619,7 +2622,7 @@
       \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{journaltitle}{Укр. геометр, сб.}
+      \field{journaltitle}{Укр. геометр. сб.}
       \field{langid}{russian}
       \field{title}{Метрическое строение одного класса пространств, содержащих прямые линии}
       \field{volume}{4}
@@ -2677,7 +2680,7 @@
       \field{labeltitlesource}{title}
       \field{series}{Graduate Texts in Mathematics}
       \field{title}{Geometric topology in dimensions 2 and 3}
-      \field{volume}{Vol. 47}
+      \field{volume}{47}
       \field{year}{1977}
     \endentry
     \entry{ohta}{article}{}
@@ -2802,7 +2805,7 @@
       \field{labeltitlesource}{title}
       \field{title}{Quasigeodesics and gradient curves in {A}lexandrov spaces}
       \verb{eprint}
-      \verb http://www.math.psu.edu/petrunin/
+      \verb https://anton-petrunin.github.io/
       \endverb
     \endentry
     \entry{perelman1991}{misc}{}
@@ -2827,11 +2830,8 @@
       \field{journaltitle}{preprint}
       \field{title}{Alexandrov spaces with curvatures bounded from below II}
       \field{year}{1991}
-      \verb{urlraw}
-      \verb https://anton-petrunin.github.io/papers/alexandrov/perelmanASWCBFB2+.pdf
-      \endverb
-      \verb{url}
-      \verb https://anton-petrunin.github.io/papers/alexandrov/perelmanASWCBFB2+.pdf
+      \verb{eprint}
+      \verb https://anton-petrunin.github.io/
       \endverb
     \endentry
     \entry{perelman1993}{article}{}
@@ -2885,8 +2885,11 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{preprint}
-      \field{title}{DC Structure on Alexandrov Space (preliminary version)}
+      \field{title}{DC structure on Alexandrov space (preliminary version)}
       \field{year}{1994}
+      \verb{eprint}
+      \verb https://anton-petrunin.github.io/
+      \endverb
     \endentry
     \entry{petrunin-2023}{misc}{}
       \name{author}{1}{}{%
@@ -3444,9 +3447,6 @@
            given={Yu.\bibnamedelimi G.},
            giveni={Y\bibinitperiod\bibinitdelim G\bibinitperiod}}}%
       }
-      \list{publisher}{1}{%
-        {Springer, Berlin}%
-      }
       \strng{namehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
       \strng{fullhash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
       \strng{bibnamehash}{9c5f5fc3c05085bd507f32e1d5eb5d50}
@@ -3633,21 +3633,21 @@
     \endentry
     \entry{Spanier}{book}{}
       \name{author}{1}{}{%
-        {{hash=3574f5197bbc04a0032644afdf20019c}{%
+        {{hash=66e83ab76bfc8c55dad66d2599f716cf}{%
            family={Spanier},
            familyi={S\bibinitperiod},
-           given={Edwin\bibnamedelima H.},
-           giveni={E\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+           given={E.},
+           giveni={E\bibinitperiod}}}%
       }
       \list{location}{1}{%
         {New York}%
       }
-      \strng{namehash}{3574f5197bbc04a0032644afdf20019c}
-      \strng{fullhash}{3574f5197bbc04a0032644afdf20019c}
-      \strng{bibnamehash}{3574f5197bbc04a0032644afdf20019c}
-      \strng{authorbibnamehash}{3574f5197bbc04a0032644afdf20019c}
-      \strng{authornamehash}{3574f5197bbc04a0032644afdf20019c}
-      \strng{authorfullhash}{3574f5197bbc04a0032644afdf20019c}
+      \strng{namehash}{66e83ab76bfc8c55dad66d2599f716cf}
+      \strng{fullhash}{66e83ab76bfc8c55dad66d2599f716cf}
+      \strng{bibnamehash}{66e83ab76bfc8c55dad66d2599f716cf}
+      \strng{authorbibnamehash}{66e83ab76bfc8c55dad66d2599f716cf}
+      \strng{authornamehash}{66e83ab76bfc8c55dad66d2599f716cf}
+      \strng{authorfullhash}{66e83ab76bfc8c55dad66d2599f716cf}
       \field{sortinit}{S}
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
@@ -3749,14 +3749,14 @@
       \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{issn}{1050-6926}
+      \field{issn}{1050-6926,1559-002X}
       \field{journaltitle}{J. Geom. Anal.}
       \field{number}{3}
       \field{title}{{CAT}(0) 4-manifolds possessing a single tame point are {E}uclidean}
       \field{volume}{6}
       \field{year}{1996}
-      \field{pages}{475\bibrangedash 494 (1997)}
-      \range{pages}{-1}
+      \field{pages}{475\bibrangedash 494}
+      \range{pages}{20}
       \verb{doi}
       \verb 10.1007/BF02921662
       \endverb

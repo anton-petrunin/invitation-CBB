@@ -3,14 +3,12 @@
 \chapter{Limit spaces}\label{chap:lim}\label{chap:stability}
 
 
-Here we will show that lower curvature bound in the sense of Alexandrov survives under Gromov--Hausdorff limit,
+Here we will show that lower curvature bound in the sense of Alexandrov survives under a Gromov--Hausdorff limit,
 present Perelman's construction of strictly concave functions, and
 prove Gromov's selection theorem.
 
-The suvival of curvature bound provides the main source of applications of Alexandrov geometry;
+The survival of curvature bound provides the main source of applications of Alexandrov geometry;
 as an illustration we prove the homotopy stability theorem (\ref{thm:h-stability}) and deduce the homotopy finiteness theorem (\ref{thm:h-finiteness}) from it.
-
-
 
 \section{Survival of curvature bounds}
 
@@ -25,7 +23,7 @@ Choose a quadruple of points $p_\infty, x_\infty,y_\infty,z_\infty\in \spc{X}_\i
 
 By the definition of Gromov--Hausdorff convergence, we can choose points $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ for each $n$
 that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
-In particular, each of the 6 distances between pairs of $p_n$, $x_n$, $y_n$, $z_n$ converge to the distance between the corresponding pairs of $p_\infty, x_\infty,y_\infty,z_\infty$.
+In particular, the 6 distances between $p_n$, $x_n$, $y_n$, $z_n$ converge to the distances between the corresponding pairs of $p_\infty$, $ x_\infty$, $y_\infty$, $z_\infty$.
 
 Since $\MM^2(\kappa)$-comparison holds for $p_n$, $x_n$, $y_n$, $z_n\z\in \spc{X}_n$,
 passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_\infty$, $y_\infty$, $z_\infty$.
@@ -45,7 +43,10 @@ Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most
 has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
+Recall that $\GH$ denotes the space of compact metric spaces equipped with with the Gromov--Hausdorff metric; see Section~\ref{sec:Gromov--Hausdorff-metric}.
+
 \parit{Proof of \ref{thm:gromov-compactness}.}
+Suppose $\kappa=0$.
 Denote by $\bm{K}$ the set of all isometry classes of $\Alex0$ spaces with dimension $\le m$ and diameter $\le D$.
 By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.
 
@@ -79,7 +80,7 @@ In the general case, applying rescaling, we can assume that $\kappa=-1$ and then
 
 \begin{subthm}{ex:pack-vol:pack}
 Let $\spc{A}$ be an $m$-dimensional $\Alex0$ space with diameter $\le D$.
-Suppose $\vol\spc{A}\ge v_0>0$.
+Suppose $m$ is finite and $\vol\spc{A}\ge v_0>0$.
 Show that 
 \[\pack_\eps\spc{A}\ge \frac\Const{\eps^m}\]
 for some constant $\Const=\Const(m,D,v_0)>0$.

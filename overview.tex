@@ -146,8 +146,8 @@ it generalizes Alexandrov's theorem for surfaces \cite[X §~2]{alexandrov-1948}.
 The second theorem is due to Nan Li \cite{li}.
 
 \begin{thm}{Theorem}\label{thm:cont-vol}
-Let $\spc{X}_1, \spc{X}_2$ be a sequence of $n$-dimensional $\Alex\kappa$ spaces that converges to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
-Then the $n$-volume on $\spc{X}_i$ weakly converges to the $n$-volume on $\spc{X}_\infty$.
+Let $\spc{X}_1, \spc{X}_2,\dots$ be a sequence of $n$-dimensional $\Alex\kappa$ spaces that converges to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
+Then $n$-volumes on $\spc{X}_i$ weakly converge to the $n$-volume on $\spc{X}_\infty$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:vol-short}
@@ -189,7 +189,7 @@ Show that
 \end{subthm}
 
 \begin{subthm}{ex:approximation:area}
-Let $\Delta$ be a solid triangle in the triangulation $\tau$ of $\spc{P}$, and $\tilde \Delta$ --- the corresponding triangle in $\tilde{\spc{P}}$.
+Let $\Delta$ be a solid triangle in the triangulation $\tau$ of $\spc{P}$, and let $\tilde \Delta$ be the corresponding triangle in $\tilde{\spc{P}}$.
 Show that
 \[\area \tilde \Delta\le \area \Delta\le \area \tilde \Delta+\tfrac12\cdot\excess\Delta\cdot (\diam \Delta)^2.\]
 
@@ -198,13 +198,13 @@ Show that
 \end{thm}
 
 Note that part \ref{SHORT.ex:approximation:excess} implies that $\chi(\spc{P})\ge 0$.
-Therefore, $\spc{P}$ is homeomorphic to a sphere, projctive plane, torus, or Klein bottle.
+Therefore, $\spc{P}$ is homeomorphic to a sphere, projective plane, torus, or Klein bottle.
 In the latter two cases, the construction produces a flat surface $\tilde{\spc{P}}_\delta$, which has to be isometric to $\spc{P}$.
-Therefore the cases of sphere, projctive plane are more interesting.
+Therefore the cases of sphere, projective plane are more interesting.
 
 \parit{Proof of \ref{clm:approximation}.}
 Choose a sequence of positive numbers $\delta_n\to0$;
-let $\tilde{\spc{P}}_{\delta_n}$ be polyhedral spaces provided by the construction and let $\tau_n$ be the corresponding triangulation.
+let $\tilde{\spc{P}}_{\delta_n}$ be polyhedral surfaces provided by the construction and let $\tau_n$ be the corresponding triangulation.
 
 According to part \ref{SHORT.ex:approximation:length} of the exercise, the spaces $\tilde{\spc{P}}_{\delta_n}$ have bounded diameter.
 Therefore by Gromov's selection theorem, we can pass to a converging sequence of $\tilde{\spc{P}}_{\delta_n}$;
@@ -548,7 +548,7 @@ in this case, a neighborhood of $K$ in $\bm{K}_n$ admits a parametrization by an
 The case of surfaces is analogous.
 We need to construct a subdivision of the sphere into plane triangles using only essential vertices.
 By Euler's formula, there are exactly $3\cdot n-6$ edges in this subdivision.
-The lengths of the edges completely describe the surface $\spc{P}$ and any surface near by.
+The lengths of the edges completely describe the surface $\spc{P}$ and any surface nearby.
 If the surface has no symmetries, then this description is one-to-one, and a neighborhood of $\spc{P}$ in $\bm{P}_n$ admits a parametrization by an open set in  $\RR^{3\cdot n-6}$.
 
 \begin{thm}{Lemma}\label{lem:closed}
@@ -564,10 +564,10 @@ denote its limit by $\spc{P}_\infty$.
 We need to construct a polyhedron $K_\infty\in \bm{K}_n$ such that $\iota(K_\infty)=\spc{P}_\infty$;
 let us do it.
 
-Passing to a subsequence, we can assume that $K_i$ converges in $\bm{K}$;
+Passing to a subsequence, we can assume that $K_i$ converges in $\bm{K}$ as $i\to\infty$;
 denote the limit polyhedron by $K_\infty$.
 Since $\iota$ is continuous, $\iota(K_i)$ converges to $\iota(K_\infty)$ in~$\bm{P}$; so, $\iota(K_\infty)=\spc{P}_\infty$.
-Recall that $\iota(\bm{K}_m)\subset\bm{P}_m$ for each $m$; therefore, $K_\infty\in \bm{K}_n$.
+Recall that $\iota(\bm{K}_m)\z\subset\bm{P}_m$ for each $m$; therefore, $K_\infty\in \bm{K}_n$.
 
 
 \parit{Proof of \ref{clm:surjective}.}
@@ -585,8 +585,8 @@ that is, $\iota\:\bm{K}_n\z\to\bm{P}_n$ is surjective.
 
 \section{Ambient space}
 
-On one hand the Alexandrov surface theory is simpler since it has extra tools,
-On the other hand, this tool comes with extra structure, which makes the theory more complicated.
+On one hand, the Alexandrov surface theory is simpler since it has extra tools.
+On the other hand, these tools come with extra structure, which makes the theory more complicated.
 The following result of Joseph Liberman \cite{liberman} gives an example.
 
 \begin{thm}{Theorem}

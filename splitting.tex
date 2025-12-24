@@ -81,7 +81,7 @@ the latter means that any geodesic with the endpoints in $A$ (or $B$) lies in $A
 
 
 \begin{thm}{Line splitting theorem}\label{thm:splitting}
-Let $\gamma$ be a line in a $\Alex0$ space~$\spc{A}$. 
+Let $\gamma$ be a line in an $\Alex0$ space~$\spc{A}$.
 Then 
 \[\spc{A}=\spc{A}'\oplus \gamma(\RR)\]
 for some subset $\spc{A}'\subset \spc{A}$.
@@ -506,12 +506,12 @@ Is it true that for any $p\in \spc{A}$, the tangent space $\T_p$ is a length spa
 \section{Linear dimension}
 
 Let $\spc{A}$ be an Alexandrov space.
-We define its \index{linear dimension}\emph{linear dimension} \index{50@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound of integers $m$ such that
+We define its \index{linear dimension}\emph{linear dimension} \index{LinDim@$\LinDim$}$\LinDim \spc{A}$ as the least upper bound of integers $m$ such that
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
 If not stated otherwise, dimension means linear dimension.
 In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that, we will use \index{50@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
+after that, we will use \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
@@ -560,7 +560,7 @@ such that $\angk p{a_i}{a_j}>\tfrac\pi2$ for any pair $i\ne j$.
 
 \section{Space of directions}
 
-Recall that a metric space $\spc{X}$ is \index{91@$\ell$-geodesic space}\emph{$\ell$-geodesic}
+Recall that a metric space $\spc{X}$ is \index{geodesic space@$\ell$-geodesic space}\emph{$\ell$-geodesic}
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
 
 \begin{thm}{Theorem}\label{thm:finite-space-of-directions}
@@ -767,8 +767,6 @@ We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE
 This definition will be applied mostly to subsets in $m$-dimensional Alexandrov spaces.
 In this case, we may write $\vol B$ instead of $\vol_m B$.
 
-\pagebreak[2]
-
 \begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
 Let $\spc{A}$ be an $\Alex0$ space.
 
@@ -855,8 +853,8 @@ Show that any finite-dimensional Alexandrov space is proper.
 
 Now we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
 More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
-We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} and \index{Hausdorff!dimension}\emph{Hausdorff dimension}, which will be denoted by \index{50@$\TopDim$}$\TopDim$ and
-\index{50@$\HausDim$}$\HausDim$, respectively.
+We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} and \index{Hausdorff!dimension}\emph{Hausdorff dimension}, which will be denoted by \index{TopDim@$\TopDim$}$\TopDim$ and
+\index{HausDim@$\HausDim$}$\HausDim$, respectively.
 
 \begin{thm}{Theorem}\label{thm:dim=dim}
 For any Alexandrov space $\spc{A}$, we have
@@ -897,7 +895,7 @@ The tangent space $\T_p$ is a proper $\Alex0$ space.
 \end{subthm}
 
 \begin{subthm}{ex:finite-space-of-directions-dim}
-$\LinDim\Sigma_p=\LinDim\spc{A}-1$.
+$\LinDim\Sigma_p+1=\LinDim\T_p=\LinDim\spc{A}$.
 \end{subthm}
 
 \begin{subthm}{ex:finite-tan:sigma}
@@ -937,4 +935,13 @@ At that time, it was not known whether
 \[\LinDim\spc{A}=\infty\quad \Rightarrow\quad \TopDim\spc{A}=\infty\]
 for any Alexandrov space $\spc{A}$.
 The latter implication was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg}.
+
+The following exercise adds \index{Minkowski dimension}\emph{Minkowski dimension} (also known as \index{box-counting dimension}\emph{box-counting dimension}) to the list of reasonable dimensions discussed in Section~\ref{sec:all-dim}.
+
+\begin{thm}{Exercise}\label{ex:box-counting}
+Let $\spc{A}$ be an Alexandrov space.
+Given a point $p\in \spc{A}$ and $R>0$, let $m(p,R)$ be the least upper bound on values $\alpha>0$ such that $\eps^\alpha\cdot\pack_\eps \cBall[p,R]\to 0$ as $\eps\to 0$.
+
+Show that $m(p,R)=\LinDim \spc{A}$; in particular, $m(p,R)$ is an integer, and it does not depend on the choice of $p$ and $R$.
+\end{thm}
 

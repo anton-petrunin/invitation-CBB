@@ -18,6 +18,9 @@ By \ref{SHORT.ex:net:finite}, $Z$ has a finite $\eps$-net, say~$F$.
 Note that $F$ is a $2\cdot\eps$-net of $X$.
 Since $\eps>0$ is arbitrary, we get the result.
 
+\parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
+Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
+
 \parbf{\ref{ex:compact+connceted}.}
 Choose a sequence of positive numbers $\varepsilon_n\to 0$ and a finite $\varepsilon_n$-net $N_n$ of $K$ for each $n$.
 %???eps-net are not defined!!!
@@ -941,11 +944,12 @@ By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:sp
 We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
 Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
+\parbf{\ref{ex:box-counting}.}
+Apply \ref{ex:resporka} and \ref{thm:right-inverse} to show that $m(p,R)\ge \LinDim \spc{A}$.
+To prove that $m(p,R)\le \LinDim \spc{A}$, reuse the argument in the Bishop--Gromov inequality.
+
 \parbf{\ref{ex:dim-lim}.}
 Apply \ref{ex:resporka}.
-
-\parbf{\ref{ex:pack-net}.} If $x_1,\dots,x_n$ is not an $\eps$-net, then there is a point $y$ such that $\dist{x_i}{y}{}\ge\eps$ for any $i$.
-Therefore $x_1,\dots,x_n$ is not a maximal packing --- a contradiction.
 
 \parbf{\ref{ex:pack-vol}}; \ref{SHORT.ex:pack-vol:pack}
 Apply the Bishop--Gromov inequality (\ref{inq:BG}).
@@ -974,8 +978,8 @@ Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
 Then all  $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
 Verify that this convergence provides the desired counterexample.
 
-\parit{Comments.}
-
+\parit{Comments.} This example is called \index{Berger's sphere}\emph{Berger's spheres}.
+Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $\SSS^3\times (\eps\cdot \SSS^1)/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
 
 \parbf{\ref{ex:conic}.}
 Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
@@ -1056,7 +1060,7 @@ Since $\dim\spc{N}>1$, Exercise~\ref{ex:dim=1} implies that $\diam\spc{N}\le \pi
 Apply the gradient flow as in the proof of \ref{thm:doubling} (part \ref{SHORT.thm:partial-grad:flow}$_{m}\z+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\z\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$).
 
 \parit{\ref{SHORT.ex:dist-to-bry:dist}.}
-We can assume that $\dim \spc{A}\ge 2$; otherwise the statement is tivial.
+We can assume that $\dim \spc{A}\ge 2$; otherwise the statement is trivial.
 
 Choose an interior point $x$ on $\gamma$;
 we can assume that $x=\gamma(0)$.
@@ -1092,12 +1096,12 @@ Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
 that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ and $\spc{A}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
 
-In the later case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
+In the latter case $\lambda$-concavity of $f\circ\proj\circ\gamma$ follows from $\lambda$-concavity of $f$.
 In the former case the convexity has to be checked only at the point of crossing;
 we may assume that it happens at $x=\gamma(0)$.
 Since $\nabla_xf\in\partial\T_x$ for any $x\in\partial\spc{A}$ the $f$-gradient flows on $\spc{A}_0$ and $\spc{A}_1$ agree on the common boundary; so they induce a continuous flow on $\spc{W}$.
 
-Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concavity at $0$.
+Assume $f\circ\proj\circ\gamma$ is not $\lambda$-concave at $0$.
 Apply the constructed flow on $\spc{W}$ to shorten $\gamma$ keeping its ends as in the proof of \ref{ex:liberman},
 and arrive at a contradiction.
 
@@ -1129,13 +1133,13 @@ Make a conclusion.
 
 \parbf{\ref{ex:S^3/S^1}};
 \ref{SHORT.ex:S^3/S^1:pq}.
-Our $\SSS^1$ is a commutative subgroup of $\SO(3)$.
-Therefore it is a subgroup of a maximal torus in $\SO(3)$.
-Show that the described torus action is induced by a maximal torus in $\SO(3)$.
-Use that maximal tori in $\SO(3)$ are conjugate.
+Our $\SSS^1$ is a commutative subgroup of $\SO(4)$.
+Therefore it is a subgroup of a maximal torus in $\SO(4)$.
+Show that the described torus action is induced by a maximal torus in $\SO(4)$.
+Use that maximal tori in $\SO(4)$ are conjugate.
 
 \parit{\ref{SHORT.ex:S^3/S^1:sphere}.}
-Cut $\SSS^3$ into by the Clifford torus $\tfrac1{\sqrt2}\cdot (\SSS^1\times \SSS^1)$.
+Cut $\SSS^3$ along the Clifford torus $\tfrac1{\sqrt2}\cdot (\SSS^1\times \SSS^1)$.
 Observe that the quotient of each half is a disc;
 conclude that $\Sigma_{p,q}$ is a sphere.
 The torus action on $\SSS^3$ induce the needed $\SSS^1$-action on $\Sigma_{p,q}$.
@@ -1162,10 +1166,10 @@ Arrive at a contradiction with the Bishop--Gromov inequality.)
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
 
 \parbf{\ref{ex:S1actsS3}.}
-Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to itsboundary $\partial\Delta$.
+Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to its boundary $\partial\Delta$.
 It remains to show that the perimeter of $\Delta$ cannot exceed $2\cdot\pi$.
 The latter follows from the Lytchak's problem \cite[3.3.5]{petrunin:survey};
-it states that if $\Delta$ as an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\z\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
+it states that if $\Delta$ is an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\z\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
 
 \parbf{\ref{ex:geodesic-vertex}.}
 Suppose a geodesic $\gamma$ passes thru a vertex $v$.
@@ -1190,7 +1194,7 @@ It remains to apply straightforward algebraic manipulations.
 If $\spc{P}$ has nonempty boundary, then pass to its doubling, apply the formula and rewrite the result using inner turns.
 
 \parbf{\ref{ex:poly-CBB}.}
-We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ at every vertex $p$ it at most $2\cdot\pi$.
+We need to show that if a polyhedral surface is $\Alex0$, then the total angle $\theta$ at every vertex $p$ is at most $2\cdot\pi$.
 
 Assume that $\theta>2\cdot\pi$,
 let $\phi=\max\{\,\pi,\tfrac13\cdot\theta\,\}$.
@@ -1204,9 +1208,9 @@ The latter contradicts $\EE^2$-comparison.
 Apply \ref{cor:convex-nbhd}.
 
 \parit{\ref{SHORT.ex:approximation:triangulation}.}
-Observe that any chord divides a convex figure on $\spc{P}$ into two convex figure.
+Observe that any chord divides a convex figure on $\spc{P}$ into two convex figures.
 Use it to show that union of two convex poygons can triangulated by convex triangles.
-Apply the last stattement recurcevely to a finite cove of $\spc{P}$ by convex polygons.
+Apply the last statement recursively to a finite cover of $\spc{P}$ by convex polygons.
 
 \parit{\ref{SHORT.ex:approximation:poly}.}
 By comparison, $\tilde{\spc{P}}$ has nonnegative curvature.
@@ -1227,8 +1231,8 @@ Show that the total angle around each vertex of the triangulation is at most $2\
 Apply the hinge comparison (\ref{angle}).
 
 \parit{\ref{SHORT.ex:approximation:area}.}
-The first inequality follows form the generalized vesion of Kiszbraun's theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
-we will not discuss its proof since this inequalty is not used in the proof.
+The first inequality follows from the generalized version of Kiszbraun's theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
+we will not discuss its proof since this inequality is not used in the proof.
 In the proof of the second inequality, we use Alexandrov's idea \cite[X §~1]{alexandrov-1948}.
 
 Suppose that a convex triangle $\Delta$ has vertices $x$, $y$, and $z$, with opposite side lengths $a$, $b$ and $c$ and angles $\alpha$, $\beta$, and $\gamma$, respectively.
@@ -1239,7 +1243,7 @@ Use that $\log_x$ is a noncontracting map to show that
 
 Now let us subdivide $\Delta$ into triangles $\Delta_1,\dots,\Delta_n$ with common vertex $x$ and small opposite sides $a_1,\dots,a_n$; so, $a=a_1+\dots+a_n$.
 The model triangles $\tilde\Delta_1,\dots,\tilde\Delta_n$ can be arranged on the plane with common corresponding sides.
-This way we get a convex triangle $\tilde\Lambda$ with two straight sides $b$ amd $c$ and a polygonal side of total length $a$.
+This way we get a convex triangle $\tilde\Lambda$ with two straight sides $b$ and $c$ and a polygonal side of total length $a$.
 Summing up the above inequalities for $\Delta_1,\dots,\Delta_n$, we get
 \[\area\Delta-\area\tilde\Lambda\le \tfrac12\cdot(\alpha-\tilde\alpha)\cdot (\diam\Delta)^2+o(a_1)+\dots +o(a_n).\]
 It follows that given $\eps>0$, we can choose the subdivision so that
@@ -1328,19 +1332,19 @@ then $\partial \spc{A}_n$ equipped with the induced length metrics converge to  
 This statement is a partial case of the theorem about extremal subsets proved by the third author \cite[1.2]{petrunin1997}.
 
 \parbf{\ref{ex:alexandrov=<4}.}
-\ref{SHORT.ex:alexandrov=<4:>=3}. Observe that curvature of any essential vertes is less than $2\cdot\pi$ and apply the Gauss--Bonnet formula \ref{ex:gauss-bonnet}.
+\ref{SHORT.ex:alexandrov=<4:>=3}. Observe that curvature of any essential vertex is less than $2\cdot\pi$ and apply the Gauss--Bonnet formula \ref{ex:gauss-bonnet}.
 
-\parit{\ref{SHORT.ex:alexandrov=<4:=3}.} Show that geodeiscs between essential vertices divide the surface into two flat triangles, which have to be isometric since their sides are equal.
+\parit{\ref{SHORT.ex:alexandrov=<4:=3}.} Show that geodesics between essential vertices divide the surface into two flat triangles, which have to be isometric since their sides are equal.
 Make a conclusion.
 
 \parit{\ref{SHORT.ex:alexandrov=<4:4}.}
-Show that geodeiscs between the essential vertices can be shoosen so that they do not cross each other;
+Show that geodesics between the essential vertices can be chosen so that they do not cross each other;
 that is, every pair of geodesics intersect only at the common vertex.
-In this case they divide the surfase into plane triangles.
+In this case they divide the surface into plane triangles.
 
 Since the curvature is nonnegative, the sum of three angles of the triangles at each vertex is at most $2\cdot\pi$.
 Show that the three angles at one (and therefore any) vertex satisfy the triangle inequality.
-Conclude that these triangles form faces of tetrhedron (possibly degenerate to a quadrangle)
+Conclude that these triangles form faces of tetrahedron (possibly degenerate to a quadrangle)
 
 \parbf{\ref{ex:convex}.} Assume the contrary,
 then there is a minimizing geodesic $\gamma\not\subset\Delta$ with ends $p$ and $q$ in $\Delta$.

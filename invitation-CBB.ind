@@ -1,13 +1,8 @@
 \begin{theindex}
 
-  \item $\eps$-pack, \hyperpage{6}
-  \item $\pack_\eps\spc{X}$, \hyperpage{6}
-
-  \indexspace
-
   \item $\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$ (distance), \hyperpage{6}
   \item $[pq]=[p q]_{\spc{X}}$ (geodesic), \hyperpage{8}
-  \item $\left]x y\right]$, $\left[x y\right[$, $\left]x y\right[$ (geodesic interval), 
+  \item $\left]x y\right]$, $\left[x y\right[$, $\left]x y\right[$ (subintervals), 
 		\hyperpage{20}
   \item $\trig p q r=\trig p q r_{\spc{X}}$ (triangle), \hyperpage{9}
   \item $\hinge p x y$ (hinge), \hyperpage{10}
@@ -15,26 +10,18 @@
   \item $\modtrig$ (model triangle), \hyperpage{9}
   \item $\side \hinge x p q$ (model side), \hyperpage{30}
   \item $\angk{p}{q}{r}$ (model angle), \hyperpage{10}
-  \item $\mangle\hinge p x y$ (angle measure), \hyperpage{10}
-  \item $\mangle(v,w)$ (angle measure), \hyperpage{36}
+  \item $\mangle$ (angle measure), \hyperpage{10}, \hyperpage{36}
   \item $\<v,w\>$ (scalar product), \hyperpage{36}
   \item $\dir{p}{q}$ (direction), \hyperpage{35}
   \item $\log_p x$ (logarithm), \hyperpage{43}
-  \item $\HausDim$, \hyperpage{67}
-  \item $\LinDim$, \hyperpage{61}
-  \item $\TopDim$, \hyperpage{67}
-  \item $\dim$, \hyperpage{61}
-  \item $\rank\spc{A}$, \hyperpage{83}
   \item $\II$ (real interval), \hyperpage{8}
   \item $\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$, \hyperpage{6}
-  \item $\Cone$, \hyperpage{36}
   \item $\Sigma_p$ (space of directions), \hyperpage{35}, 
 		\hyperpage{84}
   \item $\Sigma_p'$ (geodesic directions), \hyperpage{35}
   \item $\T_p$ (tangent space), \hyperpage{36}, \hyperpage{84}
+  \item $\pack_\eps\spc{X}$ ($\eps$-pack), \hyperpage{6}
   \item $A\oplus B$ (direct sum), \hyperpage{52}
-  \item $\ell$-geodesic space, \hyperpage{8}, \hyperpage{36}, 
-		\hyperpage{62}
   \item $\lambda$-concave function, \hyperpage{25}
 
   \indexspace
@@ -50,6 +37,8 @@
   \indexspace
 
   \item barrier, \hyperpage{25}
+  \item Berger's sphere, \hyperpage{134}
+  \item box-counting dimension, \hyperpage{69}
   \item Busemann function, \hyperpage{51}
 
   \indexspace
@@ -60,7 +49,8 @@
     \subitem adjacent angle comparison, \hyperpage{24}
     \subitem hinge comparison, \hyperpage{24}
     \subitem point-on-side comparison, \hyperpage{24}
-  \item cone, \hyperpage{36}
+  \item concave function, \hyperpage{25}
+  \item $\Cone$ (Euclidean cone), \hyperpage{36}
   \item conic neighborhood, \hyperpage{82}
   \item continuity method, \hyperpage{112}
   \item convex body, \hyperpage{107}
@@ -75,11 +65,11 @@
   \item diameter, \hyperpage{6}
   \item differential, \hyperpage{37}
   \item differential of a function, \hyperpage{37}
+  \item $\dim$, \hyperpage{61}
   \item direct sum, \hyperpage{52}
   \item direction, \hyperpage{35}
   \item distance-preserving, \hyperpage{15}
   \item doubling, \hyperpage{85}
-  \item doubling theorem, \hyperpage{85}
 
   \indexspace
 
@@ -97,6 +87,9 @@
     \subitem direction, \hyperpage{35}
     \subitem path, \hyperpage{8}
     \subitem space, \hyperpage{8}
+  \item $\ell$-geodesic space, \hyperpage{8}, \hyperpage{36}, 
+		\hyperpage{62}
+  \item $\GH$ (space of spaces), \hyperpage{14}
   \item gradient, \hyperpage{38}
     \subitem curve, \hyperpage{44}
     \subitem exponential map, \hyperpage{48}
@@ -107,6 +100,7 @@
   \indexspace
 
   \item half-line, \hyperpage{51}
+  \item $\HausDim$, \hyperpage{67}
   \item Hausdorff
     \subitem dimension, \hyperpage{67}
     \subitem distance, \hyperpage{12}
@@ -120,8 +114,7 @@
 
   \item induced length metric, \hyperpage{7}
   \item invariance of domain, \hyperpage{113}
-  \item isometry
-    \subitem $\eps$-isometry, \hyperpage{15}
+  \item $\eps$-isometry, \hyperpage{15}
 
   \indexspace
 
@@ -132,8 +125,9 @@
   \item Lebesgue covering dimension, \hyperpage{67}
   \item length metric, \hyperpage{7}
   \item length space, \hyperpage{7}
-  \item Liberman's lemma, \hyperpage{135}
-  \item lifting, \hyperpage{74}
+  \item Liberman's lemma, \hyperpage{136}
+  \item lifting, \hyperpage{74, 75}
+  \item $\LinDim$, \hyperpage{61}
   \item line, \hyperpage{52}
   \item linear dimension, \hyperpage{61}
   \item linear subspace, \hyperpage{56}
@@ -144,6 +138,7 @@
 
   \item maximal packing, \hyperpage{6}
   \item minimal extremal set, \hyperpage{100}
+  \item Minkowski dimension, \hyperpage{69}
   \item model
     \subitem angle, \hyperpage{10}
     \subitem side, \hyperpage{30}
@@ -164,6 +159,7 @@
 
   \indexspace
 
+  \item $\eps$-pack, \hyperpage{6}
   \item packing number, \hyperpage{6}
   \item pointed convergence, \hyperpage{14}
   \item pointed homeomorphic, \hyperpage{82}
@@ -198,6 +194,7 @@
 
   \item tangent space, \hyperpage{36}, \hyperpage{84}
   \item tangent vector, \hyperpage{36}
+  \item $\TopDim$, \hyperpage{67}
   \item triangle, \hyperpage{9}
   \item triangulation, \hyperpage{103}
 

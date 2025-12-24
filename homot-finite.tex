@@ -43,7 +43,7 @@ $r$, then direct calculations show that
 (Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\alpha(t)\approx\tfrac\pi2$.) 
 
 Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for every $i$.
-For a geodesic $\gamma$, set $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$. 
+Given a geodesic $\gamma$, let $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$.
 Assume that
 \[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0\eqlbl{eq:angle-ne-pi/2}\]
 for any geodesic $\gamma$ in $\oBall(p,\eps)$. 
@@ -84,22 +84,22 @@ there is no open set $\Omega\subset A$ with strictly concave function $f\:\Omega
 
 \section{Liftings}
 
-Suppose that the Gromov--Haudorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{A}$ and $\spc{A}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
+Suppose that the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{A}$ and $\spc{A}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
 In particular, we may choose a small $\eps>0$, so that for any point $p\in \spc{A}$, there is a point $p'\in \spc{A}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
 the point $p'$ will be called a \index{lifting}\emph{lifting} (or \emph{$\eps$-lifting}) of $p$ in $\spc{A}'$.
 We may choose a lifting $p'\in\spc{A}'$ for every point $p\in\spc{A}$, 
 in this case the map $p\mapsto p'$ is called a {}\emph{($\eps$-)lifting map}.
 
-Let us emphasise that liftings are not uniquely defined, and the lifting map is not assumed to be continuous.
+Let us emphasize that liftings are not uniquely defined, and the lifting map is not assumed to be continuous.
 Also, to talk about liftings, we have to choose $\eps>0$, as well as the inclusions $\spc{A},\spc{A}'\hookrightarrow\spc{W}$.
 
 Let $\spc{A}$ be  a compact $m$-dimensional Alexandrov space.
 Suppose $\spc{A}'$ is another compact $m$-dimensional Alexandrov space such that $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small --- smaller than some $\eps=\eps(\spc{A})>0$.
 If the construction of the previous section is performed in $\spc{A}$,
-then we can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
+then it can be repeated in $\spc{A}'$ for the liftings of all points and the same function $\phi$.
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
-The results of this and related constructions will be also called \index{lifting}\emph{liftings},
+The results of this and related constructions will also be called \index{lifting}\emph{liftings};
 say we can talk about a lifting from $\spc{A}$ to $\spc{A}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is small, then these liftings are strictly concave)
 and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
 Here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction, but it is straightforward.
@@ -129,10 +129,10 @@ The next statement follows from \cite[4G.3]{hatcher}.
 \begin{thm}{Nerve theorem}\label{thm:nerve}
 Let $\{\Omega_1,\dots,\Omega_k\}$ be an open cover of a compact metric space $\spc{X}$
 and let $\spc{N}$ be the corresponding nerve with vertices $\{v_1,\dots,v_k\}$.
-Suppose that every nonempty finite intersection $\Omega_{\alpha_1}\cap\z\dots\cap\Omega_{\alpha_k}$ is contractible.
+Suppose that every nonempty finite intersection $\Omega_{\alpha_1}\cap\z\dots\cap\Omega_{\alpha_m}$ is contractible.
 Then $\spc{X}$ is homotopy equivalent to the nerve $\spc{N}$ of the cover.
 
-Moreover homotopy equivalences  $a\:\spc{X}\to \spc{N}$ and $b\:\spc{N}\to\spc{X}$ can be chosen so that 
+Moreover, homotopy equivalences  $a\:\spc{X}\to \spc{N}$ and $b\:\spc{N}\to\spc{X}$ can be chosen so that
 if $x\in \Omega_i$, then $a(x)\in \Star_{v_i}$,
 and if $y\in\spc{N}$ lies in the simplex with vertices $v_{i_1},\dots, v_{i_m}$, then $b(y)\in \Omega_{i_1}\cup\dots\cup \Omega_{i_m}$.
 \end{thm}
@@ -186,13 +186,13 @@ Therefore, in the obtained homotopy we can parametrize $[0,\infty)$ by $[0,1)$ a
 thus we get that $W$ is contractible.
 In other words, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem (\ref{thm:nerve}).
 
-The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{A}_n$ keeping their properties for all large $n$. 
+The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{A}_n$ while keeping their properties for all large $n$.
 More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{A}_n$ which are strictly concave for all large $n$ and such that $\bar\Omega_{i,n}=\set{x\in \spc{A}_n}{f_{i,n}(x)\ge 0}$ is a compact convex set and $\Omega_{i,n}\z=\set{x\in \spc{A}_n}{f_{i,n}(x)> 0}$ is an open convex set for each $i$.
 
 Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{A}_n$ for all large~$n$.
-Indeed suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrary large $n$.
-Since $\spc{A}_\infty$ is compact, there is a limit point $p_\infty\in \spc{A}_\infty$ for a subsequnce of $p_n$.
-But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrary large $n$ --- a contradiction.
+Indeed suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrarily large $n$.
+Since $\spc{A}_\infty$ is compact, there is a limit point $p_\infty\in \spc{A}_\infty$ for a subsequence of $p_n$.
+But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrarily large $n$ --- a contradiction.
 
 In a similar fashion, we can show that if $n$ is large, then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{A}_n$ 
 if and only if $\{\Omega_{i}\}_{i\in S}$ has a common point in $\spc{A}_\infty$.
@@ -224,9 +224,9 @@ The construction of a strictly concave function (\ref{thm:strictly-concave}) is 
 
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about $m$-dimensional manifolds with lower sectional curvature bound we follow the following steps:
 \begin{itemize}
-\item Arguing by contradiction, we assume existance of a sequence of manifolds that violates our assumption.
-\item Use Gromov's selection theorem to choose a converging subseqence.
-\item Use curvature survival, to conclude that the limit space is Alexandrov.
+\item Arguing by contradiction, we assume existence of a sequence of manifolds that violates our assumption.
+\item Use Gromov's selection theorem to choose a converging subsequence.
+\item Use curvature survival to conclude that the limit space is Alexandrov.
 \item Try to arrive at a contradiction using Alexandrov geometry.
 \end{itemize}
 
@@ -234,7 +234,7 @@ In principle, the same strategy might work for a sequence of Riemannian manifold
 The following question gives an example where such strategy might be successful in principle.
 
 \begin{thm}{Question}
-Is it true that no simply connected closed manifold (of arbitrary large dimension) admits a Riemannian metric with sectional curvature and diameter bounded by a fixed positive sufficiently small value?
+Is it true that no simply connected closed manifold (of arbitrarily large dimension) admits a Riemannian metric with sectional curvature and diameter bounded by a fixed positive sufficiently small value?
 \end{thm}
 
 If the dimension is bounded, then Gromov's theorem \cite{gromov1978} implies that such a manifold can be covered by a compact nil-manifold; in particular, the manifold cannot be simply connected.
@@ -252,7 +252,7 @@ Here $\beta_i(M)$ denotes $i^\text{th}$ Betti number of $M$.
 \end{thm}
 
 Gromov's original proof \cite{gromov-1981} of the Betti-number theorem did not use Alexandrov geometry directly.
-However, it is easy to produce a proof following the steps above (noone bothered to write it so far).
+However, it is easy to produce a proof following the steps above (no one bothered to write it so far).
 The following result was proved by the third author \cite{petrunin2008}, and it uses the same technique.
 
 \begin{thm}{Scalar curvature bound}
@@ -275,7 +275,7 @@ Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that 
 
 This theorem was proved by Grigory Perelman \cite{perelman1991}.
 The proof was rewritten with more details by the first author \cite{kapovitch};
-for more exact statements can see \cite{kapovitch2002} and \cite{kapovitch2005}.
+for more exact statements, see \cite{kapovitch2002} and \cite{kapovitch2005}.
 In private conversations, Perelman claimed that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$.
 Since no proof has been written, this statement should be considered as a conjecture;
 partial results in this direction were obtained by Mohammad Alattar \cite{alattar}.
@@ -288,6 +288,6 @@ For any real numbers $\kappa$, $D\z>0$, $v>0$ and a positive integer $m$, there 
 \end{thm}
 
 This statement can be improved to diffeomorphism-type finiteness in all dimensions $m\ne 4$.
-Indeed, for $m=4$ a closed topological $m$-manifold admits only finitely many smooth structures; see \cite{kirby-siebenmann} and \cite{moise,thurston} for cases $m\ge 5$ and $m\le 3$, respectively.
+Indeed, for $m\ne4$ a closed topological $m$-manifold admits only finitely many smooth structures; see \cite{kirby-siebenmann} and \cite{moise,thurston} for cases $m\ge 5$ and $m\le 3$, respectively.
 
 

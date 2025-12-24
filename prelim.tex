@@ -64,7 +64,7 @@ in particular $\MM^n(-1)=\HH^n$.
 Let $S$ be a subset of a metric space $\spc{X}$.
 Recall that a set $Z\subset \spc{X}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $S$ if for any point $s\in S$, there is a point $z\in Z$ such that $\dist{s}{z}{}\le\eps$.
 
-The \index{$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$\index{$\pack_\eps\spc{X}$}.
+The \index{pack@$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$\index{70@$\pack_\eps\spc{X}$ ($\eps$-pack)}.
 If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x_1,x_2,\dots,x_m\}$ in $\spc{X}$
 such that $\dist{x_i}{x_j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
 
@@ -152,7 +152,7 @@ However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 A \index{geodesic!path}\emph{geodesic path} is a geodesic with constant-speed reparameterization by the unit interval $[0,1]$.
 
 A metric space is called \index{geodesic!space}\emph{geodesic} if any pair of its points can be joined by a geodesic.
-A metric space $\spc{X}$ is called \index{91@$\ell$-geodesic space}\emph{$\ell$-geodesic}
+A metric space $\spc{X}$ is called \index{geodesic space@$\ell$-geodesic space}\emph{$\ell$-geodesic}
 if any two points $x,y\in\spc{X}$ such that $\dist{x}{y}{}<\ell$ can be connected by a geodesic.
 For instance, any geodesic space is $\infty$-geodesic.
 
@@ -279,7 +279,7 @@ A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} 
 $\hinge p x y=([p x],[p y])$\index{11@$\hinge p x y$ (hinge)}.
 
 \parbf{Angles.}
-The angle measure of a hinge $\hinge p x y$ is defined as the following limit \index{30@$\mangle\hinge p x y$ (angle measure)}
+The angle measure of a hinge $\hinge p x y$ is defined as the following limit \index{31@$\mangle$ (angle measure)}
 \[\mangle\hinge p x y=\lim_{\bar x,\bar y\to p} \angk p{\bar x}{\bar y},\]
 where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 The angle is only defined if this limit exists.
@@ -501,7 +501,7 @@ respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 
 These distances actually define a metric on (isometry classes of) compact metric spaces; for a proof we refer to \cite{burago-burago-ivanov,petrunin2023pure}.
 The obtained metric is called the Gromov--Hausdorff metric;
-the corresponding metric space will be denoted by $\GH$.
+the corresponding metric space will be denoted by \index{GH@$\GH$ (space of spaces)}$\GH$.
 This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
 Moreover, each of the references above provide the following statement.
 
@@ -552,7 +552,7 @@ In other words $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
 \begin{thm}{Definition}
 Let $\spc{X}$ and $\spc{Y}$ be metric spaces.
 A map $f\:\spc{X}\to\spc{Y}$
-is called an \index{isometry!$\eps$-isometry}\emph{$\eps$-isometry}
+is called an \index{isometry@$\eps$-isometry}\emph{$\eps$-isometry}
 if the following two conditions hold:
 
 \begin{subthm}{}

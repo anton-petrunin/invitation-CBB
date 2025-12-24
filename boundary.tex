@@ -6,7 +6,7 @@ After discussing its properties, we prove the doubling theorem (\ref{thm:doublin
 
 \section{Definition}
 
-The definition of boundary will use induction of dimension, and it will work only for finite-dimensional Alexandrov spaces.
+The definition of boundary will use induction on dimension, and it will work only for finite-dimensional Alexandrov spaces.
 
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By~\ref{ex:dim=1},
@@ -14,7 +14,7 @@ $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty bo
 This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
-Suppose  $\spc{A}$ is $m$-dimensional Alexandrov space.
+Suppose $\spc{A}$ is an $m$-dimensional Alexandrov space.
 We say that $p\in \spc{A}$ belongs to the boundary (briefly $p\in \partial \spc{A}$) if 
 $\partial\Sigma_p\ne\emptyset$.
 By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is an $(m-1)$-dimensional Alexandrov space;
@@ -38,7 +38,7 @@ The following statement is a close relative of Perelman's stability theorem \ref
 We are going to use this result without proof.
 A proof can be found in \cite{perelman1993}.
 
-Recall that the logarithm $\log_p\:\spc{A}\to \T_p$ is a mulivalued function defined in \ref{Velocity of curve}.
+Recall that the logarithm $\log_p\:\spc{A}\to \T_p$ is a multivalued function defined in \ref{Velocity of curve}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
 For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$
@@ -52,7 +52,7 @@ Moreover, we may assume that
 \eps\to 0.\]
 \end{thm}
 
-Note that the last condition automatically implies that $h_\eps$ as an $o(\eps)$-sometry.
+Note that the last condition automatically implies that $h_\eps$ is an $o(\eps)$-sometry.
 
 The above theorem is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
@@ -106,7 +106,7 @@ While working on the proof, keep in mind that there are pairs of spaces $\spc{K}
 For example, one can let $\spc{K}_1=\SSS^4$ and let $\spc{K}_2$ be the suspension over the Poincaré homology sphere; compare to \ref{ex:conic-tangen:example}.
 
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
-Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, \index{51@$\rank\spc{A}$}$\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
+Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, $\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
 here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
 In the following proof we will apply induction on the rank of $\spc{A}$.
@@ -136,7 +136,7 @@ The remaining part of the proof is divided into three cases.
 
 \parit{Case 1.}
 Suppose $k>1$.
-Let $\spc{A}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ a $k$-dimensional $\Alex0$ cone.
+Let $\spc{A}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ is a $k$-dimensional $\Alex0$ cone.
 Observe that $\rank\T_y\le\rank\spc{A}$ for any $y\in\spc{A}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$, we can choose $z\ne 0$ that lies in $\partial\spc{C}$.
@@ -150,7 +150,7 @@ The latter contradicts the minimality of $k$.
 Since $\partial \spc{A}\ne \emptyset$, we get that $k=1$;
 therefore, $\spc{A}=\RR^{m-1}\times[0,\infty)$.
 
-Let $\spc{A}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ a $k'$-dimensional $\Alex0$ cone.
+Let $\spc{A}'\iso \RR^{m-k'}\times \spc{C}'$, where $\spc{C}'$ is a $k'$-dimensional $\Alex0$ cone.
 Since $\partial\spc{A}\cong\RR^{m-1}$,
 the image of $\partial\spc{A}$ in $\spc{A}'$ does not lie in $\RR^{m-k'}\z\times\{0\}$.
 In other words, we can choose $y\in \partial \spc{A}$ such that its image $y'\in \spc{A}'$ has a nonzero projection in $\spc{C}'$.
@@ -270,7 +270,7 @@ The doubling $\spc{W}$ of $\spc{A}$ across $\partial \spc{A}$ is an Alexandrov s
 
 \end{thm}
 
-Part \ref{SHORT.thm:doubling:doubling} is called the \index{doubling theorem}\emph{doubling theorem}.
+Part \ref{SHORT.thm:doubling:doubling} is called the {}\emph{doubling theorem}.
 
 \parit{Proof.}
 We will denote by 
@@ -282,7 +282,7 @@ The induction step is a combination of the implications below.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:concave}$_m$.}
 Suppose $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
-By \ref{ex:dim=1}, $\Sigma_x$ isometric to a line segment $[0,\ell]$;
+By \ref{ex:dim=1}, $\Sigma_x$ is isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
 Assume $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
@@ -425,7 +425,7 @@ By \ref{prop:gexp}
 +\dist{y}{\alpha(s)}{\spc{A}_1}
 <\dist{p}{y}{\spc{W}}\]
 for small values $s>0$
---- a contradition.
+--- a contradiction.
 
 $\Cone \Xi$ contains a line with directions $\dir x{y}$ and $\dir xp$.
 By the splitting theorem, $\Cone \Xi$ splits in these directions;
@@ -509,7 +509,7 @@ Show that $\partial\spc{A}$ is connected.
 
 
 \begin{thm}{Exercise}\label{ex:dist-to-bry}
-Let $\spc{A}$ be an finite-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{A}$.
+Let $\spc{A}$ be a finite-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{A}$.
 
 \begin{subthm}{ex:dist-to-bry:geod}
 Suppose a geodesic $\gamma$ in $\spc{A}$ has its interior point in $\partial\spc{A}$.
