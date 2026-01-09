@@ -521,7 +521,9 @@ $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ for some $m$ such that
 \quad\text{and}\quad
 |\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
 for any $i$ and $j$.
-Moreover, we can assume that $m\le \LinDim\spc{A}$. 
+Moreover, we can assume that $m\le \LinDim\spc{A}$.
+
+If $\spc{A}$ is an $\Alex{\pm1}$ space, then the same holds if we exchange $\EE^m$ to $\SSS^m$ or $\HH^m$, respectively; in the $\Alex{1}$ case one have to assume in addition that $\diam \spc{A}\le \pi$.
 \end{thm}
 
 \parit{Proof.}
@@ -538,6 +540,16 @@ Applying the comparison $\mangle\hinge {p'}{x_i}{x_j}\ge \angk {p'}{x_i}{x_j}$, 
 \[|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
 for all $i$ and $j$.
 Passing to a limit configuration as $p'\to p$ we get the result.
+
+If $\spc{A}$ is an $\Alex{-1}$ space, then the same argument gives
+$\tilde p,\tilde x_1,\z\dots,\tilde x_n\in \EE^m$ such that
+\[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{A}}
+\quad\text{and}\quad
+\side\hinge{\tilde p}{\tilde x_i}{\tilde x_j}_{\HH^2}\ge |x_i- x_j|_{\spc{A}}.\]
+It remains to observe that $\EE^m$ with the metric defined by
+$\dist{\tilde v}{\tilde w}{}\z\df \side\hinge{\tilde p}{\tilde v}{\tilde w}_{\HH^2}$
+is isometric to $\HH^m$.
+The $\Alex{1}$ case is analogous.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:dim-max}
@@ -717,19 +729,31 @@ and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 
 %??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.
 
-\begin{thm}[!]{Exercise}\label{ex:tangent=Em}
-Let $\spc{A}$ be an $\Alex0$ space.
-Suppose $\LinDim\spc{A}\z=m<\infty$.
+\begin{thm}{Corollary}\label{cor:tan-g-delta}
+Let $\spc{A}$ be an Alexandrov space, and let $m$ be an integer.
+If $m\le \LinDim\spc{A}$ then
+\[\dim\Lin_s\z\ge m\]
+for any point $s$ in a dense G-delta subset of points in $\spc{A}$.
 
-\begin{subthm}{ex:tangent=Em:ball}
-Show that there is a ball $B=\cBall[p,r]_{\spc{A}}$ and a constant $c>0$ such that $\pack_\eps B\ge \tfrac c{\eps^m}$ for any $\eps>0$.
-\end{subthm}
-
-\begin{subthm}{ex:tangent=Em:G-delta}
-Show that $\T_p\spc{A}\iso \EE^m$ for points $p$ in a dense G-delta set of points in $\spc{A}$.
-\end{subthm}
-
+Moreover if $m= \LinDim\spc{A}$, then $\T_s\spc{A}\iso \EE^m$ for points $s$ in a dense G-delta set of points in $\spc{A}$.
 \end{thm}
+
+\parit{Proof.}
+Applying rescaling, we can assume that $\spc{A}$ is $\Alex{-1}$.
+
+By the right-inverse theorem and \ref{ex:resporka} there is a ball $B=\cBall[p,r]_{\spc{A}}$ and $\Const>0$ such that
+\[\pack_\eps B\ge \frac{\Const}{\eps^m}\]
+for all small $\eps>0$.
+
+In particular, given a radius $R$ we can choose $\eps>0$ and an integer $N$ such that
+\[\pack_\eps \cBall(0,R+r)_{\HH^{m-1}}< N\le \pack_\eps B.\]
+
+Applying \ref{cor:euclid-subcone} to an $\eps$-packing $x_1,\dots,x_N$ in $B$, we get that \[\dim\Lin_s\z\ge m\]
+for any point $s$ in a dense G-delta subset of $\oBall(p,R)$.
+Since $R>0$ is arbitrary, the first statement follows.
+
+To prove the last statement, apply \ref{ex:dim-max}.
+\qeds
 
 \section{Distance chart}
 
@@ -757,6 +781,7 @@ for any two points $x,y$ in a sufficiently small neighborhood of $p$.
 
 Use this together with the right-inverse theorem (\ref{thm:right-inverse}) to prove \ref{thm:dist-chart}.
 \end{thm}
+
 
 \section{Volume}
 
@@ -811,7 +836,7 @@ this proves part \ref{SHORT.inq:BG:a}.
 \end{wrapfigure}
 
 If $\T_p\iso \EE^k$ for some $k\le m$, then \ref{SHORT.inq:BG:a} implies \ref{SHORT.inq:BG:b}.
-In the general case, by \ref{ex:tangent=Em:G-delta}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.
+In the general case, by \ref{cor:tan-g-delta}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.
 If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\z\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
@@ -849,6 +874,41 @@ is nonincreasing.
 Show that any finite-dimensional Alexandrov space is proper.
 
 \end{thm}
+
+\begin{thm}{Exercise}\label{ex:vol>0}
+Show that any nonempty open set in an $m$-dimensional Alexandrov space has positive $m$-volume.
+\end{thm}
+
+
+\section{Packing numbers}\label{sec:packing-numbers}
+
+
+\begin{thm}{Exercise}\label{ex:tangent=Em}
+Let $\spc{A}$ be an $m$-dimensional $\Alex\kappa$ space and $m<\infty$.
+
+\begin{subthm}{ex:tangent=Em:2balls}
+Show that for any two balls $B_1$ and $B_2$ in $\spc{A}$ with positive radii
+there is $\delta>0$ such that the inequality
+$\pack_{\delta\cdot\eps} B_1\ge \pack_\eps B_2$
+holds for all sufficiently small $\eps>0$.
+\end{subthm}
+
+\begin{subthm}{ex:tangent=Em:ball}
+Show that there are constants $c_1=c_1(m)$ and $c_2=c_2(m,r,\kappa)$ such that
+\[c_1\cdot \vol B\le\eps^m\cdot\pack_\eps B\le c_2\cdot \vol B\]
+for any ball $B=\cBall[p,r]_{\spc{A}}$ with $r>0$ and all small $\eps>0$.
+\end{subthm}
+
+\end{thm}
+
+
+Note that the exercise above implies that for Alexandrov spaces \index{Minkowski dimension}\emph{Minkowski dimension} (also known as \index{box-counting dimension}\emph{box-counting dimension}) coincides with linear dimension.
+Namely, let $\spc{A}$ be an Alexandrov space.
+Given a point $p\in \spc{A}$ and $r>0$, let
+\[m(p,r)\df \inf\set{\alpha\in\RR}{\eps^\alpha\cdot\pack_\eps \cBall[p,r]\to 0\quad\text{as}\quad \eps\to 0}.\]
+Then $m(p,r)=\LinDim \spc{A}$; in particular, $m(p,r)$ is an integer, and it does not depend on the choice of $p$ and $r$.
+
+
 \section{Other dimensions}\label{sec:all-dim}
 
 Now we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
@@ -935,13 +995,4 @@ At that time, it was not known whether
 \[\LinDim\spc{A}=\infty\quad \Rightarrow\quad \TopDim\spc{A}=\infty\]
 for any Alexandrov space $\spc{A}$.
 The latter implication was proved by Grigory Perelman and the third author \cite{perelman-petrunin:qg}.
-
-The following exercise adds \index{Minkowski dimension}\emph{Minkowski dimension} (also known as \index{box-counting dimension}\emph{box-counting dimension}) to the list of reasonable dimensions discussed in Section~\ref{sec:all-dim}.
-
-\begin{thm}{Exercise}\label{ex:box-counting}
-Let $\spc{A}$ be an Alexandrov space.
-Given a point $p\in \spc{A}$ and $R>0$, let $m(p,R)$ be the least upper bound on values $\alpha>0$ such that $\eps^\alpha\cdot\pack_\eps \cBall[p,R]\to 0$ as $\eps\to 0$.
-
-Show that $m(p,R)=\LinDim \spc{A}$; in particular, $m(p,R)$ is an integer, and it does not depend on the choice of $p$ and $R$.
-\end{thm}
 

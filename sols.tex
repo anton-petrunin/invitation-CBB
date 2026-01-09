@@ -371,7 +371,7 @@ and it is sufficient to show that $h$ is one-sided differentiable.
 
 Choose $t_0\in \II$.
 Show and use that the function
-$t\mapsto \tfrac {h(t)-h(t_0)}{t-t_0}$ is nonincreasing (nondecreasing) for $t>t_0$ (respectively, for $t<t_0$).
+$t\mapsto \tfrac {h(t)-h(t_0)}{t-t_0}$ is nonincreasing.
 
 
 
@@ -875,16 +875,6 @@ In particular, if an infinite-dimensional Alexandrov space $\spc{A}$ contains a 
 It seems plausible that $\spc{A}$ should contain a bi-Lipschitz copy of Euclidean ball of arbitrary dimension,
 but this question is open.
 
-\parbf{\ref{ex:tangent=Em}}; \ref{SHORT.ex:tangent=Em:ball}.
-Apply the right-inverse theorem and \ref{ex:resporka}.
-
-\parit{\ref{SHORT.ex:tangent=Em:G-delta}.}
-Let $B=\cBall[p,r]$ be as in \ref{SHORT.ex:tangent=Em:ball}, so given a radius $R\gg r$ we can choose $\eps>0$ and an integer $N$ such that
-\[\pack_\eps \cBall(0,R+r)_{\EE^{m-1}}< N\le \pack_\eps B.\]
-
-Applying \ref{cor:euclid-subcone} to an $\eps$-packing $x_1,\dots,x_N$, we get that $\dim\Lin_s\z\ge m$ for any point $s$ in a dense G-delta subset of $\oBall(p,R)$.
-Conclude that $\dim\Lin_s\z\ge m$ for any point $s$ in a dense G-delta subset of $\spc{A}$ and apply \ref{ex:dim-max}.
-
 \parbf{\ref{ex:proof-dist-chart}.}
 Apply the (\textit{n}+1)-comparison (\ref{thm:n+1}) to show that at least one of the inequalities
 \[
@@ -922,7 +912,17 @@ Follow the proof of the Bishop--Gromov inequality, plus prove the following two 
 for any $x,y\in\oBall(p,r)$.
 
 \parbf{\ref{ex:diam-compact:proper}.}
-Reuse the argument from  the first part of the proof of Bishop--Gromov inequality.
+Reuse the argument from  the first part of the proof of the Bishop--Gromov inequality.
+
+\parbf{\ref{ex:vol>0}.} Applying the right-inverse theorem theorem, show that some ball has positvie volume.
+Further, use the Bishop--Gromov inequality to show that any ball with positive radius has positive volume.
+
+
+\parbf{\ref{ex:tangent=Em}}; \ref{SHORT.ex:tangent=Em:2balls}.
+Apply the dilation map from the proof of the Bishop–Gromov inequality (\ref{inq:BG} and \ref{ex:BG}).
+
+\parit{\ref{SHORT.ex:tangent=Em:ball}.}
+Apply the Bishop--Gromov inequality (\ref{inq:BG} and \ref{ex:BG}).
 
 \parbf{\ref{ex:dim=dim}.} 
 Suppose $K$ is a compact set in $\spc{A}$ such that $\HausDim K\ge m$.
@@ -944,30 +944,38 @@ By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:sp
 We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
 Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
-\parbf{\ref{ex:box-counting}.}
-Apply \ref{ex:resporka} and \ref{thm:right-inverse} to show that $m(p,R)\ge \LinDim \spc{A}$.
-To prove that $m(p,R)\le \LinDim \spc{A}$, reuse the argument in the Bishop--Gromov inequality.
-
 \parbf{\ref{ex:dim-lim}.}
 Apply \ref{ex:resporka}.
 
-\parbf{\ref{ex:pack-vol}}; \ref{SHORT.ex:pack-vol:pack}
-Apply the Bishop--Gromov inequality (\ref{inq:BG}).
+\parbf{\ref{ex:diam-compact:GH}.}
+Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{A}_n}$ for given $R>0$, then apply the diagonal procedure to construct the needed convergence.
 
-\parit{\ref{SHORT.ex:pack-vol:dim}}
+\parbf{\ref{ex:pack-vol:dim}.}
 By \ref{ex:dim-lim}, $\dim\spc{A}_\infty\le m$.
 To show that $\dim\spc{A}_\infty\ge m$,
-apply \ref{cor:euclid-subcone} to a maximal packing and use the estimate in \ref{SHORT.ex:pack-vol:pack}.
+apply \ref{cor:euclid-subcone} and \ref{ex:tangent=Em:ball}.
 
 \parit{Comment.}
 The following stronger statement holds
 \[\vol_m\spc{A}_\infty=\lim_{n\to\infty} \vol_m\spc{A}_n.\]
 In other words, if $\bm{K}_m\subset \GH$ denotes the set of isometry classes of all compact $\Alex\kappa$ spaces with dimension $\le m$, then the function
-$\vol_m\:\bm{K}_m\to \RR$ is continuous.
+$\vol_m\:\bm{K}_m\to \RR$ is continuous. %??? cite???
+
+\parbf{\ref{ex:barrier}.}
+Choose a smooth upper barrier $\bar f$ of $f$ at $t_0$ with $\bar f''\le \lambda_1$, provided by the lemma.
+Observe that the composition $\phi\circ\bar f$ is an upper barrier of $\phi\circ f$ at $t_0$.
+It remains to apply the chain rule to $\phi\circ\bar f$ and use the lemma again.
 
 
-\parbf{\ref{ex:diam-compact:GH}.}
-Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{A}_n}$ for given $R>0$, then apply the diagonal procedure to construct the needed convergence.
+\parbf{\ref{ex:pack-sphere}.}
+Choose a ball $B=\cBall[x,R]$ such that $\cBall[x,2\cdot R]\subset \Omega$.
+By \ref{ex:tangent=Em:ball}, we can choose a constant $\Const_1>0$ such that for every sufficiently small $\eps>0$ the ball $B$ contains at least $\Const_1/{\eps^m}$ points $q_1,\dots,q_N$ such that $\dist{q_i}{q_j}{}>10\cdot\eps$.
+Slice $B$ into sets
+\[B_k=\set{z\in B}{k\cdot \eps\le \dist{p}{z}{}< {k+1}\cdot \eps}\]
+there are at most $1+2\cdot R/\eps$ nonempty sets $B_k$.
+Therefore, for a fixed constant $\Const_2>0$ we can choose $B_k$ that contains at least $\Const_2/\eps^{m-1}$ points from $\{q_1,\dots,q_N\}$.
+Let $r=k\cdot \eps$, for each $q_i\in B_k$ choose $q_i'\in [pq_i]$ such that $\dist{p}{q_i'}{}=r$.
+It remains to observe that (1) $q_i'\in\Omega$ for each $i$ and (2) $\dist{q_i'}{q_j'}{}>8\cdot\eps$ and $\mangle\hinge p{q_i'}{q_j'}>8\cdot \eps/r$ if $i\ne j$.
 
 \parbf{\ref{ex:no-conc}.}
 Consider the infinite product $\SSS^1\times ({\tfrac 12}\cdot \SSS^1)\times ({\tfrac 14}\cdot \SSS^1)\times\dots$

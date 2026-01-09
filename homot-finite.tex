@@ -1,8 +1,7 @@
 %%!TEX root = the-homot-finite.tex
 \section{Controlled concavity}
 
-Alexandrov spaces have plenty of semiconcave functions;
-for instance, squared distance functions. 
+Alexandrov spaces have plenty of semiconcave functions, including squared distance functions and their convex combinations.
 The following theorem provides a source of strictly concave functions  defined on small open sets of finite-dimensional Alexandrov spaces. 
 
 \begin{thm}{Theorem}
@@ -15,54 +14,122 @@ Moreover, given $0\ne v\in \T_p$, the differential, $\dd_p f$, can be chosen
 arbitrarily close to $x\mapsto -\<v,x\>$.
 \end{thm}
 
+Before getting into the proof, we need to refresh material from \ref{Function comparison} and \ref{sec:packing-numbers}.
+
+\begin{thm}{Lemma}\label{lem:barrier}
+Let $f$ be a locally Lipschitz function defined on a real interval $\II$.
+Then $f$ is $\lambda$-concave if and only if for any $t_0\in\II$ there is smooth (local) upper barrier
+$\bar f$ of $f$ at $t_0$ such that $\bar f''(t_0)\le \lambda$.
+
+Moreover, in the only-if part, we can assume in addition, that $\bar f'(t_0)$ takes a given value in the interval $[f^+(t_0),f^-(t_0)]$.
+\end{thm}
+
+\parit{Proof.}
+Passing to function $t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2$, we can assume that $\lambda=0$.
+
+The only-if part follows since concave function is supported by the linear function $t\mapsto f(t_0)+ \Const\cdot (t-t_0)$ for any $\Const\in [f^+(t_0),f^-(t_0)]$.
+
+On the other hand, suppose $f$ is not concave.
+Then adding a linear function to $f$ we can assume that there is a subinterval $[a,b]\subset\II$ such that
+\[
+f(a)>0,
+\quad
+f(b)>0,
+\quad\text{but}\quad
+f(t)<0
+\quad\text{for some}\quad
+t\in [a,b].
+\]
+Let $s$ be the minimal value such that $f(t)\ge \tfrac s2\cdot (t-a)\cdot(t-b)$ for any $t\in [a,b]$.
+Note that $s>0$ and $f(t_0)=\tfrac s2\cdot (t_0-a)\cdot(t_0-b)$;
+that is, $t\mapsto \tfrac s2\cdot (t-a)\cdot(t-b)$ is a local lower barrier of $f$ at $t_0$.
+Therefore, $\bar f''(t_0)\ge s>0$ for any upper barrier $\bar f$ of $f$ at $t_0$,
+and the if part follows.
+\qeds
+
+\begin{thm}[!]{Exercise}\label{ex:barrier}
+Let $f$ be Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
+Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $c_3\ge \phi''(x_0)$.
+Let $\lambda_2=c_1\cdot\lambda_1+c_2^2\cdot c_3$.
+Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
+\end{thm}
+
+\begin{thm}[!]{Exercise}\label{ex:pack-sphere}
+Given a point $p$ in an $m$-dimensional Alexandrov space $\spc{A}$ and a nonempty open set $\Omega$ there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
+\end{thm}
+
+
+\parit{Proof of \ref{thm:strictly-concave}.}
+Suppose $r>0$ small and $c$ is large (these values will be specified a bit latter).
+Consider the real-to-real function
+$$\phi_{r,c}(x)=(x-r)- c\cdot(x-r)^2/r;$$
+so,
+\begin{align*}
+\phi_{r,c}(r)&=0,
+&
+\phi_{r,c}'(r)&=1,
+&
+\phi_{r,c}''(r)&=-\frac{2\cdot c}{r}.
+\end{align*}
+
+{
+
 \begin{wrapfigure}{o}{44 mm}
-\vskip-0mm
+\vskip-4mm
 \centering
 \includegraphics{mppics/pic-901}
 \vskip1mm
 \end{wrapfigure}
 
-\parit{Proof.} 
-Fix small $r>0$ and large $c$;
-consider the real-to-real function 
-$$\phi_{r,c}(x)=(x-r)- c\cdot(x-r)^2/r,$$
-so we have 
-$\phi_{r,c}(r)=0$,
-$\phi_{r,c}'(r)=1$,
-and $\phi_{r,c}''(r)=- {2c}/{r}$. 
+Let $\gamma$ be a unit-speed geodesic.
+Given points $q_1,\dots, q_N$, set
+\begin{align*}
+\alpha_i(t)&=\mangle(\gamma^+(t),\dir{\gamma(t)}{q_i}),
+\\
+\lambda_i(t)&=\frac{3-c\cdot \cos^2[\alpha_i(t)]}{r},
+\\
+h_i&=\phi_{r,c}\circ\distfun_{q_i}\circ\gamma.
+\end{align*}
 
-Let $\gamma$ be a unit-speed geodesic, fix a point $q$ and let 
-\[\alpha(t)=\mangle(\gamma^+(t),\dir{\gamma(t)}{q}).\]
+}
 
-Recall that $r$ is small.
-If $\dist q{\gamma(t)}{}$ is sufficiently close to
-$r$, then direct calculations show that
-\[(\phi_{r,c}\circ\distfun_q\circ\gamma)''(t)
-\le 
-\frac{3-c\cdot \cos^2[\alpha(t)]}{r}.\]
-(Since $c$ is large, this inequality implies that $\phi_{r,c}\circ\distfun_q\circ\gamma$ is strictly concave at $t$ unless $\alpha(t)\approx\tfrac\pi2$.) 
+Suppose that $\dist{q_i}{\gamma(t_0)}{}$ is sufficiently close to
+$r$.
+Then by \ref{ex:barrier} we have that
+$h_i$
+is $\lambda_i(t_0)$-concave in a neighborhood of $t_0$.
 
-Now, assume $\{q_1,\dots, q_N\}$ is a finite set of points such that $\dist p{q_i}{}=r$ for every $i$.
-Given a geodesic $\gamma$, let $\alpha_i(t)=\mangle(\gamma^+(t),\dir {\gamma(t)}{q_i})$.
-Assume that
-\[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps>0\eqlbl{eq:angle-ne-pi/2}\]
-for any geodesic $\gamma$ in $\oBall(p,\eps)$. 
-Choose $c>3N/\cos^2\eps$;
-then the inequality above implies that the function
-$$f=\sum_i \phi_{r,c}\circ\distfun_{q_i}$$
-is strictly concave in $\oBall(p,\eps')$ for some positive $\eps'<\eps$.
+Assume that $\dist{p}{q_i}{}=r$ for each $i$, and $\eps_1>0$ is small.
+If the geodesic $\gamma$ lies in $\oBall(p,\eps_1)$, then from above we have that $\sum h_i$ is $\sum\lambda_i(t_0)$-concave in a neighborhood of any $t_0$.
 
-The same argument as in \ref{ex:pack-vol} shows that for small $r>0$, one can
-choose $N\ge \Const/\delta^{m-1}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$
-and $\angk p{q_j}{q_i}>\delta$ (here $\Const=\Const(\Sigma_p)>0$).
+Suppose that there is $\eps_2>0$ such that
+\[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps_2>0\eqlbl{eq:angle-ne-pi/2}\]
+for any geodesic $\gamma$ in $\oBall(p,\eps_1)$.
+If $c>3\cdot N/\sin^2\eps_2$, then $\sum\lambda_i(t_0)<0$ and
+$\sum h_i$ is strictly concave in a neighborhood of $t_0$ for any choice of geodesic $\gamma$ in $\oBall(p,\eps_1)$.
+It follows that
+\[f=\sum_i \phi_{r,c}\circ\distfun_{q_i}\]
+is strictly concave in $\oBall(p,\eps_1)$.
+
+It remains to choose $r,\eps_1,\eps_2>0$ and points $q_1,\dots, q_N$ such that $\dist{p}{q_i}{}=r$ for each $i$, and \ref{eq:angle-ne-pi/2} holds.
+
+Let us assume that $\spc{A}$ is $\Alex0$.
+Applying \ref{ex:pack-sphere} to a small open ball around $p$ and small $\eps_3>0$,
+we can choose $N\ge \Const_1/\eps_3^{m-1}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$ for some small $r>0$
+and $\angk p{q_j}{q_i}>\eps_3$ (here $\Const_1>0$).
 On the other hand, suppose $\gamma$ runs from $x$ to~$y$.
-If $|\alpha_i(t)- \tfrac\pi2|<\eps\ll\delta$, then applying the ($n$+1)-point comparison to $\gamma(t)$, $x$, $y$ and all $\{q_i\}$ we get that
-$N\le \Const(m)/\delta^{m-2}$. 
-Therefore, for small $\delta>0$ and yet smaller $\eps>0$, the set $\{q_i\}$ meets \ref{eq:angle-ne-pi/2}.
+Let us apply the ($n$+1)-point comparison (\ref{thm:n+1}) to $\gamma(t)$, $x$, $y$ and $q_1,\dots,q_N$;
+denote the obtained points by $\tilde x, \tilde y,\tilde q_1,\dots,\tilde q_N$.
+If $\eps_1\ll \eps_3$, $\eps_2\ll \eps_3$, and
+$|\alpha_i(t)- \tfrac\pi2|<\eps_2$ for each $i$, then the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\EE^m$ that is perpendicular to $[\tilde x\tilde y]$;
+in particular, $N\le \Const_2(m)/\eps_3^{m-2}$.
+Therefore, for small $\eps_3>0$ and yet smaller $\eps_1$ and $\eps_2$, points $q_1,\dots,q_N$ meet \ref{eq:angle-ne-pi/2}.
 
-If $r$ is small, then points $q_i$ can be chosen so that all directions
-$\dir p {q_i}$ will be $\eps$-close to a given direction $\xi$ and
-therefore the second property follows.
+The $\Alex\kappa$-case can be reduced to $\Alex{-1}$-case by rescaling, and it is done the same way.
+The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\HH^m$.
+
+
+To prove the last statement, choose a geodesic $[pz]$ in the direction sufficiently close to $v$ and apply \ref{ex:pack-sphere} to a small ball centered on a point $\bar z\in [pz]$ close to $p$.
 \qeds
 
 The function $f$ in \ref{thm:strictly-concave} can be chosen to have maximum value $0$ at $p$,
@@ -151,7 +218,7 @@ Then $\spc{A}_\infty$ is homotopy equivalent to $\spc{A}_n$ for all large $n$.
 Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
 \end{thm}
 
-Applying this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:pack-vol}, we get the following.
+Applying this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise \ref{ex:diam-compact:GH}, we get the following.
 
 
 \begin{thm}{Theorem}\label{thm:h-finiteness}
@@ -163,7 +230,7 @@ there are only finitely many homotopy types of $m$-dimensional $\Alex\kappa$ spa
 Assume the contrary, then we can choose a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1,\spc{A}_2,\dots$   that have different homotopy types and satisfy the assumptions of the theorem.
 By Gromov's selection theorem, we can assume that $\spc{A}_n$ converges to some spaces $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 
-By \ref{ex:pack-vol}, $\dim \spc{A}_\infty=m$.
+By \ref{ex:diam-compact:GH}, $\dim \spc{A}_\infty=m$.
 It remains to apply \ref{thm:h-stability}.
 \qeds
 

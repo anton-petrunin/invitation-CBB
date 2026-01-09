@@ -377,7 +377,20 @@ Note that all the conditions are equivalent for $f_n$;
 passing to the limit we get the same for $f$.
 
 \begin{thm}{Exercise}\label{ex:concave'}
-Show that $\lambda$-concave functions are one-sided differentiable.
+Show that $\lambda$-concave functions are \emph{one-sided differentiable}.
+That is, if the function $f\:\II\to\RR$ is a $\lambda$-concace then
+\begin{subthm}{}
+the \index{$f^+$, $f^-$ (one-sided derivative)}\index{right derivative}\emph{right derivative}
+\[f^+(t_0)=\lim_{t\to t_0^+} \frac{f(t)-f(t_0)}{t-t_0}\]
+is defined for any $t_0\in \II$ with the exception of the left end of $\II$.
+\end{subthm}
+\begin{subthm}{}
+the \index{left derivative}\emph{left derivative}
+\[f^-(t_0)=\lim_{t\to t_0^-} \frac{f(t)-f(t_0)}{t-t_0}\]
+is defined for any $t_0\in \II$ with the exception of the right end of $\II$.
+\end{subthm}
+
+Furthermore, show that $f^+(t_0)-f^-(t_0)\le 0$ for any $t_0$ in the interior of $\II$.
 \end{thm}
 
 The following exercise implies that if the function defined on an open interval, then the Lipschitz condition can be dropped from the definition of $\lambda$-concavity.
