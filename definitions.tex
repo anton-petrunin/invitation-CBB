@@ -1,12 +1,12 @@
 %%!TEX root = the-definitions.tex
 \chapter{Definitions}\label{chap:defs}
 
-In this lecture we prove the equivalence of several definitions of Alexandrov space.
+Here we will give several definitions of Alexandrov space and prove their equivalence.
 
 
 \section{Four-point comparison}\label{sec:4-point}
 
-Recall that $\angk  pxy$ denotes the model angle; see page \pageref{page:model-angle}.
+Recall that $\angk  pxy$ denotes the model angle; see \ref{sec:Triangles and model triangles}.
 
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
@@ -19,7 +19,7 @@ If the left-hand side is undefined, then we assume that the comparison holds.
 
 \begin{thm}{Exercise}\label{ex:CBB+-}
 Suppose $\EE^2$-comparison holds for quadruple $p$, $x_1$, $x_2$, $x_3$.
-Show that $\EE^2$-comparison holds for any quadruple $q$, $y_1$, $y_2$, $y_3$ such that
+Show that it also holds for any quadruple $q$, $y_1$, $y_2$, $y_3$ such that
 \[\dist{q}{y_i}{}\ge\dist{p}{x_i}{}\qquad\text{and}\qquad\dist{y_i}{y_j}{}\le\dist{x_i}{x_j}{}\]
 for all $i$ and $j$.
 \end{thm}
@@ -31,9 +31,9 @@ but for $\angk  pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
 if this does not hold for one of the angles, then we assume that $\SSS^2$-comparison holds for this quadruple.
 
-More generally, one may apply this definition to $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
+More generally, one may apply this definition to the model $\kappa$-plane $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
 However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$;
-applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases.
+applying rescaling, the $\MM^2(\kappa)$-comparison of rany $\kappa\in\RR$ can be reduced to these three cases.
 
 \begin{thm}{Definition}\label{def:CBB}
 A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
@@ -44,13 +44,13 @@ holds for any quadruple of points in $\spc{X}$.
 While this definition can be applied to any metric space,
 we will use it mostly for geodesic spaces that are complete (and often compact or proper). 
 If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov, 
-then it will be called an $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
+then it will be called an $\Alex\kappa$ space ($\Alex\kappa$ is an adjective).
 If $\spc{X}$ is $\Alex\kappa$ for some $\kappa$, then we say that $\spc{X}$ is an \index{Alexandrov space}\emph{Alexandrov space}.
 
 It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
 leave the general curvature bound as an exercise. These generalizations are usually straightforward. We will add notes when they are not.
 We will also often formulate statements just for $\kappa=0$ even when they admit straightforward generalizations to arbitrary curvature bounds;
-see \cite{alexander-kapovitch-petrunin2024} for a more formal treatment.
+for a more formal treatment, see \cite{alexander-kapovitch-petrunin2024}.
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
 Show that $\EE^n$ is $\Alex0$.
@@ -111,8 +111,7 @@ but in the latter case, one has to assume in addition that
 In the proof we will apply the following statement from elementary geometry.
 
 \begin{thm}{Observation}\label{angle-monotonicity}
-Increasing the opposite side in a plane triangle increases the corresponding angle, and the other way around.
-
+Increasing one side in a plane triangle increases its opposite angle, and the other way around.
 Moreover, the same statement holds for spherical and hyperbolic triangles.
 \end{thm}
 
@@ -165,7 +164,7 @@ Note that
 Applying it with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
-If $p,x,y,z$ are points in an $\Alex0$ space.
+Let $p,x,y,z$ be points in an $\Alex0$ space.
 Suppose $z\in\left]x y\right[$, then
 \[\angk xyp\le \angk xzp.\]
 \end{thm}
@@ -184,7 +183,7 @@ where $\bar x\in\left]p x\right]$ and $\bar y\in\left]p y\right]$.
 Show that $f$ is nonincreasing in each argument.
 \end{thm}
 
-The first statement in the last exercise is called \index{angle-sidelength monotonicity}\emph{angle-sidelength monotonicity}.
+The statement in the last exercise is called \index{angle-sidelength monotonicity}\emph{angle-sidelength monotonicity}.
 It implies the following.
 
 \begin{thm}{Angle existence and comparison}\label{clm:angle-defined}
@@ -257,7 +256,7 @@ for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$.
 The following theorem provides a converse.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
-A complete geodesic space $\spc{A}$ is $\Alex0$ if the following conditions hold.
+A complete geodesic space $\spc{A}$ is $\Alex0$ if both of the following conditions hold.
 
 \begin{subthm}{angle-a}
 For any hinge $\hinge x p y$ in $\spc{A}$, the angle 
@@ -359,7 +358,7 @@ Show that if $\spc{W}$ is $\Alex0$, then $\spc{W}$ is isometric to the Euclidean
 
 \parbf{Real-to-real functions.}
 Choose $\lambda\in \RR$.
-Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II$.
+Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II\subset\RR$.
 The following statements are equivalent;
 if one (and therefore any) of them holds for $s$, then we say that $s$ is \index{concave function}\emph{$\lambda$-concave}.
 \begin{itemize}
@@ -368,7 +367,7 @@ if one (and therefore any) of them holds for $s$, then we say that $s$ is \index
 \item The \index{Jensen inequality}\emph{Jensen inequality}
 \[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
 holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
-\item for any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports (locally) $s$ at $t_0$ from above;
+\item For any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports (locally) $s$ at $t_0$ from above;
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
 \end{itemize}
 
@@ -443,11 +442,7 @@ On the other hand, \ref{eq:r=<r} implies the Jensen inequality for the function 
 Since the subinterval $[t_0,t_1]$ can be chosen arbitrarily, we conclude that $h''\le 0$, or, equivalently, $(r^2)''\le 2$, and the only-if part follows.
 \qeds
 
-\section{Semiconcave functions}\label{sec:Semiconcave functions}
-
-Recall that $\lambda$-concave functions were defined in Section \ref{Function comparison},
-and when we say \textit{function} we usually mean a \textit{locally Lipschitz function defined on an open domain}.
-
+\parbf{Semiconcave functions.}\label{sec:Semiconcave functions}
 Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{A}$.
 Suppose $\phi$ is a continuous function defined in $\Dom f$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that
@@ -498,7 +493,7 @@ where $\mangle\tilde p^i\df\mangle\hinge{\tilde p^i}{\tilde x^k}{\tilde x^j}$
 for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
 \end{thm}
 
-The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be superfluous.
+The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be not necessary.
 This is a long-standing open problem possibly dating back to Alexandrov \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 Let us state it formally.
 
@@ -510,17 +505,15 @@ the angle $\mangle\hinge x p y$ is defined and
 Is it true that $\spc{A}$ is an Alexandrov space?
 \end{thm}
 
-Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov;
-this is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
-
-In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
-Michael Gromov \cite[Section 1.19$_+$]{gromov1999} suggested considering other conditions of that type for $n$-point subsets;
-see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001} for the development of this idea.
-
-One could define Alexandrov space as a complete \textit{length} space with curvature $\ge \kappa$.
+One could define Alexandrov space as a complete \textit{length} space with curvature $\ge \kappa$ (in the sense of Alexandrov).
 This condition is more natural and general, but many statements can be reduced to the geodesic case.
 In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
 then 
 \textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
-Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$
-\cite[8.11]{alexander-kapovitch-petrunin2024}; compare to \ref{ex:grad-dist:geod}.
+Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$; see
+\cite[8.11]{alexander-kapovitch-petrunin2024} and compare to \ref{ex:grad-dist:geod}.
+
+Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov, which is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
+In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
+The conditions of that type for $n$-point subsets remain far from fully understood.
+Study of these conitions was intiated by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and it is actively studied since then; see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.

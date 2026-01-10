@@ -620,7 +620,7 @@ If $\Sigma_p$ is compact, then it is $\pi$-geodesic
 Choose two geodesic directions $\xi=\dir px$ and $\zeta=\dir py$;
 let 
 \[\alpha\z=\tfrac12\cdot \mangle \hinge pxy=\tfrac12\cdot \dist{\xi}{\zeta}{\Sigma_p}.\]
-Suppose $\alpha<\tfrac\pi2$.
+Assume $\alpha<\tfrac\pi2$.
 
 It is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
 that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such that
@@ -632,7 +632,7 @@ Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an a
 Choose a sequence of small positive numbers $r_n\to0$.
 Consider sequences $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
 Let $m_n$ be a midpoint of $[x_n\,y_n]$.
-%??? we use here that the directions $\xi=\dir px$ and $\zeta=\dir py$ are not opposite???
+Since $\alpha<\tfrac\pi2$, $m_n\ne p$.
 
 Since $\Sigma_p$ is compact, we can pass to a subsequence of $r_n$ such that
 $\dir{p}{m_n}$ converges;
@@ -681,7 +681,7 @@ The construction uses gradient flow for a suitably chosen family of functions.
 The proof can be extracted from the following exercise;
 more details are given in the hints.
 
-\begin{thm}{Exercise}\label{ex:proof-right-inverse}
+\begin{thm}[!]{Exercise}\label{ex:proof-right-inverse}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
 Assume $\eps>0$ is sufficiently small.
 Given $\bm{y}\z=(y_1,\z\dots,y_m)\in \RR^m$, 
@@ -727,8 +727,6 @@ and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 
 \end{thm}
 
-%??? I think that since this is used later it should be proved and not left as a reference A: If we add a solution, then that is OK, is not it? in any case, the idea is more tranparent in the exercise and if needed one can read the solution. But lets do the real solution, not just a hint.
-
 \begin{thm}{Corollary}\label{cor:tan-g-delta}
 Let $\spc{A}$ be an Alexandrov space, and let $m$ be an integer.
 If $m\le \LinDim\spc{A}$ then
@@ -769,7 +767,7 @@ the restriction $f|_\Omega$ is called a  \emph{distance chart} at $p$.
 
 The following exercise guides you to prove the theorem.
 
-\begin{thm}{Exercise}\label{ex:proof-dist-chart}
+\begin{thm}[!]{Exercise}\label{ex:proof-dist-chart}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
 Show that there is $\eps>0$ such that one of the inequalities holds in each of the following two strings of $m$  inequalities
 \begin{align*}
