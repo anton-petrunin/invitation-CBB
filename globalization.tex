@@ -16,8 +16,8 @@ In particular, the analog of \ref{angle} implies that \textit{the angle measure 
 Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
-\parit{Proof modulo the key lemma (\ref{key-lem:globalization}).}
-Note that condition \ref{angle-b} holds in $\spc{A}$ (the proof is the same).
+\parit{Proof of \ref{thm:glob} modulo the key lemma (\ref{key-lem:globalization}).}
+Note that condition \ref{angle-b} holds in $\spc{A}$ (the proof of \ref{angle-b} uses only the local condition).
 It remains to check \ref{angle-a};
 that is,
 \[\mangle\hinge x p y\ge\angk x p y
@@ -32,17 +32,17 @@ Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\spc{A}$ be a locally $\Alex0$ space.
-Assume that the comparison
+If the the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
-holds for any hinge $\hinge x p q$ with 
+holds for any hinge $\hinge x p q$ such that
 $\dist{x}{p}{}+\dist{x}{q}{}
 <
-\frac{2}{3}\cdot\ell$.
-Then the comparison
-\[\mangle\hinge x p q
-\ge\angk x p q\] 
-holds for any hinge $\hinge x p q$ with $\dist{x}{ p}{}+\dist{x}{q}{}<\ell$.
+\frac{2}{3}\cdot\ell$,
+then it  holds for any hinge $\hinge x p q$ such that
+$\dist{x}{p}{}+\dist{x}{q}{}
+<
+\ell$.
 \end{thm}
 
 Let $\hinge x p q$ be a hinge in $\spc{A}$.
@@ -55,22 +55,22 @@ this is the opposite side in a flat triangle with the same angle and two adjacen
 \end{wrapfigure}
 
 More precisely,
-consider the model hinge $\hinge {\tilde x} {\tilde p} {\tilde q}$ in $\EE^2$ such that
 \begin{align*}
+\side \hinge x p q_{\spc{A}}
+&\df
+\dist{\tilde p}{\tilde q}{\EE^2}.
+\intertext{if $\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}$ is the \emph{model hinge} of $\hinge {x} {p} {q}_{\spc{A}}$; that is,}
 \mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{A}},
 \\
 \dist{\tilde x} {\tilde p}{\EE^2}&=\dist{x} {p}{\spc{A}},
 \\
 \dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{A}};
-\intertext{then}
-\side \hinge x p q_{\spc{A}}
-&\df
-\dist{\tilde p}{\tilde q}{\EE^2}.
 \end{align*}
+
 
 Note that 
 \[\side \hinge x p q \ge\dist{p}{q}{}
-\quad\Longleftrightarrow\quad
+\quad\Leftrightarrow\quad
 \mangle\hinge x p q\ge \angk x p q.
 \]
 
@@ -81,7 +81,7 @@ It is sufficient to prove that
 \[\side \hinge x p q
 \ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\]
 
-First, let us describe a construction of a new hinge $\hinge{x'}p q$, which has many properties;
+First, let us describe a construction of a new hinge $\hinge{x'}p q$, which has several properties described below;
 in particular,
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
@@ -127,7 +127,8 @@ $\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig(x x' p)$.
 Take $\tilde  q$ on the extension of $[\tilde  x\tilde  x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}{}\z=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
 By~\ref{eq:thm:=def-loc-threestar},
 \[\mangle\hinge x p q
-=\mangle\hinge  x p{x'}\ge\angk x p{x'}\quad \Rightarrow\quad 
+=\mangle\hinge  x p{x'}\ge\angk x p{x'}
+\quad\Rightarrow\quad
 \side \hinge x q p\ge\dist{\tilde p}{\tilde q}{}.\]
 Hence
 \begin{align*}
@@ -179,13 +180,12 @@ b_n&=\max\{\dist{p}{x_n}{},\dist{q}{x_n}{}\},
 \\
 r_n&=\dist{p}{x_n}{}+\dist{x_n}{q}{}=a_n+b_n.
 \end{align*}
-By the triangle inequality, $r_n$ is a nonincreasing sequence,
-and since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for all $n$.
+By the triangle inequality, $r_n$ is a nonincreasing sequence.
+Since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for all $n$.
 
 By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
 %From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar},
-Since $a_n+b_n=r_n<\ell$ and $a_n\le b_n$ it holds that
- $a_n\le \tfrac12\cdot\ell$.
+Since $a_n+b_n=r_n<\ell$ and $a_n\le b_n$ it holds that $a_n\le \tfrac12\cdot\ell$.
 Hence
 \[
 \tfrac29\cdot\ell\ge \dist{x_n}{x_{n+1}}{}\ge \tfrac1{18}\cdot\ell,
@@ -263,7 +263,7 @@ This is because model triangles may be undefined in $\MM^2(\kappa)$ when $\kappa
 if $\angk p q r_{\MM^2(\kappa)}$, and hence $\modtrig(p q r)_{\MM^2(\kappa)}$, are defined for some $\kappa>0$, then
 $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi/\sqrt{\kappa}$.}
 
-\parbf{Meaning of curvature bounded below.}
+\parbf{Meaning of ``\,curvature $\bm{\ge\kappa}$\,''.}
 Recall that an $\Alex\kappa$ space is defined as a complete geodesic space having ``curvature $\ge\kappa$ in the sense of Alexandrov.''
 This suggests that the following claim should hold.
 
@@ -287,9 +287,9 @@ Therefore, \ref{thm:globalization+} completes the proof.
 
 While the expression ``curvature bounded below by $\kappa$'' makes sense for geodesic spaces,
 it does not make much sense for general metric spaces.
-For example, let $\spc{X}$ be the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
-$\dist{p}{x_i}{}=\pi$ and $\dist{x_i}{x_j}{}=2\cdot\pi$ for all $i\ne j$.
-Since $\spc{X}$ has no defined spherical model angles, it formally has curvature $\ge 1$.
+For example, if $\spc{X}$ is the set $\{p,x_1,x_2,x_3\}$ with the metric defined by
+$\dist{p}{x_i}{}=\pi$ and $\dist{x_i}{x_j}{}=2\cdot\pi$ for all $i\ne j$, then $\spc{X}$ has no defined spherical model angles.
+Therefore, formally speaking, $\spc{X}$ has curvature $\ge 1$.
 On the other hand, $\spc{X}$ does not have curvature $\ge 0$, since
 \[
 \angk  p{x_1}{x_2}_{\EE^2}
@@ -297,6 +297,7 @@ On the other hand, $\spc{X}$ does not have curvature $\ge 0$, since
 =\angk  p{x_1}{x_3}_{\EE^2}
 =\pi.
 \]
+Use this example as a warning when you work with a non-intrinsic metric.
 
 \begin{thm}[!]{Exercise}\label{ex:RisCBB(1)}
 Let $p$ and $q$ be points in an $\Alex1$ space $\spc{A}$.
@@ -326,11 +327,12 @@ Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemanni
 For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
 They prove globalization for \textit{complete length spaces}.
 Another version for \textit{noncomplete but geodesic spaces} is due to the third author \cite{petrunin:globalization}.
+Alternative proofs were found by Shengqi Hu, Xiaole Su and Yusheng Wang \cite{hu-su-wang2023,hu-su-wang2024}.
 
 
 We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality.
 This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
-The same proof was rediscovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
+The same proof was discovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 Another simplified argument was found by Katsuhiro Shiohama \cite{shiohama}.
 
 

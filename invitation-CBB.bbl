@@ -1680,6 +1680,96 @@
       \verb https://doi.org/10.2307/2040922
       \endverb
     \endentry
+    \entry{hu-su-wang2023}{article}{}
+      \name{author}{3}{}{%
+        {{hash=7e90e50a378e5407eee25308f1d9a3c0}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cecfb668ded703ffdb79d2df3e6c419d}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{fullhash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{bibnamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authorbibnamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authornamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authorfullhash}{e3299fee925d497f1c25ba23bb74a77a}
+      \field{extraname}{1}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0002-9939,1088-6826}
+      \field{journaltitle}{Proc. Amer. Math. Soc.}
+      \field{number}{4}
+      \field{title}{A proof of {T}oponogov's theorem in {A}lexandrov geometry}
+      \field{volume}{151}
+      \field{year}{2023}
+      \field{pages}{1743\bibrangedash 1748}
+      \range{pages}{6}
+      \verb{doi}
+      \verb 10.1090/proc/16192
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1090/proc/16192
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1090/proc/16192
+      \endverb
+    \endentry
+    \entry{hu-su-wang2024}{misc}{}
+      \name{author}{3}{}{%
+        {{hash=7e90e50a378e5407eee25308f1d9a3c0}{%
+           family={Hu},
+           familyi={H\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=cecfb668ded703ffdb79d2df3e6c419d}{%
+           family={Su},
+           familyi={S\bibinitperiod},
+           given={X.},
+           giveni={X\bibinitperiod}}}%
+        {{hash=61ad10c626e1d641e0b1d7b5f48d3233}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Y.},
+           giveni={Y\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{fullhash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{bibnamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authorbibnamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authornamehash}{e3299fee925d497f1c25ba23bb74a77a}
+      \strng{authorfullhash}{e3299fee925d497f1c25ba23bb74a77a}
+      \field{extraname}{2}
+      \field{sortinit}{h}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.DG}
+      \field{eprinttype}{arXiv}
+      \field{title}{New definitions of Alexandrov space and applications}
+      \field{year}{2023}
+      \verb{eprint}
+      \verb 2102.02112
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2102.02112
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2102.02112
+      \endverb
+    \endentry
     \entry{hurewicz-wallman}{book}{}
       \name{author}{2}{}{%
         {{hash=e1e6e1d462a5e3d93e7fd17aa07b8fb1}{%
