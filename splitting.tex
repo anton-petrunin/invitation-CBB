@@ -44,7 +44,7 @@ Show that any Busemann function on an $\Alex0$ space is concave.
 
 A \index{line}\emph{line} is a distance-preserving map
 from $\RR$ to a metric space.
-In other words, a line is a geodesic defined on the real line $\RR$.
+In other words, a line is a geodesic defined on the whole real line $\RR$.
 
 \begin{thm}[!]{Exercise}\label{ex:bus+bus}
 Let $\gamma$ be a line in a metric space $\spc{X}$.
@@ -73,8 +73,7 @@ Show that
 \end{subthm}
 
 \begin{subthm}{ex:oplus:b}
-both sets $A$ and $B$ are \index{convex set}\emph{convex sets} in $\spc{X}$;
-the latter means that any geodesic with the endpoints in $A$ (or $B$) lies in $A$ (respectively $B$).
+both sets $A$ and $B$ are \index{convex set}\emph{convex} in $\spc{X}$, meaning that any geodesic with the endpoints in $A$ (or $B$) lies in $A$ (respectively, $B$).
 \end{subthm}
 
 \end{thm}
@@ -147,12 +146,13 @@ By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{A}$.
 On the other hand, by \ref{comp-kappa}, 
 $f\:t\mapsto\distfun_x^2\circ\gamma(t)$
 is $2$-concave.
-In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$.  Therefore, for all large $t$
+In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$; see \ref{Function comparison}.
+Therefore,
 \[
 \dist{\gamma( t)}{x}{}+\dist{\gamma(- t)}{x}{}- 2\cdot t
 \le \sqrt{ t^2+at+b}+\sqrt{ t^2-at+b}-2\cdot t
 \]
-
+for all large $t$.
 Passing to the limit as $t\to\infty$, we get that  $\bus_+(x)+\bus_-(x)\le 0$.
 Hence
 \[
@@ -251,20 +251,19 @@ for any $x\in \T_p$.
 \parit{Proof of \ref{lem:minus-sum}.}
 By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such that 
 \[
-\dd_p\distfun_{a_n}(w)=-\langle\dir{p}{a_n},w\rangle
+\dd_p\distfun_{a_n}(x)=-\langle\dir{p}{a_n},x\rangle
 \quad\text{and}\quad
-\dd_p\distfun_{b_n}(w)=-\langle\dir{p}{b_n},w\rangle
+\dd_p\distfun_{b_n}(x)=-\langle\dir{p}{b_n},x\rangle
 \]
-for any $w\in\T_p$.
+for any $x\in\T_p$.
 Furthermore, we can assume that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
 
 Consider a sequence of functions 
 \[f_n=|u|\cdot\distfun_{a_n}+|v|\cdot\distfun_{b_n}.\]
 Note that 
-\[(\dd_pf_n)(x)=-|u|\cdot\langle \dir{p}{a_n},x\rangle -|v|\cdot\langle \dir{p}{b_n},x\rangle .\]
-Thus we have the following uniform convergence for $x\in\Sigma_p$:
-\[(\dd_pf_n)(x)\rightrightarrows-\langle u,x\rangle -\langle v,x\rangle \]
-as $n\to\infty$.
+\[(\dd_pf_n)(x)=-|u|\cdot\langle \dir{p}{a_n},x\rangle -|v|\cdot\langle \dir{p}{b_n},x\rangle\]
+for any $x\in\T_p$.
+Thus, $\dd_pf_n$ uniformly converges to $x\mapsto-\langle u,x\rangle -\langle v,x\rangle$ on $\Sigma_p$.
 According to \ref{ex:convergence-grad}, 
 the sequence $\nabla_pf_n$ converges.
 Let 
@@ -287,21 +286,26 @@ By the definition of gradient,
 &=-\langle u,x\rangle -\langle v,x\rangle .
 \end{align*}
 
-The proof of uniqueness is very similar to the proof of uniqueness of gradients and is left to the reader.
+The proof of uniqueness is left to the reader;
+it is very similar to the proof of uniqueness of gradients (page \pageref{uniqueness:prop:grad-exist}).
 \qedsf
 
 \section{Linear subspace}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
 Let $\spc{A}$ be an Alexandrov space, $p\in \spc{A}$ and $u,v\z\in\T_p$.
-We say that vectors $u$ and $v$ are \index{opposite vectors}\emph{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if $|u|=|v|=0$ or $\mangle(u,v)=\pi$ and $|u|=|v|$.
+We say that vectors $u$ and $v$ are \index{opposite vectors}\emph{opposite}\label{def:opposite:page} to each other, (briefly, $u+v=0$) if
+\begin{itemize}
+ \item $|u|=|v|=0$ or
+ \item $\mangle(u,v)=\pi$ and $|u|=|v|$.
+\end{itemize}
 
 The subcone
 \[\Lin_p=\set{v\in\T_p}{\exists\ w\in\T_p\quad \text{such that}\quad w+v=0}\]
 will be called the \index{linear subspace}\emph{linear subspace} of $\T_p$.
 \end{thm}
 
-Soon we will introduce a natural linear structure on $\Lin_p$.
+Soon we will introduce a natural linear structure on $\Lin_p$, which justifies its name.
 
 \begin{thm}{Proposition}\label{prop:opposite}
 Let $p$ be a point in an Alexandrov space.
@@ -325,8 +329,9 @@ thus,
 Suppose  \ref{SHORT.opposite} holds.
 Recall that $\T_p$ has nonnegative curvature.
 The hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
-By \ref{ex:adjacent-CBB}, $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
-hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
+Hence $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
+the proof is the same way as in \ref{ex:adjacent-CBB}.
+Hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{prop:two-opp}
@@ -336,7 +341,7 @@ Show that $v=w$.
 \end{thm}
 
 Let $u\in \Lin_p$; that is, $u+v=0$ for some $v\in\T_p$.
-Given $s<0$, let 
+Given $s<0$, let \index{33@$r\cdot u$ (multiplication in cone)}
 \[s\cdot u\df (-s)\cdot v.\]
 So we can multiply any vector in $\Lin_p$ by any real number (positive and negative).
 By \ref{prop:two-opp}, this multiplication is uniquely defined.
@@ -373,7 +378,7 @@ Then $\Lin_p$ is isometric to a Hilbert space.
 $\Lin_p$ is a closed subset of $\T_p$;
 in particular, it is complete.
 
-If any two vectors in $\Lin_p$ can be connected by a geodesic in $\Lin_p$,
+If we know that any two vectors in $\Lin_p$ can be connected by a geodesic in $\Lin_p$,
 then the statement follows from the splitting theorem (\ref{thm:splitting}).
 By Menger's lemma (\ref{lem:mid>geod}), it is sufficient to show that for any pair $x,y\in\Lin_p$
 has a midpoint $w\in \Lin_p$.
@@ -476,7 +481,7 @@ For Riemannian manifolds of higher dimensions,
 it was proved by Victor Toponogov \cite{toponogov-globalization+splitting}.
 Then it was generalized by Anatoliy Milka \cite{milka-line}
 to Alexandrov spaces;
-it was the first result about Alexandrov spaces of dimension higher than 2.
+historically, it was the first result about Alexandrov spaces of dimension higher than~$2$.
 Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 Generalizations to Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for the limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity}.

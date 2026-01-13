@@ -61,9 +61,11 @@ Note that
 \[\Cone\SSS^n\iso\EE^{n+1};\]
 here ``$\iso$'' stands for ``is isometric to''.
 
-Next we define a scalar product, norm, and angle on Euclidean cones, extending the usual definitions from Euclidean space.
+Next we define a multiplication by scalar, scalar product, norm, and angle on Euclidean cones, extending the usual definitions from Euclidean space.
 
-The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$.
+The point $v$ in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$;
+the space $\spc{X}$ might be identified with the unit sphere in $\spc{V}$; so $x=1\cdot x$.
+More genrally, for $v,w\in \spc{V}$, we will write $w=s\cdot v$ if $v$ corresponds to $(t,x)\z\in[0,\infty)\times \spc{X}$ and $w$ corresponds to $(s\cdot t,x)\z\in[0,\infty)\times \spc{X}$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
 For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the \index{norm}\emph{norm} of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 The \index{angle measure}\emph{angle measure} \index{31@$\mangle$ (angle measure)} $\mangle(v,w)$ and \index{32@$\<v,w\>$ (scalar product)} \index{scalar product}\emph{scalar product} $\<v,w\>$
@@ -362,7 +364,7 @@ Applying concavity of $f$, we have
 By \ref{eq:|p-w|=}, the key lemma follows.
 \qeds
 
-\parit{Proof of \ref{prop:grad-exist}; uniqueness.} 
+\parit{Proof of \ref{prop:grad-exist}; uniqueness.}\label{uniqueness:prop:grad-exist}
 If $g,g'\in \T_p$ are two gradients of $f$,
 then 
 \begin{align*}
