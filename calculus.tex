@@ -2,7 +2,7 @@
 
 \chapter{Calculus}\label{chap:derivative}
 
-This lecture defines several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
+This lecture introduce several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
 
 \section{Space of directions} 
 \label{sec:space+directions}
@@ -59,11 +59,11 @@ where $\theta= \min\{\pi, \dist{p}{q}{\spc{X}}\}$.
 
 Note that
 \[\Cone\SSS^n\iso\EE^{n+1};\]
-here ``$\iso$'' stands for ``isometric to''. 
+here ``$\iso$'' stands for ``is isometric to''.
 
-Now let us extend several notions from Euclidean space to Euclidean cones. 
+Next we define a scalar product, norm, and angle on Euclidean cones, extending the usual definitions from Euclidean space.
 
-The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by $t\cdot x$.
+The point in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
 For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the \index{norm}\emph{norm} of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 The \index{angle measure}\emph{angle measure} \index{31@$\mangle$ (angle measure)} $\mangle(v,w)$ and \index{32@$\<v,w\>$ (scalar product)} \index{scalar product}\emph{scalar product} $\<v,w\>$
@@ -103,7 +103,7 @@ We need to show that the $\EE^2$-comparison holds for a given quadruple $v_0$, $
 
 Recall that the space of geodesic directions $\Sigma_p'$ is dense in $\Sigma_p$.
 It follows that the subcone $\T'_p=\Cone\Sigma_p'$ is dense in $\T_p$.
-Therefore, it is sufficient to consider the case $v_0$, $v_1$, $v_2$, $v_3\in \T'_p$.
+Therefore, we can assume that $v_0$, $v_1$, $v_2$, $v_3\in \T'_p$.
 
 For each $i$, choose a geodesic $\gamma_i$ from $p$ in the direction of $v_i$;
 reparametrize each $\gamma_i$ so that it has speed $|v_i|$.
@@ -179,11 +179,11 @@ for any $v\in\T_p$.
 \section{Gradient}\label{sec:grad-def}
 
 The following definition generalizes the gradient to semiconcave functions on Alexandrov space.
-This generalization is not trivial even for concave functions on Euclidean space;
-we suggest keeping this example in mind while reading further.
+This generalization is not trivial even for concave functions on Euclidean space.
+We suggest keeping this example in mind while reading further.
 
 \begin{thm}{Definition}\label{def:grad} 
-Let $f$ be a semiconcave function on an Alexandrov space.
+Let $f$ be a semiconcave function on an Alexandrov space and $p\in\Dom f$.
 A tangent vector $g\in \T_p$ is called a 
 \index{gradient}\emph{gradient} of $f$ at $p$ 
 (briefly,  $g\z=\nabla_p f$\index{19@$\nabla$ (gradient)}) if
@@ -198,6 +198,11 @@ $(\dd_p f)(g) = \<g,g\>.$
 
 The following exercise provides a property of gradients that will play a key role in the proof of the first distance estimate (\ref{thm:dist-est}).
 
+\begin{figure}[hbt!]
+\centering
+\includegraphics{mppics/pic-409}
+\end{figure}
+
 \begin{thm}[!]{Exercise}\label{ex:monotonicity}
 Let $f$ be a $\lambda$-concave function on an Alexandrov space.
 Suppose that gradients $\nabla_xf$ and $\nabla_yf$ are defined.
@@ -208,11 +213,6 @@ Show that
 +
 \lambda\cdot\dist{x}{y}{}\ge 0.\]
 \end{thm}
-
-\begin{figure}[ht!]
-\centering
-\includegraphics{mppics/pic-409}
-\end{figure}
 
 \begin{thm}{Proposition}\label{prop:grad-exist}
 Suppose that a semiconcave function $f$ is defined in a neighborhood of a point $p$ in an Alexandrov space.
@@ -245,8 +245,8 @@ Let $w=\tfrac{u+v}2$, then
 \eqlbl{eq:2|w|=|u+v|}\]
 and
 \[2\cdot(\dd_p f)(w)\ge(\dd_p f)(u)+(\dd_p f)(v),
-\eqlbl{eq:2df(w)>=df(u)+df(v)}\]
-and the statement follows.
+\eqlbl{eq:2df(w)>=df(u)+df(v)},\]
+which implies the lemma.
 
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make sense.
 The key lemma, however, says that in a certain sense $\dd_p f$ behaves as a concave function.
@@ -255,7 +255,6 @@ Instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $
 and prove the approximate versions
 of \ref{eq:2|w|=|u+v|} and \ref{eq:2df(w)>=df(u)+df(v)};
 see \ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}, respectively.
-
 The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|};
 solving the following exercise should give a hint.
 
@@ -271,7 +270,7 @@ for any $v\in\T_p$.
 \parit{Proof of \ref{lem:ohta}.}
 We will assume that $\spc{A}$ is $\Alex0$ and $f$ is concave;
 the general case requires only minor modifications.
-We can assume that $u\ne 0$, $v\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
+Furthermore, we can assume that $u\ne 0$, $v\ne 0$, and $\alpha=\mangle(u,v)>0$; otherwise, the statement is trivial.
 
 {
 
@@ -315,7 +314,7 @@ we have
 \qquad
 \dist{u_t}{q_t}{}=t\cdot\dist{\tilde u}{\tilde q}{}+o(t).\]
 
-From the point-on-side (\ref{point-on-side}), we have
+From the point-on-side comparison (\ref{point-on-side}), we have
 \[\angk{v_t}p{w_t}
 \ge
 \angk{v_t}p{u_t}

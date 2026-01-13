@@ -74,20 +74,18 @@ that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and
 $\alpha^+(t)=\nabla_{\alpha(t)} f$.
 \end{thm}
 
-A complete proof of the following theorem is given in our book \cite[16.15]{alexander-kapovitch-petrunin2024};
+A complete proof of the following theorem is given in \cite[16.15]{alexander-kapovitch-petrunin2024};
 it mimics the proof of the standard Picard theorem on the existence  and uniqueness of solutions of ordinary differential equations.
 The uniqueness will follow from the first distance estimate (\ref{thm:dist-est}) proved in the next section.
-We omit the proof of existence as it is rather lengthy.
+We omit the proof of existence.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
 Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{A}$.
 Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
-According to the theorem, the future of a gradient curve is determined by its present.
-Let us show that its past is not determined by the present.
-
-Consider the function $f\:x\mapsto -|x|$ on the real line $\RR$.
+According to the theorem, the future of a gradient curve is determined by its present, but its past might be \textit{not} determined by the present.
+Indeed, consider the function $f\:x\mapsto -|x|$ on $\RR$.
 The tangent space $\T_x\RR$ can be identified with $\RR$.
 Note that $\nabla_xf=-\mathrm{sgn}\, x$; that is,
 \[\nabla_xf=
@@ -238,7 +236,7 @@ then we will write
 The partially defined map $\GF^t_f$ from $\spc{A}$ to itself is called the \index{gradient!flow}\emph{$f$-gradient flow} for time $t$.
 Note that
 \[\GF^{t_1+t_2}_f=\GF_f^{t_1}\circ\GF_f^{t_2}.\]
-In other words, the gradient flow is a partial action of the \textit{semigroup} $([0,\infty),+)$ on the space.
+In other words, the gradient flow is a partial action of the \textit{semigroup} $([0,\infty),+)$ on $\spc{A}$.
  
 From the first distance estimate \ref{thm:dist-est}, 
 it follows that for any $t\z\ge 0$, the domain of definition of $\GF^t_f$ is an open subset of $\spc{A}$.
@@ -284,7 +282,7 @@ It shares many properties with the ordinary exponential map and is even better i
 even in the Riemannian universe.
 
 Let $p$ be a point in an $\Alex0$ space $\spc{A}$.
-Consider the function $f\z=\distfun_p^2/2$.
+Consider the function $f\z=\tfrac12\cdot\distfun_p^2$.
 Recall that $\GF^t_{f}$ denotes the gradient flow.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p(v)=\lim_{n\to\infty}\GF^{t_n}_{f}(x_n),\]
@@ -293,7 +291,8 @@ and $e^{t_n}\cdot\log_px_n\to v$ as $n\to\infty$.
 
 More intuitively, suppose $i_{\lambda}\:\lambda\cdot \spc{A}\to \spc{A}$ sends a point in the rescaled copy $\lambda\cdot\spc{A}$ to the corresponding point in $\spc{A}$.
 By the first distance estimate (\ref{thm:dist-est}), the map
-$$\GF^t_{f}\circ i_{e^t}\:e^t\cdot \spc{A}\to \spc{A}\eqlbl{eq:gexp}$$
+\[\GF^t_{f}\circ\, i_{e^t}\:e^t\cdot \spc{A}\to \spc{A}
+\eqlbl{eq:gexp}\]
 is short for any $t\ge 0$.
 If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{A},p)\to (\T_p,o_p)$,
 then $\gexp_p\:\T_p\to \spc{A}$ is the limit of $\GF^{t_n}_{f}\circ i_{e^{t_n}}$.
