@@ -2,13 +2,10 @@
 
 \chapter{Limit spaces}\label{chap:lim}\label{chap:stability}
 
-
-Here we will show that lower curvature bound in the sense of Alexandrov survives under a Gromov--Hausdorff limit,
-present Perelman's construction of strictly concave functions, and
-prove Gromov's selection theorem.
-
-The survival of curvature bound provides the main source of applications of Alexandrov geometry;
-as an illustration we prove the homotopy stability theorem (\ref{thm:h-stability}) and deduce the homotopy finiteness theorem (\ref{thm:h-finiteness}) from it.
+This lecture discusses applications of Alexandrov geometry that come from the survival of the curvature bound
+under a Gromov--Hausdorff limit.
+After proving this survival, we present Perelman's construction of strictly concave functions and prove Gromov's selection theorem.
+Further, we use all this to prove the homotopy stability theorem (\ref{thm:h-stability}) and the homotopy finiteness theorem (\ref{thm:h-finiteness}).
 
 \section{Survival of curvature bounds}
 
@@ -21,8 +18,7 @@ Then the same holds for~$\spc{X}_\infty$.
 \parit{Proof}.
 Choose a quadruple of points $p_\infty, x_\infty,y_\infty,z_\infty\in \spc{X}_\infty$.
 
-By the definition of Gromov--Hausdorff convergence, we can choose points $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ for each $n$
-that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
+By the definition of Gromov--Hausdorff convergence, we can choose points $p_n$,  $x_n$, $y_n$, $z_n\in \spc{X}_n$ that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
 In particular, the 6 distances between $p_n$, $x_n$, $y_n$, $z_n$ converge to the distances between the corresponding pairs of $p_\infty$, $ x_\infty$, $y_\infty$, $z_\infty$.
 
 Since $\MM^2(\kappa)$-comparison holds for $p_n$, $x_n$, $y_n$, $z_n\z\in \spc{X}_n$,
@@ -37,7 +33,7 @@ Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
 
 \section{Gromov's selection theorem}
 
-\begin{thm}{Gromov's selection theorem}\label{thm:gromov-compactness}
+\begin{thm}{Theorem}\label{thm:gromov-compactness}
 Let $m$ be a positive integer, and let $D,\kappa\in\RR$.
 Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most $D$
 has a converging subsequence in the sense of Gromov--Hausdorff.
@@ -67,7 +63,12 @@ for all small $\eps>0$.
 Choose a maximal $\eps$-packing $x_1,\z\dots,x_n\in \spc{A}$.
 By \ref{ex:pack-net}, $\spc{F}_\eps\z\df\{x_1,\z\dots,x_n\}$ is an $\eps$-net of $\spc{A}$.
 Observe that $\dist{\spc{F}_\eps}{\spc{A}}{\GH}\le \eps$.
-Further, note that the set $\bm{F}_\eps$ of finite metric spaces with diameter $\le D$ and at most $N(\eps)$ points forms a compact subset in $\GH$.
+
+Let $\bm{F}_\eps$ be the set of all metric spaces with
+at most $N(\eps)$ points
+and
+diameter $\le D$.
+Note that the set $\bm{F}_\eps$ is a compact subset in $\GH$.
 
 Summarizing, for any $\eps>0$ we can find a compact $\eps$-net $\bm{F}_\eps\subset \GH$ of $\bm{K}$.
 Since $\GH$ is complete (\ref{prop:complete}), it remains to apply \ref{ex:net:compact}.

@@ -368,6 +368,62 @@ labelarcsprof(z.x1, z.p, z.x3, 9, 13, btex $\alpha^{13}$ etex);
 
 endfig;
 
+beginfig(210)
+save u,p,q;
+path p[];
+path q[];
+u:=.7cm;
+
+z.x1=origin;
+z.x2=(3,0)*u;
+z.x3=(.7,3)*u;
+
+z.p3=z.x2 zscaled(.4,.1);
+z.pr3= .3*z.x3;
+
+p1= circle(z.x1,z.p3-z.x1);
+p2= circle(z.x2,z.p3-z.x2);
+p3= circle(z.x3,z.pr3-z.x3);
+
+z.p2=cross.rt(p1,p3);
+z.p1=cross.lft(p2,p3);
+
+
+draw z.x1--z.x2--z.x3--cycle;
+draw z.x1--z.p3--z.x2--z.p1--z.x3--z.p2--cycle;
+
+%hatchfill z.x1--z.p3--z.x2--cycle withcolor (30, 1mm, -.5bp);
+%hatchfill z.x2--z.p1--z.x3--cycle withcolor (110, 1mm, -.5bp);
+%hatchfill z.x3--z.p2--z.x1--cycle withcolor (70, 1mm, -.5bp);
+
+whiterimmark(z.x1--z.p2,z.x1--z.p3);
+whiterimmark2(z.x2--z.p1,z.x2--z.p3);
+whiterimmark3(z.x3--z.p2,z.x3--z.p1);
+
+z.q3=z.x2 zscaled(1.4,.15);
+z.qr3= .1*z.x3;
+
+q1= circle(z.x1,z.q3-z.x1);
+q2= circle(z.x2,z.q3-z.x2);
+q3= circle(z.x3,z.qr3-z.x3);
+
+z.q2=cross.rt(q1,q3);
+z.q1=cross.lft(q2,q3);
+
+z.qx2=z.x2 rotated (angle(z.q2)-angle(z.q3));
+
+
+dOt z.x1,z.x2,z.x3,z.p1,z.p2,z.p3;
+
+label.llft(btex $\tilde x^1$ etex, z.x1);
+label.lrt(btex $\tilde x^2$ etex, z.x2);
+label.top(btex $\tilde x^3$ etex, z.x3);
+whitelabel.urt(btex $\tilde p^1$ etex, z.p1+(2,0));
+whitelabel.ulft(btex $\tilde p^2$ etex, z.p2);
+whitelabel.bot(btex $\tilde p^3$ etex, z.p3);
+
+endfig;
+
 beginfig(380)
 save u,p;
 path p[];
@@ -1191,12 +1247,12 @@ z.pp=(-2,1)*u;
 draw z.p--z.q;
 drawarrow ddline(z.p,z.pp)(.3,.3) pensemibold;
 
-labelarcsprof(z.q,z.p,z.pp, 15, 15, btex $\alpha(t)$ etex);
+labelarcsprof(z.q,z.p,z.pp, 15, 15, btex $\alpha_i(t)$ etex);
 
 dOt z.q,z.p;
 
 
-label.rt(btex $q$ etex, z.q);
+label.rt(btex $q_i$ etex, z.q);
 label.ulft(btex $\gamma(t)$ etex, z.p);
 
 

@@ -21,7 +21,7 @@ Let $f$ be a locally Lipschitz function defined on a real interval $\II$.
 Then $f$ is $\lambda$-concave if and only if for any $t_0\in\II$ there is smooth (local) upper barrier
 $\bar f$ of $f$ at $t_0$ such that $\bar f''(t_0)\le \lambda$.
 
-Moreover, in the only-if part, we can assume in addition, that $\bar f'(t_0)$ takes a given value in the interval $[f^+(t_0),f^-(t_0)]$.
+Moreover, in the only-if part, we can assume in addition, that $\bar f'(t_0)$ takes a given value in the interval $[f^+(t_0),f^-(t_0)]$ (by \ref{ex:concave'}, this interval is not empty).
 \end{thm}
 
 \parit{Proof.}
@@ -41,7 +41,7 @@ f(t)<0
 t\in [a,b].
 \]
 Let $s$ be the minimal value such that $f(t)\ge \tfrac s2\cdot (t-a)\cdot(t-b)$ for any $t\in [a,b]$.
-Note that $s>0$ and $f(t_0)=\tfrac s2\cdot (t_0-a)\cdot(t_0-b)$;
+Note that $s>0$ and $f(t_0)=\tfrac s2\cdot (t_0-a)\cdot(t_0-b)$ for some $t_0\in (a,b)$;
 that is, $t\mapsto \tfrac s2\cdot (t-a)\cdot(t-b)$ is a local lower barrier of $f$ at $t_0$.
 Therefore, $\bar f''(t_0)\ge s>0$ for any upper barrier $\bar f$ of $f$ at $t_0$,
 and the if part follows.
@@ -55,7 +55,8 @@ Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:pack-sphere}
-Given a point $p$ in an $m$-dimensional Alexandrov space $\spc{A}$ and a nonempty open set $\Omega$ there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
+Let $\Omega$ be a nonempty open set in an $m$-dimensional Alexandrov space $\spc{A}$; assume $m<\infty$.
+Given a point $p$ there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
 \end{thm}
 
 
@@ -115,7 +116,7 @@ It remains to choose $r,\eps_1,\eps_2>0$ and points $q_1,\dots, q_N$ such that $
 
 Let us assume that $\spc{A}$ is $\Alex0$.
 Applying \ref{ex:pack-sphere} to a small open ball around $p$ and small $\eps_3>0$,
-we can choose $N\ge \Const_1/\eps_3^{m-1}$ points $\{q_i\}$ such that $\dist{p}{q_i}{}=r$ for some small $r>0$
+we can choose $N\ge \Const_1/\eps_3^{m-1}$ points $q_1,\dots,q_N$ such that $\dist{p}{q_i}{}=r$ for some small $r>0$
 and $\angk p{q_j}{q_i}>\eps_3$ (here $\Const_1>0$).
 On the other hand, suppose $\gamma$ runs from $x$ to~$y$.
 Let us apply the ($n$+1)-point comparison (\ref{thm:n+1}) to $\gamma(t)$, $x$, $y$ and $q_1,\dots,q_N$;
@@ -125,11 +126,11 @@ $|\alpha_i(t)- \tfrac\pi2|<\eps_2$ for each $i$, then the points $\tilde q_1,\do
 in particular, $N\le \Const_2(m)/\eps_3^{m-2}$.
 Therefore, for small $\eps_3>0$ and yet smaller $\eps_1$ and $\eps_2$, points $q_1,\dots,q_N$ meet \ref{eq:angle-ne-pi/2}.
 
-The $\Alex\kappa$-case can be reduced to $\Alex{-1}$-case by rescaling, and it is done the same way.
-The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\HH^m$.
-
 
 To prove the last statement, choose a geodesic $[pz]$ in the direction sufficiently close to $v$ and apply \ref{ex:pack-sphere} to a small ball centered on a point $\bar z\in [pz]$ close to $p$.
+
+The $\Alex\kappa$-case can be reduced to $\Alex{-1}$-case by rescaling, and it is done the same way.
+The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\HH^m$.
 \qeds
 
 The function $f$ in \ref{thm:strictly-concave} can be chosen to have maximum value $0$ at $p$,
@@ -146,6 +147,14 @@ and $f|_{\partial K}=0$.
 \begin{thm}{Exercise}\label{ex:no-conc}
 Construct an Alexandrov space $\spc{A}$ such that
 there is no open set $\Omega\subset A$ with strictly concave function $f\:\Omega\to\RR$.
+\end{thm}
+
+\begin{thm}{Exercise}\label{ex:dist-chart+strictly-concave}
+Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ forany $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
+for any $i\ne j$.
+Let $\phi_{c,r}$ be as in the proof of \ref{thm:strictly-concave} and $c$ is large.
+Show that the function $f=\phi_{c,r}\circ\distfun_{a_1}+\dots+\phi_{c,r}\circ\distfun_{a_m}$
+is a strictly function in a neighborhood of $p$.
 \end{thm}
 
 
@@ -244,8 +253,8 @@ Indeed, the function
 is strictly concave and it vanishes on the boundary of $W$.
 The $f_S$-gradient flow $(t,x)\mapsto \GF_{f_S}^t(x)$ defines a homotopy
 $[0,\infty)\times W\z\to W$.
-By the first distance estimate (\ref{thm:dist-est}), $\GF_{f_S}^t(x)$ converges to the (necessarily unique) maximum point of $f_S$ as $t\to\infty$.
-Therefore, in the obtained homotopy we can parametrize $[0,\infty)$ by $[0,1)$ and extend the homotopy continuously to $[0,1]$;
+By the first distance estimate (\ref{thm:dist-est}), $\GF_{f_S}^t(x)$ converges to the (necessarily unique) maximum point of $f_S$.
+Therefore, in the obtained homotopy we can reparametrize $[0,\infty)$ by $[0,1)$ and extend it continuously to $[0,1]$;
 thus we get that $W$ is contractible.
 In other words, the cover $\{\Omega_1,\dots, \Omega_k\}$ meets the assumptions of the nerve theorem (\ref{thm:nerve}).
 
@@ -284,6 +293,8 @@ This theory has significant applications in Alexandrov geometry;
 in particular, it provides a version of the Liouville theorem about phase-space volume of geodesic flow in Alexandrov space \cite{brue-mondino-semola}.
 
 The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
+More exact vesions of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
+Artem Nepechiy proved existence of $2$-convex function in a neighborhood of a point $p$ in Alexandrov space that that approximates $\distfun_p^2$ up to second order \cite{nepechiy2019}.
 
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about $m$-dimensional manifolds with lower sectional curvature bound we follow the following steps:
 \begin{itemize}
@@ -338,7 +349,7 @@ Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that 
 
 This theorem was proved by Grigory Perelman \cite{perelman1991}.
 The proof was rewritten with more details by the first author \cite{kapovitch};
-for more exact statements, see \cite{kapovitch2002} and \cite{kapovitch2005}.
+for more exact statements, see \cite{kapovitch2002,kapovitch2005}.
 In private conversations, Perelman claimed that the homeomorphisms in the theorem can be assumed to be bi-Lipschitz with constants that depend on $\spc{A}_\infty$.
 Since no proof has been written, this statement should be considered as a conjecture;
 partial results in this direction were obtained by Mohammad Alattar \cite{alattar}.

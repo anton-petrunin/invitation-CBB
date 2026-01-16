@@ -515,7 +515,7 @@ We define its \index{linear dimension}\emph{linear dimension} \index{LinDim@$\Li
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
 If not stated otherwise, dimension means linear dimension.
-In Section~\ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
+In \ref{sec:packing-numbers} and \ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
 after that, we will use \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
@@ -554,7 +554,9 @@ $\tilde p,\tilde x_1,\z\dots,\tilde x_n\in \EE^m$ such that
 It remains to observe that $\EE^m$ with the metric defined by
 $\dist{\tilde v}{\tilde w}{}\z\df \side\hinge{\tilde p}{\tilde v}{\tilde w}_{\HH^2}$
 is isometric to $\HH^m$.
-The $\Alex{1}$ case is analogous.
+
+The $\Alex{1}$ case is analogous, but one has to pull $x_i$ toward $p$
+to ensure that $\dist{p}{x_i}{}<\pi$ for each $i$, and then pass to an additional limit.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:dim-max}
@@ -632,7 +634,7 @@ that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such t
 \[\mangle\hinge pxz\le \alpha+\eps
 \quad\text{and}\quad
 \mangle\hinge pyz\le \alpha+\eps.\]
-Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$, and Menger's lemma (\ref{lem:mid>geod}) finishes the proof.
+Indeed, once this is done, the compactness of $\Sigma_p$ can be used to get an actual midpoint for any two directions in $\Sigma_p$, and Menger's lemma (\ref{lem:mid>geod}) will finish the proof.
 
 Choose a sequence of small positive numbers $r_n\to0$.
 Consider sequences $x_n\z\in [px]$ and $y_n\z\in [py]$ such that $\dist{p}{x_n}{}=\dist{p}{y_n}{}=r_n$.
@@ -649,7 +651,7 @@ Evidently, $\angk p{x_n}{m_n}=\angk p{y_n}{m_n}$.
 By \ref{ex:alex-lemma-cat}, we have
 \[\angk p{x_n}{m_n}+\angk p{y_n}{m_n}\le \angk p{x_n}{y_n}.\]
 
-Choose points $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$ for all large~$n$.
+For each large $n$, choose a point $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
 By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrary small given error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also get that the following approximations
@@ -742,20 +744,22 @@ Moreover if $m= \LinDim\spc{A}$, then $\T_s\spc{A}\iso \EE^m$ for points $s$ in 
 \end{thm}
 
 \parit{Proof.}
-Applying rescaling, we can assume that $\spc{A}$ is $\Alex{-1}$.
-
+Assume $\spc{A}$ is $\Alex0$.
 By the right-inverse theorem and \ref{ex:resporka} there is a ball $B=\cBall[p,r]_{\spc{A}}$ and $\Const>0$ such that
 \[\pack_\eps B\ge \frac{\Const}{\eps^m}\]
 for all small $\eps>0$.
 
 In particular, given a radius $R$ we can choose $\eps>0$ and an integer $N$ such that
-\[\pack_\eps \cBall(0,R+r)_{\HH^{m-1}}< N\le \pack_\eps B.\]
+\[\pack_\eps \cBall(0,R+r)_{\EE^{m-1}}< N\le \pack_\eps B.\]
 
 Applying \ref{cor:euclid-subcone} to an $\eps$-packing $x_1,\dots,x_N$ in $B$, we get that \[\dim\Lin_s\z\ge m\]
 for any point $s$ in a dense G-delta subset of $\oBall(p,R)$.
 Since $R>0$ is arbitrary, the first statement follows.
 
 To prove the last statement, apply \ref{ex:dim-max}.
+
+The general case can be reduced to $\Alex{-1}$ using rescaling,
+and it can be done essentially the same way, one only has to exchange $\EE^{m-1}$ to $\HH^{m-1}$.
 \qeds
 
 \section{Distance chart}
@@ -774,14 +778,13 @@ The following exercise guides you to prove the theorem.
 
 \begin{thm}[!]{Exercise}\label{ex:proof-dist-chart}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:right-inverse}.
-Show that there is $\eps>0$ such that one of the inequalities holds in each of the following two strings of $m$  inequalities
+Show that there is $\eps>0$ such that for any two points $x,y$ in a sufficiently small neighborhood of $p$,
+one of the inequalities holds in each of the following two strings of $m$  inequalities
 \begin{align*}
 \mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps;
 \\
-\mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps
+\mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps.
 \end{align*}
-for any two points $x,y$ in a sufficiently small neighborhood of $p$.
-
 Use this together with the right-inverse theorem (\ref{thm:right-inverse}) to prove \ref{thm:dist-chart}.
 \end{thm}
 
@@ -799,9 +802,8 @@ In this case, we may write $\vol B$ instead of $\vol_m B$.
 Let $\spc{A}$ be an $\Alex0$ space.
 
 \begin{subthm}{inq:BG:a}
-Then
-\[\vol_k \oBall(p,r)_{\spc{A}}\le \vol_k \oBall(0,r)_{\T_p\spc{A}}\]
-for any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$.
+For any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$, we have
+\[\vol_k \oBall(p,r)_{\spc{A}}\le \vol_k \oBall(0,r)_{\T_p\spc{A}}.\]
 \end{subthm}
 
 \smallskip
@@ -811,7 +813,7 @@ for any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$.
 \smallskip
 
 \begin{subthm}{inq:BG:b}
-Then for any point $p\in \spc{A}$ and any radius $r>0$ we have
+For any point $p\in \spc{A}$ and any radius $r>0$ we have
 \[\vol_m \oBall(p,r)\le \omega_m\cdot r^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
 \end{subthm}
@@ -838,8 +840,8 @@ this proves part \ref{SHORT.inq:BG:a}.
 \vskip1mm
 \end{wrapfigure}
 
-If $\T_p\iso \EE^k$ for some $k\le m$, then \ref{SHORT.inq:BG:a} implies \ref{SHORT.inq:BG:b}.
-In the general case, by \ref{cor:tan-g-delta}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^k$ for some $k\le m$.
+If $\T_p\iso \EE^m$, then \ref{SHORT.inq:BG:a} implies \ref{SHORT.inq:BG:b}.
+In the general case, by \ref{cor:tan-g-delta}, we can find a point $p'$ arbitrarily close to $p$ such that $\T_{p'}\iso \EE^m$.
 If $\eps>\dist{p}{p'}{}$, then $\oBall(p,r)\z\subset \oBall(p',r+\eps)$.
 Therefore,
 \[\vol \oBall(p,r)\le \omega_m\cdot (r+\eps)^m\]
@@ -883,7 +885,7 @@ Show that any nonempty open set in an $m$-dimensional Alexandrov space has posit
 \end{thm}
 
 
-\section{Packing numbers}\label{sec:packing-numbers}
+\section{Packings}\label{sec:packing-numbers}
 
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
@@ -967,8 +969,10 @@ If $\LinDim \spc{A}>1$, then $\Sigma_p$ is geodesic.
 
 \end{thm}
 
-Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise, opens a way to use induction on dimension of Alexandrov space.
+Part \ref{SHORT.ex:finite-space-of-directions-dim} of the exercise opens a way to use induction on dimension of Alexandrov space.
 It will be used extensively in Lecture~\ref{chap:bry}.
+The condition $\LinDim \spc{A}>1$ in \ref{SHORT.ex:finite-tan:sigma} is necessary;
+indeed $\Sigma_0\RR$ is a two-point space which is not geodesic.
 
 \section{Remarks}
 

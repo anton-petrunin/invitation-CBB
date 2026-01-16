@@ -2773,6 +2773,38 @@
       \field{volume}{47}
       \field{year}{1977}
     \endentry
+    \entry{nepechiy2019}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=854331ed8deaa183d4101f35aa44a4d5}{%
+           family={Nepechiy},
+           familyi={N\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{854331ed8deaa183d4101f35aa44a4d5}
+      \strng{fullhash}{854331ed8deaa183d4101f35aa44a4d5}
+      \strng{bibnamehash}{854331ed8deaa183d4101f35aa44a4d5}
+      \strng{authorbibnamehash}{854331ed8deaa183d4101f35aa44a4d5}
+      \strng{authornamehash}{854331ed8deaa183d4101f35aa44a4d5}
+      \strng{authorfullhash}{854331ed8deaa183d4101f35aa44a4d5}
+      \field{sortinit}{n}
+      \field{sortinithash}{22369a73d5f88983a108b63f07f37084}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{math.DG}
+      \field{eprinttype}{arXiv}
+      \field{title}{Toward canonical convex functions in Alexandrov spaces}
+      \field{year}{2019}
+      \verb{eprint}
+      \verb 1910.00253
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1910.00253
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1910.00253
+      \endverb
+    \endentry
     \entry{ohta}{article}{}
       \name{author}{1}{}{%
         {{hash=09219733c59916836e97b387b7c68b15}{%
