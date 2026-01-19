@@ -1,7 +1,7 @@
 %%!TEX root = the-quotients.tex
 \chapter{Quotients}\label{chap:L/G}
 
-This lecture gives several applications of Alexandrov geometry to isometric group actions.
+This lecture discusses applications of Alexandrov geometry to isometric group actions.
 
 \section{Quotient space}
 
@@ -40,7 +40,7 @@ Note that
 \dist{\hat{x}_i}{\hat{x}_j}{\spc{A}}
 \]
 for all $i$ and $j$.
-Therefore 
+By \ref{angle-monotonicity},
 \[\angk p{x_i}{x_j}
 \le
 \angk {\hat{p}}{\hat{x}_i}{\hat{x}_j}
@@ -72,7 +72,7 @@ Conclude that $G$ is $\Alex0$.
 
 \section{Submetries}
 
-A map $\sigma\:\spc{X}\to\spc{Y}$ between metric spaces $\spc{X}$ and $\spc{Y}$
+A map $\sigma\:\spc{X}\to\spc{Y}$ between metric spaces
 is called a \index{submetry}\emph{submetry} if 
 \[\sigma(\oBall(p,r)_\spc{X})=\oBall(\sigma(p),r)_{\spc{Y}}\]
 for any $p\in \spc{X}$ and $r\ge 0$.
@@ -104,9 +104,9 @@ The proof of \ref{thm:CBB/G} works for submetries;
 that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is a proper $\Alex0$ space, then so is $\spc{B}$}.
 Theorem \ref{thm:CBB/G} admits a straightforward generalization to $\Alex{-1}$ case.
 
-In the $\Alex1$ case, the proof produces a slightly weaker statement ---  \textit{$\SSS^2$-comparison holds for a quartuple $p,x_1,x_2,x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
+In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{$\SSS^2$-comparison holds for a quartuple $p,x_1,x_2,x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
 In particular, the quotient space is \textit{locally} $\Alex1$.
-But since $\Alex1$ space is geodesic, then so is its quotient.
+But since $\Alex1$ space is geodesic, so is its quotient.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
 The same holds for the targets of submetries from an  $\Alex1$ space.
 With a bit of extra work, one can extend the statement to nonproper spaces \cite[8.34]{alexander-kapovitch-petrunin2024}.
@@ -134,7 +134,7 @@ Recall that a group action $G\acts\spc{X}$ is called \index{effective action}\em
 \begin{thm}{Key lemma}\label{lem:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points
 and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
-Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ is the standard 2-sphere rescaled with a factor $\tfrac12$.
+Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ denotes the standard 2-sphere rescaled with a factor $\tfrac12$.
 \end{thm}
 
 The proof of the lemma is guided by the following exercise.
@@ -179,7 +179,7 @@ This symmetry has two fixed points, north pole and south pole, that correspond t
 \noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
 
 \begin{subthm}{ex:S^3/S^1:a}
-Denote by $T(r)$ the inverse image $T(r)$ in $\SSS^3$, and let $a(r)$ be its area.
+Denote by $T(r)$ the inverse image $S(r)$ in $\SSS^3$, and let $a(r)$ be its area.
 Show that $T(r)$ is an orbit of the torus action and
 \[a(r)=\pi^2\cdot\sin r\cdot \cos r.\]
 
@@ -197,7 +197,8 @@ Show that
 
 \begin{subthm}{ex:S^3/S^1:c}
 Let $c_{p,q}(r)$ be the length of $S(r)$.
-Show that $a(r)=c_{p,q}(r)\cdot b_{p,q}(r)$.
+Show that
+\[a(r)=c_{p,q}(r)\cdot b_{p,q}(r).\]
 \end{subthm}
 
 \smallskip
@@ -266,7 +267,7 @@ Therefore we arrive at a contradiction in the same way as in the first case.
 \parit{Case \ref{case3}.} Impossible by \ref{ex:bry-connected}.
 \qeds
 
-\section{Erdős' problem rediscovered}
+\section{Erdős' problem revisited}
 
 A point $p$ in an Alexandrov space is called \index{extremal point}\emph{extremal} if $\mangle\hinge pxy\le \tfrac\pi2$ for any hinge $\hinge pxy$ with the vertex at $p$; equivalently, $\diam \Sigma_p\le \pi/2$.
 
@@ -281,7 +282,7 @@ For each $p_i$ consider its open \index{Voronoi domain}\emph{Voronoi domain} $V_
 \[V_i=\set{x\in \spc{A}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
 Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
 
-Suppose  $0<\alpha\le 1$.
+Choose $0<\alpha\le 1$.
 Given a point $x\in\spc{A}$, choose a geodesic $[p_ix]$ and denote by $x_i$ the point on $[p_ix]$ such that $\dist{p_i}{x_i}{}=\alpha\cdot\dist{p_i}{x}{}$;
 let $\map_i\:x\to x_i$ be the corresponding map.
 By the comparison, 
@@ -290,7 +291,7 @@ for any $x$, $y$, and $i$.
 Therefore 
 \[\vol(\map_i \spc{A})\ge\alpha^m\cdot\vol \spc{A}.\]
 
-Suppose $\alpha<\tfrac12$.
+Now, suppose $\alpha<\tfrac12$.
 Then $x_i\in V_i$ for any $x\in \spc{A}$.
 Indeed, assume $x_i\notin V_i$,
 then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
@@ -303,6 +304,9 @@ for any $0<\alpha<\tfrac12$; hence
 Since $V_1,\dots,V_N$ are disjoint subsets of $\spc{A}$, we have $N\le 2^m$.
 \qeds
 
+\begin{thm}{Exercise}\label{ex:extr-point(-1)}
+Find a bound on number of extremal points in an $\Alex{-1}$ space in terms of its dimension $m$ and diameter.
+\end{thm}
 
 \section{Crystallographic actions}
 
@@ -354,7 +358,7 @@ Moreover, since $p$ is fixed by $F$, we have
 \eqlbl{eq:>pi/2}\]
 for any $g\in F$.
 
-Denote by $z$ the barycenter of the orbit $F\cdot x_2$.
+Denote by $z\in\EE^m$ the barycenter of the orbit $F\cdot x_2$.
 Note that $z$ is a fixed point of $F$.
 By \ref{eq:>pi/2}, $z\ne p$;
 so $F$ must fix the line $pz$.
@@ -394,9 +398,7 @@ see \cite{harvey-searle}.
 Let $\Sigma$ be an $\Alex1$ space homeomorphic to $\SSS^3$.
 Suppose $\SSS^1$ acts on $\Sigma$ isometrically and without fixed points.
 Is it true that any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$?
-
-And if the answer is, is there a distance-noncontracting map
-\[\Sigma/\SSS^1\z\to \tfrac12\cdot\SSS^2?\]
+(And if the answer is yes, is there a distance-noncontracting map $\Sigma/\SSS^1\z\to \tfrac12\cdot\SSS^2$?)
 \end{thm}
 
 
@@ -422,8 +424,8 @@ Grigory Perelman noticed that, after proper definitions, the same proof works in
 Applying our argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
 the case of equality requires more work.
 
-Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point.
-(This action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$.)
+Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point
+(this action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$).
 The second author has proved \cite{lebedeva2015} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
 The extremal subsets of Alexandrov space were bristly discussed in \ref{sec:bry-remarks}.
@@ -431,10 +433,10 @@ The following definition is more relevant to isometric group actions.
 
 A closed subset $E$ in a finite-dimensional Alexandrov space is called
 \index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes a minimal value.
-An extremal set is called \index{minimal extremal set}\emph{minimal} if it contains no proper extremal subsets.
+A nonempty extremal set is called \index{minimal extremal set}\emph{minimal} if it contains no proper extremal subsets.
 
 For example, the whole space and the empty set are extremal.
-Also, every vertex, edge, or face (as well as their unions) of the cube is an extremal subset of the cube.
+Also, every vertex, edge, face of a cube, and their unions, are extremal subsets of the cube.
 Vertices of the cube are its only minimal extremal subsets.
 
 Counting maximal finite subgroups in a crystallographic group $\Gamma$ (up to conjugation) is equivalent to counting the minimal extremal subsets in the quotient space $\spc{A}=\EE^m/\Gamma$.
@@ -445,9 +447,10 @@ Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ minimal extremal su
 \end{thm}
 
 Let us mention another related conjecture.
-An extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
+An nonempty extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
+(For every point of Alexandrov space the set of points reachble by recurcive application of gradient flow for squares of distance functions forms a primitive extremal set.)
 For example, each face of $m$-dimensional cube is its primitive extremal subset;
-therefore the cube has exactly $3^m$ primitive extremal subsets, including the empty set and the whole cube.
+therefore the cube has exactly $3^m$ primitive extremal subsets, including the whole cube.
 
 \begin{thm}{Conjecture}
 Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ minimal extremal subsets.

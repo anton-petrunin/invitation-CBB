@@ -14,6 +14,16 @@ Moreover, given $0\ne v\in \T_p$, the differential, $\dd_p f$, can be chosen
 arbitrarily close to $x\mapsto -\<v,x\>$.
 \end{thm}
 
+\parit{Idea of the proof.}
+Suppose $f$ is a semiconcave function.
+One can improve concavity of $f$ by passing to a composition $\phi\circ f$ with a vary concave real-to-real function $\phi$ such that $\phi'\approx 1$.
+Namely, if $|(f\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish.
+This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make cocavity worse;
+so $\phi\circ f$ is very concave in most of directions and at least as concave as $f$ in all directios.
+In the proof we consider sum $\phi\circ f_1+\ldots+\phi\circ f_N$ for sutably chousen sequence of functions $f_1,\ldots,f_N$, so that for any geodesic $\gamma$ in a smalle neighborghood of $p$ the value $|(f_i\circ\gamma)^\pm|$ is bounded away from zero for some $i$.
+
+\medskip
+
 Before getting into the proof, we need to refresh material from \ref{Function comparison} and \ref{sec:packing-numbers}.
 
 \begin{thm}{Lemma}\label{lem:barrier}
@@ -49,8 +59,8 @@ and the if part follows.
 
 \begin{thm}[!]{Exercise}\label{ex:barrier}
 Let $f$ be Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
-Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $c_3\ge \phi''(x_0)$.
-Let $\lambda_2=c_1\cdot\lambda_1+c_2^2\cdot c_3$.
+Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $0>c_3\ge \phi''(x_0)$.
+Let $\lambda_2=c_2\cdot\lambda_1+c_1^2\cdot c_3$.
 Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
 \end{thm}
 
@@ -158,7 +168,7 @@ is a strictly function in a neighborhood of $p$.
 \end{thm}
 
 
-\section{Liftings}
+\section{Liftings}\label{sec:Liftings}
 
 Suppose that the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is sufficiently small, so we may think that both spaces $\spc{A}$ and $\spc{A}'$ lie at a small Hausdorff distance in an ambient metric space $\spc{W}$.
 In particular, we may choose a small $\eps>0$, so that for any point $p\in \spc{A}$, there is a point $p'\in \spc{A}'$ such that $\dist{p}{p'}{\spc{W}}<\eps$;
@@ -294,7 +304,16 @@ in particular, it provides a version of the Liouville theorem about phase-space 
 
 The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
 More exact vesions of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
-Artem Nepechiy proved existence of $2$-convex function in a neighborhood of a point $p$ in Alexandrov space that that approximates $\distfun_p^2$ up to second order \cite{nepechiy2019}.
+Let us mention the following closely related result of Artem Nepechiy \cite{nepechiy2019}:
+\textit{given a point $p$ in Alexandrov space there is a $2$-convex function that approximates $\distfun_p^2$ up to second order at $p$}.
+
+The fact that the controlled concavity survives after lifting (see Section \ref{sec:Liftings}) was observed and used by the first author \cite[4.2]{kapovitch2002}.
+Functions with controlled concavity can be lifted to a collapsing sequence, in this case the resulting function is not concave but it has many proprties.
+In particular, if the limit space has dimension $m$, then the Morse index of of the lifing is is at least $m$; this property implies a partial answer to an old question of \textit{which finite-dimensional Alexandrov spaces can be approximated by Riemannian manifolds with a fixed lower curvature bound}; see \cite{kapovitch2005}.
+Furthermore, these liftings have the following peculior property, which (as far as we know) did not find its application:
+\textit{If $f$ is controllably concave and $f_n$ are its lifing to a collapsing sequecce of Alexandrov spaces with uniform lower curvature bound, then for any $\eps>0$, and all large $n$, the restriction of $f_n$ to any geodesic of length at least $\eps$ is concave.}
+(Recall that our geodesic are always length-minimizing.)
+
 
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about $m$-dimensional manifolds with lower sectional curvature bound we follow the following steps:
 \begin{itemize}

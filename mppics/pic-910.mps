@@ -2,12 +2,12 @@
 %%BoundingBox: -21 -21 162 21 
 %%HiResBoundingBox: -20.09242 -20.09242 161.82468 20.09242 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.09.30:1306
+%%CreationDate: 2026.01.15:1757
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font UEREAE-CMMI10 RWSKGV-CMR7 CCYDUA-CMSY10 JGAOWE-CMMI7
+%%+ font UEREAE-CMMI10 RWSKGV-CMR7 CCYDUA-CMSY10 VYUYNC-CMMI7
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font UEREAE-CMMI10 RWSKGV-CMR7 CCYDUA-CMSY10 JGAOWE-CMMI7
+%%+ font UEREAE-CMMI10 RWSKGV-CMR7 CCYDUA-CMSY10 VYUYNC-CMMI7
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -36,7 +36,7 @@ FontDirectory/UEREAE-CMMI10 known{/UEREAE-CMMI10 findfont dup/UniqueID known{dup
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /UPQGAV-CMMI10 def
+/FontName /WZSREB-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -738,7 +738,7 @@ FB0F512A9048D55D6D0C9591C4C572930579842E1A03106F2582CACBDC58467E
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font JGAOWE-CMMI7
+%%BeginResource: font VYUYNC-CMMI7
 %!PS-AdobeFont-1.0: CMMI7 003.002
 %%Title: CMMI7
 %Version: 003.002
@@ -750,7 +750,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/JGAOWE-CMMI7 known{/JGAOWE-CMMI7 findfont dup/UniqueID known{dup
+FontDirectory/VYUYNC-CMMI7 known{/VYUYNC-CMMI7 findfont dup/UniqueID known{dup
 /UniqueID get 5087382 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin
@@ -982,7 +982,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /UPQGAV-CMMI10 def
+ /cmmi10 /WZSREB-CMMI10 def
  /cmr7 /PBFZMH-CMR7 def
  /cmsy10 /MBYDUA-CMSY10 def
  /cmmi7 /SHVXZD-CMMI7 def

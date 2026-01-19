@@ -1,12 +1,11 @@
 %%!TEX root = the-boundary.tex
 \chapter{Boundary}\label{chap:bry}
 
-This lecture defines the boundary of a finite-dimensional Alexandrov space.
-After discussing its properties, we prove the doubling theorem (\ref{thm:doubling:doubling}).
+Here we define the boundary of a finite-dimensional Alexandrov space,discuss its properties, and prove the doubling theorem (\ref{thm:doubling:doubling}).
 
 \section{Definition}
 
-The definition of boundary will use induction on dimension, and it will work only for finite-dimensional Alexandrov spaces.
+The definition of boundary will use induction on dimension, and it will work \textit{only} for finite-dimensional Alexandrov spaces.
 
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By~\ref{ex:dim=1},
@@ -14,7 +13,7 @@ $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty bo
 This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
-Suppose $\spc{A}$ is an $m$-dimensional Alexandrov space.
+Let $\spc{A}$ be an $m$-dimensional Alexandrov space.
 We say that $p\in \spc{A}$ belongs to the boundary (briefly $p\in \partial \spc{A}$) if 
 $\partial\Sigma_p\ne\emptyset$.
 By \ref{thm:finite-space-of-directions} and \ref{ex:finite-space-of-directions-dim}, $\Sigma_p$ is an $(m-1)$-dimensional Alexandrov space;
@@ -26,7 +25,7 @@ It is instructive to check the following statements.
 \item Suppose a finite-dimensional Alexandrov space $\spc{A}$ is a direct sum of $\spc{A}_1$ and $\spc{A}_2$.
 Then
 \[\partial \spc{A}=(\partial\spc{A}_1\oplus\spc{A}_2)\,\cup\,(\spc{A}_1\oplus\partial\spc{A}_2)\]
-\item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$ (this implies that $\Sigma$ is  $\Alex1$), then
+\item If $\Cone\Sigma$ is an $\Alex0$ space of dimensions $\ge 2$ (by \ref{ex:finite-space-of-directions-dim} this implies that $\Sigma$ is  $\Alex1$), then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
 where $\Cone\partial\Sigma\df\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
 \end{itemize}
@@ -34,9 +33,8 @@ where $\Cone\partial\Sigma\df\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sig
 
 \section{Conic neighborhoods}
 
-The following statement is a close relative of Perelman's stability theorem \ref{thm:stability}.
-We are going to use this result without proof.
-A proof can be found in \cite{perelman1993}.
+We are going to the following result without proof;
+it is close relative of Perelman's stability theorem \ref{thm:stability}, and it is proved in \cite{perelman1993}.
 
 Recall that the logarithm $\log_p\:\spc{A}\to \T_p$ is a multivalued function defined in \ref{Velocity of curve}.
 
@@ -52,7 +50,7 @@ Moreover, we may assume that
 \eps\to 0.\]
 \end{thm}
 
-Note that the last condition automatically implies that $h_\eps$ is an $o(\eps)$-sometry.
+Note that the last condition implies that $h_\eps$ is an $o(\eps)$-sometry.
 
 The above theorem is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
@@ -74,11 +72,11 @@ Prove \ref{lem:kwun} or read the proof in \cite{kwun1964}.
 Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
-$\T_x\cong \T_{x'}$ (here and below $\cong $ means homeomorphic) 
+$\T_x\cong \T_{x'}$ (here and below $\cong $ means homeomorphic),
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:dir}
-$\Susp\Sigma_x\cong \Susp\Sigma_{x'}$.
+$\Susp\Sigma_x\cong \Susp\Sigma_{x'}$,
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:example}
@@ -91,7 +89,7 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 
 \section{Topology}
 
-The following theorem states that boundary is a topological invariant, despite our definition having used geometry.
+The following theorem states that boundary is a topological invariant, despite our definition heavily used geometry.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
 Let $\spc{A}$ and $\spc{A}'$ be homeomorphic finite-dimensional Alexandrov spaces.
@@ -106,17 +104,17 @@ While working on the proof, keep in mind that there are pairs of spaces $\spc{K}
 For example, one can let $\spc{K}_1=\SSS^4$ and let $\spc{K}_2$ be the suspension over the Poincaré homology sphere; compare to \ref{ex:conic-tangen:example}.
 
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
-Define \index{rank}\emph{rank} of $\spc{A}$ (briefly, $\rank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
+Define \index{corank}\emph{corank} of $\spc{A}$ (briefly, $\corank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
 here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
-In the following proof we will apply induction on the rank of $\spc{A}$.
+In the following proof we will apply induction on the corank of $\spc{A}$.
 
 
 \parit{Proof.}
 The first statement follows from \ref{thm:dim=dim}.
 
 Suppose we have a counterexample, say $\partial \spc{A}\ne \emptyset$, but $\partial \spc{A}'=\emptyset$.
-Let $k\df\rank \spc{A}$ and $k'\df\rank \spc{A}'$.
+Let $k\df\corank \spc{A}$ and $k'\df\corank \spc{A}'$.
 We can assume that the pair $(k,k')$ is minimal in lexicographic order;
 in particular, $k$ is minimal.
 Let $x\mapsto x'$ be a homeomorphism from $\spc{A}$ to $\spc{A}'$.
@@ -124,9 +122,9 @@ Let $x\mapsto x'$ be a homeomorphism from $\spc{A}$ to $\spc{A}'$.
 Choose $x\in \partial \spc{A}$.
 Since $\partial \spc{A}'=\emptyset$, we have $x'\notin \partial \spc{A}'$.
 Note that 
-\[\rank \T_x\le k
+\[\corank \T_x\le k
 \quad\text{and}\quad
-\rank \T_{x'}\le k',
+\corank \T_{x'}\le k',
 \]
 By \ref{ex:conic-tangen:tangent}, $\T_x\cong\T_{x'}$.
 Note that $\partial \T_x\ne\emptyset$ and $\partial \T_{x'}=\emptyset$.
@@ -137,11 +135,11 @@ The remaining part of the proof is divided into three cases.
 \parit{Case 1.}
 Suppose $k>1$.
 Let $\spc{A}\iso \RR^{m-k}\times \spc{C}$, where $\spc{C}$ is a $k$-dimensional $\Alex0$ cone.
-Observe that $\rank\T_y\le\rank\spc{A}$ for any $y\in\spc{A}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
+Observe that $\corank\T_y\le\corank\spc{A}$ for any $y\in\spc{A}$ and the equality holds only if $y$ projects to the origin of $\spc{C}$.
 
 Since $k>1$, we can choose $z\ne 0$ that lies in $\partial\spc{C}$.
 Choose $y$ that projects to $z$;
-in particular, $\rank\T_y<\rank\spc{A}$.
+in particular, $\corank\T_y<\corank\spc{A}$.
 By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
 $\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
 The latter contradicts the minimality of $k$.
@@ -156,14 +154,14 @@ the image of $\partial\spc{A}$ in $\spc{A}'$ does not lie in $\RR^{m-k'}\z\times
 In other words, we can choose $y\in \partial \spc{A}$ such that its image $y'\in \spc{A}'$ has a nonzero projection in $\spc{C}'$.
 Observe that $\T_y\cong\T_{y'}$,
 \[
-\rank\T_y\le k=1,
+\corank\T_y\le k=1,
 \quad
-\rank\T_{y'}< k',
+\corank\T_{y'}< k',
 \quad
 \partial \T_y=\emptyset,
 \quad\text{and}\quad
-\partial \T_{y'}\ne \emptyset\]
---- a contradiction.
+\partial \T_{y'}\ne \emptyset,\]
+which contradicts minimality of $k'$.
 
 \parit{Case 3.}
 Suppose $k\le 1$ and $k'\le 1$.
@@ -184,7 +182,7 @@ Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
 
 \section{Tangent space}
 
-Spaces of directions and tangent spaces of an Alexandrov space have already been defined in Lecture~\ref{chap:derivative}.
+Spaces of directions and tangent spaces of an Alexandrov space have already been defined in \ref{sec:space+directions} and \ref{sec: tangent space}, respectively.
 Let us extend these definitions to subsets of an Alexandrov space.
 
 Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{A}$.
@@ -196,7 +194,7 @@ briefly \index{70@$\Sigma_p$ (space of directions)}$\xi\in\Sigma_pX$.
 Further, $\Cone(\Sigma_pX)$ will be called the \index{tangent space}\emph{tangent space} to $X$ at $p$;
 it will be denoted by \index{70@$\T_p$ (tangent space)}$\T_pX$.
 
-Note that $\Sigma_pX$ is a subset of $\Sigma_p$ and $\T_pX$ is a subcone in $\T_p$.
+Note that $\Sigma_pX\subset \Sigma_p\spc{A}$ and $\T_pX\subset\T_p\spc{A}$.
 
 \begin{thm}{Theorem}\label{thm:partial-Sigma}
 For any finite-dimensional Alexandrov space $\spc{A}$, we have
@@ -230,11 +228,11 @@ Hence
 \section{Doubling}
 
 Let $A$ be a closed subset in a metric space $\spc{X}$.
-The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$;
-more precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
+The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$.
+More precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{A}$ defined by $(x,i)\mapsto x$ is a short map. 
-The metric on $\spc{W}$ can also be defined as
+The metric on $\spc{W}$ can also be defined directly:
 \[\dist{(x,i)}{(y,j)}{\spc{W}}=
 \begin{cases}
 \dist{x}{y}{\spc{X}}&\text{if}\quad i= j.
@@ -260,7 +258,6 @@ $\nabla_xf\in \partial\T_x$ for any $x\in\partial \spc{A}$.
 
 \begin{subthm}{thm:partial-grad:flow}
 If $\alpha$ is an $f$-gradient curve that starts at $x\in \partial \spc{A}$, then $\alpha(t)\in \partial \spc{A}$ for any $t$.
-\\
 Moreover, if $p\in \partial \spc{A}$, then $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
 \end{subthm}
 
@@ -271,6 +268,8 @@ The doubling $\spc{W}$ of $\spc{A}$ across $\partial \spc{A}$ is an Alexandrov s
 \end{thm}
 
 Part \ref{SHORT.thm:doubling:doubling} is called the {}\emph{doubling theorem}.
+
+%??? хорошо бы, что кто-то это критически прочитал.
 
 \parit{Proof.}
 We will denote by 
@@ -346,7 +345,7 @@ for any $t\ge 0$.
 In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
 Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the first statement follows.
 
-It remains to show $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
+It remains to show that $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
 Suppose $v=t\cdot u$ and $|u|=1$.
 Note that $u\in\partial\T_p$.
 Therefore, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $\dir{p}{x_n}\to v$; let $r_n=\dist{p}{x_n}{}$.
@@ -356,15 +355,13 @@ Hence the last statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
-other cases can be done in the same way, but formulas get more complicated.
+other cases can be done in the same way, but formulas get heavier.
 
 Denote by $\spc{A}_0$ and $\spc{A}_1$ the two copies of $\spc{A}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{A}$ for the common boundary of $\spc{A}_0$ and $\spc{A}_1$.
 
 \begin{clm}{}
-Let $\gamma$ be a geodesic in $\spc{W}$.
-Then either $\gamma$ has at most one interior point in $\partial \spc{A}$ or
-$\gamma\subset \partial \spc{A}$.
+A geodesic in $\spc{W}$ has at most one interior point in $\partial \spc{A}$ or it lies in $\partial \spc{A}$ completely.
 \end{clm}
 
 \begin{wrapfigure}{r}{45mm}
@@ -502,7 +499,8 @@ All this implies that $(f\circ\gamma)''\le 1$.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:bry-connected}
-Let $\spc{A}$ be a finite-dimensional $\Alex1$ space of dimension $\ge 2$ with nonempty boundary $\partial\spc{A}$.
+Let $\spc{A}$ be an $m$-dimensional $\Alex1$ space.
+Assume that $\partial\spc{A}\ne \emptyset$ and $2\le m<\infty$.
 Show that $\partial\spc{A}$ is connected.
 \end{thm}
 
@@ -540,12 +538,13 @@ for any $x\in\partial \spc{A}$.
 
 \section{Remarks}\label{sec:bry-remarks}
 
-The doubling theorem has generalizations \cite{petrunin1997,ge-li} that allow for gluing multiple nonidentical spaces.
+
+The doubling theorem was generalized by the third author \cite{petrunin1997} allowing gluing nonidentical spaces and generalized further by Jian Ge and Nan Li \cite{ge-li} allowing for gluing more than two spaces.
 
 It easily follows by induction on dimension  that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation can often be used to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
 
-For spaces without boundary the following tools become available.
+Let us discuss several additional tools that available for spaced with empty boundary.
 
 \begin{thm}{Fundamental-class lemma}\label{lem:fund-class}
 Any compact finite-dimensional Alexandrov space $\spc{A}$ without boundary has a fundamental class with $\ZZ/2$ coefficients;
@@ -558,7 +557,7 @@ This lemma was proved by Karsten Grove and Peter Petersen \cite{grove-petersen19
 Originally it was stated for Alexander--Spanier cohomology. We do not make this distinction  because for compact Alexandrov spaces it is the same as singular cohomology.
 Indeed,  both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier}, compact Alexandrov spaces are homotopy equivalent to finite simplicial complexes (see \ref{thm:finite-dim-hom-simplicial}) and  for paracompact  CW complexes  Alexander--Spanier cohomology is isomorphic to \v{C}ech  and singular cohomolgy \cite[Chapter 6]{Spanier}.
 
-This lemma implies, for example, that on finite-dimensional Alexandrov spaces without boundary 
+The lemma implies, for example, that on finite-dimensional Alexandrov spaces without boundary
 the gradient flow for a $\lambda$-concave function is an onto map;
 in other words, gradient curves can be extended into the past.
 It is also used in the proof of the following version of the domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
@@ -620,16 +619,15 @@ Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-The Morse lemma was originally proved by Grigory Perelman in \cite{perelman1993} for special kind of semiconcave functions made out of distance functions.
-For such functions it holds for all Alexandrov spaces without the requirement that they do not have boundary.
+The Morse lemma was originally proved by Grigory Perelman \cite{perelman1993} for special kind of semiconcave functions made out of distance functions.
+For such functions it holds for all Alexandrov spaces (possibly with nonempty boundary).
 For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) was generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
 On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.%
 \footnote{Semiconcave functions are often defined to meet this property, but we do not follow this convention.}
 This is automatic for the special type of semiconcave functions considered in \cite{perelman1993} therefore this distinction is not made there.
 
 Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
-More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if for any $x\in E$
-and $f$-gradient curve that starts in $E$ remains in $E$;
+More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if any $f$-gradient curve that starts in $E$ remains in $E$;
 here $f$ is arbitrary function of the form $\tfrac12\cdot \distfun_p^2$. %{\red V: should we add the condition that $E$ is closed?} A: No, it follows.}
 
 Extremal subsets were introduced by Grigory Perelman and the third author \cite{perelman-petrunin}.
