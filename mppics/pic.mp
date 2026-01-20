@@ -1734,6 +1734,25 @@ label.urt(btex $a'_2$ etex, z.aa2);
 
 endfig;
 
+beginfig(1129)
+save u,p;
+path p[];
+u:=1.4cm;
+
+z.a=(0,0)*u;
+z.b=(1,0)*u;
+
+p0=z.a{.7,1}..z.b{.6,-1}..cycle;
+
+draw p0;
+draw subpath(0,1) of p0 reflectedabout (z.a,z.b) dashed evenly;
+draw ddline(z.a,z.b)(.4,.4);
+
+label.top (btex $\Delta$ etex, point .5 of p0);
+label.ulft (btex $\Pi$ etex, 1.4[z.a,z.b]);
+
+endfig;
+
 beginfig(1160)
 save u,p;
 path p[];
