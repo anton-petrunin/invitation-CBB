@@ -2,7 +2,7 @@
 
 \chapter{Calculus}\label{chap:derivative}
 
-This lecture introduce several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
+This lecture introduces several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
 
 \section{Space of directions} 
 \label{sec:space+directions}
@@ -63,9 +63,9 @@ here ``$\iso$'' stands for ``is isometric to''.
 
 Next we define a multiplication by scalar, scalar product, norm, and angle on Euclidean cones, extending the usual definitions from Euclidean space.
 
-The point $v$ in $\spc{V}$ that corresponds $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$;
+The point $v$ in $\spc{V}$ that corresponds to $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$;
 the space $\spc{X}$ might be identified with the unit sphere in $\spc{V}$; so $x=1\cdot x$.
-More genrally, for $v,w\in \spc{V}$, we will write $w=s\cdot v$ if $v$ corresponds to $(t,x)\z\in[0,\infty)\times \spc{X}$ and $w$ corresponds to $(s\cdot t,x)\z\in[0,\infty)\times \spc{X}$.
+More generally, for $v,w\in \spc{V}$, we will write $w=s\cdot v$ if $v$ corresponds to $(t,x)\z\in[0,\infty)\times \spc{X}$ and $w$ corresponds to $(s\cdot t,x)\z\in[0,\infty)\times \spc{X}$.
 The point in $\spc{V}$ formed by the equivalence class of $\{\0\}\times\spc{X}$ is called the \index{origin}\emph{origin} of the cone and is denoted by $\0$ or $\0_{\spc{V}}$.
 For $v\in\spc{V}$ the distance $\dist{\0}{v}{\spc{V}}$ is called the \index{norm}\emph{norm} of $v$ and is denoted by $|v|$ or $|v|_{\spc{V}}$.
 The \index{angle measure}\emph{angle measure} \index{31@$\mangle$ (angle measure)} $\mangle(v,w)$ and \index{32@$\<v,w\>$ (scalar product)} \index{scalar product}\emph{scalar product} $\<v,w\>$
@@ -124,7 +124,7 @@ Let $p$ be a point in an Alexandrov space $\spc{A}$,
 and let $\lambda_n\to\infty$.
 Suppose $\Sigma_p$ is compact.
 Show that there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$.
-Moreover, the convergence can be choosen so that for any geodesic $\gamma$ that starts at $p$, we have
+Moreover, the convergence can be chosen so that for any geodesic $\gamma$ that starts at $p$, we have
 \[\iota_n\circ\gamma(t/\lambda_n)\to t\cdot \xi,\]
 where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambda_n\cdot\spc{A}$ and $\xi\in\Sigma_p$ is the direction of $\gamma$ at $0$.
 \end{thm}
@@ -133,7 +133,7 @@ where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambd
 \index{differential of a function}
 
 Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$, and $p\z\in \Dom f$.
-Choose a unit-speed geodesic $\gamma$ that starts at $p$;
+Choose a geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
 \[(\dd_pf)(\xi)\df(f\circ\gamma)^+(0),\]
@@ -164,7 +164,7 @@ Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 
 \begin{subthm}{ex:d(distfun):<}
 Show that
-$\dd_p\distfun_q(v)\le -\langle\dir pq,v\rangle$
+$(\dd_p\distfun_q)(v)\le -\langle\dir pq,v\rangle$
 for any $v\in\T_p$.
 \end{subthm}
 
@@ -172,7 +172,7 @@ for any $v\in\T_p$.
 Suppose $\spc{A}$ is proper.
 Let $\Uparrow_p^q$ be the set of all directions of geodesics from $p$ to $q$.
 Show that
-\[\dd_p\distfun_q(v)=-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle\]
+\[(\dd_p\distfun_q)(v)=-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle\]
 for any $v\in\T_p$.
 \end{subthm}
 
@@ -231,12 +231,12 @@ $\overline{\xi}\in \Sigma_p$ is the direction that maximizes the value $\dd_pf(\
 \begin{thm}{Key lemma}\label{lem:ohta} 
 Let $f$ be a semiconcave function that is defined in a neighborhood of a point $p$
 in an Alexandrov space $\spc{A}$. 
+Assume
+\[s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}\ge0.\]
 Then for any $u,v\in \T_p$, we have
 \[s\cdot \sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \ge 
-(\dd_p f)(u)+(\dd_p f)(v),\]
-where
-\[s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}.\]
+(\dd_p f)(u)+(\dd_p f)(v).\]
 
 \end{thm}
 
@@ -247,7 +247,7 @@ Let $w=\tfrac{u+v}2$, then
 \eqlbl{eq:2|w|=|u+v|}\]
 and
 \[2\cdot(\dd_p f)(w)\ge(\dd_p f)(u)+(\dd_p f)(v),
-\eqlbl{eq:2df(w)>=df(u)+df(v)},\]
+\eqlbl{eq:2df(w)>=df(u)+df(v)}\]
 which implies the lemma.
 
 In general, $\T_p$ is not geodesic (and not even a length space), so concavity of $\dd_p f$ does not make sense.
@@ -265,7 +265,7 @@ Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
 Suppose the geodesic $[pq]$ can be extended beyond $q$.
 
 Show that
-\[\dd_p\distfun_q(v)= -\langle\dir pq,v\rangle\]
+\[(\dd_p\distfun_q)(v)= -\langle\dir pq,v\rangle\]
 for any $v\in\T_p$.
 \end{thm}
 
@@ -304,7 +304,7 @@ we can assume that there are geodesics in the directions of $u$ and $v$.
 Choose such geodesics $\gamma_u$ and $\gamma_v$ and assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
 For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{A}$ such that
 \begin{itemize}
-\item $v_t=\gamma_v(t)$,\quad  $q_t=\gamma_v(2\cdot t)$
+\item $v_t=\gamma_v(t)$ and  $q_t=\gamma_v(2\cdot t)$,
 \item $u_t=\gamma_u(t)$.
 \item $w_t$ is the midpoint of $[u_t v_t]$.
 \end{itemize}

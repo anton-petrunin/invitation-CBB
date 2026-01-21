@@ -17,7 +17,7 @@ Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
 \parit{Proof of \ref{thm:glob} modulo the key lemma (\ref{key-lem:globalization}).}
-Note that condition \ref{angle-b} holds in $\spc{A}$ (the proof of \ref{angle-b} uses only the local condition).
+Note that condition \ref{angle-b} holds in $\spc{A}$ (necessity of \ref{angle-b} uses only the local condition).
 It remains to check \ref{angle-a};
 that is,
 \[\mangle\hinge x p y\ge\angk x p y
@@ -32,7 +32,7 @@ Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
 Let $\spc{A}$ be a locally $\Alex0$ space.
-If the the comparison
+If the comparison
 \[\mangle\hinge x p q
 \ge\angk x p q\]
 holds for any hinge $\hinge x p q$ such that
@@ -47,7 +47,7 @@ $\dist{x}{p}{}+\dist{x}{q}{}
 
 Let $\hinge x p q$ be a hinge in $\spc{A}$.
 Denote by $\side \hinge x p q$ its \index{21@$\side \hinge x p q$ (model side)}\index{model!side}\emph{model side};
-this is the opposite side in a flat triangle with the same angle and two adjacent sides as in $\hinge x p q$.
+this is the opposite side in a plane triangle with the same angle and adjacent side lengths as in $\hinge x p q$.
 
 \begin{wrapfigure}{r}{44mm}
 \centering
@@ -214,7 +214,7 @@ which finishes the proof of the claim.
 \claimqeds
 
 Since $r_n-r_{n+1}\to 0$, \ref{clm:>0} implies that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
-where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$.
+where $p_n=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$ (this describes switching the roles of $p$ and $q$ in the construction of $x'$).
 Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\ge\angk{x_n}{p_n}{x_{n+1}}$, we have
 $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
 

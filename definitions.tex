@@ -33,7 +33,7 @@ if this does not hold for one of the angles, then we assume that $\SSS^2$-compar
 
 More generally, one may apply this definition to the model $\kappa$-plane $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
 However, if you see $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$;
-applying rescaling, the $\MM^2(\kappa)$-comparison of rany $\kappa\in\RR$ can be reduced to these three cases.
+applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases.
 
 \begin{thm}{Definition}\label{def:CBB}
 A metric space $\spc{X}$ has {}\emph{curvature $\ge\kappa$} in the sense of Alexandrov
@@ -116,7 +116,7 @@ Moreover, the same statement holds for spherical and hyperbolic triangles.
 \end{thm}
 
 
-\parit{Proof.} 
+\parit{Proof of \ref{lem:alex}.}
 Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)$.
 Take 
 a point $\tilde y$ on the extension of 
@@ -191,7 +191,7 @@ The angle measure of any hinge in an $\Alex0$
 space is defined and  is at least as large as the corresponding model angle;
 that is,
 \[\mangle\hinge p x y\ge \angk p x y\]
-for any hinge $\hinge p x y$ in an $\Alex0$.
+for any hinge $\hinge p x y$ in an $\Alex0$ space.
 
 \end{thm}
 
@@ -253,10 +253,10 @@ Further, according to \ref{ex:adjacent-CBB}, we have
 \[\mangle\hinge pxz+\mangle\hinge pyz=\pi\]
 for adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$.
 
-The following theorem provides a converse.
+The following theorem adds a converse.
 
 \begin{thm}{Theorem}\label{thm:angle-cbb}
-A complete geodesic space $\spc{A}$ is $\Alex0$ if both of the following conditions hold.
+A complete geodesic space $\spc{A}$ is $\Alex0$ if and only if both of the following conditions hold.
 
 \begin{subthm}{angle-a}
 For any hinge $\hinge x p y$ in $\spc{A}$, the angle 
@@ -271,7 +271,11 @@ For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$, we have
 
 \end{thm}
 
+Recall that by \ref{ex:adjacent-CBB}, we have equality in \ref{SHORT.angle-b}.
+
 \parit{Proof.}
+Recall that only-if part follows from \ref{ex:noncreasing} and \ref{ex:adjacent-CBB}; it remains to show the if part.
+
 Consider a point  $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
 From \ref{SHORT.angle-b}, it follows that 
 \[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\quad \text{and}\quad \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
@@ -371,13 +375,13 @@ holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
 \end{itemize}
 
-To prove equivalence, approximate $f$ by smooth functions taking a convolutions $f_n=f*k_n$ for a suitable sequence of kernels $k_n$.
-Note that all the conditions are equivalent for $f_n$;
-passing to the limit we get the same for $f$.
+To prove equivalence, approximate $s$ by smooth functions by taking convolutions $s_n=s*k_n$ for a suitable sequence of kernels $k_n$.
+Note that all the conditions are equivalent for $s_n$;
+passing to the limit we get the same for $s$.
 
 \begin{thm}{Exercise}\label{ex:concave'}
 Show that $\lambda$-concave functions are \emph{one-sided differentiable}.
-That is, if the function $f\:\II\to\RR$ is a $\lambda$-concace then
+That is, if the function $f\:\II\to\RR$ is a $\lambda$-concave then
 \begin{subthm}{}
 the \index{$f^+$, $f^-$ (one-sided derivative)}\index{right derivative}\emph{right derivative}
 \[f^+(t_0)=\lim_{t\to t_0^+} \frac{f(t)-f(t_0)}{t-t_0}\]
@@ -395,7 +399,7 @@ Furthermore, show that $f^+(t_0)-f^-(t_0)\le 0$ for any $t_0$ in the interior of
 The following exercise implies that if the function defined on an open interval, then the Lipschitz condition can be dropped from the definition of $\lambda$-concavity.
 
 \begin{thm}{Exercise}\label{ex:concave-open}
-Suppose a real-to-real function $f$ is defined on an open interval and for some $\lambda\in\RR$, it satisfies one the Jensen inequality stated above.
+Suppose a real-to-real function $f$ is defined on an open interval and for some $\lambda\in\RR$, it satisfies the Jensen inequality stated above.
 Show that $f$ is locally Lipschitz.
 \end{thm}
 
@@ -404,7 +408,7 @@ A \index{function}\emph{function} on a metric space $\spc{A}$ will usually mean 
 The domain of a function $f$ will be denoted by $\Dom f$.
 
 We say that $f$ is \index{91@$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if
-for any unit-speed geodesic $\gamma\:\II\z\to \Dom f$
+for any geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
 The following proposition is simple but conceptual ---
@@ -416,7 +420,7 @@ A complete geodesic space $\spc{A}$ is $\Alex0$ if and only if $f''\le 1$ for an
 \end{thm} 
 
 \parit{Proof.}
-Choose a unit-speed geodesic $\gamma$ in $\spc{A}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
+Choose a geodesic $\gamma$ in $\spc{A}$ and two points $x=\gamma(t_0)$, $y=\gamma(t_1)$ for some $t_0<t_1$.
 Consider the model triangle $\trig{\tilde p}{\tilde x}{\tilde y}\z=\modtrig(p x y)$.
 Let $\tilde \gamma\:[t_0,t_1]\to\EE^2$ be the unit-speed parametrization of $[\tilde x \tilde y]$ from $\tilde x$ to $\tilde y$.
 
@@ -523,4 +527,4 @@ Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesi
 Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov, which is the subject of our previous  book  \cite{alexander-kapovitch-petrunin-2019}.
 In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
 The conditions of that type for $n$-point subsets remain far from fully understood.
-Study of these conitions was intiated by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and it is actively studied since then; see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.
+Study of these conditions was initiated by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and it has been actively studied since then; see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.

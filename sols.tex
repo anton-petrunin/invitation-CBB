@@ -256,7 +256,7 @@ To prove the if part, choose a configuration $q,y_1,y_2,y_3$ that meets all the 
 Show that $\dist{q}{y_i}{}=\dist{p}{x_i}{}$ for each $i$ and $q$ lies in the solid triangle $y_1y_2y_3$;
 in particular 
 \[\mangle \hinge q{y_1}{y_2}+\mangle \hinge q{y_2}{y_3}+ \mangle \hinge q{y_3}{y_1}=2\cdot\pi.\]
-Applying the angle monotonicity (\ref{angle-monotonicity}), we get
+Applying \ref{angle-monotonicity}, we get
 \[\angk  p{x_1}{x_2}+\angk p{x_2}{x_3}+\angk p{x_3}{x_1}
 \le 
 2\cdot\pi.
@@ -268,14 +268,14 @@ that share side $[\tilde p\tilde z]$ and lie on its opposite sides.
 Note that 
 \begin{align*}
 \dist{\tilde x}{\tilde y}{\EE^2}
-&\ge \dist{\tilde x}{\tilde y}{\EE^2}+\dist{\tilde x}{\tilde y}{\EE^2}=
+&\ge \dist{\tilde x}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde y}{\EE^2}=
 \\
 &=\dist{x}{z}{\spc{X}}+\dist{z}{y}{\spc{X}}=
 \\
 &=\dist{x}{y}{\spc{X}},
 \end{align*}
 where $\spc{X}$ is our metric space.
-It remains to apply the angle monotonicity (\ref{angle-monotonicity}).
+It remains to apply \ref{angle-monotonicity}.
 
 
 \parbf{\ref{ex:noncreasing}.}
@@ -372,19 +372,16 @@ Choose $t_0\in \II$.
 Show and use that the function
 $t\mapsto \tfrac {h(t)-h(t_0)}{t-t_0}$ is nonincreasing.
 
-
-
 \parbf{\ref{ex:concave-open}.}
 We can assume that $\lambda=0$, otherwise pass to the function $t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2$.
 
 Suppose that $f$ is defined at $t_0$.
-Since $f$ is defined on an open inteval, we can choose $a$ and $b$ such that $a<t_0<b$ and $f$ is defined on $[a,b]$.
+Since $f$ is defined on an open interval, we can choose $a$ and $b$ such that $a<t_0<b$ and $f$ is defined on $[a,b]$.
 Show and use that
 \begin{align*}
 \frac{f(b)-f(t_0)}{b-t_0}&\le \frac{f(t)-f(t_0)}{t-t_0}\le \frac{f(a)-f(t_0)}{a-t_0}
 \end{align*}
 for any $t\in [a,b]\setminus\{t_0\}$.
-
 
 \parbf{\ref{ex:distfun-semiconcave}.}
 From \ref{comp-kappa}, this inequality follows in the sense of distributions, and hence in any other sense.
@@ -541,10 +538,10 @@ and the statement follows.
 Show that we can assume there is a geodesic in the direction of $v$, and apply \ref{ex:first-var}.
 
 \parit{\ref{SHORT.ex:d(distfun):=}.}
-By \ref{SHORT.ex:d(distfun):<}, $\dd_p\distfun_q(v)\le-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle$.
+By \ref{SHORT.ex:d(distfun):<}, $(\dd_p\distfun_q)(v)\le-\max_{\xi\in\Uparrow_p^q}\langle\xi,v\rangle$.
 Suppose this inequality is strict for some $v$.
 We can assume that $|v|=1$ and there is a geodesic, say $\gamma$ in the direction of $v$.
-Let $\dd_p\distfun_q(v)=-\cos\alpha_0$ for some $\alpha_0\in [0,\pi]$.
+Let $(\dd_p\distfun_q)(v)=-\cos\alpha_0$ for some $\alpha_0\in [0,\pi]$.
 Note that any geodesic from $p$ to $q$ makes angle bigger than $\alpha_0$ with $\gamma$.
 
 The function $f=\distfun_q\circ\gamma$ is Lipschitz.
@@ -624,19 +621,19 @@ In particular, there is $\eps>0$ such that
 and the only-if part follows.
 
 Now suppose $f(y)-f(x)>s\cdot \ell+\lambda\cdot \tfrac{\ell^2}2$,
-were $\ell=\dist{x}{y}{}$.
+where $\ell=\dist{x}{y}{}$.
 Let $\gamma\:[0,\ell]\to \spc{A}$ be a geodesic from $x$ to $y$.
 Since $f\circ\gamma$ is $\lambda$-concave, we have
 \[f\circ\gamma(\ell)\le f\circ\gamma(0)+(f\circ\gamma)^+(0)\cdot\ell+\lambda\cdot \tfrac{\ell^2}2.\]
 It follows that 
-\[\dd_x(\dir xy)=(f\circ\gamma)^+(0)>s,\]
+\[(\dd_xf)(\dir xy)=(f\circ\gamma)^+(0)>s,\]
 and by \ref{prop:grad-exist}, $|\nabla_x f|>s$.
 
 \parbf{\ref{ex:elf-contracting}.}
 Note that $f\circ\alpha$ is a nondecreasing function.
 Apply \ref{ex:d(distfun):<} and the definition of gradient to show that
 \[
--\dd_{\alpha(t)}\distfun_{\alpha(t_3)}(\nabla_{\alpha(t)}f)
+-(\dd_{\alpha(t)}\distfun_{\alpha(t_3)})(\nabla_{\alpha(t)}f)
 \ge
 \langle \nabla_{\alpha(t)},\dir{\alpha(t)}{\alpha(t_3)}\rangle
 \ge
@@ -686,7 +683,7 @@ Observe that $\gexp_p^1$ provides a short map from the unit hemisphere $\SSS_+^m
 Composing this map with the quotient map $\SSS^m\to \SSS_+^m$ brings us a short map $s\:\SSS^m\z\to(M,g)$.
 
 Since $M$ is not homeomorphic to the sphere,
-the diameter sphere theorem implies that $\diam (M,g)\le \tfrac\pi2$.
+the diameter-sphere theorem implies that $\diam (M,g)\le \tfrac\pi2$.
 In particular, $\cBall[p,\tfrac\pi2]_{(M,g)}\z=(M,g)$.
 Hence, the map $s$ is onto.
 
@@ -831,7 +828,7 @@ Then
 \le
 \\
 &\le
-\dd_x \distfun_{a_i}{}{}+\eps\cdot(\dd_p\distfun_{a_0}{}{}),
+\dd_x \distfun_{a_i}{}{}+\eps\cdot\dd_p\distfun_{a_0}{}{},
 \end{align*}
 where $j\in S$ if and only if $\dist{a_i}{x}{}-y_i=\dist{a_j}{x}{}-y_j$.
 Applying \ref{inq-a_j}, we get

@@ -248,8 +248,8 @@ Then
 
 \begin{subthm}{thm:doubling:concave}
 If $\dim \spc{A}\ge 2$, then
-$\distfun_{\partial \Sigma_x}(\xi)\le \tfrac\pi2$ for any $x\in\partial \spc{A}$ and $\xi\in \Sigma_x$.
-Moreover, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\mangle(\xi,\zeta)=\tfrac\pi2$ for any $\zeta\in \Sigma_x$.
+$\distfun_{\partial \Sigma_x}\xi\le \tfrac\pi2$ for any $x\in\partial \spc{A}$ and $\xi\in \Sigma_x$.
+Moreover, if $\distfun_{\partial \Sigma_x}\xi= \tfrac\pi2$, then $\mangle(\xi,\zeta)=\tfrac\pi2$ for any $\zeta\in \Sigma_x$.
 \end{subthm}
 
 \begin{subthm}{thm:partial-grad:grad}
@@ -290,13 +290,13 @@ By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
 the latter contradicts that $\Sigma_x$ is a line segment.
 
 Now suppose $m>2$, so $\dim \Sigma_x>1$.
-Assume $\distfun_{\partial \Sigma_x}(\xi)> \tfrac\pi2$ for some $\xi$.
+Assume $\distfun_{\partial \Sigma_x}\xi>\tfrac\pi2$ for some $\xi$.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is $\Alex1$.
 Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
 Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
 
-Finally, if $\distfun_{\partial \Sigma_x}(\xi)= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
+Finally, if $\distfun_{\partial \Sigma_x}\xi= \tfrac\pi2$, then $\dist{\xi_0}{\xi_1}{\Xi}=\pi$.
 Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$.
 By the splitting theorem (\ref{thm:splitting}), $\Cone \Xi$ is a direct product of the line with some subcone;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
@@ -325,7 +325,7 @@ If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a co
 If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
-Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial \spc{A}}\alpha(t)$.
+Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial \spc{A}}\circ\alpha(t)$.
 
 Choose $t$;
 let $x=\alpha(t)$ and $y\in \partial\spc{A}$ be a closest point to $x$.
