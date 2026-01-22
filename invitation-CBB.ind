@@ -21,7 +21,7 @@
   \item $\dir{p}{q}$ (direction), \hyperpage{35}
   \item $\log_p x$ (logarithm), \hyperpage{43}
   \item $\II$ (real interval), \hyperpage{8}
-  \item $\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$, \hyperpage{6}
+  \item $\SSS^m$, $\EE^m$, $\HH^m$, and $\MM^m(\kappa)$, \hyperpage{6}
   \item $\Sigma_p$ (space of directions), \hyperpage{35}, 
 		\hyperpage{86}
   \item $\Sigma_p'$ (geodesic directions), \hyperpage{35}
@@ -197,7 +197,7 @@
   \item space of geodesic directions, \hyperpage{35}
   \item spherical model triangles, \hyperpage{10}
   \item submetry, \hyperpage{96}
-  \item surface, \hyperpage{109}
+  \item surface of a convex body, \hyperpage{109}
 
   \indexspace
 

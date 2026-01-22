@@ -979,10 +979,11 @@ Consider the infinite product $\SSS^1\times ({\tfrac 12}\cdot \SSS^1)\times ({\t
 \parbf{\ref{ex:no-cont-lifting}.}
 Consider the canonical metric $g$ on the round unit sphere $\SSS^3$ and the Hopf bundle $\SSS^3\to \SSS^2$.
 Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
-Then all  $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
+Then all $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
 Verify that this convergence provides the desired counterexample.
 
-\parit{Comments.} This example is called \index{Berger's sphere}\emph{Berger's spheres}.
+\parit{Comments.}
+The spaces $(\SSS^3,g_n)$ are called \index{Berger sphere}\emph{Berger spheres}.
 Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $\SSS^3\times (\eps\cdot \SSS^1)/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
 
 \parbf{\ref{ex:conic}.}
@@ -1144,9 +1145,9 @@ Use that maximal tori in $\SO(4)$ are conjugate.
 
 \parit{\ref{SHORT.ex:S^3/S^1:sphere}.}
 Cut $\SSS^3$ along the Clifford torus $\tfrac1{\sqrt2}\cdot (\SSS^1\times \SSS^1)$.
-Observe that the quotient of each half is a disc;
+Observe that the quotient of each half is a disk;
 conclude that $\Sigma_{p,q}$ is a sphere.
-The torus action on $\SSS^3$ induce the needed $\SSS^1$-action on $\Sigma_{p,q}$.
+The torus action on $\SSS^3$ induces the needed $\SSS^1$-action on $\Sigma_{p,q}$.
 
 \parit{\ref{SHORT.ex:S^3/S^1:a}+\ref{SHORT.ex:S^3/S^1:b}+\ref{SHORT.ex:S^3/S^1:c}.} Calculations.
 
@@ -1156,14 +1157,14 @@ preserve the distance to the poles and respects the $\SSS^1$-actions.
 
 \parbf{\ref{ex:extr-point(-1)}.}
 Choose an $m$-dimensional $\Alex{-1}$ space $\spc{A}$.
-Repeat the proof of \ref{thm:extr-point} for fixed $\alpha=\tfrac1{10}$ showing that any unit ball in $\spc{A}$ has at most $1000^m$ extramal points.
+Repeat the proof of \ref{thm:extr-point} for fixed $\alpha=\tfrac1{10}$ showing that any unit ball in $\spc{A}$ has at most $1000^m$ extremal points.
 Then apply \ref{ex:tangent=Em:ball}+\ref{ex:pack-net} for $\eps=1$, $\kappa=-1$, and $r=\diam\spc{A}$.
 
 \parbf{\ref{ex:number(m-1)}};
 \ref{SHORT.ex:number(m-1):2}.
 Suppose $\mathfrak{M}_{m-1}(\Gamma)\ge 3$;
 that is, $\spc{A}=\EE^m/\Gamma$ has at least 3 boundary components.
-Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-space from copies of $\spc{A}$ using two of these components.
+Follow Case~3 in the proof \ref{thm:hsiang-kleiner} to glue a train-like space from copies of $\spc{A}$ using two of these components.
 Show that the obtained space splits and arrive at a contradiction.
 
 (Alternatively, apply a similar construction to all components of the boundary.
@@ -1175,7 +1176,7 @@ Arrive at a contradiction with the Bishop--Gromov inequality.)
 Apply the doubling theorem as in Case~2 in the proof \ref{thm:hsiang-kleiner}.
 
 \parbf{\ref{ex:S1actsS3}.}
-Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disc and $\gamma$ projects isometrically to its boundary $\partial\Delta$.
+Show that the quotient space $\Delta=\spc{A}/\mathbb{S}^1$ is an $\Alex1$ disk and $\gamma$ projects isometrically to its boundary $\partial\Delta$.
 It remains to show that the perimeter of $\Delta$ cannot exceed $2\cdot\pi$.
 The latter follows from the Lytchak's problem \cite[3.3.5]{petrunin:survey};
 it states that if $\Delta$ is an $m$-dimensional $\Alex1$ space, then $\vol_{m-1}\partial \Delta\z\le \vol_{m-1}\partial \mathbb{S}^{m-1}$.
@@ -1195,7 +1196,7 @@ Note that
 \qquad\text{and}\qquad
 k-l+m=\chi(\spc{P}).\]
 The first identity follows since each edge appears in two triangles and each triangle has 3 edges;
-the second identity is the Euler's formula.
+the second identity is Euler's formula.
 
 Since each triangle contributes $\pi$ to the total sum of angles, we get that total curvature is $2\cdot\pi\cdot k-\pi\cdot m$.
 It remains to apply straightforward algebraic manipulations.
@@ -1218,7 +1219,7 @@ Apply \ref{cor:convex-nbhd}.
 
 \parit{\ref{SHORT.ex:approximation:triangulation}.}
 Observe that any chord divides a convex figure on $\spc{P}$ into two convex figures.
-Use it to show that union of two convex poygons can triangulated by convex triangles.
+Use it to show that union of two convex polygons can triangulated by convex triangles.
 Apply the last statement recursively to a finite cover of $\spc{P}$ by convex polygons.
 
 \parit{\ref{SHORT.ex:approximation:poly}.}
@@ -1240,7 +1241,7 @@ Show that the total angle around each vertex of the triangulation is at most $2\
 Apply the hinge comparison (\ref{angle}).
 
 \parit{\ref{SHORT.ex:approximation:area}.}
-The first inequality follows from the generalized version of Kiszbraun's theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
+The first inequality follows from the generalized Kiszbraun theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun,alexander-kapovitch-petrunin2024};
 we will not discuss its proof since this inequality is not used in the proof.
 In the proof of the second inequality, we use Alexandrov's idea \cite[X §~1]{alexandrov-1948}.
 
@@ -1416,7 +1417,7 @@ In this case the plane $py_1y_2$ intersects $K$ along a convex figure $F$ that l
 $py_1y_2$ and contains its vertex $p$.
 
 Choose points $y_1'\in [py_1]_{\EE^3}$ and $y_2'\in [py_2]_{\EE^3}$ such that $[y_1'y_2']$ touches~$F$.
-Denote by $x_1'\in [px_1]_{\spc{P}}$ and $x_2'\in [px_2]_{\spc{P}}$ the corresponding points;
+Denote by $x_1'\z\in [px_1]_{\spc{P}}$ and $x_2'\in [px_2]_{\spc{P}}$ the corresponding points;
 that is, $\dist{p}{y_1'}{\EE^3}=\dist{p}{x_1'}{\spc{P}}$ and $\dist{p}{y_2'}{\EE^3}=\dist{p}{x_2'}{\spc{P}}$.
 From  above, we have that $\dist{y_1'}{y_2'}{\EE^3}\ge\dist{x_1'}{x_2'}{\spc{P}}$;
 in other words, 
