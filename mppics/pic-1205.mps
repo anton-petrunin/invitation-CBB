@@ -2,12 +2,12 @@
 %%BoundingBox: -3 -12 65 41 
 %%HiResBoundingBox: -2.50626 -11.59079 64.76456 40.83487 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.09.30:1306
+%%CreationDate: 2026.01.19:2351
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
-%%+ font QLSGAV-CMMI10 ODWGAV-CMR10
+%%+ font QLSGAV-CMMI10 EWGANT-CMR10
 %%DocumentSuppliedResources: procset mpost-minimal
-%%+ font QLSGAV-CMMI10 ODWGAV-CMR10
+%%+ font QLSGAV-CMMI10 EWGANT-CMR10
 %%EndComments
 %%BeginProlog
 %%BeginResource: procset mpost-minimal
@@ -298,7 +298,7 @@ F95142A9761DE6CE4B34457E6B83984FF0E3D036CD0AE0B62DEC12F0B16C09F7
 cleartomark
 {restore}if
 %%EndResource
-%%BeginResource: font ODWGAV-CMR10
+%%BeginResource: font EWGANT-CMR10
 %!PS-AdobeFont-1.0: CMR10 003.002
 %%Title: CMR10
 %Version: 003.002
@@ -310,7 +310,7 @@ cleartomark
 % This license is in the accompanying file OFL.txt, and is also
 % available with a FAQ at: http://scripts.sil.org/OFL.
 %%EndComments
-FontDirectory/ODWGAV-CMR10 known{/ODWGAV-CMR10 findfont dup/UniqueID known{dup
+FontDirectory/EWGANT-CMR10 known{/EWGANT-CMR10 findfont dup/UniqueID known{dup
 /UniqueID get 5000793 eq exch/FontType get 1 eq and}{pop false}ifelse
 {save true}{false}ifelse}{false}ifelse
 11 dict begin

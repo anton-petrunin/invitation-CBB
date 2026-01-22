@@ -50,7 +50,7 @@ In other words, a line is a geodesic defined on the whole real line $\RR$.
 Let $\gamma$ be a line in a metric space $\spc{X}$.
 Show that for any point $x$ we have
 \[\bus_+(x)+\bus_-(x)\ge 0\]
-where, $\bus_+$ and $\bus_-$, are the Busemann functions associated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively.
+where, $\bus_+$ and $\bus_-$ are the Busemann functions associated with half-lines $\gamma:[0,\infty)\to \spc{A}$ and $\gamma:(-\infty,0]\to \spc{A}$ respectively.
 \end{thm}
 
 
@@ -144,16 +144,16 @@ both $\bus_+$ and $\bus_-$ are concave.
 
 By \ref{ex:bus+bus}, $\bus_+(x)+\bus_-(x)\ge0$ for any $x\in \spc{A}$.
 On the other hand, by \ref{comp-kappa}, 
-$f\:t\mapsto\distfun_x^2\circ\gamma(t)$
+$\phi\:t\mapsto\distfun_x^2\circ\gamma(t)$
 is $2$-concave.
-In particular, $f(t)\le t^2+at+b$ for some constants $a,b\in\RR$; see \ref{Function comparison}.
+In particular, $\phi(t)\le t^2+at+b$ for some constants $a,b\in\RR$; see \ref{Function comparison}.
 Therefore,
 \[
 \dist{\gamma( t)}{x}{}+\dist{\gamma(- t)}{x}{}- 2\cdot t
 \le \sqrt{ t^2+at+b}+\sqrt{ t^2-at+b}-2\cdot t
 \]
 for all large $t$.
-Passing to the limit as $t\to\infty$, we get that  $\bus_+(x)+\bus_-(x)\le 0$.
+Passing to the limit as $t\to\infty$, we get that  $\bus_+(x)\z+\bus_-(x)\le 0$.
 Hence
 \[
 \bus_+(x)+\bus_-(x)= 0
@@ -195,7 +195,7 @@ Setting
                \end{matrix}\right.\]
 defines an $\RR$-action on $\spc{A}$.
 
-Consider the level set $\spc{A}'=\bus_+^{-1}(0)=\bus_-^{-1}(0)$;
+Consider the level set $\spc{A}'=\bus_+^{-1}\{0\}=\bus_-^{-1}\{0\}$;
 it is a closed convex subset of $\spc{A}$, and therefore forms an Alexandrov space.
 Consider the map $h\:\spc{A}'\times \RR\to \spc{A}$ defined by $h\:(x,t)\mapsto \GF^t(x)$.
 Note that $h$ is onto.
@@ -251,9 +251,9 @@ for any $x\in \T_p$.
 \parit{Proof of \ref{lem:minus-sum}.}
 By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such that 
 \[
-\dd_p\distfun_{a_n}(x)=-\langle\dir{p}{a_n},x\rangle
+(\dd_p\distfun_{a_n})(x)=-\langle\dir{p}{a_n},x\rangle
 \quad\text{and}\quad
-\dd_p\distfun_{b_n}(x)=-\langle\dir{p}{b_n},x\rangle
+(\dd_p\distfun_{b_n})(x)=-\langle\dir{p}{b_n},x\rangle
 \]
 for any $x\in\T_p$.
 Furthermore, we can assume that $\dir{p}{a_n}\to u/|u|$ and $\dir{p}{b_n}\to v/|v|$ as $n\to \infty$
@@ -330,7 +330,7 @@ Suppose  \ref{SHORT.opposite} holds.
 Recall that $\T_p$ has nonnegative curvature.
 The hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
 Hence $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
-the proof is the same way as in \ref{ex:adjacent-CBB}.
+the proof is the same as \ref{ex:adjacent-CBB}.
 Hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
@@ -454,7 +454,7 @@ in particular, $\dir xp\in \Lin_x$.
 \end{subthm}
 
 \begin{subthm}{ex:grad-dist:|grad|=1}
-Show that if $|\nabla_xf|=1$, then $\dd_xf(w)= \langle\nabla_xf,w\rangle$ for any $w\in \T_x$.
+Show that if $|\nabla_xf|=1$, then $(\dd_xf)(w)= \langle\nabla_xf,w\rangle$ for every $w\z\in \T_x$.
 \end{subthm}
 
 \begin{subthm}{ex:grad-dist:geod}
@@ -497,7 +497,7 @@ Suppose that $0\ne v\in \Lin_p$.
 Is it true that the tangent space $\T_p$ splits in the direction of $v$?
 \end{thm}
 
-Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of the space of directions is essential in the proof that space of directions is $\pi$-geodesic (see \ref{thm:finite-space-of-directions}).
 
 \begin{thm}{Open question}\label{open:Halb-proper}
 Let $\spc{A}$ be a proper Alexandrov space.
@@ -528,7 +528,7 @@ $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ for some $m$ such that
 for any $i$ and $j$.
 Moreover, we can assume that $m\le \LinDim\spc{A}$.
 
-If $\spc{A}$ is an $\Alex{\pm1}$ space, then the same holds if we exchange $\EE^m$ to $\SSS^m$ or $\HH^m$, respectively; in the $\Alex{1}$ case one have to assume in addition that $\diam \spc{A}\le \pi$.
+If $\spc{A}$ is an $\Alex{\pm1}$ space, then the same holds if we exchange $\EE^m$ to $\SSS^m$ or $\HH^m$, respectively; in the $\Alex{1}$ case one has to assume in addition that $\diam \spc{A}\le \pi$.
 \end{thm}
 
 \parit{Proof.}
@@ -590,7 +590,7 @@ Then for any point $p\in \spc{A}$, its space of directions $\Sigma_p$ is compact
 By \ref{ex:GHto-tangent}, this theorem implies the following.
 
 \begin{thm}{Corollary}\label{ex:GHto-tangent-finite-dim}
-Let $p$ be a point in a finite dimensional Alexandrov space $\spc{A}$,
+Let $p$ be a point in a finite-dimensional Alexandrov space $\spc{A}$,
 and let $\lambda_n\to\infty$.
 Then there is a pointed Gromov--Hausdorff convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$.
 %Moreover, for any geodesic $\gamma$ that starts at $p$, we have
@@ -605,7 +605,7 @@ that is, we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that
 Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
-Choose $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$ and small fixed $r>0$.
+Choose small $r>0$ and $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$.
 Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for $i\ne j$.
 By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$;
 in particular, all directions $\dir{p'}{y_i}$ lie in a unit sphere of dimension at most $m-1$.
@@ -621,7 +621,7 @@ Applying \ref{ex:pack-net}, we get that  $\Sigma_p$ is compact.
 It remains to prove the following claim.
 
 \begin{clm}{}
-If $\Sigma_p$ is compact, then it is $\pi$-geodesic
+If $\Sigma_p$ is compact, then it is $\pi$-geodesic.
 \end{clm}
 
 Choose two geodesic directions $\xi=\dir px$ and $\zeta=\dir py$;
@@ -652,7 +652,7 @@ By \ref{ex:alex-lemma-cat}, we have
 \[\angk p{x_n}{m_n}+\angk p{y_n}{m_n}\le \angk p{x_n}{y_n}.\]
 
 For each large $n$, choose a point $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
-By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrary small given error.
+By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrarily small given error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also get that the following approximations
 \begin{align*}
@@ -693,29 +693,29 @@ Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR$ are as in \ref{thm:ri
 Assume $\eps>0$ is sufficiently small.
 Given $\bm{y}\z=(y_1,\z\dots,y_m)\in \RR^m$, 
 consider the function on $\spc{A}$ defined by
-\[f_{\bm{y}}(x)\df\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
+\[h_{\bm{y}}(x)\df\min\{\,0, \dist{a_1}{x}{}-y_1,\dots,\dist{a_m}{x}{}-y_m\,\}+\eps\cdot\dist{a_0}{x}{}.\]
 
 
 \begin{subthm}{ex:proof-right-inverse:grad}
-Show that for some fixed $r>0$ and $\lambda$, the function $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$,
+Show that for some fixed $r>0$ and $\lambda$, the function $h_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$,
 \begin{enumerate}[(i)]
-\item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})<-\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
-\item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x f_{\bm{y}})>\eps^2$ if 
-\[\dist{a_i}{x}{}-y_i=\min_j\{\dist{a_j}{x}{}\z-y_j\}<0.\]
+\item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x h_{\bm{y}})<-\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
+\item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x h_{\bm{y}})>\eps^2$ if
+\[\dist{a_i}{x}{}-y_i=\min_{j>0}\{\dist{a_j}{x}{}\z-y_j\}<0.\]
 \end{enumerate}
 at any $x\in \oBall(p,r)$.
 
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:alpha}
-Let $\alpha_{\bm{y}}$ be $f_{\bm{y}}$-gradient curve that starts at $p$.
+Let $\alpha_{\bm{y}}$ be an $h_{\bm{y}}$-gradient curve that starts at $p$.
 Use \ref{SHORT.ex:proof-right-inverse:grad} to show that 
 \[
-\distfun_{\bm{a}}{[\alpha_{\bm{y}}(t_0)]}
+f[\alpha_{\bm{y}}(t_0)]
 = 
 \bm{y}\]
 if 
-$\tfrac1{\eps^2}\cdot|\distfun_{\bm{a}}{p}-\bm{y}|
+$\tfrac1{\eps^2}\cdot|f(p)-\bm{y}|
 \le
 t_0
 \le
@@ -724,10 +724,10 @@ t_0
 \end{subthm}
 
 \begin{subthm}{ex:proof-right-inverse:end}
-Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot\bigl|\dist{\bm{a}}{p}{}-\bm{y}\bigr|$.
+Let $t_0(\bm{y})=\tfrac{1}{\eps^2}\cdot\bigl|f(p)-\bm{y}\bigr|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-continuous (in fact H\"older) in $\Omega=\oBall(\dist{\bm{a}}{p}{},\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
+is continuous (in fact H\"older) in $\Omega=\oBall(F(p),\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 (This finishes the proof of \ref{thm:right-inverse}.)
 \end{subthm}
@@ -736,11 +736,11 @@ and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 
 \begin{thm}{Corollary}\label{cor:tan-g-delta}
 Let $\spc{A}$ be an Alexandrov space, and let $m$ be an integer.
-If $m\le \LinDim\spc{A}$ then
+If $\LinDim\spc{A}\ge m$, then
 \[\dim\Lin_s\z\ge m\]
 for any point $s$ in a dense G-delta subset of points in $\spc{A}$.
 
-Moreover if $m= \LinDim\spc{A}$, then $\T_s\spc{A}\iso \EE^m$ for points $s$ in a dense G-delta set of points in $\spc{A}$.
+Moreover, if $m= \LinDim\spc{A}$, then $\T_s\spc{A}\iso \EE^m$ for points $s$ in a dense G-delta set of points in $\spc{A}$.
 \end{thm}
 
 \parit{Proof.}
@@ -765,7 +765,7 @@ and it can be done essentially the same way, one only has to exchange $\EE^{m-1}
 \section{Distance chart}
 
 \begin{thm}{Theorem}\label{thm:dist-chart}
-Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that
+Let $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{A}$ such that
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
@@ -828,7 +828,7 @@ is nonincreasing.
 
 \parit{Proof.}
 Given $x\in\spc{A}$, choose a geodesic path $\gamma_x$ from $p$ to $x$.
-Recall that $\log_p\:\spc{A}\to \T_p$ can be defined by $\log_p\:x\mapsto \gamma_x^+(0)$.
+Recall that $\gamma_x^+(0)=\log_p x$ (here $\log_p\:\spc{A}\to \T_p$ is a multivalued function; so, $\gamma_x^+(0)$ might be not the only value of $\log_p x$).
 By comparison, $\log_p$ is distance-noncontracting.
 Note that $\log_p(\oBall(p,r)_{\spc{A}})\subset \oBall(0,r)_{\T_p}$;
 this proves part \ref{SHORT.inq:BG:a}.
@@ -889,7 +889,7 @@ Show that any nonempty open set in an $m$-dimensional Alexandrov space has posit
 
 
 \begin{thm}{Exercise}\label{ex:tangent=Em}
-Let $\spc{A}$ be an $m$-dimensional $\Alex\kappa$ space and $m<\infty$.
+Let $\spc{A}$ be an $m$-dimensional $\Alex\kappa$ space and $m\z<\infty$.
 
 \begin{subthm}{ex:tangent=Em:2balls}
 Show that for any two balls $B_1$ and $B_2$ in $\spc{A}$ with positive radii
@@ -982,7 +982,7 @@ The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 \begin{thm}{Optimal Bishop--Gromov inequality}\label{inq:BG+}
 Given a point $p$ in an $m$-dimensional $\Alex\kappa$ space,
 consider the function
-\[v\:r\z\to\vol_m\oBall(p,r);\]
+\[v\:r\mapsto\vol_m\oBall(p,r);\]
 denote by $\tilde v(r)$ the volume of $r$-ball in $\MM^m(\kappa)$.
 Then 
 \[v(r)\le \tilde v(r)\]
@@ -997,7 +997,7 @@ The first part is also known as \emph{Bishop's inequality}.
 It is due to Richard Bishop; see \cite{bishop1964} and \cite[Corollary 4, p. 256]{bishop-crittenden}.
 The second part is due to Michael Gromov \cite{gromov1981}.
 
-Theorem~\ref{thm:dim=dim}, was essentially proved by Conrad Plaut \cite{plaut:dimension}.
+Theorem~\ref{thm:dim=dim} was essentially proved by Conrad Plaut \cite{plaut:dimension}.
 At that time, it was not known whether
 \[\LinDim\spc{A}=\infty\quad \Rightarrow\quad \TopDim\spc{A}=\infty\]
 for any Alexandrov space $\spc{A}$.

@@ -28,8 +28,13 @@ The classical book by Jeff Cheeger and David Ebin \cite{cheeger-ebin} contains m
 
 \section{Notations}
 
-The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by \index{9@$\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$ (distance)}$\dist{x}{y}{}$ or $\dist{x}{y}{\spc{X}}$.\label{page:|x-y|X}
-The latter notation is used if we need to emphasize 
+The distance between two points $x$ and $y$ in a metric space $\spc{X}$ will be denoted by \index{9@$\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$ (distance)}$\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$, or \index{dist@$\distfun$ (distance function)}$\distfun_xy=\distfun_x(y)_{\spc{X}}$.\label{page:|x-y|X}
+Furthermore, we define distance function to a subset $A\subset \spc{X}$ as
+\[\distfun_Ax=\distfun_A(x)_{\spc{X}}
+\df
+\inf
+\set{\dist{a}{x}{\spc{X}}}{a\in A}.\]
+We may use the subscript $\spc{X}$ to emphasize
 that the distance is taken in the space~${\spc{X}}$.
 
 Given radius $r\in[0,\infty]$ and center $x\in \spc{X}$, the sets
@@ -48,15 +53,15 @@ The \index{diameter}\emph{diameter} of $\spc{X}$ is  defined as
 The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
 
-We will denote by \index{60@$\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$}$\SSS^n$, $\EE^n$, and $\HH^n$ the $n$-dimensional sphere (with angle metric),
+We will denote by \index{60@$\SSS^m$, $\EE^m$, $\HH^m$, and $\MM^m(\kappa)$}$\SSS^m$, $\EE^m$, and $\HH^m$ the $m$-dimensional sphere (with angle metric),
 the Euclidean space, and the Lobachevsky space respectively.
-More generally, $\MM^n(\kappa)$ will denote the \index{model!space}\emph{model $n$-space} of curvature $\kappa$;
+More generally, $\MM^m(\kappa)$ will denote the \index{model!space}\emph{model $m$-space} of curvature $\kappa$;
 that is,
 \begin{itemize}
-\item if $\kappa>0$, then $\MM^n(\kappa)$ is the $n$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^n=\MM^n(1)$
-\item $\MM^n(0)=\EE^n$,
-\item if $\kappa<0$, then $\MM^n(\kappa)$ is the Lobachevsky $n$-space $\HH^n$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
-in particular $\MM^n(-1)=\HH^n$.
+\item if $\kappa>0$, then $\MM^m(\kappa)$ is the $m$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^m=\MM^m(1)$
+\item $\MM^m(0)=\EE^m$,
+\item if $\kappa<0$, then $\MM^m(\kappa)$ is the Lobachevsky $m$-space $\HH^m$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
+in particular $\MM^m(-1)=\HH^m$.
 \end{itemize}
 
 \section{Nets and packing}\label{sec:packing}
@@ -65,7 +70,7 @@ Let $S$ be a subset of a metric space $\spc{X}$.
 Recall that a set $Z\subset \spc{X}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $S$ if for any point $s\in S$, there is a point $z\in Z$ such that $\dist{s}{z}{}\le\eps$.
 
 The \index{pack@$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$\index{70@$\pack_\eps\spc{X}$ ($\eps$-pack)}.
-If $m=\pack_\eps\spc{X}<\infty$, then a set $\{x_1,x_2,\dots,x_m\}$ in $\spc{X}$
+If $n=\pack_\eps\spc{X}<\infty$, then a set $\{x_1,x_2,\dots,x_n\}$ in $\spc{X}$
 such that $\dist{x_i}{x_j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
 
 We will use the following characterizations of compact sets.
@@ -106,10 +111,10 @@ Directly from the definition, it follows that if $\alpha\:[0,1]\to\spc{X}$ is a 
 (that is, $\alpha(0)=x$ and $\alpha(1)=y$), then 
 \[\length\alpha\ge \dist{x}{y}{}.\]
 Set 
-\[\yetdist{x}{y}{}=\inf\{\,\length\alpha\,\},\]
-where the greatest lower bound is taken for all paths from $x$ to~$y$.
+\[\yetdist{x}{y}{}=\inf_\alpha\{\,\length\alpha\,\},\]
+where the greatest lower bound is taken for paths $\alpha$ from $x$ to~$y$.
 It is straightforward to check that $(x,y)\mapsto \yetdist{x}{y}{}$ is an \emph{$\infty$-metric};
-that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$. 
+that is, $(x,y)\mapsto \yetdist{x}{y}{}$ is a metric in the extended positive reals $[0,\infty]$.
 The metric $\yetdist{*}{*}{}$ is called the \index{induced length metric}\emph{induced length metric}.
 
 \begin{thm}{Exercise}\label{ex:compact=>complete}
@@ -123,7 +128,6 @@ Given two points $x,y\in A$,
 consider the value
 \[\dist{x}{y}{A}=\inf_{\alpha}\{\,\length\alpha\,\},
 \]
-%???V: I think it would be more natural to denote it $\yetdist{x}{y}{A}$ --- A: Maybe it is more natural, but it is not convinient --- it is better to have one notation form metric.
 where the greatest lower bound is taken for all paths $\alpha$ from $x$ to $y$ in~$A$.
 In other words, $\dist{*}{*}{A}$ denotes the induced length metric on the subspace $A$.
 (The notation $\dist{*}{*}{A}$ conflicts with the previously defined notation for distance $\dist{x}{y}{\spc{X}}$ in a metric space $\spc{X}$.
@@ -141,7 +145,7 @@ in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if
 for any pair $s,t\in \II$.
 
 If $\gamma\:[a,b]\to \spc{X}$ is a geodesic such that $p=\gamma(a)$, $q=\gamma(b)$, then we say that $\gamma$ is a geodesic from $p$ to $q$.
-In this case, the image of $\gamma$ is denoted by $[p q]$\index{10@$[pq]=[p q]_{\spc{X}}$ (geodesic)}, and, with abuse of notations, we also call it a \index{geodesic}\emph{geodesic}.
+In this case, the image of $\gamma$ is denoted by $[p q]$\index{10@$[pq]=[p q]_{\spc{X}}$ (geodesic)}, and, with abuse of notation, we also call it a \index{geodesic}\emph{geodesic}.
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ lies in the space ${\spc{X}}$.
 
@@ -368,7 +372,7 @@ Give an example showing that the inequality can be strict.
 
 \begin{thm}{Exercise}\label{ex:first-var}
 Let $\gamma$ be the unit speed parametrization of $[qx]$ from $q$ to $x$.
-Assume that the angle measure $\phi=\hinge q p x$ is defined.
+Assume that the angle measure $\phi=\mangle\hinge q p x$ is defined.
 Show that
 \[\dist{p}{\gamma(t)}{}
 \le
@@ -381,7 +385,7 @@ Show that
 \begin{thm}{Definition}\label{def:gen-Haus-conv}
 Let $A_1,A_2,\dots$ be a sequence of closed sets in a metric space $\spc{X}$.
 We say that the sequence $A_n$ \index{Hausdorff!limit}\emph{converges} to a closed set $A_\infty$ in the {}\emph{sense of Hausdorff} if, for any $x\in\spc{X}$, we have
-$\distfun_{A_n}(x)\z\to \distfun_{A_\infty}(x)$ as $n\to\infty$.
+$\distfun_{A_n}x\z\to \distfun_{A_\infty}x$ as $n\to\infty$.
 \end{thm}
 
 For example, suppose $\spc{X}$ is the Euclidean plane and $A_n$ is the circle with radius $n$ and center at the point $(0,n)$.
@@ -416,7 +420,7 @@ Let $A$ and $B$ be two nonempty compact subsets of a metric space $\spc{X}$.
 Then the \index{Hausdorff!distance}\emph{Hausdorff distance} between $A$ and $B$ is defined as 
 $$|A-B|_{\Haus\spc{X}}
 \df
-\sup_{x\in \spc{X}}\{\,|\distfun_A(x)-\distfun_B(x)|\,\}.
+\sup\set{|\distfun_Ax-\distfun_Bx|}{x\in \spc{X}}.
 $$
 
 \end{thm}
@@ -518,7 +522,7 @@ Show that $f$ is an isometry; that is, it is a distance-preserving bijection.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:non-expanding-map}
-Show that any surjective \index{short map}\emph{short} map (that is, distance-nonexpanding) from a compact metric space to itself is an isometry.
+Show that a surjective \index{short map}\emph{short} map (that is, distance-nonexpanding) from a compact metric space to itself is an isometry.
 \end{thm}
 
 \parbf{Two convergences.}
@@ -659,6 +663,8 @@ we leave the former to the reader.
 In principle, our definition of Gromov--Hausdorff distance can be applied to complete metric spaces that are not necessarily compact.
 However, according to the following exercise, it only defines a semimetric; that is, zero Gromov--Hausdorff distance does not imply that the spaces are isometric.
 For that reason it is not in use.
+
+\pagebreak%%%???
 
 \begin{thm}{Exercise}\label{ex:GH-noncompact}
 \begin{subthm}{ex:GH-noncompact:proper}

@@ -1,14 +1,13 @@
 \chapter{Surfaces}\label{chap:surfaces}
 
-This lecture is less rigorous;
-its aim is to introduce the reader to the geometry of convex surfaces, the main precursor to modern Alexandrov geometry.
+This lecture is less rigorous; it offers a glimpse into the geometry of convex surfaces, a major precursor of modern Alexandrov geometry.
 For a deeper dive into this theory, we recommend the classic and brilliantly written books by Alexandr Alexandrov \cite{alexandrov, alexandrov-1948}.
 Additionally, the book by Alexey Pogorelov \cite{pogorelov1969} is highly recommended, despite being a challenging read.
 
 
 \section{Polyhedral surfaces}
 
-A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) equipped with a length metric that admits a finite triangulation, where each triangle is isometric to a Euclidean triangle.
+A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) equipped with a length metric such that there is a finite triangulation with each triangle isometric to a Euclidean triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface is always assumed to satisfy this condition.
 
 Note that, according to our definition, every polyhedral surface is compact.
@@ -32,8 +31,9 @@ Show that geodesics on a polyhedral surface with nonnegative curvature and nonne
 The following statement is an analog of the Gauss--Bonnet formula.
 
 \begin{thm}{Exercise}\label{ex:gauss-bonnet}
-Let $K(\spc{P})$ and $T(\spc{P})$ denote the sum of the curvatures at all interior points
-and the sum of the inner turns at all boundary points of a polyhedral surface $\spc{P}$, respectively.
+Let $\spc{P}$ be a polyhedral surface.
+Denote by $K(\spc{P})$ and $T(\spc{P})$ the sum of the curvatures at all interior points
+and the sum of the inner turns at all boundary points of $\spc{P}$, respectively.
 Show that
 \[
 K(\spc{P}) + T(\spc{P}) = 2 \cdot \pi \cdot \chi(\spc{P}),
@@ -41,7 +41,7 @@ K(\spc{P}) + T(\spc{P}) = 2 \cdot \pi \cdot \chi(\spc{P}),
 where $\chi(\spc{P})$ denotes the Euler characteristic of $\spc{P}$.
 \end{thm}
 
-The following proposition states that this new definition of curvature is consistent with the $\Alex0$ comparison.
+The following proposition states that the new definition of curvature is consistent with the $\Alex0$ comparison.
 
 \begin{thm}{Proposition}\label{prop:poly-CBB}
 A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at every interior point and nonnegative inner turn at each boundary point.
@@ -62,7 +62,7 @@ Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain any vertices.
 Therefore, a neighborhood $U \supset [px]$ can be unfolded onto a plane;
 that is, there exists an injective length-preserving map $z \mapsto \tilde z$
 of $U$ into the Euclidean plane.
-In this way, we map the part of $\gamma$ in $U$ to a line segment $\tilde \gamma$.
+It maps a neighborhood of $x$ in $\gamma$ to a line segment $\tilde \gamma$.
 Let
 \[\tilde f(t) \df \tfrac12 \cdot \distfun_{\tilde p}^2 \circ \tilde \gamma(t).\]
 Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0) = f(t_0)$.
@@ -76,15 +76,6 @@ Therefore, $f$ is 1-concave.
 The converse is left to the reader.\qeds
 \end{thm}
 
-
-
-
-
-
-
-
-
-
 \section{Approximation}
 
 The following theorem is a key additional tool in the Alexandrov geometry of surfaces.
@@ -95,7 +86,10 @@ We will use this result in the proof of \ref{cor:Alex0-convex} to reduce questio
 Any closed $\Alex0$ surface is a Gromov--Hausdorff limit of homeomorphic polyhedral surfaces with nonnegative curvature.
 \end{thm}
 
-The construction of polyhedral approximations is based on the following exercise.
+We will give only a sketch of the proof, but the sketch is not short.
+First we apply the following exercise in constructing an approximation $\tilde{\spc{P}}_\delta$ of a given surface $\spc{P}$;
+It reduces the theorem to saying that this is indeed an approximation (\ref{clm:approximation}).
+Further, we use a couple of deep results (\ref{thm:cont-vol} and \ref{thm:vol-short}) to prove the claim.
 
 \begin{thm}{Exercise}\label{ex:construction}
 Let $\spc{P}$ be a closed $\Alex0$ surface.
@@ -129,7 +123,8 @@ moreover, there exists a homeomorphism $\spc{P} \to \tilde{\spc{P}}_\delta$ that
 
 By the hinge comparison (\ref{angle}) and part \ref{SHORT.ex:approximation:poly} of the exercise, the total angle around each vertex in $\tilde{\spc{P}}_\delta$ does not exceed $2\cdot\pi$.
 Thus, the resulting polyhedral surface $\tilde{\spc{P}}_\delta$ has nonnegative curvature.
-\qeds
+
+\medskip
 
 Observe that Theorem \ref{thm:approximation} follows from the following statement.
 
@@ -137,7 +132,7 @@ Observe that Theorem \ref{thm:approximation} follows from the following statemen
 If $\tilde{\spc{P}}_\delta$ is provided by the construction, then $\tilde{\spc{P}}_\delta\to\spc{P}$ as $\delta\to 0$ in the sense of Gromov--Hausdorff.
 \end{thm}
 
-Altho this claim looks self-evident, it is not.
+This claim looks self-evident, but it is not.
 A remarkably elegant proof was given by Alexandrov \cite[VII §~6]{alexandrov-1948}.
 We will outline an alternative proof based on the following exercise and two theorems, which will be stated without proof.
 
@@ -146,8 +141,8 @@ it generalizes Alexandrov's theorem for surfaces \cite[X §~2]{alexandrov-1948}.
 The second theorem is due to Nan Li \cite{li}.
 
 \begin{thm}{Theorem}\label{thm:cont-vol}
-Let $\spc{X}_1, \spc{X}_2,\dots$ be a sequence of $n$-dimensional $\Alex\kappa$ spaces that converges to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
-Then $n$-volumes on $\spc{X}_i$ weakly converge to the $n$-volume on $\spc{X}_\infty$.
+Let $\spc{X}_1, \spc{X}_2,\dots$ be $m$-dimensional $\Alex\kappa$ spaces that converge to $\spc{X}_\infty$ in the sense of Gromov--Hausdorff.
+Then $m$-volumes on $\spc{X}_i$ weakly converge to the $m$-volume on $\spc{X}_\infty$.
 \end{thm}
 
 \begin{thm}{Theorem}\label{thm:vol-short}
@@ -209,7 +204,7 @@ let $\tilde{\spc{P}}_{\delta_n}$ be polyhedral surfaces provided by the construc
 According to part \ref{SHORT.ex:approximation:length} of the exercise, the spaces $\tilde{\spc{P}}_{\delta_n}$ have bounded diameter.
 Therefore by Gromov's selection theorem, we can pass to a converging sequence of $\tilde{\spc{P}}_{\delta_n}$;
 denote its Gromov--Hausdorff limit by $\tilde{\spc{P}}$.
-Note that if $\tilde{\spc{P}}_{\delta}$ does not converge to $\spc{P}$, then we can assume that $\tilde{\spc{P}}$ is not isometric to $\spc{P}$.
+If $\tilde{\spc{P}}_{\delta_n}$ does not converge to $\spc{P}$, then we can assume that $\tilde{\spc{P}}$ is not isometric to $\spc{P}$.
 
 Choose two points $x,y\in \spc{P}$, and connect them by a geodesic.
 Denote by $s_1,\dots,s_m$ the points of the geodesic on the sides of the triangulation $\tau_n$;
@@ -257,7 +252,7 @@ If these triangles would be convex, then the first estimate in parts \ref{SHORT.
 \section{Surface of polyhedrons and bodies}
 
 Let us define a \index{convex body}\emph{convex body} as a compact convex subset in $\EE^3$ with a nonempty interior.
-The \index{surface}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
+The \index{surface of a convex body}\emph{surface} of a convex body is defined as its boundary equipped with the induced length metric.
 
 \begin{thm}[!]{Exercise}\label{ex:surf-S2}
 Show that the surface of a convex body is homeomorphic to the 2-dimensional sphere.
@@ -286,7 +281,7 @@ Moreover, a point $v$ is a vertex of $K$ if and only if
 $v$ is an essential vertex of $\spc{P}$.
 \end{thm}
 
-A proof is given in Kiselyov's school textbook \cite[§ 48]{kiselev-stereo-en};
+A proof of this claim can be found in the school textbook \cite[§ 48]{kiselev-stereo-en};
 one can also deduce it from \ref{claim:angle-3angle-inq}.
 
 \begin{thm}[!]{Exercise}\label{ex:surface-covergence}
@@ -355,7 +350,7 @@ In addition, if an edge in $K'$ does not correspond to an edge of $K$, then mark
 
 The marked lines divide $\spc{P}$ into regions, and the restriction of $\iota$ to each region is a rigid motion.
 A vertex of the obtained graph can be a vertex of $K$, or it can be a {}\emph{fake vertex};
-that is, it might be an intersection of an edge and a fake edge.
+that is, it might be an intersection of an edge and a fake edge (as $v$ in the picture).
 
 \begin{figure}[ht!]
 \vskip-0mm
@@ -380,11 +375,13 @@ Any two convex bodies in $\EE^3$ with isometric surfaces are congruent.
 Moreover, any isometry between surfaces of convex bodies can be extended to an isometry of the whole $\EE^3$.
 \end{thm}
 
-At first glance, this theorem might look like a small improvement of Alexandrov's uniqueness,
-but this improvement is huge.
-The proof is quite hard.
-Let us just mention that it would follow if any two polyhedra $K$ and $K'$  with close surfaces in the sense of Gromov--Hausdorff would be almost congruent;
+Notice that the statement is equivalent to the following:
+\textit{Any two polyhedra $K$ and $K'$ with close surfaces in the sense of Gromov--Hausdorff would be almost congruent};
 that is, there is a motion $\mu$ of $\EE^3$ such that the Hausdorff distance from $K$ to $\mu(K')$ is small.
+At first glance, this theorem might look like a small improvement of Alexandrov's uniqueness,
+but this improvement is huge, and the proof is quite hard.
+
+
 
 
 \section{Existence theorem}
@@ -401,7 +398,7 @@ A polyhedral metric on the two-sphere is isometric to the surface of a convex po
 
 \end{thm}
 
-Applying the approximation theorem (\ref{thm:approximation}) and \ref{ex:surface-covergence}, we get the following statement.
+Applying this theorem with the approximation theorem (\ref{thm:approximation}) and \ref{ex:surface-covergence}, we get the following statement.
 Here we again assume that a convex body can degenerate to a convex plane figure,
 and, in this case, its surface is defined as the doubling of the figure across its boundary.
 
@@ -440,12 +437,12 @@ including polyhedrons that degenerate to a plane polygon.
 Polyhedrons in $\bm{K}$ will be considered up to a motion of the space; we will not distinguish between a convex polyhedron and its congruence class.
 
 The space $\bm{K}$ will be considered with the topology induced by the {}\emph{Hausdorff metric up to a motion};
-that is, the distance between (equivalence classes of) polyhedrons $K$ and $L$ is defined by
+that is, the distance between (congruence classes of) polyhedrons $K$ and $L$ is defined by
 \[\dist{K}{L}{}\df \inf_\mu \{\dist{K}{\mu(L)}{\Haus}\},\]
 where $\mu$ runs among all motions of $\EE^3$.
 
 We say that a polyhedron $K$ in $\bm{K}$ has \emph{no symmetries} if  $K\z\ne \mu(K)$ for any nontrivial motion $\mu$ of $\EE^3$.
-The set of all polyhedrons without symmetry in $\bm{K}$ will be denoted by $\bm{K}^\circ$.
+The set of all polyhedrons without symmetries in $\bm{K}$ will be denoted by $\bm{K}^\circ$.
 Observe that $\bm{K}^\circ$ is an open set in $\bm{K}$.
 
 Further, denote by $\bm{K}_n$ the polyhedrons in $\bm{K}$ with exactly $n$ vertices, and let $\bm{K}_n^\circ=\bm{K}_n\cap \bm{K}^\circ$.
@@ -457,7 +454,7 @@ The surfaces in $\bm{P}$ will be considered up to an isometry, and the whole spa
 
 We say that a surface $\spc{P}$ in $\bm{P}$ has \emph{no symmetries} if there is no nontrivial isometry
 $\mu\:\spc{P}\to \spc{P}$.
-The set of all surfaces without symmetry in $\bm{P}$ will be denoted by $\bm{P}^\circ$.
+The set of all surfaces without symmetries in $\bm{P}$ will be denoted by $\bm{P}^\circ$.
 Observe that $\bm{P}^\circ$ is an open set in $\bm{P}$.
 
 The subset of $\bm{P}$ of all surfaces with exactly $n$ essential vertices will be denoted by $\bm{P}_n$; let $\bm{P}_n^\circ=\bm{P}_n\cap \bm{P}^\circ$.
@@ -467,14 +464,14 @@ Therefore $\bm{P}$ is subdivided into countably many subsets
 
 \paragraph{From a polyhedron to its surface.}
 Recall that the surface of a convex polyhedron is a sphere with nonnegative curvature.
-Therefore, passing from a polyhedron to its surface defines a map
+Therefore, passing from a polyhedron to its surface we define a map
 \[\iota\:\bm{K}\to \bm{P}.\]
 
-Note that the existence theorem (\ref{thm:alexandrov-first}) follows from the next statement.
+The existence theorem (\ref{thm:alexandrov-first}) follows from the next statement.
 
 \begin{thm}{Theorem}\label{thm:reformulation}
 For any integer $n\ge 3$,
-the map $\iota$ is a bijection from $\bm{K}_n$ to~$\bm{P}_n$.
+the map $\iota$ defines a bijection from $\bm{K}_n$ to~$\bm{P}_n$.
 \end{thm}
 
 \section{About the proof of existence}
@@ -504,21 +501,21 @@ Note that $\bm{P}_3^\circ=\emptyset$;
 indeed the surface of a triangle admits a reflection symmetry.
 The case $n=4$ can be deduced from \ref{ex:alexandrov=<4:4}; thus, we can assume that $n\ge 5$.
 
-The second statement is proved by a general-position-type argument.
+The density of $\bm{P}_n^\circ$ in $\bm{P}_n$ follows from a general-position-type argument.
 
 The proof of the first statement is not complicated, but it requires ingenuity;
 it can be done by the direct construction of a one-parameter family of surfaces in $\bm{P}_n^\circ$ that connects two given surfaces.
-Such a family can be obtained as a sequence of the following deformations (direct or reversed).
+Such a family can be obtained by concatenating the following elementary deformations (direct or reversed).
 
 Start with a surface $\spc{P}$ from $\bm{P}_n^\circ$.
 Suppose $v$ and $w$ are essential vertices in $\spc{P}$.
 Let us cut $\spc{P}$ along a shortest path from $v$ to~$w$.
 This way we obtain a sphere with a hole.
-The hole can be patched by a disc so that the obtained surface remains in $\bm{P}_n$.
-In particular, the obtained surface has exactly $n$ essential vertices;
-note that after the patching, the vertices $v$ and $w$ may become inessential.
-(There is a three-parameter family of such patches, so we have something to choose from.)
-Choosing a one-parameter family of such patches, we can get a deformation of~$\spc{P}$.
+The hole can be patched by a family of patches so that the obtained surface remains in $\bm{P}_n$;
+in other words, the surface remains to have exactly $n$ essential vertices.
+(After the patching, the vertices $v$ and $w$ may become inessential.
+There is a three-parameter family of such patches, so we have something to choose from.)
+Choosing a one-parameter family of such patches, we can get an elementary deformation of~$\spc{P}$.
 
 Again, applying a general-position-type argument to the above construction, we get a path in $\bm{P}_n^\circ$, assuming that the starting and ending surfaces are in $\bm{P}_n^\circ$.
 
@@ -558,7 +555,7 @@ that is, the image of a closed set in $\bm{K}_n$ is closed in $\bm{P}_n$.
 In particular, for any $n\ge 3$, the set $\iota(\bm{K}_n)$ is closed in~$\bm{P}_n$.
 \end{thm}
 
-Choose a sequence of polyhedrons $K_1,K_2,\ldots$ in $\bm{K}_n$.
+Choose a sequence of polyhedrons $K_1,K_2,\ldots\in\bm{K}_n$.
 Assume that the sequence $\spc{P}_i=\iota(K_n)$ converges in $\bm{P}_n$ as $i\to \infty$;
 denote its limit by $\spc{P}_\infty$.
 We need to construct a polyhedron $K_\infty\in \bm{K}_n$ such that $\iota(K_\infty)=\spc{P}_\infty$;
@@ -585,7 +582,7 @@ that is, $\iota\:\bm{K}_n\z\to\bm{P}_n$ is surjective.
 
 \section{Ambient space}
 
-On one hand, the Alexandrov surface theory is simpler since it has extra tools.
+On one hand, Alexandrov's surface theory is simpler since it has extra tools.
 On the other hand, these tools come with extra structure, which makes the theory more complicated.
 The following result of Joseph Liberman \cite{liberman} gives an example.
 
@@ -596,24 +593,31 @@ Any geodesic in the surface of a convex body is one-sided differentiable as a cu
 \parit{Proof.}
 Let $\gamma$ be a geodesic on the surface of a convex body $K$.
 Choose $p\in K$.
-By \ref{ex:liberman}, the function $f_p\:t\mapsto \distfun_p\circ\gamma(t)$ is semiconcave for any $p\in K$.
+By \ref{ex:liberman} (which is Liberman's lemma), the function $f_p\:t\z\mapsto \distfun_p\circ\gamma(t)$ is semiconcave for any $p\in K$.
 In particular, one-sided derivatives $f_p^\pm(t)$ are defined for every $t$.
 
 Given $x=\gamma(t)$, choose three points $p_1,p_2,p_3\in K$ in general position;
-that is, the four points $x,p_1,p_2,p_3$ do not lie in one plane.
+that is, the points $x$, $p_1$, $p_2$, and $p_3$ do not lie in one plane.
 Observe that the distance functions $\distfun_{p_i}$ give smooth coordinates in a neighborhood of $x$.
 From above the functions $f_{p_i}$ have one-sided derivatives at $t$.
 Since the coordinates are smooth, we get that $\gamma^+(t)$ is defined as well.
 \qeds
 
+{
 
-
+\begin{wrapfigure}{r}{27 mm}
+\vskip-7mm
+\centering
+\includegraphics{mppics/pic-1129}
+\end{wrapfigure}
 
 \begin{thm}{Exercise}\label{ex:convex}
-Suppose a plane $\Pi$ cuts from the surface of a convex body $K$ a disc $\Delta$, and the reflection of $\Delta$ across $\Pi$ lies in $K$.
+Suppose a plane $\Pi$ cuts from the surface of a convex body $K$ a disk $\Delta$, and the reflection of $\Delta$ across $\Pi$ lies in $K$.
 Show that $\Delta$ is a convex subset of the surface;
 that is, if a geodesic has endpoints in $\Delta$, then it completely lies in $\Delta$.
 \end{thm}
+
+}
 
 The following exercise gives a more exact version of comparison for convex surfaces;
 it is due to Anatolii Milka \cite[Theorem 2]{milka1982}.
@@ -624,7 +628,7 @@ and let $\gamma_1$ and $\gamma_2$ be geodesic paths in $\spc{P}$ that start at o
 Suppose $x_i=\gamma_i(1)$, and $y_i\z=p+\gamma_i^+(0)$.
 Show that
 \[\dist{x_1}{x_2}{\spc{P}}\le \dist{y_1}{y_2}{W},\]
-where $W$ is the complement to the interior of $K$.
+where $W$ denotes the complement to the interior of $K$.
 
 \end{thm}
 
@@ -634,24 +638,22 @@ where $W$ is the complement to the interior of $K$.
 
 The excess of solid triangles can be extended to a sigma-additive measure on Borel subsets of $\Alex\kappa$ surface.
 This is the so-called \index{curvature measure}\emph{curvature measure} \cite[V]{alexandrov-1948}.
-There have been several attempts to generalize this to higher dimensions, but so far, we only have partial results in this direction \cite{gigli2018, lebedeva-petrunin2024b}.
+There have been several attempts to generalize this to higher dimensions, but so far, we only have partial results; see \cite{gigli2018, lebedeva-petrunin2024b} and the references therein.
 
-Big part of the theory described in this lecture is generalized to surfaces with bounded integral curvature \cite{alexandrov-zalgaller,reshetnyak1993}.
+A big part of the theory described in this lecture is generalized to surfaces with bounded integral curvature \cite{alexandrov-zalgaller,reshetnyak1993}.
 
-The statement of Cauchy's theorem was conjectured by Adrien-Marie Legendre at the end of the 18$^\text{th}$ century;
-a formulation was given in the first edition of his geometry textbook \cite{legendre}.
+The statement of Cauchy's theorem was conjectured by Adrien-Marie Legendre in the first edition of his geometry textbook \cite{legendre}.
 It was motivated by a vague definition in Euclid's Elements, which could be interpreted as
-\textit{polyhedrons are equal if the same holds for their faces}.
-
+\textit{polyhedrons are equal if their faces are pairwise equal}.
 The local lemma was already known to Legendre.
-Legendre discussed this question with his colleague Joseph-Louis Lagrange, who suggested this problem to Augustin-Louis Cauchy in 1813; soon he solved it \cite{cauchy}.
+Joseph-Louis Lagrange, a colleague of Legendre, suggested this problem to Augustin-Louis Cauchy who soon solved it \cite{cauchy}.
 
-The key observation that the face-to-face condition can be removed was made by
+The observation that the face-to-face condition can be removed was made by
 Alexandr Alexandrov in 1941; in the same paper he proved the uniqueness theorem \cite{alexandrov-1941}.
 A quite different proof was found by Yurii Volkov in his thesis \cite{volkov}; it uses a deformation of three-dimensional polyhedral space.
 (Be aware that the proof of this theorem given in the book by Igor Pak contains an essential mistake \cite{petrunin-2023}.)
 
-In Cauchy's proof \cite{cauchy}, it was deducted from an analog of the following lemma.
+In Cauchy's proof \cite{cauchy}, it was deduced from an analog of the following lemma.
 Cauchy made a small mistake in its proof that was fixed in a century \cite{sabitov}.
 Several proofs of the arm lemma can be found in the letters between Isaac Schoenberg and Stanisław Zaremba \cite{schoenberg-zaremba}.
 
@@ -668,9 +670,8 @@ $$|a_0-a_n|\le |a'_0-a'_n|$$
 and equality holds if and only if $A$ is congruent to $A'$.
 \end{thm}
 
-The following variation of the arm lemma makes sense for nonconvex spherical polygons.
-It is due to Viktor Zalgaller \cite{zalgaller}.
-It can be used instead of the standard arm lemma.
+The following variation of the arm lemma is due to Viktor Zalgaller \cite{zalgaller};
+it makes sense for nonconvex spherical polygons and can be used instead of the standard arm lemma.
 
 \begin{thm}{Another arm lemma}
 Let $A=[a_1\dots a_n]$ and $A'\z=[a'_1\z\dots a'_n]$ be two spherical $n$-gons (not necessarily convex).
@@ -684,11 +685,11 @@ Another close relative of the arm lemma is Reshetnyak's majorization theorem \ci
 
 Alexandrov gave two proofs of the global lemma \cite[2.1.2 and 2.1.3]{alexandrov}.
 The first is combinatorial, and the second is more visual.
-The argument in the second proof was reused by Anton Klyachko \cite{klyachko} in his \index{car-crash lemma}\emph{car-crash lemma}.
+The argument in the second proof was reused by Anton Klyachko in his \index{car-crash lemma}\emph{car-crash lemma} \cite{klyachko}.
 
 Proposition \ref{prop:conv-surf-CBB(0)} generalizes to the boundaries of convex bodies  in $\EE^m$ for any $m\ge 2$.
 It could be considered as a partial case of the conjecture about the boundary of Alexandrov space; see \ref{conj:bry}.
-Another partial case, for Riemannian manifolds with boundary, is proved by the authors and Stephanie Alexander \cite{alexander-kapovitch-petrunin-2008}.
+Another partial case, for convex sets in Riemannian manifolds, is proved by Stephanie Alexander and $\tfrac23$ authors \cite{alexander-kapovitch-petrunin-2008}.
 
 \begin{wrapfigure}{r}{30mm}
 \vskip-3mm
@@ -701,7 +702,5 @@ According to the uniqueness theorem, a convex polyhedron is completely defined b
 In particular, knowing the metric, we could find the position of the edges.
 However, in practice, it is not easy to do.
 For example, the surface glued from a rectangle, as shown in the picture, defines a tetrahedron.
-Some of the glued lines appear inside the facets of the tetrahedron, and some edges (dashed lines) do not follow the sides of the rectangle.
-
-%??? curvature measure
+Some of the glued lines appear inside the faces of the tetrahedron, and some edges (dashed lines) do not follow the sides of the rectangle.
 
