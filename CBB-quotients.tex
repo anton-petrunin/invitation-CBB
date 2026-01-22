@@ -104,7 +104,7 @@ The proof of \ref{thm:CBB/G} works for submetries;
 that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is a proper $\Alex0$ space, then so is $\spc{B}$}.
 Theorem \ref{thm:CBB/G} admits a straightforward generalization to $\Alex{-1}$ case.
 
-In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{$\SSS^2$-comparison holds for a quartuple $p,x_1,x_2,x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
+In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{$\SSS^2$-comparison holds for a quadruple $p$, $x_1$, $x_2$, $x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
 In particular, the quotient space is \textit{locally} $\Alex1$.
 But since $\Alex1$ space is geodesic, so is its quotient.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
@@ -171,7 +171,7 @@ Let $\Sigma_{p,q}=\SSS^3/\SSS^1$ be the quotient space.
 
 \begin{subthm}{ex:S^3/S^1:sphere}
 Show that $\Sigma_{p,q}=\SSS^3/\SSS^1$ is a topological sphere with $\SSS^1$-symmetry.
-This symmetry has two fixed points, north pole and south pole, that correspond to the orbits of $(1,0)$ and $(0,1)$ in $\SSS^3$.
+This symmetry has two fixed points, the north pole and the south pole, that correspond to the orbits of $(1,0)$ and $(0,1)$ in $\SSS^3$.
 \end{subthm}
 
 \smallskip
@@ -305,7 +305,7 @@ Since $V_1,\dots,V_N$ are disjoint subsets of $\spc{A}$, we have $N\le 2^m$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:extr-point(-1)}
-Find a bound on number of extremal points in an $\Alex{-1}$ space in terms of its dimension $m$ and diameter.
+Find a bound on number of extremal points in an $\Alex{-1}$ space in terms of its dimension $m$ and diameter $D$.
 \end{thm}
 
 \section{Crystallographic actions}
@@ -325,7 +325,7 @@ Is it true that $\mathfrak{M}(\Gamma)\le 2^m$?
 Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
 If $F$ is maximal, then $A_F$ completely describes $F$.
 Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ has to be finite.
-This subgroup must contain $F$, but since $F$ is maximal, it must coinside with $F$. 
+This subgroup must contain $F$, but since $F$ is maximal, it must coincide with $F$.
 
 Denote by $\mathfrak{M}_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
 
@@ -428,7 +428,7 @@ Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal poin
 (this action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$).
 The second author has proved \cite{lebedeva2015} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
-The extremal subsets of Alexandrov space were bristly discussed in \ref{sec:bry-remarks}.
+The extremal subsets of Alexandrov space were briefly discussed in \ref{sec:bry-remarks}.
 The following definition is more relevant to isometric group actions.
 
 A closed subset $E$ in a finite-dimensional Alexandrov space is called
@@ -447,13 +447,13 @@ Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ minimal extremal su
 \end{thm}
 
 Let us mention another related conjecture.
-An nonempty extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
-(For every point of Alexandrov space the set of points reachble by recurcive application of gradient flow for squares of distance functions forms a primitive extremal set.)
+A nonempty extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
+(Given an Alexandrov space and a point $p$ in it, the set of points reachable from $p$ by a recursive application of the gradient flow for squares of distance functions forms a primitive extremal set.)
 For example, each face of $m$-dimensional cube is its primitive extremal subset;
 therefore the cube has exactly $3^m$ primitive extremal subsets, including the whole cube.
 
 \begin{thm}{Conjecture}
-Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ minimal extremal subsets.
+Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ primitive extremal subsets.
 \end{thm}
 
-Some crude estimates on number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.
+Some crude estimates on the number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.

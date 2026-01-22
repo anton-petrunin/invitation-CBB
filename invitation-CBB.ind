@@ -1,5 +1,9 @@
 \begin{theindex}
 
+  \item $f^+$, $f^-$ (one-sided derivative), \hyperpage{25}
+
+  \indexspace
+
   \item $\dist{x}{y}{}=\dist{x}{y}{\spc{X}}$ (distance), \hyperpage{6}
   \item $[pq]=[p q]_{\spc{X}}$ (geodesic), \hyperpage{8}
   \item $\left]x y\right]$, $\left[x y\right[$, $\left]x y\right[$ (subintervals), 
@@ -12,17 +16,19 @@
   \item $\angk{p}{q}{r}$ (model angle), \hyperpage{10}
   \item $\mangle$ (angle measure), \hyperpage{10}, \hyperpage{36}
   \item $\<v,w\>$ (scalar product), \hyperpage{36}
+  \item $r\cdot u$ (multiplication in cone), \hyperpage{36}, 
+		\hyperpage{56}
   \item $\dir{p}{q}$ (direction), \hyperpage{35}
   \item $\log_p x$ (logarithm), \hyperpage{43}
   \item $\II$ (real interval), \hyperpage{8}
-  \item $\SSS^n$, $\EE^n$, $\HH^n$, and $\MM^n(\kappa)$, \hyperpage{6}
+  \item $\SSS^m$, $\EE^m$, $\HH^m$, and $\MM^m(\kappa)$, \hyperpage{6}
   \item $\Sigma_p$ (space of directions), \hyperpage{35}, 
-		\hyperpage{84}
+		\hyperpage{86}
   \item $\Sigma_p'$ (geodesic directions), \hyperpage{35}
-  \item $\T_p$ (tangent space), \hyperpage{36}, \hyperpage{84}
+  \item $\T_p$ (tangent space), \hyperpage{36}, \hyperpage{86}
   \item $\pack_\eps\spc{X}$ ($\eps$-pack), \hyperpage{6}
   \item $A\oplus B$ (direct sum), \hyperpage{52}
-  \item $\lambda$-concave function, \hyperpage{25}
+  \item $\lambda$-concave function, \hyperpage{26}
 
   \indexspace
 
@@ -37,13 +43,13 @@
   \indexspace
 
   \item barrier, \hyperpage{25}
-  \item Berger's sphere, \hyperpage{134}
-  \item box-counting dimension, \hyperpage{69}
+  \item Berger's sphere, \hyperpage{136}
+  \item box-counting dimension, \hyperpage{68}
   \item Busemann function, \hyperpage{51}
 
   \indexspace
 
-  \item car-crash lemma, \hyperpage{115}
+  \item car-crash lemma, \hyperpage{118}
   \item closed ball, \hyperpage{6}
   \item comparison, \hyperpage{19}
     \subitem adjacent angle comparison, \hyperpage{24}
@@ -51,35 +57,38 @@
     \subitem point-on-side comparison, \hyperpage{24}
   \item concave function, \hyperpage{25}
   \item $\Cone$ (Euclidean cone), \hyperpage{36}
-  \item conic neighborhood, \hyperpage{82}
-  \item continuity method, \hyperpage{112}
-  \item convex body, \hyperpage{107}
-  \item convex polyhedron, \hyperpage{107}
+  \item conic neighborhood, \hyperpage{84}
+  \item continuity method, \hyperpage{114}
+  \item convex body, \hyperpage{109}
+  \item convex polyhedron, \hyperpage{109}
   \item convex set, \hyperpage{52}
-  \item critical point, \hyperpage{91}
-  \item crystallographic action, \hyperpage{98}
-  \item curvature measure, \hyperpage{114}
+  \item corank, \hyperpage{85}
+  \item critical point, \hyperpage{93}
+  \item crystallographic action, \hyperpage{100}
+  \item curvature measure, \hyperpage{117}
 
   \indexspace
 
   \item diameter, \hyperpage{6}
-  \item differential, \hyperpage{37}
+  \item differential, \hyperpage{38}
   \item differential of a function, \hyperpage{37}
   \item $\dim$, \hyperpage{61}
   \item direct sum, \hyperpage{52}
   \item direction, \hyperpage{35}
-  \item distance-preserving, \hyperpage{15}
-  \item doubling, \hyperpage{85}
+  \item $\distfun$ (distance function), \hyperpage{6}
+  \item distance-preserving, \hyperpage{16}
+  \item doubling, \hyperpage{87}
 
   \indexspace
 
-  \item effective action, \hyperpage{95}
-  \item extremal point, \hyperpage{97}
-  \item extremal set, \hyperpage{91}, \hyperpage{100}
+  \item effective action, \hyperpage{97}
+  \item extremal point, \hyperpage{99}
+  \item extremal set, \hyperpage{93}, \hyperpage{102}
 
   \indexspace
 
-  \item fake edges and vertices, \hyperpage{109}
+  \item fake edges and vertices, \hyperpage{111}
+  \item function, \hyperpage{26}
 
   \indexspace
 
@@ -89,7 +98,7 @@
     \subitem space, \hyperpage{8}
   \item $\ell$-geodesic space, \hyperpage{8}, \hyperpage{36}, 
 		\hyperpage{62}
-  \item $\GH$ (space of spaces), \hyperpage{14}
+  \item $\GH$ (space of spaces), \hyperpage{15}
   \item gradient, \hyperpage{38}
     \subitem curve, \hyperpage{44}
     \subitem exponential map, \hyperpage{48}
@@ -100,21 +109,21 @@
   \indexspace
 
   \item half-line, \hyperpage{51}
-  \item $\HausDim$, \hyperpage{67}
+  \item $\HausDim$, \hyperpage{68}
   \item Hausdorff
-    \subitem dimension, \hyperpage{67}
-    \subitem distance, \hyperpage{12}
+    \subitem dimension, \hyperpage{68}
+    \subitem distance, \hyperpage{13}
     \subitem limit, \hyperpage{12}
   \item hinge, \hyperpage{10}
     \subitem comparison, \hyperpage{24}
-  \item Hopf's conjecture, \hyperpage{95}
-  \item hyperbolic model triangle, \hyperpage{9}
+  \item Hopf's conjecture, \hyperpage{97}
+  \item hyperbolic model triangle, \hyperpage{10}
 
   \indexspace
 
   \item induced length metric, \hyperpage{7}
-  \item invariance of domain, \hyperpage{113}
-  \item $\eps$-isometry, \hyperpage{15}
+  \item invariance of domain, \hyperpage{115}
+  \item $\eps$-isometry, \hyperpage{16}
 
   \indexspace
 
@@ -122,11 +131,12 @@
 
   \indexspace
 
-  \item Lebesgue covering dimension, \hyperpage{67}
+  \item Lebesgue covering dimension, \hyperpage{68}
+  \item left derivative, \hyperpage{25}
   \item length metric, \hyperpage{7}
   \item length space, \hyperpage{7}
-  \item Liberman's lemma, \hyperpage{136}
-  \item lifting, \hyperpage{74, 75}
+  \item Liberman's lemma, \hyperpage{138}
+  \item lifting, \hyperpage{76}
   \item $\LinDim$, \hyperpage{61}
   \item line, \hyperpage{52}
   \item linear dimension, \hyperpage{61}
@@ -137,8 +147,8 @@
   \indexspace
 
   \item maximal packing, \hyperpage{6}
-  \item minimal extremal set, \hyperpage{100}
-  \item Minkowski dimension, \hyperpage{69}
+  \item minimal extremal set, \hyperpage{102}
+  \item Minkowski dimension, \hyperpage{68}
   \item model
     \subitem angle, \hyperpage{10}
     \subitem side, \hyperpage{30}
@@ -147,8 +157,8 @@
 
   \indexspace
 
-  \item nerve, \hyperpage{75}
-  \item $\eps$-net, \hyperpage{6}, \hyperpage{15}
+  \item nerve, \hyperpage{76}
+  \item $\eps$-net, \hyperpage{6}, \hyperpage{16}
   \item norm, \hyperpage{36}
 
   \indexspace
@@ -162,19 +172,18 @@
   \item $\eps$-pack, \hyperpage{6}
   \item packing number, \hyperpage{6}
   \item pointed convergence, \hyperpage{14}
-  \item pointed homeomorphic, \hyperpage{82}
+  \item pointed homeomorphic, \hyperpage{84}
   \item polar vectors, \hyperpage{55}
-  \item polyhedral surface, \hyperpage{103}
-  \item primitive extremal set, \hyperpage{101}
+  \item polyhedral surface, \hyperpage{105}
+  \item primitive extremal set, \hyperpage{103}
   \item proper space, \hyperpage{5}
-  \item properly discontinuous, \hyperpage{98}
+  \item properly discontinuous, \hyperpage{100}
 
   \indexspace
 
   \item radius, \hyperpage{6}
-  \item rank, \hyperpage{83}
-  \item regular point, \hyperpage{91}
-  \item right derivative, \hyperpage{37}, \hyperpage{43}
+  \item regular point, \hyperpage{93}
+  \item right derivative, \hyperpage{25}, \hyperpage{43}
 
   \indexspace
 
@@ -184,24 +193,24 @@
   \item semimetric, \hyperpage{35}
   \item Sharafutdinov's retraction, \hyperpage{49}
   \item short map, \hyperpage{15}
-  \item space of directions, \hyperpage{35}, \hyperpage{84}
+  \item space of directions, \hyperpage{35}, \hyperpage{86}
   \item space of geodesic directions, \hyperpage{35}
-  \item spherical model triangles, \hyperpage{9}
-  \item submetry, \hyperpage{94}
-  \item surface, \hyperpage{107}
+  \item spherical model triangles, \hyperpage{10}
+  \item submetry, \hyperpage{96}
+  \item surface of a convex body, \hyperpage{109}
 
   \indexspace
 
-  \item tangent space, \hyperpage{36}, \hyperpage{84}
+  \item tangent space, \hyperpage{36}, \hyperpage{86}
   \item tangent vector, \hyperpage{36}
-  \item $\TopDim$, \hyperpage{67}
+  \item $\TopDim$, \hyperpage{68}
   \item triangle, \hyperpage{9}
-  \item triangulation, \hyperpage{103}
+  \item triangulation, \hyperpage{105}
 
   \indexspace
 
-  \item vertex, \hyperpage{107}
+  \item vertex, \hyperpage{109}
   \item volume, \hyperpage{66}
-  \item Voronoi domain, \hyperpage{97}
+  \item Voronoi domain, \hyperpage{99}
 
 \end{theindex}

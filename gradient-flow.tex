@@ -69,9 +69,8 @@ It proves that all such limits coincide; in particular, $(f\circ\alpha)^+(0)$ is
 Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$.
 
 A locally Lipschitz curve $\alpha\:[t_{\min},t_{\max})\to\Dom f$ will be called an \index{gradient!curve}\emph{$f$-gradient curve} if
-\[\alpha^+=\nabla_{\alpha} f;\]
-that is, for any $t\in[t_{\min},t_{\max})$, $\alpha^+(t)$ is defined and 
-$\alpha^+(t)=\nabla_{\alpha(t)} f$.
+\[\alpha^+(t)=\nabla_{\alpha(t)} f\]
+for any $t\in[t_{\min},t_{\max})$.
 \end{thm}
 
 A complete proof of the following theorem is given in \cite[16.15]{alexander-kapovitch-petrunin2024};
@@ -84,7 +83,7 @@ Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function
 Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
-According to the theorem, the future of a gradient curve is determined by its present, but its past might be \textit{not} determined by the present.
+According to the theorem, the future of a gradient curve is determined by its present, but its past might \textit{not} be determined by the present.
 Indeed, consider the function $f\:x\mapsto -|x|$ on $\RR$.
 The tangent space $\T_x\RR$ can be identified with $\RR$.
 Note that $\nabla_xf=-\mathrm{sgn}\, x$; that is,
@@ -310,8 +309,7 @@ for any geodesic path $\gamma$ that starts at $p$.
 
 The last statement implies that 
 \[\gexp_p\circ\log_p=\id,\]
-so it is appropriate to use term \textit{exponent} for $\gexp$.
-
+so it is appropriate to use the term \textit{exponent} for $\gexp$.
 
 \parit{Proof.} 
 Note that $f''\le 1$.
@@ -349,7 +347,7 @@ for any geodesic path $\gamma$ that starts at $p$ and
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
 The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus, but \textit{is different} from the  Riemannian exponential after that.
-The following exercise is ment to show that this technique can prove something nontrivial even for Riemannian manifolds.
+The following exercise is meant to show that this technique can prove something nontrivial even for Riemannian manifolds.
 
 \begin{thm}{Exercise}\label{ex:short-onto}
 Let $(M,g)$ be a complete $m$-dimensional Riemannian manifold with sectional curvature at least $1$.

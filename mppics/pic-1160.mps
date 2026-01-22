@@ -2,7 +2,7 @@
 %%BoundingBox: -5 -66 62 9 
 %%HiResBoundingBox: -4.64925 -65.4768 61.34215 8.78392 
 %%Creator: MetaPost 2.02
-%%CreationDate: 2025.09.30:1306
+%%CreationDate: 2026.01.19:2351
 %%Pages: 1
 %%DocumentResources: procset mpost-minimal
 %%+ font UKFVBV-CMMI10 PEXDEV-CMR7
@@ -36,7 +36,7 @@ FontDirectory/UKFVBV-CMMI10 known{/UKFVBV-CMMI10 findfont dup/UniqueID known{dup
 11 dict begin
 /FontType 1 def
 /FontMatrix [0.001 0 0 0.001 0 0 ]readonly def
-/FontName /ECSMMP-CMMI10 def
+/FontName /MDYDUA-CMMI10 def
 /FontBBox {-32 -250 1048 750 }readonly def
 /UniqueID 5087385 def
 /PaintType 0 def
@@ -514,7 +514,7 @@ cleartomark
 %%EndResource
 %%EndProlog
 %%BeginSetup
- /cmmi10 /ECSMMP-CMMI10 def
+ /cmmi10 /MDYDUA-CMMI10 def
  /cmr7 /DPTMTJ-CMR7 def
 %%EndSetup
 %%Page: 1 1
