@@ -867,7 +867,7 @@ A straightforward application of \ref{lem:fg-dist-est} and a reformulation of \r
 
 \parit{Remarks.}
 By \ref{lem:fg-dist-est}, that the constructed map $\map$ is bi-Hölder with the exponent $\tfrac12$.
-In particular, if an infinite-dimensional Alexandrov space $\spc{A}$ contains a bi-Hölder copy of Euclidean ball of arbitrary dimension.
+In particular, \textit{every infinite-dimensional Alexandrov space $\spc{A}$ contains a bi-Hölder copy of Euclidean ball of arbitrary dimension}.
 It seems plausible that $\spc{A}$ should contain a bi-Lipschitz copy of Euclidean ball of arbitrary dimension,
 but this question is open.
 
@@ -894,25 +894,24 @@ Note that $\dist{x}{y}{}$ is small compared to $\dist{a_0}{x}{}$ and $\dist{a_0}
 Therefore, the comparison contradicts \ref{eq:a0}. 
 
 By the construction, $f$ is Lipschitz.
-From above, we can choose $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ (if $\mangle\hinge yx{a_i}<\tfrac\pi2-\eps$, then swap $x$ and $y$).
+From above, we can choose an index $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ (if $\mangle\hinge yx{a_i}<\tfrac\pi2-\eps$, then swap $x$ and $y$).
 By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cdot \dist{x}{y}{}$.
 Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
 
 \parbf{\ref{ex:BG}.} 
 Follow the proof of the Bishop--Gromov inequality, plus prove the following two inequalities
 \begin{align*}
-\sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{A}}
+\sinh r_2\cdot \dist{\log_p x}{\log_p y}{\T_p} &\ge\dist{x}{y}{\spc{A}},
 \\
 \sinh r_2\cdot\dist{w(x)}{w(y)}{\spc{A}} &\ge \sinh r_1\cdot\dist{x}{y}{\spc{A}}
 \end{align*}
-for any $x,y\in\oBall(p,r)$.
+for any $x,y\in\oBall(p,r_2)$.
 
 \parbf{\ref{ex:diam-compact:proper}.}
 Reuse the argument from  the first part of the proof of the Bishop--Gromov inequality.
 
-\parbf{\ref{ex:vol>0}.} Applying the right-inverse theorem theorem, show that some ball has positvie volume.
+\parbf{\ref{ex:vol>0}.} Applying the right-inverse theorem, show that some ball has positive volume.
 Further, use the Bishop--Gromov inequality to show that any ball with positive radius has positive volume.
-
 
 \parbf{\ref{ex:tangent=Em}}; \ref{SHORT.ex:tangent=Em:2balls}.
 Apply the dilation map from the proof of the Bishop–Gromov inequality (\ref{inq:BG} and \ref{ex:BG}).
@@ -1050,7 +1049,7 @@ Show that
 Assume that $\partial\spc{A}$ has at least two connected components, say $A$ and $B$.
 Let $\gamma$ be a geodesic that minimizes the distance from $A$ to $B$.
 
-Consider two-sided infinite sequence of copies of $\spc{A}$
+Consider a two-sided infinite sequence of copies of $\spc{A}$
 \[\dots,\spc{A}_{-1},\spc{A}_{0},\spc{A}_{1},\dots\]
 Let us glue $\spc{A}_{i}$ to $\spc{A}_{i+1}$ along $A$ if $i$ is even and along $B$ if $i$ is odd.
 

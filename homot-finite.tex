@@ -16,11 +16,11 @@ arbitrarily close to $x\mapsto -\<v,x\>$.
 
 \parit{Idea of the proof.}
 Suppose $f$ is a semiconcave function.
-One can improve concavity of $f$ by passing to a composition $\phi\circ f$ with a vary concave real-to-real function $\phi$ such that $\phi'\approx 1$.
+One can improve concavity of $f$ by passing to a composition $\phi\circ f$ with a very concave real-to-real function $\phi$ such that $\phi'\approx 1$.
 Namely, if $|(f\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish.
-This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make cocavity worse;
-so $\phi\circ f$ is very concave in most of directions and at least as concave as $f$ in all directios.
-In the proof we consider sum $\phi\circ f_1+\ldots+\phi\circ f_N$ for sutably chousen sequence of functions $f_1,\ldots,f_N$, so that for any geodesic $\gamma$ in a smalle neighborghood of $p$ the value $|(f_i\circ\gamma)^\pm|$ is bounded away from zero for some $i$.
+This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make concavity worse;
+so $\phi\circ f$ is very concave in most directions and at least as concave as $f$ in all directions.
+In the proof we consider a sum $\phi\circ f_1+\ldots+\phi\circ f_N$ for suitably chosen sequence of functions $f_1,\ldots,f_N$, so that for any geodesic $\gamma$ in a small neighborhood of $p$ the value $|(f_i\circ\gamma)^\pm|$ is bounded away from zero for some $i$.
 
 \medskip
 
@@ -28,7 +28,7 @@ Before getting into the proof, we need to refresh material from \ref{Function co
 
 \begin{thm}{Lemma}\label{lem:barrier}
 Let $f$ be a locally Lipschitz function defined on a real interval $\II$.
-Then $f$ is $\lambda$-concave if and only if for any $t_0\in\II$ there is smooth (local) upper barrier
+Then $f$ is $\lambda$-concave if and only if for any $t_0\in\II$ there is a smooth (local) upper barrier
 $\bar f$ of $f$ at $t_0$ such that $\bar f''(t_0)\le \lambda$.
 
 Moreover, in the only-if part, we can assume in addition, that $\bar f'(t_0)$ takes a given value in the interval $[f^+(t_0),f^-(t_0)]$ (by \ref{ex:concave'}, this interval is not empty).
@@ -37,7 +37,7 @@ Moreover, in the only-if part, we can assume in addition, that $\bar f'(t_0)$ ta
 \parit{Proof.}
 Passing to function $t\mapsto f(t)-\lambda\cdot\tfrac{t^2}2$, we can assume that $\lambda=0$.
 
-The only-if part follows since concave function is supported by the linear function $t\mapsto f(t_0)+ \Const\cdot (t-t_0)$ for any $\Const\in [f^+(t_0),f^-(t_0)]$.
+The only-if part follows since a concave function is supported by the linear function $t\mapsto f(t_0)+ \Const\cdot (t-t_0)$ for any $\Const\in [f^+(t_0),f^-(t_0)]$.
 
 On the other hand, suppose $f$ is not concave.
 Then adding a linear function to $f$ we can assume that there is a subinterval $[a,b]\subset\II$ such that
@@ -58,7 +58,7 @@ and the if part follows.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:barrier}
-Let $f$ be Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
+Let $f$ be a Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
 Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $0>c_3\ge \phi''(x_0)$.
 Let $\lambda_2=c_2\cdot\lambda_1+c_1^2\cdot c_3$.
 Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
@@ -66,12 +66,12 @@ Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
 
 \begin{thm}[!]{Exercise}\label{ex:pack-sphere}
 Let $\Omega$ be a nonempty open set in an $m$-dimensional Alexandrov space $\spc{A}$; assume $m<\infty$.
-Given a point $p$ there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
+Given a point $p$, there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
 \end{thm}
 
 
 \parit{Proof of \ref{thm:strictly-concave}.}
-Suppose $r>0$ small and $c$ is large (these values will be specified a bit latter).
+Suppose $r>0$ small and $c$ is large (these values will be specified a bit later).
 Consider the real-to-real function
 $$\phi_{r,c}(x)=(x-r)- c\cdot(x-r)^2/r;$$
 so,
@@ -126,25 +126,26 @@ It remains to choose $r,\eps_1,\eps_2>0$ and points $q_1,\dots, q_N$ such that $
 
 Let us assume that $\spc{A}$ is $\Alex0$.
 Applying \ref{ex:pack-sphere} to a small open ball around $p$ and small $\eps_3>0$,
-we can choose $N\ge \Const_1/\eps_3^{m-1}$ points $q_1,\dots,q_N$ such that $\dist{p}{q_i}{}=r$ for some small $r>0$
+we can choose points $q_1,\dots,q_N$ such that $N\ge \Const_1/\eps_3^{m-1}$ and $\dist{p}{q_i}{}=r$ for some small $r>0$
 and $\angk p{q_j}{q_i}>\eps_3$ (here $\Const_1>0$).
 On the other hand, suppose $\gamma$ runs from $x$ to~$y$.
 Let us apply the ($n$+1)-point comparison (\ref{thm:n+1}) to $\gamma(t)$, $x$, $y$ and $q_1,\dots,q_N$;
 denote the obtained points by $\tilde x, \tilde y,\tilde q_1,\dots,\tilde q_N$.
 If $\eps_1\ll \eps_3$, $\eps_2\ll \eps_3$, and
-$|\alpha_i(t)- \tfrac\pi2|<\eps_2$ for each $i$, then the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\EE^m$ that is perpendicular to $[\tilde x\tilde y]$;
+$|\alpha_i(t)- \tfrac\pi2|<\eps_2$ for each $i$, then the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in a hyperplane in $\EE^m$ that is perpendicular to $[\tilde x\tilde y]$;
 in particular, $N\le \Const_2(m)/\eps_3^{m-2}$.
 Therefore, for small $\eps_3>0$ and yet smaller $\eps_1$ and $\eps_2$, points $q_1,\dots,q_N$ meet \ref{eq:angle-ne-pi/2}.
 
 
 To prove the last statement, choose a geodesic $[pz]$ in the direction sufficiently close to $v$ and apply \ref{ex:pack-sphere} to a small ball centered on a point $\bar z\in [pz]$ close to $p$.
 
-The $\Alex\kappa$-case can be reduced to $\Alex{-1}$-case by rescaling, and it is done the same way.
-The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in hyperplane in $\HH^m$.
+The $\Alex\kappa$-case can be reduced to the $\Alex{-1}$-case by rescaling, and it is done the same way.
+The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in a hyperplane in $\HH^m$.
 \qeds
 
-The function $f$ in \ref{thm:strictly-concave} can be chosen to have maximum value $0$ at $p$,
-$f(p)=0$ and with $\dd_p f(x)\approx-|x|$.
+A strictly concave function $f$ can be chosen so that
+$f(p)=0$ and with $(\dd_p f)(x)\approx-|x|$ at a given point $p$.
+In particular, $p$ is the maximal point of $f$.
 It can be constructed by taking the minimum of the functions in the theorem.
 Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$, so we get the following.
 
@@ -160,11 +161,11 @@ there is no open set $\Omega\subset A$ with strictly concave function $f\:\Omega
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dist-chart+strictly-concave}
-Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ forany $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
+Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ for any $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
 for any $i\ne j$.
 Let $\phi_{c,r}$ be as in the proof of \ref{thm:strictly-concave} and $c$ is large.
 Show that the function $f=\phi_{c,r}\circ\distfun_{a_1}+\dots+\phi_{c,r}\circ\distfun_{a_m}$
-is a strictly function in a neighborhood of $p$.
+is a strictly concave in a neighborhood of $p$.
 \end{thm}
 
 
@@ -243,7 +244,7 @@ there are only finitely many homotopy types of $m$-dimensional $\Alex\kappa$ spa
 
 \parit{Proof of \ref{thm:h-finiteness} modulo \ref{thm:h-stability}.}
 Assume the contrary, then we can choose a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1,\spc{A}_2,\dots$   that have different homotopy types and satisfy the assumptions of the theorem.
-By Gromov's selection theorem, we can assume that $\spc{A}_n$ converges to some spaces $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
+By Gromov's selection theorem, we can assume that $\spc{A}_n$ converges to some space $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 
 By \ref{ex:diam-compact:GH}, $\dim \spc{A}_\infty=m$.
 It remains to apply \ref{thm:h-stability}.
@@ -272,7 +273,7 @@ The functions $f_i$ and sets $\Omega_i$ can be lifted to $\spc{A}_n$ while keepi
 More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{A}_n$ which are strictly concave for all large $n$ and such that $\bar\Omega_{i,n}=\set{x\in \spc{A}_n}{f_{i,n}(x)\ge 0}$ is a compact convex set and $\Omega_{i,n}\z=\set{x\in \spc{A}_n}{f_{i,n}(x)> 0}$ is an open convex set for each $i$.
 
 Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{A}_n$ for all large~$n$.
-Indeed suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrarily large $n$.
+Indeed, suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrarily large $n$.
 Since $\spc{A}_\infty$ is compact, there is a limit point $p_\infty\in \spc{A}_\infty$ for a subsequence of $p_n$.
 But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrarily large $n$ --- a contradiction.
 
@@ -303,17 +304,17 @@ This theory has significant applications in Alexandrov geometry;
 in particular, it provides a version of the Liouville theorem about phase-space volume of geodesic flow in Alexandrov space \cite{brue-mondino-semola}.
 
 The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
-More exact vesions of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
+A more exact version of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
 Let us mention the following closely related result of Artem Nepechiy \cite{nepechiy2019}:
 \textit{given a point $p$ in Alexandrov space there is a $2$-convex function that approximates $\distfun_p^2$ up to second order at $p$}.
 
 The fact that the controlled concavity survives after lifting (see Section \ref{sec:Liftings}) was observed and used by the first author \cite[4.2]{kapovitch2002}.
-Functions with controlled concavity can be lifted to a collapsing sequence, in this case the resulting function is not concave but it has many proprties.
-In particular, if the limit space has dimension $m$, then the Morse index of of the lifing is is at least $m$; this property implies a partial answer to an old question of \textit{which finite-dimensional Alexandrov spaces can be approximated by Riemannian manifolds with a fixed lower curvature bound}; see \cite{kapovitch2005}.
-Furthermore, these liftings have the following peculior property (let us call it \emph{gap-convexity}) which, as far as we know, did not find its application:
-\textit{If $f$ is controllably concave and $f_n$ are its lifing to a collapsing sequecce of Alexandrov spaces with uniform lower curvature bound, then for any $\eps>0$, and all large $n$, the restriction of $f_n$ to any geodesic of length at least $\eps$ is concave.}
-(Recall that our geodesic are always length-minimizing.)
-
+Functions with controlled concavity can be lifted to a collapsing sequence, in this case the resulting function is not concave but it has many properties.
+In particular, if the limit space has dimension $m$, then the Morse index of the lifting is at least $m$;
+this property implies a partial answer to an old question of \textit{which finite-dimensional Alexandrov spaces can be approximated by Riemannian manifolds with a fixed lower curvature bound}; see \cite{kapovitch2005}.
+Furthermore, these liftings have the following peculiar property (let us call it \emph{gap-convexity}) which, as far as we know, did not find an application:
+\textit{If $f$ is controllably concave unction and $f_n$ are liftings of $f$ to a collapsing sequence of Alexandrov spaces with uniform lower curvature bound, then for any $\eps>0$, and all large $n$, the restriction of $f_n$ to any geodesic of length at least $\eps$ is concave.}
+(Recall that our geodesics are always length-minimizing.)
 
 The homotopy-type finiteness theorem (\ref{thm:h-finiteness}) illustrates the main source of applications of Alexandrov spaces: to prove a statement about $m$-dimensional manifolds with lower sectional curvature bound we follow the following steps:
 \begin{itemize}
