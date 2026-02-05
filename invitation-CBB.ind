@@ -43,7 +43,9 @@
   \indexspace
 
   \item barrier, \hyperpage{25}
-  \item Berger's sphere, \hyperpage{136}
+  \item Berger sphere, \hyperpage{136}
+  \item bifurcating geodesics, \hyperpage{22}
+  \item Bishop's inequality, \hyperpage{70}
   \item box-counting dimension, \hyperpage{68}
   \item Busemann function, \hyperpage{51}
 
@@ -51,6 +53,7 @@
 
   \item car-crash lemma, \hyperpage{118}
   \item closed ball, \hyperpage{6}
+  \item cocompact action, \hyperpage{100}
   \item comparison, \hyperpage{19}
     \subitem adjacent angle comparison, \hyperpage{24}
     \subitem hinge comparison, \hyperpage{24}
@@ -65,6 +68,7 @@
   \item corank, \hyperpage{85}
   \item critical point, \hyperpage{93}
   \item crystallographic action, \hyperpage{100}
+  \item curvature, \hyperpage{105}
   \item curvature measure, \hyperpage{117}
 
   \indexspace
@@ -76,12 +80,15 @@
   \item direct sum, \hyperpage{52}
   \item direction, \hyperpage{35}
   \item $\distfun$ (distance function), \hyperpage{6}
+  \item distance chart, \hyperpage{66}
+  \item distance function, \hyperpage{27}
   \item distance-preserving, \hyperpage{16}
   \item doubling, \hyperpage{87}
 
   \indexspace
 
   \item effective action, \hyperpage{97}
+  \item essential vertex, \hyperpage{105}
   \item extremal point, \hyperpage{99}
   \item extremal set, \hyperpage{93}, \hyperpage{102}
 
@@ -92,6 +99,7 @@
 
   \indexspace
 
+  \item gap-convexity, \hyperpage{79}
   \item geodesic, \hyperpage{8}
     \subitem direction, \hyperpage{35}
     \subitem path, \hyperpage{8}
@@ -122,6 +130,7 @@
   \indexspace
 
   \item induced length metric, \hyperpage{7}
+  \item inner turn, \hyperpage{105}
   \item invariance of domain, \hyperpage{115}
   \item $\eps$-isometry, \hyperpage{16}
 
@@ -142,11 +151,13 @@
   \item linear dimension, \hyperpage{61}
   \item linear subspace, \hyperpage{56}
   \item locally $\Alex0$, \hyperpage{29}
+  \item locally $\Alex\kappa$, \hyperpage{34}
   \item logarithm, \hyperpage{43}
 
   \indexspace
 
   \item maximal packing, \hyperpage{6}
+  \item $\infty$-metric, \hyperpage{7}
   \item minimal extremal set, \hyperpage{102}
   \item Minkowski dimension, \hyperpage{68}
   \item model
@@ -154,11 +165,13 @@
     \subitem side, \hyperpage{30}
     \subitem space, \hyperpage{6}
     \subitem triangle, \hyperpage{9}
+  \item model hinge, \hyperpage{30}
 
   \indexspace
 
   \item nerve, \hyperpage{76}
   \item $\eps$-net, \hyperpage{6}, \hyperpage{16}
+  \item no symmetries, \hyperpage{113}
   \item norm, \hyperpage{36}
 
   \indexspace
