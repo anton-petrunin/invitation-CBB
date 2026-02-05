@@ -242,14 +242,14 @@ The metric on $\spc{W}$ can also be defined directly:
 \]
 
 \begin{thm}{Theorem}\label{thm:doubling}
-Let $\spc{A}$ be a finite-dimensional Alexandrov space with nonempty boundary.
-Suppose $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{A}$.
+Let $\spc{A}$ be a finite-dimensional Alexandrov space with nonempty boundary,
+and let $f\z=\tfrac12\cdot\distfun_p^2$ for some $p\in \spc{A}$.
 Then
 
 \begin{subthm}{thm:doubling:concave}
 If $\dim \spc{A}\ge 2$, then
 $\distfun_{\partial \Sigma_x}\xi\le \tfrac\pi2$ for any $x\in\partial \spc{A}$ and $\xi\in \Sigma_x$.
-Moreover, if $\distfun_{\partial \Sigma_x}\xi= \tfrac\pi2$, then $\mangle(\xi,\zeta)=\tfrac\pi2$ for any $\zeta\in \Sigma_x$.
+Moreover, if $\distfun_{\partial \Sigma_x}\xi= \tfrac\pi2$, then $\mangle(\xi,\zeta)=\tfrac\pi2$ for any $\zeta\in \partial\Sigma_x$.
 \end{subthm}
 
 \begin{subthm}{thm:partial-grad:grad}
@@ -284,10 +284,8 @@ Suppose $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim
 By \ref{ex:dim=1}, $\Sigma_x$ is isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
-Assume $\ell>\pi$, then the tangent space $\T_x=\Cone\Sigma_x$ has several different lines thru the origin.
-Recall that $\T_x$ is an Alexandrov space; see \ref{ex:finite-tan}.
-By \ref{cor:splitting}, $\T_x$ is isometric to the Euclidean plane;
-the latter contradicts that $\Sigma_x$ is a line segment.
+Recall that the tangent space $\T_x=\Cone\Sigma_x$ is an Alexandrov space; see \ref{ex:finite-tan}.
+If $\ell>\pi$, then $\T_x$ has bifurcating geodesics, which is impossible by \ref{ex:0-angle}.
 
 Now suppose $m>2$, so $\dim \Sigma_x>1$.
 Assume $\distfun_{\partial \Sigma_x}\xi>\tfrac\pi2$ for some $\xi$.
@@ -304,7 +302,7 @@ In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
 Therefore, the second statement of \ref{SHORT.thm:doubling:concave}$_m$ follows.
 
-\parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
+\parit{\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
 We can assume that $s=\nabla_xf\ne 0$.
 By \ref{prop:grad-exist}, $\nabla_xf\z=s\cdot \overline{\xi}$, where $s=\dd_xf(\overline{\xi})>0$ and $\overline{\xi}\in\Sigma_p$ is the direction that maximizes $\dd_xf(\overline{\xi})$.
 
@@ -320,7 +318,8 @@ for any $\nu\in \Sigma_\zeta\Sigma_x$ (if $m=2$, then the last statement is evid
 
 Let $\phi\:\Sigma_x\to\RR$ be restriction of $\dd_xf$ to $\Sigma_x$.
 Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_{\bar \xi}\phi(\eta)\le 0$.
-Since $\dd_xf$ is concave, we have that $\phi''+\phi\le 0$.
+Recall that $\dd_xf$ is concave (\ref{ex:concave-differential}), so $(\dd_xf)''\le 0$;
+by straightforward computations, we have that $\phi''+\phi\le 0$.
 If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
 If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
 

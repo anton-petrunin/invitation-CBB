@@ -788,6 +788,22 @@ If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
 and therefore, $\mangle\hinge q{a_i}{a_j}>\tfrac\pi2$ for $i\ne j$.
 Conclude that $\dim\Lin_q\ge m$ in this case. To see this show and use that given $m+1$ vectors in $\RR^k$ making pairwise obtuse angles with each other any $m$ of them must be linearly independent.
 
+\parbf{\ref{ex:concave-differential}.}
+We can assumme that $f(p)=0$ and $f$ is $1$-concave.
+
+Choose a sequence of positive numbers $\lambda_n\to \infty$.
+Let $\iota_n\:\spc{A}\to \lambda_n\cdot \spc{A}$ be the rescaling maps.
+Consider functions $f_n\:\lambda_n\cdot \spc{A}\to \RR$ defined by
+\[f_n(\iota_n(x))=\lambda_n\cdot f(x).\]
+Observe that $f_n$ is is $\tfrac1{\lambda_n}$-concave and $f_n\to \dd_pf$ as $n\to\infty$ for the convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$ from \ref{ex:GHto-tangent-finite-dim}.
+
+Choose a geodesic $\gamma$ in $\T_p$; assume it can be exteded behind its endpoints.
+Construct a sequence of geodesics $\gamma_n$ in $\lambda_n\cdot \spc{A}$ that converge to $\gamma$ (here you should use that $\gamma$ can be extened).
+Since $f_n\circ\gamma_n\z\to \dd_pf\circ\gamma$, we get that $\dd_pf$ is concave on $\gamma$, which implies the statement.
+
+
+
+
 \parbf{\ref{ex:proof-right-inverse}}; \ref{SHORT.ex:proof-right-inverse:grad}.
 By \ref{ex:distfun-semiconcave}, each function $\distfun_{a_i}$ is semiconcave in a small neighborhood of $p$.
 Therefore we can choose $\lambda$ and $r>0$ so that $f_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$; further we will assume that $r$ is sufficiently small.
