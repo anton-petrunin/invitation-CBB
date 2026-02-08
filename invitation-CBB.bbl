@@ -953,6 +953,41 @@
       \field{title}{Жемчужины теории многогранников}
       \field{year}{2000}
     \endentry
+    \entry{ekeland}{article}{}
+      \name{author}{1}{}{%
+        {{hash=dd71050c22033b96d40d9ca433516968}{%
+           family={Ekeland},
+           familyi={E\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{dd71050c22033b96d40d9ca433516968}
+      \strng{fullhash}{dd71050c22033b96d40d9ca433516968}
+      \strng{bibnamehash}{dd71050c22033b96d40d9ca433516968}
+      \strng{authorbibnamehash}{dd71050c22033b96d40d9ca433516968}
+      \strng{authornamehash}{dd71050c22033b96d40d9ca433516968}
+      \strng{authorfullhash}{dd71050c22033b96d40d9ca433516968}
+      \field{sortinit}{e}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0022-247X}
+      \field{journaltitle}{J. Math. Anal. Appl.}
+      \field{title}{On the variational principle}
+      \field{volume}{47}
+      \field{year}{1974}
+      \field{pages}{324\bibrangedash 353}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1016/0022-247X(74)90025-0
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1016/0022-247X(74)90025-0
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1016/0022-247X(74)90025-0
+      \endverb
+    \endentry
     \entry{erdos}{article}{}
       \name{author}{1}{}{%
         {{hash=e0d0e2888dbc45cf93a1050ca44edf47}{%
