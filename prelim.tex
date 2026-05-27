@@ -167,7 +167,13 @@ Show that any proper length space is geodesic.
 \end{thm}
 
 \section{Menger's lemma}
+Given two points $x,y$ in a metric space  $\spc{X}$, a point $z\in \spc{X}$ is called a  \index{midpoint}\emph{midpoint} between them if 
+\[\dist{x}{z}{}=\tfrac12\cdot\dist{x}{y}{}
+\quad\text{and}\quad
+\dist{y}{z}{}=\tfrac12\cdot\dist{x}{y}{}.\]
 
+If $\spc{X}$ is geodesic then for any two points there is a midpoint between them.
+The following lemma says that the converse holds for complete metric spaces.
 \begin{thm}{Menger's lemma}\label{lem:mid>geod}
 Let $\spc{X}$ be a complete metric space.
 Assume that for any pair of points $x,y\in \spc{X}$, 
@@ -200,8 +206,8 @@ $\gamma(\tfrac{k-1}{2^n})$ and $\gamma(\tfrac{k+1}{2^n})$.
 
 This way we define $\gamma(t)$ for all dyadic rationals $t$ in $[0,1]$.
 Moreover, the map $\gamma$ has Lipschitz constant $\dist{x}{y}{}$.
-Since $\spc{X}$ is complete, $\gamma$ can be extended continuously to $[0,1]$.
-Moreover,
+Since $\spc{X}$ is complete, $\gamma$ can be extended continuously to $[0,1]$ with the same Lipschitz constant.
+Therefore,
 \[
 \length\gamma\le \dist{x}{y}{}.
 \]
@@ -217,6 +223,7 @@ that is, given $\eps>0$, there is a point $z$ such that
 \quad\text{and}\quad
 \dist{y}{z}{}<\tfrac12\cdot\dist{x}{y}{}+\eps.\]
 Show that $\spc{X}$ is a length space.
+Conversely, if $\spc{X}$ is a length space then for any two points there exist almost midpoints between them.
 \end{thm}
 
 
@@ -296,7 +303,7 @@ Show that it does not change the value $\mangle\hinge p x y$.
 
 
 \begin{thm}{Exercise}\label{ex:undefined-angle}
-Give an example of a hinge $\hinge p x y$ in a metric space with an undefined angle measure $\mangle\hinge p x y$.
+Give an example of a hinge $\hinge p x y$ in a metric space with  undefined angle measure $\mangle\hinge p x y$.
 \end{thm}
 
 \section{Triangle inequality for angles}
@@ -409,7 +416,7 @@ Show that any sequence of closed sets in a proper metric space has a convergent 
 
 
 \begin{thm}{Exercise}\label{ex:two>one}
-Construct a metric space with a sequence of points $\{x_0,x_1,\dots\}$ such that $\dist{x_0}{x_n}{}=1$ for any $n>0$ and the two-point sets $\{x_0,x_n\}$ converge to one-point set $\{x_0\}$ in the sense of Hausdorff.
+Construct a metric space with a sequence of points $\{x_0,x_1,\dots\}$ such that $\dist{x_0}{x_n}{}=1$ for any $n>0$ and the two-point sets $\{x_0,x_n\}$ converge to the one-point set $\{x_0\}$ in the sense of Hausdorff.
 \end{thm}
 
 
@@ -430,9 +437,9 @@ The following observation gives a useful reformulation of the definition:
 \begin{thm}{Observation}\label{obs:Haus-nbhds}
 Suppose $A$ and $B$ are two compact subsets of a metric space $\spc{X}$.
 Then $|A-B|_{\Haus\spc{X}}< R$ if and only if
-$B$ lies in an $R$-neighborhood of $A$, 
+$B$ lies in the $R$-neighborhood of $A$, 
 and 
-$A$ lies in an $R$-neighborhood of~$B$.
+$A$ lies in the $R$-neighborhood of~$B$.
 \end{thm}
 
 According to the following exercise, Hausdorff convergence of nonempty compact subsets is the convergence in Hausdorff metric.
@@ -485,7 +492,8 @@ that defines Gromov--Hausdorff convergence.
 We want to define the metric on the set of \textit{isometry classes} of compact metric spaces.
 Further, the term \textit{metric space} might also stand for its \textit{isometry class}.
 
-Loosely speaking, the distance between (isometry classes of) compact metric spaces will be defined as the maximal value such that \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
+Loosely speaking, the distance between (isometry classes of) compact metric spaces will be defined as the maximal value $r$ such that  both spaces can be isometrically embedded into a third space in  such a way that the Hausdorff distance between the images is not greater than $r$.
+% \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
 
 Observe that we \textit{know} a real number $x$ if we can give yes/no answer to the question $x<r$ for any $r$.
 Keep this in mind while reading the following definition.
@@ -495,7 +503,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X
 is defined by the following
 relation.
 
-Given  $r > 0$, we have $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+Given  $r > 0$, we says that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
 space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
 respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 (Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
