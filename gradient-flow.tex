@@ -2,7 +2,7 @@
 
 \chapter{Gradient flow}\label{chap:GF}
 
-Here we define the gradient flow and prove the distance estimates.
+Here we define the gradient flows of semiconcave  functions on Alexandrov spaces and prove important distance estimates.
 
 
 
@@ -16,8 +16,8 @@ converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right 
 In addition, we assume that $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
-The tangent vector $v=\dist px{}\cdot\dir px$ will be called the \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{40@$\log_p x$ (logarithm)}$v=\log_p x$).
-The logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so, $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
+The tangent vector $v=\dist px{}\cdot\dir px$ will be called a \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{40@$\log_p x$ (logarithm)}$v=\log_p x$).
+In general the logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so, $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
 Note that $\gamma^+(0)=\log_px$ for any geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
@@ -175,7 +175,7 @@ Moreover, the statement holds for a locally Lipschitz $\lambda$-concave function
 \end{thm}
 
 \parit{Proof.} 
-Fix a choice of geodesic $[\alpha(t)\,\beta(t)]$ for each $t$.
+Fix a choice of a geodesic $[\alpha(t)\,\beta(t)]$ for each $t$.
 Let $\ell(t)=\dist{\alpha(t)}{\beta(t)}{}$. 
 Note that
 \[\ell^+(t)
@@ -201,7 +201,8 @@ if $t_1\le t_2\le t_3$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:mayer}
-Let $f$ be a locally Lipschitz concave function defined on an Alexandrov space $\spc{A}$.
+Let $f$ be a %locally Lipschitz % V: all our functions are locally Lipschitz
+concave function defined on an Alexandrov space $\spc{A}$.
 Suppose $\hat\alpha\:[0,\ell]\to\spc{A}$ is an arc-length reparametrization of an $f$-gradient curve.
 Show that $f\circ\hat\alpha$ is concave.
 \end{thm}
@@ -212,7 +213,8 @@ Show that $f\circ\hat\alpha$ is concave.
 The following exercise implies that gradient curves for a uniformly converging sequence of $\lambda$-concave functions converge to the gradient curves of the limit function.
 
 \begin{thm}[!]{Exercise}\label{lem:fg-dist-est}
-Let $f$ and $g$ be $\lambda$-concave locally Lipschitz functions on an Alexandrov space $\spc{A}$.
+Let $f$ and $g$ be $\lambda$-concave %locally Lipschitz % V: all our functions are locally Lipschitz 
+ functions on an Alexandrov space $\spc{A}$.
 Suppose
 $\alpha,\beta\:[0,t_{\max})\to \spc{A}$ are respectively $f$- and $g$-gradient curves.
 Assume $|f-g|<\eps$; let $\ell\:t\mapsto\dist{\alpha(t)}{\beta(t)}{}$.
@@ -228,7 +230,8 @@ for some constant $\Const=\Const(t_{\max},\lambda)$.
 
 \section{Gradient flow}
 
-Let $f$ be a locally Lipschitz semiconcave function defined on an open subset of an Alexandrov space $\spc{A}$.
+Let $f$ be a %locally Lipschitz % V: all our functions are locally Lipschitz 
+semiconcave function defined on an open subset of an Alexandrov space $\spc{A}$.
 If there is an $f$-gradient curve $\alpha$ such that $\alpha(0)=x$ and $\alpha(t)=y$,
 then we will write 
 \[\GF^t_f(x)=y.\]
@@ -326,7 +329,7 @@ Again, since $\GF^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is short.
 
 \section{Remarks}
 
-The idea to use gradient flows in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
+The idea of using gradient flows in Alexandrov geometry was inspired by the success of \index{Sharafutdinov's retraction}\emph{Sharafutdinov's retraction} in comparison geometry \cite{sharafutdinov}.
 The gradient flow was introduced by the third author to construct quasigeodesics with given initial data \cite{perelman-petrunin:qg,petrunin:qg, petrunin:survey}.
 It turned out that gradient flow and gradient exponent are better tools than quasigeodesics.
 These tools quickly found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
@@ -346,7 +349,7 @@ for any geodesic path $\gamma$ that starts at $p$ and
 \[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{A}}\le \side\hinge0vw_{\SSS^2},\]
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
-The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus, but \textit{is different} from the  Riemannian exponential after that.
+The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus, but \textit{is different} from the  Riemannian exponential after that.  Moreover, beyond the cut locus $\gexp_p^\kappa$ depends on $\kappa$ while the Riemannian exponential map does not.
 The following exercise is meant to show that this technique can prove something nontrivial even for Riemannian manifolds.
 
 \begin{thm}{Exercise}\label{ex:short-onto}
