@@ -1,7 +1,7 @@
 %%!TEX root = the-splitting.tex
 \chapter{Line splitting}\label{chap:splitting}
 
-In this lecture, we prove the line splitting theorem and apply it to study tangent spaces of Alexandrov spaces.
+In this lecture, we prove the line splitting theorem and apply it to the study tangent spaces of Alexandrov spaces.
 
 \section{Busemann function}
 
@@ -14,7 +14,7 @@ If $\gamma\:[0,\infty)\to \spc{X}$ is a half-line,
 then the limit 
 \[\bus_\gamma(x)=\lim_{t\to\infty}\dist{\gamma(t)}{x}{}- t\eqlbl{eq:def:busemann*}\]
 is called the \index{Busemann function}\emph{Busemann function} of $\gamma$.
-It mimics behavior of the distance function from the ideal point of $\gamma$.
+It can be thought of as the shifted distance function from the ideal point of $\gamma$.
 
 \begin{thm}{Proposition}\label{prop:busemann}
 For any half-line $\gamma$ in a metric space $\spc{X}$,
@@ -65,6 +65,8 @@ such that
 \[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
 for any two points $x,y\in \spc{X}$.
 
+
+It is obvious that if $\spc{X}=A\oplus B$ then $\spc{X}$ is isometric to $A\times B$.
 \begin{thm}{Exercise}\label{ex:oplus}
 Suppose $\spc{X}=A\oplus B$.
 Show that
@@ -112,7 +114,7 @@ where $p=\alpha(0)$ and $q=\beta(0)$.
 \end{thm}
 
 \parit{Proof.}
-Since $f$ is 1-Lipschitz, $|\nabla f|\le1$.
+Since $f$ is 1-Lipschitz it follows that $|\nabla f|\le1$.
 Therefore 
 \[f\circ\beta(t)\le f(q)+t\]
 for any $t\ge0$.
@@ -127,8 +129,8 @@ Applying \ref{eq:fist-var-inq+}, we get
 \end{align*}
 Therefore 
 \[\ell^2(t)-\ell^2(0)\le 2\cdot\left(f(q)-f(p)\right)\cdot t + t^2.\]
-It proves the needed inequality in case $s=0$.
-Combining it with the first distance estimate (\ref{thm:dist-est}), we get the result in case $s\le t$.
+It proves the needed inequality in  the case $s=0$.
+Combining it with the first distance estimate (\ref{thm:dist-est}), we get the result in the case $s\le t$.
 The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \qeds
 
@@ -305,7 +307,7 @@ The subcone
 will be called the \index{linear subspace}\emph{linear subspace} of $\T_p$.
 \end{thm}
 
-Soon we will introduce a natural linear structure on $\Lin_p$, which justifies its name.
+Soon we will introduce a natural linear structure on $\Lin_p$, which will justify its name.
 
 \begin{thm}{Proposition}\label{prop:opposite}
 Let $p$ be a point in an Alexandrov space.
@@ -326,11 +328,10 @@ $\langle u,u\rangle =-\langle u,v\rangle =\langle v,v\rangle$;
 thus,
 \ref{SHORT.<x,u>}$\Rightarrow$\ref{SHORT.opposite}.
 
-Suppose  \ref{SHORT.opposite} holds.
+Suppose  \ref{SHORT.opposite} holds. We can assume that $|u|=|v|\ne 0$ since otherwise \ref{SHORT.<x,u>} is trivial. Since  $\mangle(u,v)=\pi$  and $\T_p$ is a metric cone it follows that $\RR_{\ge 0}\cdot u\cup \RR_{\ge 0}\cdot u$ is a line. 
 Recall that $\T_p$ has nonnegative curvature.
-The hinges $\hinge 0ux$ and $\hinge 0vx$ are adjacent.
-Hence $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
-the proof is the same as \ref{ex:adjacent-CBB}.
+Therefore, by \ref{ex:adjacent-CBB} it holds that  $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$;
+%the proof is the same as \ref{ex:adjacent-CBB}.
 Hence \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 \qeds
 
