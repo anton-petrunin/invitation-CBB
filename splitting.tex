@@ -427,7 +427,7 @@ hence $w\in\Lin_p$.
 \begin{thm}{Lemma}\label{ex:grad-dist:G-delta}
 Given a point $p$ in an Alexandrov space $\spc{A}$,
 let $f\z=\distfun_p$, and let $S$ be the subset of points $x\in\spc{A}$ such that $|\nabla_xf|=1$.
-Then $S$ is a dense G-delta set.
+Then $S$ is a dense G-delta set \footnote{ i.e. a countable intersection of open sets}.
 
 \end{thm}
 
@@ -516,8 +516,8 @@ We define its \index{linear dimension}\emph{linear dimension} \index{LinDim@$\Li
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
 If not stated otherwise, dimension means linear dimension.
-In \ref{sec:packing-numbers} and \ref{sec:all-dim}, we will show that linear dimension of Alexandrov space coincides with all reasonable dimensions;
-after that, we will use \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
+In \ref{sec:packing-numbers} and \ref{sec:all-dim}, we will show that linear dimension of Alexandrov spaces coincides with all reasonable notions ofdimension;
+thereafter, we will use the notation \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
@@ -529,7 +529,7 @@ $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ for some $m$ such that
 for any $i$ and $j$.
 Moreover, we can assume that $m\le \LinDim\spc{A}$.
 
-If $\spc{A}$ is an $\Alex{\pm1}$ space, then the same holds if we exchange $\EE^m$ to $\SSS^m$ or $\HH^m$, respectively; in the $\Alex{1}$ case one has to assume in addition that $\diam \spc{A}\le \pi$.
+If $\spc{A}$ is an $\Alex{\pm1}$ space, then the same holds if we replace $\EE^m$ by $\SSS^m$ or $\HH^m$, respectively; in the $\Alex{1}$ case one has to assume in addition that $\diam \spc{A}\le \pi$.
 \end{thm}
 
 \parit{Proof.}
@@ -766,7 +766,7 @@ Since $R>0$ is arbitrary, the first statement follows.
 To prove the last statement, apply \ref{ex:dim-max}.
 
 The general case can be reduced to $\Alex{-1}$ using rescaling,
-and it can be done essentially the same way, one only has to exchange $\EE^{m-1}$ to $\HH^{m-1}$.
+and it can be done essentially in the same way, one only has to change $\EE^{m-1}$ to $\HH^{m-1}$.
 \qeds
 
 \section{Distance chart}
