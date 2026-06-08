@@ -435,8 +435,7 @@ $$
 The following observation gives a useful reformulation of the definition:
 
 \begin{thm}{Observation}\label{obs:Haus-nbhds}
-Suppose $A$ and $B$ are two compact subsets of a metric space $\spc{X}$.
-Then $|A-B|_{\Haus\spc{X}}< R$ if and only if
+Suppose $A$ and $B$ are two compact subsets of a metric space $\spc{X}$ Then $|A-B|_{\Haus\spc{X}}< R$ if and only if
 $B$ lies in the $R$-neighborhood of $A$, 
 and 
 $A$ lies in the $R$-neighborhood of~$B$.
@@ -445,9 +444,15 @@ $A$ lies in the $R$-neighborhood of~$B$.
 According to the following exercise, Hausdorff convergence of nonempty compact subsets is the convergence in Hausdorff metric.
 
 \begin{thm}{Exercise}\label{ex:Haus-conv}
-Let $A_1,A_2,\dots,$ and $A_\infty$ be compact nonempty sets in a proper metric space $\spc{X}$.
+Let $A_1,A_2,\dots,$ and $A_\infty$ be compact nonempty sets in a proper metric space $\spc{X}$ such that all $A_i$ are contained in a compact subset of $\spc{X}$.
+
+
 Show that $\dist{A_n}{A_\infty}{\Haus\spc{X}}\to 0$ as $n\to\infty$
 if and only if $A_n\to A_\infty$ in the sense of Hausdorff.
+
+Does the statement remain true without the assumption that all $A_i$ are contained in a compact subset of $\spc{X}$?
+
+
 \end{thm}
 
 \section{Gromov--Hausdorff convergence}\label{sec:Gromov--Hausdorff}
