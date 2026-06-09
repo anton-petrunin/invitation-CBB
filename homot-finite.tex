@@ -17,7 +17,8 @@ arbitrarily close to $x\mapsto -\<v,x\>$.
 \parit{Idea of the proof.}
 Suppose $f$ is a semiconcave function.
 One can improve concavity of $f$ by passing to a composition $\phi\circ f$ with a very concave real-to-real function $\phi$ such that $\phi'\approx 1$.
-Namely, if $|(f\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish.
+Namely, if $|(f\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish by choosing an appropriate $\phi$.
+For smooth real-to-real function  functions  $f, \phi$ this follows from the chain rule $\phi(f(x)''=\phi''(f(x))\cdot (f'(x))^2+\phi'(f(x)) \cdot f''(x)$.
 This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make concavity worse;
 so $\phi\circ f$ is very concave in most directions and at least as concave as $f$ in all directions.
 In the proof we consider a sum $\phi\circ f_1+\ldots+\phi\circ f_N$ for suitably chosen sequence of functions $f_1,\ldots,f_N$, so that for any geodesic $\gamma$ in a small neighborhood of $p$ the value $|(f_i\circ\gamma)^\pm|$ is bounded away from zero for some $i$.
@@ -143,8 +144,8 @@ The $\Alex\kappa$-case can be reduced to the $\Alex{-1}$-case by rescaling, and 
 The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in a hyperplane in $\HH^m$.
 \qeds
 
-A strictly concave function $f$ can be chosen so that
-$f(p)=0$ and with $(\dd_p f)(x)\approx-|x|$ at a given point $p$.
+Given a point $p$ a strictly concave function $f$ can be chosen so that
+$f(p)=0$ and with $(\dd_p f)(x)\approx-|x|$.
 In particular, $p$ is the maximal point of $f$.
 It can be constructed by taking the minimum of the functions in the theorem.
 Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$, so we get the following.
