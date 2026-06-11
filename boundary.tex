@@ -12,7 +12,7 @@ By~\ref{ex:dim=1},
 $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
 This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
-Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$.
+Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$ where $m\ge 2$.
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space.
 We say that $p\in \spc{A}$ belongs to the boundary (briefly $p\in \partial \spc{A}$) if 
 $\partial\Sigma_p\ne\emptyset$.
@@ -57,7 +57,7 @@ The above theorem is often used together with the \textit{uniqueness of conic ne
 Suppose that an open  neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
 % openness is very important. it's false otherwise
 admits a homeomorphism to $\Cone\Sigma$ such that $x$ is mapped to the origin of the cone.
-In this case, we say that $U$ has a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
+In this case, we say that $U$ is a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
 
 \begin{thm}{Uniqueness of conic neighborhoods}\label{lem:kwun}
 Any two conic neighborhoods of a given point in a metric space are \index{pointed homeomorphic}\emph{pointed homeomorphic}; that is, there is a homeomorphism between neighborhoods that maps the origin of one cone to the origin of the other.
@@ -89,7 +89,7 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 
 \section{Topology}
 
-The following theorem states that boundary is a topological invariant, despite our definition relies heavily on geometry.
+The following theorem states that even though our definition relies heavily on geometry, boundary is a topological invariant.
 
 \begin{thm}{Theorem}\label{thm:top-bry}
 Let $\spc{A}$ and $\spc{A}'$ be homeomorphic finite-dimensional Alexandrov spaces.
@@ -110,12 +110,12 @@ here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 In the following proof we will apply induction on the corank of $\spc{A}$.
 
 
-\parit{Proof.}
+\parit{Proof of\ref{thm:top-bry}.}
 The first statement follows from \ref{thm:dim=dim}.
 
 Suppose we have a counterexample, say $\partial \spc{A}\ne \emptyset$, but $\partial \spc{A}'=\emptyset$.
 Let $k\df\corank \spc{A}$ and $k'\df\corank \spc{A}'$.
-We can assume that the pair $(k,k')$ is minimal in lexicographic order;
+We can assume that the pair $(k,k')$ is minimal in lexicographic order among all counterexamples;
 in particular, $k$ is minimal.
 Let $x\mapsto x'$ be a homeomorphism from $\spc{A}$ to $\spc{A}'$.
 
