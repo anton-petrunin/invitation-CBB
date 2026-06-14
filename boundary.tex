@@ -262,7 +262,7 @@ Moreover, if $p\in \partial \spc{A}$, then $\gexp_p(v)\in \partial \spc{A}$ for 
 \end{subthm}
 
 \begin{subthm}{thm:doubling:doubling}
-The doubling $\spc{W}$ of $\spc{A}$ across $\partial \spc{A}$ is an Alexandrov space with the same curvature bound.
+The doubling $\spc{W}$ of $\spc{A}$ across $\partial \spc{A}$ is an Alexandrov space with the same curvature bound as $\spc{A}$.
 \end{subthm}
 
 \end{thm}
@@ -318,6 +318,7 @@ for any $\nu\in \Sigma_\zeta\Sigma_x$ (if $m=2$, then the last statement is evid
 
 Let $\phi\:\Sigma_x\to\RR$ be restriction of $\dd_xf$ to $\Sigma_x$.
 Applying \ref{ex:d(distfun):<} and \ref{eq:<pi/2}, we get that $\dd_{\bar \xi}\phi(\eta)\le 0$.
+%V: I don't understand this. doesn't this just follow from the fact that $\bar \xi$ is a point of maximum of $\phi$?
 Recall that $\dd_xf$ is concave (\ref{ex:concave-differential}), so $(\dd_xf)''\le 0$;
 by straightforward computations, we have that $\phi''+\phi\le 0$.
 If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
@@ -354,7 +355,7 @@ Hence the last statement follows.
 
 \parit{\ref{SHORT.thm:partial-grad:flow}$_{m}+$\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:doubling}$_m$.}
 We will consider the case $\kappa=0$;
-other cases can be done in the same way, but formulas get heavier.
+other cases can be done in the same way, but formulas get more complicated.
 
 Denote by $\spc{A}_0$ and $\spc{A}_1$ the two copies of $\spc{A}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{A}$ for the common boundary of $\spc{A}_0$ and $\spc{A}_1$.
@@ -376,11 +377,11 @@ denote the obtained curve by $\hat\gamma$.
 
 Any arc of $\hat\gamma$ with one endpoint in $\partial \spc{A}$
 is a geodesic in $\spc{A}_0$.
-Since $x,y\in \partial \spc{A}$, the arc of $\hat\gamma$ behind $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
+Since $x,y\in \partial \spc{A}$, the arc of $\hat\gamma$ beyond $y$ lies in the image of map $t\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
 By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{A}$.
 
 Now choose a point $z$ on this arc, so $z\in \partial\spc{A}$.
-Applying the same argument, we get that the arc of $\hat\gamma$ before $y$ lies in $\partial\spc{A}$.
+Applying the same argument, we get that the arc of $\hat\gamma$ up to $y$ lies in $\partial\spc{A}$.
 Hence the claim follows.\claimqeds
 
 Choose a point $p$ in $\spc{W}$;
@@ -389,7 +390,7 @@ It is sufficient to show that $(f\circ\gamma)''\le 1$ for any $t$.
 If $p\in \partial\spc{A}$, then the statement follows from function comparison in $\spc{A}_0$ and $\spc{A}_1$.
 So, we can assume that $p\in \spc{A}_0\setminus \partial\spc{A}$.
 Also, we can assume that $\gamma$ does not lie in $\partial \spc{A}$;
-otherwise, the inequality follows from the comparison in~$\spc{A}_0$.
+otherwise, the inequality again follows from the comparison in~$\spc{A}_0$.
 
 \begin{wrapfigure}{r}{55mm}
 \vskip-2mm
@@ -406,8 +407,8 @@ Assume $y\in \spc{A}_1\setminus\partial\spc{A}$.
 Suppose $[py]$ crosses $\partial\spc{A}$ at $x$.
 Let $\Sigma_x$ be the space of directions of $\spc{A}$ at $x$,
 and let $\Xi$ be its doubling.
-As before, we denote by $\Sigma_0$ and $\Sigma_1$ two copies of $\Sigma_x$ in  $\Xi$
-and keep notation $\partial\Sigma_x$ for their common boundary.
+As before, we denote by $\Sigma_0$ and $\Sigma_1$ the two copies of $\Sigma_x$ in  $\Xi$
+and keep the notation $\partial\Sigma_x$ for their common boundary.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
 
 The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides from $\partial\Sigma_x$ and
@@ -488,7 +489,7 @@ Prove the last inequality.
 
 Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
-Finally if $\gamma(0)\in\partial\spc{A}$, then splitting argument shows that 
+Finally if $\gamma(0)\in\partial\spc{A}$, then a splitting argument shows that 
 \[(f\circ\gamma)^+(0)-(f\circ\gamma)^-(0)\le 0.\]
 
 Summarizing, we get that $(f\circ\gamma)''\le 1$ on every arc of $\gamma$ that lies entirely in $\spc{A}_0$ or $\spc{A}_1$.
