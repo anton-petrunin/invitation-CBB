@@ -28,7 +28,7 @@ Denote by $\sigma\:\spc{A}\to \spc{A}/G$ the quotient map.
 
 Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{A}/G$.
 Choose $\hat p\in \spc{A}$ such that $\sigma(\hat{p})=p$.
-Since $\spc{A}$ is proper, we can choose  points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
+Since $\spc{A}$ is proper and the $G$-orbits are closed, we can choose  points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
 \[\dist{p}{x_i}{\spc{A}/G}
 =
 \dist{\hat{p}}{\hat{x}_i}{\spc{A}}\]
@@ -47,7 +47,7 @@ By \ref{angle-monotonicity},
 \eqlbl{eq:angles-M-L}\]
 for all $i$ and $j$.
 
-By $\EE^2$-comparison in $\spc{A}$,
+By the $\EE^2$-comparison in $\spc{A}$,
 we have
 \[\angk {\hat{p}}{\hat{x}_1}{\hat{x}_2}
 +\angk {\hat{p}}{\hat{x}_2}{\hat{x}_3}
@@ -102,11 +102,11 @@ Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points 
 
 The proof of \ref{thm:CBB/G} works for submetries;
 that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is a proper $\Alex0$ space, then so is $\spc{B}$}.
-Theorem \ref{thm:CBB/G} admits a straightforward generalization to $\Alex{-1}$ case.
+Theorem \ref{thm:CBB/G} admits a straightforward generalization to the $\Alex{-1}$ case.
 
-In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{$\SSS^2$-comparison holds for a quadruple $p$, $x_1$, $x_2$, $x_3$ in the quotient of $\Alex1$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
-In particular, the quotient space is \textit{locally} $\Alex1$.
-But since $\Alex1$ space is geodesic, so is its quotient.
+In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex1$ then $\SSS^2$-comparison holds for any quadruple $p$, $x_1$, $x_2$, $x_3$ in $\spc{B}$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}}.
+In particular, $\spc{B}$ is \textit{locally} $\Alex1$.
+But since an $\Alex1$ space is geodesic, so is its image under a submetry (prove it!).
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
 The same holds for the targets of submetries from an  $\Alex1$ space.
 With a bit of extra work, one can extend the statement to nonproper spaces \cite[8.34]{alexander-kapovitch-petrunin2024}.
