@@ -6,19 +6,19 @@ Here we will give several definitions of Alexandrov space and prove their equiva
 
 \section{Four-point comparison}\label{sec:4-point}
 
-Recall that $\angk  pxy$ denotes the model angle; see \ref{sec:Triangles and model triangles}.
+Recall that $\angk pxy$ denotes the model angle; see \ref{sec:Triangles and model triangles}.
 
 Let $p,x,y,z$ be a quadruple of points in a metric space.
 If the inequality 
-\[\angk  pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
+\[\angk pxy_{\EE^2}+\angk pyz_{\EE^2}+\angk pzx_{\EE^2}
 \le 
 2\cdot\pi
 \eqlbl{eq:CBB-comparison}\]
 holds, then we say that the quadruple meets \index{comparison}\emph{$\EE^2$-comparison}.
-If the left-hand side is undefined, then we assume that the comparison holds.
+If the left-hand side is undefined, then we also assume that the comparison holds.
 
 \begin{thm}{Exercise}\label{ex:CBB+-}
-Suppose $\EE^2$-comparison holds for quadruple $p$, $x_1$, $x_2$, $x_3$.
+Suppose $\EE^2$-comparison holds for the quadruple $p$, $x_1$, $x_2$, $x_3$.
 Show that it also holds for any quadruple $q$, $y_1$, $y_2$, $y_3$ such that
 \[\dist{q}{y_i}{}\ge\dist{p}{x_i}{}\qquad\text{and}\qquad\dist{y_i}{y_j}{}\le\dist{x_i}{x_j}{}\]
 for all $i$ and $j$.
@@ -26,12 +26,12 @@ for all $i$ and $j$.
 
 Instead of $\EE^2$, we can use $\SSS^2$ or $\HH^2$.
 This way we get the definition of $\SSS^2$- or $\HH^2$-comparisons.
-Recall that $\angk  pxy_{\EE^2}$ and $\angk  pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
-but for $\angk  pxy_{\SSS^2}$ we require in addition that
+Recall that $\angk pxy_{\EE^2}$ and $\angk pxy_{\HH^2}$ are defined if $p\ne x$, $p\ne y$,
+but for $\angk pxy_{\SSS^2}$ we require in addition that
 \[\dist{p}{x}{}+\dist{p}{y}{}+\dist{x}{y}{}<2\cdot\pi;\]
 if this does not hold for one of the angles, then we assume that $\SSS^2$-comparison holds for this quadruple.
 
-More generally, one may apply this definition to the model $\kappa$-plane $\MM^2(\kappa)$ and  define $\MM^2(\kappa)$-comparison for any real $\kappa$.
+More generally, one may apply this definition to the model $\kappa$-plane $\MM^2(\kappa)$ and define $\MM^2(\kappa)$-comparison for any real $\kappa$.
 However, when considering $\MM^2(\kappa)$-comparison, it is safe to assume that $\kappa=-1$, $0$, or $1$;
 applying rescaling, the $\MM^2(\kappa)$-comparison can be reduced to these three cases.
 
@@ -44,13 +44,13 @@ holds for any quadruple of points in $\spc{X}$.
 While this definition can be applied to any metric space,
 we will use it mostly for geodesic spaces that are complete (and often compact or proper). 
 If a complete geodesic space has curvature $\ge\kappa$ in the sense of Alexandrov, 
-then it will be called an $\Alex\kappa$ space ($\Alex\kappa$ is an adjective).
+then it will be called an $\Alex\kappa$ space; here $\Alex\kappa$ is an adjective.
 If $\spc{X}$ is $\Alex\kappa$ for some $\kappa$, then we say that $\spc{X}$ is an \index{Alexandrov space}\emph{Alexandrov space}.
 
 It is common practice in Alexandrov geometry to write proofs for nonnegative curvature and 
 leave the general curvature bound as an exercise. These generalizations are usually straightforward. We will add notes when they are not.
 We will also often formulate statements just for $\kappa=0$ even when they admit straightforward generalizations to arbitrary curvature bounds;
-for a more formal treatment, see \cite{alexander-kapovitch-petrunin2024}.
+see \cite{alexander-kapovitch-petrunin2024} for a more formal treatment.
 
 \begin{thm}{Exercise}\label{ex:Euclid-is-CBB}
 Show that $\EE^n$ is $\Alex0$.
@@ -70,7 +70,7 @@ for all $i$ and $j$.
 \section{Alexandrov's lemma}
 
 Recall that $[xy]$ denotes a geodesic from $x$ to $y$;
-set  
+set
 \index{10@$\left]x y\right]$, $\left[x y\right[$, $\left]x y\right[$ (subintervals)}
 \[
 \left]x y\right]=[xy]\setminus\{x\},
@@ -81,7 +81,7 @@ set
 
 \begin{thm}{Alexandrov's lemma}
 \index{Alexandrov's lemma}
-\label{lem:alex}  
+\label{lem:alex}
 Let $p,x,y,z$ be distinct points in a metric space such that $z\in \left]x y\right[$.
 Then 
 the following expressions have the same sign:
@@ -148,7 +148,7 @@ The spherical and hyperbolic cases can be proved along the same lines.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:alex-lemma-cat}
-Assume $p,x,y,z$ are as in Alexandrov's lemma (\ref{lem:alex}).
+Assume that $p,x,y,z$ are as in Alexandrov's lemma (\ref{lem:alex}).
 Show that
 \[\angk p x y
 \ge
@@ -159,13 +159,13 @@ with equality if and only if the expressions in \ref{SHORT.lem-alex-difference} 
 Note that 
 \[p\in\left]x y\right[
 \quad\Rightarrow\quad
-\angk pxy=\pi.
-\]
+\angk pxy=\pi.\]
 Applying it with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
 Let $p,x,y,z$ be points in an $\Alex0$ space.
-Suppose $z\in\left]x y\right[$, then
+Suppose that $z\in\left]x y\right[$.
+Then
 \[\angk xyp\le \angk xzp.\]
 \end{thm}
 
@@ -188,7 +188,7 @@ It implies the following.
 
 \begin{thm}{Angle existence and comparison}\label{clm:angle-defined}
 The angle measure of any hinge in an $\Alex0$ 
-space is defined and  is at least as large as the corresponding model angle;
+space is defined and is at least as large as the corresponding model angle;
 that is,
 \[\mangle\hinge p x y\ge \angk p x y\]
 for any hinge $\hinge p x y$ in an $\Alex0$ space.
@@ -199,13 +199,14 @@ for any hinge $\hinge p x y$ in an $\Alex0$ space.
 Let $\hinge p x y$ be a hinge in an $\Alex0$ space.
 Suppose $\mangle\hinge p x y=0$; show that $[px]\subset [py]$ or $[py]\subset [px]$.
 
-Conclude that geodesics in $\Alex0$ space cannot \index{bifurcating geodesics}\emph{bifurcate};
-that is, if two geodesics $[px]$ and $[py]$ share a nontrivial arc with an end at $p$, then $[px]\subset [py]$ or $[py]\subset [px]$.
+Conclude that geodesics in an $\Alex0$ space cannot \index{bifurcating geodesics}\emph{bifurcate};
+that is, if two geodesics $[px]$ and $[py]$ share a nontrivial arc with an endpoint at $p$, then $[px]\subset [py]$ or $[py]\subset [px]$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:pi-angle}
 Let $[xy]$ be a geodesic in an $\Alex0$ space.
-Suppose $z\in \left]xy\right[$. Show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
+Suppose $z\in \left]xy\right[$.
+Show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
 \end{thm}
 
 Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
@@ -221,7 +222,7 @@ Show that
 \begin{thm}{Exercise}\label{ex:pxyvw}
 Let $\spc{A}$ be an $\Alex0$ 
 space.
-Show that  
+Show that
 \[
 \angk xyp=\angk xvp
 \quad\Leftrightarrow\quad
@@ -274,9 +275,9 @@ For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$, we have
 Recall that by \ref{ex:adjacent-CBB}, we have equality in \ref{SHORT.angle-b}.
 
 \parit{Proof.}
-Recall that only-if part follows from \ref{ex:noncreasing} and \ref{ex:adjacent-CBB}; it remains to show the if part.
+Recall that the only-if part follows from \ref{ex:noncreasing} and \ref{ex:adjacent-CBB}; it remains to show the if part.
 
-Consider a point  $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
+Consider a point $w\in \mathopen{]} p z \mathclose{[}$ close to $p$.
 From \ref{SHORT.angle-b}, it follows that 
 \[\mangle\hinge w x z+ \mangle\hinge w x{p}\le\pi\quad \text{and}\quad \mangle\hinge w y z + \mangle\hinge w y{p}\le\pi.\]
 
@@ -297,7 +298,7 @@ Applying \ref{SHORT.angle-a},
 +\angk w x y
 \le
 2\cdot\pi.\]
-Passing to the limits as $w\to p$, we have
+Passing to the limit as $w\to p$, we have
 \[\angk p x z 
 + \angk p y z 
 +\angk p x y
@@ -316,7 +317,6 @@ Then the following conditions are equivalent.
 \begin{subthm}{cbb}
 $\spc{A}$ is $\Alex0$.
 \end{subthm}
- 
 
 \begin{subthm}{2-sum} 
 (adjacent angle comparison\index{comparison!adjacent angle comparison})
@@ -345,7 +345,7 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \end{thm}
 
 \begin{thm}{Advanced exercise}\label{ex:urysohn}
-Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following weaker version of the adjacent angle comparison \ref{2-sum}.
+Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following weaker version of the adjacent angle comparison (\ref{2-sum}).
 
 For any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
@@ -371,17 +371,19 @@ if one (and therefore any) of them holds for $s$, then we say that $s$ is \index
 \item The \index{Jensen inequality}\emph{Jensen inequality}
 \[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
 holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
-\item For any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports (locally) $s$ at $t_0$ from above;
-that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ (in a neighborhood of $t_0$)
+\item For any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports $s$ at $t_0$ from above;
+that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$.
+\item For any $t_0\in \II$ there is a quadratic polynomial $\ell$ (it is called a \index{local barrier}\emph{local barrier}) that locally supports $s$ at $t_0$ from above;
+that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ in a neighborhood of $t_0$.
 \end{itemize}
 
-To prove equivalence, approximate $s$ by smooth functions by taking convolutions $s_n=s*k_n$ for a suitable sequence of kernels $k_n$.
-Note that all the conditions are equivalent for $s_n$;
+To prove the equivalence, approximate $s$ by smooth functions by taking convolutions $s_n=s*k_n$ for a suitable sequence of kernels $k_n$.
+Observe that all the conditions are equivalent for $s_n$;
 passing to the limit we get the same for $s$.
 
 \begin{thm}{Exercise}\label{ex:concave'}
 Show that $\lambda$-concave functions are {}\emph{one-sided differentiable}.
-That is, if the function $f\:\II\to\RR$ is a $\lambda$-concave then
+That is, if the function $f\:\II\to\RR$ is $\lambda$-concave, then
 \begin{subthm}{}
 the \index{$f^+$, $f^-$ (one-sided derivative)}\index{right derivative}\emph{right derivative}
 \[f^+(t_0)=\lim_{t\to t_0^+} \frac{f(t)-f(t_0)}{t-t_0}\]
@@ -396,10 +398,10 @@ is defined for any $t_0\in \II$ with the exception of the right end of $\II$.
 Furthermore, show that $f^+(t_0)-f^-(t_0)\le 0$ for any $t_0$ in the interior of $\II$.
 \end{thm}
 
-The following exercise implies that if the function defined on an open interval, then the Lipschitz condition can be dropped from the definition of $\lambda$-concavity.
+The following exercise implies that if the function is defined on an open interval, then the Lipschitz condition can be dropped from the definition of $\lambda$-concavity.
 
 \begin{thm}{Exercise}\label{ex:concave-open}
-Suppose a real-to-real function $f$ is defined on an open interval and for some $\lambda\in\RR$, it satisfies the Jensen inequality stated above.
+Suppose a real-to-real function $f$ is defined on an open interval and, for some $\lambda\in\RR$, it satisfies the Jensen inequality stated above.
 Show that $f$ is locally Lipschitz.
 \end{thm}
 
@@ -412,7 +414,7 @@ for any geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
 The following proposition is simple but conceptual ---
-it reduces  global comparison to an infinitesimal condition on distance functions.
+it reduces global comparison to an infinitesimal condition on distance functions.
 
 \begin{thm}{Proposition}\label{comp-kappa}
 A complete geodesic space $\spc{A}$ is $\Alex0$ if and only if $f''\le 1$ for any function $f$ of the form
@@ -431,7 +433,7 @@ Set
 r(t)&\df\dist{p}{\gamma(t)}{}.
 \end{align*}
 Clearly, $\tilde r(t_0)=r(t_0)$ and $\tilde r(t_1)=r(t_1)$.
-Note that the point-on-side comparison (\ref{point-on-side}) says that the implication
+By the point-on-side comparison (\ref{point-on-side}), the implication
 \[t_0\le t\le t_1
 \qquad\Rightarrow\qquad
 \tilde r(t)\le r(t)
@@ -452,7 +454,7 @@ Suppose $\phi$ is a continuous function defined in $\Dom f$.
 We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that
 the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
 
-If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called  \index{semiconcave function}\emph{semiconcave}.
+If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called \index{semiconcave function}\emph{semiconcave}.
 
 \begin{thm}{Exercise}\label{ex:distfun-semiconcave}
 Let $f$ be a \index{distance function}\emph{distance function} on an $\Alex0$ space $\spc{A}$;
@@ -465,16 +467,15 @@ Proposition~\ref{comp-kappa} admits the following generalization, which can be p
 
 \begin{thm}{Proposition}
 A complete geodesic space $\spc{A}$ is $\Alex{\mp1}$
-if $f''\z\le \pm f$ for any function of the type $f=\cosh\circ\distfun_p$ (respectively, $f=-\cos\circ\distfun_p|_{\oBall(p,\pi)}$).
+if and only if $f''\z\le \pm f$ for any function of the type $f=\cosh\circ\distfun_p$ (respectively, $f=-\cos\circ\distfun_p|_{\oBall(p,\pi)}$).
 \end{thm}
 
 The geometric meaning of these inequalities remains the same:
-\textit{distance functions on an  $\Alex{\kappa}$ space are more concave than distance functions in $\MM^2(\kappa)$}.
+\textit{distance functions on an $\Alex{\kappa}$ space are more concave than distance functions in $\MM^2(\kappa)$}.
 
 \section{Remarks}
 
-Note that Alexandrov's lemma is a result in neutral geometry;
-it has the following useful variation; see \cite[10.2]{alexander-kapovitch-petrunin2024} or \cite[3.3]{alexander-kapovitch-kirszbraun}.
+Alexandrov's lemma has the following useful variation; see \cite[10.2]{alexander-kapovitch-petrunin2024} or \cite[3.3]{alexander-kapovitch-kirszbraun}.
 
 \begin{wrapfigure}{o}{30 mm}
 \vskip-4mm
@@ -491,12 +492,11 @@ Assume that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
 \item
 \label{no-overlap:px=px}
 $\dist{\tilde p^i}{\tilde x^k}{}=\dist{\tilde p^j}{\tilde x^k}{}$,
-%$\dist{\tilde p^i}{\tilde x^k}{}=\dist{\tilde p^j}{\tilde x^k}{}$,
 
 \item
 \label{no-overlap:orient-1}
 $\tilde p^i$ and $\tilde x^i$ lie in the same closed half-space determined by $[\tilde x^j\tilde x^k]$,
-\item no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^k}$ overlap.
+\item no pair of triangles $\trig{\tilde p^i}{\tilde x^j}{\tilde x^k}$ overlaps.
 \end{enumerate}
 Then
 \[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
@@ -504,7 +504,7 @@ where $\mangle\tilde p^i\df\mangle\hinge{\tilde p^i}{\tilde x^k}{\tilde x^j}$
 for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
 \end{thm}
 
-The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might be not necessary.
+The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might not be necessary.
 This is a long-standing open problem possibly dating back to Alexandrov \cite[footnote in 4.1.5]{burago-burago-ivanov}.
 Let us state it formally.
 
@@ -516,15 +516,14 @@ the angle $\mangle\hinge x p y$ is defined and
 Is it true that $\spc{A}$ is an Alexandrov space?
 \end{thm}
 
-One could define Alexandrov space as a complete \textit{length} space with curvature $\ge \kappa$ (in the sense of Alexandrov).
+
+One could define Alexandrov spaces as a complete \textit{length} spaces with curvature $\ge \kappa$ (in the sense of Alexandrov).
 This condition is more natural and general, but many statements can be reduced to the geodesic case.
-In particular, suppose $\spc{A}$ is a complete length space with curvature $\ge \kappa$,
-then 
-\textit{$\spc{A}$ can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
-Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} of points in $\spc{A}$; see
+In particular, any complete length space $\spc{A}$ with curvature $\ge \kappa$ \textit{can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
+Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} points in $\spc{A}$; see
 \cite[8.11]{alexander-kapovitch-petrunin2024} and compare to \ref{ex:grad-dist:geod}.
 
-Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov, which is the subject of our previous book  \cite{alexander-kapovitch-petrunin-2019}.
+Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov;
+this is the subject of our previous book \cite{alexander-kapovitch-petrunin-2019}.
 In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
-The conditions of that type for $n$-point subsets remain far from fully understood.
-Study of these conditions was initiated by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and it has been actively studied since then; see \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.
+Such conditions for $n$-point subsets were considered by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and they have been actively studied since then \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.

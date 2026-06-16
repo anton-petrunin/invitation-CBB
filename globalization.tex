@@ -6,18 +6,18 @@ We prove it for compact spaces and indicate the proof of the general case.
 
 \section{Globalization}
 
-A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{A}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison  holds for any quadruple of points in $U$.
+A complete geodesic metric space $\spc{A}$ is \index{locally $\Alex0$}\emph{locally $\Alex0$} if any point $p\in\spc{A}$ admits a neighborhood $U\ni p$ such that the $\EE^2$-comparison holds for any quadruple of points in $U$.
 
 It is straightforward to obtain a local version of Theorem~\ref{thm:defs_of_alex} for locally $\Alex0$ spaces;
 it gives a list of equivalent properties that hold in sufficiently small neighborhoods of any point.
-In particular, the analog of \ref{angle} implies that \textit{the angle measure of any hinge in locally $\Alex0$ space is well defined.}
+In particular, the analog of \ref{angle} implies that \textit{the angle measure of any hinge in a locally $\Alex0$ space is well defined.}
 
 \begin{thm}{Globalization theorem}\label{thm:glob} 
 Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
 \parit{Proof of \ref{thm:glob} modulo the key lemma (\ref{key-lem:globalization}).}
-Note that condition \ref{angle-b} holds in $\spc{A}$ (necessity of \ref{angle-b} uses only the local condition).
+Note that condition \ref{angle-b} holds in $\spc{A}$ (the necessity of \ref{angle-b} uses only the local condition).
 It remains to check \ref{angle-a};
 that is,
 \[\mangle\hinge x p y\ge\angk x p y
@@ -27,7 +27,7 @@ for any hinge $\hinge x p y$ in $\spc{A}$.
 Inequality \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
 this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\EE^2$-comparison.
 Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
-Applying the key lemma several times we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
+Applying the key lemma several times, we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
@@ -39,7 +39,7 @@ holds for any hinge $\hinge x p q$ such that
 $\dist{x}{p}{}+\dist{x}{q}{}
 <
 \frac{2}{3}\cdot\ell$,
-then it  holds for any hinge $\hinge x p q$ such that
+then it holds for any hinge $\hinge x p q$ such that
 $\dist{x}{p}{}+\dist{x}{q}{}
 <
 \ell$.
@@ -58,13 +58,13 @@ More precisely,
 \begin{align*}
 \side \hinge x p q_{\spc{A}}
 &\df
-\dist{\tilde p}{\tilde q}{\EE^2}.
+\dist{\tilde p}{\tilde q}{\EE^2}
 \intertext{if $\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}$ is the \index{model hinge}\emph{model hinge} of $\hinge {x} {p} {q}_{\spc{A}}$; that is,}
 \mangle\hinge {\tilde x} {\tilde p} {\tilde q}_{\EE^2}&=\mangle\hinge x p q_{\spc{A}},
 \\
 \dist{\tilde x} {\tilde p}{\EE^2}&=\dist{x} {p}{\spc{A}},
 \\
-\dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{A}};
+\dist{\tilde x} {\tilde q}{\EE^2}&=\dist{x} {q}{\spc{A}}.
 \end{align*}
 
 
@@ -97,7 +97,7 @@ Take $x'\in [x q]$ such that
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell.
 \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the  hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
+Choose a geodesic $[x' p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
 The triangle inequality implies \ref{eq:thm:=def-loc-fourstar}.
 Furthermore, 
 \begin{align*}
@@ -124,10 +124,10 @@ In particular, the assumption of the lemma implies that
 
 Let
 $\trig{\tilde x}{\tilde x'}{\tilde p}=\modtrig(x x' p)$.
-Take $\tilde  q$ on the extension of $[\tilde  x\tilde  x']$ beyond $x'$ such that $\dist{\tilde x}{\tilde q}{}\z=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
+Take $\tilde q$ on the extension of $[\tilde x\tilde x']$ beyond $\tilde x'$ such that $\dist{\tilde x}{\tilde q}{}\z=\dist{x}{q}{}$ (and therefore $\dist{\tilde x'}{\tilde q}{}=\dist{x'}{q}{}$).
 By~\ref{eq:thm:=def-loc-threestar},
 \[\mangle\hinge x p q
-=\mangle\hinge  x p{x'}\ge\angk x p{x'}
+=\mangle\hinge x p{x'}\ge\angk x p{x'}
 \quad\Rightarrow\quad
 \side \hinge x q p\ge\dist{\tilde p}{\tilde q}{}.\]
 Hence
@@ -152,8 +152,8 @@ and \ref{eq:thm:=def-loc-fivestar} follows.
 
 Let us continue the proof.
 Set $x_0=x$.
-Let us apply inductively the above construction to get a sequence of hinges  $\hinge{x_n}p q$ with $x_{n+1}=x_n'$.
-From \ref{eq:thm:=def-loc-fivestar}, we have that the sequence  $s_n\z=\side \hinge{x_n}p q$ is nonincreasing.
+Applying the above construction inductively, we can construct a sequence of hinges $\hinge{x_n}p q$ with $x_{n+1}\z=x_n'$.
+From \ref{eq:thm:=def-loc-fivestar}, we see that the sequence $s_n\z=\side \hinge{x_n}p q$ is nonincreasing.
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-825}
@@ -165,7 +165,7 @@ $\dist{p}{x_n}{}+\dist{x_n}{q}{}
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\z\ge\dist{p}{q}{}$.
 Since the sequence $s_n$ is nonincreasing, inequality \ref{eq:thm:=def-loc*} follows.
 
-From now we assume that the process does not terminate.
+From now on, we assume that the process does not terminate.
 Let us prove the following claim.
 \begin{clm}{}\label{clm:>0}
 The distances
@@ -185,7 +185,7 @@ Since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for 
 
 By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
 %From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar},
-Since $a_n+b_n=r_n<\ell$ and $a_n\le b_n$ it holds that $a_n\le \tfrac12\cdot\ell$.
+Since $a_n+b_n=r_n<\ell$ and $a_n\le b_n$, we have $a_n\le \tfrac12\cdot\ell$.
 Hence
 \[
 \tfrac29\cdot\ell\ge \dist{x_n}{x_{n+1}}{}\ge \tfrac1{18}\cdot\ell,
@@ -194,7 +194,7 @@ Hence
 which proves the claim for $\dist{x_n}{x_{n+1}}{}$.
 
 Note that
-\[a_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}\qquad \text{or}\qquad b_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}\]
+\[a_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}\qquad \text{or}\qquad b_{n+1}=b_n-\dist{x_n}{x_{n+1}}{}.\]
 In the latter case,
 \[
 \begin{split}
@@ -216,7 +216,7 @@ which finishes the proof of the claim.
 Since $r_n-r_{n+1}\to 0$, \ref{clm:>0} implies that $\angk{x_n}{p_n}{x_{n+1}}\to \pi$,
 where $p_n\z=p$ if $x_{n+1}\in [x_nq]$, and otherwise $p_n=q$ (this describes switching the roles of $p$ and $q$ in the construction of $x'$).
 Since $\mangle\hinge{x_n}{p_n}{x_{n+1}}\z\ge\angk{x_n}{p_n}{x_{n+1}}$, we have
-$\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$  as $n\to\infty$.
+$\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$ as $n\to\infty$.
 
 It follows that
 \[r_n-s_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side \hinge{x_n}p q\to 0.\] 
@@ -235,7 +235,7 @@ Any locally $\Alex\kappa$ space is $\Alex\kappa$.
 
 This is a more general version of our globalization theorem~\ref{thm:glob}.
 It holds for an arbitrary curvature bound~$\kappa$ and replaces compactness with completeness.
-A complete proof can be found in~\cite[2F]{alexander-kapovitch-petrunin2024}; it is based on the idea from \ref{thm:glob}, but requires a few additional twists that we are about to discuss.
+A proof can be found in~\cite[2F]{alexander-kapovitch-petrunin2024}; it is based on the idea from \ref{thm:glob}, but requires a few additional twists that we are about to discuss.
 
 \parbf{Trading compactness for completeness.}
 Assume for a moment that $\kappa=0$.
@@ -278,7 +278,7 @@ By~\ref{ex:k-><mono},
 \[
 \angk x y z_{\MM^2(\kappa)}\le \angk x y z_{\MM^2(\Kappa)}
 \]
-whenever the right-hand side is defined.
+whenever both sides are defined.
 This completes the proof in the case $\Kappa\le 0$.
 In general, however, the comparison holds only for sufficiently small triangles;
 in particular, any $\Alex\Kappa$ space is \index{locally $\Alex\kappa$}\emph{locally} $\Alex\kappa$.
@@ -292,9 +292,9 @@ $\dist{p}{x_i}{}=\pi$ and $\dist{x_i}{x_j}{}=2\cdot\pi$ for all $i\ne j$, then $
 Therefore, formally speaking, $\spc{X}$ has curvature $\ge 1$.
 On the other hand, $\spc{X}$ does not have curvature $\ge 0$, since
 \[
-\angk  p{x_1}{x_2}_{\EE^2}
-=\angk  p{x_2}{x_3}_{\EE^2}
-=\angk  p{x_1}{x_3}_{\EE^2}
+\angk p{x_1}{x_2}_{\EE^2}
+=\angk p{x_2}{x_3}_{\EE^2}
+=\angk p{x_1}{x_3}_{\EE^2}
 =\pi.
 \]
 Use this example as a warning when you work with a non-intrinsic metric.
@@ -309,8 +309,8 @@ Conclude that $\spc{A}$ is isometric to a line segment or a circle.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:perim-k>0}
-Suppose  
-$\spc{A}$ is an $\Alex1$
+Suppose
+$\spc{A}$ is $\Alex1$
 and $\diam \spc{A}\le \pi$.
 Show that 
 \[\dist{x}{y}{}+\dist{y}{z}{}+\dist{z}{x}{}\le 2\cdot\pi\]
@@ -328,7 +328,7 @@ For Alexandrov spaces of all dimensions, the theorem first appears in the paper 
 They prove globalization for \textit{complete length spaces}.
 Another version for \textit{noncomplete but geodesic spaces} is due to the third author \cite{petrunin:globalization}.
 
-We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but reduced generality.
+We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but present it in a less general form.
 This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
 The same proof was discovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 Another simplified argument was found by Katsuhiro Shiohama \cite{shiohama}.
