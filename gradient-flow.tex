@@ -72,13 +72,13 @@ for any $t\in[t_{\min},t_{\max})$.
 \end{thm}
 
 A complete proof of the following theorem is given in \cite[16.15]{alexander-kapovitch-petrunin2024};
-it mimics the proof of the standard Picard theorem on the existence  and uniqueness of solutions of ordinary differential equations.
+it mimics the proof of the standard Picard theorem on the existence and uniqueness of solutions of ordinary differential equations.
 The uniqueness will follow from the first distance estimate (\ref{thm:dist-est}) proved in the next section.
 We omit the proof of existence.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
 Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{A}$.
-Then for any $p\in \Dom f$, there are unique $t_{\max}\in(0,\infty]$ and $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
+Then for any $p\in \Dom f$, there are a unique $t_{\max}\in(0,\infty]$ and an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
 According to the theorem, the future of a gradient curve is determined by its present, but its past might \textit{not} be determined by the present.
@@ -117,9 +117,9 @@ Let $\alpha$ be an $f$-gradient curve that starts at $(x,y)$ for $x>y>0$.
 Then 
 \[\alpha(t)=
 \begin{cases}
-(x-t,y-t) &\text{for}\quad 0\le t\le  x-y,
+(x-t,y-t) &\text{for}\quad 0\le t\le x-y,
 \\
-(x-t,0) &\text{for}\quad x-y\le t\le  x,
+(x-t,0) &\text{for}\quad x-y\le t\le x,
 \\
 (0,0) &\text{for}\quad x\le t.
 \end{cases}
@@ -132,9 +132,9 @@ Then
 
 \begin{thm}{Lemma}\label{eq:fist-var-inq+}
 Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$
-defined on an Alexandrov space.
+defined on the whole Alexandrov space.
 Choose a point $p$; let $\ell(t)\df\distfun_p\z\circ\alpha(t)$ and $q=\alpha(t_0)$.
-Then 
+Assume $p\ne q$, then
 \[
 \ell^+(t_0)\le -\left({f(p)}-{f(q)}-\tfrac\lambda2\cdot\ell^2(t_0)\right)/\ell(t_0)
 \]
@@ -162,7 +162,7 @@ and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 The following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $f$ be a $\lambda$-concave locally Lipschitz function defined on an Alexandrov space $\spc{A}$.
+Let $f$ be a $\lambda$-concave locally Lipschitz function defined on the whole Alexandrov space $\spc{A}$.
 Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
@@ -183,6 +183,7 @@ Note that
 \lambda\cdot\ell(t).\]
 Here one has to apply \ref{eq:fist-var-inq+} for distance to the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, then apply the triangle inequality and \ref{ex:monotonicity}.
 
+Since $\ell$ is Lipschitz, it is differentiable almost everywhere.
 Integrating this inequality, we get the result.
 \qeds
 
@@ -275,10 +276,10 @@ nonextendability of geodesics.
 In particular, the exponential map, $\exp_p\:\T_p\to \spc{A}$, if defined in the usual way, can
 be undefined in an arbitrarily small neighborhood of the origin. 
 
-Now we will construct the \index{gradient!exponential map}\emph{gradient exponential map}
+The \index{gradient!exponential map}\emph{gradient exponential map}
 \[\gexp_p\:\T_p\to\spc{A},\]
-which essentially solves this problem. 
-It shares many properties with the ordinary exponential map and is even better in certain respects,
+which we are about to introduce, essentially solves this problem.
+It shares many properties with the ordinary exponential map and is better in certain respects,
 even in the Riemannian universe.
 
 Let $p$ be a point in an $\Alex0$ space $\spc{A}$.
@@ -317,7 +318,7 @@ Note that $f''\le 1$.
 Since the space is proper we can choose a limit in \ref{eq:gexp}.
 
 Let $\gamma$ be a geodesic that starts at $p$.
-Observe that $t\mapsto \gamma\circ\ln(t)$ is an $f$-gradient curve.
+Observe that $t\mapsto \gamma\circ\exp(t)$ is an $f$-gradient curve.
 By the first distance estimate, we have that $\GF^t_{f}$ is an $e^t$-Lipschitz.
 This implies that any limit in \ref{eq:gexp} has the same value;
 that is, $\gexp_p$ is uniquely defined.
@@ -333,21 +334,21 @@ It turned out that gradient flow and gradient exponent are better tools than qua
 These tools quickly found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
 
 For a general lower curvature bound $\kappa$, the construction of gradient exponent has to be modified;
-it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of  the modified distance function.
+it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of the modified distance function.
 
 For $\kappa=-1$ we have 
-that $\gexp_p(\gamma^+(0))=\gamma(1)$
+that $\gexp_p^{-1}(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$
 and 
 \[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{A}}\le \side\hinge0vw_{\HH^2}.\]
-In other words $\gexp_p$ is short if we equip $\T_p$ with the hyperbolic cone metric.
+In other words $\gexp_p^{-1}$ is short if we equip $\T_p$ with the hyperbolic cone metric.
 
 Similarly, for $\kappa=1$ we have $\gexp_p^1(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
 \[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{A}}\le \side\hinge0vw_{\SSS^2},\]
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
-The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus, but \textit{is different} from the  Riemannian exponential after that.
+The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus, but \textit{is different} from the Riemannian exponential after that.
 Moreover, beyond the cut locus $\gexp_p^\kappa$ depends on $\kappa$ while the Riemannian exponential map does not.
 The following exercise is meant to show that this technique can prove something nontrivial even for Riemannian manifolds.
 

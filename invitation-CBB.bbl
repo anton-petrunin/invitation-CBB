@@ -3303,6 +3303,43 @@
       \field{pages}{203\bibrangedash 219}
       \range{pages}{17}
     \endentry
+    \entry{petrunin1998}{article}{}
+      \name{author}{1}{}{%
+        {{hash=de72efa9e5305feea26404350266a5ae}{%
+           family={Petrunin},
+           familyi={P\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{fullhash}{de72efa9e5305feea26404350266a5ae}
+      \strng{bibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
+      \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
+      \field{extraname}{7}
+      \field{sortinit}{p}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{1016-443X,1420-8970}
+      \field{journaltitle}{Geom. Funct. Anal.}
+      \field{number}{1}
+      \field{title}{Parallel transportation for {A}lexandrov space with curvature bounded below}
+      \field{volume}{8}
+      \field{year}{1998}
+      \field{pages}{123\bibrangedash 148}
+      \range{pages}{26}
+      \verb{doi}
+      \verb 10.1007/s000390050050
+      \endverb
+      \verb{urlraw}
+      \verb https://doi.org/10.1007/s000390050050
+      \endverb
+      \verb{url}
+      \verb https://doi.org/10.1007/s000390050050
+      \endverb
+    \endentry
     \entry{petrunin2008}{article}{}
       \name{author}{1}{}{%
         {{hash=044c4373d927f3b42ed251bacb554abe}{%
@@ -3381,7 +3418,7 @@
       \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
       \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
       \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
-      \field{extraname}{7}
+      \field{extraname}{8}
       \field{sortinit}{p}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
@@ -3405,7 +3442,7 @@
       \strng{authorbibnamehash}{de72efa9e5305feea26404350266a5ae}
       \strng{authornamehash}{de72efa9e5305feea26404350266a5ae}
       \strng{authorfullhash}{de72efa9e5305feea26404350266a5ae}
-      \field{extraname}{8}
+      \field{extraname}{9}
       \field{sortinit}{p}
       \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
       \field{labelnamesource}{author}
