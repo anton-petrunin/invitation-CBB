@@ -49,8 +49,6 @@ pdfauthor={\theauthors}
 
 \include{prelim}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{wald}
 \include{definitions}
 \include{globalization}
 \include{calculus}
@@ -59,33 +57,27 @@ pdfauthor={\theauthors}
 \include{dim}
 \include{volume}
 \include{boundary}
-
 \include{CBB-quotients}
-
-%\include{CBB-def}
-
-%\include{embedding-theorem}
-%\include{misc}
-
-
 \include{overview}
-%\include{alexandrov-theorem-en}
 
 \backmatter
 
-\include{sols}%%%%%%%%%%%%%%%%
+\include{sols}
 
 {
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\indexname}
 \input{invitation-CBB.ind}
+}
 
+{
 \def\emph{\textit}
-
+\sloppy
 \printbibliography[heading=bibintoc]
 \fussy
 }
 
 \end{document}
 %??? locally Lipschitz (usually or always)???
+%??? \acts???

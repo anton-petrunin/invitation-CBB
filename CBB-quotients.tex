@@ -21,14 +21,14 @@ Then the quotient space $\spc{A}/G$ is $\Alex0$.
 
 \end{thm}
 
-A more general formulation will be given in \ref{thm:submetry-CBB-1}.
+A more general statement will be given in \ref{thm:submetry-CBB-1}.
 
 \parit{Proof.}
 Denote by $\sigma\:\spc{A}\to \spc{A}/G$ the quotient map.
 
 Fix a quadruple of points $p,x_1,x_2,x_3\in \spc{A}/G$.
 Choose $\hat p\in \spc{A}$ such that $\sigma(\hat{p})=p$.
-Since $\spc{A}$ is proper and the $G$-orbits are closed, we can choose  points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
+Since $\spc{A}$ is proper and the $G$-orbits are closed, we can choose points $\hat{x}_i\in \spc{A}$ such that $\sigma(\hat x_i)=x_i$ and
 \[\dist{p}{x_i}{\spc{A}/G}
 =
 \dist{\hat{p}}{\hat{x}_i}{\spc{A}}\]
@@ -54,13 +54,15 @@ we have
 +\angk {\hat{p}}{\hat{x}_3}{\hat{x}_1}
 \le 
 2\cdot\pi.\]
-Applying  \ref{eq:angles-M-L}, 
+Applying \ref{eq:angles-M-L},
 we get 
 \[\angk p{x_1}{x_2}
 +\angk p{x_2}{x_3}
 +\angk p{x_3}{x_1}\le 2\cdot\pi;\]
 that is,
 the $\EE^2$-comparison holds for any quadruple in $\spc{A}/G$.
+
+Since $\spc{A}$ is proper and geodesic and the orbits are closed, we get that $\spc{A}/G$ is geodesic, and the statement follows.
 \qeds
 
 \begin{thm}{Very advanced exercise}\label{ex:Hilbert/G}
@@ -106,18 +108,18 @@ Theorem \ref{thm:CBB/G} admits a straightforward generalization to the $\Alex{-1
 
 In the $\Alex1$ case, the proof produces a slightly weaker statement: \textit{{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex1$ then $\SSS^2$-comparison holds for any quadruple $p$, $x_1$, $x_2$, $x_3$ in $\spc{B}$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}}.
 In particular, $\spc{B}$ is \textit{locally} $\Alex1$.
-But since an $\Alex1$ space is geodesic, so is its image under a submetry (prove it!).
+As above, assuming orbits are closed, the quotient of a proper geodesic space is geodesic.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
-The same holds for the targets of submetries from an  $\Alex1$ space.
+The same holds for the targets of submetries from an $\Alex1$ space.
 With a bit of extra work, one can extend the statement to nonproper spaces \cite[8.34]{alexander-kapovitch-petrunin2024}.
 Thus, we have the following.
 
 \begin{thm}{Theorem}\label{thm:submetry-CBB-1}
 Let $\sigma\:\spc{A}\to\spc{B}$ be a submetry.
-If $\spc{A}$ is $\Alex\kappa$ space, then so is $\spc{B}$.
+If $\spc{A}$ is $\Alex\kappa$, then so is $\spc{B}$.
 
-In particular, if $G$ acts isometrically on an $\Alex\kappa$ space $\spc{A}$, and $G$ has closed orbits.
-Then the quotient space $\spc{A}/G$ is $\Alex\kappa$.
+In particular, if $G$ acts isometrically on an $\Alex\kappa$ space $\spc{A}$, and $G$ has closed orbits, then the quotient space $\spc{A}/G$ is $\Alex\kappa$.
+
 \end{thm}
 
 \section{Hopf's conjecture}
@@ -141,7 +143,7 @@ The proof of the lemma is guided by the following exercise.
 
 \begin{thm}[!]{Exercise}\label{ex:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points.
-Let us think   of $\SSS^3$ as the unit sphere in $\RR^4$.
+Let us think of $\SSS^3$ as the unit sphere in $\RR^4$.
 
 \begin{subthm}{ex:S^3/S^1:pq}
 Show that one can identify $\RR^4$ with $\CC^2$ so that the action
@@ -159,7 +161,7 @@ v&0\\
 0& w
 \end{matrix}
 \right),\]
-where  $v,w\in \SSS^1$.
+where $v,w\in \SSS^1$.
 \end{subthm}
 
 \smallskip
@@ -171,7 +173,7 @@ Let $\Sigma_{p,q}=\SSS^3/\SSS^1$ be the quotient space.
 
 \begin{subthm}{ex:S^3/S^1:sphere}
 Show that $\Sigma_{p,q}=\SSS^3/\SSS^1$ is a topological sphere with $\SSS^1$-symmetry.
-This symmetry has two fixed points, the north pole and the south pole, that correspond to the orbits of $(1,0)$ and $(0,1)$ in $\SSS^3$.
+This symmetry has two fixed points, say the north pole and the south pole, that correspond to the orbits of $(1,0)$ and $(0,1)$ in $\SSS^3$.
 \end{subthm}
 
 \smallskip
@@ -179,9 +181,9 @@ This symmetry has two fixed points, the north pole and the south pole, that corr
 \noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
 
 \begin{subthm}{ex:S^3/S^1:a}
-Denote by $T(r)$ the inverse image $S(r)$ in $\SSS^3$, and let $a(r)$ be its area.
+Denote by $T(r)$ the inverse image of $S(r)$ in $\SSS^3$, and let $a(r)$ be its area.
 Show that $T(r)$ is an orbit of the torus action and
-\[a(r)=\pi^2\cdot\sin r\cdot \cos r.\]
+\[a(r)=4\cdot \pi^2\cdot\sin r\cdot \cos r.\]
 
 \end{subthm}
 
@@ -190,7 +192,7 @@ Show that $T(r)$ is an orbit of the torus action and
 \begin{subthm}{ex:S^3/S^1:b}
 Let $b_{p,q}(r)$ be the length of the $\SSS^1$-orbit in $\SSS^3$ that corresponds to a point on $S(r)$. 
 Show that
-\[b_{p,q}=\pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}.\]
+\[b_{p,q}(r)=2\cdot \pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}.\]
 \end{subthm}
 
 \smallskip
@@ -248,7 +250,7 @@ Denote by $\omega$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[
 From above,
 \[\omega>4\cdot\pi.\]
 
-On the other hand, by \ref{ex:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{A}$ has perimeter at most $\pi$.
+On the other hand, by \ref{lem:S^3/S^1} any triangle in $\Sigma_{y_1}\spc{A}$ has perimeter at most $\pi$.
 In particular, 
 \[\mangle\hinge{y_1}{y_2}{y_3}+\mangle\hinge{y_1}{y_3}{y_4}+\mangle\hinge{y_1}{y_4}{y_2}\le \pi.\]
 Apply the same argument in $\Sigma_{y_2}\spc{A}$, $\Sigma_{y_3}\spc{A}$, and $\Sigma_{y_4}\spc{A}$;
@@ -305,7 +307,7 @@ Since $V_1,\dots,V_N$ are disjoint subsets of $\spc{A}$, we have $N\le 2^m$.
 \qeds
 
 \begin{thm}{Exercise}\label{ex:extr-point(-1)}
-Find a bound on number of extremal points in an $\Alex{-1}$ space in terms of its dimension $m$ and diameter $D$.
+Find a bound on the number of extremal points in an $\Alex{-1}$ space in terms of its dimension $m$ and diameter $D$.
 \end{thm}
 
 \section{Crystallographic actions}
@@ -324,7 +326,7 @@ Is it true that $\mathfrak{M}(\Gamma)\le 2^m$?
 
 Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
 If $F$ is maximal, then $A_F$ completely describes $F$.
-Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ has to be finite.
+Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ pointwise has to be finite.
 This subgroup must contain $F$, but since $F$ is maximal, it must coincide with $F$.
 
 Denote by $\mathfrak{M}_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
@@ -342,7 +344,7 @@ Then $\mathfrak{M}_0(\Gamma)\le 2^m$.
 \end{thm}
 
 \begin{thm}{Lemma}\label{lem:extr/G}
-Let $\Gamma\acts \EE^m$ be a crystallographic action and $F$ be a maximal finite subgroup of $\Gamma$ that fixes an isolated point $p$.
+Let $\Gamma\acts \EE^m$ be a crystallographic action, and let $F$ be a maximal finite subgroup of $\Gamma$ that fixes an isolated point $p$.
 Then the image of $p$ in the quotient space $\spc{A}=\EE^m/\Gamma$ is an extremal point.
 \end{thm}
 
@@ -376,7 +378,7 @@ $\mathfrak{M}_{m-1}(\Gamma)\le 2$, and
 if $\mathfrak{M}_{m-1}(\Gamma)=1$, then $\mathfrak{M}_0(\Gamma)\le 2^{m-1}$.
 \end{subthm}
 
-Construct  crystallographic actions with equalities in \ref{SHORT.ex:number(m-1):2} and \ref{SHORT.ex:number(m-1):1}.
+Construct crystallographic actions with equalities in \ref{SHORT.ex:number(m-1):2} and \ref{SHORT.ex:number(m-1):1}.
 \end{thm}
 
 \section{Remarks}
@@ -386,11 +388,11 @@ Submetries were introduced by Valerii Berestovskii \cite{berestovskii1987} and h
 
 
 A more general form of Theorem \ref{thm:hsiang-kleiner} was found by Karsten Grove and Burkhard Wilking \cite{grove-wilking};
-it classifies isometric $\SSS^1$ actions on  4-dimensional manifolds with nonnegative sectional curvature.
+it classifies isometric $\SSS^1$ actions on 4-dimensional manifolds with nonnegative sectional curvature.
 This proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
 
 It is expected that \textit{no $\Alex1$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
-so \ref{thm:hsiang-kleiner} holds for general $\Alex1$ space.
+so \ref{thm:hsiang-kleiner} holds for a general $\Alex1$ space.
 The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{lem:S^3/S^1};
 see \cite{harvey-searle}.
 
@@ -415,7 +417,7 @@ Theorem \ref{thm:extr-point} is a translation of the following classical problem
 
 \begin{thm}{Problem}\label{erdos-problem}
 Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
-Then  $|F|\le2^m$.
+Then $|F|\le2^m$.
 Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
 \end{thm}
 
@@ -428,15 +430,15 @@ Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal poin
 (this action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$).
 The second author has proved \cite{lebedeva2015} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
-The extremal subsets of Alexandrov space were briefly discussed in \ref{sec:bry-remarks}.
+The extremal subsets of Alexandrov spaces were briefly discussed in \ref{sec:bry-remarks}.
 The following definition is more relevant to isometric group actions.
 
 A closed subset $E$ in a finite-dimensional Alexandrov space is called
-\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any $x\notin E$ and $p\in E$ such that $\dist{x}{p}{}$ takes a minimal value.
+\index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any hinge $\hinge pxy$ such that $x\notin E$ and $p\in E$ minimizes $\dist{x}{p}{}$.
 A nonempty extremal set is called \index{minimal extremal set}\emph{minimal} if it contains no proper extremal subsets.
 
 For example, the whole space and the empty set are extremal.
-Also, every vertex, edge, face of a cube, and their unions, are extremal subsets of the cube.
+The vertices, edges, and faces of a cube, as well as their unions, are extremal subsets.
 Vertices of the cube are its only minimal extremal subsets.
 
 Counting maximal finite subgroups in a crystallographic group $\Gamma$ (up to conjugation) is equivalent to counting the minimal extremal subsets in the quotient space $\spc{A}=\EE^m/\Gamma$.
@@ -449,7 +451,7 @@ Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ minimal extremal su
 Let us mention another related conjecture.
 A nonempty extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
 (Given an Alexandrov space and a point $p$ in it, the set of points reachable from $p$ by a recursive application of the gradient flow for squares of distance functions forms a primitive extremal set.)
-For example, each face of $m$-dimensional cube is its primitive extremal subset;
+For example, each face of an $m$-dimensional cube is its primitive extremal subset;
 therefore the cube has exactly $3^m$ primitive extremal subsets, including the whole cube.
 
 \begin{thm}{Conjecture}
