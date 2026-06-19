@@ -4,8 +4,7 @@
 \newcommand{\spell}[2]{#2} %notes
 
 
-\def\thetitle{A journey into Alexandrov geometry:\\
-curvature bounded below}
+\def\thetitle{A journey into Alexandrov geometry: curvature bounded below}
 \def\theauthors{Vitali Kapovitch, Nina Lebedeva, and Anton Petrunin}
 
 \usepackage{lectures}
@@ -32,8 +31,8 @@ pdfauthor={\theauthors}
 \begin{document}
 
 \frontmatter
-\title{\thetitle}
-\author{Vitali Kapovitch,\\Nina Lebedeva,\\and\\Anton Petrunin}
+\title{A journey into Alexandrov geometry:\\ curvature bounded below}
+\author{Vitali Kapovitch, Nina Lebedeva, and Anton Petrunin}
 \date{}
 \maketitle
 \thispagestyle{empty}
@@ -49,43 +48,35 @@ pdfauthor={\theauthors}
 
 \include{prelim}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\include{wald}
 \include{definitions}
 \include{globalization}
 \include{calculus}
 \include{gradient-flow}
 \include{splitting}
-\input{volume.tex}
-\input{homot-finite.tex}
+\include{dim}
+\include{volume}
 \include{boundary}
-
 \include{CBB-quotients}
-
-%\include{CBB-def}
-
-%\include{embedding-theorem}
-%\include{misc}
-
-
 \include{overview}
-%\include{alexandrov-theorem-en}
 
 \backmatter
 
-\include{sols}%%%%%%%%%%%%%%%%
+\include{sols}
 
 {
 \cleardoublepage
 \phantomsection
 \addcontentsline{toc}{chapter}{\indexname}
 \input{invitation-CBB.ind}
+}
 
+{
 \def\emph{\textit}
-
+\sloppy
 \printbibliography[heading=bibintoc]
 \fussy
 }
 
-
 \end{document}
+%??? locally Lipschitz (usually or always)???
+%??? \acts???

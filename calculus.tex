@@ -2,7 +2,7 @@
 
 \chapter{Calculus}\label{chap:derivative}
 
-This lecture introduces several notions related to the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
+This lecture discusses the first-order derivatives in Alexandrov spaces, including spaces of directions, tangent spaces, differentials, and gradients.
 
 \section{Space of directions} 
 \label{sec:space+directions}
@@ -15,18 +15,20 @@ that is, $(\mathfrak{S}_p,\mangle)$
 forms a \index{semimetric}\emph{semimetric} space;
 that is, $\mangle$ behaves like a metric, but might vanish for distinct geodesics.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{70@$\Sigma_p'$ (geodesic directions)}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$, denoted by $\Sigma'_p$ or $\Sigma'_p\spc{A}$.
+The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{70@$\Sigma_p'$ (geodesic directions)}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$; it will be denoted by $\Sigma'_p$ or $\Sigma'_p\spc{A}$.
 The elements of $\Sigma'_p$ are called \index{geodesic!direction}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
-\[[px]\sim[py]\quad \iff\quad \mangle\hinge pxy=0;\]
+\[[px]\sim[py]
+\quad\Leftrightarrow\quad
+\mangle\hinge pxy=0;\]
 the direction of $[px]$ is denoted by $\dir px $.\index{40@$\dir{p}{q}$ (direction)}
 By \ref{ex:0-angle}, 
 \[[px]\sim[py]
-\quad\iff\quad
-[px]\subset [py]
+\quad\Leftrightarrow\quad
+(\,[px]\subset [py]
 \quad\text{or}\quad
-[px]\supset[py].
+[px]\supset[py]\,).
 \]
  
 The completion of $\Sigma'_p$ is called the \index{space of directions}\emph{space of directions} at $p$ and is denoted by \index{70@$\Sigma_p$ (space of directions)}$\Sigma_p$ or $\Sigma_p\spc{A}$.
@@ -45,11 +47,8 @@ Show that $\dir p{x_n}\z\to\dir p{x_\infty}$ as $n\to\infty$.
 \section{Tangent space}\label{sec: tangent space}
 
 The \index{Cone@$\Cone$ (Euclidean cone)}\emph{Euclidean cone} $\spc{V}=\Cone\spc{X}$
-over a metric space $\spc{X}$
-is defined as the metric space whose underlying set consists of
-equivalence classes in
-$[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
-and whose metric is given by the cosine rule
+over a metric space $\spc{X}$ is defined as the metric space with the underlying set of equivalence classes in $[0,\infty)\times \spc{X}$ with the equivalence relation ``$\sim$'' given by $(0,p)\sim (0,q)$ for any points $p,q\in\spc{X}$,
+and its metric is defined by the cosine rule:
 \[
 \dist{(s,p)}{(t,q)}{\spc{V}} 
 =
@@ -77,8 +76,7 @@ are defined by
 \<v,w\>
 \df |v|\cdot|w|\cdot\cos(\mangle(v,w)).
 \]
-The value $\mangle(v,w)$ is undefined if $v=\0$ or $w=\0$;
-in these cases we set $\<v,w\>\df0$.
+If $v=\0$ or $w=\0$, then $\mangle(v,w)$ is undefined and $\<v,w\>\df0$.
 
 \begin{thm}{Exercise}\label{ex:geodesic-cone}
 Show that $\Cone\spc{X}$ is geodesic if and only if $\spc{X}$ is \index{geodesic space@$\ell$-geodesic space}\emph{$\pi$-geodesic};
@@ -96,7 +94,7 @@ that is, with the set $\set{v\in\T_p}{|v|=1}$.
 Any tangent space to an Alexandrov space has nonnegative curvature in the sense of Alexandrov.
 \end{thm}
 
-Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that the tangent space $\T_p$ at some point of Alexandrov space might fail to be geodesic;
+Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that the tangent space $\T_p$ at some point of an Alexandrov space might fail to be geodesic;
 in this case $\T_p$ is \textit{not} $\Alex0$.
 
 \parit{Proof.}
@@ -132,7 +130,7 @@ where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambd
 \section{Differential}\label{sec:differential}
 \index{differential of a function}
 
-Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$ (recall that this means in particular that $f$ is locally Lipschitz on $\Dom f$), and $p\z\in \Dom f$.
+Let $f$ be a semiconcave function defined in a neighborhood of a point $p$ in an Alexandrov space $\spc{A}$ (recall that all our functions are locally Lipschitz).
 Choose a geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
@@ -257,8 +255,7 @@ Instead of vectors $(u$, $v$, $w)$ we choose a triple of points $(u_t$, $v_t$, $
 and prove the approximate versions
 of \ref{eq:2|w|=|u+v|} and \ref{eq:2df(w)>=df(u)+df(v)};
 see \ref{eq:2|wt|=|ut+vt|} and \ref{eq:2df(wt)>=df(ut)+df(vt)}, respectively.
-The main difficulty lies in the proof of \ref{eq:2|wt|=|ut+vt|};
-solving the following exercise should give a hint.
+The main difficulty can be seen in the following exercise; technically it lies in the proof of \ref{eq:2|wt|=|ut+vt|} below.
 
 \begin{thm}[!]{Exercise}\label{ex:d(distfun):==}
 Let $p$ and $q$ be distinct points in an Alexandrov space~$\spc{A}$.
@@ -300,7 +297,7 @@ Note that
 =
 \tfrac{1}{2}\cdot\sqrt{|u|^2+2\cdot\<u,v\>+|v|^2}.\eqlbl{eq:|p-w|=}\]
 
-Since the geodesic space of directions $\Sigma'_p$ is dense in $\Sigma_p$,
+Since the space of geodesic directions $\Sigma'_p$ is dense in $\Sigma_p$,
 we can assume that there are geodesics in the directions of $u$ and $v$.
 Choose such geodesics $\gamma_u$ and $\gamma_v$ and assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
 For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{A}$ such that
@@ -395,7 +392,7 @@ we get
 for any $w\in\T_p$;
 that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
 
-Existence of $\overline{\xi}$ is obvious if $ \Sigma_p$ is comapct.
+Existence of $\overline{\xi}$ is obvious if $ \Sigma_p$ is compact.
 In the general case take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\dd_p f)(\xi_n)\to s$.
 Applying \ref{lem:ohta} for $u=\xi_n$ and $v=\xi_m$, we get
 \[s
