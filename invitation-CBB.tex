@@ -22,9 +22,8 @@ pdfauthor={\theauthors}
 \makeindex
 
 %\usepackage[x-1a]{pdfx}
-
 %\overfullrule=100mm
-\def\red{\color{red}}
+%\def\red{\color{red}}
 
 \spell{\makeatletter\usepackage{environ}\RenewEnviron{figure}[1][]{ [PICTURE] }\RenewEnviron{figure*}[1][]{ [PICTURE] }\RenewEnviron{wrapfigure}[1][]{ [PICTURE] }\RenewEnviron{Figure}[1][]{ [PICTURE] }\usepackage{emptypage}\pagestyle{empty}\makeatother\usepackage[none]{hyphenat}\def\emph{\textit}\renewcommand{\footnote}[1]{\textup{\ (#1)}}\renewcommand{\frac}[2]{(#1)/(#2)}\renewcommand{\tfrac}[2]{(#1/#2)}\everydisplay{\textstyle}}{}
 
@@ -66,6 +65,7 @@ pdfauthor={\theauthors}
 {
 \cleardoublepage
 \phantomsection
+\sloppy
 \addcontentsline{toc}{chapter}{\indexname}
 \input{invitation-CBB.ind}
 }

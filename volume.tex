@@ -25,7 +25,7 @@ passing to the limit, we get the $\MM^2(\kappa)$-comparison for $p_\infty$,  $x_
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:dim-lim}
-Suppose that a sequence $\spc{A}_1,\spc{A}_2,\dots$ of $\Alex\kappa$ spaces converges to $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
+A sequence $\spc{A}_1,\spc{A}_2,\dots$ of $\Alex\kappa$ spaces converges to $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
 \[\dim \spc{A}_\infty\le \liminf_{n\to\infty} \dim \spc{A}_n.\]
 \end{thm}
@@ -38,7 +38,7 @@ Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most
 has a converging subsequence in the sense of Gromov--Hausdorff.
 \end{thm}
 
-Recall that $\GH$ denotes the space of compact metric spaces equipped with the Gromov--Hausdorff metric; see Section~\ref{sec:Gromov--Hausdorff-metric}.
+Recall that $\GH$ denotes the space of compact metric spaces with the Gromov--Hausdorff metric; see Section~\ref{sec:Gromov--Hausdorff-metric}.
 
 \parit{Proof of \ref{thm:gromov-compactness}.}
 Suppose $\kappa=0$.
@@ -50,7 +50,7 @@ suppose $x_1,\dots,x_n\in \spc{A}$ is a collection of points such that $\dist{x_
 Note that the balls $B_i=\oBall(x_i,\tfrac\eps2)$ do not overlap.
 
 By \ref{thm:right-inverse}, $\infty>\vol \spc{A}>0$.
-By the Bishop--Gromov inequality, $\vol \spc{A}<\infty$,
+By the Bishop--Gromov inequality, $\vol \spc{A}\z<\infty$,
 and if $\eps<D$, then 
 \[\vol B_i\ge (\tfrac\eps{2\cdot D})^m\cdot\vol \spc{A}\]
 for any $i$.
@@ -104,7 +104,7 @@ arbitrarily close to $x\mapsto -\<v,x\>$.
 \parit{Idea of the proof.}
 Suppose $f$ is a semiconcave function.
 One can improve concavity of $f$ by passing to a composition $\phi\circ f$ with a very concave real-to-real function $\phi$ such that $\phi'\approx 1$.
-Namely, if $|(f\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish by choosing an appropriate $\phi$.
+Namely, if $|(f\z\circ\gamma)^\pm|$ is bounded away from zero for a geodesic $\gamma$, then $\phi\circ f\circ\gamma$ can be made as concave as you wish by choosing an appropriate $\phi$.
 For smooth real-to-real functions $f$ and $\phi$ this follows from the chain rule $(\phi\circ f)''(x)=\phi''(f(x))\cdot (f'(x))^2+\phi'(f(x)) \cdot f''(x)$.
 This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make concavity worse;
 so $\phi\circ f$ is very concave in most directions and at least as concave as $f$ in all directions.
@@ -249,9 +249,8 @@ there is no open set $\Omega\subset \spc{A}$ with strictly concave function $f\:
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dist-chart+strictly-concave}
-Suppose $p,a_0,\dots,a_m$ are points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ for any $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
-for any $i\ne j$.
-Let $\phi_{c,r}$ be as in the proof of \ref{thm:strictly-concave}, with $c$ large.
+Let $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ for any $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
+for any $i\ne j$, and let $\phi_{c,r}$ be as in the proof of \ref{thm:strictly-concave}, with $c$ large.
 Show that the function $f=\phi_{c,r}\circ\distfun_{a_1}+\dots+\phi_{c,r}\circ\distfun_{a_m}$
 is strictly concave in a neighborhood of $p$.
 \end{thm}

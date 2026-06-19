@@ -613,15 +613,19 @@ by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1
 \\
 \dist{x_\infty}{y_\infty}{\bm{X}}&=\dist{x_\infty}{y_\infty}{\spc{X}_\infty},
 \\
-\dist{x_n}{x_\infty}{\bm{X}}&=\inf\set{\dist{x_n}{y_n}{\spc{X}_n}+\eps_n+\dist{x_\infty}{f_n(y_n)}{\spc{X}_\infty}}{{y_n}\in \spc{X}_n},
+\dist{x_n}{x_\infty}{\bm{X}}
+&=\inf_{y_n\in \spc{X}_n}\set{\dist{x_n}{y_n}{\spc{X}_n}+\eps_n+\dist{x_\infty}{f_n(y_n)}{\spc{X}_\infty}}{},
 \\
-\dist{x_n}{x_m}{\bm{X}}&=\inf\set{\dist{x_n}{y_\infty}{\bm{X}}+\dist{x_m}{y_\infty}{\bm{X}}}{y_\infty\in\spc{X}_\infty},
+\dist{x_n}{x_m}{\bm{X}}
+&=\inf_{y_\infty\in\spc{X}_\infty}\set{\dist{x_n}{y_\infty}{\bm{X}}+\dist{x_m}{y_\infty}{\bm{X}}}{},
 \end{align*}
 where we assume that $x_\infty,y_\infty\in \spc{X}_\infty$, and $x_n,y_n\in \spc{X}_n$ for each $n$. 
 It remains to observe that this indeed defines a metric on $\bm{X}$, and $\spc{X}_n\to \spc{X}_\infty$ in the sense of Hausdorff.
 
 The proof of the second part is analogous; one only needs to change one line in the definition of the metric as follows:
-\[\dist{x_n}{x_\infty}{\bm{X}}=\inf\set{\dist{x_n}{h_n(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{{y_\infty}\in \spc{X}_\infty}.\]
+\[\dist{x_n}{x_\infty}{\bm{X}}
+=
+\inf_{y_\infty\in \spc{X}_\infty}\set{\dist{x_n}{h_n(y_\infty)}{\spc{X}_n}+\eps_n+\dist{x_\infty}{y_\infty}{\spc{X}_\infty}}{}.\]
 
 We leave part \ref{SHORT.lem:almost-isom-c} as an exercise.
 \qedsf

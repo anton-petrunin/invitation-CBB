@@ -263,7 +263,14 @@ isbn=false]{biblatex}
 \end{tabular}}}}
 
 \def\:{\colon}
-\newcommand*{\set}[2]{\left\{\,{#1}\,:\,{#2}\,\right\}}
+
+\newcommand*{\set}[2]{%
+  \if\relax\detokenize{#2}\relax
+    \left\{\,{#1}\,\right\}%
+  \else
+    \left\{\,{#1}\,:\,{#2}\,\right\}%
+  \fi
+}
 
 \newcommand\xqed[1]{%
 \leavevmode\unskip\penalty9999 \hbox{}\nobreak\hfill
