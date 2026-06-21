@@ -20,9 +20,7 @@ Note that $\gamma^+(0)=\log_px$ for any geodesic path $\gamma$ from $p$ to $x$.\
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
 Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$.
-Suppose $f$ is a semiconcave Lipschitz function
-defined in a neighborhood of $p\z=\alpha(0)$,
-and $\alpha^+(0)$ is defined.
+Suppose $f$ is a semiconcave function defined in a neighborhood of $p\z=\alpha(0)$, and $\alpha^+(0)$ is defined.
 Then $(f\circ\alpha)^+(0)$ exists and 
 \[(f\circ\alpha)^+(0)
 =
@@ -77,7 +75,7 @@ The uniqueness will follow from the first distance estimate (\ref{thm:dist-est})
 We omit the proof of existence.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
-Let $f\:\spc{A}\subto \RR$ be a locally Lipschitz and $\lambda$-concave function on an Alexandrov space $\spc{A}$.
+Let $f\:\spc{A}\subto \RR$ be a $\lambda$-concave function on an Alexandrov space $\spc{A}$.
 Then for any $p\z\in \Dom f$, there are a unique $t_{\max}\in(0,\infty]$ and an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\z\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
@@ -162,14 +160,14 @@ and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 The following estimate implies uniqueness in the Picard theorem (\ref{thm:glob-exist-grad-curv}).
 
 \begin{thm}{First distance estimate}\label{thm:dist-est}
-Let $f$ be a $\lambda$-concave locally Lipschitz function defined on the whole Alexandrov space $\spc{A}$.
+Let $f$ be a $\lambda$-concave function defined on the whole Alexandrov space $\spc{A}$.
 Then
 \[\dist{\alpha(t)}{\beta(t)}{}
 \le 
 e^{\lambda\cdot t}\cdot\dist[{{}}]{\alpha(0)}{\beta(0)}{}\]
 for any $t\ge 0$ and any two $f$-gradient curves $\alpha$ and $\beta$.
 
-Moreover, the statement holds for a locally Lipschitz $\lambda$-concave function defined in an open domain if there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f$ for any~$t$.
+Moreover, the statement holds for a $\lambda$-concave function defined in an open domain if there is a geodesic $[\alpha(t)\,\beta(t)]$ in $\Dom f$ for any~$t$.
 \end{thm}
 
 \parit{Proof.} 
@@ -249,7 +247,7 @@ Using this new terminology, we can reformulate several statements about gradient
 From the first distance estimate, we have the following.
 
 \begin{thm}{Proposition}\label{prop:GF-is-lip}
-Let $f$ be a semiconcave function defined on an Alexandrov space $\spc{A}$.
+Let $f$ be a semiconcave function on an Alexandrov space $\spc{A}$.
 Then the map $x\mapsto\GF^t_f(x)$ is locally Lipschitz.
 
 Moreover, if $f$ is $\lambda$-concave, then $\GF^t_f$ is $e^{\lambda\cdot t}$-Lipschitz.

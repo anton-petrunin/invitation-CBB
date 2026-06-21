@@ -130,7 +130,7 @@ where $\iota_n$ sends a point in $\spc{A}$ to the corresponding point in $\lambd
 \section{Differential}\label{sec:differential}
 \index{differential of a function}
 
-Let $f$ be a semiconcave function defined in a neighborhood of a point $p$ in an Alexandrov space $\spc{A}$ (recall that all our functions are locally Lipschitz).
+Let $f$ be a semiconcave function defined in a neighborhood of a point $p$ in an Alexandrov space $\spc{A}$ (recall that semiconcave functions are locally Lipschitz by definition).
 Choose a geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
@@ -404,7 +404,7 @@ Clearly, $\overline{\xi}=\lim_n\xi_n$ meets \ref{overlinexi}.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:convergence-grad}
-Let $f$ and $g$ be locally Lipschitz semiconcave functions defined in a neighborhood of a point $p$ in an Alexandrov space.
+Let $f$ and $g$ be semiconcave functions defined in a neighborhood of a point $p$ in an Alexandrov space.
 Show that 
 \[\dist[2]{\nabla_p f}{\nabla_p g}{\T_p}
 \le 
@@ -413,7 +413,7 @@ where
 \[s=\sup\set{|(\dd_p f)(\xi)-(\dd_p g)(\xi)|}{\xi\in\Sigma_p}.\]
 
 Conclude that if the sequence of restrictions $\dd_p f_n|_{\Sigma_p}$ converges uniformly, then $\nabla_pf_n$ converges as $n\to\infty$.
-Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave and Lipschitz near $p$.
+Here we assume that all functions $f_1$, $f_2,\dots$ are semiconcave near $p$.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:semicontinuous-grad}
