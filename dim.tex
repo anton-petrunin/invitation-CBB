@@ -12,7 +12,7 @@ thereafter, we will use the notation \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDi
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
 Let $\spc{A}$ be an $\Alex0$ space.
-Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exist a model configuration
+Then for any finite set of points $p,x_1,\dots,x_n\in \spc{A}$, there exists a model configuration
 $\tilde p,\tilde x_1,\dots,\tilde x_n\in \EE^m$ for some $m$ such that
 \[|\tilde p-\tilde x_i|_{\EE^m}=| p- x_i|_{\spc{A}}
 \quad\text{and}\quad
@@ -100,14 +100,14 @@ Choose small $r>0$ and $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i
 Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for $i\ne j$.
 By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$;
 in particular, all directions $\dir{p'}{y_i}$ lie in a unit sphere of dimension at most $m-1$.
-Since  $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ if $i\ne j$.
+Since $\dist{p'}{p}{}$ is small, $\angk {p'}{y_i}{y_j}>\eps$ if $i\ne j$.
 By comparison,
 \[\mangle \hinge{p'}{y_i}{y_j}>\eps.\]
 Therefore, $\pack_\eps \Sigma_p\le \pack_\eps\SSS^{m-1}$.
 
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$ for any $\eps>0$.
 By the definition, the space of directions $\Sigma_p$ is complete.
-Applying \ref{ex:pack-net}, we get that  $\Sigma_p$ is compact.
+Applying \ref{ex:pack-net}, we get that $\Sigma_p$ is compact.
 
 It remains to prove the following claim.
 
@@ -143,7 +143,7 @@ By \ref{ex:alex-lemma-cat}, we have
 \[\angk p{x_n}{m_n}+\angk p{y_n}{m_n}\le \angk p{x_n}{y_n}.\]
 
 For each large $n$, choose a point $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
-By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$  with arbitrarily small given error.
+By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$ with arbitrarily small given error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also get that the following approximations
 \begin{align*}
@@ -177,7 +177,7 @@ Suppose $p,a_0,\dots,a_m$ are points in an Alexandrov space $\spc{A}$ such that
 for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
-has a  continuous right inverse $\map$ defined in a neighborhood of $f(p)$ such that $p=\map\circ f(p)$.
+has a continuous right inverse $\map$ defined in a neighborhood of $f(p)$ such that $p=\map\circ f(p)$.
 \end{thm}
 
 In the proof we construct a local right inverse $\map$ of $f$ around $f(p)$.
@@ -194,13 +194,13 @@ consider the function on $\spc{A}$ defined by
 
 
 \begin{subthm}{ex:proof-right-inverse:grad}
-Show that for some fixed $r>0$ and $\lambda$, the function $h_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$,
+Show that for some fixed $r>0$ and $\lambda$, the function $h_{\bm{y}}$ is $\lambda$-concave in $\oBall(p,r)$, and the following hold at any $x\in \oBall(p,r)$:
 \begin{enumerate}[(i)]
 \item\label{111} $(\dd_x\distfun_{a_i})(\nabla_x h_{\bm{y}})<-\eps^2$ if $\dist{a_i}{x}{}>y_i$ and
 \item\label{222} $(\dd_x\distfun_{a_i})(\nabla_x h_{\bm{y}})>\eps^2$ if
 \[\dist{a_i}{x}{}-y_i=\min_{j>0}\{\dist{a_j}{x}{}\z-y_j\}<0.\]
 \end{enumerate}
-at any $x\in \oBall(p,r)$.
+
 
 \end{subthm}
 
@@ -224,7 +224,7 @@ t_0
 Let $t_0\:\bm{y}\mapsto\tfrac{1}{\eps^2}\cdot\bigl|f(p)-\bm{y}\bigr|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-is continuous (in fact H\"older) in $\Omega=\oBall(f(p),\tfrac{\eps^2}{2}\cdot r )\subset\RR^m$
+is continuous (in fact Hölder) in $\Omega=\oBall(f(p),\tfrac{\eps^2}{2}\cdot r)\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 (This finishes the proof of \ref{thm:right-inverse}.)
 \end{subthm}
@@ -237,7 +237,7 @@ If $\LinDim\spc{A}\ge m$, then
 \[\dim\Lin_s\z\ge m\]
 for any point $s$ in a dense G-delta subset of points in $\spc{A}$.
 
-Moreover, if $m= \LinDim\spc{A}$, then the set $S$ of points $s\in \spc{A}$ such that $\T_s\spc{A}\iso \EE^m$ is a dense G-delta set in $\spc{A}$.
+Moreover, if $m=\LinDim\spc{A}$, then the set $S$ of points $s\in \spc{A}$ such that $\T_s\spc{A}\iso \EE^m$ is a dense G-delta set in $\spc{A}$.
 \end{thm}
 
 It is worth mentioning that the set $S\subset\spc{A}$ is also convex; see \cite[1.10]{petrunin1998}.
@@ -259,7 +259,7 @@ Since $R>0$ is arbitrary, the first statement follows.
 To prove the last statement, apply \ref{ex:dim-max}.
 
 The general case can be reduced to $\Alex{-1}$ using rescaling,
-and it can be done essentially in the same way, one only has to change $\EE^{m-1}$ to $\HH^{m-1}$.
+and it can be done essentially in the same way; one only has to change $\EE^{m-1}$ to $\HH^{m-1}$.
 \qeds
 
 \section{Distance chart}
@@ -271,7 +271,7 @@ for any $i\ne j$.
 Then the map $f\:\spc{A}\to\RR^m$ defined by
 \[f\:x\mapsto (\dist{a_1}{x}{},\dots,\dist{a_m}{x}{})\]
 gives a bi-Lipschitz embedding of a neighborhood $\Omega$ of $p$;
-the restriction $f|_\Omega$ is called a  \index{distance chart}\emph{distance chart} at $p$.
+the restriction $f|_\Omega$ is called a \index{distance chart}\emph{distance chart} at $p$.
 \end{thm}
 
 The following exercise provides a guide to the proof of the theorem.
@@ -279,9 +279,9 @@ The following exercise provides a guide to the proof of the theorem.
 \begin{thm}[!]{Exercise}\label{ex:proof-dist-chart}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR^m$ are as in \ref{thm:right-inverse}.
 Show that there is $\eps>0$ such that for any two points $x,y$ in a sufficiently small neighborhood of $p$,
-one of the inequalities holds in each of the following two strings of $m$  inequalities
+one of the inequalities holds in each of the following two strings of $m$ inequalities
 \begin{align*}
-\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\  \mangle\hinge xy{a_m}<\tfrac\pi2-\eps;
+\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge xy{a_m}<\tfrac\pi2-\eps;
 \\
 \mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps.
 \end{align*}
@@ -357,7 +357,7 @@ Therefore,
 \[\vol \oBall(p,r_1)\ge (\tfrac {r_1}{r_2})^m\cdot\vol \oBall(p,r_2).\]
 \qedsf
 
-The following exercise generalizes the Bishop--Gromov inequality to $\Alex{-1}$ case;
+The following exercise generalizes the Bishop--Gromov inequality to the $\Alex{-1}$ case;
 it is sufficient for most applications.
 A more exact statement for $\Alex\kappa$ spaces is given in \ref{inq:BG+}.
 
@@ -406,7 +406,7 @@ for any ball $B=\cBall[p,r]_{\spc{A}}$ with $r>0$ and all small $\eps>0$.
 \end{thm}
 
 
-The exercise implies that for Alexandrov spaces \index{Minkowski dimension}\emph{Minkowski dimension} (also known as \index{box-counting dimension}\emph{box-counting dimension}) coincides with linear dimension.
+The exercise implies that for Alexandrov spaces, \index{Minkowski dimension}\emph{Minkowski dimension} (also known as \index{box-counting dimension}\emph{box-counting dimension}) coincides with linear dimension.
 Namely, let $\spc{A}$ be an Alexandrov space.
 Given a point $p\in \spc{A}$ and $r>0$, let
 \[m(p,r)\df \inf\set{\alpha\in\RR}{\eps^\alpha\cdot\pack_\eps \cBall[p,r]\to 0\quad\text{as}\quad \eps\to 0}.\]
@@ -427,7 +427,7 @@ For any Alexandrov space $\spc{A}$, we have
 
 \parit{Proof.}
 Suppose $\LinDim \spc{A}=\infty$.
-By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{A}$ contains a compact subset $K$ with  arbitrarily large $\TopDim K$.
+By the right-inverse theorem (\ref{thm:right-inverse}), $\spc{A}$ contains a compact subset $K$ with arbitrarily large $\TopDim K$.
 In particular,
 \[\TopDim\spc{A}=\infty.\]
 By Szpilrajn's theorem,
@@ -446,7 +446,7 @@ Finally, by the right-inverse theorem (\ref{thm:right-inverse}), $m\le\TopDim\sp
 \qeds
 
 \begin{thm}{Exercise}\label{ex:dim=dim}
-Let $\Omega$ be an open subset of Alexandrov space $\spc{A}$.
+Let $\Omega$ be an open subset of an Alexandrov space $\spc{A}$.
 Show that
 \[\LinDim \spc{A}=\LinDim \Omega=\TopDim \Omega=\HausDim \Omega.\]
 \end{thm}
@@ -475,7 +475,7 @@ indeed $\Sigma_0\RR$ is a two-point space which is not geodesic.
 
 \section{Remarks}
 
-Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of the space of directions is essential in the proof that space of directions is $\pi$-geodesic (\ref{thm:finite-space-of-directions}).
+Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of the space of directions is essential in the proof that the space of directions is $\pi$-geodesic (\ref{thm:finite-space-of-directions}).
 
 The proof of the following version of the Bishop--Gromov inequality requires additionally the so-called \textit{coarea formula} for Alexandrov spaces.
 The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
@@ -484,7 +484,7 @@ The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 Given a point $p$ in an $m$-dimensional $\Alex\kappa$ space,
 consider the function
 \[v\:r\mapsto\vol_m\oBall(p,r);\]
-denote by $\tilde v(r)$ the volume of $r$-ball in $\MM^m(\kappa)$.
+denote by $\tilde v(r)$ the volume of an $r$-ball in $\MM^m(\kappa)$.
 Then
 \[v(r)\le \tilde v(r)\]
 for any $r>0$.

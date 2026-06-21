@@ -7,7 +7,7 @@ Additionally, the book by Alexey Pogorelov \cite{pogorelov1969} is highly recomm
 
 \section{Polyhedral surfaces}
 
-A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) equipped with a length metric such that there is a finite triangulation with each triangle isometric to a Euclidean triangle.
+A \index{polyhedral surface}\emph{polyhedral surface} is defined as a 2-dimensional manifold (possibly with boundary) equipped with a length metric such that there is a finite triangulation in which each triangle isometric to a Euclidean triangle.
 A \index{triangulation}\emph{triangulation} of a polyhedral surface is always assumed to satisfy this condition.
 
 Note that, according to our definition, every polyhedral surface is compact.
@@ -86,7 +86,7 @@ We will use this result in the proof of \ref{cor:Alex0-convex} to reduce questio
 Any closed $\Alex0$ surface is a Gromov--Hausdorff limit of homeomorphic polyhedral surfaces with nonnegative curvature.
 \end{thm}
 
-We will give only a sketch of the proof, but the sketch is not short.
+We give only a sketch of the proof, but the sketch is not short.
 First we apply the following exercise to construct an approximation $\tilde{\spc{P}}_\delta$ of a given surface $\spc{P}$.
 It reduces the theorem to saying that this is indeed an approximation (\ref{clm:approximation}).
 Further, we use a couple of deep results (\ref{thm:cont-vol} and \ref{thm:vol-short}) to prove the claim.
@@ -115,11 +115,11 @@ Show that $\theta_v\le 2\cdot\pi$.
 
 \parit{Construction.}
 Let $\spc{P}$ be a closed $\Alex0$ surface.
-By part \ref{SHORT.ex:approximation:triangulation}, we can triangulate $\spc{P}$ by small convex triangles, say, diameter of each triangle is less than given $\delta>0$.
+By part \ref{SHORT.ex:approximation:triangulation}, we can triangulate $\spc{P}$ by small convex triangles, say, diameter of each triangle is less than a given $\delta>0$.
 Now, replace each triangle in the triangulation with its corresponding model solid triangle, and denote the resulting polyhedral surface by $\tilde{\spc{P}}_\delta$.
 
 Note that $\tilde{\spc{P}}_\delta$ is homeomorphic to $\spc{P}$;
-moreover, there exists a homeomorphism $\spc{P} \to \tilde{\spc{P}}_\delta$ (it will be denoted by $x\mapsto \tilde x$) that maps each edge in the triangluation of $\spc{P}$ isometrically to the corresponding edge of $\tilde{\spc{P}}_\delta$, and each triangle in $\spc{P}$ is mapped to the corresponding model triangle in $\tilde{\spc{P}}_\delta$.
+moreover, there exists a homeomorphism $\spc{P} \to \tilde{\spc{P}}_\delta$ (it will be denoted by $x\mapsto \tilde x$) that maps each edge in the triangulation of $\spc{P}$ isometrically to the corresponding edge of $\tilde{\spc{P}}_\delta$, and each triangle in $\spc{P}$ is mapped to the corresponding model triangle in $\tilde{\spc{P}}_\delta$.
 
 By the hinge comparison (\ref{angle}) and part \ref{SHORT.ex:approximation:poly} of the exercise, the total angle around each vertex in $\tilde{\spc{P}}_\delta$ does not exceed $2\cdot\pi$.
 Thus, the resulting polyhedral surface $\tilde{\spc{P}}_\delta$ has nonnegative curvature.
@@ -195,7 +195,7 @@ Show that
 Note that part \ref{SHORT.ex:approximation:excess} implies that $\chi(\spc{P})\ge 0$.
 Therefore, $\spc{P}$ is homeomorphic to a sphere, projective plane, torus, or Klein bottle.
 In the latter two cases, the construction produces a flat surface $\tilde{\spc{P}}_\delta$, which has to be isometric to $\spc{P}$.
-Therefore the cases of the sphere, the projective plane are more interesting.
+Therefore the cases of the sphere and the projective plane are more interesting.
 
 \parit{Proof of \ref{clm:approximation}.}
 Choose a sequence of positive numbers $\delta_n\to0$;
@@ -234,7 +234,7 @@ Applying Theorem \ref{thm:vol-short}, we get that the short map $\spc{P}\to \til
 \qeds
 
 \parit{Remark.}
-The main difficulty in the proof comes from nonconvexity of triangles in the triangulation of $\tilde{\spc{P}}_\delta$.
+The main difficulty in the proof comes from the nonconvexity of triangles in the triangulation of $\tilde{\spc{P}}_\delta$.
 If these triangles were convex, then the first estimate in parts \ref{SHORT.ex:approximation:length} and \ref{SHORT.ex:approximation:excess} would imply that $\tilde{\spc{P}}_\delta$ is close to $\spc{P}$ in the sense of Gromov--Hausdorff.
 
 
@@ -282,7 +282,7 @@ Moreover, a point $v$ is a vertex of $K$ if and only if
 $v$ is an essential vertex of $\spc{P}$.
 \end{thm}
 
-A proof of this claim can be found in the school textbook \cite[§~48]{kiselev-stereo-en};
+A proof of this claim can be found in a school textbook \cite[§~48]{kiselev-stereo-en};
 one can also deduce it from \ref{claim:angle-3angle-inq}.
 
 \begin{thm}[!]{Exercise}\label{ex:surface-covergence}
@@ -308,7 +308,7 @@ Moreover, any isometry between the surfaces of convex polyhedrons can be extende
 
 Assuming the isometry between the surfaces to be face-to-face gives a reformulation of Cauchy's theorem; his argument, with a small addition, proves \ref{thm:alexandrov-uni'}.
 
-First, let us remind Cauchy's proof, assuming the reader knows it.
+First, let us recall Cauchy's proof, assuming the reader knows it.
 If not, then read it in one of the classical texts; see, for example, \cite{aigner-zigler,dolbilin,tabacnikov-fuks}.
 
 \parit{Sketch of Cauchy's proof.}
@@ -413,7 +413,7 @@ If $\spc{P}$ has exactly 4 essential vertices, then it is isometric to the surfa
 In this section, we introduce several notions and use them to reformulate the existence theorem (\ref{thm:reformulation}).
 
 \paragraph{Space of polyhedrons.}
-Let us denote by $\bm{K}$ the space of all convex polyhedrons in the Euclidean space,
+Let us denote by $\bm{K}$ the space of all convex polyhedrons in Euclidean space,
 including polyhedrons that degenerate to a plane polygon.
 Polyhedrons in $\bm{K}$ will be considered up to a motion of the space; we will not distinguish between a convex polyhedron and its congruence class.
 
@@ -440,12 +440,11 @@ Observe that $\bm{P}^\circ$ is an open set in $\bm{P}$.
 
 The subset of $\bm{P}$ of all surfaces with exactly $n$ essential vertices will be denoted by $\bm{P}_n$; let $\bm{P}_n^\circ=\bm{P}_n\cap \bm{P}^\circ$.
 By \ref{ex:alexandrov=<4:>=3}, any surface in $\bm{P}$ has at least 3 essential vertices.
-Therefore $\bm{P}$ is subdivided into countably many subsets
- $\bm{P}_3,\bm{P}_4,\dots$
+Therefore $\bm{P}$ is subdivided into countably many subsets $\bm{P}_3,\bm{P}_4,\dots$
 
 \paragraph{From a polyhedron to its surface.}
 Recall that the surface of a convex polyhedron is a sphere with nonnegative curvature.
-Therefore, passing from a polyhedron to its surface we define a map
+Therefore, passing from a polyhedron to its surface, we define a map
 \[\iota\:\bm{K}\to \bm{P}.\]
 
 The existence theorem (\ref{thm:alexandrov-first}) follows from the next statement.
@@ -510,7 +509,7 @@ In particular, for any $n\ge 3$, the image $\iota(\bm{K}_n^\circ)$ is open in~$\
 This statement follows from the so-called \index{invariance of domain}\emph{invariance of domain theorem},
 which states that a \textit{continuous injective map between manifolds of the same dimension is open}.
 
-Recall that $\iota$ defines a continuous and injective $\bm{K}_n^\circ\to\bm{P}_n^\circ$.
+Recall that $\iota$ defines a continuous and injective map $\bm{K}_n^\circ\to\bm{P}_n^\circ$.
 It remains to check that both spaces $\bm{K}_n^\circ$ and $\bm{P}_n^\circ$ are $(3\cdot n-6)$-dimensional manifolds.
 
 Choose a polyhedron $K$ in $\bm{K}_n$.
@@ -595,7 +594,7 @@ Since the coordinates are smooth, we get that $\gamma^+(t)$ is defined as well.
 \begin{thm}{Exercise}\label{ex:convex}
 Suppose a plane $\Pi$ cuts from the surface of a convex body $K$ a disk $\Delta$, and the reflection of $\Delta$ across $\Pi$ lies in $K$.
 Show that $\Delta$ is a convex subset of the surface;
-that is, if a geodesic has endpoints in $\Delta$, then it completely lies in $\Delta$.
+that is, if a geodesic has endpoints in $\Delta$, then it lies completely in $\Delta$.
 \end{thm}
 
 }
@@ -627,7 +626,7 @@ The statement of Cauchy's theorem was conjectured by Adrien-Marie Legendre in th
 It was motivated by a vague definition in Euclid's Elements, which could be interpreted as
 \textit{polyhedrons are equal if their faces are pairwise equal}.
 The local lemma was already known to Legendre.
-Joseph-Louis Lagrange, a colleague of Legendre, suggested this problem to Augustin-Louis Cauchy who soon solved it \cite{cauchy}.
+Joseph-Louis Lagrange, a colleague of Legendre, suggested this problem to Augustin-Louis Cauchy, who soon solved it \cite{cauchy}.
 
 The observation that the face-to-face condition can be removed was made by
 Alexandr Alexandrov in 1941; in the same paper he proved the uniqueness theorem \cite{alexandrov-1941}.
@@ -669,11 +668,11 @@ The first is combinatorial, and the second is more visual.
 The argument in the second proof was reused by Anton Klyachko in his \index{car-crash lemma}\emph{car-crash lemma} \cite{klyachko}.
 
 Proposition \ref{prop:conv-surf-CBB(0)} generalizes to the boundaries of convex bodies in $\EE^m$ for any $m\ge 2$.
-It could be considered as a partial case of the conjecture about the boundary of Alexandrov space; see \ref{conj:bry}.
-Another partial case, for convex sets in Riemannian manifolds, is proved by Stephanie Alexander and the two us \cite{alexander-kapovitch-petrunin-2008}.
+It could be considered as a special case of the conjecture about the boundary of Alexandrov space; see \ref{conj:bry}.
+Another partial case, for convex sets in Riemannian manifolds, is proved by Stephanie Alexander and the two of us \cite{alexander-kapovitch-petrunin-2008}.
 
-\begin{wrapfigure}{r}{30mm}
-\vskip-3mm
+\begin{wrapfigure}{o}{30mm}
+\vskip-0mm
 \centering
 \includegraphics{mppics/pic-15}
 \vskip-0mm

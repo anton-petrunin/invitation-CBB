@@ -15,7 +15,7 @@ In addition, we assume that $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
 The tangent vector $v=\dist px{}\cdot\dir px$ will be called a \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{40@$\log_p x$ (logarithm)}$v=\log_p x$).
-In general the logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so, $v=\log_p x$ and $w=\log_p x$ does \textit{not} mean $v=w$.
+In general the logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so $v=\log_p x$ and $w=\log_p x$ do \textit{not} imply $v=w$.
 Note that $\gamma^+(0)=\log_px$ for any geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
 \begin{thm}{Claim}\label{clm:fa'=dfa'}
@@ -127,14 +127,14 @@ Then
 
 \end{thm}
 
-
 \section{Distance estimates}
 
 \begin{thm}{Lemma}\label{eq:fist-var-inq+}
 Let $\alpha$ be a gradient curve of a $\lambda$-concave function $f$
 defined on the whole Alexandrov space.
 Choose a point $p$; let $\ell(t)\z\df\distfun_p\z\circ\alpha(t)$ and $q=\alpha(t_0)$.
-Assume $p\ne q$, then
+Assume $p\ne q$.
+Then
 \[
 \ell^+(t_0)\le -\left({f(p)}-{f(q)}-\tfrac\lambda2\cdot\ell^2(t_0)\right)/\ell(t_0)
 \]
@@ -181,7 +181,7 @@ Note that
 \<\dir{\alpha(t)}{\beta(t)},\nabla_{\alpha(t)}f\>-\<\dir{\beta(t)}{\alpha(t)},\nabla_{\beta(t)}f\>
 \le
 \lambda\cdot\ell(t).\]
-Here one has to apply \ref{eq:fist-var-inq+} for distance to the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, then apply the triangle inequality and \ref{ex:monotonicity}.
+Here one has to apply \ref{eq:fist-var-inq+} for distance from the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, then apply the triangle inequality and \ref{ex:monotonicity}.
 
 Since $\ell$ is Lipschitz, it is differentiable almost everywhere.
 Integrating this inequality, we get the result.
@@ -319,11 +319,11 @@ Since the space is proper we can choose a limit in \ref{eq:gexp}.
 
 Let $\gamma$ be a geodesic that starts at $p$.
 Observe that $t\mapsto \gamma\circ\exp(t)$ is an $f$-gradient curve.
-By the first distance estimate, we have that $\GF^t_{f}$ is an $e^t$-Lipschitz.
+By the first distance estimate, we have that $\GF^t_{f}$ is $e^t$-Lipschitz.
 This implies that any limit in \ref{eq:gexp} has the same value;
 that is, $\gexp_p$ is uniquely defined.
 
-Again, since $\GF^t_{f}$ is an $e^t$-Lipschitz, we get that $\gexp_p$ is short.
+Again, since $\GF^t_{f}$ is $e^t$-Lipschitz, we get that $\gexp_p$ is short.
 \qeds
 
 \section{Remarks}
@@ -348,7 +348,7 @@ for any geodesic path $\gamma$ that starts at $p$ and
 \[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{A}}\le \side\hinge0vw_{\SSS^2},\]
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
-The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map inside the cut locus, but \textit{is different} from the Riemannian exponential after that.
+The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus, but \textit{is different} from the Riemannian exponential after that.
 Moreover, beyond the cut locus $\gexp_p^\kappa$ depends on $\kappa$ while the Riemannian exponential map does not.
 The following exercise is meant to show that this technique can prove something nontrivial even for Riemannian manifolds.
 

@@ -15,14 +15,14 @@ that is, $(\mathfrak{S}_p,\mangle)$
 forms a \index{semimetric}\emph{semimetric} space;
 that is, $\mangle$ behaves like a metric, but might vanish for distinct geodesics.
 
-The metric space corresponding to  $(\mathfrak{S}_p,\mangle)$ is called the \index{70@$\Sigma_p'$ (geodesic directions)}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$; it will be denoted by $\Sigma'_p$ or $\Sigma'_p\spc{A}$.
+The metric space corresponding to $(\mathfrak{S}_p,\mangle)$ is called the \index{70@$\Sigma_p'$ (geodesic directions)}\index{space of geodesic directions}\emph{space of geodesic directions} at $p$; it will be denoted by $\Sigma'_p$ or $\Sigma'_p\spc{A}$.
 The elements of $\Sigma'_p$ are called \index{geodesic!direction}\emph{geodesic directions} at $p$.
 Each geodesic direction is formed by an equivalence class of geodesics starting from $p$ 
 for the equivalence relation 
 \[[px]\sim[py]
 \quad\Leftrightarrow\quad
 \mangle\hinge pxy=0;\]
-the direction of $[px]$ is denoted by $\dir px $.\index{40@$\dir{p}{q}$ (direction)}
+the direction of $[px]$ is denoted by $\dir px$.\index{40@$\dir{p}{q}$ (direction)}
 By \ref{ex:0-angle}, 
 \[[px]\sim[py]
 \quad\Leftrightarrow\quad
@@ -60,7 +60,7 @@ Note that
 \[\Cone\SSS^n\iso\EE^{n+1};\]
 here ``$\iso$'' stands for ``is isometric to''.
 
-Next we define  multiplication by scalar, scalar product, norm, and angles on Euclidean cones, extending the usual definitions from Euclidean space.
+Next we define multiplication by scalar, scalar product, norm, and angles on Euclidean cones, extending the usual definitions from Euclidean space.
 
 The point $v$ in $\spc{V}$ that corresponds to $(t,x)\z\in[0,\infty)\times \spc{X}$ will be denoted by \index{33@$r\cdot u$ (multiplication in cone)}$t\cdot x$;
 the space $\spc{X}$ might be identified with the unit sphere in $\spc{V}$; so $x=1\cdot x$.
@@ -135,7 +135,7 @@ Choose a geodesic $\gamma$ that starts at $p$;
 let $\xi\in\Sigma_p$ be its direction.
 Define 
 \[(\dd_pf)(\xi)\df(f\circ\gamma)^+(0),\]
-here $(f\circ\gamma)^+$ denotes the right derivative of $(f\circ\gamma)$;
+where $(f\circ\gamma)^+$ denotes the right derivative of $(f\circ\gamma)$;
 it is defined since $f$ is semiconcave.
 
 By the following exercise, $\dd_pf$ is a Lipschitz function on $\Sigma'_p$.
@@ -145,7 +145,7 @@ Furthermore, we can extend it to the tangent space by setting
 \df
 r\cdot (\dd_pf)(\xi)\]
 for any $r\ge 0$ and $\xi\in\Sigma_p$.
-The obtained function $\dd_pf\:\T_p\to\RR$ is Lipschitz;
+The resulting function $\dd_pf\:\T_p\to\RR$ is Lipschitz;
 it is called the \index{differential}\emph{differential} of $f$ at $p$.
 
 \begin{thm}{Exercise}\label{ex:df(xi)}
@@ -178,7 +178,7 @@ for any $v\in\T_p$.
 
 \section{Gradient}\label{sec:grad-def}
 
-The following definition generalizes the notion of gradients of smooth functions to semiconcave functions on Alexandrov spaces.
+The following definition generalizes the notion of gradient of a smooth function to semiconcave functions on Alexandrov spaces.
 This generalization is not trivial even for concave functions on Euclidean space.
 We suggest keeping this example in mind while reading further.
 
@@ -186,7 +186,7 @@ We suggest keeping this example in mind while reading further.
 Let $f$ be a semiconcave function on an Alexandrov space and $p\in\Dom f$.
 A tangent vector $g\in \T_p$ is called a 
 \index{gradient}\emph{gradient} of $f$ at $p$ 
-(briefly,  $g\z=\nabla_p f$\index{19@$\nabla$ (gradient)}) if
+(briefly, $g\z=\nabla_p f$\index{19@$\nabla$ (gradient)}) if
 \begin{subthm}{}
 $(\dd_p f)(w)\le \<g,w\>$ for any $w\in \T_p$, and
 \end{subthm}
@@ -238,9 +238,9 @@ Then for any $u,v\in \T_p$, we have
 
 \end{thm}
 
-
 Suppose that $\T_p\iso\EE^m$ and the differential $\dd_p f$ is a concave function.
-Let $w=\tfrac{u+v}2$, then
+Let $w=\tfrac{u+v}2$.
+Then
 \[2\cdot |w|=\sqrt{|u|^2+2\cdot\<u,v\> +|v|^2}
 \eqlbl{eq:2|w|=|u+v|}\]
 and
@@ -279,7 +279,6 @@ Furthermore, we can assume that $u\ne 0$, $v\ne 0$, and $\alpha=\mangle(u,v)>0$;
 \includegraphics{mppics/pic-1205}
 \vskip0mm
 \end{wrapfigure}
-%the picture was overlapping the text so I shifted it up
 
 Consider a model configuration of five points: $\tilde p$, $\tilde u$, $\tilde v$, $\tilde q$, $\tilde w\in\EE^2$ such that
 \begin{itemize}
@@ -299,11 +298,12 @@ Note that
 
 Since the space of geodesic directions $\Sigma'_p$ is dense in $\Sigma_p$,
 we can assume that there are geodesics in the directions of $u$ and $v$.
-Choose such geodesics $\gamma_u$ and $\gamma_v$ and assume that they are parametrized with speed $|u|$ and $|v|$ respectively.
+Choose such geodesics $\gamma_u$ and $\gamma_v$
+and assume that they are parametrized with speeds $|u|$ and $|v|$, respectively.
 For all small $t>0$, consider points $u_t,v_t,q_t,w_t\in \spc{A}$ such that
 \begin{itemize}
-\item $v_t=\gamma_v(t)$ and  $q_t=\gamma_v(2\cdot t)$,
-\item $u_t=\gamma_u(t)$.
+\item $v_t=\gamma_v(t)$ and $q_t=\gamma_v(2\cdot t)$,
+\item $u_t=\gamma_u(t)$,
 \item $w_t$ is the midpoint of $[u_t v_t]$.
 \end{itemize}
 Clearly 
@@ -379,8 +379,8 @@ It follows that $g=g'$.
 \parit{Existence.} 
 If $\dd_p f\le 0$, then one can take $\nabla_p f=\0$.
 
-Suppose $s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}>0$, 
-it is sufficient to show that there is  $\overline{\xi}\in \Sigma_p$ such that 
+Suppose $s=\sup\set{(\dd_p f)(\xi)}{\xi\in\Sigma_p}>0$.
+It is sufficient to show that there is $\overline{\xi}\in\Sigma_p$ such that
 \[
 (\dd_p f)\left(\overline{\xi}\right)=s.
 \eqlbl{overlinexi}
@@ -392,8 +392,8 @@ we get
 for any $w\in\T_p$;
 that is, $s\cdot\overline{\xi}$ is the gradient at $p$.
 
-Existence of $\overline{\xi}$ is obvious if $ \Sigma_p$ is compact.
-In the general case take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\dd_p f)(\xi_n)\to s$.
+Existence of $\overline{\xi}$ is obvious if $\Sigma_p$ is compact.
+In the general case, take a sequence of directions $\xi_n\in \Sigma_p$, such that $(\dd_p f)(\xi_n)\to s$.
 Applying \ref{lem:ohta} for $u=\xi_n$ and $v=\xi_m$, we get
 \[s
 \ge

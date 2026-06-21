@@ -1,7 +1,7 @@
 %%!TEX root = the-definitions.tex
 \chapter{Definitions}\label{chap:defs}
 
-Here we will give several definitions of Alexandrov space and prove their equivalence.
+Here we will give several definitions of Alexandrov spaces and prove their equivalence.
 
 
 \section{Four-point comparison}\label{sec:4-point}
@@ -58,7 +58,7 @@ Show that $\EE^n$ is $\Alex0$.
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Show that a metric space $\spc{X}$ has nonnegative curvature in the sense of Alexandrov
-if and only if for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$ 
+if and only if, for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$
 there is a quadruple of points $q,y_1,y_2,y_3\in\EE^2$
 such that 
 \[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
@@ -160,7 +160,7 @@ Note that
 \[p\in\left]x y\right[
 \quad\Rightarrow\quad
 \angk pxy=\pi.\]
-Applying it with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
+Applying this together with Alexandrov's lemma and $\EE^2$-comparison, we get the following.
 
 \begin{thm}{Claim}\label{clm:angle-mono}
 Let $p,x,y,z$ be points in an $\Alex0$ space.
@@ -243,7 +243,7 @@ Show that
 \end{thm}
 
 The last inequality might be strict;
-for example, on the surface of a cube in $\EE^3$, which is an $\Alex0$ space by \ref{prop:conv-surf-CBB(0)}.
+this happens on the surface of a cube in $\EE^3$, which is an $\Alex0$ space by \ref{prop:conv-surf-CBB(0)}.
 
 \section{Hinge comparison}
 
@@ -272,7 +272,7 @@ For any two adjacent hinges $\hinge pxz$ and $\hinge pyz$ in $\spc{A}$, we have
 
 \end{thm}
 
-Recall that by \ref{ex:adjacent-CBB}, we have equality in \ref{SHORT.angle-b}.
+Recall that, by \ref{ex:adjacent-CBB}, we have equality in \ref{SHORT.angle-b}.
 
 \parit{Proof.}
 Recall that the only-if part follows from \ref{ex:noncreasing} and \ref{ex:adjacent-CBB}; it remains to show the if part.
@@ -347,7 +347,7 @@ Moreover, the implications \ref{SHORT.cbb}$\Rightarrow$\ref{SHORT.2-sum}$\Righta
 \begin{thm}{Advanced exercise}\label{ex:urysohn}
 Construct a complete geodesic space $\spc{X}$ that is not $\Alex0$, but satisfies the following weaker version of the adjacent angle comparison (\ref{2-sum}).
 
-For any three points $p,x,y\in \spc{X}$ there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
+For any three points $p,x,y\in \spc{X}$, there is a geodesic $[x y]$ such that for any $z\in \left]x y\right[$
 \[\angk{z}{p}{x}+\angk{z}{p}{y}
 \le
 \pi.\]
@@ -366,7 +366,7 @@ Let $s\:\II\to\RR$ be a locally Lipschitz function defined on an interval $\II\s
 The following statements are equivalent;
 if one (and therefore any) of them holds for $s$, then we say that $s$ is \index{concave function}\emph{$\lambda$-concave}.
 \begin{itemize}
-\item We have inequality $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
+\item We have the inequality $s''\le \lambda$, where the second derivative $s''$ is understood in the sense of distributions.
 \item The function $t\mapsto s(t)-\lambda\cdot\tfrac{t^2}2$ is concave.
 \item The \index{Jensen inequality}\emph{Jensen inequality}
 \[s(a\cdot t_0+(1-a)\cdot t_1)\ge a\cdot s(t_0)+(1-a)\cdot s(t_1)+\tfrac\lambda2\cdot a\cdot(1-a)\cdot(t_1-t_0)^2 \]
@@ -377,9 +377,9 @@ that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$.
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ in a neighborhood of $t_0$.
 \end{itemize}
 
-To prove the equivalence, approximate $s$ by smooth functions by taking convolutions $s_n=s*k_n$ for a suitable sequence of kernels $k_n$.
+To prove the equivalence, approximate $s$ by smooth functions, taking convolutions $s_n=s*k_n$ for a suitable sequence of kernels $k_n$.
 Observe that all the conditions are equivalent for $s_n$;
-passing to the limit we get the same for $s$.
+passing to the limit, we get the same for $s$.
 
 \begin{thm}{Exercise}\label{ex:concave'}
 Show that $\lambda$-concave functions are {}\emph{one-sided differentiable}.
@@ -387,12 +387,12 @@ That is, if the function $f\:\II\to\RR$ is $\lambda$-concave, then
 \begin{subthm}{}
 the \index{$f^+$, $f^-$ (one-sided derivative)}\index{right derivative}\emph{right derivative}
 \[f^+(t_0)=\lim_{t\to t_0^+} \frac{f(t)-f(t_0)}{t-t_0}\]
-is defined for any $t_0\in \II$ with the exception of the left end of $\II$.
+is defined for any $t_0\in \II$ except at the left endpoint of $\II$.
 \end{subthm}
 \begin{subthm}{}
 the \index{left derivative}\emph{left derivative}
 \[f^-(t_0)=\lim_{t\to t_0^-} \frac{f(t)-f(t_0)}{t-t_0}\]
-is defined for any $t_0\in \II$ with the exception of the right end of $\II$.
+is defined for any $t_0\in \II$ except at the right endpoint of $\II$.
 \end{subthm}
 
 Furthermore, show that $f^+(t_0)-f^-(t_0)\le 0$ for any $t_0$ in the interior of $\II$.
@@ -407,10 +407,10 @@ Show that $f$ is locally Lipschitz.
 
 \parbf{Functions on metric spaces.}
 A \index{function}\emph{function} on a metric space $\spc{A}$ will usually mean a \textit{locally Lipschitz real-valued function defined on an open subset of $\spc{A}$}.
-The domain of a function $f$ will be denoted by $\Dom f$;
-so when we write $f\:\spc{A}\to \RR$ we do not assume that $f$ is defined on the whole space $\spc{A}$.
+The domain of a function $f$ will be denoted by $\Dom f$.
+Thus, when we write $f\:\spc{A}\to \RR$ we do not assume that $f$ is defined on the whole space $\spc{A}$.
 
-We say that such $f$ is \index{91@$\lambda$-concave function}\emph{$\lambda$-concave} (briefly $f''\le \lambda$) if
+We say that such $f$ is \index{91@$\lambda$-concave function}\emph{$\lambda$-concave} (briefly, $f''\le \lambda$) if
 for any geodesic $\gamma\:\II\z\to \Dom f$
 the real-to-real function $t\mapsto f\circ\gamma(t)$ is $\lambda$-concave.
 
@@ -450,10 +450,10 @@ Since the subinterval $[t_0,t_1]$ can be chosen arbitrarily, we conclude that $h
 \qeds
 
 \parbf{Semiconcave functions.}\label{sec:Semiconcave functions}
-Let $f$ be a locally Lipschitz real-valued function defined in an open subset $\Dom f$ of an Alexandrov space $\spc{A}$.
-Suppose $\phi$ is a continuous function defined in $\Dom f$.
-We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that
-the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
+Let $f$ be a locally Lipschitz real-valued function defined on an open subset $\Dom f$ of an Alexandrov space $\spc{A}$.
+Suppose $\phi$ is a continuous function defined on $\Dom f$.
+We will write $f''\le \phi$ if for any point $x\in \Dom f$ and any $\eps>0$ there is a neighborhood $U\ni x$ such that the restriction $f|_U$ is $(\phi(x)+\eps)$-concave.
+
 
 If $f''\le \phi$ for some continuous function $\phi$, then $f$ is called \index{semiconcave function}\emph{semiconcave}.
 
@@ -518,7 +518,7 @@ Is it true that $\spc{A}$ is an Alexandrov space?
 \end{thm}
 
 
-One could define Alexandrov spaces as a complete \textit{length} spaces with curvature $\ge \kappa$ (in the sense of Alexandrov).
+One could define Alexandrov spaces as complete \textit{length} spaces with curvature $\ge \kappa$ (in the sense of Alexandrov).
 This condition is more natural and general, but many statements can be reduced to the geodesic case.
 In particular, any complete length space $\spc{A}$ with curvature $\ge \kappa$ \textit{can be isometrically embedded into an $\Alex\kappa$ space} --- the ultrapower of $\spc{A}$; see \cite[4.11+8.4]{alexander-kapovitch-petrunin2024}.
 Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesics to \textit{most} points in $\spc{A}$; see
@@ -526,5 +526,5 @@ Also, by Plaut's theorem, any point $p$ in $\spc{A}$ can be connected by geodesi
 
 Our 4-point comparison in Section~\ref{sec:4-point} is closely related to the so-called $\CAT$ comparison, which defines an \textit{upper} curvature bound in the sense of Alexandrov;
 this is the subject of our previous book \cite{alexander-kapovitch-petrunin-2019}.
-In both comparisons we check certain conditions on the 6 distances between pairs of points in a 4-point set.
+In both comparisons, we check certain conditions on the 6 distances between pairs of points in a 4-point set.
 Such conditions for $n$-point subsets were considered by Michael Gromov \cite[Section 1.19$_+$]{gromov1999}, and they have been actively studied since then \cite{toyoda,lebedeva-petrunin-zolotov,lebedeva2019,petrunin2017,lebedeva-petrunin2024,lebedeva-petrunin2023,lebedeva-petrunin2021,lebedeva-petrunin2025,eskenazis-mendel-naor,gromov2001}.

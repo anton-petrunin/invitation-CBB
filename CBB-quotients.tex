@@ -286,7 +286,7 @@ Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
 
 Choose $0<\alpha\le 1$.
 Given a point $x\in\spc{A}$, choose a geodesic $[p_ix]$ and denote by $x_i$ the point on $[p_ix]$ such that $\dist{p_i}{x_i}{}=\alpha\cdot\dist{p_i}{x}{}$;
-let $\map_i\:x\to x_i$ be the corresponding map.
+let $\map_i\:x\mapsto x_i$ be the corresponding map.
 By the comparison, 
 \[\dist{x_i}{y_i}{}\ge\alpha\cdot \dist{x}{y}{}\]
 for any $x$, $y$, and $i$.
@@ -295,9 +295,9 @@ Therefore
 
 Now, suppose $\alpha<\tfrac12$.
 Then $x_i\in V_i$ for any $x\in \spc{A}$.
-Indeed, assume $x_i\notin V_i$,
+Indeed, assume $x_i\notin V_i$;
 then there is $p_j$ such that $\dist{p_i}{x_i}{}\ge\dist{p_j}{x_i}{}$.
-Then by comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
+By comparison, we have $\angk{p_j}{p_i}{x}_{\EE^2}>\tfrac\pi2$;
 that is, $p_j$ is not an extremal point.
 
 It follows that $\vol V_i\ge\alpha^m\cdot\vol \spc{A}$
@@ -326,7 +326,7 @@ Is it true that $\mathfrak{M}(\Gamma)\le 2^m$?
 
 Note that any finite subgroup $F$ of $\Gamma$ fixes an affine subspace $A_F$ in $\EE^m$.
 If $F$ is maximal, then $A_F$ completely describes $F$.
-Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fix $A_F$ pointwise has to be finite.
+Indeed, since the action is properly discontinuous, the subgroup of $\Gamma$ that fixes $A_F$ pointwise has to be finite.
 This subgroup must contain $F$, but since $F$ is maximal, it must coincide with $F$.
 
 Denote by $\mathfrak{M}_k(\Gamma)$ the number of maximal finite subgroups $F<\Gamma$ (up to conjugation) such that $\dim A_F=k$.
@@ -389,7 +389,7 @@ Submetries were introduced by Valerii Berestovskii \cite{berestovskii1987} and h
 
 A more general form of Theorem \ref{thm:hsiang-kleiner} was found by Karsten Grove and Burkhard Wilking \cite{grove-wilking};
 it classifies isometric $\SSS^1$ actions on 4-dimensional manifolds with nonnegative sectional curvature.
-This proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
+Their proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
 
 It is expected that \textit{no $\Alex1$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
 so \ref{thm:hsiang-kleiner} holds for a general $\Alex1$ space.
@@ -421,7 +421,7 @@ Then $|F|\le2^m$.
 Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
 \end{thm}
 
-This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Gr\"unbaum \cite{danzer-gruenbaum}.
+This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-gruenbaum}.
 Grigory Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
 Applying our argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
 the case of equality requires more work.
@@ -451,7 +451,7 @@ Any $m$-dimensional compact $\Alex0$ space has at most $2^m$ minimal extremal su
 Let us mention another related conjecture.
 A nonempty extremal set is called \index{primitive extremal set}\emph{primitive} if it contains no proper extremal subsets with nonempty relative interior.
 (Given an Alexandrov space and a point $p$ in it, the set of points reachable from $p$ by a recursive application of the gradient flow for squares of distance functions forms a primitive extremal set.)
-For example, each face of an $m$-dimensional cube is its primitive extremal subset;
+For example, each face of an $m$-dimensional cube is a primitive extremal subset;
 therefore the cube has exactly $3^m$ primitive extremal subsets, including the whole cube.
 
 \begin{thm}{Conjecture}

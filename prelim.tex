@@ -1,5 +1,3 @@
-%%!TEX root = the-prelim.tex
-
 \chapter{Preliminaries}\label{chap:prelim}
 
 \section{Prerequisites}
@@ -54,13 +52,13 @@ The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
 
 We will denote by \index{60@$\SSS^m$, $\EE^m$, $\HH^m$, and $\MM^m(\kappa)$}$\SSS^m$, $\EE^m$, and $\HH^m$ the $m$-dimensional sphere (with angle metric),
-the Euclidean space, and the Lobachevsky space respectively.
+the Euclidean space, and the Lobachevsky space, respectively.
 More generally, $\MM^m(\kappa)$ will denote the \index{model!space}\emph{model $m$-space} of curvature $\kappa$;
 that is,
 \begin{itemize}
 \item if $\kappa>0$, then $\MM^m(\kappa)$ is the $m$-sphere of radius $\tfrac{1}{\sqrt{\kappa}}$, so $\SSS^m\z=\MM^m(1)$
 \item $\MM^m(0)=\EE^m$,
-\item if $\kappa<0$, then $\MM^m(\kappa)$ is the Lobachevsky $m$-space $\HH^m$ rescaled by factor $\tfrac{1}{\sqrt{-\kappa}}$;
+\item if $\kappa<0$, then $\MM^m(\kappa)$ is the Lobachevsky $m$-space $\HH^m$ rescaled by the factor $\tfrac{1}{\sqrt{-\kappa}}$;
 in particular $\MM^m(-1)=\HH^m$.
 \end{itemize}
 
@@ -139,7 +137,7 @@ Let $\spc{X}$ be a metric space,
 and let $\II$\index{60@$\II$ (real interval)} be a real interval.
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
 \footnote{Other texts  may refer to geodesics in our sense of the word as  \textit{shortest path} or \textit{minimizing geodesic}.
-Also, our meaning of the term \textit{geodesic} is closely related, but different from what is used in Riemannian geometry.};
+Also, our meaning of the term \textit{geodesic} is closely related to, but different from, the term used in Riemannian geometry.};
 in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{}=|s-t|\]
 for any pair $s,t\in \II$.
@@ -149,7 +147,7 @@ In this case, the image of $\gamma$ is denoted by $[p q]$\index{10@$[pq]=[p q]_{
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ lies in the space ${\spc{X}}$.
 
-In general, a geodesic from $p$ to $q$ need not exist and if it exists, it need not  be unique;
+In general, a geodesic from $p$ to $q$ need not exist, and if it exists, it need not  be unique;
 for example, any meridian is a geodesic between poles on the sphere.
 However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 
@@ -172,7 +170,7 @@ Given two points $x,y$ in a metric space  $\spc{X}$, a point $z\in \spc{X}$ is c
 \quad\text{and}\quad
 \dist{y}{z}{}=\tfrac12\cdot\dist{x}{y}{}.\]
 
-If $\spc{X}$ is geodesic then for any two points there is a midpoint between them.
+If $\spc{X}$ is geodesic, then for any two points there is a midpoint between them.
 The following lemma says that the converse holds for complete metric spaces.
 \begin{thm}{Menger's lemma}\label{lem:mid>geod}
 Let $\spc{X}$ be a complete metric space.
@@ -186,7 +184,7 @@ This lemma is due to Karl Menger \cite[Section 6]{menger}.
 
 \parit{Proof.}
 Choose $x,y\in \spc{X}$;
-set $\gamma(0)=x$, and $\gamma(1)=y$.
+set $\gamma(0)=x$ and $\gamma(1)=y$.
 
 \begin{figure}[ht!]
 \vskip-0mm
@@ -211,7 +209,7 @@ Therefore,
 \[
 \length\gamma\le \dist{x}{y}{}.
 \]
-Therefore $\gamma$ is a geodesic path from $x$ to $y$.
+Hence $\gamma$ is a geodesic path from $x$ to $y$.
 \qedsf
 
 \begin{thm}{Exercise}\label{ex:menger}
@@ -223,7 +221,7 @@ that is, given $\eps>0$, there is a point $z$ such that
 \quad\text{and}\quad
 \dist{y}{z}{}<\tfrac12\cdot\dist{x}{y}{}+\eps.\]
 Show that $\spc{X}$ is a length space.
-Conversely, if $\spc{X}$ is a length space then for any two points there exist almost midpoints between them.
+Conversely, if $\spc{X}$ is a length space, then for any two points there exist almost midpoints between them.
 \end{thm}
 
 
@@ -232,7 +230,7 @@ Conversely, if $\spc{X}$ is a length space then for any two points there exist a
 \parbf{Triangles.}
 Given a triple of points $p,q,r$ in a metric space $\spc{X}$, a choice of geodesics $([q r], [r p], [p q])$ will be called a \index{triangle}\emph{triangle} and denoted by $\trig p q r=\trig p q r_{\spc{X}}$\index{10@$\trig p q r=\trig p q r_{\spc{X}}$ (triangle)}.
 
-Given a triple of points $p,q,r\in \spc{X}$ there may be no triangle
+Given a triple of points $p,q,r\in \spc{X}$, there may be no triangle
 $\trig p q r$ simply because one of the pairs of these points cannot be joined by a geodesic.
 Also, many different triangles with these vertices may exist, any of which can be denoted by $\trig p q r$.
 If we write $\trig p q r$, it means that we have chosen such a triangle.
@@ -255,7 +253,7 @@ In the same way, we can define the \index{hyperbolic model triangle}\emph{hyperb
 in the Lobachevsky plane $\HH^2$ and the unit sphere~$\SSS^2$.
 In the latter case, the model triangle is said to be defined if in addition
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi.\]
-In this case, the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
+Then the model triangle again exists and is unique up to an isometry of~$\SSS^2$.
 
 \parbf{Model angles.}
 If 
@@ -354,7 +352,7 @@ Thus
 \[\alpha_{1,3}\le \alpha_{1,2}+\alpha_{2,3}+3\cdot \eps.\]
 Hence the result follows.
 
-To define $s(t,\tau)$, consider three half-lines $\tilde \gamma_1$, $\tilde \gamma_2$, $\tilde \gamma_3$ on a Euclidean plane starting at one point, such that
+To define $s(t,\tau)$, consider three half-lines $\tilde \gamma_1$, $\tilde \gamma_2$, $\tilde \gamma_3$ in a Euclidean plane starting at one point, such that
 $\mangle(\tilde \gamma_1,\tilde \gamma_2)\z=\alpha_{1,2}+\eps$,
 $\mangle(\tilde \gamma_2,\tilde \gamma_3)\z=\alpha_{2,3}+\eps$,
 and $\mangle(\tilde \gamma_1,\tilde \gamma_3)\z=\alpha_{1,2}\z+\alpha_{2,3}\z+2\cdot \eps$.
@@ -368,7 +366,7 @@ Clearly, $s\le\max\{t,\tau\}$, so $t,\tau,s$ may be taken sufficiently small.
 \begin{thm}[!]{Exercise}\label{ex:adjacent-angles}
 Prove that the sum of adjacent angles is at least $\pi$.
 
-More precisely: suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
+More precisely, suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adjacent hinges}\emph{adjacent};
 that is, they share side $[pz]$, and the union of two sides $[px]$ and $[py]$ forms a geodesic $[xy]$.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
@@ -500,7 +498,7 @@ Loosely speaking, the distance between (isometry classes of) compact metric spac
 % \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
 
 Observe that we \textit{know} a real number $x$ if we can give a yes/no answer to the question $x<r$ for any $r$.
-Keep this in mind while reading the following definition.
+Keep this in mind when reading the following definition.
 
 \begin{thm}{Definition}\label{def:GH}
 The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X}-\spc{Y}|_{\GH}$ between compact metric spaces $\spc{X}$ and $\spc{Y}$
@@ -514,7 +512,7 @@ respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 \end{thm}
 
 These distances actually define a metric on (isometry classes of) compact metric spaces; for a proof we refer to \cite{burago-burago-ivanov,petrunin2023pure}.
-The obtained metric is called the Gromov--Hausdorff metric;
+The resulting metric is called the Gromov--Hausdorff metric;
 the corresponding metric space will be denoted by \index{GH@$\GH$ (space of spaces)}$\GH$.
 This means in particular that if $|\spc{X}-\spc{Y}|_{\GH}\z=0$ for compact metric spaces $X$ and $Y$, then they are isometric.
 Moreover, each of the references above provides the following statement.
@@ -542,8 +540,8 @@ Notice that now we have two notions of convergence of metric spaces.
 One is defined in the previous section; it works for proper metric spaces and
 its limit might not be uniquely defined.
 The other is defined as convergence in $\GH$;
-the limit in $\GH$ is unique, if it exists.
-In particular, these convergences are different, but if we restrict our attention only to nonempty uniformly bounded compact spaces, then these two convergences are essentially the same.
+the limit in $\GH$ is unique if it exists.
+In particular, these convergences are different, but if we restrict our attention to nonempty uniformly bounded compact spaces, then these two convergences are essentially the same.
 Let us sketch why.
 
 Suppose $|\spc{X}_n-\spc{X}_\infty|_{\GH}\to 0$ as $n\to \infty$;
@@ -554,11 +552,11 @@ Gluing all $\spc{V}_n$ along $\spc{X}_\infty$, we get the required space $\bm{X}
 Once the convergence is fixed, we can talk about limits of sequences $x_n\in \spc{X}_n$ in $\spc{X}_\infty$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on --- all these limits are defined as the corresponding limits in the ambient space $\bm{X}$.
 
 Now suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ with the common space $\bm{X}$.
-Assume that all spaces $\spc{X}_1,\spc{X}_2,\dots$, as well as $\spc{X}_\infty$ are compact, and $\spc{X}_\infty$ is nonempty.
+Assume that all spaces $\spc{X}_1,\spc{X}_2,\dots$, as well as $\spc{X}_\infty$, are compact, and $\spc{X}_\infty$ is nonempty.
 (The latter condition means that the convergence is nontrivial.)
 Observe that in this case $\dist{\spc{X}_n}{\spc{X}_\infty}{\Haus\bm{X}}\to 0$ as $n\to \infty$,
 and therefore $\dist{\spc{X}_n}{\spc{X}_\infty}{\GH}\to 0$.
-In other words $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
+In other words, $\spc{X}_n$ converges to $\spc{X}_\infty$ in $\GH$.
 
 \section{Almost isometries}\label{sec:Almost isometries}
 
@@ -581,7 +579,7 @@ for any $x,x'\in\spc{X}$.
 
 \end{thm}
 
-When dealing with Gromov--Hausdorff convergence the following lemma allows us to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
+When dealing with Gromov--Hausdorff convergence, the following lemma allows us to bypass constructing explicit metrics on the disjoint unions of $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 
 \begin{thm}{Lemma}\label{lem:almost-isom}
 Let $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$ be compact metric spaces,
@@ -598,15 +596,15 @@ Then there is a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$.
 Furthermore, a partial converse also holds.
 
 \begin{subthm}{lem:almost-isom-c}
-Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$, the spaces $\spc{X}_n$ are uniformly bounded and $\spc{X}_\infty$ is nonempty and compact.
+Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$, the spaces $\spc{X}_n$ are uniformly bounded, and $\spc{X}_\infty$ is nonempty and compact.
 Then for some sequence $\eps_n\to\0+$ as $n\to\infty$ there are $\eps_n$-isometries $f_n\:\spc{X}_n\to\spc{X}_\infty$ (and $h_n\:\spc{X}_\infty\to\spc{X}_n$)
-such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty) }{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
+such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty)}{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
 \end{subthm}
 \end{thm}
 
 
 \parit{Proof.}
-To prove part \ref{SHORT.lem:almost-isom-a} let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
+To prove part \ref{SHORT.lem:almost-isom-a}, let us construct a common space $\bm{X}$ for the spaces $\spc{X}_1,\spc{X}_2,\dots$, and $\spc{X}_\infty$
 by taking the metric $\rho$ on the disjoint union $\spc{X}_\infty\sqcup\spc{X}_1\sqcup\spc{X}_2\sqcup\dots$ that is defined the following way:
 \begin{align*}
 \dist{x_n}{y_n}{\bm{X}}&=\dist{x_n}{y_n}{\spc{X}_n},
@@ -644,29 +642,27 @@ we have
 \end{thm}
 
 Lemma~\ref{lem:almost-isom} has a natural analogue for pointed convergence.
-For simplicity we only state part \ref{SHORT.lem:almost-isom-a} of the lemma.
-Parts \ref{SHORT.lem:almost-isom-b} and \ref{SHORT.lem:almost-isom-c} can be rephrased similarly;
-in \ref{SHORT.lem:almost-isom-c} we have to assume that the space is proper.
+For simplicity, we only state part \ref{SHORT.lem:almost-isom-a} of the lemma.
+Parts \ref{SHORT.lem:almost-isom-b} and \ref{SHORT.lem:almost-isom-c} can be rephrased similarly.
 
 The proof of the following lemma is analogous to \ref{lem:almost-isom}.
 
 \begin{thm}{Lemma}\label{lem:almost-isom-pointed}
-Let $(\spc{X}_1, p_1),(\spc{X}_2,p_2) ,\dots$, and $(\spc{X}_\infty, p_\infty)$ be pointed metric spaces, and let $\eps(n,R)\to\0+$ as $n\to\infty$ for any fixed $R>0$.
+Let $(\spc{X}_1, p_1),(\spc{X}_2,p_2),\dots$, and $(\spc{X}_\infty, p_\infty)$ be pointed metric spaces, and let $\eps(n,R)\to\0+$ as $n\to\infty$ for any fixed $R>0$.
 Suppose that for each $n$ there is a map $f_n\:\spc{X}_n\to\spc{X}_\infty$ such that
 
 
 \begin{subthm}{lem:almost-isom-pointed-basepoint}
-$f_n(p_n)\to p_\infty$
+$f_n(p_n)\to p_\infty$;
 \end{subthm}
 
 \begin{subthm}{lem:almost-isom-pointed-b}
-$\bigl|\dist{f_n(x)}{f_n(x')}{\spc{X}_\infty }-\dist{x}{x'}{\spc{X}_n}\bigr|\le \eps(n,R)$ for any $x,x'\z\in \oBall(p_n,R)$.
+$\bigl|\dist{f_n(x)}{f_n(x')}{\spc{X}_\infty}-\dist{x}{x'}{\spc{X}_n}\bigr|\le \eps(n,R)$ for any $x,x'\z\in \oBall(p_n,R)$;
 \end{subthm}
 
 \begin{subthm}{lem:almost-isom-pointed-c}
-For any $x \in \oBall(p_\infty,R)$ there is $x_n\in \oBall(p_n,R)$ such that $\dist{x}{f_n(x_n)}{}\le \eps(n,R)$
+For any $x \in \oBall(p_\infty,R)$, there is $x_n\in \oBall(p_n,R)$ such that $\dist{x}{f_n(x_n)}{}\le \eps(n,R)$.
 \end{subthm}
-
 Then there is a pointed  Gromov--Hausdorff convergence $(\spc{X}_n,p_n)\z\to (\spc{X}_\infty,p_\infty)$.
 \end{thm}
 

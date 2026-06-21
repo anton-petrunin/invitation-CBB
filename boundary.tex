@@ -10,7 +10,7 @@ The definition of boundary will use induction on dimension, and it will work \te
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By~\ref{ex:dim=1},
 $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
-This  allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
+This allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
 Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$ where $m\ge 2$.
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space.
@@ -23,7 +23,7 @@ therefore its boundary is already defined and hence this inductive definition ma
 Prove the following statements:
 
 \begin{subthm}{ex:bry:Em}
-For a closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary $K$ described above.
+For a closed convex set $K\subset \EE^m$ with nonempty interior, the topological boundary of $K$ as a subset of $\EE^m$ coincides with the boundary of $K$ described above.
 \end{subthm}
 
 \begin{subthm}{ex:bry:sum}
@@ -33,7 +33,7 @@ Then
 \end{subthm}
 
 \begin{subthm}{ex:bry:cone}
-If $\Cone\Sigma$ is an $\Alex0$ space of dimension $\ge 2$ (by \ref{ex:finite-space-of-directions-dim} this implies that $\Sigma$ is  $\Alex1$), then
+If $\Cone\Sigma$ is an $\Alex0$ space of dimension $\ge 2$ (by \ref{ex:finite-space-of-directions-dim} this implies that $\Sigma$ is $\Alex1$), then
 \[\partial \Cone\Sigma=\Cone\partial\Sigma,\]
 where $\Cone\partial\Sigma\df\set{s\cdot \xi\in\Cone\Sigma }{\xi\in \partial\Sigma}$.
 \end{subthm}
@@ -64,7 +64,7 @@ Note that the last condition implies that $h_\eps$ is an $o(\eps)$-isometry.
 
 The above theorem is often used together with the \textit{uniqueness of conic neighborhoods} stated below.
 
-Suppose that an open  neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
+Suppose that an open neighborhood $U$ of a point $x$ in a metric space $\spc{X}$
 % openness is very important. it's false otherwise
 admits a homeomorphism to $\Cone\Sigma$ such that $x$ is mapped to the origin of the cone.
 In this case, we say that $U$ is a \index{conic neighborhood}\emph{conic neighborhood} of~$x$.
@@ -82,7 +82,7 @@ Prove \ref{lem:kwun} or read the proof in \cite{kwun1964}.
 Suppose $x\mapsto x'$ is a homeomorphism between finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$. Show that 
 
 \begin{subthm}{ex:conic-tangen:tangent}
-$\T_x\cong \T_{x'}$ (here and below $\cong $ means homeomorphic),
+$\T_x\cong \T_{x'}$ (here and below $\cong$ means homeomorphic),
 \end{subthm}
 
 \begin{subthm}{ex:conic-tangen:dir}
@@ -151,7 +151,7 @@ Since $k>1$, we can choose $z\ne 0$ that lies in $\partial\spc{C}$ (compare to \
 Choose $y\in \spc{A}$ that projects to $z$;
 in particular, $\corank\T_y<\corank\spc{A}$.
 By \ref{ex:conic-tangen:tangent}, $\T_y\cong\T_{y'}$,
-$\partial  \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
+$\partial \T_y\ne\emptyset$ and $\partial \T_{y'}=\emptyset$.
 The latter contradicts the minimality of $k$.
 
 \parit{Case 2.} Suppose $k\le1$ and $k'>1$.
@@ -187,7 +187,7 @@ Show that $x\in \partial \spc{A}$ if and only if $x'\in \partial \spc{A}'$.
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:bry-closed}
-Show that boundary of a finite-dimensional Alexandrov space is a closed subset.
+Show that the boundary of a finite-dimensional Alexandrov space is a closed subset.
 \end{thm}
 
 \section{Tangent space}
@@ -310,7 +310,7 @@ Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$.
 By the splitting theorem (\ref{thm:splitting}), $\Cone \Xi$ is a direct product of the line with some subcone;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
 In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
-The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both  $\xi_0$ and $\xi_1$ to $\xi$.
+The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both $\xi_0$ and $\xi_1$ to $\xi$.
 Therefore, the second statement of \ref{SHORT.thm:doubling:concave}$_m$ follows.
 
 \parit{\ref{SHORT.thm:doubling:concave}$_{m-1}+$\ref{SHORT.thm:doubling:concave}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:grad}$_m$.}
@@ -327,9 +327,9 @@ By \ref{SHORT.thm:doubling:concave}$_m$, $\mangle(\overline{\xi},\zeta)\le \tfra
 \[\mangle(\eta,\nu)\le \tfrac\pi2\eqlbl{eq:<pi/2}\]
 for any $\nu\in \Sigma_\zeta\Sigma_x$ (if $m=2$, then the last statement is evident). 
 
-Let $\phi\:\Sigma_x\to\RR$ be restriction of $\dd_xf$ to $\Sigma_x$.
+Let $\phi\:\Sigma_x\to\RR$ be the restriction of $\dd_xf$ to $\Sigma_x$.
 Applying \ref{ex:d(distfun):=} and \ref{eq:<pi/2}, we get that $(\dd_{\zeta}\phi)(\eta)\le 0$.
-%V:  I don't understand this. doesn't this just follow from the fact that $\bar \xi$ is a point of maximum of $\phi$? A: It should be \zeta, not \bar \xi --- sorry.
+%V: I don't understand this. doesn't this just follow from the fact that $\bar \xi$ is a point of maximum of $\phi$? A: It should be \zeta, not \bar \xi --- sorry.
 Recall that $\dd_xf$ is concave (\ref{ex:concave-differential}), so $(\dd_xf)''\le 0$;
 by straightforward computations, we have that $\phi''+\phi\le 0$.
 If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
@@ -411,7 +411,7 @@ otherwise, the inequality again follows from the comparison in~$\spc{A}_0$.
 
 Choose $y=\gamma(t_0)$; without loss of generality we can assume that $t_0=0$.
 
-Assume  $y\z\in \spc{A}_0\setminus\partial\spc{A}$.
+Assume $y\z\in \spc{A}_0\setminus\partial\spc{A}$.
 Then $(f\z\circ\gamma)''(0)\le 1$ in the barrier sense;
 it follows from the comparison in $\spc{A}_0$.
 
@@ -420,11 +420,11 @@ Suppose $[py]$ crosses $\partial\spc{A}$ at $x$;
 by \ref{clm:crossing}, this point is unique.
 Let $\Sigma_x$ be the space of directions of $\spc{A}$ at $x$,
 and let $\Xi$ be its doubling.
-As before, we denote by $\Sigma_0$ and $\Sigma_1$ the two copies of $\Sigma_x$ in  $\Xi$
+As before, we denote by $\Sigma_0$ and $\Sigma_1$ the two copies of $\Sigma_x$ in $\Xi$
 and keep the notation $\partial\Sigma_x$ for their common boundary.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
 
-The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides from $\partial\Sigma_x$ and
+The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides of $\partial\Sigma_x$ and
 \[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
 Otherwise, we could choose a direction $\xi\in\partial\Sigma_x$ such that
 \[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi.\]
@@ -459,7 +459,7 @@ Let us show that
 \end{aligned}
 \eqlbl{eq:gamma''}
 \]
-for suitable value $s$.
+for a suitable value $s$.
 
 The first inequality in \ref{eq:gamma''} is evident.
 Set $\phi=\mangle\hinge{x}{y}{z}$ and $\psi\z=\mangle(\dir xp,\xi')$.
@@ -503,7 +503,7 @@ Prove the last inequality.
 
 Hence we get $(f\circ\gamma)''(0)\le 1$ in the barrier sense.
 
-Finally if $\gamma(0)\in\partial\spc{A}$, then a splitting argument shows that 
+Finally, if $\gamma(0)\in\partial\spc{A}$, then a splitting argument shows that
 \[(f\circ\gamma)^+(0)-(f\circ\gamma)^-(0)\le 0.\]
 
 Summarizing, we get that $(f\circ\gamma)''\le 1$ on every arc of $\gamma$ that lies entirely in $\spc{A}_0$ or $\spc{A}_1$.
@@ -549,14 +549,13 @@ for any $x\in\partial \spc{A}$.
 \end{thm}
 
 
-
 \section{Remarks}\label{sec:bry-remarks}
 
 
 The doubling theorem was generalized by the third author \cite{petrunin1997} allowing gluing nonidentical spaces and generalized further by Jian Ge and Nan Li \cite{ge-li} allowing for gluing more than two spaces.
 
-It easily follows by induction on dimension  that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
-This observation often helps to reduce a statement about general finite-dimensional Alexandrov spaces to  Alexandrov spaces without boundary.
+It easily follows by induction on dimension that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
+This observation often helps to reduce a statement about general finite-dimensional Alexandrov spaces to Alexandrov spaces without boundary.
 
 Let us discuss several additional tools that are available for spaces with empty boundary.
 
@@ -568,8 +567,9 @@ that is, if $\spc{A}$ is $m$-dimensional, then
 \end{thm}
 
 This lemma was proved by Karsten Grove and Peter Petersen \cite{grove-petersen1993}.
-Originally it was stated for Alexander--Spanier cohomology. We do not make this distinction  because for compact Alexandrov spaces it is the same as singular cohomology.
-Indeed,  both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier}, compact Alexandrov spaces are homotopy equivalent to finite simplicial complexes (see \ref{thm:finite-dim-hom-simplicial}) and  for paracompact  CW complexes  Alexander--Spanier cohomology is isomorphic to \v{C}ech  and singular cohomology \cite[Chapter 6]{Spanier}.
+Originally it was stated for Alexander--Spanier cohomology.
+We do not make this distinction because for compact Alexandrov spaces it is the same as singular cohomology.
+Indeed, both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier}, compact Alexandrov spaces are homotopy equivalent to finite simplicial complexes (see \ref{thm:finite-dim-hom-simplicial}), and for paracompact CW complexes, Alexander--Spanier cohomology is isomorphic to Čech and singular cohomology \cite[Chapter 6]{Spanier}.
 
 The lemma implies, for example, that on finite-dimensional Alexandrov spaces without boundary
 the gradient flow for a $\lambda$-concave function is an onto map;
@@ -628,7 +628,7 @@ Let $f$ be a semiconcave function.
 A point $p\in \Dom f$ is called a \index{critical point}\emph{critical} point of $f$ if $\dd_pf\le 0$;
 otherwise it is called \index{regular point}\emph{regular}.
 
-The following statement plays a role in the proof of stability theorem,
+The following statement plays a role in the proof of the stability theorem,
 but it is also a useful technical tool on its own.
 
 \begin{thm}{Morse lemma}
@@ -639,7 +639,7 @@ Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x)
 
 The Morse lemma was originally proved by Grigory Perelman \cite{perelman1993} for a special kind of semiconcave functions made out of distance functions.
 For such functions it holds for all Alexandrov spaces (possibly with nonempty boundary).
-For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) were generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using  \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
+For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) were generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
 On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.%
 \footnote{Semiconcave functions are often defined to meet this property, but we do not follow this convention.}
 This is automatic for the special type of semiconcave functions considered in \cite{perelman1993}; therefore this distinction is not made there.

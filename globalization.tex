@@ -1,7 +1,7 @@
 %%!TEX root = the-globalization.tex
 \chapter{Globalization}\label{chap:globalization}
 
-The globalization theorem states that a locally Alexandrov space is globally Alexandrov.
+The globalization theorem states that every locally Alexandrov space is globally Alexandrov.
 We prove it for compact spaces and indicate the proof of the general case.
 
 \section{Globalization}
@@ -26,7 +26,7 @@ for any hinge $\hinge x p y$ in $\spc{A}$.
 
 Inequality \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
 this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\EE^2$-comparison.
-Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds if $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
+Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds whenever $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
 Applying the key lemma several times, we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
 \qeds
 
@@ -47,7 +47,7 @@ $\dist{x}{p}{}+\dist{x}{q}{}
 
 Let $\hinge x p q$ be a hinge in $\spc{A}$.
 Denote by $\side \hinge x p q$ its \index{21@$\side \hinge x p q$ (model side)}\index{model!side}\emph{model side};
-this is the opposite side in a plane triangle with the same angle and adjacent side lengths as in $\hinge x p q$.
+this is the opposite side in the plane triangle with the same angle and adjacent side lengths as in $\hinge x p q$.
 
 \begin{wrapfigure}{r}{44mm}
 \centering
@@ -80,7 +80,7 @@ It is sufficient to prove that
 \[\side \hinge x p q
 \ge\dist{p}{q}{}\eqlbl{eq:thm:=def-loc*}\]
 
-First, let us describe a construction of a new hinge $\hinge{x'}p q$, which has several properties described below;
+First, let us describe a construction of a new hinge $\hinge{x'}p q$ with several properties described below;
 in particular,
 \[
 \dist{p}{x}{}+\dist{x}{q}{}\ge\dist{p}{x'}{}+\dist{x'}{q}{},
@@ -96,7 +96,7 @@ Take $x'\in [x q]$ such that
 \[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell.
 \eqlbl{3|xx'|}\]
-Choose a geodesic $[x' p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x'p]$ and $[x' q]\subset [x q]$.
+Choose a geodesic $[x' p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x' p]$ and $[x' q]\subset [x q]$.
 The triangle inequality implies \ref{eq:thm:=def-loc-fourstar}.
 Furthermore, 
 \begin{align*}
@@ -151,14 +151,14 @@ and \ref{eq:thm:=def-loc-fivestar} follows.
 
 Let us continue the proof.
 Set $x_0=x$.
-Applying the above construction inductively, we can construct a sequence of hinges $\hinge{x_n}p q$ with $x_{n+1}\z=x_n'$.
+Applying the above construction inductively, we obtain a sequence of hinges $\hinge{x_n}p q$ with $x_{n+1}\z=x_n'$.
 From \ref{eq:thm:=def-loc-fivestar}, we see that the sequence $s_n\z=\side \hinge{x_n}p q$ is nonincreasing.
 \begin{figure}[ht!]
 \centering
 \includegraphics{mppics/pic-825}
 \end{figure}
 
-The sequence $x_n$ terminates at some $n$ if
+The process terminates at $x_n$ if
 $\dist{p}{x_n}{}+\dist{x_n}{q}{}
 \z<\tfrac{2}{3}\cdot\ell$.
 In this case, by the assumptions of the lemma, $\side \hinge{x_n}p q\z\ge\dist{p}{q}{}$.
@@ -180,7 +180,7 @@ b_n&=\max\{\dist{p}{x_n}{},\dist{q}{x_n}{}\},
 r_n&=\dist{p}{x_n}{}+\dist{x_n}{q}{}=a_n+b_n.
 \end{align*}
 By the triangle inequality, $r_n$ is a nonincreasing sequence.
-Since $x_n$ does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for all $n$.
+Since the process does not terminate, we have $\tfrac{2}{3}\cdot\ell\le r_n<\ell$ for all $n$.
 
 By \ref{3|xx'|}, $\dist{x_n}{x_{n+1}}{}=\tfrac13\cdot(\tfrac23\cdot\ell-a_n)$.
 %From \ref{eq:thm:=def-loc-two-sided*} and \ref{eq:thm:=def-loc-fourstar},
@@ -205,7 +205,7 @@ a_{n+1}&=r_{n+1}-b_{n+1}=
 \end{split}
 \]
 Since $r_n$ does not increase, it must converge;
-so, $r_n-r_{n+1}\z\to 0$ as $n\to\infty$.
+so $r_n-r_{n+1}\z\to 0$ as $n\to\infty$.
 Therefore, $r_n-r_{n+1}\z\le \tfrac1{100}\cdot \ell$ for all large $n$.
 Observe that $b_n\ge\tfrac12 \cdot r_n$, and therefore $b_n\ge \tfrac13\cdot\ell$.
 Taking \ref{eq:|xx'|>=l/18} into account, we get that in both cases $a_{n+1}\ge\tfrac1{100}\cdot \ell$ for all large $n$,
@@ -219,7 +219,7 @@ $\mangle\hinge{x_n}{p_n}{x_{n+1}}\to \pi$ as $n\to\infty$.
 
 It follows that
 \[r_n-s_n=\dist{p}{x_n}{}+\dist{x_n}{q}{}-\side \hinge{x_n}p q\to 0.\] 
-By the triangle inequality
+By the triangle inequality,
 $r_n\ge\dist{p}{q}{}$;
 therefore,
 \[\lim_{n\to\infty}s_n\ge \dist{p}{q}{}.\]
@@ -234,7 +234,7 @@ Any locally $\Alex\kappa$ space is $\Alex\kappa$.
 
 This is a more general version of our globalization theorem~\ref{thm:glob}.
 It holds for an arbitrary curvature bound~$\kappa$ and replaces compactness with completeness.
-A proof can be found in~\cite[2F]{alexander-kapovitch-petrunin2024}; it is based on the idea from \ref{thm:glob}, but requires a few additional twists that we are about to discuss.
+A proof can be found in~\cite[2F]{alexander-kapovitch-petrunin2024}; it is based on the idea of \ref{thm:glob}, but requires a few additional twists that we are about to discuss.
 
 \parbf{Trading compactness for completeness.}
 Assume for a moment that $\kappa=0$.
@@ -258,7 +258,7 @@ To prove the theorem, we need to choose a point $p$ satisfying the conclusion of
 \parbf{On general curvature bounds.}
 The case $\kappa\le 0$ in \ref{thm:globalization+} can be proved in the same way as the case $\kappa=0$, but the case $\kappa>0$ requires extra care.
 This is because model triangles may be undefined in $\MM^2(\kappa)$ when $\kappa>0$.%
-\footnote{Recall that according to the definitions in Section~\ref{sec:Triangles and model triangles},
+\footnote{Recall that, according to the definitions in Section~\ref{sec:Triangles and model triangles},
 if $\angk p q r_{\MM^2(\kappa)}$, and hence $\modtrig(p q r)_{\MM^2(\kappa)}$, are defined for some $\kappa>0$, then
 $\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}< 2\cdot\pi/\sqrt{\kappa}$.}
 
@@ -279,7 +279,7 @@ By~\ref{ex:k-><mono},
 \]
 whenever both sides are defined.
 This completes the proof in the case $\Kappa\le 0$.
-In general, however, the comparison holds only for sufficiently small triangles;
+In general, however, the comparison is guaranteed only for sufficiently small triangles;
 in particular, any $\Alex\Kappa$ space is \index{locally $\Alex\kappa$}\emph{locally} $\Alex\kappa$.
 Therefore, \ref{thm:globalization+} completes the proof.
 \qeds
@@ -296,7 +296,7 @@ On the other hand, $\spc{X}$ does not have curvature $\ge 0$, since
 =\angk p{x_1}{x_3}_{\EE^2}
 =\pi.
 \]
-Use this example as a warning when you work with a non-intrinsic metric.
+Use this example as a warning when working with a non-intrinsic metric.
 
 \begin{thm}[!]{Exercise}\label{ex:RisCBB(1)}
 Let $p$ and $q$ be points in an $\Alex1$ space $\spc{A}$.
@@ -322,7 +322,7 @@ The globalization theorem is also known as the \textit{generalized Toponogov the
 Its $2$-dimensional case was proved by Paolo Pizzetti \cite{pizzetti} and
 rediscovered by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref??
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
-For Alexandrov spaces of all dimensions, the theorem first appears in the paper of Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
+For Alexandrov spaces of all dimensions, the theorem first appears in the paper by Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
 They prove globalization for \textit{complete length spaces}.
 Another version for \textit{noncomplete but geodesic spaces} is due to the third author \cite{petrunin:globalization}.
 
