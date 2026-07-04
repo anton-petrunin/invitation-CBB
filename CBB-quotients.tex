@@ -110,7 +110,7 @@ In the $\Alex1$ case, the proof produces a weaker statement: \textit{{if $\sigma
 In particular, $\spc{B}$ is \textit{locally} $\Alex1$.
 As above, assuming orbits are closed, the quotient of a proper geodesic space is geodesic.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
-The same holds for the targets of submetries from an $\Alex1$ space.
+The same holds for the targets of submetries from  $\Alex1$ spaces.
 With a bit of extra work, one can extend the statement to nonproper spaces \cite[8.34]{alexander-kapovitch-petrunin2024}.
 Thus, we have the following.
 
@@ -243,8 +243,11 @@ Note that $\Sigma_{y_i}\spc{A}$ is isometric to a quotient of $\SSS^3$ by an iso
 
 By \ref{lem:S^3/S^1}, each angle $\mangle\hinge{y_i}{y_j}{y_k}\le \tfrac\pi2$ for any three distinct points
 $y_i$, $y_j$, $y_k$.
+(Alternatively this follows from the fact that each  point $y_i$ must  extremal in $\spc{A}$ by similar argument as in \ref{lem:extr/G} (see \cite[4.2]{perelman-petrunin} for details) and hence the diameter of  $\Sigma_{y_i}\spc{A}$ is at most $\pi/2$. )
+
+
 In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
-By the comparison, the sum of angles in each triangle is strictly greater than $\pi$.
+By the comparison, the sum of the angles in each triangle is strictly greater than $\pi$.
 
 Denote by $\omega$ the sum of all 12 angles in the 4 triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$.
 From above,
@@ -257,6 +260,7 @@ Apply the same argument in $\Sigma_{y_2}\spc{A}$, $\Sigma_{y_3}\spc{A}$, and $\S
 adding the results, we get 
 \[\omega\le 4\cdot\pi\]
 --- a contradiction.
+
 
 \parit{Case \ref{case2}.}
 Suppose $F$ contains one surface $S$.
@@ -392,7 +396,7 @@ it classifies isometric $\SSS^1$ actions on 4-dimensional manifolds with nonnega
 Their proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
 
 It is expected that \textit{no $\Alex1$ space with a nontrivial isometric $\SSS^1$-action can be homeomorphic to $\SSS^2\times\SSS^2$};
-so \ref{thm:hsiang-kleiner} holds for a general $\Alex1$ space.
+that is \ref{thm:hsiang-kleiner} holds for a general $\Alex1$ space.
 The proof of \ref{thm:hsiang-kleiner} would work if we had the following generalization of \ref{lem:S^3/S^1};
 see \cite{harvey-searle}.
 
@@ -424,13 +428,13 @@ Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional 
 This problem was posed by Paul Erdős \cite{erdos} and solved by Ludwig Danzer and Branko Grünbaum \cite{danzer-gruenbaum}.
 Grigory Perelman noticed that, after proper definitions, the same proof works in Alexandrov spaces \cite{perelman-Erdos}; thus, it proves \ref{thm:extr-point}.
 Applying our argument to the convex hull of $F$ in \ref{erdos-problem} proves that $|F|\le 2^m$;
-the case of equality requires more work.
+classifying the case of equality requires more work.
 
 Compact $m$-dimensional $\Alex0$ spaces with the maximal number of extremal points include $m$-dimensional rectangles and the quotients of flat tori by reflections across a point
 (this action has $2^m$ isolated fixed points; each corresponds to an extremal point in the quotient space $\spc{A}=\TT^m/\ZZ_2$).
 The second author has proved \cite{lebedeva2015} that \textit{every $m$-dimensional $\Alex0$ space with $2^m$ extremal points is a quotient of Euclidean space by a crystallographic action}.
 
-The extremal subsets of Alexandrov spaces were briefly discussed in \ref{sec:bry-remarks}.
+Extremal subsets of Alexandrov spaces were briefly discussed in \ref{sec:bry-remarks}.
 The following definition is more relevant to isometric group actions.
 
 A closed subset $E$ in a finite-dimensional Alexandrov space is called
@@ -458,4 +462,4 @@ therefore the cube has exactly $3^m$ primitive extremal subsets, including the w
 Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ primitive extremal subsets.
 \end{thm}
 
-Some crude estimates on the number of extremal subsets follow from the idea in Gromov's Betti number theorem \ref{thm:betti}.
+Some none-sharp explicit estimates on the number of extremal subsets can be obtained from the ideas in the proof of Gromov's Betti number theorem \ref{thm:betti}.
