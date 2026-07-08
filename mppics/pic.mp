@@ -1780,6 +1780,57 @@ label.llft(btex $v_4$ etex, .5[z.a,z.c]);
 endfig;
 
 
+beginfig(1172)
+save u,p;
+path p[];
+u:=1cm;
+
+numeric r[],a[];
+r1:=2.4*u;
+a1=70;
+
+p1=
+(r1/(1+cosd(-a1)),0)
+for i=1 step 1 until 180:
+..
+(r1/(1+cosd(i-a1)),0) rotated i
+endfor
+;
+
+r2:=1.1*u;
+a2=80;
+
+p2=
+(r2/(1+cosd(-a2)),0)
+for i=1 step 1 until 180:
+..
+(r2/(1+cosd(i-a2)),0) rotated i
+endfor
+;
+
+p11=p1;
+p12=reverse p1 yscaled -1;
+p21=reverse p2 rotated 20;
+p22=p2 yscaled -1 rotated 20;
+
+fill p11--p12--p22--p21--cycle withcolor .6;
+
+draw p11;
+draw p12;
+draw p21;
+draw p22;
+
+for i=20 step 20 until 180:
+draw ((4.5*u,0)--(-4.5*u,0)) rotated i penhair withcolor 0.3;
+endfor
+
+for i=1 step 1 until 4:
+draw circle(origin,i*u) penhair withcolor 0.3;
+endfor
+
+dOt point 0 of p11, point 0 of  p12, point 0 of p21, point 0 of p22;
+
+endfig;
 
 beginfig(1201) 
 save u,p;
