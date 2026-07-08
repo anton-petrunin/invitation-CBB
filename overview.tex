@@ -298,7 +298,7 @@ Since any convex body is a Hausdorff limit of a sequence of convex polyhedrons, 
 \begin{thm}{Proposition}\label{prop:conv-surf-CBB(0)}
 The surface of a convex body in $\EE^3$ is $\Alex0$.
 \end{thm}
-
+Alternatively this can be shown by approximating the defining convex function of a convex body  by a smooth convex function using a convolution. The Gauss formula implies that the level sets of the latter have $\sec\ge 0$ and hence are s $\Alex0$. Now the result again follows by \ref{ex:surface-covergence}.
 \section{Uniqueness theorem}
 
 \begin{thm}{Theorem}\label{thm:alexandrov-uni'}
@@ -359,7 +359,7 @@ that is, it might be an intersection of an edge and a fake edge (as $v$ in the p
 \vskip-0mm
 \end{figure}
 
-For a usual vertex, the local lemma can be proved the same way.
+For an actual vertex, the local lemma can be proved the same way as in Cauchy's theorem.
 For a fake vertex $v$, it is easy to see that both parts of the edge coming thru $v$ are marked with minus
 while both of the fake edges at $v$ are marked with plus.
 Therefore, we still have at least four sign changes at $v$.
@@ -368,7 +368,7 @@ The remaining argument works as before.
 
 \section{Existence theorem}
 
-By \ref{prop:poly-CBB}, \ref{clm:total-angle}, and \ref{ex:surf-S2}, the surface of a convex polyhedron is $\Alex0$ and homeomorphic to the sphere.
+By \ref{prop:poly-CBB}, \ref{clm:total-angle}, and \ref{ex:surf-S2}, the surface of a convex polyhedron is $\Alex0$ and is homeomorphic to the sphere.
 Alexandrov's theorem states that the converse holds if one includes in the consideration \textit{twice covered polygons}.
 In other words, we have to consider a plane polygon as a degenerate polyhedron;
 in this case, its surface is defined as the doubling of the polygon across its boundary.
@@ -497,6 +497,8 @@ in other words, the surface still has exactly $n$ essential vertices.
 (After the patching, the vertices $v$ and $w$ may become inessential.
 There is a three-parameter family of such patches, so we have something to choose from.)
 Choosing a one-parameter family of such patches, we can get an elementary deformation of~$\spc{P}$.
+% this is very confusing without more details
+
 
 Again, applying a general-position-type argument to the above construction, we get a path in $\bm{P}_n^\circ$, assuming that the starting and ending surfaces are in $\bm{P}_n^\circ$.
 
@@ -563,7 +565,7 @@ that is, $\iota\:\bm{K}_n\z\to\bm{P}_n$ is surjective.
 
 \section{Ambient space}
 
-On one hand, Alexandrov's surface theory is simpler since it has extra tools.
+On one hand, Alexandrov's surface theory is simpler than that of general Alexandrov spaces since it has extra tools.
 On the other hand, these tools come with extra structure, which makes the theory more complicated.
 The following result of Joseph Liberman \cite{liberman} gives an example.
 
