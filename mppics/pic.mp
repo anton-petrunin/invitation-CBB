@@ -1786,25 +1786,25 @@ path p[];
 u:=1cm;
 
 numeric r[],a[];
-r1:=2.4*u;
-a1=70;
+r1:=2.1*u;
+a1=30;
 
 p1=
-(r1/(1+cosd(-a1)),0)
+(r1/(cosd(-a1)),0)
 for i=1 step 1 until 180:
 ..
-(r1/(1+cosd(i-a1)),0) rotated i
+(r1/(cosd(i/2-a1)),0) rotated i
 endfor
 ;
 
-r2:=1.1*u;
-a2=80;
+r2:=1.2*u;
+a2=35;
 
 p2=
-(r2/(1+cosd(-a2)),0)
+(r2/(cosd(-a2)),0)
 for i=1 step 1 until 180:
 ..
-(r2/(1+cosd(i-a2)),0) rotated i
+(r2/(cosd(i/2-a2)),0) rotated i
 endfor
 ;
 
