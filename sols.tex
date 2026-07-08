@@ -10,7 +10,7 @@ Note that the centers of these balls form an $\eps$-net of $X$.
 
 Now suppose $X$ has a finite $\eps$-net.
 Show that any sequence $x_n$ of points in $X$ has a subsequence such that all of its points lie in one $\eps$-ball.
-Apply this statement for $\eps=\tfrac1n$ together with the diagonal procedure.
+Apply this statement for $\eps=\tfrac1n$ together with a diagonal procedure.
 
 \parit{\ref{SHORT.ex:net:compact}.}
 Let $Z$ be a compact $\eps$-net of $X$.
@@ -108,7 +108,7 @@ Since the space is proper, it is separable;
 that is, we can choose a countable everywhere dense set $\{x_1,x_2,\dots\}$.
 
 Let $A_1,A_2,\dots$ be a sequence of closed sets.
-Applying the diagonal procedure, we can pass to a subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$;
+Applying a diagonal procedure, we can pass to a subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$;
 denote its limit by $f(x_i)$.
 
 Since $\distfun_{A_n}$ is $1$-Lipschitz for any $n$, we have 
@@ -269,7 +269,7 @@ that share side $[\tilde p\tilde z]$ and lie on its opposite sides.
 Note that 
 \begin{align*}
 \dist{\tilde x}{\tilde y}{\EE^2}
-&\ge \dist{\tilde x}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde y}{\EE^2}=
+&\le \dist{\tilde x}{\tilde z}{\EE^2}+\dist{\tilde z}{\tilde y}{\EE^2}=
 \\
 &=\dist{x}{z}{\spc{X}}+\dist{z}{y}{\spc{X}}=
 \\
@@ -297,6 +297,8 @@ By comparison,
 \[\angk zpq+\angk zpy+\angk zqy\le 2\cdot\pi.\]
 Therefore, one of the angles $\angk zpy$ or $\angk zqy$ is strictly less than $\pi$.
 The latter contradicts the triangle inequality.
+
+Alternatively, if there are two distinct geodesics from $z$ to $x$ then their concatenations with $[yz]$ gives bifurcating geodesics from $y$ to $x$. This contradicts \ref{ex:0-angle}.
 
 \parbf{\ref{ex:adjacent-CBB}.}
 By \ref{ex:adjacent-angles}, we have
@@ -361,7 +363,7 @@ Hence we have
 for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that all such norms are quadratic, and the statement follows.
-
+% similar proof shows that if in a Banach space all angles exist then it's Hilbert. maybe give that exercise in ch 1 and obtain this one as a corollary?
 \parbf{\ref{ex:concave'}.}
 Choose a $\lambda$-concave function $f\:\II\to\RR$.
 Note that
