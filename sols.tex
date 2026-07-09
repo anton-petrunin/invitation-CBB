@@ -419,7 +419,7 @@ otherwise, it is isometric to a line segment.
 Arguing by contradiction, suppose 
 \[\dist{p}{q}{}+\dist{q}{r}{}+\dist{r}{p}{}> 2\cdot\pi\eqlbl{eq:perimeter-of-triange<2pi}\] 
 for $p,q,r\in \spc{A}$. 
-Rescaling the space slightly, we can assume that $\diam\spc{A}<\pi$,
+Rescaling the space slightly by a constant $<1$, we can assume that $\diam\spc{A}<\pi$,
 but the inequality \ref{eq:perimeter-of-triange<2pi} still holds.
 By \ref{clm:K>k},
 after rescaling $\spc{A}$ is still $\Alex1$.
@@ -451,9 +451,9 @@ and
 Choose $\tilde z\in [\tilde q\tilde r]$,
 and let $z\in [q r]$ be the corresponding point.
 By comparison, $\dist pz{}\le\dist {\tilde p}{\tilde z}{}$ if $z$ lies near $z_0$.
-Moreover, this inequality holds as far as 
+Moreover, this inequality holds as long as 
 \[\dist{\tilde p}{\tilde z_0}{}+\dist{\tilde z_0}{\tilde z}{}+\dist{\tilde p}{\tilde z}{}<2\cdot\pi.\]
-But this inequality holds for all $\tilde z$ since $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
+But this inequality holds for all $\tilde z\in [\tilde q\tilde r]$ since $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
 Hence $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
 The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
 
@@ -501,7 +501,7 @@ To prove the converse, reverse the steps in the argument.
 \parbf{\ref{ex:GHto-tangent}.}
 Let $\spc{A}_n=\lambda_n\cdot\spc{A}$.
 Note that for any $n$ the space $\Sigma_p\spc{A}$ is identical to $\Sigma_{\iota_n(p)} \spc{A}_n$.
-In particular, we can identify isometrically $\T_p\spc{A}$ with $\T_{\iota_n(p)}\spc{A}_n$.
+In particular, we can canonically and isometrically dentify  $\T_p\spc{A}$ with $\T_{\iota_n(p)}\spc{A}_n$.
 So for any geodesic $\gamma$ that starts at $p$, the vector $\gamma^+(0)$ corresponds to $\frac{1}{\lambda_n}\cdot(\iota_n\circ\gamma)^+(0)$.
 
 Consider the logarithm maps $f_n=\log_{\iota_n(p)}\:\spc{A}_n\to \T_p\spc{A}$.
@@ -577,13 +577,13 @@ f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
 \\
 f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
 \end{align*}
-Hence the statement follows.
+Hence the statement follows by adding these inequalities.
 
 \parbf{\ref{ex:d(distfun):==}.}
 If the space is proper, then the statement follows from \ref{ex:d(distfun):=} and \ref{ex:pi-angle}.
 
 To do the general case, let us argue by contradiction.
-By the assumption, we can choose a point $z$ on the extension of $[pq]$ behind~$q$.
+By the assumption, we can choose a point $z$ on the extension of $[pq]$ beyond~$q$.
 We can assume that $|v|=1$ and it is a direction of a geodesic, say $[px]$.
 
 Show that there is a sequence $x_n\in \left]px\right]$ such that $\dist{p}{x_n}{}\to0$ and
@@ -634,6 +634,10 @@ Since $f\circ\gamma$ is $\lambda$-concave, we have
 It follows that 
 \[(\dd_xf)(\dir xy)=(f\circ\gamma)^+(0)>s,\]
 and by \ref{prop:grad-exist}, $|\nabla_x f|>s$.
+
+This proves \ref{SHORT.ex:semicontinuous-grad:>s}.
+
+To prove \ref{SHORT.ex:semicontinuous-grad:lim}  argue by contradiction and apply \ref{SHORT.ex:semicontinuous-grad:>s}.
 
 \parbf{\ref{ex:elf-contracting}.}
 Note that $f\circ\alpha$ is a nondecreasing function.
