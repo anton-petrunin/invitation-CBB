@@ -811,6 +811,7 @@ Choose a geodesic $\gamma$ in $\T_p$; assume it can be extended beyond its endpo
 Construct a sequence of geodesics $\gamma_n$ in $\lambda_n\cdot \spc{A}$ that converge to $\gamma$ (here you should use that $\gamma$ can be extended).
 Since $f_n\circ\gamma_n\z\to \dd_pf\circ\gamma$, we get that $\dd_pf$ is concave on $\gamma$, which implies the statement.
 
+The same argument more generally shows that given a (pointed) Gromov-Hausdorff convergence of geodesics $\Alex{\kappa}$ spaces $\spc{X}_n\to \spc{X}$ and $\lambda$-concave functions $f_n$ on $\spc{X}_n$ pointwise converging to a function $f$ on  $\spc{X}$ the limit function $f$ is also $\lambda$-concave.
 
 
 
@@ -969,10 +970,11 @@ We get that $\Sigma_p$ is a spherical suspension (over a nonempty space!) with p
 Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
 \parbf{\ref{ex:dim-lim}.}
-Apply \ref{ex:resporka}.
+Apply the 4-point condition to prove that $\spc{A}_\infty$ is $\Alex\kappa$.
+To prove the dimension bound apply \ref{ex:resporka}.
 
 \parbf{\ref{ex:diam-compact:GH}.}
-Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{A}_n}$ for a given $R>0$, then apply the diagonal procedure to construct the needed convergence.
+Argue as in \ref{thm:gromov-compactness} to construct a Gromov--Hausdorff convergence of $\cBall(p_n,R)_{\spc{A}_n}$ for a given $R>0$, then apply a diagonal procedure to construct the needed convergence.
 
 \parbf{\ref{ex:pack-vol:dim}.}
 By \ref{ex:dim-lim}, $\dim\spc{A}_\infty\le m$.
@@ -986,7 +988,7 @@ In other words, if $\bm{K}_m\subset \GH$ denotes the set of isometry classes of 
 $\vol_m\:\bm{K}_m\to \RR$ is continuous \cite[10.8]{burago-gromov-perelman}.
 
 \parbf{\ref{ex:barrier}.}
-Choose a smooth upper barrier $\bar f$ of $f$ at $t_0$ with $\bar f''\le \lambda_1$, provided by the lemma.
+Choose a smooth upper barrier $\bar f$ of $f$ at $t_0$ with $\bar f''\le \lambda_1$, provided by Lemma \ref{lem:barrier}.
 Observe that the composition $\phi\circ\bar f$ is an upper barrier of $\phi\circ f$ at $t_0$.
 It remains to apply the chain rule to $\phi\circ\bar f$ and use the lemma again.
 
@@ -1013,7 +1015,7 @@ Verify that this convergence provides the desired counterexample.
 
 \parit{Comments.}
 The spaces $(\SSS^3,g_n)$ are called \index{Berger sphere}\emph{Berger spheres}.
-Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $\SSS^3\times (\eps\cdot \SSS^1)/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
+Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $(\SSS^3\times (\eps\cdot \SSS^1))/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
 
 \parbf{\ref{ex:conic}.}
 Let $V$ and $W$ be two conic neighborhoods of a point~$p$.
