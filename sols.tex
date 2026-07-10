@@ -811,7 +811,7 @@ Choose a geodesic $\gamma$ in $\T_p$; assume it can be extended beyond its endpo
 Construct a sequence of geodesics $\gamma_n$ in $\lambda_n\cdot \spc{A}$ that converge to $\gamma$ (here you should use that $\gamma$ can be extended).
 Since $f_n\circ\gamma_n\z\to \dd_pf\circ\gamma$, we get that $\dd_pf$ is concave on $\gamma$, which implies the statement.
 
-The same argument more generally shows that given a (pointed) Gromov-Hausdorff convergence of geodesics $\Alex{\kappa}$ spaces $\spc{X}_n\to \spc{X}$ and $\lambda$-concave functions $f_n$ on $\spc{X}_n$ pointwise converging to a function $f$ on  $\spc{X}$ the limit function $f$ is also $\lambda$-concave.
+\parit{Remark.} The same argument more generally shows that given a (pointed) Gromov-Hausdorff convergence of geodesics $\Alex{\kappa}$ spaces $\spc{X}_n\to \spc{X}$ and $\lambda$-concave functions $f_n$ on $\spc{X}_n$ pointwise converging to a function $f$ on  $\spc{X}$ the limit function $f$ is also $\lambda$-concave.
 
 
 
@@ -1013,7 +1013,7 @@ Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
 Then all $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
 Verify that this convergence provides the desired counterexample.
 
-\parit{Comments.}
+\parit{Comment}
 The spaces $(\SSS^3,g_n)$ are called \index{Berger sphere}\emph{Berger spheres}.
 Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $(\SSS^3\times (\eps\cdot \SSS^1))/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
 
@@ -1034,7 +1034,7 @@ $f_n(k)=f_m(k)$ for any $k\in K$ and $m, n \ge n_K$.
 
 Once such a sequence is constructed, $f\:V\to W$ can be defined by $f(v)=f_n(v)$ for all large values of $n$; this gives the needed homeomorphism.
 
-The sequence $f_n$ can be constructed recursively
+The sequence $f_n$ can be constructed recursively by the formula
 \[f_{n+1}=\Psi_n\circ f_n\circ \Phi_n,\]
 where $\Phi_n\:V\selfmap$
 and $\Psi_n\:W\selfmap$
@@ -1055,7 +1055,8 @@ Apply \ref{SHORT.ex:conic-tangen:tangent}.
 
 \parit{\ref{SHORT.ex:conic-tangen:example}.}
 Recall that the Poincaré homology sphere can be obtained as a quotient space $\Sigma=\SSS^3/\Gamma$ by an isometric action of a finite group $\Gamma$ --- the so-called binary icosahedral group.
-By the double suspension theorem, $\Susp^2\Sigma\cong\SSS^5$.
+By the double suspension theorem due to Edwards, %maybe give a reference here?
+$\Susp^2\Sigma\cong\SSS^5$.
 Note that $\Susp^2\Sigma$ is an Alexandrov space and it has a point with space of directions isometric to $\Susp\Sigma$.
 Observe that $\Susp\Sigma$ is not a manifold; in particular $\Susp\Sigma\ncong\SSS^4$.
 Therefore the pair $\Susp^2\Sigma$ and $\SSS^5$ provides the needed example.
@@ -1122,7 +1123,7 @@ Conclude that $(\distfun_{\partial \spc{A}}\circ\gamma)''(0)\le 0$ in the barrie
 Suppose $\gamma$ is defined on the interval $[0,\ell]$.
 Assume that the function $\rho\:t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is not $1$-concave.
 Let $\bar\rho\:[0,\ell]\to\RR$ be the minimal $1$-concave function such that $\bar\rho\ge \rho$.
-Note that $\bar\rho=\rho$ at the ends of $[0,\ell]$.
+Note that $\bar\rho=\rho$ at the ends of $[0,\ell]$ but $\bar\rho>\rho$ at some point on $(0,\ell)$ .
 
 Consider the curve $\bar\gamma(t)\df \GF_f^{s(t)}\gamma(t)$,
 where $f=\tfrac12\cdot\distfun_p^2$ and $s(t)\z=\ln\circ\bar\rho(t)-\ln\circ\rho(t)$.
@@ -1133,6 +1134,10 @@ This is the so-called \index{Liberman's lemma}\emph{Liberman's lemma};
 it was proved by Grigory Perelman and the third author \cite{perelman-petrunin} and generalizes a theorem of Joseph Liberman \cite{liberman} about geodesics on convex surfaces.
 
 \parbf{\ref{ex:native}.}
+The "only if" direction easily follows from the fact that $f\circ\proj\circ\gamma$ is invariant under the canonical isometric involution of $\spc{W}$.
+
+Let us prove the "if" direction.
+
 Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
 that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ and $\spc{A}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
