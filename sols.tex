@@ -717,13 +717,13 @@ moreover, in case of equality, $\beta=\alpha$.
 
 \parbf{\ref{ex:cone-CBB}.}
 Suppose $\Cone\spc{X}$ is $\Alex0$.
-Observe that two half-lines in $\Cone\spc{X}$ that start from the origin and go into directions $x$ and $y\in\spc{X}$ form a line if and only if $\dist{x}{y}{\spc{X}}\ge \pi$.
-Apply the splitting theorem to show that for any $x\in \spc{X}$ there is at most one point $y$ such that $\dist{x}{y}{\spc{X}}\ge \pi$ and in this case we have equality.
+Observe that two half-lines in $\Cone\spc{X}$ that start from the origin and go in directions $x$ and $y\in\spc{X}$ form a line if and only if $\dist{x}{y}{\spc{X}}\ge \pi$.
+Apply the splitting theorem or non-branching of geodesics in  $\Cone\spc{X}$ to show that for any $x\in \spc{X}$ there is at most one point $y$ such that $\dist{x}{y}{\spc{X}}\ge \pi$ and in this case we have equality.
 Conclude that $\diam \spc{X}\z\le \pi$.
 
 Now choose a quadruple of points $p,x_1,x_2,x_3\in \spc{X}$;
 we will identify $\spc{X}$ with the unit sphere in $\Cone\spc{X}$.
-Suppose $\dist{p}{x_i}{}<\tfrac\pi2$ for any $i$.
+Suppose $\dist{p}{x_i}{\spc{X}}<\tfrac\pi2$ for any $i$.
 Consider the following points in the cone: $y_i=\tfrac1{\cos \dist{p}{x_i}{\spc{X}}}\cdot x_i$, and $q=p$.
 Show that $\EE^2$-comparison for $q,y_1,y_2,y_3$ in $\Cone\spc{X}$ implies $\SSS^2$-comparison for $p,x_1,x_2,x_3$ in $\spc{X}$.
 Conclude that $\spc{X}$ is locally $\Alex1$. 
@@ -807,7 +807,7 @@ Consider functions $f_n\:\lambda_n\cdot \spc{A}\to \RR$ defined by
 \[f_n(\iota_n(x))=\lambda_n\cdot f(x).\]
 Observe that $f_n$ is $\tfrac1{\lambda_n}$-concave and $f_n\to \dd_pf$ as $n\to\infty$ for the convergence $(\lambda_n\cdot \spc{A},p)\z\to (\T_p,0)$ from \ref{ex:GHto-tangent-finite-dim}.
 
-Choose a geodesic $\gamma$ in $\T_p$; assume it can be extended behind its endpoints.
+Choose a geodesic $\gamma$ in $\T_p$; assume it can be extended beyond its endpoints.
 Construct a sequence of geodesics $\gamma_n$ in $\lambda_n\cdot \spc{A}$ that converge to $\gamma$ (here you should use that $\gamma$ can be extended).
 Since $f_n\circ\gamma_n\z\to \dd_pf\circ\gamma$, we get that $\dd_pf$ is concave on $\gamma$, which implies the statement.
 
@@ -891,7 +891,7 @@ Conclude that $\phi(t_0)=\psi(t_0)=0$; hence the result.
 \parit{\ref{SHORT.ex:proof-right-inverse:end}}
 A straightforward application of \ref{lem:fg-dist-est} and a reformulation of \ref{SHORT.ex:proof-right-inverse:alpha}.
 
-\parit{Remarks.}
+\parit{Remark.}
 By \ref{lem:fg-dist-est}, the constructed map $\map$ is bi-Hölder with the exponent $\tfrac12$.
 In particular, \textit{every infinite-dimensional Alexandrov space $\spc{A}$ contains a bi-Hölder copy of a Euclidean ball of arbitrary dimension}.
 It seems plausible that $\spc{A}$ should contain a bi-Lipschitz copy of a Euclidean ball of arbitrary dimension,
@@ -916,12 +916,12 @@ It follows that
 \mangle\hinge yx{a_0}<\tfrac\pi2-\eps.
 \eqlbl{eq:a0}
 \]
-Note that $\dist{x}{y}{}$ is small compared to $\dist{a_0}{x}{}$ and $\dist{a_0}{y}{}$.
+Note that $\dist{x}{y}{}$ is small compared to $\dist{a_0}{x}{}$, $\dist{a_0}{y}{}$ and $\eps$.
 Therefore, the comparison contradicts \ref{eq:a0}. 
 
 By the construction, $f$ is Lipschitz.
 By the above, we can choose an index $i>0$ so that $\mangle\hinge xy{a_i}<\tfrac\pi2-\eps$ (if $\mangle\hinge yx{a_i}<\tfrac\pi2-\eps$, then swap $x$ and $y$).
-By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}+c\cdot \dist{x}{y}{}$.
+By comparison, there is $c>0$ such that $\dist{a_i}{y}{}\le \dist{a_i}{x}{}-c\cdot \dist{x}{y}{}$.
 Hence $f$ is bi-Lipschitz, and now \ref{thm:right-inverse} implies \ref{thm:dist-chart}.
 
 \parbf{\ref{ex:BG}.} 
@@ -965,7 +965,7 @@ By \ref{thm:finite-space-of-directions} for any two points $\xi,\zeta\in\Sigma_p
 Suppose $\dist{\xi}{\zeta}{\Sigma_p}\ge\pi$.
 Then $\T_p$ contains a line thru the origin in the directions $\xi$ and $\zeta$.
 By \ref{SHORT.ex:finite-tan:tan} we can apply the splitting theorem (\ref{thm:splitting}) to $\T_p$.
-We get that $\Sigma_p$ is a spherical suspension with poles $\xi$ and $\zeta$.
+We get that $\Sigma_p$ is a spherical suspension (over a nonempty space!) with poles $\xi$ and $\zeta$.
 Hence, $\dist\xi\zeta{}=\pi$ and there is a geodesic $[\xi\zeta]$.
 
 \parbf{\ref{ex:dim-lim}.}
