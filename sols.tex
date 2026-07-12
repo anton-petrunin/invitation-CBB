@@ -1280,8 +1280,23 @@ It remains to apply \ref{prop:poly-CBB}.
 Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
 
 \parit{\ref{SHORT.ex:approximation:length}.}
-Apply the hinge comparison (\ref{angle}).
-% This proves the first inequality. I don't understand how to prove the second
+Denote by $\alpha$, $\beta$, and $\gamma$ the angles of $\Delta$, and let
+$\tilde\alpha$, $\tilde\beta$, and $\tilde\gamma$ be the corresponding model angles.
+Since $\tilde\alpha+\tilde\beta+\tilde\gamma=\pi$, we have
+\[
+\excess\Delta
+=
+\alpha+\beta+\gamma
+-\tilde\alpha-\tilde\beta-\tilde\gamma.
+\]
+By comparison, $\tilde\alpha\le\alpha$, $\tilde\beta\le\beta$, and $\tilde\gamma\le\gamma$.
+Hence
+\[
+\alpha\le\tilde\alpha+\excess\Delta,\quad
+\beta\le\tilde\beta+\excess\Delta,\quad
+\gamma\le\tilde\gamma+\excess\Delta.
+\]
+It remains to apply the hinge comparison (\ref{angle}).
 
 \parit{\ref{SHORT.ex:approximation:area}.}
 The first inequality follows from the generalized Kiszbraun theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun, alexander-kapovitch-petrunin2024};
