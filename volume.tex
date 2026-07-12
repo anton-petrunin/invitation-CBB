@@ -108,6 +108,7 @@ Namely, if $\gamma$ is a geodesic such that $|(f\z\circ\gamma)^\pm|$ is bounded 
 For smooth real-to-real functions $f$ and $\phi$ this follows from the chain rule $(\phi\circ f)''(x)=\phi''(f(x))\cdot (f'(x))^2+\phi'(f(x)) \cdot f''(x)$.
 This trick does not help if $|(f\circ\gamma)^\pm|\approx 0$, but it does not make concavity worse;
 so $\phi\circ f$ is very concave in most directions and at least as concave as $f$ in all directions.
+
 In the proof we consider a sum $\phi\circ f_1+\ldots+\phi\circ f_N$ for a suitably chosen sequence of functions $f_1,\ldots,f_N$, so that for any geodesic $\gamma$ in a small neighborhood of $p$ the value $|(f_i\circ\gamma)^\pm|$ is bounded away from zero for some $i$.
 
 \medskip
@@ -149,11 +150,14 @@ and the if part follows.
 Let $f$ be a Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
 Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $0>c_3\ge \phi''(x_0)$.
 Let $\lambda_2=c_2\cdot\lambda_1+c_1^2\cdot c_3$.
-Show that $\phi\circ f$ is $\lambda_2$-concave in a neighborhood of~$t_0$.
+Show that $\phi\circ f$ has a smooth upper barrier $u$ at $t_0$ with
+$u''(t_0)\le \lambda_2$.
+
+
 \end{thm}
 
 \begin{thm}[!]{Exercise}\label{ex:pack-sphere}
-Let $\Omega$ be a nonempty open set in an $m$-dimensional Alexandrov space $\spc{A}$; assume $m<\infty$.
+Let $\Omega$ be a nonempty open set in an $m$-dimensional Alexandrov space $\spc{A}$; assume $1\le m<\infty$.
 Given a point $p$, there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
 \end{thm}
 
@@ -194,18 +198,17 @@ h_i&=\phi_{r,c}\circ\distfun_{q_i}\circ\gamma.
 
 Suppose that $\dist{q_i}{\gamma(t_0)}{}$ is sufficiently close to
 $r$.
-Then by \ref{ex:barrier} we have that
-$h_i$
-is $\lambda_i(t_0)$-concave in a neighborhood of $t_0$.
+By \ref{ex:barrier}, $h_i$ has a smooth upper barrier $u_i$ at $t_0$ such that $u_i''(t_0)\le \lambda_i(t_0)$.
 
 Assume that $\dist{p}{q_i}{}=r$ for each $i$, and $\eps_1>0$ is small.
-If the geodesic $\gamma$ lies in $\oBall(p,\eps_1)$, then from above we have that $\sum h_i$ is $\sum\lambda_i(t_0)$-concave in a neighborhood of any $t_0$.
+If the geodesic $\gamma$ lies in $\oBall(p,\eps_1)$, then from above we have that $\sum h_i$ has a smooth upper barrier $u=\sum u_i$ at $t_0$ such that $u''(t_0)\le \sum \lambda_i(t_0)$.
 
 Suppose that there is $\eps_2>0$ such that
-\[\max_i\{|\alpha_i(t)-\tfrac\pi2|\}\ge\eps_2>0\eqlbl{eq:angle-ne-pi/2}\]
-for any geodesic $\gamma$ in $\oBall(p,\eps_1)$.
-If $c>3\cdot N/\sin^2\eps_2$, then $\sum\lambda_i(t_0)<0$ and
-$\sum h_i$ is strictly concave in a neighborhood of $t_0$ for any choice of geodesic $\gamma$ in $\oBall(p,\eps_1)$.
+\[\max_i\{|\alpha_i(t_0)-\tfrac\pi2|\}\ge\eps_2>0\eqlbl{eq:angle-ne-pi/2}\]
+for any geodesic $\gamma$ in $\oBall(p,\eps_1)$ and every $t_0$
+in the domain of $\gamma$.
+If $c>3\cdot N/\sin^2\eps_2$, then $\sum\lambda_i(t_0)<0$ for any $t_0$.
+By \ref{lem:barrier}, $\sum h_i$ is strictly concave.
 It follows that
 \[f=\sum_i \phi_{r,c}\circ\distfun_{q_i}\]
 is strictly concave in $\oBall(p,\eps_1)$.
@@ -231,12 +234,12 @@ The $\Alex\kappa$-case can be reduced to the $\Alex{-1}$-case by rescaling, and 
 The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in a hyperplane in $\HH^m$.
 \qeds
 
-Given a point $p$ a strictly concave function $f$ can be chosen so that
+Given a point $p$, a strictly concave function $f$ can be chosen so that
 $f(p)=0$ and $(\dd_p f)(x)\approx-|x|$.
 In particular, $p$ is the maximal point of $f$.
 It can be constructed by taking the minimum of the functions in the theorem.
-Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$, so we get the following.
-
+Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$.
+Replacing $f$ by $f+\eps$, we get the following.
 
 \begin{thm}{Corollary}\label{cor:convex-nbhd}
 Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrarily small convex closed neighborhood $K$ and a strictly concave function $f$ defined in a neighborhood of $K$ such that $p$ is the maximum point of $f$
@@ -245,13 +248,13 @@ and $f|_{\partial K}=0$.
 
 
 \begin{thm}{Exercise}\label{ex:no-conc}
-Construct an Alexandrov space $\spc{A}$ such that there is no open set $\Omega\subset \spc{A}$ with a strictly concave function $f$ defined on $\Omega$.
+Construct an Alexandrov space $\spc{A}$ such that there is no nonempty open set $\Omega\subset \spc{A}$ with a strictly concave function $f$ defined on $\Omega$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:dist-chart+strictly-concave}
 Let $p,a_0,\dots,a_m$ be points in an $m$-dimensional Alexandrov space $\spc{A}$ such that $\dist{p}{a_i}{}=r$ for any $i$ and $\angk p{a_i}{a_j}>\tfrac\pi2$
-for any $i\ne j$, and let $\phi_{c,r}$ be as in the proof of \ref{thm:strictly-concave}, with $c$ large.
-Show that the function $f=\phi_{c,r}\circ\distfun_{a_1}+\dots+\phi_{c,r}\circ\distfun_{a_m}$
+for any $i\ne j$, and let $\phi_{r,c}$ be as in the proof of \ref{thm:strictly-concave}, with $c$ large.
+Show that the function $f=\phi_{r,c}\circ\distfun_{a_1}+\dots+\phi_{r,c}\circ\distfun_{a_m}$
 is strictly concave in a neighborhood of $p$.
 \end{thm}
 
