@@ -1264,6 +1264,7 @@ Use it to show that the union of two convex polygons can be triangulated by conv
 Apply the last statement recursively to a finite cover of $\spc{P}$ by convex polygons.
 
 \parit{\ref{SHORT.ex:approximation:poly}.}
+Let $\tilde{\spc{P}}$ be the polyhedral surface obtained from $\spc{P}$ as in the proof of  \ref{thm:approximation}
 By comparison, $\tilde{\spc{P}}$ has nonnegative curvature.
 It remains to apply \ref{prop:poly-CBB}.
 
@@ -1280,6 +1281,7 @@ Show that the total angle around each vertex of the triangulation is at most $2\
 
 \parit{\ref{SHORT.ex:approximation:length}.}
 Apply the hinge comparison (\ref{angle}).
+% This proves the first inequality. I don't understand how to prove the second
 
 \parit{\ref{SHORT.ex:approximation:area}.}
 The first inequality follows from the generalized Kiszbraun theorem proved by Urs Lang and Viktor Schroeder \cite{lang-schroeder:kirszbraun, alexander-kapovitch-kirszbraun, alexander-kapovitch-petrunin2024};
@@ -1376,7 +1378,7 @@ Alternatively, since the nearest-point projection cannot increase the length of 
 for all large $n$.
 Therefore, $g_n$ is a $\delta_n$-isometry $\Sigma_n\to\Sigma_\infty$ for a sequence $\delta_n\to 0$.
 
-\parit{Comments.}
+\parit{Comment.}
 More generally, if a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1,\spc{A}_2,\dots$ converges to $\spc{A}_\infty$ and $\dim \spc{A}_\infty=m<\infty$,
 then $\partial \spc{A}_n$ equipped with the induced length metrics converge to $\partial \spc{A}_\infty$.
 This statement is a special case of the theorem about extremal subsets proved by the third author \cite[1.2]{petrunin1997}.
