@@ -228,7 +228,7 @@ Then show and use that
 The 4-point comparison (\ref{def:CBB}) reduces our question to the following.
 \textit{Any spherical triangle has perimeter at most $2\cdot\pi$.}
 Choose a spherical triangle $[xyz]$.
-Let $x'$ be the antipode of $x$; that is $x'=-x$.
+Let $x'$ be the antipode of $x$; that is, $x'=-x$.
 The spherical triangle inequality (\ref{claim:angle-3angle-inq}) implies that
 \[\dist{x}{z}{\mathbb{S}^2}\le \dist{y}{x'}{\mathbb{S}^2}+\dist{x'}{z}{\mathbb{S}^2}.\]
 Observe that 
@@ -240,7 +240,8 @@ Observe that
 Hence
 \[\dist{x}{y}{\mathbb{S}^2}+\dist{x}{z}{\mathbb{S}^2}+\dist{y}{z}{\mathbb{S}^2}\le2\cdot \pi.\]
 
-\parbf{\ref{ex:(3+1)-expanding}.} For the only-if part consider the following two cases.
+\parbf{\ref{ex:(3+1)-expanding}.}
+For the only-if part consider the following two cases.
 
 If $\angk p{x_1}{x_2}+\angk p{x_2}{x_3}\ge \pi$, then choose two model triangles $[qy_1y_2]\z=\modtrig(px_1x_2)$ and $[qy_2y_3]=\modtrig(px_2x_3)$ that lie on the opposite sides of $[qy_2]$.
 By the comparison, $\dist{y_1}{y_3}{}\ge \dist{x_1}{x_3}{}$.
@@ -364,6 +365,7 @@ for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that all such norms are quadratic, and the statement follows.
 % similar proof shows that if in a Banach space all angles exist then it's Hilbert. maybe give that exercise in ch 1 and obtain this one as a corollary?
+
 \parbf{\ref{ex:concave'}.}
 Choose a $\lambda$-concave function $f\:\II\to\RR$.
 Note that
@@ -455,7 +457,7 @@ Moreover, this inequality holds as long as
 \[\dist{\tilde p}{\tilde z_0}{}+\dist{\tilde z_0}{\tilde z}{}+\dist{\tilde p}{\tilde z}{}<2\cdot\pi.\]
 But this inequality holds for all $\tilde z\in [\tilde q\tilde r]$ since $\dist{\tilde p}{\tilde z_0}{}<\pi$, $\dist{\tilde z_0}{\tilde q}{}<\pi$, and $\dist{\tilde z_0}{\tilde r}{}<\pi$.
 Hence $\dist pq{}\le\dist {\tilde p}{\tilde q}{}$ and $\dist pr{}\le\dist {\tilde p}{\tilde r}{}$.
-The latter contradicts \ref{eq:perimeter-of-triange<2pi}.
+Since $\dist{q}{r}{}=\dist{\tilde q}{\tilde r}{}$, the latter contradicts \ref{eq:perimeter-of-triange<2pi}.
 
 \parbf{\ref{ex:dir-compact}.}
 Suppose $\dir p{x_n}\not\to\dir p{x_\infty}$.
@@ -501,7 +503,7 @@ To prove the converse, reverse the steps in the argument.
 \parbf{\ref{ex:GHto-tangent}.}
 Let $\spc{A}_n=\lambda_n\cdot\spc{A}$.
 Note that for any $n$ the space $\Sigma_p\spc{A}$ is identical to $\Sigma_{\iota_n(p)} \spc{A}_n$.
-In particular, we can canonically and isometrically dentify  $\T_p\spc{A}$ with $\T_{\iota_n(p)}\spc{A}_n$.
+In particular, we can canonically and isometrically identify $\T_p\spc{A}$ with $\T_{\iota_n(p)}\spc{A}_n$.
 So for any geodesic $\gamma$ that starts at $p$, the vector $\gamma^+(0)$ corresponds to $\frac{1}{\lambda_n}\cdot(\iota_n\circ\gamma)^+(0)$.
 
 Consider the logarithm maps $f_n=\log_{\iota_n(p)}\:\spc{A}_n\to \T_p\spc{A}$.
@@ -577,7 +579,7 @@ f(y)&\le f(x)+\phi'(0)\cdot \ell+\tfrac\lambda2\cdot\ell^2,
 \\
 f(x)&\le f(y)-\phi'(\ell)\cdot \ell+\tfrac\lambda2\cdot\ell^2.
 \end{align*}
-Hence the statement follows by adding these inequalities.
+It remains to add these inequalities.
 
 \parbf{\ref{ex:d(distfun):==}.}
 If the space is proper, then the statement follows from \ref{ex:d(distfun):=} and \ref{ex:pi-angle}.
@@ -636,7 +638,6 @@ It follows that
 and by \ref{prop:grad-exist}, $|\nabla_x f|>s$.
 
 This proves \ref{SHORT.ex:semicontinuous-grad:>s}.
-
 To prove \ref{SHORT.ex:semicontinuous-grad:lim}  argue by contradiction and apply \ref{SHORT.ex:semicontinuous-grad:>s}.
 
 \parbf{\ref{ex:elf-contracting}.}
@@ -788,9 +789,11 @@ It follows that we can choose $N+1$ directions in $\Sigma_p$ at angles larger th
 Use it to construct points $x_1,\dots,x_{N+1}$ such that
 $\angk p{x_i}{x_j}>\eps$ for $i\ne j$, and apply \ref{thm:n+1}.
 
-\parbf{\ref{ex:dim=1}.} Argue as in \ref{ex:RisCBB(1)}.
+\parbf{\ref{ex:dim=1}.}
+Argue as in \ref{ex:RisCBB(1)}.
 
-\parbf{\ref{ex:resporka}.} The only-if part is trivial.
+\parbf{\ref{ex:resporka}.}
+The only-if part is trivial.
 Suppose the configuration $p$, $a_0,\z\dots, a_{m}\in \spc{A}$ meets the condition.
 By \ref{ex:grad-dist} the directions $\dir q{a_0},\z\dots,\dir q{a_m}\in \Lin_q$ for a G-delta dense set of points $q\in \spc{A}$.
 If $q$ is sufficiently close to $p$, then $\angk q{a_i}{a_j}>\tfrac\pi2$,
@@ -811,7 +814,8 @@ Choose a geodesic $\gamma$ in $\T_p$; assume it can be extended beyond its endpo
 Construct a sequence of geodesics $\gamma_n$ in $\lambda_n\cdot \spc{A}$ that converge to $\gamma$ (here you should use that $\gamma$ can be extended).
 Since $f_n\circ\gamma_n\z\to \dd_pf\circ\gamma$, we get that $\dd_pf$ is concave on $\gamma$, which implies the statement.
 
-\parit{Remark.} The same argument more generally shows that given a (pointed) Gromov-Hausdorff convergence of geodesics $\Alex{\kappa}$ spaces $\spc{X}_n\to \spc{X}$ and $\lambda$-concave functions $f_n$ on $\spc{X}_n$ pointwise converging to a function $f$ on  $\spc{X}$ the limit function $f$ is also $\lambda$-concave.
+\parit{Remark.}
+The same argument shows that given a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$ of $\Alex{\kappa}$ spaces and $\lambda$-concave functions $f_n$ on $\spc{X}_n$ that pointwise converge to a function $f_\infty$ on  $\spc{X}_\infty$, the limit function $f_\infty$ is also $\lambda$-concave.
 
 
 
@@ -1013,7 +1017,7 @@ Let $g_n$ be obtained from $g$ by rescaling the Hopf fibers by $\frac{1}{n}$.
 Then all $(\SSS^3,g_n)$ have nonnegative curvature and this sequence converges to the round metric on $\SSS^2$ of radius $\frac{1}{2}$.
 Verify that this convergence provides the desired counterexample.
 
-\parit{Comment}
+\parit{Comment.}
 The spaces $(\SSS^3,g_n)$ are called \index{Berger sphere}\emph{Berger spheres}.
 Checking the curvature bounds is easy once you realize that $(\SSS^3,g)$ is isometric to a quotient space $(\SSS^3\times (\eps\cdot \SSS^1))/\SSS^1$, where $\SSS^1$ acts diagonally by the Hopf action on $\SSS^3$ and the standard action on $\SSS^1$.
 
@@ -1123,21 +1127,19 @@ Conclude that $(\distfun_{\partial \spc{A}}\circ\gamma)''(0)\le 0$ in the barrie
 Suppose $\gamma$ is defined on the interval $[0,\ell]$.
 Assume that the function $\rho\:t\mapsto \tfrac12\cdot\distfun_p^2\circ\gamma(t)$ is not $1$-concave.
 Let $\bar\rho\:[0,\ell]\to\RR$ be the minimal $1$-concave function such that $\bar\rho\ge \rho$.
-Note that $\bar\rho=\rho$ at the ends of $[0,\ell]$ but $\bar\rho>\rho$ at some point on $(0,\ell)$ .
+Note that $\bar\rho=\rho$ at the ends of $[0,\ell]$ but $\bar\rho>\rho$ at some point on $(0,\ell)$.
 
 Consider the curve $\bar\gamma(t)\df \GF_f^{s(t)}\gamma(t)$,
 where $f=\tfrac12\cdot\distfun_p^2$ and $s(t)\z=\ln\circ\bar\rho(t)-\ln\circ\rho(t)$.
 Use the first distance estimate to show that $\length\bar\gamma<\length\gamma$ and arrive at a contradiction.
 
 \parit{Comment.}
-This is the so-called \index{Liberman's lemma}\emph{Liberman's lemma};
-it was proved by Grigory Perelman and the third author \cite{perelman-petrunin} and generalizes a theorem of Joseph Liberman \cite{liberman} about geodesics on convex surfaces.
+This is a version of \index{Liberman's lemma}\emph{Liberman's lemma} \cite{liberman}; it was proved by Grigory Perelman and the third author \cite{perelman-petrunin}.
 
 \parbf{\ref{ex:native}.}
-The "only if" direction easily follows from the fact that $f\circ\proj\circ\gamma$ is invariant under the canonical isometric involution of $\spc{W}$.
+The only-if direction follows since $f\z\circ\proj$ is invariant under the canonical isometric involution of $\spc{W}$.
 
-Let us prove the "if" direction.
-
+Let us prove the if direction.
 Choose a geodesic $\gamma$ in $\spc{W}$.
 Arguing as in the proof of \ref{thm:doubling:doubling}, we get 
 that $\gamma$ can cross the common boundary of two halves $\spc{A}_0$ and $\spc{A}_1$ of $\spc{W}$ at most once, or it lies in the common boundary.
@@ -1264,17 +1266,10 @@ Use it to show that the union of two convex polygons can be triangulated by conv
 Apply the last statement recursively to a finite cover of $\spc{P}$ by convex polygons.
 
 \parit{\ref{SHORT.ex:approximation:poly}.}
-Let $\tilde{\spc{P}}$ be the polyhedral surface obtained from $\spc{P}$ as in the proof of  \ref{thm:approximation}
-By comparison, $\tilde{\spc{P}}$ has nonnegative curvature.
-It remains to apply \ref{prop:poly-CBB}.
-
-%\parit{\ref{SHORT.ex:approximation:diangle}.}
-%Suppose $\ell=\length\gamma_1$, and $\gamma_1$ is parametrized by $[0,\ell]$.
-%Consider the function $f\:t\mapsto \dist{\gamma_1(0)}{\gamma_1(t)}{\Upsilon}$.
-%Apply the Gauss--Bonnet formula (\ref{ex:gauss-bonnet})
-%to show that $f'(t)\ge \cos\omega$ is the left-hand side is defined.
-%Observe that $f$ is Lipschitz and make a conclusion.\footnote{With a bit more work, one can improve the inequality to
-%\[\cos \tfrac\omega2\cdot \length \gamma_1\le \length \gamma_0.\]}
+Let $\Delta_1,\dots,\Delta_n$ be the triangles incident to $v$, listed in cyclic order, and let $\alpha_i$ be the angle of $\Delta_i$ at $v$.
+Denote by $I_i\subset\Sigma_v$ the set of directions pointing into $\Delta_i$.
+Note and use that (1) each $I_i$ is an interval of length $\alpha_i\le\tfrac12\cdot\length\Sigma_v$ and (2)
+the intervals $I_i$ intersect only at their common endpoints.
 
 \parbf{\ref{ex:approximation}}; \ref{SHORT.ex:approximation:excess}.
 Show that the total angle around each vertex of the triangulation is at most $2\cdot\pi$ and argue as in \ref{ex:gauss-bonnet}.
@@ -1350,8 +1345,8 @@ From \ref{SHORT.pr:tetrahedron:=}, we have that
 Use it to show that $\langle v_1-v_2,v_1+v_2-v_3-v_4\rangle=0$.
 Make a conclusion.
 
-\parbf{\ref{ex:surface-covergence}.} We will use that the nearest-point projection $\Pi$ from the Euclidean space $\EE^m$  to a convex body $C$ is short;
-that is, distance-nonexpanding \cite[13.3]{petrunin-zamora}.  This  easily follows from the fact that for any $x\in \EE^m, y\in C$ it holds that $\langle x-\Pi(x), y-\Pi(x)\rangle\le 0$.
+\parbf{\ref{ex:surface-covergence}.} We will use that the nearest-point projection $x\mapsto \bar x$ from the Euclidean space $\EE^m$  to a convex body is short; that is, distance-nonexpanding (see for example \cite[13.3]{petrunin-zamora}).
+This is a consequence of the following obsercation: $\langle x-\bar x,\bar y-\bar x\rangle\le 0$ and $\langle y-\bar y,\bar x-\bar y\rangle\le 0$ for any $x,y\in \EE^m$.
 
 Assume $K_\infty$ is nondegenerate.
 Without loss of generality, we may assume that 

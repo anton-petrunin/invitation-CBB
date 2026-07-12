@@ -48,32 +48,27 @@ A polyhedral surface is $\Alex0$ if and only if it has nonnegative curvature at 
 \end{thm}
 
 \parit{Proof.}
-Let us  prove the "if" direction.
-By \ref{comp-kappa}, it is sufficient to check that
-$f=\tfrac12\cdot\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and any point $p$.
+To prove the if direction, observe that a near an interior point the surface is locally isometric to a cone over a circle of length $\le 2\cdot\pi$ and near a boundary point it is locally isometric to the cone over an interval of length $\le \pi$.
+Then apply \ref{ex:cone-CBB} and globalization.
 
-We can assume that $p$ is not a vertex and that the endpoints of $\gamma$ are not vertices;
-the remaining cases can be handled by approximation.
-By \ref{ex:geodesic-vertex}, $\gamma$ does not contain any vertices.
+%\parit{Proof.}
+%Let us  prove the if direction.
+%By \ref{comp-kappa}, it is sufficient to check that $f=\tfrac12\cdot\distfun_p^2\circ\gamma$ is 1-concave for any geodesic $\gamma$ and any point $p$.
 
+%We can assume that $p$ is not a vertex and that the endpoints of $\gamma$ are not vertices; the remaining cases can be handled by approximation.
+%By \ref{ex:geodesic-vertex}, $\gamma$ does not contain any vertices.
 
-
-Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
-Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain any vertices.
-Therefore, a neighborhood $U \supset [px]$ can be unfolded onto a plane;
-that is, there exists an injective length-preserving map $z \mapsto \tilde z$
-of $U$ into the Euclidean plane.
-It maps a neighborhood of $x$ in $\gamma$ to a line segment $\tilde \gamma$.
-Let
-\[\tilde f(t) \df \tfrac12 \cdot \distfun_{\tilde p}^2 \circ \tilde \gamma(t).\]
-Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0) = f(t_0)$.
-Furthermore, since the unfolding map $z \mapsto \tilde z$ preserves the lengths of curves, we obtain
-$\tilde f(t) \ge f(t)$ if $t$ is close to $t_0$.
-That is, $\tilde f$ is a local upper barrier for $f$ at $t_0$; see \ref{Function comparison}.
-Evidently, $\tilde f''= 1$.
-Therefore, $f$ is 1-concave.
-
-Alternatively, use that near an interior point the surface is locally isometric to a cone over a circle of length $\le 2\pi$ and near a boundary point it is locally isometric to the cone over an interval of length $\le \pi$. Apply \ref{ex:cone-CBB} and globalization.
+%Given a point $x=\gamma(t_0)$, choose a geodesic $[px]$.
+%Again, by \ref{ex:geodesic-vertex}, $[px]$ does not contain any vertices.
+%Therefore, a neighborhood $U \supset [px]$ can be unfolded onto a plane; that is, there exists an injective length-preserving map $z \mapsto \tilde z$ of $U$ into the Euclidean plane.
+%It maps a neighborhood of $x$ in $\gamma$ to a line segment $\tilde \gamma$.
+%Let
+%\[\tilde f(t) \df \tfrac12 \cdot \distfun_{\tilde p}^2 \circ \tilde \gamma(t).\]
+%Since the geodesic $[px]$ maps to a line segment, we have $\tilde f(t_0) = f(t_0)$.
+%Furthermore, since the unfolding map $z \mapsto \tilde z$ preserves the lengths of curves, we obtain $\tilde f(t) \ge f(t)$ if $t$ is close to $t_0$.
+%That is, $\tilde f$ is a local upper barrier for $f$ at $t_0$; see \ref{Function comparison}.
+%Evidently, $\tilde f''= 1$.
+%Therefore, $f$ is 1-concave.
 
 \begin{thm}{Exercise}\label{ex:poly-CBB}
 The converse is left to the reader.\qeds
@@ -302,8 +297,8 @@ The surface of a convex body in $\EE^3$ is $\Alex0$.
 
 \end{thm}
 
-Alternatively this can be shown by approximating the defining convex function of a convex body  by a smooth convex function using a convolution.
-The Gauss formula implies that the level sets of the latter have $\sec\ge 0$ and hence are s $\Alex0$.
+This can be also shown by approximating the defining convex function of a convex body by a smooth convex function using a convolution.
+By the Gauss formula, the level sets of the smooth function have nonnegative Gauss curvature and hence are $\Alex0$.
 Now the result again follows by \ref{ex:surface-covergence}.
 
 \section{Uniqueness theorem}
