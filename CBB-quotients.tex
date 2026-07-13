@@ -92,21 +92,21 @@ $\sigma_1\:\mathbb{S}^2\to[0,\pi]$,
 $\sigma_2\:\mathbb{S}^2\to[0,\tfrac\pi2]$,
 \end{subthm}
 \begin{subthm}{ex:sumbetries(S^2):n}
-$\sigma_n\:\mathbb{S}^2\to[0,\tfrac\pi n]$ (for integer $n\ge 1$)
+$\sigma_n\:\mathbb{S}^2\to[0,\tfrac\pi n]$ (for an integer $n\ge 1$)
 \end{subthm}
 such that the fibers $\sigma_n^{-1}\{x\}$ are connected for any $x$.
 \end{thm}
 
 \begin{thm}{Exercise}\label{ex:sumbetries(E^2)}
 Let $\sigma\:\EE^2\to [0,\infty)$ be a submetry.
-Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set without interior points and $\sigma(x)\z=\distfun_Kx$.
+Show that $K\z=\sigma^{-1}\{0\}$ is a closed convex set with empty interior and $\sigma(x)\z=\distfun_Kx$.
 \end{thm}
 
 The proof of \ref{thm:CBB/G} works for submetries;
 that is, \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is a proper $\Alex0$ space, then so is $\spc{B}$}.
 Theorem \ref{thm:CBB/G} admits a straightforward generalization to the $\Alex{-1}$ case.
 
-In the $\Alex1$ case, the proof produces a weaker statement: \textit{{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex1$ then $\SSS^2$-comparison holds for any quadruple $p$, $x_1$, $x_2$, $x_3$ in $\spc{B}$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}}.
+In the $\Alex1$ case, the proof produces a weaker statement: \textit{if $\sigma\:\spc{A}\to\spc{B}$ is a submetry and $\spc{A}$ is $\Alex1$ then $\SSS^2$-comparison holds for any quadruple $p$, $x_1$, $x_2$, $x_3$ in $\spc{B}$ if $\dist{p}{x_i}{}<\tfrac\pi 2$ for each $i$}.
 In particular, $\spc{B}$ is \textit{locally} $\Alex1$.
 As above, assuming orbits are closed, the quotient of a proper geodesic space is geodesic.
 Therefore, the globalization theorem implies that it is globally $\Alex1$.
@@ -131,12 +131,12 @@ Let us take a close look at the following partial result obtained by Wu-Yi Hsian
 There is no Riemannian metric on $\SSS^2\times\SSS^2$ with sectional curvature $\ge 1$ and a nontrivial isometric $\SSS^1$-action.
 \end{thm}
 
-Recall that a group action $G\acts\spc{X}$ is called \index{effective action}\emph{effective} if for any $g\in G$ there is $x\in\spc{X}$ such that $g\cdot x\ne x$.
+Recall that a group action $G\acts\spc{X}$ is called \index{effective action}\emph{effective} if for any nonidentity element $g\in G$ there is $x\in\spc{X}$ such that $g\cdot x\ne x$.
 
 \begin{thm}{Key lemma}\label{lem:S^3/S^1}
 Suppose $\SSS^1\acts\SSS^3$ is an effective isometric action without fixed points
 and $\Sigma=\SSS^3/\SSS^1$ is its quotient space.
-Then there is a distance noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ denotes the standard 2-sphere rescaled with a factor $\tfrac12$.
+Then there is a distance-noncontracting map $\Sigma\to \tfrac12\cdot \SSS^2$, where $\tfrac12\cdot \SSS^2$ denotes the standard 2-sphere rescaled by a factor of $\tfrac12$.
 \end{thm}
 
 The proof of the lemma is guided by the following exercise.
@@ -178,7 +178,7 @@ This symmetry has two fixed points, say the north pole and the south pole, that 
 
 \smallskip
 
-\noindent Denote by $S(r)$ the circle of radius $r$ with the center at the north pole of $\Sigma_{p,q}$.
+\noindent Denote by $S(r)$ the circle of radius $r$ centered at the north pole of $\Sigma_{p,q}$.
 
 \begin{subthm}{ex:S^3/S^1:a}
 Denote by $T(r)$ the inverse image of $S(r)$ in $\SSS^3$, and let $a(r)$ be its area.
@@ -192,7 +192,7 @@ Show that $T(r)$ is an orbit of the torus action and
 \begin{subthm}{ex:S^3/S^1:b}
 Let $b_{p,q}(r)$ be the length of the $\SSS^1$-orbit in $\SSS^3$ that corresponds to a point on $S(r)$. 
 Show that
-\[b_{p,q}(r)=2\cdot \pi\cdot\sqrt{(p\cdot \sin r)^2+(q\cdot \cos r)^2}.\]
+\[b_{p,q}(r)=2\cdot \pi\cdot\sqrt{(p\cdot \cos r)^2+(q\cdot \sin r)^2}.\]
 \end{subthm}
 
 \smallskip
@@ -207,7 +207,7 @@ Show that
 
 \begin{subthm}{ex:S^3/S^1:cc}
 Show that $c_{p,q}(r)\le c_{1,1}(r)$ for any pair $(p,q)$ of relatively prime positive integers.
-Use it to construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot \SSS^2\iso\Sigma_{1,1}$.
+Use it to construct a distance-noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot \SSS^2\iso\Sigma_{1,1}$.
 \end{subthm}
 
 \end{thm}
@@ -215,7 +215,7 @@ Use it to construct a distance noncontracting map $\Sigma_{p,q}\to \tfrac12\cdot
 \parit{Proof of \ref{thm:hsiang-kleiner}.}
 Assume $\spc{B}=(\SSS^2\times\SSS^2,g)$ is a counterexample.
 By the Toponogov theorem, $\spc{B}$ is $\Alex1$.
-By \ref{thm:CBB/G}, the quotient space $\spc{A}\z=\spc{B}/\SSS^1$ is $\Alex1$;
+By \ref{thm:submetry-CBB-1}, the quotient space $\spc{A}\z=\spc{B}/\SSS^1$ is $\Alex1$;
 evidently, $\spc{A}$ is 3-dimensional.
 
 Denote by $F\subset \spc{B}$ the fixed point set of the $\SSS^1$-action.
@@ -241,8 +241,8 @@ Suppose $F$ has exactly 4 isolated points $x_1$, $x_2$, $x_3$, and $x_4$.
 Denote by $y_1$, $y_2$, $y_3$, and $y_4$ the corresponding points in $\spc{A}$.
 Note that $\Sigma_{y_i}\spc{A}$ is isometric to a quotient of $\SSS^3$ by an isometric $\SSS^1$-action without fixed points.
 
-By \ref{lem:S^3/S^1}, each angle $\mangle\hinge{y_i}{y_j}{y_k}\le \tfrac\pi2$ for any three distinct points
-$y_i$, $y_j$, $y_k$.%
+By \ref{lem:S^3/S^1}, the angle $\mangle\hinge{y_i}{y_j}{y_k}$ is at most $\tfrac\pi2$
+for any three distinct points $y_i$, $y_j$, and $y_k$.%
 \footnote{It also follows since $y_i$ must be an extremal point, and hence $\diam\Sigma_{y_i}\spc{A}\le\tfrac\pi2$.}
 In particular, all four triangles $[y_1y_2y_3]$, $[y_1y_2y_4]$, $[y_1y_3y_4]$, and $[y_2y_3y_4]$ are nondegenerate.
 By the comparison, the sum of the angles in each triangle is strictly greater than $\pi$.
@@ -261,14 +261,14 @@ adding the results, we get
 
 
 \parit{Case \ref{case2}.}
-Suppose $F$ contains one surface $S$.
-Then the projection of $S$ to $\spc{A}$ forms its boundary $\partial \spc{A}$.
+Suppose $F$ contains exactly one surface $S$.
+Then the projection of $S$ to $\spc{A}$ is its boundary $\partial \spc{A}$.
 The doubling $\spc{W}$ of $\spc{A}$ across its boundary has at least 4 singular points --- each singular point of $\spc{A}$ corresponds to two singular points of $\spc{W}$.
 
 By the doubling theorem, $\spc{W}$ is an $\Alex1$ space.
 Therefore we arrive at a contradiction in the same way as in the first case.
 
-\parit{Case \ref{case3}.} Impossible by \ref{ex:bry-connected}.
+\parit{Case \ref{case3}.} This case is impossible by \ref{ex:bry-connected}.
 \qeds
 
 \section{Erdős' problem revisited}
@@ -283,7 +283,7 @@ Then it has at most $2^m$ extremal points.
 \parit{Proof of \ref{thm:extr-point}.}
 Let $\{p_1,\dots,p_N\}$ be extremal points in $\spc{A}$.
 For each $p_i$ consider its open \index{Voronoi domain}\emph{Voronoi domain} $V_i$; that is, 
-\[V_i=\set{x\in \spc{A}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\not=i}.\]
+\[V_i=\set{x\in \spc{A}}{\dist{p_i}{x}{}<\dist{p_j}{x}{}\ \text{for any}\ j\ne i}.\]
 Clearly $V_i\cap V_j=\emptyset$ if $i\not=j$.
 
 Choose $0<\alpha\le 1$.
@@ -315,7 +315,7 @@ Find a bound on the number of extremal points in an $\Alex{-1}$ space in terms o
 \section{Crystallographic actions}
 
 An isometric action $\Gamma\acts \EE^m$ is called \index{crystallographic action}\emph{crystallographic} if it is 
-\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and $x\z\in \EE^m$ there are only finitely many elements $g\in \Gamma$ such that $g\cdot x\in K$) and \index{cocompact action}\emph{cocompact} (that is, the quotient space $\spc{A}=\EE^m/\Gamma$ is compact).
+\index{properly discontinuous}\emph{properly discontinuous} (that is, for any compact set $K\subset \EE^m$ and any $x\z\in \EE^m$ there are only finitely many elements $g\in \Gamma$ such that $g\cdot x\in K$) and \index{cocompact action}\emph{cocompact} (that is, the quotient space $\spc{A}=\EE^m/\Gamma$ is compact).
 
 Let $F$ be a maximal finite subgroup of $\Gamma$;
 that is, if $F<H<\Gamma$ for a finite group $H$, then $F=H$.
@@ -389,7 +389,7 @@ Submetries were introduced by Valerii Berestovskii \cite{berestovskii1987} and h
 
 
 
-A more general form of Theorem \ref{thm:hsiang-kleiner} was found by Karsten Grove and Burkhard Wilking \cite{grove-wilking};
+A more general form of Theorem \ref{thm:hsiang-kleiner} was proved by Karsten Grove and Burkhard Wilking \cite{grove-wilking};
 it classifies isometric $\SSS^1$ actions on 4-dimensional manifolds with nonnegative sectional curvature.
 Their proof is as beautiful as the original work of Wu-Yi Hsiang and Bruce Kleiner.
 
@@ -405,6 +405,7 @@ Is it true that any triangle in $\Sigma/\SSS^1$ has perimeter at most $\pi$?
 (And if the answer is yes, is there a distance-noncontracting map $\Sigma/\SSS^1\z\to \tfrac12\cdot\SSS^2$?)
 \end{thm}
 
+{\sloppy
 
 \begin{thm}{Advanced exercise}\label{ex:S1actsS3}
 Suppose $\SSS^1$ acts isometrically on an $\Alex1$ space $\spc{A}$ that is homeomorphic to $\SSS^3$.
@@ -413,13 +414,15 @@ Show that
 \[\length\gamma\le2\cdot\pi.\]
 \end{thm}
 
+}
+
 An analogous question for a $\ZZ_2$-action is open \cite{petrunin-involution}.
 
 Theorem \ref{thm:extr-point} is a translation of the following classical problem in discrete geometry to Alexandrov's language.
 
 \begin{thm}{Problem}\label{erdos-problem}
 Let $F$ be a set of points in $\EE^m$ such that any triangle formed by three distinct points in $F$ has no obtuse angles.
-Then $|F|\le2^m$.
+Then $|F|\z\le2^m$.
 Moreover, if $|F|=2^m$, then $F$ consists of the vertices of an $m$-dimensional rectangle.
 \end{thm}
 
@@ -435,7 +438,7 @@ The second author has proved \cite{lebedeva2015} that \textit{every $m$-dimensio
 Extremal subsets of Alexandrov spaces were briefly discussed in \ref{sec:bry-remarks}.
 The following definition is more relevant to isometric group actions.
 
-A closed subset $E$ in a finite-dimensional Alexandrov space is called
+A closed subset $E$ of a finite-dimensional Alexandrov space is called
 \index{extremal set}\emph{extremal} if $\mangle\hinge pxy\z\le \tfrac\pi2$ for any hinge $\hinge pxy$ such that $x\notin E$ and $p\in E$ minimizes $\dist{x}{p}{}$.
 A nonempty extremal set is called \index{minimal extremal set}\emph{minimal} if it contains no proper extremal subsets.
 
@@ -460,4 +463,6 @@ therefore the cube has exactly $3^m$ primitive extremal subsets, including the w
 Any $m$-dimensional compact $\Alex0$ space has at most $3^m$ primitive extremal subsets.
 \end{thm}
 
-Some none-sharp explicit estimates on the number of extremal subsets were obtained Tadashi Fujioka \cite{fujioka2025}; these results are closely related to Gromov's Betti number theorem \ref{thm:betti}.
+Some nonsharp explicit estimates on the number of extremal subsets
+were obtained by Tadashi Fujioka \cite{fujioka2025};
+these results are closely related to Gromov's Betti number theorem \ref{thm:betti}.

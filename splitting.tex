@@ -1,6 +1,6 @@
 \chapter{Line splitting}\label{chap:splitting}
 
-In this lecture, we prove the line splitting theorem and apply it in tangent spaces of Alexandrov spaces.
+In this lecture, we prove the line splitting theorem and apply it to tangent spaces of Alexandrov spaces.
 
 \section{Busemann function}
 
@@ -48,7 +48,7 @@ In other words, a line is a geodesic defined on the whole real line $\RR$.
 Let $\gamma$ be a line in a metric space $\spc{X}$.
 Show that for any point $x$ we have
 \[\bus_+(x)+\bus_-(x)\ge 0,\]
-where $\bus_+$ and $\bus_-$ are the Busemann functions associated with half-lines $\gamma:[0,\infty)\to \spc{X}$ and $\gamma:(-\infty,0]\to \spc{X}$ respectively.
+where $\bus_+$ and $\bus_-$ are the Busemann functions associated with the half-lines $t\mapsto\gamma(t)$ and $t\mapsto\gamma(-t)$, respectively.
 \end{thm}
 
 
@@ -59,7 +59,7 @@ or briefly,
 if there are retractions $\proj_A\:\spc{X}\to A$
 and 
 $\proj_B\:\spc{X}\to B$
-such that 
+such that $x\mapsto(\proj_A(x),\proj_B(x))$ defines an onto map $\spc{X}\to A\times B$ and
 \[\dist[2]{x}{y}{}=\dist[2]{\proj_A(x)}{\proj_A(y)}{}+\dist[2]{\proj_B(x)}{\proj_B(y)}{}\]
 for any two points $x,y\in \spc{X}$.
 
@@ -79,7 +79,7 @@ both sets $A$ and $B$ are \index{convex set}\emph{convex} in $\spc{X}$, meaning 
 \end{thm}
 
 
-\begin{thm}{Line splitting theorem}\label{thm:splitting}
+\begin{thm}{Line splitting theorem}\label{thm:splitting}\index{line splitting theorem}
 If $\gamma$ is a line in an $\Alex0$ space~$\spc{A}$, then
 \[\spc{A}=\spc{A}'\oplus \gamma(\RR)\]
 for some subset $\spc{A}'\subset \spc{A}$.
@@ -111,7 +111,7 @@ where $p=\alpha(0)$ and $q=\beta(0)$.
 \end{thm}
 
 \parit{Proof.}
-Since $f$ is 1-Lipschitz it follows that $|\nabla f|\le1$.
+Since $f$ is 1-Lipschitz, it follows that $|\nabla f|\le1$.
 Therefore 
 \[f\circ\beta(t)\le f(q)+t\]
 for any $t\ge0$.
@@ -132,7 +132,7 @@ The case $s\ge t$ follows by switching the roles of $s$ and $t$.
 \qeds
 
 
-\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with the half-lines $\gamma\:[0,\infty)\to \spc{A}$ and $\gamma\:(-\infty,0]\to \spc{A}$ respectively; that is,
+\parit{Proof of \ref{thm:splitting}.} Consider two Busemann functions, $\bus_+$ and $\bus_-$, associated with the half-lines $\gamma\:[0,\infty)\to \spc{A}$ and $\gamma\:(-\infty,0]\to \spc{A}$, respectively; that is,
 \[
 \bus_\pm(x)
 \df
@@ -181,7 +181,7 @@ Then $|\alpha^+|\le 1$ and $(\bus_\pm\circ\alpha)^+=1$; therefore
 &=|t_0-t_1|.
 \end{align*}
 
-It follows that for any $t>0$, the $\bus_\pm$-gradient flows commute;
+It follows that for any $t>0$, the $\bus_\pm$-gradient flows are inverse to each other;
 that is, 
 \[\GF_{\bus_+}^t\circ\GF_{\bus_-}^t=\id_\spc{A}.\]
 Setting
@@ -208,7 +208,7 @@ Suppose $\spc{X}$ is a complete geodesic space.
 Show that $\Cone\spc{X}$ is $\Alex0$ if and only if $\spc{X}$ is $\Alex1$ and $\diam\spc{X}\le \pi$.
 \end{thm}
 
-Recall that according to our definition any circle or closed real interval is $\Alex1$.
+Recall that according to our definition, any circle or closed real interval is $\Alex1$.
 Therefore, the condition $\diam\spc{X}\le \pi$ is necessary.
 Nevertheless, according to \ref{ex:RisCBB(1)}, most $\Alex1$ spaces have diameter at most $\pi$.
 
@@ -236,7 +236,7 @@ Show that
 If the tangent space $\T_p$ was $\Alex0$, then the lemma would follow from the existence of the gradient, applied to the function $\T_p\to \RR$ defined by $x\mapsto -(\langle u,x\rangle +\langle v,x\rangle )$, which is concave by \ref{ex:busemann-CBB}.
 This idea cannot work as is since $\T_p$ might fail to be geodesic (see Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024}), but it works after a proper revision.
 
-Applying the above lemma for $u=v$, we have the following statement.
+Applying the above lemma with $u=v$, we have the following statement.
 
 \begin{thm}{Existence of polar vector}\label{cor:polar}
 Let $\spc{A}$ be an Alexandrov space 
@@ -248,7 +248,7 @@ that is,
 for any $x\in \T_p$.
 \end{thm}
 
-\parit{Proof of \ref{lem:minus-sum}.}
+\parit{Proof of \ref{lem:minus-sum}.} We may assume that $u$ and $v$ are nonzero.
 By \ref{ex:d(distfun):==}, we can choose two sequences of points $a_n,b_n$ such that 
 \[
 (\dd_p\distfun_{a_n})(x)=-\langle\dir{p}{a_n},x\rangle
@@ -293,7 +293,7 @@ it is very similar to the proof of uniqueness of gradients (page \pageref{unique
 \section{Linear subspace}
 
 \begin{thm}{Definition}\label{def:opp+Lin}
-Let $\spc{A}$ be an Alexandrov space, $p\in \spc{A}$ and $u,v\z\in\T_p$.
+Let $\spc{A}$ be an Alexandrov space, $p\in \spc{A}$, and $u,v\z\in\T_p$.
 We say that vectors $u$ and $v$ are \index{opposite vectors}\emph{opposite}\label{def:opposite:page} to each other (briefly, $u+v=0$) if
 \begin{itemize}
  \item $|u|=|v|=0$ or
@@ -328,8 +328,8 @@ thus,
 It remains to prove \ref{SHORT.opposite}$\Rightarrow$\ref{SHORT.<x,u>}.
 
 Suppose \ref{SHORT.opposite} holds.
-We can assume that $|u|=|v|\ne 0$ since otherwise \ref{SHORT.<x,u>} is trivial.
-Since $\mangle(u,v)=\pi$ and $\T_p$ is a metric cone, the half-lines in directions of $u$ and $v$ form a line in $\T_p$.
+We can assume that $|u|=|v|\ne 0$, since otherwise \ref{SHORT.<x,u>} is trivial.
+Since $\mangle(u,v)=\pi$ and $\T_p$ is a metric cone, the half-lines in the directions of $u$ and $v$ form a line in $\T_p$.
 By \ref{prop:Tan-is-CBB(0)}, $\T_p$ has nonnegative curvature, and by \ref{ex:adjacent-CBB} we have $\mangle\hinge 0ux+\mangle\hinge 0vx=\pi$, which implies \ref{SHORT.<x,u>}.
 \qeds
 
@@ -403,7 +403,7 @@ It follows that
 \end{align*}
 That is, $|x-w|\le \tfrac12\cdot|x-y|$.
 Similarly, we get $|y-w|\le \tfrac12\cdot|x-y|$.
-Therefore $w$ is a midpoint of $x$ and $y$.
+Therefore, $w$ is a midpoint of $x$ and $y$.
 In addition, we get the equality 
 \[|w|^2= \tfrac14\cdot |x|^2+\tfrac14\cdot|y|^2+\tfrac12\cdot\langle x,y\rangle.\]
 
@@ -465,7 +465,7 @@ Show that for any $x\in S$ there is a unique geodesic $[px]$.
 This exercise implies the following.
 
 \begin{thm}{Corollary}\label{cor:euclid-subcone}
-Given a countable set of points $X$ in an Alexandrov space $\spc{A}$,
+Given a countable set of points $X$ in a nontrivial Alexandrov space $\spc{A}$,
 there is a G-delta dense set $S\subset\spc{A}$
 such that 
 $\dir sx\in \Lin_s$
@@ -485,7 +485,7 @@ Nearly the same proof is used in \cite[1.5]{burago-burago-ivanov}.
 
 Generalizations to Riemannian manifolds with nonnegative Ricci curvature were obtained by Jeff Cheeger and Detlef Gromoll \cite{cheeger-gromoll-split}.
 This was further generalized by Jeff Cheeger and Toby Colding for the limits of Riemannian manifolds with almost nonnegative Ricci curvature \cite{cheeger-colding-alm-rigidity}.
-Nicola Gigli generalized it further to the so-called {}\emph{RCD spaces} (spaces with synthetically defined Ricci-curvature bound) \cite{gigli2013splitting, gigli-splitting-overview}.
+Nicola Gigli generalized it further to the so-called {}\emph{RCD spaces} (spaces with synthetically defined Ricci curvature bound) \cite{gigli2013splitting, gigli-splitting-overview}.
 Jost-Hinrich Eschenburg obtained an analogous result for Lorentzian manifolds \cite{eshenburg-split}.
 
 The presented proof is close in spirit to the proof given by Cheeger and Gromoll \cite{cheeger-gromoll-split};

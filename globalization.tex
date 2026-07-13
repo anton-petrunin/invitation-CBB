@@ -12,7 +12,7 @@ It is straightforward to obtain a local version of Theorem~\ref{thm:defs_of_alex
 it gives a list of equivalent properties that hold in sufficiently small neighborhoods of any point.
 In particular, the analog of \ref{angle} implies that \textit{the angle measure of any hinge in a locally $\Alex0$ space is well defined.}
 
-\begin{thm}{Globalization theorem}\label{thm:glob} 
+\begin{thm}{Globalization theorem}\label{thm:glob}\index{globalization theorem}
 Any compact locally $\Alex0$ space is $\Alex0$.
 \end{thm}
 
@@ -20,14 +20,14 @@ Any compact locally $\Alex0$ space is $\Alex0$.
 Note that condition \ref{angle-b} holds in $\spc{A}$ (the necessity of \ref{angle-b} uses only the local condition).
 It remains to check \ref{angle-a};
 that is,
-\[\mangle\hinge x p y\ge\angk x p y
+\[\mangle\hinge x p q\ge\angk x p q
 \eqlbl{eq:mod-angle-CBB-comp-glob}\]
-for any hinge $\hinge x p y$ in $\spc{A}$.
+for any hinge $\hinge x p q$ in $\spc{A}$.
 
 Inequality \ref{eq:mod-angle-CBB-comp-glob} holds for hinges in a small neighborhood of any point;
 this can be proved the same way as \ref{clm:angle-defined} and \ref{ex:adjacent-CBB}, applying the local version of the $\EE^2$-comparison.
-Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds whenever $\dist{x}{p}{}+\dist{p}{y}{}<\eps$.
-Applying the key lemma several times, we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
+Since $\spc{A}$ is compact, there is $\eps>0$ such that \ref{eq:mod-angle-CBB-comp-glob} holds whenever $\dist{x}{p}{}+\dist{x}{q}{}<\eps$.
+Applying the key lemma finitely many times, we get that \ref{eq:mod-angle-CBB-comp-glob} holds for any given hinge.
 \qeds
 
 \begin{thm}{Key lemma}\label{key-lem:globalization} 
@@ -93,7 +93,7 @@ and
 \parit{Construction.}
 Assume $\dist{x}{q}{}\ge\dist{x}{p}{}$; otherwise, switch the roles of $p$ and $q$.
 Take $x'\in [x q]$ such that 
-\[\dist{p}{x}{}+3\cdot\dist[{{}}]{x}{x'}{}
+\[\dist{p}{x}{}+3\cdot\dist{x}{x'}{}
 =\tfrac{2}{3}\cdot\ell.
 \eqlbl{3|xx'|}\]
 Choose a geodesic $[x' p]$ and consider the hinge $\hinge{x'}p q$ formed by $[x' p]$ and $[x' q]\subset [x q]$.
@@ -228,7 +228,7 @@ Finally, the monotonicity of the sequence $s_n=\side \hinge{x_n}p q$ implies \re
 
 \section{On the general case}
 
-\begin{thm}{Theorem}\label{thm:globalization+}
+\begin{thm}{Theorem}\label{thm:globalization+}\index{globalization theorem}
 Any locally $\Alex\kappa$ space is $\Alex\kappa$.
 \end{thm}
 
@@ -320,14 +320,14 @@ for any triple of points $x,y,z\in \spc{A}$.
 
 The globalization theorem is also known as the \textit{generalized Toponogov theorem}.
 Its $2$-dimensional case was proved by Paolo Pizzetti \cite{pizzetti} and
-rediscovered by Alexandr Alexandrov \cite{alexandrov:devel}. %is it right ref??
+rediscovered by Alexandr Alexandrov \cite{alexandrov:devel}.
 Victor Toponogov \cite{toponogov-globalization+splitting} proved it for Riemannian manifolds of all dimensions.
 For Alexandrov spaces of all dimensions, the theorem first appears in the paper by Michael Gromov, Yuriy Burago, and Grigory Perelman \cite{burago-gromov-perelman}.
 They prove globalization for \textit{complete length spaces}.
 Another version for \textit{noncomplete but geodesic spaces} is due to the third author \cite{petrunin:globalization}.
 
 We took the proof from our book \cite{alexander-kapovitch-petrunin2024}, but present it in a less general form.
-This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitry Burago, Yuriy Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
+This proof is based on simplifications obtained by Conrad Plaut \cite{plaut:dimension} and Dmitri Burago, Yurii Burago, and Sergei Ivanov \cite{burago-burago-ivanov}.
 The same proof was discovered independently by Urs Lang and Viktor Schroeder \cite{lang-schroeder:globalization}.
 Another simplified argument was found by Katsuhiro Shiohama \cite{shiohama}.
 Alternative proofs were found by Shengqi Hu, Xiaole Su, and Yusheng Wang \cite{hu-su-wang2023,hu-su-wang2024}.

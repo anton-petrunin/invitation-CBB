@@ -1,20 +1,20 @@
 %%!TEX root = the-gradient-flow.tex
-
 \chapter{Gradient flow}\label{chap:GF}
 
 Here we define the gradient flows of semiconcave functions on Alexandrov spaces and prove related distance estimates.
 
-\section{Velocity of curve}\label{Velocity of curve}
+\section{Velocity of a curve}\label{Velocity of curve}
 
 Let $\alpha$ be a curve in an Alexandrov space $\spc{A}$, and let $p=\alpha(t_0)$.
 If for any choice of 
 geodesics $[p\,\alpha(t_0+\eps)]$ the vectors 
 \[\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\cdot\dir p{\alpha(t_0+\eps)}\]
 converge as $\eps\to 0+$, then their limit in $\T_p$ is called the \index{right derivative}\emph{right derivative} of $\alpha$ at $t_0$; it will be denoted by $\alpha^+(t_0)$.
-In addition, we assume that $\alpha^+(t_0)\df0$
+In addition, we set $\alpha^+(t_0)\df0$
 if $\tfrac{1}{\eps}\cdot\dist{p}{\alpha(t_0+\eps)}{}\to 0$ as $\eps\to 0+$.
 
 The tangent vector $v=\dist px{}\cdot\dir px$ will be called a \index{logarithm}\emph{logarithm} of $x$ at $p$ (briefly, \index{40@$\log_p x$ (logarithm)}$v=\log_p x$).
+We set $\log_p p=0$.
 In general the logarithm is a multivalued function from $\spc{A}$ to $\T_p$; so $v=\log_p x$ and $w=\log_p x$ do \textit{not} imply $v=w$.
 Note that $\gamma^+(0)=\log_px$ for any geodesic path $\gamma$ from $p$ to $x$.\label{page:log}
 
@@ -32,7 +32,7 @@ Then $(f\circ\alpha)^+(0)$ exists and
 Without loss of generality, we can assume that $f(p)=0$.
 Suppose $f$ and therefore $\dd_pf$ are $L$-Lipschitz.
 
-Let $\gamma$ be a geodesic with a constant-speed reparametrization that starts from $p$, and
+Let $\gamma$ be a constant-speed parametrization of a geodesic that starts at $p$, and
 such that the distance
 $s=\dist{\alpha^+(0)}{\gamma^+(0)}{\T_p}$
 is small.
@@ -50,7 +50,7 @@ Then
 \[|(f\circ\alpha)^+(0)-(f\circ\gamma)^+(0)|\le L\cdot s.\]
 Since $\dd_pf$ is $L$-Lipschitz, we also get 
 \[|\dd_pf(\alpha^+(0))-\dd_pf(\gamma^+(0))|\le L\cdot s.\]
-It follows that the needed identity holds up to error $2\cdot L\cdot s$.
+It follows that the needed identity holds up to an error $2\cdot L\cdot s$.
 The statement follows since $s>0$ can be chosen arbitrarily.
 
 The same argument is applicable if in place of $(f\circ\alpha)^+(0)$
@@ -76,7 +76,7 @@ We omit the proof of existence.
 
 \begin{thm}{Picard theorem}\label{thm:glob-exist-grad-curv}
 Let $f\:\spc{A}\subto \RR$ be a $\lambda$-concave function on an Alexandrov space $\spc{A}$.
-Then for any $p\z\in \Dom f$, there are a unique $t_{\max}\in(0,\infty]$ and an $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\z\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
+Then for any $p\z\in \Dom f$, there exist a unique $t_{\max}\in(0,\infty]$ and a unique $f$-gradient curve $\alpha\:[0,t_{\max})\to \spc{A}$ with $\alpha(0)=p$ such that for any sequence $t_n\z\to t_{\max}-$, the sequence $\alpha(t_n)$ does not have a limit point in $\Dom f$.
 \end{thm}
 
 According to the theorem, the future of a gradient curve is determined by its present, but its past might \textit{not} be determined by the present.
@@ -109,15 +109,15 @@ it shows that gradient curves can merge even in the region where $|\nabla f|\z\n
 
 \begin{thm}{Example}
 Consider the function $f\:(x,y)\mapsto-|x|-|y|$ on the $(x,y)$-plane.
-It is concave, and its gradient field is sketched on the figure.
+It is concave, and its gradient field is sketched in the figure.
 
 Let $\alpha$ be an $f$-gradient curve that starts at $(x,y)$ for $x>y>0$.
 Then 
 \[\alpha(t)=
 \begin{cases}
-(x-t,y-t) &\text{for}\quad 0\le t\le x-y,
+(x-t,y-t) &\text{for}\quad 0\le t\le y,
 \\
-(x-t,0) &\text{for}\quad x-y\le t\le x,
+(x-t,0) &\text{for}\quad y\le t\le x,
 \\
 (0,0) &\text{for}\quad x\le t.
 \end{cases}
@@ -152,8 +152,8 @@ Then
 \\
 &\le -\left({f(p)}-{f(q)}-\tfrac\lambda2\cdot\ell^2(t_0)\right)/\ell(t_0)
 \end{align*}
-The last two lines follow by
-the definition of differential,
+The last two lines follow from
+the definition of differential
 and the concavity of $t\z\mapsto f\circ\gamma(t)-\tfrac \lambda2\cdot {t^2}$.
 \qeds
 
@@ -179,7 +179,7 @@ Note that
 \<\dir{\alpha(t)}{\beta(t)},\nabla_{\alpha(t)}f\>-\<\dir{\beta(t)}{\alpha(t)},\nabla_{\beta(t)}f\>
 \le
 \lambda\cdot\ell(t).\]
-Here one has to apply \ref{eq:fist-var-inq+} for distance from the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, then apply the triangle inequality and \ref{ex:monotonicity}.
+Here one has to apply \ref{eq:fist-var-inq+} for the distance from the midpoint $m$ of $[\alpha(t)\,\beta(t)]$, then apply the triangle inequality and \ref{ex:monotonicity}.
 
 Since $\ell$ is Lipschitz, it is differentiable almost everywhere.
 Integrating this inequality, we get the result.
@@ -271,8 +271,9 @@ This proposition can be generalized to a converging sequence $\spc{A}_n\z\to \sp
 
 One of the technical difficulties in Alexandrov geometry comes from
 nonextendability of geodesics. 
-In particular, the exponential map, $\exp_p\:\T_p\to \spc{A}$, if defined in the usual way, can
-be undefined in an arbitrarily small neighborhood of the origin. 
+In particular, the exponential map, $\exp_p\:\T_p\to \spc{A}$,
+when defined in the usual way, may be undefined
+in an arbitrarily small neighborhood of the origin.
 
 The \index{gradient!exponential map}\emph{gradient exponential map}
 \[\gexp_p\:\T_p\to\spc{A},\]
@@ -285,17 +286,16 @@ Consider the function $f\z=\tfrac12\cdot\distfun_p^2$.
 Recall that $\GF^t_{f}$ denotes the gradient flow.
 Let us define the \textit{gradient exponential map} as the limit
 \[\gexp_p(v)=\lim_{n\to\infty}\GF^{t_n}_{f}(x_n),\]
-where the sequences $x_n\in \spc{A}$ and $t_n\ge 0$ are chosen so that $t_n\to\infty$
-and $e^{t_n}\cdot\log_px_n\to v$ as $n\to\infty$.
+where the sequences $x_n\in \spc{A}$ and $t_n\ge 0$ are chosen so that $t_n\to\infty$ and $e^{t_n}\cdot\log_px_n\to v$ as $n\to\infty$ (more formally, we choose one value of $\log_p x_n$ for each $n$).
 
 More intuitively, suppose $i_{\lambda}\:\lambda\cdot \spc{A}\to \spc{A}$ sends a point in the rescaled copy $\lambda\cdot\spc{A}$ to the corresponding point in $\spc{A}$.
 By the first distance estimate (\ref{thm:dist-est}), the map
 \[\GF^t_{f}\circ\, i_{e^t}\:e^t\cdot \spc{A}\to \spc{A}
 \eqlbl{eq:gexp}\]
 is short for any $t\ge 0$.
-If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{A},p)\to (\T_p,o_p)$,
+If we have a pointed Gromov--Hausdorff convergence $(e^{t_n}\cdot \spc{A},p)\to (\T_p,\0)$,
 then $\gexp_p\:\T_p\to \spc{A}$ is the limit of $\GF^{t_n}_{f}\circ i_{e^{t_n}}$.
-This way we get that $\gexp_p$ is short as a limit of short maps.
+This way, we get that $\gexp_p$ is short as a limit of short maps.
 This observation is generalized in the following proposition. 
 
 
@@ -331,22 +331,22 @@ The gradient flow was introduced by the third author to construct quasigeodesics
 It turned out that gradient flow and gradient exponent are better tools than quasigeodesics.
 These tools quickly found applications in other types of singular spaces \cite{jost,mayer,lytchak:open-map,ohta,sevare,ambrosio-gigli-savare}.
 
-For a general lower curvature bound $\kappa$, the construction of gradient exponent has to be modified;
+For a general lower curvature bound $\kappa$, the construction of the gradient exponent has to be modified;
 it is denoted by $\gexp_p^\kappa$ \cite[16.36]{alexander-kapovitch-petrunin2024}. It is done by taking limits of appropriately reparameterized gradient curves of the modified distance function.
 
-For $\kappa=-1$ we have 
+For $\kappa=-1$, we have
 that $\gexp_p^{-1}(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$
 and 
 \[\dist{\gexp_p^{-1}v}{\gexp_p^{-1}w}{\spc{A}}\le \side\hinge0vw_{\HH^2}.\]
-In other words $\gexp_p^{-1}$ is short if we equip $\T_p$ with the hyperbolic cone metric.
+In other words, $\gexp_p^{-1}$ is short if we equip $\T_p$ with the hyperbolic cone metric.
 
-Similarly, for $\kappa=1$ we have $\gexp_p^1(\gamma^+(0))=\gamma(1)$
+Similarly, for $\kappa=1$, we have $\gexp_p^1(\gamma^+(0))=\gamma(1)$
 for any geodesic path $\gamma$ that starts at $p$ and 
 \[\dist{\gexp_p^{1}v}{\gexp_p^{1}w}{\spc{A}}\le \side\hinge0vw_{\SSS^2},\]
 but this time all this holds only if $|v|,|w|\le\tfrac\pi2$ and $\length\gamma\le\tfrac\pi2$.
 
-The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus, but \textit{is different} from the Riemannian exponential after that.
+The gradient exponential map in a Riemannian manifold $(M,g)$ coincides with the Riemannian exponential map before the cut locus, but \textit{is different} from the Riemannian exponential beyond the cut locus.
 Moreover, beyond the cut locus $\gexp_p^\kappa$ depends on $\kappa$ while the Riemannian exponential map does not.
 The following exercise is meant to show that this technique can prove something nontrivial even for Riemannian manifolds.
 

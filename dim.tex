@@ -7,7 +7,7 @@ We define its \index{linear dimension}\emph{linear dimension} \index{LinDim@$\Li
 the Euclidean space $\EE^m$ is isometric to a subspace of the tangent space $\T_p\spc{A}$ at \textit{some} point $p\in \spc{A}$.
 
 If not stated otherwise, dimension means linear dimension.
-In \ref{sec:packing-numbers} and \ref{sec:all-dim}, we will show that linear dimension of Alexandrov spaces coincides with all reasonable notions of dimension;
+In \ref{sec:packing-numbers} and \ref{sec:all-dim}, we will show that the linear dimension of Alexandrov spaces coincides with all reasonable notions of dimension;
 thereafter, we will use the notation \index{dim@$\dim$}$\dim\spc{A}$ for $\LinDim\spc{A}$.
 
 \begin{thm}{(\textit{n}+1)-comparison}\label{thm:n+1}
@@ -36,7 +36,7 @@ for every $i$.
 Applying the comparison $\mangle\hinge {p'}{x_i}{x_j}\ge \angk {p'}{x_i}{x_j}$, we get
 \[|\tilde x_i-\tilde x_j|_{\EE^m}\ge |x_i- x_j|_{\spc{A}}\]
 for all $i$ and $j$.
-Passing to a limit configuration as $p'\to p$ we get the result.
+Passing to a limit configuration as $p'\to p$, we get the result.
 
 If $\spc{A}$ is an $\Alex{-1}$ space, then the same argument gives
 $\tilde p,\tilde x_1,\z\dots,\tilde x_n\in \EE^m$ such that
@@ -96,7 +96,7 @@ that is, we can choose $n$ directions $\xi_1,\dots, \xi_n\in \Sigma_p$ such that
 Without loss of generality, we may assume that each direction is geodesic;
 that is, there is a point $x_i\in \spc{A}$ such that $\xi_i=\dir p{x_i}$.
 
-Choose small $r>0$ and $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$.
+Choose a small $r>0$ and $y_i\in [px_i]$ such that $\dist{p}{y_i}{}=r$ for each $i$.
 Since $r$ is small, we can assume that $\angk p{y_i}{y_j}>\eps$ for $i\ne j$.
 By \ref{cor:euclid-subcone}, we can choose $p'$ arbitrarily close to $p$ such that $\dir{p'}{y_i}\in \Lin_{p'}$ for any $i$;
 in particular, all directions $\dir{p'}{y_i}$ lie in a unit sphere of dimension at most $m-1$.
@@ -106,7 +106,7 @@ By comparison,
 Therefore, $\pack_\eps \Sigma_p\le \pack_\eps\SSS^{m-1}$.
 
 Since $\SSS^{m-1}$ is compact, $\pack_\eps\SSS^{m-1}<\infty$ for any $\eps>0$.
-By the definition, the space of directions $\Sigma_p$ is complete.
+By definition, the space of directions $\Sigma_p$ is complete.
 Applying \ref{ex:pack-net}, we get that $\Sigma_p$ is compact.
 
 It remains to prove the following claim.
@@ -120,7 +120,7 @@ let
 \[\alpha\z=\tfrac12\cdot \mangle \hinge pxy=\tfrac12\cdot \dist{\xi}{\zeta}{\Sigma_p}.\]
 Assume $\alpha<\tfrac\pi2$.
 
-It is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\mu\z=\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
+It is sufficient to construct an \index{almost midpoint}\emph{almost midpoint} $\dir pz$ of $\xi$ and $\zeta$ in $\Sigma_p$;
 that is, we need to show that for any $\eps>0$ there is a geodesic $[pz]$ such that
 \[\mangle\hinge pxz\le \alpha+\eps
 \quad\text{and}\quad
@@ -143,7 +143,7 @@ By \ref{ex:alex-lemma-cat}, we have
 \[\angk p{x_n}{m_n}+\angk p{y_n}{m_n}\le \angk p{x_n}{y_n}.\]
 
 For each large $n$, choose a point $z_n\in [pz]$ such that $\dist{p}{z_n}{}=\dist{p}{m_n}{}$.
-By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$ with arbitrarily small given error.
+By construction, for all large $n$, we have $\mangle\hinge pz{m_n}\approx0$ with any prescribed error.
 By comparison, the value $\frac{\dist{z_n}{m_n}{}}{\dist{p}{z_n}{}}$ can be assumed to be arbitrarily small for all large $n$.
 Applying this observation and the definition of angle measure, we also get that the following approximations
 \begin{align*}
@@ -153,13 +153,13 @@ Applying this observation and the definition of angle measure, we also get that 
 \\
 \angk p{m_n}{y_n}&\approx\angk p{z_n}{y_n}\approx\mangle\hinge p{z_n}{y_n},
 \end{align*}
-hold with arbitrary given error and all large $n$.
+hold with any prescribed error for all sufficiently large $n$.
 It follows that $\dir pz$ is an almost midpoint of $\dir px$ and $\dir py$, as required.
 \qeds
 
 \parit{Remark.}
-In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ have lower bounds by
-the comparison, but we needed upper bounds.
+In the above proof, the angles $\mangle\hinge pxz$ and $\mangle\hinge pyz$ are bounded below by
+comparison, but we needed upper bounds.
 These were extracted from the definition of angle measure and the compactness of the space of directions.
 Halbeisen's example \cite[13.6]{alexander-kapovitch-petrunin2024} shows that it cannot be done without the compactness condition.
 
@@ -171,7 +171,7 @@ Show that the differential $\dd_pf$ is a concave function $\T_p\to\RR$ for any $
 
 \section{Right-inverse theorem}
 
-\begin{thm}{Right-inverse theorem}\label{thm:right-inverse}
+\begin{thm}{Right-inverse theorem}\label{thm:right-inverse}\index{right-inverse theorem}
 Suppose $p,a_0,\dots,a_m$ are points in an Alexandrov space $\spc{A}$ such that
 \[\angk p{a_i}{a_j}>\tfrac\pi2\]
 for any $i\ne j$.
@@ -224,7 +224,7 @@ t_0
 Let $t_0\:\bm{y}\mapsto\tfrac{1}{\eps^2}\cdot\bigl|f(p)-\bm{y}\bigr|$.
 Use \ref{lem:fg-dist-est} to show that the map
 \[\map\:{\bm{y}}\mapsto \alpha_{\bm{y}}\circ t_0(\bm{y})\]
-is continuous (in fact Hölder) in $\Omega=\oBall(f(p),\tfrac{\eps^2}{2}\cdot r)\subset\RR^m$
+is continuous (in fact Hölder) on $\Omega=\oBall(f(p),\tfrac{\eps^2}{2}\cdot r)\subset\RR^m$
 and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 (This finishes the proof of \ref{thm:right-inverse}.)
 \end{subthm}
@@ -232,7 +232,7 @@ and $f\circ \Phi(\bm{y})=\bm{y}$ for any $\bm{y}\in \Omega$.
 \end{thm}
 
 \begin{thm}{Corollary}\label{cor:tan-g-delta}
-Let $\spc{A}$ be an Alexandrov space, and let $m$ be an integer.
+Let $\spc{A}$ be an Alexandrov space, and let $m$ be a positive integer.
 If $\LinDim\spc{A}\ge m$, then
 \[\dim\Lin_s\z\ge m\]
 for any point $s$ in a dense G-delta subset of points in $\spc{A}$.
@@ -279,9 +279,9 @@ The following exercise provides a guide to the proof of the theorem.
 \begin{thm}[!]{Exercise}\label{ex:proof-dist-chart}
 Suppose $p,a_0,\dots,a_m\in\spc{A}$ and $f\:\spc{A}\to\RR^m$ are as in \ref{thm:right-inverse}.
 Show that there is $\eps>0$ such that for any two points $x,y$ in a sufficiently small neighborhood of $p$,
-one of the inequalities holds in each of the following two strings of $m$ inequalities
+one of the inequalities holds:
 \begin{align*}
-\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge xy{a_m}<\tfrac\pi2-\eps;
+\mangle\hinge xy{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge xy{a_m}<\tfrac\pi2-\eps,
 \\
 \mangle\hinge yx{a_1}&<\tfrac\pi2-\eps,\ \dots,\ \mangle\hinge yx{a_m}<\tfrac\pi2-\eps.
 \end{align*}
@@ -297,7 +297,8 @@ We assume that the Hausdorff measure is calibrated so that the unit cube in $\EE
 
 This definition will be applied mostly to subsets of $m$-dimensional Alexandrov spaces.
 In this case, we may write $\vol B$ instead of $\vol_m B$.
-\begin{thm}{Bishop--Gromov inequality}\label{inq:BG}
+
+\begin{thm}{Bishop--Gromov inequality}\label{inq:BG}\index{Bishop--Gromov inequality}
 Let $\spc{A}$ be an $\Alex0$ space.
 
 \begin{subthm}{inq:BG:a}
@@ -312,14 +313,14 @@ For any integer $k\ge 0$, any point $p\in \spc{A}$ and any radius $r>0$, we have
 \smallskip
 
 \begin{subthm}{inq:BG:b}
-For any point $p\in \spc{A}$ and any radius $r>0$ we have
+For any point $p\in \spc{A}$ and any radius $r>0$, we have
 \[\vol_m \oBall(p,r)\le \omega_m\cdot r^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
 \end{subthm}
 
 \begin{subthm}{inq:BG:c}
 Moreover, the function
-\[r\mapsto \frac{\vol_m B(p,r)}{r^m}\]
+\[r\mapsto \frac{\vol_m \oBall(p,r)}{r^m}\]
 is nonincreasing.
 \end{subthm}
 
@@ -358,7 +359,7 @@ Therefore,
 
 The following exercise generalizes the Bishop--Gromov inequality to the $\Alex{-1}$ case;
 it is sufficient for most applications.
-A more exact statement for $\Alex\kappa$ spaces is given in \ref{inq:BG+}.
+A sharper statement for $\Alex\kappa$ spaces is given in \ref{inq:BG+}.
 
 
 
@@ -369,7 +370,7 @@ Show that
 \[\vol \oBall(p,r)\le \omega_m\cdot(\sinh r)^m,\]
 where $\omega_m$ denotes the volume of the unit ball in $\EE^m$.
 Moreover, the function
-\[r\mapsto \frac{\vol B(p,r)}{(\sinh r)^m}\]
+\[r\mapsto \frac{\vol \oBall(p,r)}{(\sinh r)^m}\]
 is nonincreasing.
 \end{thm}
 
@@ -390,7 +391,7 @@ Show that any nonempty open set in an Alexandrov space of finite dimension $m$ h
 Let $\spc{A}$ be an $m$-dimensional $\Alex\kappa$ space and $m\z<\infty$.
 
 \begin{subthm}{ex:tangent=Em:2balls}
-Show that for any two balls $B_1$ and $B_2$ in $\spc{A}$ with positive radii
+Show that for any two balls $B_1$ and $B_2$ in $\spc{A}$ with positive radii,
 there is $\delta>0$ such that the inequality
 $\pack_{\delta\cdot\eps} B_1\ge \pack_\eps B_2$
 holds for all sufficiently small $\eps>0$.
@@ -415,7 +416,7 @@ Then $m(p,r)=\LinDim \spc{A}$; in particular, $m(p,r)$ is an integer, and it doe
 \section{Other dimensions}\label{sec:all-dim}
 
 Now we want to show that \textit{all reasonable definitions of dimension give the same result for Alexandrov spaces}.
-More precisely, we have the following theorem; compare to \cite[15.16]{alexander-kapovitch-petrunin2024}.
+More precisely, we have the following theorem; compare with \cite[15.16]{alexander-kapovitch-petrunin2024}.
 We refer to \cite{hurewicz-wallman} for definitions of \index{Lebesgue covering dimension}\emph{Lebesgue covering dimension} and \index{Hausdorff!dimension}\emph{Hausdorff dimension}, which will be denoted by \index{TopDim@$\TopDim$}$\TopDim$ and
 \index{HausDim@$\HausDim$}$\HausDim$, respectively.
 
@@ -476,10 +477,10 @@ indeed $\Sigma_0\RR$ is a two-point space which is not geodesic.
 
 Halbeisen's example \cite{alexander-kapovitch-petrunin2024,halbeisen} shows that compactness of the space of directions is essential in the proof that the space of directions is $\pi$-geodesic (\ref{thm:finite-space-of-directions}).
 
-The proof of the following version of the Bishop--Gromov inequality requires additionally the so-called \textit{coarea formula} for Alexandrov spaces.
+The proof of the following version of the Bishop--Gromov inequality additionally requires the so-called \textit{coarea formula} for Alexandrov spaces.
 The weaker inequality from \ref{ex:BG} is sufficient for the sequel.
 
-\begin{thm}{Optimal Bishop--Gromov inequality}\label{inq:BG+}
+\begin{thm}{Optimal Bishop--Gromov inequality}\label{inq:BG+}\index{Bishop--Gromov inequality}
 Given a point $p$ in an $m$-dimensional $\Alex\kappa$ space,
 consider the function
 \[v\:r\mapsto\vol_m\oBall(p,r);\]
@@ -492,7 +493,7 @@ Moreover, the function
 If $\kappa>0$, then one has to assume that $r<\tfrac\pi{\sqrt\kappa}$.
 \end{thm}
 
-This inequality was originally proved for Riemannian manifolds with lower Ricci curvature.
+This inequality was originally proved for Riemannian manifolds with Ricci curvature bounded below.
 The first part is also known as \index{Bishop's inequality}\emph{Bishop's inequality}; it is due to Richard Bishop \cite{bishop1964}, \cite[Corollary 4, p. 256]{bishop-crittenden}.
 The second part is due to Michael Gromov \cite{gromov1981}.
 

@@ -5,14 +5,16 @@ Here we define the boundary of a finite-dimensional Alexandrov space, discuss it
 
 \section{Definition}
 
-The definition of boundary will use induction on dimension, and it will work \textit{only} for finite-dimensional Alexandrov spaces.
+The definition of \index{boundary}\emph{boundary} will use induction on dimension, and it will work \textit{only} for finite-dimensional Alexandrov spaces.
 
+If $\spc{A}$ is a $0$-dimensional Alexandrov space, we set
+$\partial\spc{A}=\emptyset$.
 Suppose $\spc{A}$ is a 1-dimensional Alexandrov space.
 By~\ref{ex:dim=1},
 $\spc{A}$ is homeomorphic to a 1-dimensional manifold (possibly with nonempty boundary).
 This allows us to define the boundary $\partial\spc{A}\subset \spc{A}$ as the boundary of the manifold.
 
-Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$ where $m\ge 2$.
+Now assume that the notion of boundary is defined in dimensions $1,\dots,m-1$, where $m\ge 2$.
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space.
 We say that $p\in \spc{A}$ belongs to the boundary (briefly $p\in \partial \spc{A}$) if 
 $\partial\Sigma_p\ne\emptyset$.
@@ -49,8 +51,7 @@ it is a close relative of Perelman's stability theorem \ref{thm:stability}, and 
 Recall that the logarithm $\log_p\:\spc{A}\to \T_p$ is a multivalued function defined in \ref{Velocity of curve}.
 
 \begin{thm}{Theorem}\label{thm:spherical-nbhd}
-For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$
-and all sufficiently small $\eps>0$
+For any point $p$ in a finite-dimensional Alexandrov space $\spc{A}$ and all sufficiently small $\eps>0$,
 there is a homeomorphism $h_\eps\:\oBall(p,\eps)_{\spc{A}}\to \oBall(0,\eps)_{\T_p}$ such that $0=h_\eps(p)$.
 
 Moreover, we may assume that
@@ -96,7 +97,6 @@ but in general $\Sigma_x\ncong\Sigma_{x'}$.
 \end{thm}
 
 
-
 \section{Topology}
 
 The following theorem asserts that the boundary is a topological invariant, despite the heavy use of geometry in its definition.
@@ -110,11 +110,12 @@ Then $\dim \spc{A}=\dim\spc{A}'$ and
 \]
 \end{thm}
 
+
 While working on the proof, keep in mind that there are pairs of spaces $\spc{K}_1$ and $\spc{K}_2$ such that $\spc{K}_1\ncong \spc{K}_2$, but $\RR\times \spc{K}_1\cong \RR\times \spc{K}_2$.
-For example, one can let $\spc{K}_1=\SSS^4$ and let $\spc{K}_2$ be the suspension over the Poincaré homology sphere; compare to \ref{ex:conic-tangen:example}.
+For example, one can let $\spc{K}_1=\SSS^4$ and let $\spc{K}_2$ be the suspension over the Poincaré homology sphere; compare with \ref{ex:conic-tangen:example}.
 
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space and $m<\infty$.
-Define \index{corank}\emph{corank} of $\spc{A}$ (briefly, $\corank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
+Define the \index{corank}\emph{corank} of $\spc{A}$ (briefly, $\corank\spc{A}$) as the minimal value $k$ such that $\spc{A}$ splits isometrically as $\RR^{m-k}\times \spc{K}$;
 here $\spc{K}$ is a $k$-dimensional Alexandrov space.
 
 In the following proof we will apply induction on the corank of $\spc{A}$.
@@ -182,7 +183,7 @@ Note that $\spc{A}'\cong\RR^m$, and $\spc{A}\ncong\spc{A}'$ --- a contradiction.
 
 \begin{thm}[!]{Exercise}\label{ex:bry2bry}
 Let $x\mapsto x'$ be a homeomorphism $\Omega\to\Omega'$
-between open subsets in finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$.
+between open subsets of finite-dimensional Alexandrov spaces $\spc{A}$ and $\spc{A}'$.
 Show that $x\in \partial \spc{A}$ if and only if $x'\in \partial \spc{A}'$.
 \end{thm}
 
@@ -195,7 +196,7 @@ Show that the boundary of a finite-dimensional Alexandrov space is a closed subs
 Spaces of directions and tangent spaces of an Alexandrov space have already been defined in \ref{sec:space+directions} and \ref{sec: tangent space}, respectively.
 Let us extend these definitions to subsets of an Alexandrov space.
 
-Let $X$ be a subset in a finite-dimensional Alexandrov space $\spc{A}$.
+Let $X$ be a subset of a finite-dimensional Alexandrov space $\spc{A}$.
 Choose $p\in \spc{A}$ and $\xi\in \Sigma_p$.
 Suppose $\xi$ is a limit of directions $\dir{p}{x_n}$ for a sequence $x_1,x_2,\dots{}\in X$ that converges to $p$.
 Then we say that $\xi$ is in the \index{space of directions}\emph{space of directions} from $p$ to $X$;
@@ -214,7 +215,7 @@ For any finite-dimensional Alexandrov space $\spc{A}$, we have
 \end{thm}
 
 \parit{Proof.}
-Choose a sequence $x_n\in \partial \spc{A}$ such that $x_n\to p$ and $\dir p{x_n}\to\xi$.
+Choose $\xi\in\Sigma_p(\partial\spc{A})$ and a sequence $x_n\in \partial \spc{A}$ such that $x_n\to p$ and $\dir p{x_n}\to\xi$.
 
 Let $\eps_n=2\cdot \dist{p}{x_n}{}$,
 and let $h_{\eps_n}\:\oBall(p,\eps_n)_{\spc{A}}\to \oBall(0,\eps_n)_{\T_p}$ be the homeomorphisms provided by \ref{thm:spherical-nbhd};
@@ -237,9 +238,9 @@ Hence
 
 \section{Doubling}
 
-Let $A$ be a closed subset in a metric space $\spc{X}$.
+Let $A$ be a closed subset of a metric space $\spc{X}$.
 The \index{doubling}\emph{doubling} $\spc{W}$ of $\spc{X}$ across $A$ is two copies of $\spc{X}$ glued along $A$.
-More precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the minimal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
+More precisely, the underlying set of $\spc{W}$ is the quotient $\spc{X}\times\{0,1\}/\sim$, where $(a,0)\sim (a,1)$ for any $a\in A$ and $\spc{W}$ is equipped with the maximal metric such that both maps $\spc{X}\to \spc{W}$ defined by $x\mapsto (x,0)$ and $x\mapsto (x,1)$ are distance-preserving.
 
 Alternatively, one may say that $\spc{W}$ is equipped with the maximal metric such that the projection $\proj\:\spc{W}\to\spc{X}$ defined by $(x,i)\mapsto x$ is a short map.
 The metric on $\spc{W}$ can also be defined directly:
@@ -288,7 +289,7 @@ Statement \ref{SHORT.thm:doubling:doubling}$_1$ follows from \ref{ex:dim=1} --- 
 The induction step is a combination of the implications below.
 
 \parit{\ref{SHORT.thm:doubling:doubling}$_{m-1}\Rightarrow$\ref{SHORT.thm:doubling:concave}$_m$.}
-Suppose $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
+If $m=2$, then $\dim\Sigma_x=1$; see \ref{ex:finite-space-of-directions-dim}.
 By \ref{ex:dim=1}, $\Sigma_x$ is isometric to a line segment $[0,\ell]$;
 we need to show that $\ell\le\pi$.
 
@@ -298,7 +299,8 @@ If $\ell>\pi$, then $\T_x$ has bifurcating geodesics, which is impossible by \re
 Now suppose $m>2$, so $\dim \Sigma_x>1$.
 Assume $\distfun_{\partial \Sigma_x}\xi>\tfrac\pi2$ for some $\xi$.
 By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, the doubling $\Xi$ of $\Sigma_x$ is $\Alex1$.
-By \ref{ex:cone-CBB}, $\Cone \Xi$ is $\Alex0$.
+Since $\dim\Xi>1$, we have $\diam\Xi\le\pi$ by \ref{ex:RisCBB(1)}.
+Therefore, $\Cone\Xi$ is $\Alex0$ by \ref{ex:cone-CBB}.
 Denote by $\xi_0$ and $\xi_1$ the points in $\Xi$ that correspond to $\xi$.
 Observe that $\dist{\xi_0}{\xi_1}{\Xi}>\pi$.
 The latter contradicts \ref{ex:RisCBB(1)}.
@@ -307,7 +309,7 @@ Finally, if $\distfun_{\partial \Sigma_x}\xi= \tfrac\pi2$, then $\dist{\xi_0}{\x
 Therefore, $\Cone \Xi$ contains a line in the directions of $\xi_0$ and $\xi_1$.
 By the splitting theorem (\ref{thm:splitting}), $\Cone \Xi$ is a direct product of the line with some subcone;
 in other words, $\Xi$ is a spherical suspension with poles $\xi_0$ and $\xi_1$.
-In particular, every point of $\Xi$ lies on distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
+In particular, every point of $\Xi$ lies at distance at most $\tfrac\pi2$ from $\xi_0$ or $\xi_1$.
 The natural projection $\Xi\to \Sigma_x$ does not increase distances and sends both $\xi_0$ and $\xi_1$ to $\xi$.
 Therefore, the second statement of \ref{SHORT.thm:doubling:concave}$_m$ follows.
 
@@ -330,8 +332,8 @@ Applying \ref{ex:d(distfun):=} and \ref{eq:<pi/2}, we get that $(\dd_{\zeta}\phi
 %V: I don't understand this. doesn't this just follow from the fact that $\bar \xi$ is a point of maximum of $\phi$? A: It should be \zeta, not \bar \xi --- sorry.
 Recall that $\dd_xf$ is concave (\ref{ex:concave-differential}), so $(\dd_xf)''\le 0$;
 by straightforward computations, we have that $\phi''+\phi\le 0$.
-If $\phi(\zeta)\le 0$, then it implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
-If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- a contradiction again.
+If $\phi(\zeta)\le 0$, this implies that $\phi(\overline{\xi})\le 0$ --- a contradiction to the fact that $s>0$.
+If $\phi(\zeta)> 0$, then $\phi(\overline{\xi})<\phi(\zeta)$ --- again a contradiction.
 
 \parit{\ref{SHORT.thm:partial-grad:grad}$_m\Rightarrow$\ref{SHORT.thm:partial-grad:flow}$_m$.}
 Let $\alpha$ be an $f$-gradient curve and $\ell(t)=\distfun_{\partial \spc{A}}\circ\alpha(t)$.
@@ -355,9 +357,9 @@ In particular, if $\ell(0)=0$, then $\ell(t)=0$ for any $t\ge 0$.
 Since $\partial\spc{A}$ is closed (\ref{ex:bry-closed}), the first statement follows.
 
 It remains to show that $\gexp_p(v)\in \partial \spc{A}$ for any $v\in\partial\T_p$.
-Suppose $v=t\cdot u$ and $|u|=1$.
+We can assume $v\ne0$; let $v=t\cdot u$ and $|u|=1$.
 Note that $u\in\partial\T_p$.
-Therefore, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $\dir{p}{x_n}\to u$; let $r_n=\dist{p}{x_n}{}$.
+Therefore, we can choose a sequence of points $x_n\in \partial \spc{A}$ such that $x_n\to p$ and $\dir{p}{x_n}\to u$; let $r_n=\dist{p}{x_n}{}$.
 From above, the $f$-gradient curve $\alpha_n$ that starts at $x_n$ remains in $\partial\spc{A}$.
 By the definition of gradient exponent, $\gexp_p(v)=\gexp_p(t\cdot u)$ is a limit of $\alpha_n(\ln\tfrac{t}{r_n})$.
 Hence the last statement follows.
@@ -370,7 +372,7 @@ Denote by $\spc{A}_0$ and $\spc{A}_1$ the two copies of $\spc{A}$ in $\spc{W}$;
 let us keep the notation $\partial \spc{A}$ for the common boundary of $\spc{A}_0$ and $\spc{A}_1$.
 
 \begin{clm}{}\label{clm:crossing}
-A geodesic in $\spc{W}$ has at most one interior point in $\partial \spc{A}$ or it lies in $\partial \spc{A}$ completely.
+A geodesic in $\spc{W}$ either has at most one interior point in $\partial\spc{A}$ or lies entirely in $\partial\spc{A}$.
 \end{clm}
 
 \begin{wrapfigure}{r}{45mm}
@@ -386,7 +388,7 @@ denote the obtained curve by $\hat\gamma$.
 
 Any arc of $\hat\gamma$ with one endpoint in $\partial \spc{A}$
 is a geodesic in $\spc{A}_0$.
-Since $x,y\in \partial \spc{A}$, the arc of $\hat\gamma$ beyond $y$ lies in the image of map $t\z\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
+Since $x,y\in \partial \spc{A}$, the arc of $\hat\gamma$ beyond $y$ lies in the image of the map $t\z\mapsto \GF^t_{f_x}(y)$, where $f_x=\tfrac12\cdot\distfun^2_x$.
 By \ref{SHORT.thm:partial-grad:flow}, this arc lies in $\partial\spc{A}$.
 
 Now choose a point $z$ on this arc, so $z\in \partial\spc{A}$.
@@ -420,10 +422,11 @@ Let $\Sigma_x$ be the space of directions of $\spc{A}$ at $x$,
 and let $\Xi$ be its doubling.
 As before, we denote by $\Sigma_0$ and $\Sigma_1$ the two copies of $\Sigma_x$ in $\Xi$
 and keep the notation $\partial\Sigma_x$ for their common boundary.
-By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$.
+By \ref{SHORT.thm:doubling:doubling}$_{m-1}$, $\Xi$ is $\Alex1$; note that $\diam\Xi\le\pi$.
 
 The directions $\dir x{y}$ and $\dir xp$ lie on opposite sides of $\partial\Sigma_x$ and
-\[\dist{\dir x{y}}{\dir xp}\Xi\ge \pi.\]
+\[\dist{\dir xy}{\dir xp}\Xi\ge \pi.\]
+(Thus equality holds.)
 Otherwise, we could choose a direction $\xi\in\partial\Sigma_x$ such that
 \[\dist{\dir x{y}}{\xi}\Xi+\dist{\xi}{\dir xp}\Xi<\pi.\]
 Furthermore, we could consider the curve $\alpha(t)=\gexp_x(t\cdot \xi)$.
@@ -522,7 +525,7 @@ Show that $\partial\spc{A}$ is connected.
 Let $\spc{A}$ be a finite-dimensional $\Alex0$ space with nonempty boundary $\partial\spc{A}$.
 
 \begin{subthm}{ex:dist-to-bry:geod}
-Suppose a geodesic $\gamma$ in $\spc{A}$ has its interior point in $\partial\spc{A}$.
+Suppose a geodesic $\gamma$ in $\spc{A}$ has an interior point in $\partial\spc{A}$.
 Show that $\gamma$ lies in $\partial\spc{A}$.
 \end{subthm}
 
@@ -546,11 +549,10 @@ Show that $f\circ\proj\:\spc{W}\to\RR$ is $\lambda$-concave if and only if $\nab
 for any $x\in\partial \spc{A}$.
 \end{thm}
 
-
 \section{Remarks}\label{sec:bry-remarks}
 
 
-The doubling theorem was generalized by the third author \cite{petrunin1997} allowing gluing nonidentical spaces and generalized further by Jian Ge and Nan Li \cite{ge-li} allowing for gluing more than two spaces.
+The doubling theorem was generalized by the third author \cite{petrunin1997} to allow the gluing of nonidentical spaces, and was generalized further by Jian Ge and Nan Li \cite{ge-li} to allow the gluing of more than two spaces.
 
 It easily follows by induction on dimension that the doubling of a finite-dimensional Alexandrov space across its boundary results in an Alexandrov space without boundary.
 This observation often helps to reduce a statement about general finite-dimensional Alexandrov spaces to Alexandrov spaces without boundary.
@@ -572,18 +574,18 @@ Indeed, both cohomology theories are homotopy invariant \cite[Chapter 6]{Spanier
 The lemma implies, for example, that on finite-dimensional Alexandrov spaces without boundary
 the gradient flow for a $\lambda$-concave function is an onto map;
 in other words, gradient curves can be extended into the past.
-It is also used in the proof of the following version of the domain invariance theorem \cite[Theorem 3.2]{kapovitch-zhu}.
+It is also used in the proof of the following version of the invariance-of-domain theorem \cite[Theorem 3.2]{kapovitch-zhu}.
 
-\begin{thm}{Domain invariance}\label{thm-inv-domain}
+\begin{thm}{Invariance of domain}\label{thm-inv-domain}
 Let $\spc{A}_1$ and $\spc{A}_2$ be two $m$-dimensional Alexandrov spaces with empty boundary; $m$ is finite.
-Suppose $\Omega_1$ is an open subset in $\spc{A}_1$ and $f\:\Omega_1\to \spc{A}_2$ is an injective continuous map.
+Suppose $\Omega_1$ is an open subset of $\spc{A}_1$ and $f\:\Omega_1\to \spc{A}_2$ is an injective continuous map.
 Then $f(\Omega_1)$ is open in $\spc{A}_2$.
 \end{thm}
 
 Theorem~\ref{thm:spherical-nbhd} can be used to prove the following. 
 
 \begin{thm}{Topological stratification}\label{thm:top-stratification}
-Any $m$-dimensional Alexandrov space with $m<\infty$ can be subdivided into topological manifolds $S_0,\z\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
+Any $m$-dimensional Alexandrov space with $2\le m<\infty$ can be subdivided into topological manifolds $S_0,\z\dots,S_m$ such that for every $i$ we have $\dim S_i=i$ or $S_i=\emptyset$.
 Moreover,
 \begin{subthm}{}
 the closure of $S_{m-1}$ is the boundary of the space, and
@@ -595,14 +597,14 @@ $S_{m-2}=\emptyset$.
 
 \end{thm}
 
-This statement implies that a compact finite-dimensional Alexandrov space has the homotopy type of a finite CW complex,
-but it seems to be unknown if it has to be homeomorphic to a CW complex.
+This statement implies that a compact finite-dimensional Alexandrov space has the homotopy type of a finite CW complex.
+It seems to be unknown whether it must be homeomorphic to a CW complex, but it is known that every Alexandrov space is a CS set; the latter was prved by Tadashi Fujioka \cite{fujioka2025a}.
 
 The stratification theorem~\ref{thm:top-stratification} can be sharpened as follows.
 
 \begin{thm}{Boundary characterization}
 Let $\spc{A}$ be an $m$-dimensional Alexandrov space with $m<\infty$.
-Then the following statements are equivalent.
+Given $p\in\spc{A}$, the following statements are equivalent.
 
 \begin{subthm}{item-boundary}
 $p\in \partial \spc{A}$;
@@ -629,22 +631,23 @@ otherwise it is called \index{regular point}\emph{regular}.
 The following statement plays a role in the proof of the stability theorem,
 but it is also a useful technical tool on its own.
 
-\begin{thm}{Morse lemma}
+\begin{thm}{Morse lemma}\index{Morse lemma}
 Let $f$ be a semiconcave function on a finite-dimensional Alexandrov space without boundary.
 Suppose $K$ is a compact set of regular points of $f$ in its level set $f=a$.
 Then an open neighborhood $\Omega$ of $K$ admits a homeomorphism $x\mapsto (h(x),f(x))$ to a product space $\Lambda\times (a-\eps,a+\eps)$.
 \end{thm}
 
-The Morse lemma was originally proved by Grigory Perelman \cite{perelman1993} for a special kind of semiconcave functions made out of distance functions.
+The Morse lemma was originally proved by Grigory Perelman \cite{perelman1993} for a special class of semiconcave functions built from distance functions.
 For such functions it holds for all Alexandrov spaces (possibly with nonempty boundary).
-For general semiconcave functions on spaces without boundary it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) were generalized to include general semiconcave functions. With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof by using \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
-On Alexandrov spaces with boundary all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.%
+For general semiconcave functions on spaces without boundary, it follows from \cite{perelman1994} where the technical tools from \cite{perelman1993} (the notion of inner product between differentials of semiconcave functions and the notion of admissible maps) were extended to general semiconcave functions.
+With those definitions all the main Morse theory results of \cite{perelman1993} follow by the same proof, using \cite[2.2]{perelman1994} instead of \cite[Lemma 1]{perelman1993}.
+On Alexandrov spaces with boundary, all the Morse theory results hold if one requires in addition that the semiconcave functions remain semiconcave when canonically extended to the doubling.%
 \footnote{Semiconcave functions are often defined to meet this property, but we do not follow this convention.}
-This is automatic for the special type of semiconcave functions considered in \cite{perelman1993}; therefore this distinction is not made there.
+This is automatic for the special class of semiconcave functions considered in \cite{perelman1993}; therefore this distinction is not made there.
 
-Subsets in Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
+Subsets of Alexandrov spaces that satisfy the condition in \ref{thm:partial-grad:flow} are called extremal.
 More precisely, a subset $E$ is \index{extremal set}\emph{extremal} if any $f$-gradient curve that starts in $E$ remains in $E$;
-here $f$ is an arbitrary function of the form $\tfrac12\cdot \distfun_p^2$. %{\red V: should we add the condition that $E$ is closed?} A: No, it follows.}
+here $f$ is an arbitrary function of the form $\tfrac12\cdot \distfun_p^2$.
 
 Extremal subsets were introduced by Grigory Perelman and the third author \cite{perelman-petrunin}.
 They will pop up in the next lecture.
@@ -653,5 +656,5 @@ The following conjecture is one of the oldest questions in Alexandrov geometry t
 
 \begin{thm}{Conjecture}\label{conj:bry}
 Let $S$ be a component of the boundary of a finite-dimensional Alexandrov space.
-Then $S$ equipped with the induced length metric is an Alexandrov space with the same curvature bound.
+Then $S$, equipped with the induced length metric, is an Alexandrov space with the same curvature bound.
 \end{thm}

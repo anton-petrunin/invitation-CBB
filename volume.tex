@@ -13,9 +13,9 @@ Suppose that for each $n$, the space $\spc{X}_n$ has curvature $\ge\kappa$ in th
 Then the same holds for~$\spc{X}_\infty$.
 \end{thm}
 
-\parit{Proof}.
+\parit{Proof.}
 Let us verify the 4-point comparison for a quadruple of points $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$.
-We can assume that all the comparison angles $\angk {p_\infty}{x_\infty} {y_\infty}_{\MM^2(\kappa)}, \angk {p_\infty}{y_\infty}{z_\infty}_{\MM^2(\kappa)}, \angk {p_\infty} {z_\infty}{x_\infty}_{\MM^2(\kappa)}$ are defined since otherwise there is nothing to check.
+We can assume that all the comparison angles $\angk {p_\infty}{x_\infty} {y_\infty}_{\MM^2(\kappa)}, \angk {p_\infty}{y_\infty}{z_\infty}_{\MM^2(\kappa)}, \angk {p_\infty} {z_\infty}{x_\infty}_{\MM^2(\kappa)}$ are defined, since otherwise there is nothing to check.
 
 By the definition of Gromov--Hausdorff convergence, we can choose points $p_n$, $x_n$, $y_n$, $z_n\in \spc{X}_n$ that converge to $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty\in \spc{X}_\infty$, respectively.
 In particular, the 6 distances between $p_n$, $x_n$, $y_n$, $z_n$ converge to the distances between the corresponding pairs of $p_\infty$, $x_\infty$, $y_\infty$, $z_\infty$.
@@ -32,7 +32,7 @@ Show that $\spc{A}_\infty$ is $\Alex\kappa$ and
 
 \section{Gromov's selection theorem}
 
-\begin{thm}{Theorem}\label{thm:gromov-compactness}
+\begin{thm}{Theorem}\label{thm:gromov-compactness}\index{Gromov's selection theorem}
 Let $m$ be a positive integer, and let $D,\kappa\in\RR$.
 Then any sequence of $m$-dimensional $\Alex\kappa$ spaces with diameters at most $D$
 has a converging subsequence in the sense of Gromov--Hausdorff.
@@ -46,10 +46,10 @@ Denote by $\bm{K}$ the set of all isometry classes of $\Alex0$ spaces with dimen
 By \ref{ex:dim-lim}, $\bm{K}$ is a closed subset of $\GH$.
 
 Choose a space $\spc{A}\in \bm{K}$;
-suppose $x_1,\dots,x_n\in \spc{A}$ is a collection of points such that $\dist{x_i}{x_j}{}> \eps$ for all $i\ne j$.
+suppose $x_1,\dots,x_n\in \spc{A}$ are points such that $\dist{x_i}{x_j}{}> \eps$ for all $i\ne j$.
 Note that the balls $B_i=\oBall(x_i,\tfrac\eps2)$ do not overlap.
 
-By \ref{thm:right-inverse}, $\vol \spc{A}>0$.
+By \ref{thm:right-inverse} (or \ref{ex:vol>0}), $\vol \spc{A}>0$.
 By the Bishop--Gromov inequality, $\vol \spc{A}\z<\infty$,
 and if $\eps<D$, then 
 \[\vol B_i\ge (\tfrac\eps{2\cdot D})^m\cdot\vol \spc{A}\]
@@ -147,7 +147,7 @@ and the if part follows.
 \qeds
 
 \begin{thm}[!]{Exercise}\label{ex:barrier}
-Let $f$ be a Lipschitz real-to-real function, and let $\phi$ be a smooth function defined in a neighborhood of $x_0=f(t_0)$.
+Let $f$ be a Lipschitz real-to-real function, and let $\phi$ be a smooth increasing function defined in a neighborhood of $x_0\z=f(t_0)$.
 Suppose that $f$ is $\lambda_1$-concave for some $\lambda_1\ge 0$ and there are some constants $c_1,c_2,c_3\in\RR$ such that (1) $|f^+(t_0)|>c_1>0$ (or $|f^-(t_0)|>c_1>0$), (2) $c_2>\phi'(x_0)\ge 0$, and (3) $0>c_3\ge \phi''(x_0)$.
 Let $\lambda_2=c_2\cdot\lambda_1+c_1^2\cdot c_3$.
 Show that $\phi\circ f$ has a smooth upper barrier $u$ at $t_0$ with
@@ -158,7 +158,7 @@ $u''(t_0)\le \lambda_2$.
 
 \begin{thm}[!]{Exercise}\label{ex:pack-sphere}
 Let $\Omega$ be a nonempty open set in an $m$-dimensional Alexandrov space $\spc{A}$; assume $1\le m<\infty$.
-Given a point $p$, there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
+Given a point $p\in\spc{A}$, there are $r>0$ and $\Const>0$ such that for any sufficiently small $\eps>0$ there are at least $\Const/\eps^{m-1}$ points $q_1,\dots,q_N\in \Omega$ such that $\dist{p}{q_i}{}=r$ for any $i$ and $\mangle\hinge p{q_i}{q_j}>\eps$ if $i\ne j$.
 \end{thm}
 
 
@@ -228,7 +228,7 @@ in particular, $N\le \Const_2(m)/\eps_3^{m-2}$.
 Therefore, for small $\eps_3>0$ and yet smaller $\eps_1$ and $\eps_2$, points $q_1,\dots,q_N$ meet \ref{eq:angle-ne-pi/2}.
 
 
-To prove the last statement, choose a geodesic $[pz]$ in the direction sufficiently close to $v$ and apply \ref{ex:pack-sphere} to a small ball centered on a point $\bar z\in [pz]$ close to $p$.
+To prove the last statement, choose a geodesic $[pz]$ in the direction sufficiently close to $v$ and apply \ref{ex:pack-sphere} to a small ball centered at a point $\bar z\in [pz]$ close to $p$.
 
 The $\Alex\kappa$-case can be reduced to the $\Alex{-1}$-case by rescaling, and it is done the same way.
 The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very close to an $r$-sphere in a hyperplane in $\HH^m$.
@@ -236,13 +236,13 @@ The only difference is that the points $\tilde q_1,\dots,\tilde q_N$ lie very cl
 
 Given a point $p$, a strictly concave function $f$ can be chosen so that
 $f(p)=0$ and $(\dd_p f)(x)\approx-|x|$.
-In particular, $p$ is the maximal point of $f$.
+In particular, $p$ is the maximum point of $f$.
 It can be constructed by taking the minimum of the functions in the theorem.
 Then the set $K=\set{x\in\spc{A}}{f(x)\ge -\eps}$ forms a closed convex neighborhood of $p$ for any small $\eps>0$.
 Replacing $f$ by $f+\eps$, we get the following.
 
 \begin{thm}{Corollary}\label{cor:convex-nbhd}
-Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrarily small convex closed neighborhood $K$ and a strictly concave function $f$ defined in a neighborhood of $K$ such that $p$ is the maximum point of $f$
+Any point $p$ of a finite-dimensional Alexandrov space admits an arbitrarily small closed convex neighborhood $K$ and a strictly concave function $f$ defined in a neighborhood of $K$ such that $p$ is the maximum point of $f$
 and $f|_{\partial K}=0$.
 \end{thm}
 
@@ -277,19 +277,19 @@ then it can be repeated in $\spc{A}'$ for the liftings of all points and the sam
 It produces a strictly concave function defined in a controlled neighborhood of the lifting $p'$ of $p$.
 
 The results of this and related constructions will also be called \index{lifting}\emph{liftings};
-say we can talk about a lifting from $\spc{A}$ to $\spc{A}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is small, then these liftings are strictly concave)
+for example, we can talk about a lifting from $\spc{A}$ to $\spc{A}'$ of a function provided by \ref{thm:strictly-concave} (if the Gromov--Hausdorff distance $\dist{\spc{A}}{\spc{A}'}{\GH}$ is small, then these liftings are strictly concave)
 and a lifting of a convex neighborhood from \ref{cor:convex-nbhd}.
 Here one cannot use \ref{thm:strictly-concave} and \ref{cor:convex-nbhd} as black boxes --- one has to understand the construction, but it is straightforward.
 
 \begin{thm}{Exercise}\label{ex:no-cont-lifting}
-Give an example of Gromov--Hausdorff convergence of spaces $\spc{A}_n\z\to \spc{A}_\infty$ such that all $\spc{A}_n$ and $\spc{A}_\infty$ are compact finite-dimensional $\Alex0$ and for any small $\eps>0$ there is no continuous $\eps$-lifting map $\spc{A}_\infty\to \spc{A}_n$ for any large $n$.
+Give an example of Gromov--Hausdorff convergence of spaces $\spc{A}_n\z\to \spc{A}_\infty$ such that all $\spc{A}_n$ and $\spc{A}_\infty$ are compact finite-dimensional $\Alex0$ spaces and for any small $\eps>0$ there is no continuous $\eps$-lifting map $\spc{A}_\infty\to \spc{A}_n$ for any large $n$.
 \end{thm}
 
 \section{Nerves}
 
 Let $\{\Omega_1,\dots,\Omega_k\}$ be a finite open cover of a compact metric space $\spc{X}$.
-Consider an abstract simplicial complex $\spc{N}$, with one vertex $v_i$ for each set $\Omega_i$ such that a simplex with vertices $v_{i_1},\dots, v_{i_m}$ is included in $\spc{N}$ if
-the intersection $\Omega_{i_1}\cap\dots\cap \Omega_{i_m}$ is nonempty.
+Consider an abstract simplicial complex $\spc{N}$ with one vertex $v_i$ for each set $\Omega_i$;
+a simplex with vertices $v_{i_1},\dots,v_{i_m}$ is included in $\spc{N}$ if the intersection $\Omega_{i_1}\cap\dots\cap \Omega_{i_m}$ is nonempty.
 \begin{figure}[ht!]
 \vskip-0mm
 \centering
@@ -324,7 +324,7 @@ Then $\spc{A}_\infty$ is homotopy equivalent to $\spc{A}_n$ for all large $n$.
 Moreover, given $\eps>0$ there are maps $h_n\:\spc{A}_\infty\to \spc{A}_n$ that are homotopy equivalences and $\eps$-liftings for all large $n$.
 \end{thm}
 
-Applying this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise~\ref{ex:pack-vol:dim}, we get the following.
+Combining this theorem with Gromov's selection theorem (\ref{thm:gromov-compactness}) and Exercise~\ref{ex:pack-vol:dim}, we get the following.
 
 \begin{thm}{Theorem}\label{thm:h-finiteness}
 Given $\kappa\in \RR, D>0, v_0>0$ and a positive integer $m$,
@@ -336,7 +336,7 @@ Assume the contrary.
 Then we can choose a sequence of $m$-dimensional $\Alex\kappa$ spaces $\spc{A}_1,\spc{A}_2,\dots$ that have different homotopy types and satisfy the assumptions of the theorem.
 By Gromov's selection theorem, we can assume that $\spc{A}_n$ converges to some space $\spc{A}_\infty$ in the sense of Gromov--Hausdorff.
 
-By \ref{ex:diam-compact:GH}, $\dim \spc{A}_\infty=m$.
+By \ref{ex:pack-vol:dim}, $\dim \spc{A}_\infty=m$.
 It remains to apply \ref{thm:h-stability}.
 \qeds
 
@@ -344,7 +344,7 @@ It remains to apply \ref{thm:h-stability}.
 Since $\spc{A}_\infty$ is compact, applying \ref{cor:convex-nbhd}, we can find a finite open cover of $\spc{A}_\infty$ by convex open sets $\Omega_1,\dots, \Omega_k$ such that
 for each $\Omega_i$ there is a strictly concave function $f_i$ that is defined in a neighborhood of the closure $\bar \Omega_i$ and such that $f_i|_{\partial \Omega_i}=0$.
 
-Subtracting from functions $f_i$ some small value $\eps>0$,
+By shifting $f_i$ down by small value $\eps>0$,
 we can ensure that $\bigcap_{i\in S}\Omega_{i}\ne \emptyset$ if and only if $\bigcap_{i\in S}\bar\Omega_{i}\ne \emptyset$.
 
 Suppose that $W=\bigcap_{i\in S}\Omega_{i}\ne \emptyset$.
@@ -366,7 +366,7 @@ More precisely, there are liftings $f_{i,n}$ of all $f_i$ to $\spc{A}_n$ which a
 
 Notice that $\{\Omega_{1,n},\dots,\Omega_{k,n}\}$ is an open cover of $\spc{A}_n$ for all large~$n$.
 Indeed, suppose we have $p_n\in \spc{A}_n\setminus(\Omega_{1,n}\cup\dots\cup\Omega_{k,n})$ for arbitrarily large $n$.
-Since $\spc{A}_\infty$ is compact, there is a limit point $p_\infty\in \spc{A}_\infty$ for a subsequence of $p_n$.
+Since $\spc{A}_\infty$ is compact, a subsequence of $p_n$ converges to some $p_\infty\in\spc{A}_\infty$.
 But $p_\infty\in\Omega_i$ for some $i$ and therefore $p_n\in \Omega_{i,n}$ for arbitrarily large $n$ --- a contradiction.
 
 In a similar fashion we can show that if $n$ is large then any collection $\{\Omega_{i,n}\}_{i\in S}$ has a common point in $\spc{A}_n$
@@ -396,17 +396,17 @@ This theory has significant applications in Alexandrov geometry;
 in particular, it provides a version of the Liouville theorem about phase-space volume of geodesic flow in Alexandrov spaces \cite{brue-mondino-semola}.
 
 The construction of a strictly concave function (\ref{thm:strictly-concave}) is due to Grigory Perelman \cite{perelman1993,perelman-petrunin}.
-A more exact version of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
+A sharper version of this construction is given in the survey of the third author \cite[7.2]{petrunin:survey}.
 Let us mention the following closely related result of Artem Nepechiy \cite{nepechiy2019}:
-\textit{given a point $p$ in an Alexandrov space there is a $2$-convex function that approximates $\distfun_p^2$ up to second order at $p$}.
+\textit{given a point $p$ in an Alexandrov space, there is a $2$-convex function that approximates $\distfun_p^2$ up to second order at $p$}.
 
-The fact that the controlled concavity survives after lifting (see Section \ref{sec:Liftings}) was observed and used by the first author \cite[4.2]{kapovitch2002}.
+The fact that the controlled concavity survives under lifting (see Section \ref{sec:Liftings}) was observed and used by the first author \cite[4.2]{kapovitch2002}.
 Functions with controlled concavity can be lifted to a collapsing sequence; in this case the resulting function is not concave but it has some interesting properties.
 In particular, if the limit space has dimension $m$, then the Morse index of the lifting is at least $m$;
 this property implies a partial answer to an old question of \textit{which finite-dimensional Alexandrov spaces can be approximated by Riemannian manifolds with a fixed lower curvature bound}; see \cite{kapovitch2005}.
 
-Furthermore, such a lifted function has the following property (let us call it \index{gap-convexity}\emph{gap-convexity}) which, as far as we know, did not find an application:
-\textit{If $f$ is a controllably concave function and $f_n$ are liftings of $f$ to a collapsing sequence of Alexandrov spaces with uniform lower curvature bound, then for any $\eps>0$ and all large $n$, the restriction of $f_n$ to any geodesic of length at least $\eps$ is concave.}
+Furthermore, such a lifted function has the following property (let us call it \index{gap-convexity}\emph{gap-convexity}) which, as far as we know, has not yet found an application:
+\textit{If $f$ is a controllably concave function and $f_n$ are liftings of $f$ to a collapsing sequence of Alexandrov spaces with a uniform lower curvature bound, then for any $\eps>0$ and all large $n$, the restriction of $f_n$ to any geodesic of length at least $\eps$ is concave.}
 (Recall that our geodesics are always length-minimizing.)
 
 Let us list some results that can be proved by applying Gromov's selection theorem
@@ -431,7 +431,7 @@ for any closed $m$-dimensional Riemannian manifold $M$ with sectional curvature 
 Here $\Sc$ denotes the scalar curvature.
 \end{thm}
 
-The following theorem is a more exact version of \ref{thm:h-stability}.
+The following theorem is a stronger version of \ref{thm:h-stability}.
 Its close relative (\ref{thm:spherical-nbhd}) will play an important role in the following lecture.
 
 \begin{thm}{Stability theorem}\label{thm:stability}
@@ -453,7 +453,7 @@ Theorem \ref{thm:h-finiteness} was originally proved by Karsten Grove and Peter 
 Perelman's stability theorem (\ref{thm:stability}) implies the following stronger statement.
 
 \begin{thm}{Homeomorphism-type finiteness}
-For any real numbers $\kappa$, $D\z>0$, $v>0$ and a positive integer $m$, there are only finitely many homeomorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with sectional curvature $\ge \kappa$, volume $\ge v$, and diameter $\le D$.
+For any real numbers $\kappa$, $D\z>0$, $v>0$, and a positive integer $m$, there are only finitely many homeomorphism types of closed $m$-dimensional manifolds that admit a Riemannian metric with sectional curvature $\ge \kappa$, volume $\ge v$, and diameter $\le D$.
 \end{thm}
 
 This statement can be improved to diffeomorphism-type finiteness in all dimensions $m\ne 4$.
@@ -471,8 +471,8 @@ In principle, the same strategy might work for a sequence of Riemannian manifold
 The following question gives an example where such a strategy might be successful in principle.
 
 \begin{thm}{Question}
-Is it true that no simply-connected closed manifold of arbitrarily large dimension admits a Riemannian metric with two-sided sectional-curvature bound and diameter bounded by a fixed sufficiently small positive constant?
+Is it true that no simply connected closed manifold of arbitrarily large dimension admits a Riemannian metric with two-sided sectional-curvature bound and diameter bounded by a fixed sufficiently small positive constant?
 \end{thm}
 
 If the dimension is bounded, then Gromov's theorem \cite{gromov1978} implies that such a manifold can be covered by a compact nil-manifold; in particular, the manifold cannot be simply connected.
-However, if the dimension is unbounded, then Riemannian manifolds with these conditions may not be covered by compact nil-manifolds; such examples were found by Galina Guzhvina \cite{guzhvina2008}.
+However, if the dimension is unbounded, then Riemannian manifolds satisfying these conditions may not be covered by compact nil-manifolds; such examples were found by Galina Guzhvina \cite{guzhvina2008}.

@@ -58,7 +58,7 @@ Show that $\EE^n$ is $\Alex0$.
 
 \begin{thm}{Exercise}\label{ex:(3+1)-expanding}
 Show that a metric space $\spc{X}$ has nonnegative curvature in the sense of Alexandrov
-if and only if, for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$
+if and only if, for any quadruple of points $p,x_1,x_2,x_3\in \spc{X}$,
 there is a quadruple of points $q,y_1,y_2,y_3\in\EE^2$
 such that 
 \[\dist{p}{x_i}{\spc{X}}\ge\dist{q}{y_i}{\EE^2} 
@@ -120,7 +120,7 @@ Moreover, the same statement holds for spherical and hyperbolic triangles.
 Consider the model triangle $\trig{\tilde x}{\tilde p}{\tilde z}=\modtrig(x p z)$.
 Take 
 a point $\tilde y$ on the extension of 
-$[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$ (and therefore $\dist{\tilde x}{\tilde z}{}=\dist{x}{z}{}$). 
+$[\tilde x \tilde z]$ beyond $\tilde z$ so that $\dist{\tilde x}{\tilde y}{}=\dist{x}{y}{}$ (and therefore $\dist{\tilde z}{\tilde y}{}=\dist{z}{y}{}$).
 
 \begin{wrapfigure}{r}{33mm}
 \vskip-0mm
@@ -206,7 +206,7 @@ that is, if two geodesics $[px]$ and $[py]$ share a nontrivial arc with an endpo
 \begin{thm}{Exercise}\label{ex:pi-angle}
 Let $[xy]$ be a geodesic in an $\Alex0$ space.
 Suppose $z\in \left]xy\right[$.
-Show that there is a unique geodesic $[xz]$ and $[xz]\subset [xy]$.
+Show that there is a unique geodesic $[xz]$ and that $[xz]\subset [xy]$.
 \end{thm}
 
 Recall that adjacent hinges are defined in \ref{ex:adjacent-angles}.
@@ -373,7 +373,7 @@ if one (and therefore any) of them holds for $s$, then we say that $s$ is \index
 holds for any $t_0,t_1\in \II$ and $a\in[0,1]$.
 \item For any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t+b$ (it is called a \index{barrier}\emph{barrier}) that supports $s$ at $t_0$ from above;
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$.
-\item For any $t_0\in \II$ there is a quadratic polynomial $\ell$ (it is called a \index{local barrier}\emph{local barrier}) that locally supports $s$ at $t_0$ from above;
+\item For any $t_0\in \II$ there is a quadratic polynomial $\ell=\tfrac\lambda2\cdot t^2+a\cdot t\z+b$ (it is called a \index{local barrier}\emph{local barrier}) that locally supports $s$ at $t_0$ from above;
 that is, $\ell(t_0)\z= s(t_0)$ and $\ell(t)\ge s(t)$ for any $t$ in a neighborhood of $t_0$.
 \end{itemize}
 
@@ -387,12 +387,12 @@ That is, if the function $f\:\II\to\RR$ is $\lambda$-concave, then
 \begin{subthm}{}
 the \index{$f^+$, $f^-$ (one-sided derivative)}\index{right derivative}\emph{right derivative}
 \[f^+(t_0)=\lim_{t\to t_0^+} \frac{f(t)-f(t_0)}{t-t_0}\]
-is defined for any $t_0\in \II$ except at the left endpoint of $\II$.
+is defined for any $t_0\in \II$ except at the right endpoint of $\II$.
 \end{subthm}
 \begin{subthm}{}
 the \index{left derivative}\emph{left derivative}
 \[f^-(t_0)=\lim_{t\to t_0^-} \frac{f(t)-f(t_0)}{t-t_0}\]
-is defined for any $t_0\in \II$ except at the right endpoint of $\II$.
+is defined for any $t_0\in \II$ except at the left endpoint of $\II$.
 \end{subthm}
 
 Furthermore, show that $f^+(t_0)-f^-(t_0)\le 0$ for any $t_0$ in the interior of $\II$.
@@ -487,7 +487,7 @@ Alexandrov's lemma has the following useful variation; see \cite[10.2]{alexander
 
 \begin{thm}{Overlap lemma}\label{lem:extend-overlap}
 Let $\tilde x^1$, $\tilde x^2$, $\tilde x^3$, $\tilde p^1$, $\tilde p^2$, and $\tilde p^3$ be points in $\EE^2$, $\SSS^2$, or $\HH^2$.
-Assume that, for any permutation $\{i,j,k\}$ of $\{1,2,3\}$, we have
+Assume that, for any permutation $(i,j,k)$ of $(1,2,3)$, we have
 \begin{enumerate}[(i)]
 
 \item
@@ -502,7 +502,7 @@ $\tilde p^i$ and $\tilde x^i$ lie in the same closed half-space determined by $[
 Then
 \[\mangle{\tilde p^1} +\mangle {\tilde p^2}+\mangle{\tilde p^3}> 2\cdot\pi,\]
 where $\mangle\tilde p^i\df\mangle\hinge{\tilde p^i}{\tilde x^k}{\tilde x^j}$
-for a permutation $\{i,j,k\}$ of $\{1,2,3\}$.
+for a permutation $(i,j,k)$ of $(1,2,3)$.
 \end{thm}
 
 The condition \ref{SHORT.angle-b} in \ref{thm:angle-cbb} might not be necessary.
