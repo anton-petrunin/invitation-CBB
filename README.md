@@ -7,3 +7,7 @@
 `biber invitation-CBB`<br/>
 `makeindex invitation-CBB`<br/>
 `pdflatex invitation-CBB.tex`
+
+Files for arXiv:
+
+`tar -cvf arXiv.tar --files-from arXiv.txt`
