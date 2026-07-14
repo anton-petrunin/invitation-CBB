@@ -3,15 +3,6 @@
 \addcontentsline{toc}{chapter}{Preliminaries}
 \markboth{\MakeUppercase{Preliminaries}}{}%
 
-\makeatletter
-\begingroup
-  \def\@currentlabel{}%
-  \def\@currentlabelname{Preliminaries}%
-  \label{chap:prelim}%
-\endgroup
-\makeatother
-
-
 \section{Prerequisites}
 
 The main prerequisite: the reader should know and love elementary geometry, including convexity.
@@ -53,14 +44,14 @@ Given radius $r\in[0,\infty]$ and center $x\in \spc{X}$, the sets
 \\
 \cBall[x,r]&=\set{y\in \spc{X}}{\dist{x}{y}{}\le r}
 \end{align*}
-are called, respectively, the \index{open ball}\emph{open} and  the \index{closed ball}\emph{closed  balls}.
+are called, respectively, the \index{open ball}\emph{open} and the \index{closed ball}\emph{closed balls}.
 The notations $\oBall(x,r)_{\spc{X}}$ and $\cBall[x,r]_{\spc{X}}$
 might be used if we need to emphasize that these balls are taken in the metric space $\spc{X}$.
 
-The \index{diameter}\emph{diameter} of $\spc{X}$ is  defined as
+The \index{diameter}\emph{diameter} of $\spc{X}$ is defined as
 \[\diam \spc{X}=\sup\set{\dist{x}{y}{}}{x,y\in \spc{X}}.\]
 
-The \index{radius}\emph{radius} of $\spc{X}$ is  defined as
+The \index{radius}\emph{radius} of $\spc{X}$ is defined as
 \[\rad \spc{X}=\inf\set{R>0}{\oBall(x,R)= \spc{X}\ \text{for some}\ x\in\spc{X}}.\]
 
 We will denote by \index{60@$\SSS^m$, $\EE^m$, $\HH^m$, and $\MM^m(\kappa)$}$\SSS^m$, $\EE^m$, and $\HH^m$ the $m$-dimensional sphere (with angle metric),
@@ -79,7 +70,8 @@ in particular, $\MM^m(-1)=\HH^m$.
 Let $S$ be a subset of a metric space $\spc{X}$.
 Recall that a set $Z\subset \spc{X}$ is called an \index{net@$\eps$-net}\emph{$\eps$-net} of $S$ if for any point $s\in S$, there is a point $z\in Z$ such that $\dist{s}{z}{}\le\eps$.
 
-The \index{pack@$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number  (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;  it is denoted by $\pack_\eps\spc{X}$\index{70@$\pack_\eps\spc{X}$ ($\eps$-pack)}.
+The \index{pack@$\eps$-pack}\emph{$\eps$-pack} of $\spc{X}$ (or \index{packing number}\emph{packing number}) is the maximal number (possibly infinite) of points in $\spc{X}$ at distance $>\eps$ from each other;
+it is denoted by $\pack_\eps\spc{X}$\index{70@$\pack_\eps\spc{X}$ ($\eps$-pack)}.
 If $n=\pack_\eps\spc{X}<\infty$, then a set $\{x_1,x_2,\dots,x_n\}$ in $\spc{X}$
 such that $\dist{x_i}{x_j}{}>\eps$ is called a \index{maximal packing}\emph{maximal $\eps$-packing} in $\spc{X}$.
 
@@ -113,7 +105,7 @@ then $\spc{X}$ is called a \index{length space}\emph{length space} and the metri
 \begin{thm}{Exercise}\label{ex:compact+connceted}
 Let $\spc{X}$ be a complete length space.
 Show that for any compact subset $K\subset\spc{X}$
-there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.  
+there is a compact path-connected subset $K'\subset\spc{X}$ that contains $K$.
 \end{thm}
 
 \parbf{Induced length metric.}
@@ -148,7 +140,7 @@ However, most of the time we will work with ambient length spaces where the mean
 Let $\spc{X}$ be a metric space,
 and let $\II$\index{60@$\II$ (real interval)} be a real interval.
 A distance-preserving map $\gamma\:\II\to \spc{X}$ is called a \index{geodesic}\emph{geodesic}%
-\footnote{Other texts  may refer to geodesics in our sense of the word as  a \textit{shortest path} or a \textit{minimizing geodesic}.
+\footnote{Other texts may refer to geodesics in our sense of the word as  a \textit{shortest path} or a \textit{minimizing geodesic}.
 Also, our meaning of the term \textit{geodesic} is closely related to, but different from, the term used in Riemannian geometry.};
 in other words, $\gamma\:\II\z\to \spc{X}$ is a geodesic if 
 \[\dist{\gamma(s)}{\gamma(t)}{}=|s-t|\]
@@ -159,7 +151,7 @@ In this case, the image of $\gamma$ is denoted by $[p q]$\index{10@$[pq]=[p q]_{
 We may write $[p q]_{\spc{X}}$ 
 to emphasize that the geodesic $[p q]$ lies in the space ${\spc{X}}$.
 
-In general, a geodesic from $p$ to $q$ need not exist, and if it exists, it need not  be unique;
+In general, a geodesic from $p$ to $q$ need not exist, and if it exists, it need not be unique;
 for example, any meridian is a geodesic between poles on the sphere.
 However, once we write $[p q]$ we assume that we have chosen such a geodesic.
 
@@ -177,7 +169,7 @@ Show that any proper length space is geodesic.
 \end{thm}
 
 \section{Menger's lemma}
-Given two points $x,y$ in a metric space  $\spc{X}$, a point $z\in \spc{X}$ is called a  \index{midpoint}\emph{midpoint} between them if 
+Given two points $x,y$ in a metric space $\spc{X}$, a point $z\in \spc{X}$ is called a  \index{midpoint}\emph{midpoint} between them if
 \[\dist{x}{z}{}=\tfrac12\cdot\dist{x}{y}{}
 \quad\text{and}\quad
 \dist{y}{z}{}=\tfrac12\cdot\dist{x}{y}{}.\]
@@ -295,7 +287,7 @@ is nondecreasing in the interval of definition.
 \section{Hinges and their angle measure}\label{sec:angles}
 
 \parbf{Hinges.} Let $p,x,y\in \spc{X}$ be a triple of points such that $p$ is distinct from $x$ and~$y$.
-A pair of geodesics $([p x],[p y])$ will be called  a \index{hinge}\emph{hinge} and will be denoted by 
+A pair of geodesics $([p x],[p y])$ will be called a \index{hinge}\emph{hinge} and will be denoted by
 $\hinge p x y=([p x],[p y])$\index{11@$\hinge p x y$ (hinge)}.
 
 \parbf{Angles.}
@@ -314,7 +306,7 @@ Show that this does not change the value $\mangle\hinge p x y$.
 
 
 \begin{thm}{Exercise}\label{ex:undefined-angle}
-Give an example of a hinge $\hinge p x y$ in a metric space with  undefined angle measure $\mangle\hinge p x y$.
+Give an example of a hinge $\hinge p x y$ in a metric space with undefined angle measure $\mangle\hinge p x y$.
 \end{thm}
 
 \section{Triangle inequality for angles}
@@ -343,7 +335,7 @@ Given a small $\eps>0$, for all sufficiently small $t,\tau,s\in[0,\infty)$ we ha
 \le
 \dist{\gamma_1(t)}{\gamma_2(s)}{}+\dist{\gamma_2(s)}{\gamma_3(\tau)}{}&<\\
 <
-\sqrt{t^2+s^2-2\cdot t\cdot  s\cdot \cos(\alpha_{1,2}+\eps)}\;&+
+\sqrt{t^2+s^2-2\cdot t\cdot s\cdot \cos(\alpha_{1,2}+\eps)}\;&+
 \\
 \quad+\;\sqrt{s^2+\tau^2-2\cdot s\cdot \tau\cdot \cos(\alpha_{2,3}+\eps)}&\le
 \end{align*}
@@ -383,7 +375,7 @@ More precisely, suppose two hinges $\hinge pxz$ and $\hinge pyz$ are \index{adja
 that is, they share the side $[pz]$, and the union of the two sides $[px]$ and $[py]$ forms a geodesic $[xy]$.
 Show that
 \[\mangle\hinge pxz+\mangle\hinge pyz\ge \pi\]
-whenever  each angle on the left-hand side is defined.
+whenever each angle on the left-hand side is defined.
 
 Give an example showing that the inequality can be strict.
 \end{thm}
@@ -481,7 +473,7 @@ and $\spc{X}_n\z\to \spc{X}_\infty$ as subsets of $\bm{X}$ in the sense of Hausd
 \end{thm}
 
 In this case we say that the metric on $\bm{X}$ \textit{defines} a \index{Gromov--Hausdorff limit}\emph{convergence} $\spc{X}_n\z\to \spc{X}_\infty$ in the {}\emph{sense of Gromov--Hausdorff}.
-The metric on  $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
+The metric on $\bigsqcup \spc{X}_n$ makes it possible to talk about limits of sequences $x_n\in \spc{X}_n$ as $n\to\infty$, as well as weak limits of a sequence of Borel measures $\mu_n$ on $\spc{X}_n$ and so on.
 
 The limit space is not uniquely defined by the sequence.
 For example, if each space $\spc{X}_n$ is isometric to the half-line, then the limit may be isometric to the half-line or to the whole line.
@@ -493,7 +485,7 @@ The first convergence is evident and the second could be guessed from the pictur
 \includegraphics{mppics/pic-500}
 \end{figure}
 
-Note that any sequence of spaces has an empty space as a limit in some  Gromov--Hausdorff convergence.
+Note that any sequence of spaces has an empty space as a limit in some Gromov--Hausdorff convergence.
 As we will see later, if the limit is nonempty and compact, then it is unique up to isometry.
 
 \parbf{Pointed convergence.}
@@ -507,7 +499,7 @@ For example, the sequence $(\spc{X}_n,p_n)=([0,\infty),0)$ converges to $([0,\in
 In this section we define the metric on the set of \textit{isometry classes} of compact metric spaces.
 In what follows, the term \textit{metric space} might also stand for its \textit{isometry class}.
 
-Loosely speaking, the distance between (isometry classes of) compact metric spaces is the minimal value $r$ such that  both spaces can be isometrically embedded into a third space in  such a way that the Hausdorff distance between the images is not greater than $r$.
+Loosely speaking, the distance between (isometry classes of) compact metric spaces is the minimal value $r$ such that  both spaces can be isometrically embedded into a third space in such a way that the Hausdorff distance between the images is not greater than $r$.
 % \textit{the distance between subspaces in a metric space is not greater than the Hausdorff distance between them}.
 
 Observe that we \textit{know} a real number $x$ if we can give a yes/no answer to the question $x<r$ for any $r$.
@@ -518,7 +510,7 @@ The \index{Gromov--Hausdorff distance}\emph{Gromov--Hausdorff distance} $|\spc{X
 is defined by the following
 relation.
 
-Given  $r > 0$, we say that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
+Given $r > 0$, we say that $|\spc{X}-\spc{Y}|_{\GH} < r$ if and only if there exists a metric
 space $\spc{W}$ and subspaces $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$ that are isometric to $\spc{X}$ and $\spc{Y}$,
 respectively, such that $|\spc{X}'-\spc{Y}'|_{\Haus\spc{W}} < r$.
 (Here $|\spc{X}'\z-\spc{Y}'|_{\Haus\spc{W}}$ denotes the Hausdorff distance between sets $\spc{X}'$ and $\spc{Y}'$ in $\spc{W}$.)
@@ -611,7 +603,7 @@ Furthermore, a partial converse holds.
 \begin{subthm}{lem:almost-isom-c}
 Suppose we have a Gromov--Hausdorff convergence $\spc{X}_n\to \spc{X}_\infty$, the spaces $\spc{X}_n$ are uniformly bounded, and $\spc{X}_\infty$ is nonempty and compact.
 Then for some sequence $\eps_n\to\0+$ as $n\to\infty$ there are $\eps_n$-isometries $f_n\:\spc{X}_n\to\spc{X}_\infty$ (and $h_n\:\spc{X}_\infty\to\spc{X}_n$)
-such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the  convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty)}{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
+such that $x_n\in \spc{X}_n$ converges to $x_\infty \in  \spc{X}_\infty$ with respect to the convergence $\spc{X}_n\z\to \spc{X}_\infty$ if and only if $f_n(x_n)\to x_\infty$ (respectively, $\dist{h_n(x_\infty)}{x_n}{\spc{X}_n}\to 0$) as $n\to\infty$.
 \end{subthm}
 \end{thm}
 
@@ -676,7 +668,7 @@ $\bigl|\dist{f_n(x)}{f_n(x')}{\spc{X}_\infty}-\dist{x}{x'}{\spc{X}_n}\bigr|\le \
 \begin{subthm}{lem:almost-isom-pointed-c}
 For any $x \in \oBall(p_\infty,R)$, there is $x_n\in \oBall(p_n,R)$ such that $\dist{x}{f_n(x_n)}{}\le \eps(n,R)$.
 \end{subthm}
-Then there is a pointed  Gromov--Hausdorff convergence $(\spc{X}_n,p_n)\z\to (\spc{X}_\infty,p_\infty)$.
+Then there is a pointed Gromov--Hausdorff convergence $(\spc{X}_n,p_n)\z\to (\spc{X}_\infty,p_\infty)$.
 \end{thm}
 
 \section{Remarks}
