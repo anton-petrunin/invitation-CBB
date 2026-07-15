@@ -106,28 +106,25 @@ The statement follows since $\eps>0$ is arbitrary.
 
 
 \parbf{\ref{ex:norm-angles}.}
-It is well-known that it is enough to check that the norm $\yetdist{}{}{}$ on $\spc{W}$ satisfies the parallelogram identity for any $u,w\in \spc{W}$:
+Let us denote by $|v|$ the norm of $v\in\spc{W}$.
+It is sufficient to check that the norm satisfies the parallelogram identity
+\[2\cdot |v|^2+2\cdot |w|^2=|v-w|^2+|v+w|^2\]
+for any $v,w\in \spc{W}$.
 
-\[2||u||^2+2||v||^2=||u-w||^2+||u+w||^2
-\]
-Fix nonzero $u,v\in \spc{W}$. Then $\gamma(t)=tu, \sigma(s)=sv, s, t\ge 0$ are constant speed geodesics. By assumption there is a well-defined angle $\alpha$ between them.
-By definition
+Fix nonzero $v,w\in \spc{W}$.
+Then $\gamma\:t\mapsto t\cdot v$ and $\sigma\:s\mapsto s\cdot w$ are constant-speed geodesics.
+By assumption, there is a well-defined angle measure $\alpha$ between them, so
+\[\alpha=\lim_{t,s\to 0+} \angk 0{t\cdot v}{s\cdot w}.\]
 
-\[\alpha=\lim_{t,s\to 0+} \angk 0{tu}{sv},\]
+Setting $t=s$, we get that  $\angk 0{t\cdot v}{t\cdot w}=\const$.
+Hence $\alpha=\angk 0vw$ and
+ \[\cos \alpha=\frac{|v|^2+|w|^2-|v-w|^2}{2\cdot|v|\cdot |w|}.\]
 
-Setting $t=s\to0+$ we get that  $\angk 0{tu}{tv}=const$ and hence $\alpha=\angk 0{tu}{tv}$ and
- \[\cos \alpha=\frac{||u||^2+||v||^2-||u-v||^2}{2||u||\cdot ||v||}\]
+The same argument with $s=2\cdot t$ implies that
+\[\cos \alpha=\frac{|v|^2+4\cdot |w|^2-|v-2\cdot w|^2}{4\cdot |v|\cdot |w|}.\]
+These two equalities imply the parallelogram identity for $w$ and $v-w$.
+Since $v$ and $w$ are arbitrary, we get the result.
 
-Now, let's set $t\to 0+$ and $s=2t\to0+$
-A similar calculation shows that
-
-
- \[\cos \alpha=\frac{||u||^2+4||v||^2-||u-2v||^2}{4||u||\cdot ||v||}\]
-Equation the above  and simplifying we get 
-\[
-2||v||^2+2||u-v||^2=||u||^2+||u-2v||^2
-\]
-which is the parallelogram identity for $v$ and $u-v$. Since $u,v$ are arbitrary we get the result.
 \parbf{\ref{ex:generalized-selection}.}
 Since the space is proper, it is separable; 
 that is, we can choose a countable everywhere dense set $\{x_1,x_2,\dots\}$.
@@ -387,8 +384,7 @@ for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that any such norm is quadratic, and the statement follows.
 
-Alternatively the result follows from existence of angles in Alexandrov spaces and \ref{ex:norm-angles}.
-% similar proof shows that if in a Banach space all angles exist then it's Hilbert. maybe give that exercise in ch 1 and obtain this one as a corollary?
+\parit{Comment.} Alternatively the result follows from existence of angles in Alexandrov spaces and \ref{ex:norm-angles}.
 
 \parbf{\ref{ex:concave'}.}
 Choose a $\lambda$-concave function $f\:\II\to\RR$.
