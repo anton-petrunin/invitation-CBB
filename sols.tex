@@ -104,10 +104,33 @@ Conclude that
 where $\delta(\eps)\to 0$ as $\eps\to0$.
 The statement follows since $\eps>0$ is arbitrary.
 
+
+\parbf{\ref{ex:norm-angles}.}
+It is well-known that it is enough to check that the norm $\yetdist{}{}{}$ on $\spc{W}$ satisfies the parallelogram identity for any $u,w\in \spc{W}$:
+
+\[2||u||^2+2||v||^2=||u-w||^2+||u+w||^2
+\]
+Fix nonzero $u,v\in \spc{W}$. Then $\gamma(t)=tu, \sigma(s)=sv, s, t\ge 0$ are constant speed geodesics. By assumption there is a well-defined angle $\alpha$ between them.
+By definition
+
+\[\alpha=\lim_{t,s\to 0+} \angk 0{tu}{sv},\]
+
+Setting $t=s\to0+$ we get that  $\angk 0{tu}{tv}=const$ and hence $\alpha=\angk 0{tu}{tv}$ and
+ \[\cos \alpha=\frac{||u||^2+||v||^2-||u-v||^2}{2||u||\cdot ||v||}\]
+
+Now, let's set $t\to 0+$ and $s=2t\to0+$
+A similar calculation shows that
+
+
+ \[\cos \alpha=\frac{||u||^2+4||v||^2-||u-2v||^2}{4||u||\cdot ||v||}\]
+Equation the above  and simplifying we get 
+\[
+2||v||^2+2||u-v||^2=||u||^2+||u-2v||^2
+\]
+which is the parallelogram identity for $v$ and $u-v$. Since $u,v$ are arbitrary we get the result.
 \parbf{\ref{ex:generalized-selection}.}
 Since the space is proper, it is separable; 
 that is, we can choose a countable everywhere dense set $\{x_1,x_2,\dots\}$.
-
 Let $A_1,A_2,\dots$ be a sequence of closed sets.
 Applying a diagonal procedure, we can pass to a subsequence such that for each $i$ the sequence $\distfun_{A_n}x_i$ converges as $n\to\infty$; denote its limit by $f(x_i)$.
 
@@ -363,6 +386,8 @@ Hence we have
 for any $v,w$.
 That is, the norm meets the parallelogram identity.
 It is well known that any such norm is quadratic, and the statement follows.
+
+Alternatively the result follows from existence of angles in Alexandrov spaces and \ref{ex:norm-angles}.
 % similar proof shows that if in a Banach space all angles exist then it's Hilbert. maybe give that exercise in ch 1 and obtain this one as a corollary?
 
 \parbf{\ref{ex:concave'}.}
